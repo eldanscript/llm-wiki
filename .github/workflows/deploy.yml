@@ -1,0 +1,52 @@
+name: Deploy LLM Wiki to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [wiki-updated]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout llm-wiki
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Sync latest wiki content from obsidian-vault
+        run: |
+          git clone --depth=1 https://github.com/eldanscript/obsidian-vault.git /tmp/vault
+          rsync -av --delete \
+            --exclude="*.pdf" \
+            /tmp/vault/6.Wiki/ ./content/
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Quartz plugins
+        run: npx quartz plugin install
+
+      - name: Build Quartz
+        run: npx quartz build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          commit_message: "deploy: wiki updated ${{ github.sha }}"
