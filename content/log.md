@@ -15,3 +15,4 @@
 [2026-05-31] INGEST: Anthropic Blog/2026-04-02_LLM 감정 벡터 → Entities/Companies/Anthropic.md 업데이트, Concepts/Interpretability.md 신규 생성
 
 [2026-05-31] INIT: Karpathy LLM Wiki 패턴으로 6.Wiki 구조 초기화. 4개 agent 병렬 인제스트 시작.
+# 재배포 검증 2026-05-31 23:26:15
