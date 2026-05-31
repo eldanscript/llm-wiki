@@ -22,8 +22,12 @@ jobs:
           fetch-depth: 0
 
       - name: Sync latest wiki content from obsidian-vault
+        env:
+          VAULT_TOKEN: ${{ secrets.VAULT_ACCESS_TOKEN }}
         run: |
-          git clone --depth=1 https://github.com/eldanscript/obsidian-vault.git /tmp/vault
+          git clone --depth=1 \
+            https://x-access-token:${VAULT_TOKEN}@github.com/eldanscript/obsidian-vault.git \
+            /tmp/vault
           rsync -av --delete \
             --exclude="*.pdf" \
             /tmp/vault/6.Wiki/ ./content/
