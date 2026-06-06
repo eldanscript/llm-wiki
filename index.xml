@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>AWS AI 서비스 개요</title>
-    <link>https://eldanscript.github.io/llm-wiki/2.areas/aws/aws-overview</link>
-    <guid>https://eldanscript.github.io/llm-wiki/2.areas/aws/aws-overview</guid>
-    <description><![CDATA[ AWS AI 서비스 개요 Amazon Web Services의 AI/ML 서비스 포트폴리오 요약. ]]></description>
-    <pubDate>Fri, 19 Jun 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Untitled</title>
-    <link>https://eldanscript.github.io/llm-wiki/3.resources/professional-notes/untitled.canvas</link>
-    <guid>https://eldanscript.github.io/llm-wiki/3.resources/professional-notes/untitled.canvas</guid>
+    <title>Concepts</title>
+    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item><item>
-    <title>Migration</title>
-    <link>https://eldanscript.github.io/llm-wiki/1.projects/raingent/migration/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/1.projects/raingent/migration/</guid>
+    <title>Companies</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item><item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/1.projects/raingent/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/1.projects/raingent/</guid>
+    <title>Entities</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item><item>
-    <title>1.Projects</title>
-    <link>https://eldanscript.github.io/llm-wiki/1.projects/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/1.projects/</guid>
+    <title>Projects</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item><item>
-    <title>AWS</title>
-    <link>https://eldanscript.github.io/llm-wiki/2.areas/aws/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/2.areas/aws/</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item><item>
-    <title>2.Areas</title>
-    <link>https://eldanscript.github.io/llm-wiki/2.areas/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/2.areas/</guid>
+    <title>Topics</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item><item>
-    <title>Summit 2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/2.areas/aws/summit-2026/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/2.areas/aws/summit-2026/</guid>
+    <title>wiki</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/wiki</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/wiki</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item><item>
-    <title>AgenticAI</title>
-    <link>https://eldanscript.github.io/llm-wiki/2.areas/agenticai/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/2.areas/agenticai/</guid>
+    <title>agentic-ai</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agentic-ai</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agentic-ai</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item><item>
-    <title>Summit 2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/2.areas/furiosaai/summit-2026/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/2.areas/furiosaai/summit-2026/</guid>
+    <title>llm</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/llm</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/llm</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sat, 06 Jun 2026 13:39:21 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
+  </item><item>
+    <title>multi-agent</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/multi-agent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/multi-agent</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 06 Jun 2026 13:56:14 GMT</pubDate>
   </item>
     </channel>
   </rss>
