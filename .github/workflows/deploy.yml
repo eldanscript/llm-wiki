@@ -29,17 +29,8 @@ jobs:
             https://x-access-token:${VAULT_TOKEN}@github.com/eldanscript/obsidian-vault.git \
             /tmp/vault
           rsync -av --delete \
-            --exclude="/index.md" \
             --exclude="*.pdf" \
-            --exclude="Templates/" \
-            --exclude="91. Templates/" \
-            --exclude="90. Settings/" \
-            --exclude="Attachments/" \
-            --exclude=".obsidian/" \
-            --exclude=".git/" \
-            --exclude=".smart-env/" \
-            --exclude="VAULT.md" \
-            /tmp/vault/ ./content/
+            /tmp/vault/6.Wiki/ ./content/
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
