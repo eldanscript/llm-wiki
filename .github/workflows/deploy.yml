@@ -31,6 +31,8 @@ jobs:
           rsync -av --delete \
             --exclude="*.pdf" \
             --exclude="Templates/" \
+            --exclude="91. Templates/" \
+            --exclude="90. Settings/" \
             --exclude=".obsidian/" \
             --exclude=".git/" \
             --exclude=".smart-env/" \
