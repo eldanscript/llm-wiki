@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Genspark Ver. | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Genspark Ver. | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Genspark Ver. | LLM Wiki"/><meta name="twitter:description" content="RAG와 Obsidian 결합한 기존 솔루션 및 연구 논문 조사 RAG(검색 증강 생성)와 Obsidian을 결합하여 마크다운 파일 기반 지식 그래프를 구축하고, 이를 통해 질의응답 시스템 및 대화형 AI를 구현한 여러 사례가 최근 소개되고 있습니다."/><meta property="og:description" content="RAG와 Obsidian 결합한 기존 솔루션 및 연구 논문 조사 RAG(검색 증강 생성)와 Obsidian을 결합하여 마크다운 파일 기반 지식 그래프를 구축하고, 이를 통해 질의응답 시스템 및 대화형 AI를 구현한 여러 사례가 최근 소개되고 있습니다."/><meta property="og:image:alt" content="RAG와 Obsidian 결합한 기존 솔루션 및 연구 논문 조사 RAG(검색 증강 생성)와 Obsidian을 결합하여 마크다운 파일 기반 지식 그래프를 구축하고, 이를 통해 질의응답 시스템 및 대화형 AI를 구현한 여러 사례가 최근 소개되고 있습니다."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/3.resources/professional-notes/00.-inbox/genspark-ver."/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/3.resources/professional-notes/00.-inbox/genspark-ver."/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="RAG와 Obsidian 결합한 기존 솔루션 및 연구 논문 조사 RAG(검색 증강 생성)와 Obsidian을 결합하여 마크다운 파일 기반 지식 그래프를 구축하고, 이를 통해 질의응답 시스템 및 대화형 AI를 구현한 여러 사례가 최근 소개되고 있습니다."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="3.resources/professional-notes/00.-inbox/genspark-ver." data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-74" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-74" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../3.resources/">3.Resources</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../3.resources/professional-notes/">Professional Notes</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../3.resources/professional-notes/00.-inbox/">00. Inbox</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Genspark Ver.</a></div></nav><h1 class="article-title">Genspark Ver.</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:12.190Z">2026년 6월 06일</time><span>22 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><ol>
+<li>RAG와 Obsidian 결합한 기존 솔루션 및 연구 논문 조사
+RAG(검색 증강 생성)와 Obsidian을 결합하여 마크다운 파일 기반 지식 그래프를 구축하고, 이를 통해 질의응답 시스템 및 대화형 AI를 구현한 여러 사례가 최근 소개되고 있습니다. 대표적인 사례들은 다음과 같습니다.</li>
+</ol>
+<p>Llama Index 활용 사례
+Obsidian 마크다운 파일로부터 지식 그래프를 생성하고, 이를 기반으로 질문응답 시스템을 구현한 사례가 있습니다. Smart Composer 플러그인의 베타 버전 설치 시 BRAT 플러그인을 통해 GitHub 저장소 URL 입력 후 API 키를 설정할 수 있습니다 Medium1.</p>
+<p>LangChain을 이용한 로컬 Agentic RAG
+LangChain을 사용하여 사용자가 로컬 환경에서 자신의 Obsidian 노트와 직접 대화할 수 있는 RAG 시스템을 구축한 사례가 보고되었습니다 Mohafall2.</p>
+<p>Amazon Bedrock 기반 RAG 시스템
+Amazon Bedrock의 다양한 클라우드 서비스(S3, EC2, OpenSearch)를 연계해 RAG 시스템을 구축한 사례가 있으며, 이 방법은 마크다운 파일을 활용하는 점에서 주목할 만합니다 AWS3, GitHub4.</p>
+<p>Obsidian Smart Seeker Plugin
+PineconeDB와 OpenAI API를 연계해 옵시디언 노트를 자동으로 업데이트하고, 임베딩 및 검색 기능을 제공하는 플러그인이 개발되었습니다 GitHub5.</p>
+<p>Smart Connections &amp; Obsidian Co-Pilot
+Smart Connections 플러그인을 활용해 대화형 AI 시스템으로 노트를 연결하는 방식과 Obsidian Co-Pilot을 통한 RAG 통합 아이디어 또한 소개되고 있습니다 GoldenRabbit6, Medium7.</p>
+<p>이처럼 RAG와 Obsidian의 결합은 마크다운 파일의 구조화된 데이터를 LLM(대형 언어 모델)과 결합시켜, 보다 맥락에 맞는 응답과 질의응답을 제공하는 혁신적인 솔루션으로 주목받고 있습니다.## 2. Obsidian 마크다운 파일의 메타데이터 보존 및 임베딩 생성 방법</p>
+<p>Obsidian은 노트가 마크다운 형식으로 작성되며, YAML frontmatter, 내부 링크 및 태그와 같은 메타데이터를 포함합니다. 이러한 정보를 그대로 보존하면서 텍스트 임베딩을 생성하는 방법은 다음 절차로 진행됩니다.</p>
+<p>2.1. YAML Frontmatter 보존 및 임베딩 생성
+YAML frontmatter 추출 및 활용
+마크다운 파일 상단에 위치한 YAML frontmatter를 추출하여 문서 제목, 태그, 작성일 등의 메타데이터를 각 텍스트 청크와 함께 JSON 포맷으로 결합합니다 Mastra Docs8.</p>
+<p>MarkdownHeaderTextSplitter와 같은 도구 사용
+헤더를 기준으로 텍스트를 분할할 때, 해당 청크에 YAML 정보와 태그를 포함시켜 임베딩에 반영할 수 있습니다 LangChain9.</p>
+<p>CSS Snippet 활용 예시
+메타데이터를 시각화하는 기술로 highlight-line.css를 사용하여 YAML frontmatter를 강조 표시할 수 있습니다. 아래는 코드 스니펫 예시입니다:</p>
+<p>.highlight {
+background-color: yellow;
+}
+2.2. Obsidian 내부 링크의 지식 그래프 변환
+내부 링크 파싱
+Obsidian 마크다운 내 <a href="../../../노트-이름" class="internal internal-link alias" data-slug="노트-이름">노트 이름</a>과 같은 내부 링크를 파싱하여, 각 링크를 하나의 노드로 취급하고, 노드 간의 관계(엣지)를 정의합니다 Obsidian Help10.</p>
+<p>그래프 데이터베이스 활용
+파싱된 노드와 엣지를 기반으로 Neo4j와 같은 그래프 DB 또는 Obsidian 플러그인을 통해 시각화합니다 How to Make Personal Knowledge Graph in Obsidian11.</p>
+<p>2.3. 임베딩 생성 절차 요약
+메타데이터 파싱: YAML frontmatter, 내부 링크, 태그 정보를 각각 파싱합니다 markdown-cheatsheet12.
+텍스트 청킹 시 메타데이터 유지: 구분된 청크에 부가 정보로 추가합니다.
+임베딩 생성: 임베딩 알고리즘(예: OpenAI 임베딩 API 등)을 적용하여, 생성된 벡터와 메타데이터를 JSON 형태로 저장합니다 Preparing data for embedding13.
+이처럼 Obsidian 내 메타데이터와 내부 링크 정보를 보존하면서 임베딩을 생성하면, 이후 벡터 DB 검색이나 지식 그래프 시각화에 매우 유용한 기반 데이터가 형성됩니다.## 3. 벡터 검색과 키워드 기반 Obsidian 검색을 결합한 하이브리드 검색 아키텍처</p>
+<p>하이브리드 검색은 기존 텍스트 기반의 키워드 검색(BM25 등)과 의미 기반의 벡터 검색(코사인 유사도 등)을 결합하여 검색 결과의 정확도와 관련성을 높입니다.</p>
+<p>3.1. 벡터 DB와 기존 검색 엔진 연동
+데이터 추출 및 임베딩
+Obsidian의 마크다운 파일에서 YAML frontmatter, 태그, 내부 링크를 추출하여 텍스트 청크로 분할한 후, 임베딩을 생성합니다 LangChain9.</p>
+<p>저장 및 검색
+생성된 벡터와 메타데이터를 JSON 형식으로 벡터 데이터베이스(예: PineconeDB, Chroma 등)에 저장합니다 Mastra Docs8. 이후, Obsidian API나 Smart Seeker 플러그인을 통해 사용자의 쿼리를 받아 벡터 DB로 전송하고 결과를 기존의 키워드 검색 결과와 결합하여 제공합니다 GitHub5.</p>
+<p>3.2. 하이브리드 검색 결과의 랭킹 알고리즘
+개별 점수 산출
+BM25와 같은 알고리즘을 통해 키워드 검색 점수를 계산하고, 코사인 유사도 기반의 벡터 검색 점수를 각각 산출합니다.</p>
+<p>가중치 결합
+두 점수에 가중치 α(0 ≤ α ≤ 1)를 적용하여 다음 공식으로 최종 점수를 계산합니다:
+hybrid_score = (1-α) * BM25_score + α * Dense_score
+Weaviate14.</p>
+<p>ChromaDB Python 코드 예제
+검색 결과를 처리하는 예제로는 다음과 같은 코드를 사용할 수 있습니다:</p>
+<p>result = collection.query(query_embeddings=embedding, n_results=5)
+Reciprocal Rank Fusion (RRF)
+추가로 RRF 알고리즘을 사용해 각 문서의 역순위를 합산하여 최종 랭킹 결과를 결정합니다.</p>
+<p>3.3. 메타데이터 기반 연동과 재순위화
+메타데이터 활용
+Obsidian 문서에서 추출한 메타데이터(태그, 작성일, 카테고리 등)를 함께 저장하고, 검색 시 필터 및 가중치로 반영함으로써 결과의 정확도를 높입니다 Mastra Docs8.</p>
+<p>지식 그래프 기반 재순위화
+내부 링크를 이용하여 노드를 생성하고, 노드 간의 연결 관계를 분석하는 과정에서, Neo4j 또는 Graph Link Types 플러그인을 활용하여 관련성 점수를 추가 계산할 수 있습니다 How to Make Personal Knowledge Graph in Obsidian11.</p>
+<p>이와 같이 벡터 DB와 기존 Obsidian 검색을 통합하면, 두 가지 검색 방식의 장점을 모두 활용해 사용자에게 보다 관련성 높은 결과를 제공할 수 있습니다.## 4. Obsidian 플러그인 개발을 통한 자동 임베딩 갱신 및 외부 애플리케이션 연동</p>
+<p>Obsidian 내에서 파일이 변경될 때마다 임베딩을 자동으로 갱신하고, 이를 벡터 데이터베이스와 동기화하는 시스템은 사용자가 최신 정보를 유지하면서 효율적인 검색 및 지식 관리를 가능하게 합니다.</p>
+<p>4.1. 파일 변경 감지 방법
+파일 워처 라이브러리 활용
+Obsidian 내 파일 변경 감지는 Filed Watcher 라이브러리(예: chokidar15) 또는 Obsidian API의 이벤트 리스너인 app.workspace.on(‘editor-change’, callback) 를 통해 구현할 수 있습니다 Workspace.on(‘editor-change’)16.</p>
+<p>실시간 변경 감지 및 처리
+파일 변경 시, editor.getValue() 메서드를 사용해 현재 내용을 실시간으로 가져오고, 새로운 임베딩을 생성 후 벡터 DB에 업데이트하는 과정을 구현합니다 How to update the embedding simulating the real time17.</p>
+<p>4.2. 자동 임베딩 동기화 플러그인 개발
+벡터 DB API 연동
+Pinecone, Chroma 등 벡터 DB의 API 문서를 참고하여 연결 정보를 설정합니다.</p>
+<p>이벤트 기반 동기화 로직
+Obsidian API 또는 file watcher 이벤트를 통해 파일이 변경될 때마다 임베딩을 재생성하고, 비동기 API 호출을 통해 벡터 DB에 업데이트하는 동기화 로직을 설계합니다. 아래는 파일 감시 → 임베딩 갱신 → PineconeDB 업데이트의 전체 흐름을 나타내는 코드 블록입니다:</p>
+<p>// chokidar 라이브러리 사용 예시
+const chokidar = require(‘chokidar’);</p>
+<p>const watcher = chokidar.watch(‘path/to/obsidian/vault’, {
+persistent: true
+});</p>
+<p>watcher.on(‘change’, path => {
+console.log(<code>${path} has been changed</code>);
+// 임베딩 갱신 및 DB 업데이트 로직
+});
+시스템 설계 및 일관성 유지
+파일 변경 이벤트에 따라 임베딩과 메타데이터를 재계산하고, 트랜잭션 관리와 주기적 검증(배치 프로세스 또는 크론 작업)을 통해 데이터의 일관성을 유지하는 시스템을 설계합니다.</p>
+<p>이러한 플러그인 개발 과정을 통해 Obsidian 내에서 자동 임베딩 갱신 및 벡터 DB와의 동기화가 가능해지며, 이를 외부 애플리케이션과 연동해 실시간 검색과 지식 관리에 활용할 수 있습니다.## 5. 다듬어지지 않은 생각들을 자동 분류하고 유사도 기반 클러스터링하는 방법 연구</p>
+<p>비정형 텍스트(아이디어, 미정형 노트 등)를 자동으로 분류하고 태깅하며, 유사도 기반 클러스터링을 수행하는 시스템은 생산성 도구로 활용할 수 있으며, 다음과 같은 절차와 기술을 통해 구현할 수 있습니다.</p>
+<p>5.1. 비정형 텍스트 자동 태깅 시스템 구현
+텍스트 전처리
+불필요한 특수문자 제거, 불용어 제거, 토큰화 및 형태소 분석을 통해 텍스트 데이터를 정제합니다 Geeksforgeeks18.</p>
+<p>임베딩 생성
+TF-IDF, Word2Vec, 또는 BERT와 같은 모델을 활용하여 텍스트 데이터를 고차원 벡터로 변환합니다.</p>
+<p>클러스터링 알고리즘 적용
+K-means, DBSCAN, Gaussian Mixture Model(GMM) 등 다양한 클러스터링 알고리즘을 적용해 유사한 텍스트를 그룹화하고, 각 군집의 중심 키워드를 추출하여 자동 태깅합니다.</p>
+<p>5.2. 아이디어 간 의미적 유사도 평가
+모델 선택 기준
+문맥 보존 능력, 임베딩 정밀도, 계산 효율성, 유사도 측정 방법(코사인 유사도, 유클리드 거리 등)을 고려하여 BERT 기반 모델 등을 선택합니다 Geeksforgeeks18.</p>
+<p>평가 기준 및 방법
+각 아이디어를 임베딩 벡터로 변환하고, 코사인 유사도를 통한 정량적 평가를 수행한 후 일정 임계값(예, 0.7 이상)을 설정하여 유사한 그룹으로 분류합니다.</p>
+<p>5.3. 임베딩 및 메타데이터 결합 클러스터링 전략
+메타데이터 벡터화
+작성일, 태그, 작성자 등의 메타데이터를 별도의 숫자형 벡터로 변환합니다.</p>
+<p>통합 벡터 생성
+텍스트 임베딩과 메타데이터 벡터를 연결하거나 가중 평균을 통해 단일 통합 벡터를 생성합니다.</p>
+<p>클러스터링 및 평가
+생성된 통합 벡터를 K-means 또는 DBSCAN과 같은 알고리즘에 적용하여 군집을 구성하고, Silhouette Score와 같은 지표로 클러스터 품질을 평가합니다 Geeksforgeeks18.</p>
+<p>5.4. 자동 분류 및 태깅 모델 및 알고리즘
+머신러닝 모델 활용
+Naive Bayes, SVM, Random Forest, 딥러닝 기반 BERT 또는 LSTM 모델을 사용하여 텍스트 분류 및 태깅 작업을 수행합니다.</p>
+<p>Milvus 벡터 DB와의 통합 사례
+Milvus의 GPU 가속 인덱싱을 활용하여 대규모 클러스터링 최적화 전략을 적용합니다.</p>
+<p>클러스터링 후 재분류
+초기 클러스터링 결과를 바탕으로 추가적인 모델(예: 앙상블 기법)을 통해 재분류를 수행하고, 교차 검증을 통해 성능을 평가합니다.</p>
+<p>5.5. 임베딩 갱신과 클러스터링 적용
+실시간 임베딩 갱신
+자동 임베딩 갱신 시스템과 연동하여, 새로운 아이디어나 노트가 생성될 때마다 임베딩을 갱신합니다.</p>
+<p>주기적 클러스터링
+일정 주기로 최신 임베딩 데이터를 기반으로 클러스터링 알고리즘을 재실행하여, 클러스터의 품질과 태깅 결과를 갱신하고, 이를 모니터링합니다.</p>
+<p>성능 평가 및 사용자 피드백
+임베딩 갱신 전후의 클러스터 품질 지표(예, Silhouette Score, Davies–Bouldin Index)를 비교하고, 사용자 피드백을 반영하여 시스템을 최적화합니다 Geeksforgeeks18.</p>
+<p>이와 같이 비정형 텍스트를 임베딩과 클러스터링, 그리고 메타데이터 통합을 통해 자동으로 태깅하고 분류하는 시스템은, 지속적인 임베딩 갱신과 주기적 평가를 통해 최신 정보를 반영하는 강력한 지식 관리 도구로 발전할 수 있습니다.## 결론</p>
+<p>최근 RAG와 Obsidian을 결합한 다양한 사례들을 통해 마크다운 기반 지식 관리 시스템이 크게 주목받고 있으며,</p>
+<p>Obsidian의 메타데이터 보존 및 임베딩 생성은 지식 그래프와 관련 정보 관리의 핵심 요소로 작용하며,
+하이브리드 검색 아키텍처는 키워드 검색과 임베딩 기반 벡터 검색을 결합하여 사용자에게 보다 관련성 높은 검색 결과를 제공하고,
+자동 임베딩 갱신 플러그인과 비정형 텍스트의 클러스터링 및 태깅 기술은 최신 정보를 유지하며 생산성을 극대화하는 중요한 역할을 담당합니다.
+각 기술 요소는 Obsidian API, 파일 변경 감지, 임베딩 생성 및 동기화, 그리고 클러스터링 알고리즘을 통해 정교하게 통합되며, 이를 통해 사용자는 자신의 노트와 아이디어를 체계적이고 효과적으로 관리할 수 있습니다.</p>
+<p>전체 시스템 아키텍처 요약 다이어그램은 다음과 같습니다:</p>
+<p>데이터 수집 → 처리 → 검색 → 생성의 4단계 프로세스를 시각화하고, 각 단계별 핵심 기술을 명시하였습니다.
+이와 같은 전체 시스템 구축 및 연구 접근은 현대 지식 관리 및 검색 시스템 혁신의 중요한 한 축으로, 관련된 최신 연구 및 사례들을 바탕으로 한 심도 있는 분석과 실무 적용 가능성을 높이고 있습니다.</p>
+<p>각 섹션에서 언급한 기술 및 사례들은 아래의 참조 URL들을 통해 추가 탐색이 가능하며, 실제 구현 및 연구에 참고할 수 있습니다:</p>
+<p>Medium Llama Index 사례1
+Mohafall LangChain 사례2
+AWS Bedrock 가이드3
+Obsidian Smart Seeker Plugin GitHub5
+How to Make Personal Knowledge Graph in Obsidian11
+Mastra Docs on Vector Databases8
+Workspace.on(‘editor-change’)16
+Embedding Sync19
+How to update the embedding simulating the real time17
+Geeksforgeeks 클러스터링 개요18
+핵심 요점
+RAG와 Obsidian의 결합: Llama Index, LangChain, Amazon Bedrock, Obsidian Smart Seeker Plugin 등 다양한 사례를 통해 마크다운 기반 지식 그래프와 질의응답 시스템 구현이 이루어지고 있습니다.
+Obsidian 마크다운 파일의 YAML frontmatter와 내부 링크, 태그 등의 메타데이터를 추출하여 임베딩 생성 시 함께 활용함으로써, 문서의 구조와 메타데이터를 보존하는 방법이 상세히 설명되고 있습니다.
+하이브리드 검색 아키텍처는 **키워드 기반 검색(BM25)**과 **의미 기반 벡터 검색(코사인 유사도)**을 결합하여, 두 검색 방식의 장점을 통합해 보다 관련성 높은 검색 결과를 제공합니다.
+파일의 변경을 실시간으로 감지하기 위해 파일 워처 라이브러리(chokidar) 및 Obsidian API의 이벤트 리스너를 활용하여, 임베딩을 자동으로 갱신하고 벡터 DB와 동기화하는 시스템이 구현됩니다.
+비정형 텍스트(아이디어 및 미정형 노트)는 텍스트 전처리, 임베딩 생성, 그리고 **클러스터링 알고리즘(K-means, DBSCAN 등)**을 통해 자동 분류 및 태깅되어, 생산성을 극대화하는 핵심 도구로 활용됩니다.
+부록: 보충 비디오 자료
+youtubeyoutube
+[Track 1-4] RAG 아키텍처 – 개념부터 구현까지
+May 28, 2024
+자세히 알아보기
+1
+medium.com
+2
+<a href="http://www.mohafall.com" class="external external-link">www.mohafall.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+3
+aws.amazon.com
+4
+github.com
+5
+github.com
+6
+goldenrabbit.co.kr
+7
+medium.com
+8
+mastra.ai
+9
+python.langchain.com
+10
+help.obsidian.md
+11
+volodymyrpavlyshyn.medium.com
+12
+github.com
+13
+community.openai.com
+14
+weaviate.io
+15
+forum.obsidian.md
+16
+forum.obsidian.md
+17
+community.openai.com
+18
+<a href="http://www.geeksforgeeks.org" class="external external-link">www.geeksforgeeks.org<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+19
+embeddingsync.com</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks"><h3>백링크</h3><ul id="list-0" class="overflow"><li><a href="../../../3.resources/professional-notes/00.-inbox/obsidian-markdown를-활용한-rag-시스템-구축-방안" class="internal">Obsidian Markdown를 활용한 RAG 시스템 구축 방안</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

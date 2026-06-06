@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Elastic Stack Configuration 2c83f648df90813cb916c05adbfad599 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Elastic Stack Configuration 2c83f648df90813cb916c05adbfad599 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Elastic Stack Configuration 2c83f648df90813cb916c05adbfad599 | LLM Wiki"/><meta name="twitter:description" content="🥉 Elastic Stack Configuration System Structure Elasticsearch Cluster Background First, you need to deploy and configure three Elasticsearch 7.6 nodes belonging to the development cluster and listening on local and site-local addresses."/><meta property="og:description" content="🥉 Elastic Stack Configuration System Structure Elasticsearch Cluster Background First, you need to deploy and configure three Elasticsearch 7.6 nodes belonging to the development cluster and listening on local and site-local addresses."/><meta property="og:image:alt" content="🥉 Elastic Stack Configuration System Structure Elasticsearch Cluster Background First, you need to deploy and configure three Elasticsearch 7.6 nodes belonging to the development cluster and listening on local and site-local addresses."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/elastic-stack-configuration-2c83f648df90813cb916c05adbfad599"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/elastic-stack-configuration-2c83f648df90813cb916c05adbfad599"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🥉 Elastic Stack Configuration System Structure Elasticsearch Cluster Background First, you need to deploy and configure three Elasticsearch 7.6 nodes belonging to the development cluster and listening on local and site-local addresses."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/elastic-stack-configuration-2c83f648df90813cb916c05adbfad599" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2180" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2180" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Elastic Stack Configuration 2c83f648df90813cb916c05adbfad599</a></div></nav><h1 class="article-title">Elastic Stack Configuration 2c83f648df90813cb916c05adbfad599</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.484Z">2026년 6월 06일</time><span>9 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🥉</p>
+<h1 id="elastic-stack-configuration">Elastic Stack Configuration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#elastic-stack-configuration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="system-structure">System Structure<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#system-structure" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="elasticsearch-cluster">Elasticsearch Cluster<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#elasticsearch-cluster" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../elastic-stack-configuration/untitled.png" class="internal internal-link" data-slug="elastic-stack-configuration/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-99.png" alt/></a></p>
+<h1 id="background">Background<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#background" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>First, you need to deploy and configure three Elasticsearch 7.6 nodes belonging to the <code>development</code> cluster and listening on local and site-local addresses. The node names and roles are as follows:</p>
+<pre><code>+-----------+----------------+
+| Node Name | Roles          |
++-----------+----------------+
+| master-1  | master, ingest |
++-----------+----------------+
+| data-1    | data           |
++-----------+----------------+
+| data-2    | data           |
++-----------+----------------+
+</code></pre>
+<p>Second, you need to secure the Elasticsearch cluster by generating a PKCS#12 <code>development</code> certificate that you will use to encrypt the Elasticsearch transport network. Because this is a development environment, we will use the same certificate for each node with certificate-level verification only. By enabling transport network encryption, you will also be enabling user authentication, which means you will need to set the passwords for each of the built-in Elasticsearch users as follows:</p>
+<pre><code>+------------------------+-------------------------------+
+| User                   | Password                      |
++------------------------+-------------------------------+
+| elastic                | la_elastic_503                |
++------------------------+-------------------------------+
+| apm_system             | la_apm_system_503             |
++------------------------+-------------------------------+
+| kibana                 | la_kibana_503                 |
++------------------------+-------------------------------+
+| logstash_system        | la_logstash_system_503        |
++------------------------+-------------------------------+
+| beats_system           | la_beats_system_503           |
++------------------------+-------------------------------+
+| remote_monitoring_user | la_remote_monitoring_user_503 |
++------------------------+-------------------------------+
+</code></pre>
+<p>Once you have a secured three-node Elasticsearch 7.6 cluster up and running, you will need to deploy a Kibana 7.6 instance on the <code>master-1</code> node. In order to access Kibana from your local web browser, you will need to configure Kibana to bind to the site-local address of the <code>master-1</code> node (<code>10.0.1.101</code>) and listen on port <code>8080</code>.</p>
+<p>After you have Kibana up and running, you will need to deploy both Metricbeat 7.6 and Filebeat 7.6 clients to each node. You will need to configure each Beat client to talk to Kibana at <code>10.0.1.101:8080</code> and output all collected data to the <code>master-1</code> Elasticsearch node as the <code>elastic</code> user. Lastly, you will need to enable and set up the system module for each Beat client.</p>
+<p>Once you have your Elastic Stack collecting, shipping, parsing, and visualizing the system log and telemetry data, log in to your Kibana instance on your <code>master-1</code> node as the <code>elastic</code> user and explore your new Kibana dashboards.</p>
+<h1 id="aggregating-and-analyzing-data-with-elastic-stack-modules"><strong>Aggregating and Analyzing Data with Elastic Stack Modules</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aggregating-and-analyzing-data-with-elastic-stack-modules" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="introduction"><strong>Introduction</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#introduction" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The Elastic Stack provides a plethora of Beat clients to collect and ship all kinds of data. Furthermore, each Beat client also utilizes modules that come pre-packaged with all the configurations, Elasticsearch index templates, ingest pipelines, and Kibana dashboards. Using these modules allows anyone to quickly get up and running with the Elastic Stack. In this hands-on lab, you will be provided an environment to exercise the following:</p>
+<ul>
+<li>
+<p>Deploy and configure a 3-node Elasticsearch cluster.</p>
+</li>
+<li>
+<p>Generate and deploy Elasticsearch node certificates.</p>
+</li>
+<li>
+<p>Encrypt the Elasticsearch transport cluster.</p>
+</li>
+<li>
+<p>Enable user authentication and set built-in user passwords.</p>
+</li>
+<li>
+<p>Deploy and configure Kibana to connect to Elasticsearch.</p>
+</li>
+<li>
+<p>Deploy and configure Filebeat.</p>
+</li>
+<li>
+<p>Enable and use the system module in Filebeat to collect, ship, parse, and visualize system log files.</p>
+</li>
+<li>
+<p>Deploy and configure Metricbeat.</p>
+</li>
+<li>
+<p>Use the system module in Metricbeat to collect, ship, and visualize system telemetry data in Kibana.</p>
+</li>
+<li>
+<p>Explore the Kibana user interface and analyze your system log and telemetry data.</p>
+</li>
+</ul>
+<h2 id="solution"><strong>Solution</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Log in to each node using the credentials provided:</p>
+<pre><code>ssh cloud_user@&lt;PUBLIC_IP_ADDRESS>
+</code></pre>
+<p>Then, become the <code>root</code> user in each one:</p>
+<pre><code>sudo su -
+</code></pre>
+<p><strong>IMPORTANT NOTE:</strong> Unless otherwise noted, <strong>all commands</strong> should be run on <strong>all nodes</strong>.</p>
+<p><em>Hint: When copying and pasting code into Vim from the lab guide, first enter</em> <em><code>:set paste</code></em> <em>(and then</em> <em><code>i</code></em> <em>to enter insert mode) to avoid adding unnecessary spaces and hashes.</em></p>
+<h3 id="install-elasticsearch-on-each-node"><strong>Install Elasticsearch on Each Node</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#install-elasticsearch-on-each-node" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Import the Elastic GPG key:</p>
+<pre><code>rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
+</code></pre>
+</li>
+<li>
+<p>Download the Elasticsearch 7.6 RPM:</p>
+<pre><code>curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.6.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>Install Elasticsearch:</p>
+<pre><code>rpm --install elasticsearch-7.6.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>Configure Elasticsearch to start on system boot:</p>
+<pre><code>systemctl enable elasticsearch
+</code></pre>
+</li>
+</ol>
+<h3 id="configure-each-node-to-form-a-three-node-cluster-per-the-instructions"><strong>Configure Each Node to Form a Three-Node Cluster per the Instructions</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#configure-each-node-to-form-a-three-node-cluster-per-the-instructions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Open the <code>/etc/elasticsearch/elasticsearch.yml</code> file:</p>
+<pre><code>vim /etc/elasticsearch/elasticsearch.yml
+</code></pre>
+</li>
+<li>
+<p>On each node, change the following line:</p>
+<pre><code>#cluster.name: my-application
+</code></pre>
+<p>to</p>
+<pre><code>cluster.name: development
+</code></pre>
+</li>
+<li>
+<p>On the <code>master-1</code> node, change the following line:</p>
+<pre><code>#node.name: node-1
+</code></pre>
+<p>to</p>
+<pre><code>node.name: master-1
+</code></pre>
+</li>
+<li>
+<p>On the <code>data-1</code> node, change the following line:</p>
+<pre><code>#node.name: node-1
+</code></pre>
+<p>to</p>
+<pre><code>node.name: data-1
+</code></pre>
+</li>
+<li>
+<p>On the <code>data-2</code> node, change the following line:</p>
+<pre><code>#node.name: node-1
+</code></pre>
+<p>to</p>
+<pre><code>node.name: data-2
+</code></pre>
+</li>
+<li>
+<p>On each node, change the following line:</p>
+<pre><code>#network.host: 192.168.0.1
+</code></pre>
+<p>to</p>
+<pre><code>network.host: [_local_, _site_]
+</code></pre>
+<p>💡</p>
+<p><em><em>local</em> : loopback address, <em>site</em> : site-local address, <em>global</em> : globall-scoped address (<strong><a href="https://www.elastic.co/guide/en/elasticsearch/reference/6.1/modules-network.html#network-interface-values" class="external external-link">reference<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></strong>)</em></p>
+</li>
+<li>
+<p>On each node, change the following line:</p>
+<pre><code>#discovery.seed_hosts: [&quot;host1&quot;, &quot;host2&quot;]
+</code></pre>
+<p>to</p>
+<pre><code>discovery.seed_hosts: [&quot;10.0.1.101&quot;]
+</code></pre>
+<p>💡</p>
+<p><em><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/discovery-settings.html" class="external external-link">Discovery and cluster formation settings<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></em></p>
+</li>
+<li>
+<p>On each node, change the following line:</p>
+<pre><code>#cluster.initial_master_nodes: [&quot;node-1&quot;, &quot;node-2&quot;]
+</code></pre>
+<p>to</p>
+<pre><code>cluster.initial_master_nodes: [&quot;master-1&quot;]
+</code></pre>
+</li>
+<li>
+<p>On the <code>master-1</code> node, add the following lines:</p>
+<pre><code>node.master: true
+node.data: false
+node.ingest: true
+node.ml: false
+</code></pre>
+</li>
+<li>
+<p>On both the <code>data-1</code> and <code>data-2</code> nodes, add the following lines:</p>
+<pre><code>node.master: false
+node.data: true
+node.ingest: false
+node.ml: false
+</code></pre>
+</li>
+<li>
+<p>On each node, save and quit the file by pressing <strong>Escape</strong> followed by <code>:wq!</code>.</p>
+</li>
+<li>
+<p>Start Elasticsearch:</p>
+<pre><code>systemctl start elasticsearch
+</code></pre>
+</li>
+<li>
+<p>On the <code>master-1</code> node, check your configuration using the <code>_cat/nodes</code> API:</p>
+<pre><code>curl localhost:9200/_cat/nodes?v
+</code></pre>
+</li>
+</ol>
+<h3 id="generate-and-deploy-the-development-certificate-to-each-node"><strong>Generate and Deploy the Development Certificate to Each Node</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#generate-and-deploy-the-development-certificate-to-each-node" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Create the <code>/etc/elasticsearch/certs</code> directory:</p>
+<pre><code>mkdir /etc/elasticsearch/certs
+</code></pre>
+</li>
+<li>
+<p>On the <code>master-1</code> node, generate the <code>development</code> PKCS#12 certificate:</p>
+<pre><code>/usr/share/elasticsearch/bin/elasticsearch-certutil cert --name development --out /etc/elasticsearch/certs/development
+</code></pre>
+</li>
+<li>
+<p>At the password prompt, press <strong>Enter</strong> since we don’t need to give it a password.</p>
+</li>
+<li>
+<p>On the <code>master-1</code> node, allow group read access to the <code>development</code> certificate:</p>
+<pre><code>chmod 640 /etc/elasticsearch/certs/development
+</code></pre>
+</li>
+<li>
+<p>On the <code>master-1</code> node, copy the <code>development</code> certificate to the <code>data-1</code> and <code>data-2</code> nodes:</p>
+<pre><code>scp /etc/elasticsearch/certs/development 10.0.1.102:/etc/elasticsearch/certs/
+</code></pre>
+<pre><code>scp /etc/elasticsearch/certs/development 10.0.1.103:/etc/elasticsearch/certs/
+</code></pre>
+</li>
+<li>
+<p>On the <code>data-1</code> node, verify the certificate was copied:</p>
+<pre><code>ll /etc/elasticsearch/certs/
+</code></pre>
+<p>We should see that it’s there.</p>
+</li>
+</ol>
+<h3 id="encrypt-the-elasticsearch-transport-network"><strong>Encrypt the Elasticsearch Transport Network</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#encrypt-the-elasticsearch-transport-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Open the <code>/etc/elasticsearch/elasticsearch.yml</code> file:</p>
+<pre><code>vim /etc/elasticsearch/elasticsearch.yml
+</code></pre>
+</li>
+<li>
+<p>Add the following lines to the file:</p>
+<pre><code>#
+# ---------------------------------- Security ----------------------------------
+#
+xpack.security.enabled: true
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.security.transport.ssl.keystore.path: certs/development
+xpack.security.transport.ssl.truststore.path: certs/development
+</code></pre>
+</li>
+<li>
+<p>Save and quit the file by pressing <strong>Escape</strong> followed by <code>:wq!</code>.</p>
+</li>
+<li>
+<p>Restart Elasticsearch:</p>
+<pre><code>systemctl restart elasticsearch
+</code></pre>
+</li>
+</ol>
+<h3 id="use-theelasticsearch-setup-passwordstool-to-set-the-password-for-each-built-in-user-on-themaster-1node"><strong>Use the</strong> <code>**elasticsearch-setup-passwords**</code> <strong>Tool to Set the Password for Each Built-In User on the</strong> <code>**master-1**</code> <strong>Node</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-theelasticsearch-setup-passwordstool-to-set-the-password-for-each-built-in-user-on-themaster-1node" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>On the <code>master-1</code> node, set the built-in user passwords using the <code>elasticsearch-setup-passwords</code> utility:</p>
+<pre><code>/usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
+</code></pre>
+</li>
+<li>
+<p>Use the following passwords:</p>
+<pre><code>User: elastic
+Password: la_elastic_503
+
+User: apm_system
+Password: la_apm_system_503
+
+User: kibana
+Password: la_kibana_503
+
+User: logstash_system
+Password: la_logstash_system_503
+
+User: beats_system
+Password: la_beats_system_503
+
+User: remote_monitoring_user
+Password: la_remote_monitoring_user_503
+</code></pre>
+</li>
+</ol>
+<h3 id="deploy-kibana-on-themaster-1node"><strong>Deploy Kibana on the</strong> <code>**master-1**</code> <strong>Node</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deploy-kibana-on-themaster-1node" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>On the <code>master-1</code> node, download the Kibana 7.6 RPM:</p>
+<pre><code>curl -O https://artifacts.elastic.co/downloads/kibana/kibana-7.6.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>On the <code>master-1</code> node, install Kibana:</p>
+<pre><code>rpm --install kibana-7.6.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>On the <code>master-1</code> node, configure Kibana to start on system boot:</p>
+<pre><code>systemctl enable kibana
+</code></pre>
+</li>
+</ol>
+<h3 id="configure-kibana-to-bind-to-the-site-local-address-listen-on-port-8080-and-connect-to-elasticsearch"><strong>Configure Kibana to Bind to the Site-Local Address, Listen on Port 8080, and Connect to Elasticsearch</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#configure-kibana-to-bind-to-the-site-local-address-listen-on-port-8080-and-connect-to-elasticsearch" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>On the <code>master-1</code> node, open the <code>/etc/kibana/kibana</code> file:</p>
+<pre><code>vim /etc/kibana/kibana.yml
+</code></pre>
+</li>
+<li>
+<p>Change the following line:</p>
+<pre><code>#server.port: 5601
+</code></pre>
+<p>to</p>
+<pre><code>server.port: 8080
+</code></pre>
+</li>
+<li>
+<p>Change the following line:</p>
+<pre><code>#server.host: &quot;localhost&quot;
+</code></pre>
+<p>to</p>
+<pre><code>server.host: &quot;10.0.1.101&quot;
+</code></pre>
+</li>
+<li>
+<p>Change the following lines:</p>
+<pre><code>#elasticsearch.username: &quot;kibana&quot;
+#elasticsearch.password: &quot;pass&quot;
+</code></pre>
+<p>to</p>
+<pre><code>elasticsearch.username: &quot;kibana&quot;
+elasticsearch.password: &quot;la_kibana_503&quot;
+</code></pre>
+</li>
+<li>
+<p>Save and quit the file by pressing <strong>Escape</strong> followed by <code>:wq!</code>.</p>
+</li>
+<li>
+<p>Start Kibana:</p>
+<pre><code>systemctl start kibana
+</code></pre>
+</li>
+<li>
+<p>View its progress:</p>
+<pre><code>less /var/log/messages
+</code></pre>
+</li>
+<li>
+<p>When we see a message saying <code>&quot;http server running at http://10.0.1.101:8080&quot;</code>, it means it’s ready.</p>
+</li>
+<li>
+<p>After Kibana has finished starting up, navigate to <code>http://&lt;PUBLIC_IP_ADDRESS_OF_MASTER-1>:8080</code> in your web browser and log in as:</p>
+<ul>
+<li>
+<p><em>Username</em>: <code>elastic</code></p>
+</li>
+<li>
+<p><em>Password</em>: <code>la_elastic_503</code></p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="deploy-metricbeat-on-each-node"><strong>Deploy Metricbeat on Each Node</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deploy-metricbeat-on-each-node" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Download the Metricbeat 7.6 RPM:</p>
+<pre><code>curl -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>Install Metricbeat:</p>
+<pre><code>rpm --install metricbeat-7.6.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>Configure Metricbeat to start on system boot:</p>
+<pre><code>systemctl enable metricbeat
+</code></pre>
+</li>
+</ol>
+<h3 id="configure-metricbeat-on-each-node-to-use-the-system-module-to-ingest-system-telemetry-to-elasticsearch-and-visualize-it-in-kibana"><strong>Configure Metricbeat on Each Node to Use the System Module to Ingest System Telemetry to Elasticsearch and Visualize It in Kibana</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#configure-metricbeat-on-each-node-to-use-the-system-module-to-ingest-system-telemetry-to-elasticsearch-and-visualize-it-in-kibana" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Open the <code>/etc/metricbeat/metricbeat.yml</code> file:</p>
+<pre><code>vim /etc/metricbeat/metricbeat.yml
+</code></pre>
+</li>
+<li>
+<p>Change the following lines:</p>
+<pre><code>setup.kibana:
+
+  # Kibana Host
+  # Scheme and port can be left out and will be set to the default (http and 5601)
+  # In case you specify and additional path, the scheme is required: http://localhost:5601/path
+  # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
+  #host: &quot;localhost:5601&quot;
+</code></pre>
+<p>to</p>
+<pre><code>setup.kibana:
+
+  # Kibana Host
+  # Scheme and port can be left out and will be set to the default (http and 5601)
+  # In case you specify and additional path, the scheme is required: http://localhost:5601/path
+  # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
+  host: &quot;10.0.1.101:8080&quot;
+</code></pre>
+</li>
+<li>
+<p>Change the following lines:</p>
+<pre><code>output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: [&quot;localhost:9200&quot;]
+
+  # Protocol - either `http` (default) or `https`.
+  #protocol: &quot;https&quot;
+
+  # Authentication credentials - either API key or username/password.
+  #api_key: &quot;id:api_key&quot;
+  #username: &quot;elastic&quot;
+  #password: &quot;changeme&quot;
+</code></pre>
+<p>to</p>
+<pre><code>output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: [&quot;10.0.1.101:9200&quot;]
+
+  # Protocol - either `http` (default) or `https`.
+  #protocol: &quot;https&quot;
+
+  # Authentication credentials - either API key or username/password.
+  #api_key: &quot;id:api_key&quot;
+  username: &quot;elastic&quot;
+  password: &quot;la_elastic_503&quot;
+</code></pre>
+</li>
+<li>
+<p>Save and quit the file by pressing <strong>Escape</strong> followed by <code>wq!</code>.</p>
+</li>
+<li>
+<p>On the <code>master-1</code> node, push the index templates and ingest pipelines to Elasticsearch and the module dashboards to Kibana:</p>
+<pre><code>metricbeat setup
+</code></pre>
+</li>
+<li>
+<p>On each node, start Metricbeat:</p>
+<pre><code>systemctl start metricbeat
+</code></pre>
+</li>
+</ol>
+<h3 id="deploy-filebeat-on-each-node"><strong>Deploy Filebeat on Each Node</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deploy-filebeat-on-each-node" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Download the Filebeat 7.6 RPM:</p>
+<pre><code>curl -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>Install Filebeat:</p>
+<pre><code>rpm --install filebeat-7.6.0-x86_64.rpm
+</code></pre>
+</li>
+<li>
+<p>Configure Filebeat to start on system boot:</p>
+<pre><code>systemctl enable filebeat
+</code></pre>
+</li>
+</ol>
+<h3 id="configure-filebeat-on-each-node-to-use-the-system-module-to-ingest-system-logs-to-elasticsearch-and-visualize-them-in-kibana"><strong>Configure Filebeat on Each Node to Use the System Module to Ingest System Logs to Elasticsearch and Visualize Them in Kibana</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#configure-filebeat-on-each-node-to-use-the-system-module-to-ingest-system-logs-to-elasticsearch-and-visualize-them-in-kibana" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Open the <code>/etc/filebeat/filebeat.yml</code> file:</p>
+<pre><code>vim /etc/filebeat/filebeat.yml
+</code></pre>
+</li>
+<li>
+<p>On each node, change the following lines:</p>
+<pre><code>setup.kibana:
+
+  # Kibana Host
+  # Scheme and port can be left out and will be set to the default (http and 5601)
+  # In case you specify and additional path, the scheme is required: http://localhost:5601/path
+  # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
+  #host: &quot;localhost:5601&quot;
+</code></pre>
+<p>to</p>
+<pre><code>setup.kibana:
+
+  # Kibana Host
+  # Scheme and port can be left out and will be set to the default (http and 5601)
+  # In case you specify and additional path, the scheme is required: http://localhost:5601/path
+  # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
+  host: &quot;10.0.1.101:8080&quot;
+</code></pre>
+</li>
+<li>
+<p>On each node, change the following lines:</p>
+<pre><code>output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: [&quot;localhost:9200&quot;]
+
+  # Protocol - either `http` (default) or `https`.
+  #protocol: &quot;https&quot;
+
+  # Authentication credentials - either API key or username/password.
+  #api_key: &quot;id:api_key&quot;
+  #username: &quot;elastic&quot;
+  #password: &quot;changeme&quot;
+</code></pre>
+<p>to</p>
+<pre><code>output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: [&quot;10.0.1.101:9200&quot;]
+
+  # Protocol - either `http` (default) or `https`.
+  #protocol: &quot;https&quot;
+
+  # Authentication credentials - either API key or username/password.
+  #api_key: &quot;id:api_key&quot;
+  username: &quot;elastic&quot;
+  password: &quot;la_elastic_503&quot;
+</code></pre>
+</li>
+<li>
+<p>Save and quit the file by pressing <strong>Escape</strong> followed by <code>wq!</code>.</p>
+</li>
+<li>
+<p>Enable the <code>system</code> module:</p>
+<pre><code>filebeat modules enable system
+</code></pre>
+</li>
+<li>
+<p>On the <code>master-1</code> node, push the index templates and ingest pipelines to Elasticsearch and the module dashboards to Kibana:</p>
+<pre><code>filebeat setup
+</code></pre>
+</li>
+<li>
+<p>On each node, start Filebeat:</p>
+<pre><code>systemctl start filebeat
+</code></pre>
+</li>
+</ol>
+<h3 id="use-kibana-to-explore-your-system-logs-and-telemetry-data"><strong>Use Kibana to Explore Your System Logs and Telemetry Data</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-kibana-to-explore-your-system-logs-and-telemetry-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Navigate to <code>http://&lt;PUBLIC_IP_ADDRESS_OF_MASTER-1>:8080</code> in your web browser and log in as:</p>
+<ul>
+<li>
+<p><em>Username</em>: <code>elastic</code></p>
+</li>
+<li>
+<p><em>Password</em>: <code>la_elastic_503</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>On the side navigation bar, click the dashboards icon.</p>
+</li>
+<li>
+<p>In the search bar, enter “Filebeat System” to find your sample dashboards.</p>
+</li>
+<li>
+<p>Click the <strong>Syslog dashboard ECS</strong> result. Give it a few minutes for more data to populate.</p>
+</li>
+<li>
+<p>Switch to the <strong>Last 1 hour</strong> view.</p>
+</li>
+<li>
+<p>In the pie graph, select the <strong>Kibana</strong> portion.</p>
+</li>
+<li>
+<p>Click <strong>Apply</strong> in the dialog.</p>
+</li>
+<li>
+<p>Scroll through the logs along the bottom, and click to expand one of them.</p>
+</li>
+<li>
+<p>Remove the filters.</p>
+</li>
+<li>
+<p>Click to view the <strong>Sudo commands</strong> dashboard to see who’s accessing the hosts with <code>sudo</code>. We should just see <code>cloud_user</code>.</p>
+</li>
+<li>
+<p>On the side navigation bar, click the dashboards icon.</p>
+</li>
+<li>
+<p>In the search bar, enter “Metricbeat System” to find your sample dashboards.</p>
+</li>
+<li>
+<p>Click the <strong>Overview ECS</strong> result, which provides a bird’s-eye view of all the hosts we’re collecting telemetry from.</p>
+</li>
+<li>
+<p>Under _Top Hosts By Memory (Realtime)__<a href="https://learn.acloud.guru/handson/3c2eb522-979e-4ca2-96bb-3462626421be/course/c867719d-0716-41d9-a0eb-81e6e1dd3a7a" class="external external-link">Metricbeat System<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>_<em>ECS</em>, click our <code>master-1</code> node (the <code>ip-10-0-1-101.ec2.internal</code> bar), which will take us to the host overview dashboard.</p>
+</li>
+<li>
+<p>Change the timeframe to <strong>Last 15 minutes</strong> to get a closer look at the data we’ve collected so far.</p>
+</li>
+</ol></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1662" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#elastic-stack-configuration" data-for="elastic-stack-configuration">Elastic Stack Configuration</a></li><li class="depth-0"><a href="#system-structure" data-for="system-structure">System Structure</a></li><li class="depth-0"><a href="#elasticsearch-cluster" data-for="elasticsearch-cluster">Elasticsearch Cluster</a></li><li class="depth-0"><a href="#background" data-for="background">Background</a></li><li class="depth-0"><a href="#aggregating-and-analyzing-data-with-elastic-stack-modules" data-for="aggregating-and-analyzing-data-with-elastic-stack-modules">Aggregating and Analyzing Data with Elastic Stack Modules</a></li><li class="depth-1"><a href="#introduction" data-for="introduction">Introduction</a></li><li class="depth-1"><a href="#solution" data-for="solution">Solution</a></li><li class="depth-2"><a href="#install-elasticsearch-on-each-node" data-for="install-elasticsearch-on-each-node">Install Elasticsearch on Each Node</a></li><li class="depth-2"><a href="#configure-each-node-to-form-a-three-node-cluster-per-the-instructions" data-for="configure-each-node-to-form-a-three-node-cluster-per-the-instructions">Configure Each Node to Form a Three-Node Cluster per the Instructions</a></li><li class="depth-2"><a href="#generate-and-deploy-the-development-certificate-to-each-node" data-for="generate-and-deploy-the-development-certificate-to-each-node">Generate and Deploy the Development Certificate to Each Node</a></li><li class="depth-2"><a href="#encrypt-the-elasticsearch-transport-network" data-for="encrypt-the-elasticsearch-transport-network">Encrypt the Elasticsearch Transport Network</a></li><li class="depth-2"><a href="#use-theelasticsearch-setup-passwordstool-to-set-the-password-for-each-built-in-user-on-themaster-1node" data-for="use-theelasticsearch-setup-passwordstool-to-set-the-password-for-each-built-in-user-on-themaster-1node">Use the **elasticsearch-setup-passwords** Tool to Set the Password for Each Built-In User on the **master-1** Node</a></li><li class="depth-2"><a href="#deploy-kibana-on-themaster-1node" data-for="deploy-kibana-on-themaster-1node">Deploy Kibana on the **master-1** Node</a></li><li class="depth-2"><a href="#configure-kibana-to-bind-to-the-site-local-address-listen-on-port-8080-and-connect-to-elasticsearch" data-for="configure-kibana-to-bind-to-the-site-local-address-listen-on-port-8080-and-connect-to-elasticsearch">Configure Kibana to Bind to the Site-Local Address, Listen on Port 8080, and Connect to Elasticsearch</a></li><li class="depth-2"><a href="#deploy-metricbeat-on-each-node" data-for="deploy-metricbeat-on-each-node">Deploy Metricbeat on Each Node</a></li><li class="depth-2"><a href="#configure-metricbeat-on-each-node-to-use-the-system-module-to-ingest-system-telemetry-to-elasticsearch-and-visualize-it-in-kibana" data-for="configure-metricbeat-on-each-node-to-use-the-system-module-to-ingest-system-telemetry-to-elasticsearch-and-visualize-it-in-kibana">Configure Metricbeat on Each Node to Use the System Module to Ingest System Telemetry to Elasticsearch and Visualize It in Kibana</a></li><li class="depth-2"><a href="#deploy-filebeat-on-each-node" data-for="deploy-filebeat-on-each-node">Deploy Filebeat on Each Node</a></li><li class="depth-2"><a href="#configure-filebeat-on-each-node-to-use-the-system-module-to-ingest-system-logs-to-elasticsearch-and-visualize-them-in-kibana" data-for="configure-filebeat-on-each-node-to-use-the-system-module-to-ingest-system-logs-to-elasticsearch-and-visualize-them-in-kibana">Configure Filebeat on Each Node to Use the System Module to Ingest System Logs to Elasticsearch and Visualize Them in Kibana</a></li><li class="depth-2"><a href="#use-kibana-to-explore-your-system-logs-and-telemetry-data" data-for="use-kibana-to-explore-your-system-logs-and-telemetry-data">Use Kibana to Explore Your System Logs and Telemetry Data</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

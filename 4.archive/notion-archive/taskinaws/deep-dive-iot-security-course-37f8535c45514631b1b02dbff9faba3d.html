@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Deep dive IoT Security course 37f8535c45514631b1b02dbff9faba3d | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Deep dive IoT Security course 37f8535c45514631b1b02dbff9faba3d | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Deep dive IoT Security course 37f8535c45514631b1b02dbff9faba3d | LLM Wiki"/><meta name="twitter:description" content="🏉 Deep dive IoT Security course www.aws.training/Details/Curriculum Authentication Authorization Policy-based Authorization Policy AWS IoT authorization Permission Policy Document Effect Action Resource Condition Wildcards Policy variables Control Plane vs Data Plane Control Plane Data Plane Authen..."/><meta property="og:description" content="🏉 Deep dive IoT Security course www.aws.training/Details/Curriculum Authentication Authorization Policy-based Authorization Policy AWS IoT authorization Permission Policy Document Effect Action Resource Condition Wildcards Policy variables Control Plane vs Data Plane Control Plane Data Plane Authen..."/><meta property="og:image:alt" content="🏉 Deep dive IoT Security course www.aws.training/Details/Curriculum Authentication Authorization Policy-based Authorization Policy AWS IoT authorization Permission Policy Document Effect Action Resource Condition Wildcards Policy variables Control Plane vs Data Plane Control Plane Data Plane Authen..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/deep-dive-iot-security-course-37f8535c45514631b1b02dbff9faba3d"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/deep-dive-iot-security-course-37f8535c45514631b1b02dbff9faba3d"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🏉 Deep dive IoT Security course www.aws.training/Details/Curriculum Authentication Authorization Policy-based Authorization Policy AWS IoT authorization Permission Policy Document Effect Action Resource Condition Wildcards Policy variables Control Plane vs Data Plane Control Plane Data Plane Authen..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/deep-dive-iot-security-course-37f8535c45514631b1b02dbff9faba3d" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2141" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2141" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Deep dive IoT Security course 37f8535c45514631b1b02dbff9faba3d</a></div></nav><h1 class="article-title">Deep dive IoT Security course 37f8535c45514631b1b02dbff9faba3d</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.481Z">2026년 6월 06일</time><span>23 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🏉</p>
+<h1 id="deep-dive-iot-security-course">Deep dive IoT Security course<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deep-dive-iot-security-course" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="https://www.aws.training/Details/Curriculum?id=42335" class="external external-link">https://www.aws.training/Details/Curriculum?id=42335<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="#a77903d3-a570-488c-b334-0df41b0c5626" class="internal internal-link alias">Authentication</a></p>
+<p><a href="#19dab4ae-27ca-4e33-b4b1-9cf25bd855be" class="internal internal-link alias">Authorization</a></p>
+<p><a href="#72326979-7b22-4537-8b00-8b2755549176" class="internal internal-link alias">Policy-based Authorization</a></p>
+<p><a href="#0b452823-bce4-403e-819b-f2a745e208f6" class="internal internal-link alias">Policy</a></p>
+<p><a href="#a215d9f2-0f89-4776-99ee-39c29311298d" class="internal internal-link alias">AWS IoT authorization</a></p>
+<p><a href="#bedcb38d-e63f-4304-a599-779b7f196791" class="internal internal-link alias">Permission</a></p>
+<p><a href="#c272e94a-0e8e-4f0b-a054-d02d0ad917f4" class="internal internal-link alias">Policy Document</a></p>
+<p><a href="#b41f7fd7-e4d3-4d24-b0d2-8458d8c527cf" class="internal internal-link alias">Effect</a></p>
+<p><a href="#33158c23-6e3f-4cdd-a6f8-28ff90712700" class="internal internal-link alias">Action</a></p>
+<p><a href="#70bf2398-87e5-486a-ad8e-7fbf27f4de2f" class="internal internal-link alias">Resource</a></p>
+<p><a href="#5e414dfd-133b-40f6-b25c-57b6e23f5113" class="internal internal-link alias">Condition</a></p>
+<p><a href="#df9927fa-7fd7-4991-8080-39ee69885188" class="internal internal-link alias">Wildcards</a></p>
+<p><a href="#f8afb36f-2d30-43a5-83fd-79fc401acda4" class="internal internal-link alias">Policy variables</a></p>
+<p><a href="#014acfc2-6fe5-4782-9653-e0d56dd63489" class="internal internal-link alias">Control Plane vs Data Plane</a></p>
+<p><a href="#b1fa51ae-646a-4c08-bf25-aa583984c50a" class="internal internal-link alias">Control Plane</a></p>
+<p><a href="#879354f2-22e0-4927-ac0d-2b975453d66e" class="internal internal-link alias">Data Plane</a></p>
+<p><a href="#7b617b3f-65ff-41b6-893a-d87a4773ce2b" class="internal internal-link alias">Authenticating in the Control Plane</a></p>
+<p><a href="#259eabd2-daf8-4c1a-bac3-d09ef987f043" class="internal internal-link alias">인증 주체</a></p>
+<p><a href="#e81fcbfe-6f1d-4aa5-8a76-d8be2bd0a0cb" class="internal internal-link alias">Authentication protocol</a></p>
+<p><a href="#ae9b2672-e6e7-4799-88c8-b022f75754a4" class="internal internal-link alias">Authorize Control Plane</a></p>
+<p><a href="#88201bed-f980-4b3a-81b4-1f72ce6ff286" class="internal internal-link alias">IAM Policies</a></p>
+<p><a href="#f90adb68-6bb1-4dac-a531-08cdc19f4a46" class="internal internal-link alias">Certificate</a></p>
+<p><a href="#7e96e205-5f77-421e-a246-111406d1a862" class="internal internal-link alias">IoT Policy</a></p>
+<p><a href="#2e7d6ec1-c372-4fd9-8d74-cd2ce371d88c" class="internal internal-link alias">Authorizer</a></p>
+<p><a href="#7600a1f8-2484-4836-9041-493630263df4" class="internal internal-link alias">Others</a></p>
+<p><a href="#7035904b-e439-49bd-bf6c-663d985242fb" class="internal internal-link alias">Create IAM Role example</a></p>
+<p><a href="#460a67ac-a6a7-4c0a-b64f-6e4f6f149697" class="internal internal-link alias">Authenticating</a></p>
+<p><a href="#b57a235e-9c05-4502-93a4-a461e2c4a0ea" class="internal internal-link alias">Methods</a></p>
+<p><a href="#6c110394-2470-4928-9929-57e29075830f" class="internal internal-link alias">X.509 Certificates</a></p>
+<p><a href="#60e8cae0-3255-4af8-8e8b-0b25797533e3" class="internal internal-link alias">Custom authorizers (권한 부여자)</a></p>
+<p><a href="#7b70cad9-cab2-46ee-9d70-cd758abf55cf" class="internal internal-link alias">IAM users and roles</a></p>
+<p><a href="#8b27af41-3b50-4ef3-ae8d-7bc02313e897" class="internal internal-link alias">IAM federated identities</a></p>
+<p><a href="#42fa22b0-0c57-4dbb-9ec3-d99766e76e2c" class="internal internal-link alias">Amazon Cognito federated identities</a></p>
+<p><a href="#a1466b78-a299-45ba-9523-df24e38528a9" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#5b504be6-096d-4235-a49f-efb94b0057cd" class="internal internal-link alias">Protocol</a></p>
+<p><a href="#160162de-da70-4f28-a11d-d5eaaabb83fc" class="internal internal-link alias">Authorizing</a></p>
+<p><a href="#88ea72e7-a047-47c8-8f73-037c8feb0e6a" class="internal internal-link alias">IoT Policy actions</a></p>
+<p><a href="#5349ee1d-d064-4d41-9a0f-326a01c4dd9d" class="internal internal-link alias">MQTT policy actions</a></p>
+<p><a href="#0cb327a2-e99e-4a85-a58a-b15d1368d5b5" class="internal internal-link alias">Show policy actions</a></p>
+<p><a href="#276c26e1-ecf7-4991-99d1-5cfd005228ab" class="internal internal-link alias">Job execution policy actions</a></p>
+<p><a href="#2ca63096-6418-41a4-bbda-40427a503da8" class="internal internal-link alias">IoT policy variables</a></p>
+<p><a href="#535ff5c9-5a87-4c39-a661-e2a2074bbe64" class="internal internal-link alias">Auth Requirements</a></p>
+<p><a href="#c050114a-98f7-4352-8cb0-a85c3d6516c2" class="internal internal-link alias">Shared responsibility model</a></p>
+<p><a href="#90a85c70-e280-41ed-9db8-7c0bd5d48a00" class="internal internal-link alias">Customer : Security in the cloud</a></p>
+<p><a href="#ca3196c0-9aeb-491c-8f76-fdb4aa8d8d3b" class="internal internal-link alias">AWS : Security of the cloud</a></p>
+<p><a href="#8e7534a8-1368-4476-bca8-80fe67ef30b8" class="internal internal-link alias">X.509 Certificate</a></p>
+<p><a href="#4fe80610-bea8-420c-b019-853e97a9e96d" class="internal internal-link alias">CA (Certificate Authority)</a></p>
+<p><a href="#68170f66-d7da-487d-9163-fdc1cac77ef6" class="internal internal-link alias">Protocol</a></p>
+<p><a href="#e7be53ac-bcb5-4f6d-8abd-93f5163a8df9" class="internal internal-link alias">BP</a></p>
+<p><a href="#95f07a65-ccfb-43a8-a3a2-f0a9e1cbfe41" class="internal internal-link alias">Authentication</a></p>
+<p><a href="#6773c76a-2e00-4a67-b6ae-31f17571d662" class="internal internal-link alias">Chain of trust</a></p>
+<p><a href="#f27f5b88-0840-4474-b2af-fa54cf8aab49" class="internal internal-link alias">Mutual Authentication</a></p>
+<p><a href="#f6f77136-3105-49e1-b1a3-2380111cdd7f" class="internal internal-link alias">Server authentication</a></p>
+<p><a href="#0ba01ecb-9477-4862-be1e-9a14c22d0610" class="internal internal-link alias">Amazon Trust Services (ATS) Endpoint</a></p>
+<p><a href="#487eebdd-792e-46cb-86e1-e58e6869ffee" class="internal internal-link alias">Verisign Endpoint</a></p>
+<p><a href="#2f370186-69d8-4337-bb4e-aca4a5fff433" class="internal internal-link alias">Server 인증</a></p>
+<p><a href="#de0e8578-f567-4e2a-8ce5-03977cd1744f" class="internal internal-link alias">Client (디바이스) 인증서 생성 및 등록</a></p>
+<p><a href="#891c4459-3dba-49a8-9b02-14498ed6e486" class="internal internal-link alias">디바이스 인증성 생성 Option</a></p>
+<p><a href="#662e7831-8253-4f10-9c7a-475164b3fc3d" class="internal internal-link alias">One-click 생성</a></p>
+<p><a href="#00f386cf-8905-410a-80f1-105779efb2b5" class="internal internal-link alias">고객의 고유한 CSR 제공 (Provide your own CSR)</a></p>
+<p><a href="#a907fdd7-3ae3-41d9-a907-988964b686e9" class="internal internal-link alias">BYOC (Bring Your Own Certificate)</a></p>
+<p><a href="#3b49b254-d7e2-4dcb-9ebd-ea789597c222" class="internal internal-link alias">디바이스 인증서 등록</a></p>
+<p><a href="#0460b845-3c05-43a0-a013-8541c1c4cc4c" class="internal internal-link alias">Just-in-time Registration (JITR)</a></p>
+<p><a href="#77710ae4-5cb2-4a8b-86a0-fbbc8eab19d5" class="internal internal-link alias">Just-in-time Provisioning (JITP)</a></p>
+<p><a href="#70e476e6-dd27-4e33-bdb8-b9042802fa10" class="internal internal-link alias">Direct Calls to AWS services</a></p>
+<p><a href="#30bd47c9-882e-41fd-ab8b-c080ec2b0816" class="internal internal-link alias">AWS 서비스 자격 증명</a></p>
+<p><a href="#533b0cdd-3f06-4d6c-ac74-9031533ace0f" class="internal internal-link alias">Direct Call from Devices</a></p>
+<p><a href="#4e4fd53f-ad4c-4113-b844-5a5639cbb9e7" class="internal internal-link alias">IoT Rule engine</a></p>
+<p><a href="#277f6b79-d7d6-4d88-afb8-9c13d8e16a7b" class="internal internal-link alias">Credential provider</a></p>
+<p><a href="#9afd4189-bbd4-4064-b986-82156b4dc09f" class="internal internal-link alias">Customer Authroizer</a></p>
+<p><a href="#a4576e07-2b0b-4ae5-a380-bef08053670d" class="internal internal-link alias">Authenticating and Authorizing</a></p>
+<p><a href="#73aff235-4980-4f4e-a24b-24f0ecdc7d87" class="internal internal-link alias">Components of a custom authorizer</a></p>
+<p><a href="#8b4aea63-4bdc-4993-8d42-c6fa4e8c441c" class="internal internal-link alias">Lambda function JSON object</a></p>
+<p><a href="#9cde33c9-4d0b-4c4d-85ba-6cd6a488f9f7" class="internal internal-link alias">IAM, Federated Identities, Cognito Identities</a></p>
+<p><a href="#a8ecc1b3-4398-4aee-96f0-c3e7053b6695" class="internal internal-link alias">Device Provisioning</a></p>
+<p><a href="#818b9f02-76ce-4808-a5d1-19c6f62599d1" class="internal internal-link alias">Provisioning Option</a></p>
+<p><a href="#11a8facf-a941-4c59-a80b-e56857ac3b5d" class="internal internal-link alias">Thing Level (개별, 단일 사물 등록)</a></p>
+<p><a href="#7e487365-1a41-4f11-b8f0-6912856862d1" class="internal internal-link alias">Provision In Advance</a></p>
+<p><a href="#0f195549-8295-4c73-a99f-21af3351c65d" class="internal internal-link alias">Group Level (일괄, 대량 등록)</a></p>
+<p><a href="#fa61c625-945a-4fbb-8d69-546637d8dd29" class="internal internal-link alias">Provision On Demand</a></p>
+<p><a href="#7b053d5a-a779-4677-88ba-879880b6c5bf" class="internal internal-link alias">Provisioning with API Calls</a></p>
+<p><a href="#44a5aefd-9c68-4503-ac6b-6c5b89624f2a" class="internal internal-link alias">Provisioning In Advance</a></p>
+<p><a href="#43bb4716-0417-4883-bee6-43c5b380c787" class="internal internal-link alias">Single or Bulk Device Provisioning</a></p>
+<p><a href="#602f1a79-28c1-434a-a0e3-f343fbaad0de" class="internal internal-link alias">Provision On Demand</a></p>
+<p><a href="#ca35a1a9-7b2b-41da-aa46-efbd851ff984" class="internal internal-link alias">Managing the Fleet</a></p>
+<p><a href="#19843b77-517d-4f57-8886-c1ea8311a557" class="internal internal-link alias">Job Agent Workflow</a></p>
+<p><a href="#eff74c88-adaf-4f8e-934a-059f43321e95" class="internal internal-link alias">Monitoring Device Events</a></p>
+<h1 id="authentication">Authentication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authentication" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>인증</p>
+</li>
+<li>
+<p>Confirm identity</p>
+<ul>
+<li>
+<p>식별</p>
+</li>
+<li>
+<p>Say who they are : 누구인지 말 하는 것</p>
+</li>
+</ul>
+</li>
+<li>
+<p>누군가 문을 두드리면 → 누구인지 질문 (authentication)</p>
+<ul>
+<li>
+<p>누구인지 이름만 듣지 않고</p>
+</li>
+<li>
+<p>목소리를 확인</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-149.png" alt/></a></p>
+<h1 id="authorization">Authorization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authorization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>권한 부여</p>
+</li>
+<li>
+<p>식별하고 인증하게 되면 → 결정이 필요</p>
+<ul>
+<li>
+<p>문을 열어 줄 것 인가?</p>
+</li>
+<li>
+<p>안으로 들여 보낼 것 인가?</p>
+</li>
+<li>
+<p>위층으로 올라 오게 할 것인가?</p>
+</li>
+</ul>
+</li>
+<li>
+<p>사람마다 다른 결정을 함</p>
+<ul>
+<li>
+<p>음식 배달 : 문만 열어 줌</p>
+</li>
+<li>
+<p>가족 : 집에 들어오게 함</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Give different permission → Authorize what they can and cannot do</p>
+<ul>
+<li>할 수 있는 것과 할 수 없는 것을 결정하는 것</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled-1.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-83.png" alt/></a></p>
+<h1 id="policy-based-authorization">Policy-based Authorization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#policy-based-authorization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="policy">Policy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#policy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>JSON document</p>
+</li>
+<li>
+<p>허가 (permission)을 모아 둔 문서</p>
+</li>
+<li>
+<p>디바이스, 사용자, 역할에 연결된다 (attach)</p>
+</li>
+</ul>
+<h2 id="aws-iot-authorization">AWS IoT authorization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-iot-authorization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Policy는 인증된 신원 (authenticated identity) 으로 무엇을 할 수 있는지 결정</p>
+</li>
+<li>
+<p>디바이스, 모바일 앱, 웹 앱, 사용자, 데스크탑 앱에서 사용</p>
+</li>
+<li>
+<p>Authorization은 policy를 통해 수행</p>
+</li>
+<li>
+<p>예를 들면 어떤 디바이스를 MQTT의 모든 토픽에 접근할 수 있게 하거나 특정 토픽에 접근하도록 설정</p>
+</li>
+</ul>
+<h1 id="permission">Permission<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#permission" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../deep-dive-iot-security-course/untitled-2.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-71.png" alt/></a></p>
+<ol>
+<li>
+<p>Explicit Deny</p>
+</li>
+<li>
+<p>Implicit Deny</p>
+</li>
+<li>
+<p>Explicit Allow</p>
+</li>
+</ol>
+<h1 id="policy-document">Policy Document<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#policy-document" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="effect">Effect<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#effect" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Allow or Deny</li>
+</ul>
+<h2 id="action">Action<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#action" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>기능 특정</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;Action&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;iot:Connect&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span></code></pre></figure>
+<h2 id="resource">Resource<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resource" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>ARN으로 특정</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;Resource&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;arn:aws:iot:us-east-1:123456789012:client/client1&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span></code></pre></figure>
+<h2 id="condition">Condition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#condition" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>equal, less than, …</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;Condition&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">      &quot;Bool&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {&quot;iot:Connection.Thing.IsAttached&quot;:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;true&quot;}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h2 id="wildcards">Wildcards<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#wildcards" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<ul>
+<li>: any combination of zero or more characters</li>
+</ul>
+</li>
+<li>
+<p>? : single character</p>
+</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;Resource&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;arn:aws:iot:us-east-1:123456789012:topic/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$aws</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">/things/+/shadow/update&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;Resource&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;arn:aws:iot:us-east-1:123451234510:client/${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">iot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">ClientId</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span></code></pre></figure>
+<h2 id="policy-variables">Policy variables<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#policy-variables" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>$ prefix</p>
+</li>
+<li>
+<p>정책이 평가되면 정책 변수가 각각의 값으로 자동 교체</p>
+</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;Resource&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;arn:aws:iot:us-east-1:123451234510:client/${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">iot</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">ClientId</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span></code></pre></figure>
+<h1 id="control-plane-vs-data-plane">Control Plane vs Data Plane<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#control-plane-vs-data-plane" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="control-plane">Control Plane<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#control-plane" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Setup for routing : Traffic을 보낼 곳을 결정</p>
+</li>
+<li>
+<p>Enable customer to perform administrative task relating to creating or updating certificate, things, rules, and so on</p>
+<ul>
+<li>
+<p>관리자 작업을 수행 할 수 있도록 함</p>
+</li>
+<li>
+<p>thing, rule, 인증서 생성과 업데이트 등의 작업</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Administrative task (<a href="https://docs.aws.amazon.com/iot/latest/apireference/API_Operations_AWS_IoT.html" class="external external-link">IoT actions<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> 참조)</p>
+<ul>
+<li>
+<p>인증서, policy, auditing, authorizers, Device Defender violation</p>
+</li>
+<li>
+<p>Billing</p>
+</li>
+<li>
+<p>Things, thing groups, thing types</p>
+</li>
+<li>
+<p>IoT rules</p>
+</li>
+<li>
+<p>Logging</p>
+</li>
+<li>
+<p>Streams</p>
+</li>
+<li>
+<p>Query search index</p>
+</li>
+<li>
+<p>OTA updates</p>
+</li>
+<li>
+<p>IoT jobs</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Control plane action</p>
+<ul>
+<li>AWS 사용자 혹은 rule이 AWS 관리 콘솔이나 AWS CLI를 통해 수행하는 action</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-plane">Data Plane<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-plane" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Forward traffic</p>
+</li>
+<li>
+<p>Control plan logic을 기반으로 routing</p>
+</li>
+<li>
+<p>Data Routing (<a href="https://docs.aws.amazon.com/iot/latest/apireference/API_Operations_AWS_IoT_Data_Plane.html" class="external external-link">IoT data<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> 참조)</p>
+<ul>
+<li>
+<p>Thing shadow : get, update, delete</p>
+</li>
+<li>
+<p>MQTT : connect, publish, subscribe, receive</p>
+</li>
+<li>
+<p>Job execution : describe, get, start, update</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data plane action</p>
+<ul>
+<li>
+<p>IoT Core에 연결된 디바이스 혹은 모바일 앱 등이 수행하는 action</p>
+</li>
+<li>
+<p>AWS에 정의된 policy에 따라 허용된 action을 수행</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="authenticating-in-the-control-plane">Authenticating in the Control Plane<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authenticating-in-the-control-plane" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="인증-주체">인증 주체<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#인증-주체" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>User</p>
+<ul>
+<li>
+<p>사람 혹은 애플리케이션을 표현하는 개체로 AWS와 상호 작용기 위해 사용</p>
+</li>
+<li>
+<p>이름과 자격 증명으로 구성 된다 (user)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Group</p>
+<ul>
+<li>
+<p>IAM user 집합체 (collection)</p>
+</li>
+<li>
+<p>여러명의 사용자에게 권한을 지정하여 사용자 권한을 쉽게 관리 하고자 함</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Role</p>
+<ul>
+<li>
+<p>특정 권한을 가지도록 계정에서 생성하는 개체</p>
+</li>
+<li>
+<p>권한 policy를 사용하여 AWS 에서 무엇을 하거나 할 수 없는지를 결정</p>
+</li>
+<li>
+<p>한 사람에게 권한을 연결하는 대신 필요로 하는 누구에게나 권한을 부여하기 위해 사용</p>
+</li>
+<li>
+<p>장기간 사용할 수 있는 표준 자격 증명이 아님</p>
+</li>
+<li>
+<p>Role을 부여하면 role session 동안 사용할 수 있는 임시 보안 자격 증명이 공급 된다 (temporary security credential)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="authentication-protocol">Authentication protocol<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authentication-protocol" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>HTTPS AWS Signature Version 4 (SigV4) authentication : 443 port</p>
+</li>
+<li>
+<p>Client는 다음 항목을 지원해야 함</p>
+<ul>
+<li>
+<p>TLS 1.2, 1.1, 1.0</p>
+</li>
+<li>
+<p>SHA-256 RSA certificate signature validation</p>
+</li>
+<li>
+<p>TLS cipher suite</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="authorize-control-plane">Authorize Control Plane<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authorize-control-plane" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>IAM policy 사용하여 Control Plane의 권한을 설정 → IoT Policy가 아님</p>
+</li>
+<li>
+<p>AWS IoT 동작, Control Plane API를 위한 policy action을 정의</p>
+</li>
+</ul>
+<h2 id="iam-policies">IAM Policies<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iam-policies" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="certificate">Certificate<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#certificate" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>키, 인증서 생성</p>
+</li>
+<li>
+<p>CSRs (Certificate Signing Requests - 인증서 서명 요청)로 부터 인증서 생성</p>
+</li>
+<li>
+<p>인증 기관 서명과 인증서 등록, 삭제, 나열, 설명, 업데이트</p>
+</li>
+</ul>
+<h3 id="iot-policy">IoT Policy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-policy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>IoT Policy 생성, 연결, 나열, 분리, 삭제</li>
+</ul>
+<h3 id="authorizer">Authorizer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authorizer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Authorizaer 생성, 삭제, 설명, 나열</p>
+</li>
+<li>
+<p>기본 authorizer 설정</p>
+</li>
+</ul>
+<h3 id="others">Others<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#others" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Role alias 생성</p>
+</li>
+<li>
+<p>Regristraion code 가져옴</p>
+</li>
+<li>
+<p>Things, thing types, and thing groups</p>
+</li>
+<li>
+<p>IoT rules</p>
+</li>
+<li>
+<p>Logging</p>
+</li>
+<li>
+<p>IoT jobs</p>
+</li>
+<li>
+<p>Registration</p>
+</li>
+<li>
+<p>AWS IoT Device Defender actions (security profiles, audit tasks)</p>
+</li>
+</ul>
+<h3 id="create-iam-role-example">Create IAM Role example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#create-iam-role-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>loggingtrustpolicy.json</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{ </span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">     &quot;Version&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;2012-10-17&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">      &quot;Statement&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">          &quot;Sid&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">          &quot;Effect&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Allow&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">          &quot;Principal&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">            &quot;Service&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;iot.amazonaws.com&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">          },</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">          &quot;Action&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;sts:AssumeRole&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<ul>
+<li>loggingrolepolicy.json</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        &quot;Version&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;2012-10-17&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        &quot;Statement&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                &quot;Effect&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Allow&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                &quot;Action&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                    &quot;logs:CreateLogGroup&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                    &quot;logs:CreateLogStream&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                    &quot;logs:PutLogEvents&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                    &quot;logs:PutMetricFilter&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                    &quot;logs:PutRetentionPolicy&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">                 ],</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                &quot;Resource&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                    &quot;*&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">                ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<h1 id="authenticating">Authenticating<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authenticating" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="methods">Methods<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#methods" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="x509-certificates">X.509 Certificates<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#x509-certificates" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>X.509 공개키 인프라(PKI)를 사용하는 디지털 인증서</p>
+</li>
+<li>
+<p>인증서의 식별 정보와 공개키를 연결</p>
+</li>
+</ul>
+<h3 id="custom-authorizers-권한-부여자">Custom authorizers (권한 부여자)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#custom-authorizers-권한-부여자" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>고객 고유 인증 및 인가(권한 부여) 전략을 사용할 수 있게 하는 권한 부여자</p>
+</li>
+<li>
+<p>고객의 권한 부여 서비스와 AWS Lambda 함수를 사용</p>
+</li>
+</ul>
+<h3 id="iam-users-and-roles">IAM users and roles<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iam-users-and-roles" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>AWS 계정의 사람과 프로세스에 대한 인증을 제공하기 위해 생성하는 자격 증명</li>
+</ul>
+<h3 id="iam-federated-identities">IAM federated identities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iam-federated-identities" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>IdP (자격증명 공급자)에 의해 인증되는 ID</p>
+</li>
+<li>
+<p>IAM role을 사용하여 보안 자격증명을 획득하여 AWS 리소스를 접근할 수 있다</p>
+</li>
+</ul>
+<h3 id="amazon-cognito-federated-identities">Amazon Cognito federated identities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#amazon-cognito-federated-identities" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AWS에서 제공되는 자격 증명으로</p>
+</li>
+<li>
+<p>3rd party IdP에게 AWS 리소스에 임시적이고 제한된 접근 권한을 부여 한다</p>
+</li>
+</ul>
+<h2 id="use-case">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Device : X.509 인증서, 커스텀 권한 부여자</p>
+</li>
+<li>
+<p>Web &amp; Mobile 앱 : Amazon Cognito 자격 증명</p>
+</li>
+<li>
+<p>CLI commands : IAM 혹은 연합 자격 증명 (federated identity)</p>
+</li>
+<li>
+<p>Desktop 앱 : IAM 혹은 연합 자격 증명 (federated identity)</p>
+</li>
+</ul>
+<h2 id="protocol">Protocol<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#protocol" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>MQTT over TLS/TCP, TLS mutual auth : X.509 인증서</p>
+</li>
+<li>
+<p>HTTPS, TLS mutual auth : X.509 인증서</p>
+</li>
+<li>
+<p>HTTPS, AWS SigV4 auth : SigV4</p>
+</li>
+<li>
+<p>HTTPS over custom auth : 커스텀 권한 부여자</p>
+</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled-3.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-64.png" alt/></a></p>
+<ul>
+<li>
+<p>SigV4</p>
+<ul>
+<li>
+<p>Signature Version 4 is the process to add authentication information to AWS requests.</p>
+</li>
+<li>
+<p>For security, most requests to AWS must be <strong>signed with an access key</strong>, which consists of an <strong>access key ID</strong> and <strong>secret access key</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="authorizing">Authorizing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authorizing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="iot-policy-actions">IoT Policy actions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-policy-actions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="mqtt-policy-actions">MQTT policy actions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mqtt-policy-actions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>iot:Connect</p>
+<ul>
+<li>
+<p>AWS IoT 메시지 브로커에 연결하기 위한 권한</p>
+</li>
+<li>
+<p>client ARN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iot:Publish</p>
+<ul>
+<li>
+<p>MQTT 토픽을 배포하기 위한 권한</p>
+</li>
+<li>
+<p>MQTT over HTTPS protocol</p>
+</li>
+<li>
+<p>topic ARN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iot:Receive</p>
+<ul>
+<li>
+<p>AWS IoT로 부터 메시지를 받기 위한 권한</p>
+</li>
+<li>
+<p>topic ARN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iot:Subscribe</p>
+<ul>
+<li>
+<p>topic filter를 구독하기 위한 권한</p>
+</li>
+<li>
+<p>topic filter ARN</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="show-policy-actions">Show policy actions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#show-policy-actions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>iot:DeleteThingsShadow</p>
+<ul>
+<li>
+<p>Device shadow 삭제를 위한 권한</p>
+</li>
+<li>
+<p>thing ARN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iot:GetThingShadow</p>
+<ul>
+<li>
+<p>Device shadow 조회를 위한 권한</p>
+</li>
+<li>
+<p>thing ARN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iot:UpdateThingShadow</p>
+<ul>
+<li>
+<p>Device shadow를 업데이트 하는 권한</p>
+</li>
+<li>
+<p>thing ARN</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="job-execution-policy-actions">Job execution policy actions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#job-execution-policy-actions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>iot:DescribeJobExecution</p>
+<ul>
+<li>
+<p>주어진 thing의 job 실행을 조회하기 위한 권한</p>
+</li>
+<li>
+<p>thing ARN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iot:GetPendingJobExecution</p>
+<ul>
+<li>
+<p>Terminal 상태에 있지 않은 job 조회 권한</p>
+</li>
+<li>
+<p>thing ARN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iot:UpdateJobExecution</p>
+<ul>
+<li>
+<p>Job 실행을 업데이트 하기 위한 권한</p>
+</li>
+<li>
+<p>thing ARN</p>
+</li>
+</ul>
+</li>
+<li>
+<p>iot:StartNextPendingJobExecution</p>
+<ul>
+<li>
+<p>Next pending job 실행을 가져오고 시작하기 위한 권한</p>
+</li>
+<li>
+<p>QUEUED or IN_PROGRESS</p>
+</li>
+<li>
+<p>thing ARN</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="iot-policy-variables">IoT policy variables<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-policy-variables" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>iot:ClientId</p>
+<ul>
+<li>
+<p>Message broker에 연결된 client ID</p>
+</li>
+<li>
+<p>example : ${iot:ClientId}</p>
+</li>
+</ul>
+</li>
+<li>
+<p>aws:SourceIp</p>
+<ul>
+<li>연결된 client의 IP 주소</li>
+</ul>
+</li>
+<li>
+<p>iot:Connection.Thing.ThingName</p>
+<ul>
+<li>AWS IoT registry의 thing name</li>
+</ul>
+</li>
+<li>
+<p>iot:Connection.Thing.ThingTypeName</p>
+</li>
+<li>
+<p>iot:Connection.Thing.Attributes[attributeName]</p>
+<ul>
+<li>지정된 속성 값</li>
+</ul>
+</li>
+<li>
+<p>iot:Connection.Thing.IsAttached</p>
+<ul>
+<li>인증서 혹은 Cognito 자격 증명이 thing에 연결 될 경우 True</li>
+</ul>
+</li>
+</ul>
+<h1 id="auth-requirements">Auth Requirements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#auth-requirements" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Credentials</p>
+<ul>
+<li>access the message broker or device shadow 서비스</li>
+</ul>
+</li>
+<li>
+<p>Encrypted over TLS</p>
+</li>
+</ul>
+<h2 id="shared-responsibility-model">Shared responsibility model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#shared-responsibility-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="customer--security-in-the-cloud">Customer : Security in the cloud<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#customer--security-in-the-cloud" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>디바이스 자격 증명 (credential)</p>
+</li>
+<li>
+<p>Policy and permission</p>
+</li>
+<li>
+<p>Unique identities to each device</p>
+</li>
+<li>
+<p>Custome authorizer</p>
+</li>
+</ul>
+<h3 id="aws--security-of-the-cloud">AWS : Security of the cloud<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws--security-of-the-cloud" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AWS IoT authentication and authorization</p>
+</li>
+<li>
+<p>Device authentication, Securely ingest device data, Access permission from policy</p>
+</li>
+<li>
+<p>Protects data traveling between IoT and other services</p>
+</li>
+</ul>
+<h1 id="x509-certificate">X.509 Certificate<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#x509-certificate" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Recommended and most common form of authentication</p>
+</li>
+<li>
+<p>Public Key Infrastructure를 사용하여 공개 키를 인증서에 포함 된 ID와 연결하는 표준을 사용하는 디지털 인증서</p>
+</li>
+</ul>
+<h2 id="ca-certificate-authority">CA (Certificate Authority)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ca-certificate-authority" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>인증서를 발급하는 trusted entity</p>
+</li>
+<li>
+<p>X.509 인증서를 발급하는데 사용되는 CA 인증서 관리 → CA 인증서의 개인 키 접근</p>
+</li>
+<li>
+<p>인증서 생성을 위해 CSR (Certificate Signing Request) 서명</p>
+</li>
+</ul>
+<h2 id="protocol-1">Protocol<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#protocol-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>AWS IoT support : MQTT (port 8883, 443) and HTTPS (port 443)</p>
+</li>
+<li>
+<p>X.509 인증서로 443 port로 연결할 때 ALPN (Application Layer Protocol Negotiation) TLS extension 구현 필요</p>
+</li>
+<li>
+<p>ClientHello 메시지에</p>
+<ul>
+<li>ALPN Protocol name, x-amzn-mqtt-ca, ALPN ProtocolNameList를 client에서 전송</li>
+</ul>
+</li>
+</ul>
+<h2 id="bp">BP<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bp" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Each device a unique certificate</p>
+<ul>
+<li>
+<p>디바이스의 미세한 관리를 가능하게 함</p>
+</li>
+<li>
+<p>불법적인 사용자가 단일 장치에 액세스하면 특정 고유 한 장치에 대한 인증서를 취소 할 수 있음</p>
+</li>
+<li>
+<p>여러 장치가 동일한 인증서를 사용하면 장치가 손상되었음을 (compromised) 나타 낼 수 있음</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Support rotation and replacement of certificate</p>
+<ul>
+<li>AWS IoT job을 통해 인증서 교체를 할 수 있음</li>
+</ul>
+</li>
+</ul>
+<h2 id="authentication-1">Authentication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authentication-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../deep-dive-iot-security-course/untitled-4.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-64.png" alt/></a></p>
+<p><a href="../../../deep-dive-iot-security-course/untitled-5.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-62.png" alt/></a></p>
+<h2 id="chain-of-trust">Chain of trust<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chain-of-trust" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>This chain goes back until a self-signed root certificate is reached</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled-6.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-60.png" alt/></a></p>
+<h1 id="mutual-authentication">Mutual Authentication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mutual-authentication" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>디바이스는 연결하려는 서버가 올바른 것인지 서버의 유효성 확인</p>
+</li>
+<li>
+<p>AWS IoT Core endpoint는 연결하려는 장치의 유효성을 확인</p>
+</li>
+<li>
+<p>Mutual Authentication을 진행하는 동안 디바이스와 서버는 TLS handshake를 수행</p>
+</li>
+</ul>
+<h1 id="server-authentication">Server authentication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#server-authentication" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>서버 인증서는 디바이스로 복사되어 AWS IoT 연결시 사용</p>
+</li>
+<li>
+<p>AWS IoT 서버 인증서</p>
+</li>
+</ul>
+<h3 id="amazon-trust-services-ats-endpoint">Amazon Trust Services (ATS) Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#amazon-trust-services-ats-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://www.amazontrust.com/repository/" class="external external-link">https://www.amazontrust.com/repository/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>iot:Data-ATS endpoint에서 제공하는 서버 인증서</p>
+</li>
+<li>
+<p>디바이스가 지원하는 검증 suite에 따라 Root 인증서 선택 : RSA or ECC</p>
+</li>
+<li>
+<p>전체 인증서 hash 인증서 고정 방법은 사용하지 않는 것을 권고</p>
+<ul>
+<li>
+<p>ATS 인증서는 Starfield에서 교차 서명되어 발급자 이름이 다름</p>
+</li>
+<li>
+<p>신뢰 root 검증이 필요한 경우 클라이언트에 Starfield CA 인증서 설치가 필요</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Amazon Root CA 1 : RSA 2048 bit key</p>
+</li>
+<li>
+<p>Amazon Root CA 2 : RSA 4096 bit key (reserved for future use)</p>
+</li>
+<li>
+<p>Amazon Root CA 3 : ECC 256 bit key (타원 곡선 암호, Elliptic Curve Cryptosystems)</p>
+</li>
+<li>
+<p>Amazon Root CA 4 : ECC 384 bit key</p>
+</li>
+</ul>
+<h3 id="verisign-endpoint">Verisign Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#verisign-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>iot:Data endpoint에서 제공하는 서버 인증서</p>
+</li>
+<li>
+<p>Verisign Class 3 Public Primary G5 : RSA 2048 bit key</p>
+</li>
+<li>
+<p>디바이스에 Symantec 또는 Verisign CA 인증서가 필요한 경우가 아니면 iot:Data-ATS 엔드포인트를 사용</p>
+</li>
+<li>
+<p>Symantec 및 Verisign 인증서는 이제 사용되지 않으며 대부분의 웹 브라우저에서 더 이상 지원되지 않음</p>
+</li>
+</ul>
+<h2 id="server-인증">Server 인증<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#server-인증" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>디바이스가 AWS IoT Core 연결 시도할 때 IoT Core 서버에서 서버 인증을 위한 X.509 인증서를 전송</p>
+</li>
+<li>
+<p>HTTPS URL 방문시 브라우저에서 사용하는 것과 동일</p>
+</li>
+</ul>
+<h1 id="client-디바이스-인증서-생성-및-등록">Client (디바이스) 인증서 생성 및 등록<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#client-디바이스-인증서-생성-및-등록" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>CSR (Certificate Signing Request) : 디바이스의 인증서가 유효함을 디지털 서명을 통해 보증하는 절차 진행</li>
+</ul>
+<h2 id="디바이스-인증성-생성-option">디바이스 인증성 생성 Option<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#디바이스-인증성-생성-option" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="one-click-생성">One-click 생성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#one-click-생성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AWS IoT CA로 서명한 인증서를 생성</p>
+<ul>
+<li>CSR : AWS IoT CA에서 서명</li>
+</ul>
+</li>
+<li>
+<p>디바이스 인증서와 공개키, 개인키를 다운로드</p>
+<ul>
+<li>
+<p>디바이스 인증서</p>
+</li>
+<li>
+<p>디바이스 공개키</p>
+</li>
+<li>
+<p>디바이스 개인키</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="고객의-고유한-csr-제공-provide-your-own-csr">고객의 고유한 CSR 제공 (Provide your own CSR)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#고객의-고유한-csr-제공-provide-your-own-csr" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>고객이 디바이스 고유한 인증서를 생성</p>
+</li>
+<li>
+<p>디바이스 인증서만 다운로드 → AWS에서 개인키를 생성하지 않는 이점</p>
+</li>
+</ul>
+<h3 id="byoc-bring-your-own-certificate">BYOC (Bring Your Own Certificate)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#byoc-bring-your-own-certificate" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>고객인 신뢰하는 CA에서 서명한 디바이스 인증서를 등록하여 사용</p>
+</li>
+<li>
+<p>디바이스 제조 과정에서 고유한 인증서를 생성하거나 이미 필드에서 사용하고 있는 많은 디바이스가 있을 경우 유용</p>
+</li>
+<li>
+<p>AWS에서 다운로드 하지 않음</p>
+</li>
+</ul>
+<h2 id="디바이스-인증서-등록">디바이스 인증서 등록<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#디바이스-인증서-등록" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>등록된 디바이스 인증서를 사용하여 디바이스 인증 진행</li>
+</ul>
+<h3 id="just-in-time-registration-jitr">Just-in-time Registration (JITR)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#just-in-time-registration-jitr" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>디바이스가 처음 연결하는 시점 (Just-in-time)에 디바이스 등록을 진행 한다는 의미</p>
+</li>
+<li>
+<p>CA 인증서 등록 → 등록된 CA로 서명된 어떤 디바이스 인증서도 AWS IoT에 등록 가능하고 인증에 사용될 수 있음</p>
+</li>
+<li>
+<p>CA 서명된 인증서로 JIT registration → 디바이스 인증서 활성화 (activate) 하고 자동으로 IoT policy를 연결</p>
+</li>
+<li>
+<p>Workflow</p>
+<ol>
+<li>
+<p>디바이스가 디바이스 인증서로 AWS IoT에 최초 연결</p>
+</li>
+<li>
+<p>IoT service는 등록된 CA가 서명한 알 수 없는 인증서를 감지 (detect unknown certificate)</p>
+</li>
+<li>
+<p>자동으로 디바이스 인증서 등록</p>
+</li>
+<li>
+<p>Registration 성공하면 AWS IoT는 registration 메시지를 publish (reserved MQTT topic - $aws/events/certificates/registered/<cacertificateid>)</cacertificateid></p>
+</li>
+<li>
+<p>클라이언트 연결 끊음 (disconnect the client)</p>
+</li>
+<li>
+<p>MQTT registration event는 연결되어 있는 Lambda rule engine action을 trigger</p>
+</li>
+<li>
+<p>Lambda 함수를 통해 인증서 공급을 완료 (complete the provisioning of the certificate) - 추가 Custom Logic</p>
+<ol>
+<li>
+<p>Allow List, 인증서 해지 목록 (Certificate Revocation List) 적용</p>
+</li>
+<li>
+<p>특정 사용자에 등록 하거나 추가적인 온보딩 단계를 호출</p>
+</li>
+</ol>
+</li>
+<li>
+<p>디바이스 인증서가 준비되어 AWS IoT에서 디바이스 연결 및 인증에 사용 가능해 짐</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="just-in-time-provisioning-jitp">Just-in-time Provisioning (JITP)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#just-in-time-provisioning-jitp" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>JITR의 Lambda 로직이 필요하지 않음</p>
+</li>
+<li>
+<p>디바이스 처음 연결하는 시점에 디바이스 온보딩과 리소스 공급을 진행 한다는 의미</p>
+</li>
+<li>
+<p>Workflow</p>
+<ol>
+<li>
+<p>Provisioning template을 CA 인증서에 연결 (IAM role 포함)</p>
+</li>
+<li>
+<p>JITP는 template을 기반으로 리소스 생성, 업데이트, 연결을 진행</p>
+</li>
+<li>
+<p>IAM role은 리소스 공급에 필요한 권한을 허용</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled-7.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-59.png" alt/></a></p>
+<p><a href="../../../deep-dive-iot-security-course/create-and-register-your-own-certificates-b6d2429a4c344213b91ef5d76cd08d7c" class="internal internal-link alias" data-slug="deep-dive-iot-security-course/create-and-register-your-own-certificates-b6d2429a4c344213b91ef5d76cd08d7c">🎟️Create and Register your own certificates</a></p>
+<h1 id="direct-calls-to-aws-services">Direct Calls to AWS services<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#direct-calls-to-aws-services" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="aws-서비스-자격-증명">AWS 서비스 자격 증명<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-서비스-자격-증명" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>AWS SigV4의 credential 사용</p>
+</li>
+<li>
+<p>X.509 인증서를 가지고 있는 디바이스도 AWS 서비스를 호출 할 수 있음</p>
+</li>
+</ul>
+<h2 id="direct-call-from-devices">Direct Call from Devices<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#direct-call-from-devices" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="iot-rule-engine">IoT Rule engine<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-rule-engine" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>메시지 크기에 제한이 있음</p>
+</li>
+<li>
+<p>대규모 파일 (video, aggregated telemetry 등)의 경우 AWS 서비스로 직접 연결이 좋은 선택</p>
+</li>
+</ul>
+<h3 id="credential-provider">Credential provider<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#credential-provider" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>내장 X.509 인증서를 AWS request를 인증하기 위한 디바이스 자격 증명으로 사용</p>
+</li>
+<li>
+<p>Credential provider는 caller를 X.509 인증서로 인증하고 임시적이고 제한적인 보안 토큰을 발급</p>
+</li>
+<li>
+<p>Security Token을 사용하여 AWS 요청을 생성하고 구성</p>
+<ul>
+<li>AWS IAM role 구성과 IAM policy 연결이 필요</li>
+</ul>
+</li>
+</ul>
+<h1 id="customer-authroizer">Customer Authroizer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#customer-authroizer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../deep-dive-iot-security-course/untitled-8.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8-56.png" alt/></a></p>
+<ol>
+<li>
+<p>Request security token</p>
+<ol>
+<li>
+<p>The device makes an HTTPS request to the credentials provider for a security token</p>
+</li>
+<li>
+<p>The request includes the device X.509 certificate for authentication</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Validate request</p>
+<ol>
+<li>The credentials provider forwards the request to the AWS IoT authentication and authorization module</li>
+</ol>
+</li>
+<li>
+<p>Success / Failure</p>
+<ol>
+<li>
+<p>In the authentication and authorization module, the X.509 certificate is authenticated. The certificate’s policies are then evaluated to ensure that the proper permissions are included to request the security token</p>
+</li>
+<li>
+<p>To succeed, the certificate needs permission to take the action <span class="text-highlight">**iot:AssumeRoleWithCertificate**</span> on a role alias</p>
+</li>
+<li>
+<p>If the certificate is valid and has permission to assume the role, the AWS IoT authentication and authorization module returns success. Otherwise, it returns failure, which goes back to the device with the appropriate exception</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Assume the role</p>
+<ol>
+<li>
+<p>On successful validation, the credentials provider invokes the AWS Security Token Service (AWS STS) to assume the preconfigured IAM role defined with the role alias</p>
+</li>
+<li>
+<p>To succeed, the role must have a trust policy that allows <strong>credentials.iot.amazonaws.com</strong> to take the action <strong>sts:AssumeRole</strong></p>
+</li>
+</ol>
+</li>
+<li>
+<p>AWS STS returns security token</p>
+<ol>
+<li>Assuming that the role succeeds, AWS STS returns a temporary, limited-privilege security token to the credentials provider</li>
+</ol>
+</li>
+<li>
+<p>Credentials provider returns security token</p>
+<ol>
+<li>The credentials provider returns the security token to the device</li>
+</ol>
+</li>
+<li>
+<p>Sign request with retrieved security token</p>
+<ol>
+<li>The AWS SDK on the device uses the security token to sign an AWS request with AWS Signature Version 4</li>
+</ol>
+</li>
+<li>
+<p>Validate signature</p>
+<ol>
+<li>
+<p>The requested AWS service invokes IAM to validate the signature and authorize the request against access policies attached to the preconfigured IAM role</p>
+</li>
+<li>
+<p>The IAM role is authorized if it has the appropriate permissions to take the desired action in the AWS service</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Success / Failure</p>
+<ol>
+<li>If IAM validates the signature successfully and authorizes the request, the request goes through</li>
+</ol>
+</li>
+</ol>
+<h2 id="authenticating-and-authorizing">Authenticating and Authorizing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#authenticating-and-authorizing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../deep-dive-iot-security-course/untitled-9.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9-54.png" alt/></a></p>
+<ol>
+<li>
+<p>연결 되었지만 SigV4 header가 없다면 → AWS IoT device gateway는 IoT endpoint에 대한 custom authorizer가 구성 되어 있는지 확인</p>
+</li>
+<li>
+<p>Custom authorizer가 있다면 사용</p>
+</li>
+<li>
+<p>Custom authorizer가 인증을 하기 위해서는 token과 token signature가 필요 → HTTP request의 authorizer에 포함 되어야 함</p>
+<ol>
+<li>
+<p>HTTP request 요청 시 token signature는 개인키로 암호화</p>
+</li>
+<li>
+<p>customer authorizer는 공개키로 token signature로 복호화</p>
+</li>
+<li>
+<p>Custom authorizer Component</p>
+<ol>
+<li>
+<p>AWS Lambda Function : authentication and authorization logic</p>
+</li>
+<li>
+<p>Token signature 생성을 위한 공개키와 개인키</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../deep-dive-iot-security-course/untitled-10.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10-47.png" alt/></a></p>
+<p><a href="../../../deep-dive-iot-security-course/untitled-11.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11-45.png" alt/></a></p>
+<ol start="4">
+<li>
+<p>AWS IoT device gateway는 연결을 수립</p>
+</li>
+<li>
+<p>AWS IoT는 policy를 cache하여 이후 연속적인 호출에 대해 재 인증을 하지 않음 → refresh time까지 지속</p>
+</li>
+</ol>
+<h2 id="components-of-a-custom-authorizer">Components of a custom authorizer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#components-of-a-custom-authorizer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>AuthorizerName</p>
+</li>
+<li>
+<p>AuthorizerFunctionArn</p>
+</li>
+<li>
+<p>TokenKeyName</p>
+</li>
+<li>
+<p>TokenSigningPublicKey</p>
+</li>
+<li>
+<p>Status</p>
+</li>
+</ul>
+<h3 id="lambda-function-json-object">Lambda function JSON object<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lambda-function-json-object" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>IsAuthenticated</p>
+</li>
+<li>
+<p>PrincipalId</p>
+</li>
+<li>
+<p>PolicyDocuments</p>
+</li>
+<li>
+<p>DisconnectAfterInSeconds</p>
+<ul>
+<li>AWS IoT device gateway와의 최대 연결 시간</li>
+</ul>
+</li>
+<li>
+<p>RefreshAfterInSeconds</p>
+<ul>
+<li>
+<p>Policy 갱신 간격 → expire 되면 Lambda 함수를 다시 호출하여 새로운 policy 문서를 획득</p>
+</li>
+<li>
+<p>AWS IoT device gateway는 갱신 간격 동안 policy를 cache하여 연속되는 호출에 대한 인증을 미 진행</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Context</p>
+</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">    &quot;isAuthenticated&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> true</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">    &quot;principalId&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;xxxxxxxx&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">    &quot;disconnectAfterInSeconds&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 86400,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">    &quot;refreshAfterInSeconds&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 300,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">    &quot;policyDocuments&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        &quot;{</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Version</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">2012-10-17</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Statement</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">:[{</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Action</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">...</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Effect</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Allow|Deny</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Resource</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">...</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">}]}&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    ],</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">    &quot;context&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        &quot;username&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;johnDoe123&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        &quot;city&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Seattle&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        &quot;country&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;USA&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h1 id="iam-federated-identities-cognito-identities">IAM, Federated Identities, Cognito Identities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iam-federated-identities-cognito-identities" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p><strong>Do not use IAM user credentials with the IoT data plane.</strong></p>
+<ul>
+<li>
+<p>There is a limit on how many IAM users can be created. Each identity should always have unique credentials.</p>
+</li>
+<li>
+<p>Additionally, it is best to always use temporary credentials with the data plane so that you remember to rotate the credentials.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Use Amazon Cognito Federated Identities instead of IAM federated identities when possible.</strong> </p>
+<ul>
+<li>Amazon Cognito is an AWS service that manages the process for federated identities and makes it easier to use.</li>
+</ul>
+</li>
+<li>
+<p><strong>Authenticated Amazon Cognito identities require both IAM and IoT policies.</strong> </p>
+<ul>
+<li>
+<p>Remember to use least privilege for both policies.</p>
+</li>
+<li>
+<p>Do not give full iot:attachpolicy permissions and use Amazon Cognito policies variables and token attributes to further strengthen your policies.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="device-provisioning">Device Provisioning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-provisioning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>연결된 디바이스를 개별 혹은 일괄 등록 하는 것 (Register your connected devices individually or in bulk)</p>
+</li>
+<li>
+<p>Provisioning을 위해 다음의 3가지 요소가 필요</p>
+<ul>
+<li>
+<p>고유 식별자 (Unique identifier) : IoT Thing</p>
+</li>
+<li>
+<p>인증서 : IoT Certificate</p>
+</li>
+<li>
+<p>권한 : IoT Policy</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="provisioning-option">Provisioning Option<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provisioning-option" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="thing-level-개별-단일-사물-등록">Thing Level (개별, 단일 사물 등록)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#thing-level-개별-단일-사물-등록" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../deep-dive-iot-security-course/untitled-12.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12-44.png" alt/></a></p>
+<h3 id="provision-in-advance">Provision In Advance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provision-in-advance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../deep-dive-iot-security-course/untitled-13.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13-42.png" alt/></a></p>
+<h3 id="group-level-일괄-대량-등록">Group Level (일괄, 대량 등록)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#group-level-일괄-대량-등록" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../deep-dive-iot-security-course/untitled-14.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-14-37.png" alt/></a></p>
+<h3 id="provision-on-demand">Provision On Demand<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provision-on-demand" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../deep-dive-iot-security-course/untitled-15.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-15-35.png" alt/></a></p>
+<h3 id="provisioning-with-api-calls">Provisioning with API Calls<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provisioning-with-api-calls" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../deep-dive-iot-security-course/untitled-16.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-16-32.png" alt/></a></p>
+<h3 id="provisioning-in-advance">Provisioning In Advance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provisioning-in-advance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Provisioning Template</p>
+<ul>
+<li>
+<p>디바이스가 AWS IoT와(과) 상호작용하는 데 필요한 리소스를 설명하기 위해 파라미터를 사용하는 JSON 문서</p>
+</li>
+<li>
+<p>Parameters와 Resources 섹션으로 구성</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled-17.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-17-28.png" alt/></a></p>
+<h3 id="single-or-bulk-device-provisioning">Single or Bulk Device Provisioning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#single-or-bulk-device-provisioning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../deep-dive-iot-security-course/untitled-18.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-18-29.png" alt/></a></p>
+<h3 id="provision-on-demand-1">Provision On Demand<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provision-on-demand-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>JITP</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled-19.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-19-29.png" alt/></a></p>
+<ul>
+<li>JITR</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled-20.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-20-26.png" alt/></a></p>
+<ul>
+<li>Comparison</li>
+</ul>
+<p><a href="../../../deep-dive-iot-security-course/untitled-21.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-21.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-21-25.png" alt/></a></p>
+<h1 id="managing-the-fleet">Managing the Fleet<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#managing-the-fleet" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="job-agent-workflow">Job Agent Workflow<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#job-agent-workflow" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../deep-dive-iot-security-course/untitled-22.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-22.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-22-25.png" alt/></a></p>
+<h1 id="monitoring-device-events">Monitoring Device Events<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-device-events" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../deep-dive-iot-security-course/untitled-23.png" class="internal internal-link" data-slug="deep-dive-iot-security-course/untitled-23.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-23-24.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1632" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#deep-dive-iot-security-course" data-for="deep-dive-iot-security-course">Deep dive IoT Security course</a></li><li class="depth-0"><a href="#authentication" data-for="authentication">Authentication</a></li><li class="depth-0"><a href="#authorization" data-for="authorization">Authorization</a></li><li class="depth-0"><a href="#policy-based-authorization" data-for="policy-based-authorization">Policy-based Authorization</a></li><li class="depth-1"><a href="#policy" data-for="policy">Policy</a></li><li class="depth-1"><a href="#aws-iot-authorization" data-for="aws-iot-authorization">AWS IoT authorization</a></li><li class="depth-0"><a href="#permission" data-for="permission">Permission</a></li><li class="depth-0"><a href="#policy-document" data-for="policy-document">Policy Document</a></li><li class="depth-1"><a href="#effect" data-for="effect">Effect</a></li><li class="depth-1"><a href="#action" data-for="action">Action</a></li><li class="depth-1"><a href="#resource" data-for="resource">Resource</a></li><li class="depth-1"><a href="#condition" data-for="condition">Condition</a></li><li class="depth-1"><a href="#wildcards" data-for="wildcards">Wildcards</a></li><li class="depth-1"><a href="#policy-variables" data-for="policy-variables">Policy variables</a></li><li class="depth-0"><a href="#control-plane-vs-data-plane" data-for="control-plane-vs-data-plane">Control Plane vs Data Plane</a></li><li class="depth-1"><a href="#control-plane" data-for="control-plane">Control Plane</a></li><li class="depth-1"><a href="#data-plane" data-for="data-plane">Data Plane</a></li><li class="depth-0"><a href="#authenticating-in-the-control-plane" data-for="authenticating-in-the-control-plane">Authenticating in the Control Plane</a></li><li class="depth-1"><a href="#인증-주체" data-for="인증-주체">인증 주체</a></li><li class="depth-1"><a href="#authentication-protocol" data-for="authentication-protocol">Authentication protocol</a></li><li class="depth-0"><a href="#authorize-control-plane" data-for="authorize-control-plane">Authorize Control Plane</a></li><li class="depth-1"><a href="#iam-policies" data-for="iam-policies">IAM Policies</a></li><li class="depth-2"><a href="#certificate" data-for="certificate">Certificate</a></li><li class="depth-2"><a href="#iot-policy" data-for="iot-policy">IoT Policy</a></li><li class="depth-2"><a href="#authorizer" data-for="authorizer">Authorizer</a></li><li class="depth-2"><a href="#others" data-for="others">Others</a></li><li class="depth-2"><a href="#create-iam-role-example" data-for="create-iam-role-example">Create IAM Role example</a></li><li class="depth-0"><a href="#authenticating" data-for="authenticating">Authenticating</a></li><li class="depth-1"><a href="#methods" data-for="methods">Methods</a></li><li class="depth-2"><a href="#x509-certificates" data-for="x509-certificates">X.509 Certificates</a></li><li class="depth-2"><a href="#custom-authorizers-권한-부여자" data-for="custom-authorizers-권한-부여자">Custom authorizers (권한 부여자)</a></li><li class="depth-2"><a href="#iam-users-and-roles" data-for="iam-users-and-roles">IAM users and roles</a></li><li class="depth-2"><a href="#iam-federated-identities" data-for="iam-federated-identities">IAM federated identities</a></li><li class="depth-2"><a href="#amazon-cognito-federated-identities" data-for="amazon-cognito-federated-identities">Amazon Cognito federated identities</a></li><li class="depth-1"><a href="#use-case" data-for="use-case">Use Case</a></li><li class="depth-1"><a href="#protocol" data-for="protocol">Protocol</a></li><li class="depth-0"><a href="#authorizing" data-for="authorizing">Authorizing</a></li><li class="depth-1"><a href="#iot-policy-actions" data-for="iot-policy-actions">IoT Policy actions</a></li><li class="depth-2"><a href="#mqtt-policy-actions" data-for="mqtt-policy-actions">MQTT policy actions</a></li><li class="depth-1"><a href="#show-policy-actions" data-for="show-policy-actions">Show policy actions</a></li><li class="depth-1"><a href="#job-execution-policy-actions" data-for="job-execution-policy-actions">Job execution policy actions</a></li><li class="depth-1"><a href="#iot-policy-variables" data-for="iot-policy-variables">IoT policy variables</a></li><li class="depth-0"><a href="#auth-requirements" data-for="auth-requirements">Auth Requirements</a></li><li class="depth-1"><a href="#shared-responsibility-model" data-for="shared-responsibility-model">Shared responsibility model</a></li><li class="depth-2"><a href="#customer--security-in-the-cloud" data-for="customer--security-in-the-cloud">Customer : Security in the cloud</a></li><li class="depth-2"><a href="#aws--security-of-the-cloud" data-for="aws--security-of-the-cloud">AWS : Security of the cloud</a></li><li class="depth-0"><a href="#x509-certificate" data-for="x509-certificate">X.509 Certificate</a></li><li class="depth-1"><a href="#ca-certificate-authority" data-for="ca-certificate-authority">CA (Certificate Authority)</a></li><li class="depth-1"><a href="#protocol-1" data-for="protocol-1">Protocol</a></li><li class="depth-1"><a href="#bp" data-for="bp">BP</a></li><li class="depth-1"><a href="#authentication-1" data-for="authentication-1">Authentication</a></li><li class="depth-1"><a href="#chain-of-trust" data-for="chain-of-trust">Chain of trust</a></li><li class="depth-0"><a href="#mutual-authentication" data-for="mutual-authentication">Mutual Authentication</a></li><li class="depth-0"><a href="#server-authentication" data-for="server-authentication">Server authentication</a></li><li class="depth-2"><a href="#amazon-trust-services-ats-endpoint" data-for="amazon-trust-services-ats-endpoint">Amazon Trust Services (ATS) Endpoint</a></li><li class="depth-2"><a href="#verisign-endpoint" data-for="verisign-endpoint">Verisign Endpoint</a></li><li class="depth-1"><a href="#server-인증" data-for="server-인증">Server 인증</a></li><li class="depth-0"><a href="#client-디바이스-인증서-생성-및-등록" data-for="client-디바이스-인증서-생성-및-등록">Client (디바이스) 인증서 생성 및 등록</a></li><li class="depth-1"><a href="#디바이스-인증성-생성-option" data-for="디바이스-인증성-생성-option">디바이스 인증성 생성 Option</a></li><li class="depth-2"><a href="#one-click-생성" data-for="one-click-생성">One-click 생성</a></li><li class="depth-2"><a href="#고객의-고유한-csr-제공-provide-your-own-csr" data-for="고객의-고유한-csr-제공-provide-your-own-csr">고객의 고유한 CSR 제공 (Provide your own CSR)</a></li><li class="depth-2"><a href="#byoc-bring-your-own-certificate" data-for="byoc-bring-your-own-certificate">BYOC (Bring Your Own Certificate)</a></li><li class="depth-1"><a href="#디바이스-인증서-등록" data-for="디바이스-인증서-등록">디바이스 인증서 등록</a></li><li class="depth-2"><a href="#just-in-time-registration-jitr" data-for="just-in-time-registration-jitr">Just-in-time Registration (JITR)</a></li><li class="depth-2"><a href="#just-in-time-provisioning-jitp" data-for="just-in-time-provisioning-jitp">Just-in-time Provisioning (JITP)</a></li><li class="depth-0"><a href="#direct-calls-to-aws-services" data-for="direct-calls-to-aws-services">Direct Calls to AWS services</a></li><li class="depth-1"><a href="#aws-서비스-자격-증명" data-for="aws-서비스-자격-증명">AWS 서비스 자격 증명</a></li><li class="depth-1"><a href="#direct-call-from-devices" data-for="direct-call-from-devices">Direct Call from Devices</a></li><li class="depth-2"><a href="#iot-rule-engine" data-for="iot-rule-engine">IoT Rule engine</a></li><li class="depth-2"><a href="#credential-provider" data-for="credential-provider">Credential provider</a></li><li class="depth-0"><a href="#customer-authroizer" data-for="customer-authroizer">Customer Authroizer</a></li><li class="depth-1"><a href="#authenticating-and-authorizing" data-for="authenticating-and-authorizing">Authenticating and Authorizing</a></li><li class="depth-1"><a href="#components-of-a-custom-authorizer" data-for="components-of-a-custom-authorizer">Components of a custom authorizer</a></li><li class="depth-2"><a href="#lambda-function-json-object" data-for="lambda-function-json-object">Lambda function JSON object</a></li><li class="depth-0"><a href="#iam-federated-identities-cognito-identities" data-for="iam-federated-identities-cognito-identities">IAM, Federated Identities, Cognito Identities</a></li><li class="depth-0"><a href="#device-provisioning" data-for="device-provisioning">Device Provisioning</a></li><li class="depth-1"><a href="#provisioning-option" data-for="provisioning-option">Provisioning Option</a></li><li class="depth-2"><a href="#thing-level-개별-단일-사물-등록" data-for="thing-level-개별-단일-사물-등록">Thing Level (개별, 단일 사물 등록)</a></li><li class="depth-2"><a href="#provision-in-advance" data-for="provision-in-advance">Provision In Advance</a></li><li class="depth-2"><a href="#group-level-일괄-대량-등록" data-for="group-level-일괄-대량-등록">Group Level (일괄, 대량 등록)</a></li><li class="depth-2"><a href="#provision-on-demand" data-for="provision-on-demand">Provision On Demand</a></li><li class="depth-2"><a href="#provisioning-with-api-calls" data-for="provisioning-with-api-calls">Provisioning with API Calls</a></li><li class="depth-2"><a href="#provisioning-in-advance" data-for="provisioning-in-advance">Provisioning In Advance</a></li><li class="depth-2"><a href="#single-or-bulk-device-provisioning" data-for="single-or-bulk-device-provisioning">Single or Bulk Device Provisioning</a></li><li class="depth-2"><a href="#provision-on-demand-1" data-for="provision-on-demand-1">Provision On Demand</a></li><li class="depth-0"><a href="#managing-the-fleet" data-for="managing-the-fleet">Managing the Fleet</a></li><li class="depth-1"><a href="#job-agent-workflow" data-for="job-agent-workflow">Job Agent Workflow</a></li><li class="depth-0"><a href="#monitoring-device-events" data-for="monitoring-device-events">Monitoring Device Events</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

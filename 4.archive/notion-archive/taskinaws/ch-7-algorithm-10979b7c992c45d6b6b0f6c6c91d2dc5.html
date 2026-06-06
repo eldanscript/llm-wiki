@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Ch 7 Algorithm 10979b7c992c45d6b6b0f6c6c91d2dc5 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Ch 7 Algorithm 10979b7c992c45d6b6b0f6c6c91d2dc5 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Ch 7 Algorithm 10979b7c992c45d6b6b0f6c6c91d2dc5 | LLM Wiki"/><meta name="twitter:description" content="🎎 Ch.7 Algorithm Concepts Developing a Good Model Algorithm Regression What is Regression (회귀) Linear Learner Algorithm Linear Model Adjusts to Minimize Error → Stochastic Gradient Descent Feature Use Case Factorization Machines Algorithm Factorization Machines Algorithm Feature Use Case Clustering..."/><meta property="og:description" content="🎎 Ch.7 Algorithm Concepts Developing a Good Model Algorithm Regression What is Regression (회귀) Linear Learner Algorithm Linear Model Adjusts to Minimize Error → Stochastic Gradient Descent Feature Use Case Factorization Machines Algorithm Factorization Machines Algorithm Feature Use Case Clustering..."/><meta property="og:image:alt" content="🎎 Ch.7 Algorithm Concepts Developing a Good Model Algorithm Regression What is Regression (회귀) Linear Learner Algorithm Linear Model Adjusts to Minimize Error → Stochastic Gradient Descent Feature Use Case Factorization Machines Algorithm Factorization Machines Algorithm Feature Use Case Clustering..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/ch-7-algorithm-10979b7c992c45d6b6b0f6c6c91d2dc5"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/ch-7-algorithm-10979b7c992c45d6b6b0f6c6c91d2dc5"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🎎 Ch.7 Algorithm Concepts Developing a Good Model Algorithm Regression What is Regression (회귀) Linear Learner Algorithm Linear Model Adjusts to Minimize Error → Stochastic Gradient Descent Feature Use Case Factorization Machines Algorithm Factorization Machines Algorithm Feature Use Case Clustering..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/ch-7-algorithm-10979b7c992c45d6b6b0f6c6c91d2dc5" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2028" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2028" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Ch 7 Algorithm 10979b7c992c45d6b6b0f6c6c91d2dc5</a></div></nav><h1 class="article-title">Ch 7 Algorithm 10979b7c992c45d6b6b0f6c6c91d2dc5</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.474Z">2026년 6월 06일</time><span>31 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🎎</p>
+<h1 id="ch7-algorithm">Ch.7 Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ch7-algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#5646894e-1c95-4d3f-b6ba-05abc2985caa" class="internal internal-link alias">Concepts</a></p>
+<p><a href="#ecf7dd68-6a20-4dcd-ac66-c2aeed21b917" class="internal internal-link alias">Developing a Good Model</a></p>
+<p><a href="#27d83bb0-d6a7-4bdd-9845-898ca754a8cc" class="internal internal-link alias">Algorithm</a></p>
+<p><a href="#40f03dd7-401d-4ab7-a92e-eff5608e4cf7" class="internal internal-link alias">Regression</a></p>
+<p><a href="#f3c1aafd-0770-452f-b049-582f7bc72c28" class="internal internal-link alias">What is Regression (회귀)</a></p>
+<p><a href="#a62219f7-148a-41d1-b727-6249f95627bd" class="internal internal-link alias">Linear Learner Algorithm</a></p>
+<p><a href="#cf5430fa-6e8c-444b-b3ae-02af89d047ff" class="internal internal-link alias">Linear Model</a></p>
+<p><a href="#c2c35e2e-52e7-4337-9d67-93b813ef0fcf" class="internal internal-link alias">Adjusts to Minimize Error → Stochastic Gradient Descent</a></p>
+<p><a href="#97b23b32-ff1e-4445-a9aa-ac458ac429be" class="internal internal-link alias">Feature</a></p>
+<p><a href="#6d0e2f74-234c-43e7-b9ca-768075242b90" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#696232cd-29f7-4aee-9c40-7b00c6e615c0" class="internal internal-link alias">Factorization Machines Algorithm</a></p>
+<p><a href="#33879d1b-e74c-42b0-bd9e-049a5d81b525" class="internal internal-link alias">Factorization Machines Algorithm</a></p>
+<p><a href="#1f401b27-83ce-41a1-89c4-5896a0f7731c" class="internal internal-link alias">Feature</a></p>
+<p><a href="#dfd72b90-a9c8-4865-8203-0c10bd61c7d9" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#9d692ea0-d1bd-4cdf-b6aa-89b755ab72d7" class="internal internal-link alias">Clustering</a></p>
+<p><a href="#d997874c-f751-46e2-ae97-e76531e7a83c" class="internal internal-link alias">Clustering Algorithm</a></p>
+<p><a href="#e5cbe474-36a8-4dd0-b411-a542c3fec318" class="internal internal-link alias">K-Means Algorithm</a></p>
+<p><a href="#c33c61db-b4e2-4638-a627-ff973f5fa0b3" class="internal internal-link alias">Feature</a></p>
+<p><a href="#b33180d5-483b-4263-9cdd-219a12551f99" class="internal internal-link alias">Tabular Data</a></p>
+<p><a href="#7b4ae550-1879-43d5-b4a0-19ecae8a7fe9" class="internal internal-link alias">Identifying Attribute</a></p>
+<p><a href="#b6216ea1-2f87-46a2-a906-48c8f1d1b9ae" class="internal internal-link alias">Modified K-Means</a></p>
+<p><a href="#6ae05125-9143-49d5-9379-69f2149af395" class="internal internal-link alias">CPU Instance</a></p>
+<p><a href="#5cea3b25-1ed4-4a49-b97f-746dcbe6f216" class="internal internal-link alias">Training is Still a Thing</a></p>
+<p><a href="#d91fd9af-567a-4d85-8a27-53deffc8bb37" class="internal internal-link alias">Number of Features and Clusters</a></p>
+<p><a href="#3689b294-23ed-40b0-9315-af7497143cd6" class="internal internal-link alias">Classification</a></p>
+<p><a href="#362cea31-d32a-417c-8432-054b0ecc0eda" class="internal internal-link alias">Cluster vs Classification</a></p>
+<p><a href="#6ad9af45-d3eb-4deb-a3cc-fbeb6967983b" class="internal internal-link alias">How to choose</a></p>
+<p><a href="#f80bd7fd-5e76-4604-a6e0-fdf7af9b76cc" class="internal internal-link alias">K-Nearest Neighbor</a></p>
+<p><a href="#07b6bd04-b8d8-4965-957e-77ac4c72dd79" class="internal internal-link alias">Classification</a></p>
+<p><a href="#e7cb7f84-d049-4cea-b296-942536c1cbbf" class="internal internal-link alias">Regression</a></p>
+<p><a href="#603c1602-db8f-40ed-8dbd-38b7d421635c" class="internal internal-link alias">Feature</a></p>
+<p><a href="#b81dfc47-f76f-428f-8416-086558c02def" class="internal internal-link alias">Choose the number of ‘neighbor’</a></p>
+<p><a href="#fa3c4829-77af-4016-ab33-c0d33c3f3827" class="internal internal-link alias">Lazy algorithm</a></p>
+<p><a href="#e0042f33-69c2-4942-821b-6354c82aeab8" class="internal internal-link alias">Training Data stays in memory</a></p>
+<p><a href="#4bd004b2-faab-4a8a-865a-8761227a6adc" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#8e2a2e1c-3a08-4007-9876-3e4f49fe590f" class="internal internal-link alias">Credit Ratings</a></p>
+<p><a href="#5e9d9721-5d76-431b-ba5b-12d4dfff0997" class="internal internal-link alias">Product Recommendations</a></p>
+<p><a href="#35df0c25-3fc2-4b5e-ac13-e7bde8ad0ed5" class="internal internal-link alias">Beware of bias</a></p>
+<p><a href="#1ae0e68d-a29b-492c-aae4-cfca4bd9992c" class="internal internal-link alias">Image Analysis</a></p>
+<p><a href="#1e8e929b-83a0-459d-a691-2c13b628513c" class="internal internal-link alias">Image Classification</a></p>
+<p><a href="#54cd8416-5469-4e17-887b-f21eded06599" class="internal internal-link alias">Transfer Learning</a></p>
+<p><a href="#5b1616ad-13d3-4a93-ae1f-f781e121ec01" class="internal internal-link alias">Object Detection</a></p>
+<p><a href="#6c02000b-259a-4c4f-9525-85aeb8d7ad27" class="internal internal-link alias">Semantic Segmentation</a></p>
+<p><a href="#7f2a503a-9f20-49a7-b4d0-e44525508ed7" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#b084ed00-db69-49b9-98d2-65c72136f4bf" class="internal internal-link alias">Image Metadata Extraction</a></p>
+<p><a href="#4e05dc8e-b991-4d74-8409-73bf09a4b63e" class="internal internal-link alias">Computer Vision System</a></p>
+<p><a href="#4ea38f7a-213e-48bb-81f3-028cd04e5c18" class="internal internal-link alias">Anomaly Detection</a></p>
+<p><a href="#aaa51315-a5c9-47a5-a831-cf226afb5c02" class="internal internal-link alias">Random Cut Forest</a></p>
+<p><a href="#391d38a5-9a28-4adb-8c16-3eb7a7957619" class="internal internal-link alias">Feature</a></p>
+<p><a href="#4f532380-72f0-4715-85c0-bfcaec47203a" class="internal internal-link alias">Givea an Anomaly Score</a></p>
+<p><a href="#5a8cdc6c-285f-42a2-b3cd-5eafc63377a9" class="internal internal-link alias">Scales Well</a></p>
+<p><a href="#4bcd2ea7-e27d-4a04-a54a-cfe62276ae27" class="internal internal-link alias">Not benefit from GPU</a></p>
+<p><a href="#d2f653cc-cc05-4856-9fef-b0281df22b19" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#ce90fd4b-39b5-4ad8-9003-5906d7f8e087" class="internal internal-link alias">Quality Control</a></p>
+<p><a href="#b30c2d0e-f4a8-49a7-88de-c93c3a9040e3" class="internal internal-link alias">Fraud Detection</a></p>
+<p><a href="#0ad1993f-6747-48ee-891b-3e01cdfd9bda" class="internal internal-link alias">IP Insights</a></p>
+<p><a href="#9ea68dcb-d7d2-422c-bc67-cde13bd7b800" class="internal internal-link alias">Ingest Entity/IP address Pairs</a></p>
+<p><a href="#9829d70a-05af-43ca-8e93-3cc573a327df" class="internal internal-link alias">Returns Inference via a Score</a></p>
+<p><a href="#de38fada-f3b4-4b41-a196-c9fc3fc65ea5" class="internal internal-link alias">Uses a Neural Network</a></p>
+<p><a href="#0caab128-f20b-424f-a675-53c1372a9251" class="internal internal-link alias">GPUs recommended for Training</a></p>
+<p><a href="#a7a3a683-efab-42da-adc9-d1962dc37927" class="internal internal-link alias">CPUs recommended for Inference</a></p>
+<p><a href="#490ab218-3605-4114-be53-fa779e0f7027" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#1c532773-0056-44ab-8250-b2ad31f36ed6" class="internal internal-link alias">Text Analytics</a></p>
+<p><a href="#6d05b697-1ffc-4e98-80d9-f6093b8d57e5" class="internal internal-link alias">Latent Dirichlet Allocation (LDA)</a></p>
+<p><a href="#5d904385-f8f7-48ff-9b69-c9ac19adad4d" class="internal internal-link alias">Algorithm</a></p>
+<p><a href="#f1624ff3-5e67-49f4-aeed-06038cc6af4d" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#c94cc742-a811-4fa9-8fc6-ba19f0825fbc" class="internal internal-link alias">Neural Topic Model (NTM)</a></p>
+<p><a href="#3ac846ad-e974-4d64-8f27-0fb36e207a5e" class="internal internal-link alias">Algorithm</a></p>
+<p><a href="#eb3ff09c-87fd-4934-b7ef-045cb3c7ad1e" class="internal internal-link alias">Topic Modeling</a></p>
+<p><a href="#b369d4ad-bdac-483c-a29c-d4733f47fa21" class="internal internal-link alias">Sequence to Sequence (seq2seq)</a></p>
+<p><a href="#e16cc8e3-d5f4-43d3-83c9-213bdc763edb" class="internal internal-link alias">BlazingText</a></p>
+<p><a href="#6b554e2a-cfff-4554-9d57-01bf6b487e66" class="internal internal-link alias">Feature</a></p>
+<p><a href="#1fb26948-d56b-4318-971f-a93749fdff79" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#7fd882ae-7cb3-498a-a682-3108a48e5839" class="internal internal-link alias">Object2Vec</a></p>
+<p><a href="#160fdabe-7f82-4734-b717-869cb43b9007" class="internal internal-link alias">Feature</a></p>
+<p><a href="#c401c227-d639-4491-b08d-2233f4cd4a0b" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#a756675c-1c2c-4160-a561-791308d2c1d7" class="internal internal-link alias">Reinforcement Learning (RL)</a></p>
+<p><a href="#816fb75c-d744-4355-aa8e-eb61719c86f9" class="internal internal-link alias">Algorithm</a></p>
+<p><a href="#f15f93ad-5caa-40da-b20e-29d897cd85a1" class="internal internal-link alias">Markov Decision Process (MDP)</a></p>
+<p><a href="#4ebb8f67-cd63-4d02-9913-474e452724a4" class="internal internal-link alias">DeepRacer</a></p>
+<p><a href="#cad1933e-7d23-4c38-818e-72495ab87007" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#9adf40b4-ab8f-42ca-87e4-1e7ea3f4e8f4" class="internal internal-link alias">Autonomous Vehicles</a></p>
+<p><a href="#0748c034-c3ac-4372-b0f1-923220a684bf" class="internal internal-link alias">Intelligent HVAC Control</a></p>
+<p><a href="#27f008e7-291d-4175-a944-7d13d71dd4c1" class="internal internal-link alias">Forecasting</a></p>
+<p><a href="#3cce0436-1555-4cbf-8ef0-f75de4455ac4" class="internal internal-link alias">DeepAR</a></p>
+<p><a href="#18e016fc-a58a-41eb-a200-38c488f655cf" class="internal internal-link alias">Algorithm</a></p>
+<p><a href="#35dacd0a-9f19-4e34-bb37-e8f9973687fa" class="internal internal-link alias">Cold Start Program</a></p>
+<p><a href="#15659c10-8550-45a3-afa3-0b7247124c0e" class="internal internal-link alias">Forecast Type</a></p>
+<p><a href="#d713b416-a384-463c-98be-67090953058a" class="internal internal-link alias">Feature</a></p>
+<p><a href="#5d4da360-7043-4154-8798-2604658e59e9" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#74975662-b44b-4b7a-9bc0-662757966a8b" class="internal internal-link alias">Ensemble Learning</a></p>
+<p><a href="#be853ca0-46fe-4ec1-878c-3d02f91ff99f" class="internal internal-link alias">Algorithm</a></p>
+<p><a href="#d91bd638-bb58-4e95-9dd4-7a5748624de1" class="internal internal-link alias">Extreme Gradient Boosting → XGBoost</a></p>
+<p><a href="#98c786d1-7668-4c27-b2ab-51379d7cfbce" class="internal internal-link alias">Feature</a></p>
+<p><a href="#ee0f7bf6-ad7f-49d3-8f94-2503d08f12e9" class="internal internal-link alias">Decision Tree Ensembles</a></p>
+<p><a href="#c88fb490-b982-4dc9-8007-a990bd4700ac" class="internal internal-link alias">Use Case</a></p>
+<p><a href="#476d132e-4f25-4faf-b8ea-aab0ce8c8390" class="internal internal-link alias">Ranking</a></p>
+<p><a href="#f133032d-f2a9-4521-8f2c-3c6b410d377f" class="internal internal-link alias">Fraud Detection</a></p>
+<p><a href="#b60b7d0e-911c-4871-b8e0-9eb2d702daf1" class="internal internal-link alias">Reference</a></p>
+<p><a href="#593e86b8-6c01-4463-b845-d4a84c418861" class="internal internal-link alias">Quiz</a></p>
+<h1 id="concepts">Concepts<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#concepts" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="developing-a-good-model">Developing a Good Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#developing-a-good-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../ch-7-algorithm/untitled.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-59.png" alt/></a></p>
+<h2 id="algorithm">Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Use SageMaker Built-in Algorithm</p>
+</li>
+<li>
+<p>Purchase from AWS Marketplace</p>
+</li>
+<li>
+<p>Build your own via Docker image</p>
+</li>
+</ul>
+<h1 id="regression">Regression<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#regression" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="what-is-regression-회귀">What is Regression (회귀)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-regression-회귀" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>회귀란 사전적으로 ‘한바퀴 돌아 제자리로 돌아가다’ → 무엇이 어디로 돌아가는 것인가?</p>
+</li>
+<li>
+<p>회귀 모델에서 회귀라는 것은 데이터가 평균값으로 돌아가는 것을 의미(?) → 데이터는 존재또는 발현하는 것을 획득하는 것이므로 이동하는 의미로는 부적합</p>
+</li>
+<li>
+<p>데이터 실측값과 모델의 예측치 사이의 차이, 즉 잔차가 평균으로 돌아가도록 만드는 것을 의미 → 잔차가 0이 되는 것이 아닌 이유는 실제 세계에서는 잡음이 존재하기 때문에 완전히 예측치가 실측치와 일치하지 않으며 전체적 추세로 0으로 수렴하는 것이다</p>
+</li>
+<li>
+<p>잔차가 독립적이고 동일하게 분산된 랜덤(I.I.D)한 성질을 만족해야 한다</p>
+<ul>
+<li>
+<p>잔차의 분포는 정규 분포여야 한다 → Random</p>
+</li>
+<li>
+<p>잔차와 독립변수 X 사이에 상관 관계가 없어야 한다. 자기 자신과도 상관 관계가 없어야 한다 → Independant</p>
+</li>
+<li>
+<p>잔차의 분포가 일정해야 한다 (등분산성) → Identically Distributed</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="linear-learner-algorithm">Linear Learner Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#linear-learner-algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/linear-learner.html" class="external external-link">https://docs.aws.amazon.com/sagemaker/latest/dg/linear-learner.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>알고리즘은 linear function을 학습</p>
+</li>
+<li>
+<p>분류 문제에서는 linear threshold function을 학습</p>
+</li>
+<li>
+<p>x 벡터를 y 라벨의 추정치로 맵핑</p>
+</li>
+</ul>
+<h3 id="linear-model">Linear Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#linear-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>지도 학습 알고리즘으로 회귀 (regression), 이진 분류 (binary classification), 다중 분류 (multiclass classification) 문제에 적용된다</p>
+</li>
+<li>
+<p>Model(x,y) : x는 고차원 또는 다차원 (high-dimensional) 벡터이고 y는 숫자값 (numeric label) → 다차원 입력 변수 x들에 대한 예측값 y를 생성해 내는 모델을 의미한다</p>
+</li>
+<li>
+<p>알고리즘을 사용하기 위해 다른 어떤 number를 만들어내는 number, list of number가 필요</p>
+</li>
+<li>
+<p>이 number, list of number를 사용하여 특정 값을 예측하거나 그룹화를 위한 기준값 (threshold)을 만들어 낸다 → <span class="text-highlight">**regression or classification**</span> 에 사용</p>
+</li>
+</ul>
+<h3 id="adjusts-to-minimize-error--stochastic-gradient-descent">Adjusts to Minimize Error → Stochastic Gradient Descent<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#adjusts-to-minimize-error--stochastic-gradient-descent" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>알고리즘은 직선의 방정식을 가능한 fitting 하게 만들고자 한다 → 모든 학습 데이터 포인트와 예측 직선과의 거리값의 합을 최대한 작게 하기 위한 방법을 찾는다</p>
+</li>
+<li>
+<p>Stochastic Gradient Descent (확률적 경사 하강법)</p>
+<ul>
+<li>
+<p>Stochastic : Random으로 표시하기도 하는데 ‘임의’ 보다는 확률 특성을 가진다. 확률변수의 영향 때문에 정확히 예측할 수 없는 사건이나 계를 묘사하기 위해 생겨난 학문을 의미하기도 한다. (Probabilistic + Time)</p>
+</li>
+<li>
+<p>Gradient : 기울기.. 공간에 대한 기울기 → 벡터장에서의 기울기</p>
+</li>
+<li>
+<p>Gradient Descent : Gradient 개념을 최적화 문제에 적용 → Local Minimum을 찾는 방법</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Local Minimum과 Global Minimum이 있는데 Local Minimum에 빠지지 않도록 주의가 필요</p>
+</li>
+</ul>
+<h3 id="feature">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Very Flexible</p>
+<ul>
+<li>
+<p>다른 학습 목표들을 탐색하고 최선을 선택하는 것에 사용 가능</p>
+</li>
+<li>
+<p>이산 이나 연속 데이터에 대한 추론에 모두 적합</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Built-in Tuning</p>
+<ul>
+<li>
+<p>Hyperparameter 튜닝 내장 → 자동 모델 튜닝 (<a href="https://www.kaggle.com/willkoehrsen/automated-model-tuning" class="external external-link">automatic model tuning<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) 기능과 다름</p>
+</li>
+<li>
+<p>Linear Learner 모델은 여러가지 모델을 <strong>병렬로 학습</strong>하여 hyperparameter 튜닝</p>
+</li>
+<li>
+<p>Automatic Model Tuning (Hyperparameter Tuning) 은 주어진 데이터셋에서 hyperparameter의 <strong>범위</strong>에서 테스트 하는 여러 작업을 실행</p>
+</li>
+<li>
+<p>Automatic Model Tuning을 활성화 하면 Linear Learner Model Tuning은 비 활성화 됨 → Parallel model 수를 1로 설정</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Good First Chois</p>
+<ul>
+<li>데이터와 학습 목표가 충족된다면 첫번째 모델 학습으로 좋은 알고리즘</li>
+</ul>
+</li>
+</ul>
+<h3 id="use-case">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>주어진 숫자 입력값을 기반으로 양적 값을 예측 (Predict quantitive value)</p>
+</li>
+<li>
+<p>이산 이진 분류 문제 (Discrete Binary Classification)</p>
+</li>
+<li>
+<p>이산 다중 분류 문제 (Discrete Mutliclass Classification)</p>
+</li>
+</ul>
+<h2 id="factorization-machines-algorithm">Factorization Machines Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#factorization-machines-algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/fact-machines.html" class="external external-link">https://docs.aws.amazon.com/sagemaker/latest/dg/fact-machines.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>Linear Learner 모델은 연속 데이터 입력에 대해 매우 좋음 → 데이터가 손실 된 경우에는 ? (Sparse dataset)</li>
+</ul>
+<h3 id="factorization-machines-algorithm-1">Factorization Machines Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#factorization-machines-algorithm-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>How it works : <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/fact-machines-howitworks.html" class="external external-link">https://docs.aws.amazon.com/sagemaker/latest/dg/fact-machines-howitworks.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>이진 분류 및 회귀를 위한 지도 학습 모델 → 특정 값을 예측하거나 두 그룹중 하나에 배치하기 위한 기준 (threshold) 설정</p>
+</li>
+<li>
+<p>다차원의 Sparse 데이터셋의 feature 간의 상호 작용을 획득 → 데이터에 hole이 있을 때 좋은 선택이 된다</p>
+</li>
+<li>
+<p>Binary Classification : score > 0.5 → 1</p>
+</li>
+<li>
+<p>Regression : score is the predicted value</p>
+</li>
+</ul>
+<h3 id="feature-1">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Only Pair-wise feature</p>
+<ul>
+<li>한번에 두 쌍의 기능에 대한 관계를 분석하는 경우에 사용 → pairwise interaction</li>
+</ul>
+</li>
+<li>
+<p>CSV is not supported</p>
+<ul>
+<li>
+<p>sparse dimension에서 CSV는 좋은 선택지가 아님</p>
+</li>
+<li>
+<p>Float32 tensor들의 recordIO-protobuf 형식을 사용하는 File이나 Pipe mode 학습</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Doesn’t work for Multiclass Problems</p>
+<ul>
+<li>이진 분류나 회귀 모델에 사용 가능</li>
+</ul>
+</li>
+<li>
+<p>Needs LOTS of data</p>
+<ul>
+<li>
+<p>희소성(Sparseness)을 보완하기 위해서는 많은 데이터가 필요</p>
+</li>
+<li>
+<p>추천하는 입력 특징 공간 (Feature space)의 차원 수는 10K ~ 10M</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CPUs rock sparse data better</p>
+<ul>
+<li>GPU 보다는 효율적인 CPU 사용을 추천</li>
+</ul>
+</li>
+<li>
+<p>Don’t perform well on dense data</p>
+<ul>
+<li>Full 데이터셋이 있다면 다른 알고리즘이 더 성능이 좋음</li>
+</ul>
+</li>
+</ul>
+<h3 id="use-case-1">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>High Dimensional Sparse Data Sets</p>
+<ul>
+<li>사용자에 대한 정보가 주어진 페이지에서의 광고에 대한 Click-stream data</li>
+</ul>
+</li>
+<li>
+<p>Recommendations</p>
+<ul>
+<li>감상한 영화중 일부만 평가하거나 다른 영화를 평가한 경우 어떤 영화를 추천할 것인가?</li>
+</ul>
+</li>
+</ul>
+<h1 id="clustering">Clustering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#clustering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="clustering-algorithm">Clustering Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#clustering-algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>비슷한 것으로 그룹화 하는 비지도 학습 알고리즘</li>
+</ul>
+<h2 id="k-means-algorithm">K-Means Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#k-means-algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>데이터 내에서 이산(discrete) 그룹을 찾아내는 비지도 학습 알고리즘</p>
+</li>
+<li>
+<p>그룹의 멤버들은 가능한 유사하고 다른 그룹의 멤버들과는 가능한 다름</p>
+</li>
+<li>
+<p>데이터를 점으로 표현할 때 점간의 euclidean distance가 유사성(similarity)를 표현한다</p>
+</li>
+<li>
+<p>어떠한 속성으로 유사성을 나타낼지 지정하면 알고리즘은 유사한 것들끼리 그룹화</p>
+</li>
+<li>
+<p>유사성은 구분하는 속성간의 거리를 기반으로 계산</p>
+</li>
+<li>
+<p>K는 제공하는 상수를 의미 → 클러스터 개수</p>
+</li>
+</ul>
+<h2 id="feature-2">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="tabular-data">Tabular Data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tabular-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Row : 클러스터할 관찰 대상</p>
+</li>
+<li>
+<p>Column : 관찰 대상의 속성</p>
+</li>
+</ul>
+<h3 id="identifying-attribute">Identifying Attribute<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#identifying-attribute" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>데이터셋의 특성 파악을 통해 유사성을 정의하기 위한 속성을 찾아야 함</li>
+</ul>
+<h3 id="modified-k-means">Modified K-Means<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#modified-k-means" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>SageMaker에서는 웹 규모로 수정된 K-Means 알고리즘을 사용 → 정확도 향상</li>
+</ul>
+<h3 id="cpu-instance">CPU Instance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cpu-instance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>K-Means 알고리즘은 CPU 인스턴스 사용을 추천</p>
+</li>
+<li>
+<p>GPU 인스턴스 사용 가능하나 1개 GPU만 사용할 수 있음</p>
+</li>
+</ul>
+<h3 id="training-is-still-a-thing">Training is Still a Thing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#training-is-still-a-thing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>데이터는 라벨링 되어 있지 않다 → 지속적으로 학습하여 정확도를 높여야 함</p>
+</li>
+<li>
+<p>정확도 향상을 위해서는 구분 속성(identifying attribute)이 중요</p>
+</li>
+</ul>
+<h3 id="number-of-features-and-clusters">Number of Features and Clusters<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#number-of-features-and-clusters" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>분석을 위한 속성 수와 분류를 원하는 클러스터 수를 지정</li>
+</ul>
+<h1 id="classification">Classification<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#classification" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="cluster-vs-classification">Cluster vs Classification<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cluster-vs-classification" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Clustering (군집)은 레이블 되어 있지 않은 데이터와 그룹화 속성을 알고리즘에 전달(tell)하여 여러개로 그룹화 하는 비지도 학습</p>
+</li>
+<li>
+<p>Classification (분류)는 레이블 되어 있는 데이터를 전달하면 알고리즘이 데이터를 여러개로 그룹화 하는 지도 학습</p>
+<ul>
+<li>
+<p>알고리즘에서 데이터의 어떤 속성이 중요한지 파악하고 이것에 따라 데이터를 분류</p>
+</li>
+<li>
+<p>Clustering에서 그룹화를 위한 속성을 어떤 것을 사용해야 할지 결정하기 어려울 때 Classification을 사용할 수 있다</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="how-to-choose">How to choose<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-to-choose" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>알고리즘은 데이터 처리 능력, 데이터 밀집도, 성능에 따라 다른 요구 사항이 있음</p>
+</li>
+<li>
+<p>Classification 알고리즘 대신 Clustering 알고리즘을 사용할 수 있을 만큼 충분히 알고 있다면 Clustering을 사용하면 된다</p>
+</li>
+<li>
+<p>그렇지 않다면 먼저 가장 중요한 특성을 찾아내기 위해 Classification 혹은 PCA (Principal Component Analysis - 주성분 분석) 알고리즘을 사용한다</p>
+</li>
+<li>
+<p>중요한 특성을 찾아낸 후 Clustering 알고리즘을 사용하여 추론한다</p>
+</li>
+</ul>
+<h2 id="k-nearest-neighbor">K-Nearest Neighbor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#k-nearest-neighbor" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>인덱스 기반의 비 패러미터 방식의 분류 및 회귀 모델</p>
+</li>
+<li>
+<p>가장 가까운 지점을 기반으로 값 예측 혹은 분류하는 지도 학습 모델</p>
+</li>
+</ul>
+<h3 id="classification-1">Classification<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#classification-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>샘플 지점에서 가장 가까운 K개의 지점들을 쿼리하여 가장 빈번하게 사용되는 레이블을 예측 레이블로 전달</li>
+</ul>
+<h3 id="regression-1">Regression<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#regression-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>샘플 지점에서 가장 가까운 K개의 지점들을 쿼리한 후 특성 값들의 평균을 예측 값으로 전달</li>
+</ul>
+<h2 id="feature-3">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="choose-the-number-of-neighbor">Choose the number of ‘neighbor’<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#choose-the-number-of-neighbor" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>K 값을 지정한다 → Classifying에 사용할 가장 근접한 값들의 갯수</li>
+</ul>
+<h3 id="lazy-algorithm">Lazy algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lazy-algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>일반화하기 위해 학습 데이터 포인트를 사용하지 않고 인근에 있는 것을 파악하기 위해 사용</p>
+</li>
+<li>
+<p>lazy 알고리즘은 업데이트를 게으르게 한다는 것으로 (Lazy Propagation) Segment Tree 구조에서 해당 노드를 방문할 때 업데이트를 propagation 하는 방식</p>
+</li>
+</ul>
+<h3 id="training-data-stays-in-memory">Training Data stays in memory<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#training-data-stays-in-memory" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>KNN은 학습을 하지않고 유사한 샘플들을 결정하기 위해 학습 데이터셋을 사용한다</li>
+</ul>
+<h2 id="use-case-2">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="credit-ratings">Credit Ratings<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#credit-ratings" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Credit usage가 알려진 다른 사람들과 공유하는 속성을 기반으로 신용 위험을 기준으로 사람들을 그룹화</li>
+</ul>
+<h3 id="product-recommendations">Product Recommendations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#product-recommendations" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>좋아하는 것을 기반으로 좋아할 수 있는 것들과 유사한 item들을 추천</li>
+</ul>
+<h2 id="beware-of-bias">Beware of bias<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#beware-of-bias" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>KNN은 고정 관념을 (sterotyping) 만들 수 있다 → <a href="https://ko.wikipedia.org/wiki/%EB%94%94%EC%A7%80%ED%84%B8_%EB%A0%88%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%8B%9D" class="external external-link">redlining<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h1 id="image-analysis">Image Analysis<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#image-analysis" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Another form of classification</li>
+</ul>
+<h2 id="image-classification">Image Classification<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#image-classification" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>이미지 분류 결정</li>
+</ul>
+<h3 id="transfer-learning">Transfer Learning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transfer-learning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>처음부터 훈련을 하거나 Transfer Learning (전이 학습)을 이용할 수있는 CNN (Resnet)을 사용</p>
+</li>
+<li>
+<p>Transfer Learning : 모델을 더 좋게 만들기 위해 다른 작업에서 혜택을 얻음 → 학습된 모델을 다른 문제를 풀기 위해 재 활용</p>
+<ul>
+<li>이미지 인식 (recognition) 모델을 학습할 때 사용하는 리소스로 대규모 이미지들이 레이블 되어 있는 <a href="https://www.image-net.org/" class="external external-link">ImageNet<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> 활용하는 것이 대표적 사례</li>
+</ul>
+</li>
+</ul>
+<h3 id="object-detection">Object Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#object-detection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>이미지에서 특정 오브젝트를 감지하고 신뢰도 점수 (confidence score)로 Classification</li>
+</ul>
+<h3 id="semantic-segmentation">Semantic Segmentation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#semantic-segmentation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>개별 픽셀에 대한 저수준 분석 (Low level analysis)</p>
+</li>
+<li>
+<p>이미지내의 형상을 식별 (identify) → Edge detection</p>
+</li>
+<li>
+<p>압축되지 않는 PNG format 사용</p>
+</li>
+<li>
+<p>학습에는 많은 컴퓨팅 파워가 필요하여 GPU 인스턴스에서만 가능</p>
+</li>
+<li>
+<p>학습된 모델은 비교적 단순한 컴퓨팅 파워에도 배포 가능 하다 → CPU 인스턴스, 자동차, Atom processor를 사용하는 소형 컴퓨터 (Deep Racer 등)에도 배포 가능</p>
+</li>
+<li>
+<p><a href="https://www.cityscapes-dataset.com/" class="external external-link">CityScape Dataset<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> : 도시의 이미지를 캡쳐하여 도시의 많은 요소들을 분류한 데이터베이스를 제공 (전이 학습의 예)</p>
+</li>
+</ul>
+<h2 id="use-case-3">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="image-metadata-extraction">Image Metadata Extraction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#image-metadata-extraction" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>그림 판매 웹사이트에서 메타데이터 추출을 사용하여 특정 키워드로 이미지를 검색할 수 있도록 함</li>
+</ul>
+<h3 id="computer-vision-system">Computer Vision System<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#computer-vision-system" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>산업 영역에서 부품을 조사하거나 결함을 찾는 등의 작업을 사람이 아닌 머신을 사용하여 수행</li>
+</ul>
+<h1 id="anomaly-detection">Anomaly Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#anomaly-detection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="random-cut-forest">Random Cut Forest<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#random-cut-forest" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>비정상적인 데이터 포인트를 탐지하는 비지도 학습 모델</p>
+</li>
+<li>
+<p>시계열 데이터의 Spike, 주기성의 중단, 분류되지 않는 포인트 등…</p>
+</li>
+<li>
+<p>RCF는 그래프를 그릴 수 없는 경우에 유용</p>
+</li>
+<li>
+<p>N 차원 입력에서 동작 되도록 설계</p>
+</li>
+<li>
+<p>“정상”을 초과하는 데이터 발생을 찾음 → 통상적으로 표준 편차 x 3 범위 (99.7%)</p>
+</li>
+</ul>
+<h2 id="feature-4">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="givea-an-anomaly-score">Givea an Anomaly Score<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#givea-an-anomaly-score" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>이상 정도를 표현하는 스코어를 사용 → 높을수록 이상 데이터</li>
+</ul>
+<h3 id="scales-well">Scales Well<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scales-well" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>특성 수가 증가하거나 데이터셋 크기가 커지거나, 인스턴스 개수가 많아질 경우에도 확장이 잘 됨</li>
+</ul>
+<h3 id="not-benefit-from-gpu">Not benefit from GPU<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#not-benefit-from-gpu" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>보통 수준의 컴퓨팅 인스턴스 사용 추천 : ml.m4 혹은 ml.m5</li>
+</ul>
+<h2 id="use-case-4">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="quality-control">Quality Control<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quality-control" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>고품질 스피커 시스템에서 오디오 테스트 패턴을 구동하여 비정상적인 주파수 확인</li>
+</ul>
+<h3 id="fraud-detection">Fraud Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fraud-detection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>거래가 발생할 때 비정상적인 거래량, 장소, 시간에 대해 감지</li>
+</ul>
+<h2 id="ip-insights">IP Insights<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ip-insights" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>IPv4 주소를 캡쳐하여 사용 패턴을 학습 : IP 주소와 사용자 ID, 계정등의 관계 분석</p>
+</li>
+<li>
+<p>온라인에서의 잠재 이상을 표시</p>
+</li>
+</ul>
+<h3 id="ingest-entityip-address-pairs">Ingest Entity/IP address Pairs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ingest-entityip-address-pairs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>기본 패턴 (Baseline pattern)을 학습하기 위해 historical 데이터 사용</li>
+</ul>
+<h3 id="returns-inference-via-a-score">Returns Inference via a Score<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#returns-inference-via-a-score" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>기준 대비 이상 정도를 스코어로 전달</li>
+</ul>
+<h3 id="uses-a-neural-network">Uses a Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#uses-a-neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Latent Vector (잠재 벡터) Representation을 학습하기 위해 신경망 학습을 사용</li>
+</ul>
+<h3 id="gpus-recommended-for-training">GPUs recommended for Training<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gpus-recommended-for-training" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>GPU 인스턴스가 추천되지만 대규모 데이터셋의 경우에는 분산 CPU 인스턴스가 비용 효율적일 수 있음</li>
+</ul>
+<h3 id="cpus-recommended-for-inference">CPUs recommended for Inference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cpus-recommended-for-inference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>일반 추론 작업에는 GPU 인스턴스까지 필요하지 않음</li>
+</ul>
+<h3 id="use-case-5">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-5" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Tiered Authentication Model</p>
+<ul>
+<li>사용자가 비정상적인 IP 주소로 접속할 경우 two-factor 인증 루틴을 동적으로 실행할 수 있다</li>
+</ul>
+</li>
+<li>
+<p>Fraud Detection</p>
+<ul>
+<li>온라인 뱅킹에서 IP 접속 주소가 비정상적이라면 특정 활동만을 허용할 수 있다</li>
+</ul>
+</li>
+</ul>
+<h1 id="text-analytics">Text Analytics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#text-analytics" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="latent-dirichlet-allocation-lda">Latent Dirichlet Allocation (LDA)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#latent-dirichlet-allocation-lda" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>잠재 디리클레 할당 : <a href="https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/06/01/LDA/" class="external external-link">https://ratsgo.github.io/from frequency to semantics/2017/06/01/LDA/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>문서에 존재하는 주제들에 대한 확률 모형으로 토픽별 단어 분포, 문서별 토픽 분포를 추정 → 연속 확률 분포인 Dirichlet 분포 사용 (베이즈 통계학의 다항 분포에 대한 사전 켤레 - conjugate prior- 확률)</p>
+</li>
+<li>
+<p>아키텍쳐</p>
+</li>
+</ul>
+<p><a href="../../../ch-7-algorithm/untitled-1.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-6.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-2.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-5.png" alt/></a></p>
+<h3 id="algorithm-1">Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#algorithm-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>일련의 관찰을 별개의 범주 (distinct category)가 혼합된 것으로 설명하는 비지도 학습 알고리즘</p>
+</li>
+<li>
+<p>텍스트 뭉치에서 사용자가 지정한 수의 주제를 발견하는 것에 일반적으로 사용됨</p>
+<ul>
+<li>
+<p>Observation → document</p>
+</li>
+<li>
+<p>Feature → 개별 단어의 발생 빈도</p>
+</li>
+<li>
+<p>Category → 주제 (topic)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="text-highlight">**유사한 단어의 발생 빈도에 기초하여 문서의 유사도를 찾기 위해 사용**</span>된다</p>
+</li>
+<li>
+<p>말뭉치에서 주제(Topic)을 추출하는 Topic Modeling 기법으로 사용</p>
+</li>
+</ul>
+<h3 id="use-case-6">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-6" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Article Recommendation</p>
+<ul>
+<li>과거에 읽거나 평가했던 주제와 유사한 기사를 추천</li>
+</ul>
+</li>
+<li>
+<p>Musical Influence Modeling</p>
+<ul>
+<li>시간이 지남에 따라 어떤 음악가가 진정으로 혁신적 이었는지, 그 혁신가의 영향을 받은 음악가를 탐색</li>
+</ul>
+</li>
+</ul>
+<h2 id="neural-topic-model-ntm">Neural Topic Model (NTM)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-topic-model-ntm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="algorithm-2">Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#algorithm-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>문서의 말뭉치를 주제(Topic)으로 조직화 하기 위해 사용되는 비지도 학습 알고리즘</p>
+</li>
+<li>
+<p>단어의 <span class="text-highlight">**확률 분포에 기초**</span>한 단어 그룹을 주제로 추 출</p>
+</li>
+</ul>
+<h3 id="topic-modeling">Topic Modeling<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#topic-modeling" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><span class="text-highlight">**문서를 분류하거나 정리하기 위해 사용**</span>되는 모델링 기법</p>
+</li>
+<li>
+<p>Topic 유사도를 기준으로 정보를 조회하거나 컨텐츠를 추천하기 위해 사용된다</p>
+</li>
+<li>
+<p>NTM과 LDA는 유사하게 Topic Modeling을 수행할 수 있지만 NTM과 LDA는 별개의 (distinct) 알고리즘 이어서 출력되는 결과는 다를 수 있다</p>
+</li>
+</ul>
+<h2 id="sequence-to-sequence-seq2seq">Sequence to Sequence (seq2seq)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sequence-to-sequence-seq2seq" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>일련의 토큰 입력 (text, audio)을 다른 일련의 토큰 (sequence of token) 출력으로 생성하기 위해 사용되는 지도 학습 알고리즘</p>
+<ul>
+<li>
+<p>언어 번역 엔진 → 학습 데이터와 어휘를 제공해야 한다</p>
+</li>
+<li>
+<p>Speech to Text</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Embedding, Encoding, Decoding layer를 가지는 알고리즘으로 신경망 사용 (RNN or CNN)</p>
+</li>
+<li>
+<p>Embedding layer는 사전 학습된 워드 라이브러리 (word vector)로 초기화 한다.</p>
+<ul>
+<li>Pre-trained word vector : FastText, Glove</li>
+</ul>
+</li>
+<li>
+<p>GPU 인스턴스만 지원되며 단일 머신에 구성되어야 한다 → 단일 머신에서 여러개의 GPU 사용은 지원</p>
+</li>
+</ul>
+<h2 id="blazingtext">BlazingText<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#blazingtext" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Word2Vec을 최적화하여 구현한 텍스트 분류 알고리즘</p>
+</li>
+<li>
+<p>FastText를 기반으로 하여 만들어졌으며 속도화 확장성에서 뛰어난 성능을 보임</p>
+<ul>
+<li>FastText 학습이 몇일 걸린다면 BlazingText는 몇분에 수행하며 실시간 추론 가능</li>
+</ul>
+</li>
+<li>
+<p>텍스트 본문에서 단어 간의 문맥적 의미 관계 (contextual semantic relationships)를 결정하는 최적화된 방법</p>
+</li>
+<li>
+<p>Downstream NLP 작업에 유용 → 감정 분석 (sentimental analysis), 명명된 개체 인식 (named entity recognition), 기계 번역 (machine translation)</p>
+</li>
+</ul>
+<p><a href="../../../ch-7-algorithm/untitled-3.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-5.png" alt/></a></p>
+<h3 id="feature-5">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-5" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Single pre-processed text file</p>
+<ul>
+<li>
+<p>파일의 각 라인은 단일 문장으로 되어야 한다</p>
+</li>
+<li>
+<p>여러개의 텍스트 파일을 학습해야 한다면 한개의 파일로 연결 (concatenate)하고 개별 채널에 업로드 한다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Highly Scalable</p>
+<ul>
+<li>
+<p>여러개의 CPU 인스턴스를 지원 하도록 하여 기존 Word2Vec 알고리즘을 개선</p>
+</li>
+<li>
+<p>FastText 문서 분류기는 GPU 가속 기능을 사용할 수 있다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>20x Faster than FastText</p>
+<ul>
+<li>사전 학습된 FastText 모델을 지원하며 FastText 보다 20배 빠른 학습을 수행</li>
+</ul>
+</li>
+</ul>
+<h3 id="use-case-7">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-7" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Sentiment Analysis</p>
+<ul>
+<li>소셜 미디어 게시물에서 고객 의견을 평가하여 긍정적이거나 부정적인 정서가 있는지 평가 → Amazon Comprehend</li>
+</ul>
+</li>
+<li>
+<p>Document Classification</p>
+<ul>
+<li>대형 문서 컬렉션을 검토하고 문서가 개인 정보 또는 영업 비밀과 같은 중요한 데이터를 포함하는 것으로 분류 되어야 하는지 여부 감지 → Amazon Macie</li>
+</ul>
+</li>
+</ul>
+<h2 id="object2vec">Object2Vec<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#object2vec" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>고차원 오브젝트에 대해 저차원의 밀집된 임베딩 (low-dimensional dense embeddings)을 학습할 수 있는 일반적인 용도의 신경망 임베딩 알고리즘 (general-purpose neural embedding algorithm)</p>
+<ul>
+<li>
+<p>이 때 원본 임베딩 공간에서의 페어간의 의미 관계는 유지 한다 (preserve the semantics of the relationship between the pair)</p>
+</li>
+<li>
+<p>Object이기 때문에 단어 외에도 제품, 고객, 영화 등 무엇이든 가능하다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>D 차원 공간에 thing을 매핑하여 서로가 얼마나 비슷한지를 알아낼 수 있는 방법</p>
+</li>
+</ul>
+<h3 id="feature-6">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-6" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Pairs of Things</p>
+<ul>
+<li>
+<p>아이템 쌍을 찾고 관계 관점에서 긍정적인지 부정적인지 파악</p>
+</li>
+<li>
+<p>카테고리 레이블이나 평가,점수 기준의 레이블 가능</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Feature Engineering</p>
+<ul>
+<li>임베딩을 분류 혹은 회귀 등의 지도 학습 작업의 downstream을 위해 사용 가능</li>
+</ul>
+</li>
+<li>
+<p>Training Data Required</p>
+<ul>
+<li>
+<p>Object2Vec는 학습을 위해 레이블된 데이터를 필요로 한다</p>
+</li>
+<li>
+<p>Natural clustering에서 레이블 관계를 생성하기 위한 방법이 있음</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="use-case-8">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-8" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Movie Rating Prediction</p>
+<ul>
+<li>다른 사람의 영화 등급 평가와의 유사성을 기반으로 영화를 제공 할 가능성이 있는 등급을 예측</li>
+</ul>
+</li>
+<li>
+<p>Document Classification</p>
+<ul>
+<li>알려진 장르(역사, 스릴러, 전기 등)와 유사한 장르를 결정</li>
+</ul>
+</li>
+</ul>
+<h1 id="reinforcement-learning-rl">Reinforcement Learning (RL)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reinforcement-learning-rl" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>The Carrot and The Stick (당근과 채찍)</p>
+</li>
+<li>
+<p>Postivie</p>
+<ul>
+<li>동기를 부여 할 수 있는 긍정적인 보상을 제공하고 또 다른 긍정적인 보상을 위해 행동을 반복 할 수 있도록 함</li>
+</ul>
+</li>
+<li>
+<p>Negative</p>
+<ul>
+<li>불쾌한 경험이나 반응을 제공하여 피험자가 원하지 않는 행동을 반복하지 않도록 동기를 부여</li>
+</ul>
+</li>
+</ul>
+<h2 id="algorithm-3">Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#algorithm-3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>어떤 환경에서 에이전트 활동을 최적화하는 전략 (policy라고도 함)을 습득하기 위한 기술을 학습하는 알고리즘</p>
+</li>
+<li>
+<p>에이전트가 자동으로 결정하여 (autonomous decision) 문제를 해결해야 하는 경우에 적합</p>
+</li>
+<li>
+<p>최대의 보상 (the greatest reward)을 얻기 위한 경로를 찾아가는 과정</p>
+</li>
+</ul>
+<h2 id="markov-decision-process-mdp">Markov Decision Process (MDP)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#markov-decision-process-mdp" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../ch-7-algorithm/untitled-4.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-5.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-5.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-5.png" alt/></a></p>
+<h3 id="deepracer">DeepRacer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deepracer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../ch-7-algorithm/untitled-6.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-5.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-7.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-5.png" alt/></a></p>
+<h2 id="use-case-9">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-9" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="autonomous-vehicles">Autonomous Vehicles<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#autonomous-vehicles" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>시뮬레이션에서 시행 착오의 반복을 통해 운전 자동차 모델을 학습. 모델이 충분히 좋으면 테스트 트랙에서 실제 차량에서 테스트 할 수 있음</li>
+</ul>
+<h3 id="intelligent-hvac-control">Intelligent HVAC Control<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#intelligent-hvac-control" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>RL 모델은 에너지 소비를 최소화 하기 위한 온도 조절 최적화를 위해 장비 효율과 햇빛 패턴과 경로의 영향에 대한 투과율을 학습</li>
+</ul>
+<h1 id="forecasting">Forecasting<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#forecasting" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Past performance is not an indicator of future results</li>
+</ul>
+<h2 id="deepar">DeepAR<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deepar" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="algorithm-4">Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#algorithm-4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>RNN을 사용하는 스칼라(1차원) 시계열을 예상하는 알고리즘</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/ko_kr/forecast/latest/dg/aws-forecast-recipe-arima.html" class="external external-link">ARIMA<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Autoregressive integrated moving average)와 <a href="https://docs.aws.amazon.com/ko_kr/forecast/latest/dg/aws-forecast-recipe-ets.html" class="external external-link">ETS<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Exponential Smoothing) 알고리즘 능가</p>
+</li>
+<li>
+<p>각 개별 시계열과 반대로 여러개의 시계열을 통해 단일 모델을 학습</p>
+</li>
+<li>
+<p>여러개의 이전 (historic) 데이터셋을 이용하여 Point-in-time 값과 추정값 (estimated value)를 함께 예측 가능</p>
+</li>
+</ul>
+<h3 id="cold-start-program">Cold Start Program<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cold-start-program" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Forecasting 모델을 구축하기 위해 사용할 수 있는 이전 데이터가 없거나 부족한 경우 발생</p>
+</li>
+<li>
+<p>여러 패턴을 결합하여 집계 (aggregate) 예측을 만들 수 있는 모델을 생성 → 더 현실적인 모델</p>
+</li>
+</ul>
+<h3 id="forecast-type">Forecast Type<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#forecast-type" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Point Forecast</p>
+<ul>
+<li>“Number of sneakers sold in a week is X”</li>
+</ul>
+</li>
+<li>
+<p>Probabilistic Forecast</p>
+<ul>
+<li>“Number of sneakers sold in a week is between X and Y with Z% probability.”</li>
+</ul>
+</li>
+</ul>
+<h3 id="feature-7">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-7" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Support for various time series</p>
+<ul>
+<li>시계열 데이터는 숫자, 횟수, 간격의 값 (0 ~ 100 사이의 온도 값)</li>
+</ul>
+</li>
+<li>
+<p>More time series is better</p>
+<ul>
+<li>
+<p>가능한 많은 시계열을 가지고 모델을 학습하는 것을 추천</p>
+</li>
+<li>
+<p>수백개의 관련 시계열</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Must supply at least 300 observations</p>
+<ul>
+<li>예측값이 robust 하기 위해서는 모든 시계열에 걸쳐 최소 300개 이상의 관찰 데이터 필요</li>
+</ul>
+</li>
+<li>
+<p>Must supply some hyperparameters</p>
+<ul>
+<li>
+<p>Context Length : 예측값을 만들기 전에 모델이 얻는 time points 갯수</p>
+</li>
+<li>
+<p>Epoch : 학습 데이터를 전달하는 횟수</p>
+</li>
+<li>
+<p>Prediction Length : 모델 학습을 위한 time steps → Forecast horizon (예측 범위) 이라고도 함</p>
+</li>
+<li>
+<p>Time Frequency : 지나가는 (passing in) 시계열 데이터의 세분성 (granularity) → 달, 주일, 시간, 분 등</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Automatic Evaluation of the model</p>
+<ul>
+<li>모델의 정확도를 자동으로 평가하기 위해 backtest를 진행</li>
+</ul>
+</li>
+</ul>
+<h3 id="use-case-10">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-10" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Forecasting New Product Performance</p>
+<ul>
+<li>다른 제품의 과거 데이터를 통합하여 새로 출시 된 제품의 성능을 예측할 수있는 모델을 생성</li>
+</ul>
+</li>
+<li>
+<p>Predict Labor Needs for Special Events</p>
+<ul>
+<li>다른 유통 센터의 노동 이용률을 사용하여 새로운 유통 센터에 필요한 수준을 예측</li>
+</ul>
+</li>
+</ul>
+<h1 id="ensemble-learning">Ensemble Learning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ensemble-learning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="algorithm-5">Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#algorithm-5" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>여러개의 학습 알고리즘과 모델을 함께 사용하여 사용하여 모델의 정확도를 향상</li>
+</ul>
+<h2 id="extreme-gradient-boosting--xgboost">Extreme Gradient Boosting → XGBoost<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#extreme-gradient-boosting--xgboost" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Gradient boosted tree 알고리즘의 오픈 소스 구현 버전</p>
+</li>
+<li>
+<p>단순하고 약한 모델의 추정값들을 결합</p>
+</li>
+<li>
+<p>모든 종류의 <span class="text-highlight">**회귀, 분류, 랭킹**</span> 문제에 적용 가능</p>
+</li>
+<li>
+<p>2개의 요구 항목과 35개의 옵션 Hyperparameter를 튜닝</p>
+</li>
+</ul>
+<h2 id="feature-8">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-8" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>학습과 추론에 CSV, libsvm 허용</p>
+<ul>
+<li>테이블형 (tabluar) 데이터 사용</li>
+</ul>
+</li>
+<li>
+<p>Only trains on CPU and memory bound</p>
+</li>
+<li>
+<p>Recommend lots of memory</p>
+<ul>
+<li>성능 최적화를 위해 전체 학습 데이터를 유지하기 위해 충분한 메모리가 필요</li>
+</ul>
+</li>
+<li>
+<p>Spark Integration</p>
+<ul>
+<li>SageMaker Spark SDK를 사용하여 XGBoost를 직접 호출할 수 있음</li>
+</ul>
+</li>
+</ul>
+<h2 id="decision-tree-ensembles">Decision Tree Ensembles<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#decision-tree-ensembles" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>CART (Classification and Regression Trees)의 집합을 생성</li>
+</ul>
+<p><a href="../../../ch-7-algorithm/untitled-8.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8-5.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-9.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9-5.png" alt/></a></p>
+<h2 id="use-case-11">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-11" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="ranking">Ranking<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ranking" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>전자 상거래 웹 사이트에서 검색 결과, 클릭 및 성공적인 구매에 대한 데이터를 활용 한 다음 XGBoost를 사용하여 검색 제품에 대한 관련성 점수를 반환 할 수 있는 모델을 훈련</li>
+</ul>
+<h3 id="fraud-detection-1">Fraud Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fraud-detection-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>XGBooROST가 과거 트랜잭션의 데이터 집합과 사기성이 있는지 여부에 관계없이 입력 트랜잭션 데이터를 트랜잭션이 사기성이 있을 확률에 매핑되는 함수를 학습</li>
+</ul>
+<h1 id="reference">Reference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="quiz">Quiz<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quiz" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../ch-7-algorithm/untitled-10.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10-5.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-11.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11-5.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-12.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12-5.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-13.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13-5.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-14.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-14-4.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-15.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-15-3.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-16.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-16-3.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-17.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-17-3.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-18.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-18-3.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-19.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-19-3.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-20.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-20-3.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-21.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-21.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-21-3.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-22.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-22.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-22-3.png" alt/></a></p>
+<p><a href="../../../ch-7-algorithm/untitled-23.png" class="internal internal-link" data-slug="ch-7-algorithm/untitled-23.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-23-3.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1587" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#ch7-algorithm" data-for="ch7-algorithm">Ch.7 Algorithm</a></li><li class="depth-0"><a href="#concepts" data-for="concepts">Concepts</a></li><li class="depth-1"><a href="#developing-a-good-model" data-for="developing-a-good-model">Developing a Good Model</a></li><li class="depth-1"><a href="#algorithm" data-for="algorithm">Algorithm</a></li><li class="depth-0"><a href="#regression" data-for="regression">Regression</a></li><li class="depth-1"><a href="#what-is-regression-회귀" data-for="what-is-regression-회귀">What is Regression (회귀)</a></li><li class="depth-1"><a href="#linear-learner-algorithm" data-for="linear-learner-algorithm">Linear Learner Algorithm</a></li><li class="depth-2"><a href="#linear-model" data-for="linear-model">Linear Model</a></li><li class="depth-2"><a href="#adjusts-to-minimize-error--stochastic-gradient-descent" data-for="adjusts-to-minimize-error--stochastic-gradient-descent">Adjusts to Minimize Error → Stochastic Gradient Descent</a></li><li class="depth-2"><a href="#feature" data-for="feature">Feature</a></li><li class="depth-2"><a href="#use-case" data-for="use-case">Use Case</a></li><li class="depth-1"><a href="#factorization-machines-algorithm" data-for="factorization-machines-algorithm">Factorization Machines Algorithm</a></li><li class="depth-2"><a href="#factorization-machines-algorithm-1" data-for="factorization-machines-algorithm-1">Factorization Machines Algorithm</a></li><li class="depth-2"><a href="#feature-1" data-for="feature-1">Feature</a></li><li class="depth-2"><a href="#use-case-1" data-for="use-case-1">Use Case</a></li><li class="depth-0"><a href="#clustering" data-for="clustering">Clustering</a></li><li class="depth-1"><a href="#clustering-algorithm" data-for="clustering-algorithm">Clustering Algorithm</a></li><li class="depth-1"><a href="#k-means-algorithm" data-for="k-means-algorithm">K-Means Algorithm</a></li><li class="depth-1"><a href="#feature-2" data-for="feature-2">Feature</a></li><li class="depth-2"><a href="#tabular-data" data-for="tabular-data">Tabular Data</a></li><li class="depth-2"><a href="#identifying-attribute" data-for="identifying-attribute">Identifying Attribute</a></li><li class="depth-2"><a href="#modified-k-means" data-for="modified-k-means">Modified K-Means</a></li><li class="depth-2"><a href="#cpu-instance" data-for="cpu-instance">CPU Instance</a></li><li class="depth-2"><a href="#training-is-still-a-thing" data-for="training-is-still-a-thing">Training is Still a Thing</a></li><li class="depth-2"><a href="#number-of-features-and-clusters" data-for="number-of-features-and-clusters">Number of Features and Clusters</a></li><li class="depth-0"><a href="#classification" data-for="classification">Classification</a></li><li class="depth-1"><a href="#cluster-vs-classification" data-for="cluster-vs-classification">Cluster vs Classification</a></li><li class="depth-2"><a href="#how-to-choose" data-for="how-to-choose">How to choose</a></li><li class="depth-1"><a href="#k-nearest-neighbor" data-for="k-nearest-neighbor">K-Nearest Neighbor</a></li><li class="depth-2"><a href="#classification-1" data-for="classification-1">Classification</a></li><li class="depth-2"><a href="#regression-1" data-for="regression-1">Regression</a></li><li class="depth-1"><a href="#feature-3" data-for="feature-3">Feature</a></li><li class="depth-2"><a href="#choose-the-number-of-neighbor" data-for="choose-the-number-of-neighbor">Choose the number of ‘neighbor’</a></li><li class="depth-2"><a href="#lazy-algorithm" data-for="lazy-algorithm">Lazy algorithm</a></li><li class="depth-2"><a href="#training-data-stays-in-memory" data-for="training-data-stays-in-memory">Training Data stays in memory</a></li><li class="depth-1"><a href="#use-case-2" data-for="use-case-2">Use Case</a></li><li class="depth-2"><a href="#credit-ratings" data-for="credit-ratings">Credit Ratings</a></li><li class="depth-2"><a href="#product-recommendations" data-for="product-recommendations">Product Recommendations</a></li><li class="depth-1"><a href="#beware-of-bias" data-for="beware-of-bias">Beware of bias</a></li><li class="depth-0"><a href="#image-analysis" data-for="image-analysis">Image Analysis</a></li><li class="depth-1"><a href="#image-classification" data-for="image-classification">Image Classification</a></li><li class="depth-2"><a href="#transfer-learning" data-for="transfer-learning">Transfer Learning</a></li><li class="depth-2"><a href="#object-detection" data-for="object-detection">Object Detection</a></li><li class="depth-2"><a href="#semantic-segmentation" data-for="semantic-segmentation">Semantic Segmentation</a></li><li class="depth-1"><a href="#use-case-3" data-for="use-case-3">Use Case</a></li><li class="depth-2"><a href="#image-metadata-extraction" data-for="image-metadata-extraction">Image Metadata Extraction</a></li><li class="depth-2"><a href="#computer-vision-system" data-for="computer-vision-system">Computer Vision System</a></li><li class="depth-0"><a href="#anomaly-detection" data-for="anomaly-detection">Anomaly Detection</a></li><li class="depth-1"><a href="#random-cut-forest" data-for="random-cut-forest">Random Cut Forest</a></li><li class="depth-1"><a href="#feature-4" data-for="feature-4">Feature</a></li><li class="depth-2"><a href="#givea-an-anomaly-score" data-for="givea-an-anomaly-score">Givea an Anomaly Score</a></li><li class="depth-2"><a href="#scales-well" data-for="scales-well">Scales Well</a></li><li class="depth-2"><a href="#not-benefit-from-gpu" data-for="not-benefit-from-gpu">Not benefit from GPU</a></li><li class="depth-1"><a href="#use-case-4" data-for="use-case-4">Use Case</a></li><li class="depth-2"><a href="#quality-control" data-for="quality-control">Quality Control</a></li><li class="depth-2"><a href="#fraud-detection" data-for="fraud-detection">Fraud Detection</a></li><li class="depth-1"><a href="#ip-insights" data-for="ip-insights">IP Insights</a></li><li class="depth-2"><a href="#ingest-entityip-address-pairs" data-for="ingest-entityip-address-pairs">Ingest Entity/IP address Pairs</a></li><li class="depth-2"><a href="#returns-inference-via-a-score" data-for="returns-inference-via-a-score">Returns Inference via a Score</a></li><li class="depth-2"><a href="#uses-a-neural-network" data-for="uses-a-neural-network">Uses a Neural Network</a></li><li class="depth-2"><a href="#gpus-recommended-for-training" data-for="gpus-recommended-for-training">GPUs recommended for Training</a></li><li class="depth-2"><a href="#cpus-recommended-for-inference" data-for="cpus-recommended-for-inference">CPUs recommended for Inference</a></li><li class="depth-2"><a href="#use-case-5" data-for="use-case-5">Use Case</a></li><li class="depth-0"><a href="#text-analytics" data-for="text-analytics">Text Analytics</a></li><li class="depth-1"><a href="#latent-dirichlet-allocation-lda" data-for="latent-dirichlet-allocation-lda">Latent Dirichlet Allocation (LDA)</a></li><li class="depth-2"><a href="#algorithm-1" data-for="algorithm-1">Algorithm</a></li><li class="depth-2"><a href="#use-case-6" data-for="use-case-6">Use Case</a></li><li class="depth-1"><a href="#neural-topic-model-ntm" data-for="neural-topic-model-ntm">Neural Topic Model (NTM)</a></li><li class="depth-2"><a href="#algorithm-2" data-for="algorithm-2">Algorithm</a></li><li class="depth-2"><a href="#topic-modeling" data-for="topic-modeling">Topic Modeling</a></li><li class="depth-1"><a href="#sequence-to-sequence-seq2seq" data-for="sequence-to-sequence-seq2seq">Sequence to Sequence (seq2seq)</a></li><li class="depth-1"><a href="#blazingtext" data-for="blazingtext">BlazingText</a></li><li class="depth-2"><a href="#feature-5" data-for="feature-5">Feature</a></li><li class="depth-2"><a href="#use-case-7" data-for="use-case-7">Use Case</a></li><li class="depth-1"><a href="#object2vec" data-for="object2vec">Object2Vec</a></li><li class="depth-2"><a href="#feature-6" data-for="feature-6">Feature</a></li><li class="depth-2"><a href="#use-case-8" data-for="use-case-8">Use Case</a></li><li class="depth-0"><a href="#reinforcement-learning-rl" data-for="reinforcement-learning-rl">Reinforcement Learning (RL)</a></li><li class="depth-1"><a href="#algorithm-3" data-for="algorithm-3">Algorithm</a></li><li class="depth-1"><a href="#markov-decision-process-mdp" data-for="markov-decision-process-mdp">Markov Decision Process (MDP)</a></li><li class="depth-2"><a href="#deepracer" data-for="deepracer">DeepRacer</a></li><li class="depth-1"><a href="#use-case-9" data-for="use-case-9">Use Case</a></li><li class="depth-2"><a href="#autonomous-vehicles" data-for="autonomous-vehicles">Autonomous Vehicles</a></li><li class="depth-2"><a href="#intelligent-hvac-control" data-for="intelligent-hvac-control">Intelligent HVAC Control</a></li><li class="depth-0"><a href="#forecasting" data-for="forecasting">Forecasting</a></li><li class="depth-1"><a href="#deepar" data-for="deepar">DeepAR</a></li><li class="depth-2"><a href="#algorithm-4" data-for="algorithm-4">Algorithm</a></li><li class="depth-2"><a href="#cold-start-program" data-for="cold-start-program">Cold Start Program</a></li><li class="depth-2"><a href="#forecast-type" data-for="forecast-type">Forecast Type</a></li><li class="depth-2"><a href="#feature-7" data-for="feature-7">Feature</a></li><li class="depth-2"><a href="#use-case-10" data-for="use-case-10">Use Case</a></li><li class="depth-0"><a href="#ensemble-learning" data-for="ensemble-learning">Ensemble Learning</a></li><li class="depth-1"><a href="#algorithm-5" data-for="algorithm-5">Algorithm</a></li><li class="depth-1"><a href="#extreme-gradient-boosting--xgboost" data-for="extreme-gradient-boosting--xgboost">Extreme Gradient Boosting → XGBoost</a></li><li class="depth-1"><a href="#feature-8" data-for="feature-8">Feature</a></li><li class="depth-1"><a href="#decision-tree-ensembles" data-for="decision-tree-ensembles">Decision Tree Ensembles</a></li><li class="depth-1"><a href="#use-case-11" data-for="use-case-11">Use Case</a></li><li class="depth-2"><a href="#ranking" data-for="ranking">Ranking</a></li><li class="depth-2"><a href="#fraud-detection-1" data-for="fraud-detection-1">Fraud Detection</a></li><li class="depth-0"><a href="#reference" data-for="reference">Reference</a></li><li class="depth-0"><a href="#quiz" data-for="quiz">Quiz</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>3 3 Automate Deployment 1c63f648df908064988df7a7387fdf79 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="3 3 Automate Deployment 1c63f648df908064988df7a7387fdf79 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="3 3 Automate Deployment 1c63f648df908064988df7a7387fdf79 | LLM Wiki"/><meta name="twitter:description" content="🪫 3.3 Automate Deployment Objectives DevOps, 소프트웨어 릴리스 프로세스, ML 워크플로우와 CI/CD, MLOps에 대해 정리하면 다음과 같습니다: DevOps: 소프트웨어 개발(Dev)과 운영(Ops)의 협업 문화 빠른 소프트웨어 릴리스와 안정적인 운영을 목표로 함 소프트웨어 릴리스 프로세스: 개발, 테스트, 배포, 운영의 단계로 구성 개발과 운영 팀 간 협업이 중요 ML 워크플로우와 CI/CD: ML 모델 개발, 학습, 배포에 CI/CD 원칙 적용 자동화된 테스트, 통합, 배포로 ML 모델..."/><meta property="og:description" content="🪫 3.3 Automate Deployment Objectives DevOps, 소프트웨어 릴리스 프로세스, ML 워크플로우와 CI/CD, MLOps에 대해 정리하면 다음과 같습니다: DevOps: 소프트웨어 개발(Dev)과 운영(Ops)의 협업 문화 빠른 소프트웨어 릴리스와 안정적인 운영을 목표로 함 소프트웨어 릴리스 프로세스: 개발, 테스트, 배포, 운영의 단계로 구성 개발과 운영 팀 간 협업이 중요 ML 워크플로우와 CI/CD: ML 모델 개발, 학습, 배포에 CI/CD 원칙 적용 자동화된 테스트, 통합, 배포로 ML 모델..."/><meta property="og:image:alt" content="🪫 3.3 Automate Deployment Objectives DevOps, 소프트웨어 릴리스 프로세스, ML 워크플로우와 CI/CD, MLOps에 대해 정리하면 다음과 같습니다: DevOps: 소프트웨어 개발(Dev)과 운영(Ops)의 협업 문화 빠른 소프트웨어 릴리스와 안정적인 운영을 목표로 함 소프트웨어 릴리스 프로세스: 개발, 테스트, 배포, 운영의 단계로 구성 개발과 운영 팀 간 협업이 중요 ML 워크플로우와 CI/CD: ML 모델 개발, 학습, 배포에 CI/CD 원칙 적용 자동화된 테스트, 통합, 배포로 ML 모델..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/3-3-automate-deployment-1c63f648df908064988df7a7387fdf79"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/3-3-automate-deployment-1c63f648df908064988df7a7387fdf79"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🪫 3.3 Automate Deployment Objectives DevOps, 소프트웨어 릴리스 프로세스, ML 워크플로우와 CI/CD, MLOps에 대해 정리하면 다음과 같습니다: DevOps: 소프트웨어 개발(Dev)과 운영(Ops)의 협업 문화 빠른 소프트웨어 릴리스와 안정적인 운영을 목표로 함 소프트웨어 릴리스 프로세스: 개발, 테스트, 배포, 운영의 단계로 구성 개발과 운영 팀 간 협업이 중요 ML 워크플로우와 CI/CD: ML 모델 개발, 학습, 배포에 CI/CD 원칙 적용 자동화된 테스트, 통합, 배포로 ML 모델..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/3-3-automate-deployment-1c63f648df908064988df7a7387fdf79" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1915" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1915" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>3 3 Automate Deployment 1c63f648df908064988df7a7387fdf79</a></div></nav><h1 class="article-title">3 3 Automate Deployment 1c63f648df908064988df7a7387fdf79</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:16.154Z">2026년 6월 06일</time><span>66 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/taskinaws/attachments/rijksmuseum_vermeer_the_milkmaid-1.jpg" alt/></p>
+<p>🪫</p>
+<h1 id="33-automate-deployment">3.3 Automate Deployment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-automate-deployment" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="objectives">Objectives<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#objectives" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>DevOps, 소프트웨어 릴리스 프로세스, ML 워크플로우와 CI/CD, MLOps에 대해 정리하면 다음과 같습니다:</p>
+<p><strong>DevOps</strong>:</p>
+<ul>
+<li>
+<p>소프트웨어 개발(Dev)과 운영(Ops)의 협업 문화</p>
+</li>
+<li>
+<p>빠른 소프트웨어 릴리스와 안정적인 운영을 목표로 함</p>
+</li>
+</ul>
+<p><strong>소프트웨어 릴리스 프로세스</strong>:</p>
+<ul>
+<li>
+<p>개발, 테스트, 배포, 운영의 단계로 구성</p>
+</li>
+<li>
+<p>개발과 운영 팀 간 협업이 중요</p>
+</li>
+</ul>
+<p><strong>ML 워크플로우와 CI/CD</strong>:</p>
+<ul>
+<li>
+<p>ML 모델 개발, 학습, 배포에 CI/CD 원칙 적용</p>
+</li>
+<li>
+<p>자동화된 테스트, 통합, 배포로 ML 모델의 안정성 확보</p>
+</li>
+</ul>
+<p><strong>MLOps</strong>:</p>
+<ul>
+<li>
+<p>ML 모델 운영을 자동화하고 체계화하는 접근법</p>
+</li>
+<li>
+<p>데이터 엔지니어, ML 엔지니어, DevOps 엔지니어 등이 참여</p>
+</li>
+<li>
+<p>ML 모델 수명주기 관리, 모델 배포, 모니터링 등을 다룸</p>
+</li>
+</ul>
+<p><strong>DevOps for ML 요구사항</strong>:</p>
+<ul>
+<li>
+<p>자동화된 ML 워크플로우</p>
+</li>
+<li>
+<p>모델 재학습 및 재배포 자동화</p>
+</li>
+<li>
+<p>로그 및 메트릭 수집, 모델 평가, 모니터링 기능</p>
+</li>
+</ul>
+<p><strong>자동화된 테스팅의 이점</strong>:</p>
+<ul>
+<li>
+<p>릴리스 주기 단축</p>
+</li>
+<li>
+<p>품질 향상</p>
+</li>
+<li>
+<p>운영 안정성 제고</p>
+</li>
+</ul>
+<p><strong>SageMaker Projects의 CI/CD 지원</strong>:</p>
+<ul>
+<li>
+<p>템플릿 기반의 프로젝트 생성</p>
+</li>
+<li>
+<p>코드 리포지토리, 파이프라인, 배포 자동화 등 제공</p>
+</li>
+</ul>
+<p><strong>버전 관리 시스템</strong>:</p>
+<ul>
+<li>Git, SVN 등을 통한 코드 변경 추적 및 협업</li>
+</ul>
+<p><strong>파이프라인 실행 자동화</strong>:</p>
+<ul>
+<li>CloudWatch 이벤트, CodePipeline 등을 통한 자동 실행</li>
+</ul>
+<p><strong>AWS 서비스 활용</strong>:</p>
+<ul>
+<li>
+<p>CodePipeline, CodeBuild, CodeDeploy 등을 통한 CI/CD</p>
+</li>
+<li>
+<p>Step Functions, SageMaker 등으로 ML 워크플로우 오케스트레이션</p>
+</li>
+</ul>
+<p><strong>배포 전략 및 롤백</strong>:</p>
+<ul>
+<li>
+<p>블루/그린, 캐나리, 다크 출시 등의 배포 전략</p>
+</li>
+<li>
+<p>문제 발생 시 신속한 롤백 기능 필요</p>
+</li>
+</ul>
+<p>이를 통해 ML 애플리케이션의 개발, 배포, 운영을 자동화하고 효율화할 수 있습니다.</p>
+<h1 id="devops-introduction">DevOps Introduction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#devops-introduction" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>DevOps와 ML 워크플로우에 대해 정리하면 다음과 같습니다:</p>
+<p><strong>DevOps</strong>:</p>
+<ul>
+<li>
+<p>개발(Dev)과 운영(Ops) 팀의 협업을 통해 소프트웨어를 더 빠르고 안정적으로 구축, 테스트, 배포하는 접근법</p>
+</li>
+<li>
+<p>개발자는 새로운 기능을, 운영팀은 안정적인 운영을 담당하던 전통적인 방식에서 탈피</p>
+</li>
+</ul>
+<p><strong>소프트웨어 릴리스 프로세스</strong>:</p>
+<ol>
+<li>
+<p>소스 코드 리포지토리에 개발자가 코드 작성</p>
+</li>
+<li>
+<p>코드가 빌드되어 배포 가능한 패키지로 생성</p>
+</li>
+<li>
+<p>기능 및 성능 테스트 수행, 버그 수정</p>
+</li>
+<li>
+<p>인프라(서버, 데이터베이스 등) 프로비저닝</p>
+</li>
+<li>
+<p>스테이징/프로덕션 환경에 배포</p>
+</li>
+<li>
+<p>프로덕션 환경에서 성능 및 오류 모니터링</p>
+</li>
+</ol>
+<p><strong>CI/CD</strong>:</p>
+<ul>
+<li>
+<p>지속적 통합(CI): 코드 변경 사항을 자주 공유 리포지토리에 병합하여 통합 문제를 조기에 발견</p>
+</li>
+<li>
+<p>지속적 딜리버리(CD): 변경 사항이 자동화된 테스트와 검증을 거치지만, 수동 승인이 필요</p>
+</li>
+<li>
+<p>지속적 배포(CD): 테스트를 통과하면 즉시 자동으로 프로덕션에 배포</p>
+</li>
+</ul>
+<p><strong>MLOps</strong>:</p>
+<ul>
+<li>
+<p>ML 모델 개발, 배포, 운영을 자동화하고 체계화하는 접근법</p>
+</li>
+<li>
+<p>DevOps 원칙을 ML 워크플로우에 적용</p>
+</li>
+<li>
+<p>데이터 엔지니어, ML 엔지니어, DevOps 엔지니어 등이 협업</p>
+</li>
+</ul>
+<p>이를 통해 ML 애플리케이션의 개발, 테스트, 배포, 운영 전반을 효율화할 수 있습니다.</p>
+<h2 id="code-repositories">Code Repositories<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#code-repositories" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>코드 리포지토리의 역할과 중요성에 대해 정리하면 다음과 같습니다:</p>
+<p><strong>코드 리포지토리</strong>:</p>
+<ul>
+<li>
+<p>DevOps 및 CI/CD 파이프라인의 필수적인 구성 요소</p>
+</li>
+<li>
+<p>코드를 중앙 집중화된 장소에 저장하고 관리하는 역할</p>
+</li>
+<li>
+<p>팀 간 협업, 코드 변경 추적, CI/CD 시스템과의 통합을 지원</p>
+</li>
+</ul>
+<p><strong>GitHub</strong>:</p>
+<ul>
+<li>
+<p>가장 널리 사용되는 웹 기반 코드 리포지토리 호스팅 서비스</p>
+</li>
+<li>
+<p>분산 버전 관리 및 소스 코드 관리 기능 제공</p>
+</li>
+<li>
+<p>개발자들이 협업하고 코드 리포지토리를 관리할 수 있음</p>
+</li>
+</ul>
+<p><strong>DevOps for ML</strong>:</p>
+<ul>
+<li>
+<p>코드 리포지토리를 활용하여 ML 모델 개발과 배포 과정을 자동화</p>
+</li>
+<li>
+<p>새로운 코드가 자동으로 빌드, 테스트, 프로덕션에 푸시됨</p>
+</li>
+<li>
+<p>팀 간 협업과 ML 개발 프로세스 관리를 지원</p>
+</li>
+</ul>
+<p>따라서 코드 리포지토리는 ML 프로젝트의 DevOps 실현을 위한 필수적인 요소입니다. 이를 통해 신속하고 안정적이며 최신 상태의 ML 모델을 개발하고 배포할 수 있습니다.</p>
+<p><a href="../../../3-3-automate-deployment/image.png" class="internal internal-link" data-slug="3-3-automate-deployment/image.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-107.png" alt/></a></p>
+<h1 id="mlops-introduction">MLOps Introduction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mlops-introduction" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>ML 모델 호스팅과 MLOps에 대해 정리하면 다음과 같습니다:</p>
+<h2 id="ml-모델-호스팅의-특징"><strong>ML 모델 호스팅의 특징</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ml-모델-호스팅의-특징" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>복잡한 수학 방정식과 반복적인 실험 필요</p>
+</li>
+<li>
+<p>새로운 데이터로 인해 모델이 시간이 지남에 따라 구식이 될 수 있음</p>
+</li>
+</ul>
+<h2 id="mlops의-필요성"><strong>MLOps의 필요성</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mlops의-필요성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../3-3-automate-deployment/image-1.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-1-34.png" alt/></a></p>
+<ul>
+<li>
+<p>ML 모델의 개발, 배포, 운영에 특화된 프로세스와 절차 필요</p>
+</li>
+<li>
+<p>DevOps 원칙(자동화, 모니터링, 협업)을 ML 시스템에 적용 - MLOps incorporates DevOps principles with machine learning</p>
+</li>
+</ul>
+<p><strong>CI/CD와 ML 생애주기</strong>:</p>
+<p><a href="../../../3-3-automate-deployment/image-2.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-2-31.png" alt/></a></p>
+<ul>
+<li>
+<p>CI/CD 파이프라인을 통해 ML 모델 구축, 평가, 선택, 배포, 모니터링 자동화</p>
+</li>
+<li>
+<p>새로운 ML 모델 개발 및 기존 모델 업데이트 가속화</p>
+</li>
+</ul>
+<h2 id="mlops의-이점"><strong>MLOps의 이점</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mlops의-이점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>자동화된 테스트, 린팅(Linting), 릴리스를 통한 코드 품질 및 반복 속도 향상</p>
+</li>
+<li>
+<p>데이터셋, 모델, 데이터 드리프트 및 성능 저하 모니터링 자동화</p>
+</li>
+<li>
+<p>안정적이고 고성능 ML 시스템 유지</p>
+</li>
+</ul>
+<h2 id="mlops-팀의-역할"><strong>MLOps 팀의 역할</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mlops-팀의-역할" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>데이터 엔지니어, 데이터 과학자, ML 엔지니어의 협업을 통한 ML 생애주기 관리</li>
+</ul>
+<h3 id="데이터-엔지니어"><strong>데이터 엔지니어</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#데이터-엔지니어" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>데이터 수집, 정제, 처리 담당</p>
+</li>
+<li>
+<p>ML 분석과 데이터 과학자 작업을 위한 데이터 준비</p>
+</li>
+</ul>
+<h3 id="데이터-과학자"><strong>데이터 과학자</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#데이터-과학자" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>모델 개발, 학습, 평가, 모니터링 담당</p>
+</li>
+<li>
+<p>데이터로부터 인사이트 도출</p>
+</li>
+</ul>
+<h3 id="ml-엔지니어"><strong>ML 엔지니어</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ml-엔지니어" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>모델 배포, 프로덕션 통합, 모니터링 담당</p>
+</li>
+<li>
+<p>ML 시스템 개발(Dev)과 배포(Ops)의 표준화</p>
+</li>
+<li>
+<p>안정적인 프로덕션 ML 모델의 지속적 delivery 실현</p>
+</li>
+</ul>
+<p>이와 같이 MLOps 팀은 데이터 엔지니어, 데이터 과학자, ML 엔지니어 등 다양한 역할로 구성됩니다. 각 팀원은 ML 모델 생애주기 전반에 걸쳐 협업하며 책임을 분담합니다.</p>
+<p>이를 통해 안정적이고 확장 가능한 ML 시스템을 구축하고 운영할 수 있습니다.</p>
+<h2 id="데이터와-ml-코드의-독립성"><strong>데이터와 ML 코드의 독립성</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#데이터와-ml-코드의-독립성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>데이터 전처리와 ML 모델 코드는 독립적이지만 긴밀하게 연계</p>
+</li>
+<li>
+<p>두 구성 요소의 신중한 설계가 필수적</p>
+</li>
+</ul>
+<h2 id="ml의-비기능-요구사항"><strong>ML의 비기능 요구사항</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ml의-비기능-요구사항" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../3-3-automate-deployment/image-3.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-3-26.png" alt/></a></p>
+<p><strong>일관성(Consistency)</strong>:</p>
+<ul>
+<li>개발, 스테이징, 프로덕션 등 다양한 환경 간 최소한의 편차를 보장하여 모델 성능 유지</li>
+</ul>
+<p><strong>유연성(Flexibility)</strong>:</p>
+<ul>
+<li>변화하는 요구사항에 맞춰 다양한 ML 프레임워크와 기술을 수용할 수 있어야 함</li>
+</ul>
+<p><strong>재현성(Reproducibility)</strong>:</p>
+<ul>
+<li>과거 실험과 학습 프로세스를 재현할 수 있어 모델 신뢰성과 추적성 확보</li>
+</ul>
+<p><strong>재사용성(Reusability)</strong>:</p>
+<ul>
+<li>다른 ML 프로젝트에서도 재사용할 수 있는 구성 요소를 설계하여 효율성과 개발 시간 단축</li>
+</ul>
+<p><strong>확장성(Scalability)</strong>:</p>
+<ul>
+<li>증가하는 수요와 데이터 볼륨에 대응하여 컴퓨팅, 스토리지, 메모리 등의 리소스를 확장할 수 있어야 함</li>
+</ul>
+<p><strong>감사 가능성(Auditability)</strong>:</p>
+<ul>
+<li>모든 ML artifacts에 대한 포괄적인 로깅, 버전 관리, 종속성 추적을 제공하여 투명성과 규정 준수 보장</li>
+</ul>
+<p><strong>설명 가능성(Explainability)</strong>:</p>
+<ul>
+<li>의사 결정의 투명성과 모델 해석 가능성을 높이는 기법을 포함</li>
+</ul>
+<p>이러한 비기능적 요구사항들은 안정적이고 신뢰할 수 있는 ML 시스템 구축에 필수적입니다.</p>
+<h2 id="ml-워크플로우와-devops의-차이점">ML 워크플로우와 DevOps의 차이점<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ml-워크플로우와-devops의-차이점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>추가적인 단계</strong>:</p>
+<ul>
+<li>
+<p>ML 워크플로우에는 <span class="text-highlight">**데이터 준비, 모델 학습 및 버전 관리, 모델 성능 모니터링 등의 추가적인 단계**</span>가 포함됩니다.</p>
+</li>
+<li>
+<p>이러한 추가 책임으로 인해 ML 실무자들은 ML에 맞춤형 모범 사례를 채택해야 합니다.</p>
+</li>
+</ul>
+<p><strong>배포 및 운영의 복잡성</strong>:</p>
+<ul>
+<li>MLOps와 DevOps는 일부 유사성이 있지만, ML 모델의 복잡성으로 인해 배포 및 운영 과정에서 더 많은 주의가 필요합니다.</li>
+</ul>
+<p><strong>고유한 과제 대응 필요</strong>:</p>
+<ul>
+<li>ML 실무자는 모델을 프로덕션으로 원활하게 전환하고 성공적으로 관리하기 위해 이러한 고유한 과제를 고려해야 합니다.</li>
+</ul>
+<p>전통적인 소프트웨어 개발과 비교하면, ML 프로젝트에는 다음과 같은 추가적인 복잡성이 존재합니다:</p>
+<ul>
+<li>
+<p>데이터 준비, 모델 학습, 성능 모니터링 등의 추가 단계</p>
+</li>
+<li>
+<p>ML 모델의 특성으로 인한 배포 및 지속적 운영의 어려움</p>
+</li>
+<li>
+<p>이러한 고유한 과제에 대한 대응 필요</p>
+</li>
+</ul>
+<p>따라서 MLOps는 DevOps와 일부 유사성이 있지만, ML 워크플로우의 특성을 고려한 별도의 접근법이 필요합니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-4.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-4-24.png" alt/></a></p>
+<ul>
+<li>
+<p>Data Provenance (데이터 기원 추적)</p>
+<p>Data provenance는 데이터의 출처, 변환 과정, 사용 이력 등을 의미합니다.</p>
+<p>Data provenance의 주요 개념은 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>출처(Origin)</strong>:</p>
+<ul>
+<li>데이터가 어디에서 왔는지, 어떤 출처로부터 수집되었는지에 대한 정보</li>
+</ul>
+</li>
+<li>
+<p><strong>변환 과정(Transformation)</strong>:</p>
+<ul>
+<li>데이터가 어떤 단계를 거쳐 현재의 형태로 변환되었는지에 대한 기록</li>
+</ul>
+</li>
+<li>
+<p><strong>사용 이력(Usage History)</strong>:</p>
+<ul>
+<li>데이터가 어떻게 사용되었고, 어떤 용도로 활용되었는지에 대한 정보</li>
+</ul>
+</li>
+</ol>
+<p>Data provenance를 추적하면 다음과 같은 이점이 있습니다:</p>
+<ul>
+<li>
+<p><strong>신뢰성 향상</strong>: 데이터의 출처와 변형 과정을 알 수 있어 데이터에 대한 신뢰성 제고</p>
+</li>
+<li>
+<p><strong>재현성 보장</strong>: 데이터 처리 과정을 추적할 수 있어 실험 및 분석의 재현성 확보</p>
+</li>
+<li>
+<p><strong>감사 가능성</strong>: 데이터 사용 이력 관리를 통해 규정 준수와 투명성 확보</p>
+</li>
+<li>
+<p><strong>오류 추적</strong>: 데이터 문제 발생 시 변환 과정을 따라 추적하여 오류 원인 파악</p>
+</li>
+</ul>
+<p>이처럼 Data provenance는 ML 프로젝트에서 데이터의 무결성, 신뢰성, 재현성을 보장하는 데 중요한 역할을 합니다.</p>
+</li>
+</ul>
+<h1 id="automating-testing-in-cicd-pipelines">Automating Testing in CI/CD pipelines<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#automating-testing-in-cicd-pipelines" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="ml-system-reliability"><strong>ML system reliability</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ml-system-reliability" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ML 시스템의 안정성 향상을 위한 자동화된 테스팅:</p>
+<p><strong>자동화된 테스팅의 중요성</strong></p>
+<ul>
+<li>
+<p>ML 모델 개발 및 배포 과정에서 자동화된 테스팅은 필수적</p>
+</li>
+<li>
+<p>복잡한 프로젝트일수록 수동 테스팅의 오류 발생과 확장성 문제가 증가</p>
+</li>
+</ul>
+<h2 id="자동화된-테스트-유형"><strong>자동화된 테스트 유형</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#자동화된-테스트-유형" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>단위 테스트(Unit Tests)</strong>:</p>
+<ul>
+<li>
+<p>개별 함수나 메서드와 같은 작은 구성 요소를 검증합니다.</p>
+</li>
+<li>
+<p>각 구성 요소의 정확한 동작을 확인합니다.</p>
+</li>
+</ul>
+<p><strong>통합 테스트(Integration Tests)</strong>:</p>
+<ul>
+<li>
+<p>데이터 수집, 모델 학습, 배포 등의 파이프라인 단계가 올바르게 연동되는지 확인합니다.</p>
+</li>
+<li>
+<p>시스템 또는 아키텍처에 따라 다른 유형의 통합 테스트를 수행할 수 있습니다.</p>
+</li>
+</ul>
+<p><strong>회귀 테스트(Regression Tests)</strong>:</p>
+<ul>
+<li>
+<p>이전에 정상적으로 동작했던 부분이 변경으로 인해 문제가 발생하지 않았는지 재확인합니다.</p>
+</li>
+<li>
+<p>모델뿐만 아니라 전반적인 시스템에 대한 회귀 테스트가 필요합니다.</p>
+</li>
+</ul>
+<p>이와 같은 다양한 수준의 자동화 테스트를 통해 ML 시스템 전체에 대한 철저한 검증이 가능합니다. 단위, 통합, 회귀 테스트를 CI/CD 파이프라인에 통합하면 빠르고 신뢰성 있는 모델 개발 및 배포를 지원할 수 있습니다.</p>
+<h2 id="cicd-파이프라인의-자동화된-테스팅-이점"><strong>CI/CD 파이프라인의 자동화된 테스팅 이점</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cicd-파이프라인의-자동화된-테스팅-이점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><strong>속도</strong>: 신속한 피드백으로 개발 반복 속도 향상</p>
+</li>
+<li>
+<p><strong>신뢰성</strong>: 일관된 방식으로 테스트 실행</p>
+</li>
+<li>
+<p><strong>포괄성</strong>: 다양한 시나리오, 입력, 하이퍼파라미터, 지표 검증</p>
+</li>
+<li>
+<p><strong>조기 오류 발견</strong>: 프로덕션 전 개발 과정에서 버그 식별</p>
+</li>
+</ul>
+<h2 id="sagemaker의-자동화된-테스팅"><strong>SageMaker의 자동화된 테스팅</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker의-자동화된-테스팅" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>데이터, 빌드, 테스트, 배포, 모니터링 등 다양한 ML 파이프라인에 적용</p>
+</li>
+<li>
+<p>자동화된 테스팅을 통해 ML 워크플로우의 재현성, 협업, 운영화 지원</p>
+</li>
+</ul>
+<h3 id="sagemaker-projects-with-cicd-practices"><strong>SageMaker Projects with CI/CD practices</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker-projects-with-cicd-practices" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>모델 구축부터 배포까지 전체 ML 생애주기 관리</p>
+</li>
+<li>
+<p>코드 리포지토리, 워크플로우 자동화 도구, 파이프라인 단계 등 제공</p>
+</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-5.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-5-23.png" alt/></a></p>
+<p>이와 같은 자동화된 테스팅 접근법은 ML 시스템의 안정성과 품질을 향상시킬 수 있습니다.</p>
+<h1 id="version-control-systems">Version Control Systems<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#version-control-systems" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>코드 변경 관리를 위한 버전 컨트롤 시스템:</p>
+<p><strong>버전 컨트롤의 중요성</strong>:</p>
+<ul>
+<li>
+<p>GitHub과 같은 코드 리포지토리는 코드와 파일의 변경 사항을 관리하는 데 활용됩니다.</p>
+</li>
+<li>
+<p>팀원들이 동시에 프로젝트에 작업할 수 있도록 지원하며, 필요 시 이전 버전으로 되돌릴 수 있습니다.</p>
+</li>
+<li>
+<p>MLOps와 CI/CD 워크플로우의 핵심 요소로, 재현 가능한 빌드와 배포를 보장합니다.</p>
+</li>
+</ul>
+<p><strong>버전 컨트롤 시스템의 주요 활용 사례</strong>:</p>
+<ul>
+<li>
+<p><strong>협업</strong>: 팀원 간 동시 작업과 변경 사항 통합</p>
+</li>
+<li>
+<p><strong>변경 추적</strong>: 누가, 언제, 왜 변경했는지 기록</p>
+</li>
+<li>
+<p><strong>브랜치 및 병합</strong>: 안정적인 메인 코드와 실험적 변경 관리</p>
+</li>
+<li>
+<p><strong>재현성</strong>: 모델, 데이터, 설정 변경 이력 추적</p>
+</li>
+<li>
+<p><strong>CI/CD 파이프라인과의 통합</strong>: 자동화된 테스트, 빌드, 배포 실행</p>
+</li>
+</ul>
+<p><strong>Git 소개</strong>:</p>
+<ul>
+<li>
+<p>분산 버전 컨트롤 시스템의 표준</p>
+</li>
+<li>
+<p>대용량 파일과 데이터셋에 효율적</p>
+</li>
+<li>
+<p>AWS에서 CodePipeline, CodeBuild 등과 통합 제공</p>
+</li>
+</ul>
+<p><strong>Git 기본 명령어</strong>:</p>
+<ul>
+<li>
+<p><code>git init</code>: 새 Git 리포지토리 초기화</p>
+</li>
+<li>
+<p><code>git clone</code>: 원격 리포지토리의 로컬 복사본 생성</p>
+</li>
+<li>
+<p><code>git add</code>, <code>git commit</code>: 변경 사항 스테이징 및 커밋</p>
+</li>
+<li>
+<p><code>git push</code>, <code>git pull</code>: 리포지토리에 변경 사항 업로드/다운로드</p>
+</li>
+<li>
+<p><code>git branch</code>, <code>git checkout</code>, <code>git merge</code>: 브랜치 관리</p>
+</li>
+</ul>
+<p>이와 같은 버전 컨트롤 시스템 활용은 ML 프로젝트의 협업, 재현성, 배포 자동화에 필수적입니다.</p>
+<p>AWS에서 제공하는 CI/CD 관련 서비스에 대해 정리하면 다음과 같습니다:</p>
+<p><strong>AWS CodePipeline</strong>:</p>
+<ul>
+<li>
+<p>코드 변경, 빌드, 테스트, 배포를 오케스트레이션하는 서비스</p>
+</li>
+<li>
+<p>Git 리포지토리 서비스와 통합하여 종단 간 소프트웨어 릴리스 프로세스 자동화</p>
+</li>
+</ul>
+<p><strong>Git 리포지토리 서비스</strong>:</p>
+<ul>
+<li>
+<p>안전하고 확장 가능한 클라우드 기반 Git 리포지토리 서비스</p>
+</li>
+<li>
+<p>소스 코드 변경 이력 관리, 안전한 저장 및 액세스 제공</p>
+</li>
+</ul>
+<p><strong>AWS CodeBuild</strong>:</p>
+<ul>
+<li>
+<p>완전 관리형 빌드 서비스로, 소스 코드 컴파일, 테스트 실행, 빌드 아티팩트 생성 자동화</p>
+</li>
+<li>
+<p>Git 리포지토리 서비스와 CodePipeline과 통합하여 코드 변경에 대한 자동화된 빌드와 테스트 제공</p>
+</li>
+</ul>
+<p>이러한 서비스들은 다음과 같은 방식으로 CI/CD 파이프라인 구축을 지원합니다:</p>
+<ul>
+<li>
+<p>CodePipeline은 코드 변경 사항, 빌드, 테스트, 배포 프로세스를 오케스트레이션합니다.</p>
+</li>
+<li>
+<p>Git 리포지토리 서비스는 안전하고 확장 가능한 코드 버전 관리를 제공합니다.</p>
+</li>
+<li>
+<p>CodeBuild는 자동화된 빌드와 테스트 실행을 통해 코드 품질을 보장합니다.</p>
+</li>
+</ul>
+<p>이를 통해 ML 프로젝트의 CI/CD 파이프라인을 효율적으로 구축하고 관리할 수 있습니다.</p>
+<h1 id="continuous-flow-structures">Continuous Flow Structures<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#continuous-flow-structures" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>ML 모델의 지속적인 배포를 위한 자동화된 워크플로우 구현:</p>
+<h2 id="지속적-배포의-핵심-구성-요소"><strong>지속적 배포의 핵심 구성 요소</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#지속적-배포의-핵심-구성-요소" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p><strong>모델 학습 및 버전 관리</strong>: 모델 변경 사항 추적 및 관리</p>
+</li>
+<li>
+<p><strong>모델 패키징 및 컨테이너화</strong>: 모델과 종속성을 표준화된 컨테이너로 패키징</p>
+</li>
+<li>
+<p><strong>지속적 통합(CI)</strong>: 모델 및 구성 요소 빌드, 테스트, 검증 자동화</p>
+</li>
+<li>
+<p><strong>배포 자동화</strong>: 모델을 프로덕션 환경에 자동으로 배포</p>
+</li>
+<li>
+<p><strong>모니터링 및 관찰성</strong>: 배포된 모델 성능, 안정성, 상태 모니터링</p>
+</li>
+<li>
+<p><strong>롤백 및 롤포워드 전략</strong>: 문제 발생 시 이전 버전 복구 또는 새 버전 배포</p>
+</li>
+</ol>
+<h2 id="gitflow와-github-flow"><strong>Gitflow와 GitHub Flow</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gitflow와-github-flow" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="gitflow">Gitflow<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gitflow" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>브랜치 전략(main, hotfix, release, develop, feature)을 활용한 구조화된 워크플로우</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-6.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-6-22.png" alt/></a></p>
+<p>Gitflow 워크플로우의 주요 브랜치 역할:</p>
+<ol>
+<li>
+<p><strong>Main</strong>:</p>
+<ul>
+<li>
+<p>프로덕션 준비 상태의 코드베이스를 나타내는 주 브랜치</p>
+</li>
+<li>
+<p>최신 안정 버전의 소프트웨어를 포함</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Hotfix</strong>:</p>
+<ul>
+<li>
+<p>프로덕션 환경의 중요한 이슈를 신속히 해결하기 위한 브랜치</p>
+</li>
+<li>
+<p>Main 브랜치에서 분기되며, Main과 Develop 브랜치에 병합됨</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Release</strong>:</p>
+<ul>
+<li>
+<p>새로운 프로덕션 릴리스를 준비하기 위한 브랜치</p>
+</li>
+<li>
+<p>Develop 브랜치에서 분기되며, 버그 수정 등의 최종 작업을 수행</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Develop</strong>:</p>
+<ul>
+<li>
+<p>새로운 기능 개발 및 통합을 위한 중심 브랜치</p>
+</li>
+<li>
+<p>완료된 모든 기능이 병합되는 허브 역할</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Feature</strong>:</p>
+<ul>
+<li>
+<p>새로운 기능 개발을 위한 단기 브랜치</p>
+</li>
+<li>
+<p>Develop 브랜치에서 분기되며, 기능 완료 후 Develop 브랜치에 병합됨</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 체계화된 브랜칭 전략은 소프트웨어 프로젝트의 안정적인 개발과 배포를 지원합니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-7.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-7-19.png" alt/></a></p>
+<p>Gitflow 워크플로우의 주요 단계를 정리하면 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>새 기능 개발 시작</strong>:</p>
+<ul>
+<li>
+<p>Develop 브랜치에서 새로운 Feature 브랜치 생성</p>
+</li>
+<li>
+<p>기능 개발 후 Feature 브랜치에 변경 사항 커밋</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>기능 병합</strong>:</p>
+<ul>
+<li>기능 개발이 완료되면 Feature 브랜치를 Develop 브랜치에 병합</li>
+</ul>
+</li>
+<li>
+<p><strong>릴리스 준비</strong>:</p>
+<ul>
+<li>
+<p>Develop 브랜치에서 새로운 Release 브랜치 생성</p>
+</li>
+<li>
+<p>Release 브랜치에서 최종 조정(버그 수정 등) 수행</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>릴리스 병합</strong>:</p>
+<ul>
+<li>
+<p>Release 브랜치를 Main 브랜치에 병합하고 버전 태그 지정</p>
+</li>
+<li>
+<p>Release 브랜치를 Develop 브랜치에도 병합하여 변경 사항 통합</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>핫픽스 대응</strong>:</p>
+<ul>
+<li>
+<p>프로덕션 환경의 중요 이슈 발생 시 Main 브랜치에서 Hotfix 브랜치 생성</p>
+</li>
+<li>
+<p>이슈 해결 후 Hotfix 브랜치를 Main과 Develop 브랜치에 병합</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 Gitflow 워크플로우를 통해 안정적이고 체계적인 소프트웨어 개발 및 배포 과정을 관리할 수 있습니다.</p>
+<h3 id="github-flow">GitHub Flow:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#github-flow" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>가벼운 브랜치 기반 워크플로우로 지속적인 통합과 배포 지원</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-8.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-8-17.png" alt/></a></p>
+<p>GitHub Flow의 주요 특징과 장점을 정리하면 다음과 같습니다:</p>
+<p><strong>GitHub Flow의 특징</strong>:</p>
+<ul>
+<li>
+<p>가벼운 브랜치 기반 워크플로우</p>
+</li>
+<li>
+<p>새로운 기능, 버그 수정 등의 변경 사항을 체계적이고 구조화된 방식으로 관리</p>
+</li>
+<li>
+<p>메인 브랜치에서 새로운 브랜치를 생성하여 작업 격리</p>
+</li>
+<li>
+<p>브랜치 생성, 변경 커밋, Pull Request 생성, 코드 리뷰, 프로덕션 배포 등의 반복적인 주기</p>
+</li>
+</ul>
+<p><strong>GitHub Flow의 주요 장점</strong>:</p>
+<ol>
+<li>
+<p><strong>지속적 통합 및 배포</strong>:</p>
+<ul>
+<li>언제든 메인 브랜치를 배포 가능한 상태로 유지할 수 있어 변경 사항을 더 쉽고 빈번하게 배포할 수 있습니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>협업 및 코드 리뷰</strong>:</p>
+<ul>
+<li>Pull Request 프로세스를 통해 팀 간 협업과 동료 리뷰를 장려하여 코드 품질을 보장할 수 있습니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>유연성 및 격리</strong>:</p>
+<ul>
+<li>브랜치 기반 접근 방식으로 개발자들이 서로 간섭하지 않고 독립적으로 다양한 기능이나 버그 수정을 진행할 수 있습니다.</li>
+</ul>
+</li>
+</ol>
+<p>이러한 특징과 장점으로 GitHub Flow는 팀 기반 소프트웨어 프로젝트에 효과적인 워크플로우로 활용됩니다.</p>
+<h2 id="지속적-실행-구조-시작하기"><strong>지속적 실행 구조 시작하기</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#지속적-실행-구조-시작하기" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>이벤트 기반 트리거를 통한 파이프라인 자동화</p>
+</li>
+<li>
+<p>단계별 작업 순서 및 종속성 정의</p>
+</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-9.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-9-17.png" alt/></a></p>
+<p>이와 같은 자동화된 배포 워크플로우를 통해 ML 모델의 빠른 반복 배포, 안정성 있는 운영을 실현할 수 있습니다.</p>
+<p>지속적 실행 구조 구현을 위한 단계별 접근 방식:</p>
+<ol>
+<li>
+<p><strong>태스크 식별</strong>:</p>
+<ul>
+<li>
+<p>파이프라인의 개별 태스크 또는 작업 식별</p>
+</li>
+<li>
+<p>명확한 입력과 출력을 가지는 독립적인 태스크 정의</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>태스크 순서 결정</strong>:</p>
+<ul>
+<li>
+<p>태스크 간 종속성 분석</p>
+</li>
+<li>
+<p>태스크 수행 순서 수립</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>지속적 실행 프레임워크 선택</strong>:</p>
+<ul>
+<li>
+<p>Apache Airflow, Luigi, Prefect 등의 프레임워크 검토</p>
+</li>
+<li>
+<p>필요 사항(사용 편의성, 확장성, 기존 인프라와의 통합 등)에 적합한 프레임워크 선택</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>파이프라인 정의</strong>:</p>
+<ul>
+<li>선택한 프레임워크를 사용하여 태스크와 종속성, 전체 워크플로우 정의</li>
+</ul>
+</li>
+<li>
+<p><strong>태스크 구현</strong>:</p>
+<ul>
+<li>각 태스크에 대한 데이터 읽기, 변환, 처리 등의 로직 작성</li>
+</ul>
+</li>
+<li>
+<p><strong>파이프라인 구성</strong>:</p>
+<ul>
+<li>태스크 스케줄링, 리소스 할당, 오류 처리 등 필요한 구성 요소 설정</li>
+</ul>
+</li>
+<li>
+<p><strong>테스트 및 검증</strong>:</p>
+<ul>
+<li>샘플 데이터를 사용하여 파이프라인 테스트 및 검증</li>
+</ul>
+</li>
+<li>
+<p><strong>배포 및 모니터링</strong>:</p>
+<ul>
+<li>
+<p>프로덕션 환경에 파이프라인 배포</p>
+</li>
+<li>
+<p>실행 모니터링 및 로깅 구현</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>반복 및 최적화</strong>:</p>
+<ul>
+<li>
+<p>파이프라인 성능 모니터링 및 필요에 따른 조정</p>
+</li>
+<li>
+<p>태스크 완료 시간 최적화, 새로운 태스크 추가, 전체 구조 개선 등</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 단계적 접근을 통해 신뢰성 있고 효율적인 지속적 실행 구조를 구현할 수 있습니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-10.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-10-13.png" alt/></a></p>
+<h1 id="continuous-delivery-services">Continuous Delivery Services<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#continuous-delivery-services" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>AWS 클라우드에서의 애플리케이션 배포 자동화 과정:</p>
+<h2 id="소프트웨어-릴리스-라이프사이클"><strong>소프트웨어 릴리스 라이프사이클</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#소프트웨어-릴리스-라이프사이클" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>소스 코드 관리, 배포 가능한 아티팩트 빌드, 통합 테스트, 환경 배포, 성능 모니터링 등의 단계로 구성</li>
+</ul>
+<h2 id="소스에서-프로덕션까지의-도구"><strong>소스에서 프로덕션까지의 도구</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#소스에서-프로덕션까지의-도구" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>CodePipeline, Git 리포지토리, CodeBuild, CodeDeploy 등의 AWS 서비스를 활용하여 각 단계를 자동화하고 효율화</li>
+</ul>
+<p>AWS 서비스별 특징 및 사용 사례:</p>
+<h3 id="git-리포지토리"><strong>Git 리포지토리</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#git-리포지토리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>개발자들이 코드를 안전하게 저장, 관리, 협업할 수 있는 확장 가능하고 고가용성 있는 저장소 제공</p>
+</li>
+<li>
+<p>친숙한 Git 명령어와 워크플로우(브랜칭, 병합 등) 사용 가능</p>
+</li>
+<li>
+<p>AWS 서비스, IDE, 타사 도구와의 통합 지원</p>
+</li>
+</ul>
+<h3 id="aws-codebuild"><strong>AWS CodeBuild</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-codebuild" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>완전 관리형 지속적 통합 서비스로, 소스 코드 컴파일, 테스트 실행, 빌드 아티팩트 생성 자동화</p>
+</li>
+<li>
+<p>빌드 명령 지정, 병렬 빌드 실행, 사전 구성된 빌드 환경 활용 가능</p>
+</li>
+<li>
+<p>소스 코드 리포지토리, Jenkins 등 다른 도구와 통합</p>
+</li>
+</ul>
+<h3 id="aws-cloudformation"><strong>AWS CloudFormation</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-cloudformation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>템플릿을 사용하여 AWS 리소스를 모델링, 배포, 관리하는 Infrastructure as Code 서비스</p>
+</li>
+<li>
+<p>원하는 리소스와 구성을 지정하면 CloudFormation이 프로비저닝 및 변경 관리 수행</p>
+</li>
+</ul>
+<h3 id="aws-codedeploy"><strong>AWS CodeDeploy</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-codedeploy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>온프레미스 서버와 AWS 서비스(Lambda, ECS, EC2 등)에 애플리케이션을 자동으로 배포하는 서비스</p>
+</li>
+<li>
+<p>증분 배포, 자동/수동 롤백 등의 기능으로 빠르고 안정적인 릴리스 지원</p>
+</li>
+<li>
+<p>수동 프로세스를 자동화하여 동시 배포 요구 사항에 대응 가능</p>
+</li>
+</ul>
+<p>이러한 AWS 서비스들을 활용하면 애플리케이션 개발, 빌드, 배포 전반의 자동화를 달성할 수 있습니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-11.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-11-13.png" alt/></a></p>
+<h3 id="aws-codepipeline"><strong>AWS CodePipeline</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-codepipeline" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>다양한 AWS 서비스와 통합되어 소스에서 프로덕션까지의 파이프라인 구축</li>
+</ul>
+<p>AWS CodePipeline의 주요 기능:</p>
+<p><strong>수동 승인 기능</strong>:</p>
+<ul>
+<li>
+<p>파이프라인에 수동 승인 게이트를 구성하여 릴리스 프로세스를 통제할 수 있습니다.</p>
+</li>
+<li>
+<p>특정 사용자 또는 그룹의 승인이 필요하도록 설정할 수 있습니다.</p>
+</li>
+</ul>
+<p><strong>모니터링 및 알림</strong>:</p>
+<ul>
+<li>
+<p>파이프라인의 상태, 상세 로그, 알림 등을 제공하여 가시성을 확보할 수 있습니다.</p>
+</li>
+<li>
+<p>CodePipeline 콘솔, AWS CLI, Amazon EventBridge, AWS CloudTrail 등을 통해 파이프라인의 성능, 안정성, 가용성을 모니터링하고 개선할 수 있습니다.</p>
+</li>
+</ul>
+<p><strong>보안</strong>:</p>
+<ul>
+<li>리소스 수준의 권한 설정을 지원하여, 사용자별로 파이프라인에 대한 권한(읽기 전용, 특정 단계 또는 액션 접근 등)을 세분화할 수 있습니다.</li>
+</ul>
+<p>이를 통해 CodePipeline은 릴리스 프로세스에 대한 통제력, 가시성, 보안성을 제공하여 안정적이고 신뢰할 수 있는 애플리케이션 배포를 지원합니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-12.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-12-11.png" alt/></a></p>
+<h3 id="git-리포지토리-1"><strong>Git 리포지토리</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#git-리포지토리-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>개발자들이 안전하게 Git 기반 코드 저장소를 관리할 수 있는 완전 관리형 서비스</li>
+</ul>
+<p>AWS Git 리포지토리의 주요 특징:</p>
+<p><strong>Git 기반 버전 관리</strong>:</p>
+<ul>
+<li>익숙한 Git 명령어와 워크플로우를 그대로 사용할 수 있습니다.</li>
+</ul>
+<p><strong>안전한 데이터 저장</strong>:</p>
+<ul>
+<li>end-to-end 암호화와 액세스 제어 메커니즘을 통해 코드를 안전하게 저장합니다.</li>
+</ul>
+<p><strong>확장성과 고가용성</strong>:</p>
+<ul>
+<li>대용량 리포지토리와 높은 트래픽을 처리할 수 있도록 설계되었습니다.</li>
+</ul>
+<p><strong>AWS 서비스와의 통합</strong>:</p>
+<ul>
+<li>CodePipeline, CodeBuild, CodeDeploy 등 다른 AWS 서비스와 원활하게 통합되어 CI/CD 워크플로우를 지원합니다.</li>
+</ul>
+<p><strong>완전 관리형 서비스</strong>:</p>
+<ul>
+<li>인프라, 소프트웨어 업데이트, 유지 관리를 AWS가 담당하므로 개발에 집중할 수 있습니다.</li>
+</ul>
+<p><strong>계정 간 액세스 제공</strong>:</p>
+<ul>
+<li>다른 AWS 계정과 리포지토리에 대한 액세스를 부여하여 팀 간 협업을 지원합니다.</li>
+</ul>
+<p><strong>모니터링 기능</strong>:</p>
+<ul>
+<li>브랜치 생성, 커밋 발생 등의 이벤트를 기반으로 알림을 생성하고 조치를 취할 수 있습니다.</li>
+</ul>
+<p><strong>보안 기능</strong>:</p>
+<ul>
+<li>정책 및 사용자 계정으로 액세스를 관리하며, 암호화된 HTTPS 또는 SSH를 통해 접근할 수 있습니다.</li>
+</ul>
+<p>이러한 기능들을 통해 개발팀은 안전하고 확장 가능한 Git 기반 버전 관리를 수행할 수 있습니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-13.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-13-11.png" alt/></a></p>
+<h3 id="aws-codebuild-1"><strong>AWS CodeBuild</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-codebuild-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>소스 코드 컴파일, 테스트 실행, 배포 가능한 패키지 생성을 자동화하는 지속적 통합 서비스</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-14.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-14-10.png" alt/></a></p>
+<h3 id="aws-codedeploy-1"><strong>AWS CodeDeploy</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-codedeploy-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>애플리케이션 배포 자동화, 유연한 배포 전략, 롤백 기능, 다른 AWS 서비스와의 통합 제공</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-15.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-15-10.png" alt/></a></p>
+<h2 id="quotas-and-limits-for-each-supported-aws-region"><strong>Quotas and limits for each supported AWS Region</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quotas-and-limits-for-each-supported-aws-region" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>AWS CodePipeline</strong>:</p>
+<ul>
+<li>
+<p>파이프라인, 단계, 액션, Webhook 수 제한</p>
+</li>
+<li>
+<p>일반적인 제한 사항:</p>
+<ul>
+<li>
+<p>리전당 파이프라인 수 제한(1000개)</p>
+</li>
+<li>
+<p>단일 파이프라인의 액션 수 제한(500개)</p>
+</li>
+<li>
+<p>GitHub 입력 아티팩트 크기 제한(1GB)</p>
+</li>
+<li>
+<p>사용자 정의 액션 수 제한(리전당 50개)</p>
+</li>
+<li>
+<p>Webhook 수 제한(리전당 300개)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>AWS CodeBuild</strong>:</p>
+<ul>
+<li>
+<p>빌드 및 컴퓨팅 리소스에 대한 할당량 및 제한 사항</p>
+</li>
+<li>
+<p>일반적인 제한 사항:</p>
+<ul>
+<li>
+<p>동시 실행 빌드 수 제한(리전별 컴퓨팅 유형 별로 다름)</p>
+</li>
+<li>
+<p>VPC 구성을 위한 보안 그룹/서브넷 수 제한(리전별 5/16)</p>
+</li>
+<li>
+<p>빌드 프로젝트 수 제한(리전당 5000개)</p>
+</li>
+<li>
+<p>빌드 타임아웃 제한(리전당 36시간)</p>
+</li>
+<li>
+<p>동시 실행 컴퓨팅 플릿 수 제한(10)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>AWS CodeDeploy</strong>:</p>
+<ul>
+<li>
+<p>배포 실행 시간, 애플리케이션 수, 오토 스케일링 그룹/배포 그룹 수 제한</p>
+</li>
+<li>
+<p>일반적인 제한 사항:</p>
+<ul>
+<li>
+<p>Lambda 배포 최대 실행 시간(50시간)</p>
+</li>
+<li>
+<p>리전별 애플리케이션 수 제한(1000개)</p>
+</li>
+<li>
+<p>배포 그룹당 오토 스케일링 그룹 수 제한(10개)</p>
+</li>
+<li>
+<p>단일 애플리케이션의 배포 그룹 수 제한(1000개)</p>
+</li>
+<li>
+<p>블루/그린 배포의 인스턴스 종료 대기 시간 제한(2800분)</p>
+</li>
+<li>
+<p>Lambda 캐너리/리니어 배포의 트래픽 쉬프트 간격 제한(2880분)</p>
+</li>
+<li>
+<p>ECS 서비스당 배포 그룹 수 제한(1개)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>이와 같은 제한 사항을 고려하여 서비스 활용 계획을 수립해야 합니다.</p>
+<h2 id="best-practices-for-configuring-and-troubleshooting"><strong>Best Practices for Configuring and Troubleshooting</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#best-practices-for-configuring-and-troubleshooting" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>AWS 개발자 도구 문제 해결에 대해 정리하면 다음과 같습니다:</p>
+<p><strong>일반적인 문제 해결 접근법</strong>:</p>
+<ul>
+<li>체계적인 방식으로 문제를 조사하여 근본 원인을 찾아내는 것이 중요</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-16.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-16-10.png" alt/></a></p>
+<p><strong>AWS CodeBuild 문제 해결</strong>:</p>
+<ol>
+<li>
+<p><strong>CloudWatch 로그 확인</strong>: 빌드 과정에서 발생한 오류 및 경고 사항을 확인</p>
+</li>
+<li>
+<p><strong>빌드스펙(buildspec.yml) 유효성 검사</strong>: 형식과 필수 명령/환경변수 확인</p>
+</li>
+<li>
+<p><strong>빌드 환경 점검</strong>: IAM 역할 권한, 리포지토리 설정, 프로젝트 구성 등 확인</p>
+</li>
+<li>
+<p><strong>네트워크 문제 확인</strong>: 네트워크 설정, 방화벽, 보안 그룹 등을 점검</p>
+</li>
+<li>
+<p><strong>CloudTrail 로깅 활용</strong>: 관련 리소스 변경 내역 추적</p>
+</li>
+</ol>
+<p><strong>AWS CodeDeploy 문제 해결</strong>:</p>
+<ol>
+<li>
+<p><strong>CodeDeploy 로그 확인</strong>: 배포 오류 및 이슈 식별</p>
+</li>
+<li>
+<p><strong>CodeDeploy 에이전트 확인</strong>: 에이전트 설치 및 구성 점검</p>
+</li>
+<li>
+<p><strong>AppSpec 파일 유효성 검사</strong>: 형식과 필수 구성 확인</p>
+</li>
+<li>
+<p><strong>IAM 권한 확인</strong>: 배포에 필요한 리소스 접근 권한 점검</p>
+</li>
+<li>
+<p><strong>대상 EC2 인스턴스 상태 확인</strong>: 인스턴스 상태, 보안 그룹, 네트워크 연결성 등</p>
+</li>
+</ol>
+<p><strong>AWS CodePipeline 문제 해결</strong>:</p>
+<ol>
+<li>
+<p><strong>파이프라인 실행 내역 확인</strong>: 어느 단계에서 실패했는지 식별</p>
+</li>
+<li>
+<p><strong>실행 세부 정보 검토</strong>: 오류 메시지와 관련 정보 확인</p>
+</li>
+<li>
+<p><strong>단계별 로그 점검</strong>: 오류의 근본 원인 파악</p>
+</li>
+<li>
+<p><strong>입력 구성 유효성 검사</strong>: 소스 리포지토리 등의 설정이 올바른지 확인</p>
+</li>
+<li>
+<p><strong>IAM 권한 점검</strong>: 파이프라인에 필요한 권한이 있는지 확인</p>
+</li>
+</ol>
+<p>이와 같은 단계적인 문제 해결 접근법을 통해 AWS 개발자 도구 관련 이슈를 효과적으로 진단하고 해결할 수 있습니다.</p>
+<h2 id="automating-data-integration-in-ml-pipeline"><strong>Automating Data Integration in ML Pipeline</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#automating-data-integration-in-ml-pipeline" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ML 워크플로우 자동화의 이점과 구현 방법에 대해 정리하면 다음과 같습니다:</p>
+<p><strong>ML 워크플로우 자동화의 이점</strong>:</p>
+<ul>
+<li>
+<p>효율성 향상</p>
+</li>
+<li>
+<p>데이터 품질 개선</p>
+</li>
+<li>
+<p>재현성 보장</p>
+</li>
+<li>
+<p>협업 촉진</p>
+</li>
+</ul>
+<p><strong>데이터 수집 자동화</strong>:</p>
+<p><a href="../../../3-3-automate-deployment/image-17.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-17-9.png" alt/></a></p>
+<p><strong>효율성 향상</strong>:</p>
+<ul>
+<li>
+<p>데이터 준비 작업에 필요한 시간과 수동 노력을 크게 줄임</p>
+</li>
+<li>
+<p>데이터 과학자와 엔지니어가 모델 개발 및 최적화에 집중할 수 있음</p>
+</li>
+</ul>
+<p><strong>데이터의 일관성과 신뢰성 확보</strong>:</p>
+<ul>
+<li>
+<p>데이터 형식, 정제, 변환 프로세스를 일관되게 적용</p>
+</li>
+<li>
+<p>오류와 불일치 위험 감소로 더 정확한 ML 모델 구축 가능</p>
+</li>
+</ul>
+<p><strong>확장성 향상</strong>:</p>
+<ul>
+<li>
+<p>대용량 데이터도 효율적으로 처리할 수 있어 ML 파이프라인의 확장성 개선</p>
+</li>
+<li>
+<p>빅데이터 또는 급격하게 성장하는 데이터셋 관리에 특히 유용</p>
+</li>
+</ul>
+<p><strong>재현성 제고</strong>:</p>
+<ul>
+<li>
+<p>표준화되고 반복 가능한 프로세스 확립</p>
+</li>
+<li>
+<p>일관된 데이터 전처리 보장으로 모델 결과의 재현성 향상 및 모델 비교/반복 개선</p>
+</li>
+</ul>
+<p><strong>오류 감소</strong>:</p>
+<ul>
+<li>
+<p>수동 데이터 처리 중 발생할 수 있는 인적 오류 위험 최소화</p>
+</li>
+<li>
+<p>오류 감소로 더 정확하고 신뢰할 수 있는 ML 모델 구축</p>
+</li>
+</ul>
+<p><strong>협업 개선</strong>:</p>
+<ul>
+<li>
+<p>ML 파이프라인을 위한 공유되고 일관된 데이터 소스 제공</p>
+</li>
+<li>
+<p>ML 개발 프로세스의 전반적인 효율성과 효과성 향상</p>
+</li>
+</ul>
+<p><strong>규정 준수 및 거버넌스 강화</strong>:</p>
+<ul>
+<li>
+<p>데이터 처리 및 관리 프로세스의 규정 준수 보장</p>
+</li>
+<li>
+<p>의료, 금융 등 민감한 산업에서 특히 중요</p>
+</li>
+</ul>
+<p><strong>더 빠른 반복과 배포</strong>:</p>
+<ul>
+<li>
+<p>데이터 수집 및 준비 프로세스의 표준화로 ML 모델 반복과 배포 가속화</p>
+</li>
+<li>
+<p>신속한 피드백 루프와 지속적인 파이프라인 개선 가능</p>
+</li>
+</ul>
+<h3 id="ml-파이프라인-오케스트레이션"><strong>ML 파이프라인 오케스트레이션</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ml-파이프라인-오케스트레이션" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>ML 워크플로우 자동화를 통한 주요 이점:</p>
+<p><a href="../../../3-3-automate-deployment/image-18.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-18-9.png" alt/></a></p>
+<ol>
+<li>
+<p><strong>데이터 수집</strong>:</p>
+<ul>
+<li>S3, Kinesis, Glue 등을 통한 데이터 수집</li>
+</ul>
+</li>
+<li>
+<p><strong>ML 워크플로우 오케스트레이션</strong>:</p>
+<ul>
+<li>Step Functions로 데이터 전처리, 모델 학습/평가, 배포 등의 단계 연결</li>
+</ul>
+</li>
+<li>
+<p><strong>CI/CD 자동화</strong>:</p>
+<ul>
+<li>CodePipeline으로 빌드, 테스트, 배포 프로세스 자동화</li>
+</ul>
+</li>
+<li>
+<p><strong>통합 및 연동</strong>:</p>
+<ul>
+<li>EventBridge, Lambda, IAM 등을 통한 서비스 간 연결 및 권한 관리</li>
+</ul>
+</li>
+</ol>
+<p><strong>SageMaker Pipeline 실행</strong>:</p>
+<ul>
+<li>
+<p>데이터 전처리, 모델 학습/평가, 모델 등록, 모델 배포 등의 단계를 정의</p>
+</li>
+<li>
+<p>SageMaker SDK 또는 CLI로 파이프라인 실행</p>
+</li>
+<li>
+<p>모니터링, 디버깅, 재사용, 버전 관리, 다른 AWS 서비스 통합 지원</p>
+</li>
+</ul>
+<p>SageMaker Pipeline 실행 과정을 정리하면 다음과 같습니다:</p>
+<p><strong>파이프라인 정의</strong>:</p>
+<ul>
+<li>
+<p>파이프라인 스크립트 또는 JSON 파일에 단계와 의존성을 정의</p>
+</li>
+<li>
+<p>각 단계는 SageMaker Pipeline 구성 요소로 표현되며, 다음과 같은 작업을 수행합니다:</p>
+<ul>
+<li>
+<p>데이터 전처리 및 특성 엔지니어링</p>
+</li>
+<li>
+<p>ML 모델 학습</p>
+</li>
+<li>
+<p>학습된 모델 평가</p>
+</li>
+<li>
+<p>SageMaker 모델 레지스트리에 모델 등록</p>
+</li>
+<li>
+<p>실시간 추론을 위한 SageMaker 엔드포인트 배포</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>파이프라인 실행</strong>:</p>
+<ul>
+<li>
+<p>SageMaker Python SDK 또는 AWS CLI를 사용하여 정의한 파이프라인 실행</p>
+</li>
+<li>
+<p>SageMaker SDK의 Pipeline 클래스로 파이프라인 생성, 실행, 모니터링 가능</p>
+</li>
+</ul>
+<p><strong>단계 실행</strong>:</p>
+<ul>
+<li>
+<p>파이프라인 실행 시 SageMaker가 각 단계를 오케스트레이션</p>
+</li>
+<li>
+<p>정의된 의존성에 따라 필요한 데이터와 아티팩트가 준비되어 단계가 실행됨</p>
+</li>
+</ul>
+<p><strong>모니터링 및 디버깅</strong>:</p>
+<ul>
+<li>
+<p>파이프라인과 개별 단계의 진행 상황 및 상태 모니터링</p>
+</li>
+<li>
+<p>시각화 도구와 로그를 통해 실행 추적 및 문제 식별</p>
+</li>
+</ul>
+<p><strong>재사용성 및 버전 관리</strong>:</p>
+<ul>
+<li>
+<p>파이프라인 정의의 버전 관리 지원</p>
+</li>
+<li>
+<p>ML 워크플로우의 재현과 반복 작업 지원</p>
+</li>
+</ul>
+<p><strong>다른 AWS 서비스와의 통합</strong>:</p>
+<ul>
+<li>AWS Glue, Lambda, S3 등 다양한 AWS 서비스와 통합 가능</li>
+</ul>
+<p>이와 같은 기능을 통해 SageMaker Pipeline은 ML 모델 구축 및 배포 프로세스를 체계화하고 자동화할 수 있습니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-19.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-19-9.png" alt/></a></p>
+<h1 id="step-functions-and-codepipeline"><strong>Step Functions and CodePipeline</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-functions-and-codepipeline" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>ML 워크플로우 오케스트레이션을 위한 AWS 서비스:</p>
+<p><strong>AWS Step Functions</strong>:</p>
+<ul>
+<li>
+<p>분산 애플리케이션의 워크플로우를 시각적으로 조정하는 서비스</p>
+</li>
+<li>
+<p>상태 관리와 워크플로우 실행을 처리</p>
+</li>
+<li>
+<p>ML 파이프라인, ETL 파이프라인, 마이크로서비스 등을 자동화할 수 있음</p>
+</li>
+</ul>
+<p>AWS Step Functions을 통한 ML 워크플로우 오케스트레이션의 주요 이점:</p>
+<p><strong>워크플로우 오케스트레이션</strong>:</p>
+<ul>
+<li>데이터 전처리, 모델 학습/평가/배포 등의 다단계 작업을 신뢰성 있고 확장 가능하게 조율할 수 있음</li>
+</ul>
+<p><strong>장애 허용 및 복원력</strong>:</p>
+<ul>
+<li>내장된 장애 허용 및 오류 처리 메커니즘으로 ML 워크플로우의 안정성 보장</li>
+</ul>
+<p><strong>확장성 및 성능</strong>:</p>
+<ul>
+<li>증가하는 ML 워크로드를 자동으로 처리할 수 있는 확장성 제공</li>
+</ul>
+<p><strong>모니터링 및 가시성</strong>:</p>
+<ul>
+<li>CloudWatch와의 통합으로 ML 워크플로우의 모니터링과 문제 해결을 지원</li>
+</ul>
+<p><strong>서버리스 및 비용 효율성</strong>:</p>
+<ul>
+<li>서버 관리 없이 사용한 리소스에 대해서만 비용 지불</li>
+</ul>
+<p><strong>유연성 및 확장성</strong>:</p>
+<ul>
+<li>고객 요구 사항에 맞춰 ML 워크플로우를 맞춤형으로 구축 가능</li>
+</ul>
+<p>이러한 이점을 통해 Step Functions은 ML 모델의 생산성 향상, 안정성 개선, 비용 최적화를 지원합니다. 또한 다양한 AWS 서비스와의 통합으로 ML 파이프라인 전반의 오케스트레이션을 가능하게 합니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-20.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-20-9.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-21.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-21.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-21-9.png" alt/></a></p>
+<p><strong>AWS CodePipeline</strong>:</p>
+<ul>
+<li>
+<p>지속적 전달(CD) 파이프라인을 자동화하는 서비스</p>
+</li>
+<li>
+<p>소프트웨어 배포 프로세스를 모델링하고 자동화</p>
+</li>
+</ul>
+<p><strong>Step Functions와 CodePipeline 통합</strong>:</p>
+<ul>
+<li>
+<p>복잡한 워크플로우를 시각적으로 오케스트레이션하고 자동 배포</p>
+</li>
+<li>
+<p>이벤트 기반 애플리케이션과 효율적인 CI/CD 파이프라인 구축 지원</p>
+</li>
+</ul>
+<p><strong>Step Functions의 ML 워크플로우 활용</strong>:</p>
+<ul>
+<li>
+<p>데이터 전처리, 모델 학습/평가/배포 등의 단계를 상태 머신으로 정의</p>
+</li>
+<li>
+<p>Lambda, Glue, 사용자 API 등 다양한 AWS 서비스 활용</p>
+</li>
+</ul>
+<p><strong>CodePipeline의 MLOps 파이프라인 자동화</strong>:</p>
+<ul>
+<li>
+<p>코드 변경, 모델 버전 등의 이벤트에 따라 Step Functions 워크플로우 실행</p>
+</li>
+<li>
+<p>소스 관리, 모델 빌드, 테스트, 배포 등의 단계 자동화</p>
+</li>
+</ul>
+<p>이와 같이 Step Functions와 CodePipeline을 통합하면 ML 모델의 지속적 배포와 운영을 효과적으로 자동화할 수 있습니다.</p>
+<h2 id="deployment-strategies"><strong>Deployment Strategies</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deployment-strategies" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="sagemaker의-점진적인-모델-배포-전략과-모니터링-기능">SageMaker의 점진적인 모델 배포 전략과 모니터링 기능:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker의-점진적인-모델-배포-전략과-모니터링-기능" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>최신 ML 시스템의 안전한 배포를 위한 SageMaker의 전략:</p>
+<p><strong>ML 모델 안전한 배포의 필요성</strong>:</p>
+<ul>
+<li>새로운 ML 모델을 안전하게 롤아웃하기 위한 강력한 배포 전략이 필요</li>
+</ul>
+<p><strong>SageMaker의 배포 전략</strong>:</p>
+<ul>
+<li>
+<p>블루/그린, 캐나리, 롤링 배포와 같은 기능을 제공</p>
+</li>
+<li>
+<p>모델 버전 간 트래픽 이동과 필요 시 롤백을 지원</p>
+</li>
+<li>
+<p>성능 모니터링과 다운타임 최소화를 위한 가드레일 제공</p>
+</li>
+</ul>
+<p><strong>배포 전략 상세</strong>:</p>
+<ul>
+<li>
+<p>블루/그린 배포: 두 프로덕션 환경을 병렬로 유지하며 점진적 이동</p>
+</li>
+<li>
+<p>캐나리 배포: 일부 사용자에게만 새 모델 버전을 단계적으로 배포</p>
+</li>
+<li>
+<p>롤링 배포: 기존 버전을 새 버전으로 점진적으로 교체</p>
+</li>
+</ul>
+<p><strong>모니터링과 롤백</strong>:</p>
+<ul>
+<li>
+<p>베이킹 기간 동안 CloudWatch 알람으로 신규 배포 모니터링</p>
+</li>
+<li>
+<p>문제 발생 시 자동으로 기존 버전으로 롤백</p>
+</li>
+</ul>
+<p>이러한 배포 전략과 모니터링 기능을 통해 ML 모델을 안전하고 신뢰성 있게 배포할 수 있습니다.</p>
+<h2 id="블루그린-배포"><strong>블루/그린 배포</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#블루그린-배포" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>기존 프로덕션 환경(블루)과 새로운 프로덕션 환경(그린)을 병렬로 유지</p>
+</li>
+<li>
+<p>트래픽을 단계적으로 새 환경으로 이동하여 점진적으로 롤아웃</p>
+</li>
+<li>
+<p>배포 실패 시 블루 환경으로 신속한 롤백 가능</p>
+</li>
+</ul>
+<h3 id="트래픽-이동-모드"><strong>트래픽 이동 모드</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#트래픽-이동-모드" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>SageMaker의 트래픽 이동 모드에 대해 정리하면 다음과 같습니다:</p>
+<p><strong>한 번에 전체 이동(All at once)</strong>:</p>
+<ul>
+<li>
+<p>기존 블루 환경의 모든 트래픽을 한 번에 새로운 그린 환경으로 이동</p>
+</li>
+<li>
+<p>베이킹 기간 동안 CloudWatch 알람으로 그린 환경을 모니터링</p>
+</li>
+<li>
+<p>문제 없으면 베이킹 기간 후 기존 블루 환경 종료</p>
+</li>
+</ul>
+<p><strong>캐나리(Canary)</strong>:</p>
+<ul>
+<li>
+<p>2단계로 트래픽을 이동</p>
+</li>
+<li>
+<p>먼저 일부 트래픽(캐나리)을 새 환경으로 이동하고 베이킹 기간 동안 모니터링</p>
+</li>
+<li>
+<p>캐나리 성공 시 나머지 트래픽을 새 환경으로 이동하고 기존 환경 종료</p>
+</li>
+</ul>
+<p><strong>선형(Linear)</strong>:</p>
+<ul>
+<li>
+<p>사전 정의된 수의 단계에 걸쳐 점진적으로 트래픽 이동</p>
+</li>
+<li>
+<p>단계 수와 각 단계의 트래픽 비율을 사용자 정의 가능</p>
+</li>
+<li>
+<p>캐나리의 2단계에서 n개의 선형 단계로 확장하여 더 점진적이고 맞춤형 이동 가능</p>
+</li>
+</ul>
+<p>이러한 트래픽 이동 모드를 통해 SageMaker는 새로운 모델 버전을 점진적이고 통제된 방식으로 롤아웃할 수 있습니다.</p>
+<h3 id="베이킹-기간"><strong>베이킹 기간</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#베이킹-기간" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>새 환경 배포 후 모니터링 기간</p>
+</li>
+<li>
+<p>문제 발생 시 롤백할 수 있어 안전한 배포 보장</p>
+</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-22.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-22.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-22-7.png" alt/></a></p>
+<h3 id="캐나리-배포"><strong>캐나리 배포</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#캐나리-배포" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>새 모델 버전을 일부 사용자에게만 단계적으로 롤아웃</p>
+</li>
+<li>
+<p>성능 확인 후 전체 배포 진행</p>
+</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-23.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-23.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-23-7.png" alt/></a></p>
+<p>SageMaker에서 캐나리 배포를 구현하는 단계는 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>사용자 분할</strong>:</p>
+<ul>
+<li>로드 밸런서를 사용하여 일부 사용자(캐나리)를 새 버전으로 보냅니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>버전 구분 지표 설정</strong>:</p>
+<ul>
+<li>주요 성능 지표(KPI)에 버전 정보를 나타내는 차원을 추가합니다.</li>
+</ul>
+</li>
+<li>
+<p><strong>배포 성공 여부 평가</strong>:</p>
+<ul>
+<li>
+<p>메트릭을 통해 새 버전 배포의 성공 여부를 판단합니다.</p>
+</li>
+<li>
+<p>이 결과에 따라 배포를 계속 진행할지 롤백할지 결정합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>점진적 확대</strong>:</p>
+<ul>
+<li>새 버전의 부하를 점차 늘려, 모든 사용자가 새 버전으로 마이그레이션되거나 완전히 롤백될 때까지 반복합니다.</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 단계적 접근을 통해 캐나리 배포를 구현하면 새 소프트웨어 버전을 점진적이고 안전하게 롤아웃할 수 있습니다.</p>
+<h3 id="롤링-배포"><strong>롤링 배포</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#롤링-배포" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>모델 버전을 점진적으로 교체하며 배포</p>
+</li>
+<li>
+<p>블루/그린에 비해 리소스 사용량이 적음</p>
+</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-24.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-24.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-24-7.png" alt/></a></p>
+<h3 id="자동-롤백"><strong>자동 롤백</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#자동-롤백" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>CloudWatch 알람으로 새 환경 모니터링</p>
+</li>
+<li>
+<p>문제 발생 시 자동으로 기존 환경으로 롤백</p>
+</li>
+</ul>
+<p>SageMaker의 자동 롤백 기능:</p>
+<ul>
+<li>
+<p>SageMaker의 블루/그린 배포에서 자동 롤백 기능을 제공</p>
+</li>
+<li>
+<p>CloudWatch 알람을 사용하여 새로 배포된 그린 환경을 모니터링</p>
+</li>
+<li>
+<p>문제 발생 시 자동으로 기존 블루 환경으로 트래픽을 되돌림</p>
+</li>
+</ul>
+<p><strong>자동 롤백 과정</strong>:</p>
+<ul>
+<li>
+<p>블루/그린 롤링 배포 중 새로 배포된 그린 환경의 CloudWatch 지표가 알람 임계값을 초과</p>
+</li>
+<li>
+<p>이 경우 SageMaker가 자동 롤백을 실행하여 모든 트래픽을 기존 블루 환경으로 리디렉션</p>
+</li>
+</ul>
+<p><strong>장점</strong>:</p>
+<ul>
+<li>새 코드 배포 시 애플리케이션 가용성을 유지하면서 위험을 최소화할 수 있음</li>
+</ul>
+<p>자동 롤백 기능에 대한 자세한 내용은 “Auto-Rollback Configuration and Monitoring”에서 확인할 수 있습니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-25.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-25.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-25-6.png" alt/></a></p>
+<p><strong>비용 고려사항</strong>:</p>
+<ul>
+<li>
+<p>블루/그린, 베이킹 등의 배포는 두 환경 유지로 인한 비용 발생</p>
+</li>
+<li>
+<p>한 번에 전체 이동의 경우 한 환경에 대해서만 비용 발생</p>
+</li>
+</ul>
+<p>이와 같은 배포 전략과 모니터링 기능을 통해 SageMaker는 위험을 최소화하면서도 신뢰성 있는 모델 배포를 지원합니다.</p>
+<h1 id="code-repositories-work">Code Repositories Work<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#code-repositories-work" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>ML 파이프라인 구현을 위한 코드 리포지토리 활용 및 보안:</p>
+<h2 id="코드-리포지토리의-역할"><strong>코드 리포지토리의 역할</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#코드-리포지토리의-역할" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>ML 파이프라인의 소스 코드, Dockerfile, 학습 스크립트, 배포 템플릿 등을 보관</p>
+</li>
+<li>
+<p>데이터 과학 계정 또는 온-프레미스 환경에 위치할 수 있음</p>
+<p><a href="../../../3-3-automate-deployment/image-26.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-26.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-26-6.png" alt/></a></p>
+</li>
+</ul>
+<h2 id="git-리포지토리-2"><strong>Git 리포지토리</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#git-리포지토리-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>버전 관리 서비스로, 웹 콘솔을 통해 리포지토리 생성 및 관리 가능</p>
+</li>
+<li>
+<p>로컬 컴퓨터에 클론하여 변경 사항을 푸시할 수 있음</p>
+</li>
+</ul>
+<p><strong>리포지토리 생성 및 관리</strong>:</p>
+<ul>
+<li>개발 PC, 콘솔, 리포지토리 서비스를 통해 다양한 작업 수행 가능</li>
+</ul>
+<p><a href="../../../3-3-automate-deployment/image-27.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-27.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-27-6.png" alt/></a></p>
+<h2 id="파이프라인-실행-시-리포지토리-활용"><strong>파이프라인 실행 시 리포지토리 활용</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#파이프라인-실행-시-리포지토리-활용" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>개발자가 코드베이스에 변경 사항을 커밋 또는 푸시 (<strong>Clone or check out the repository)</strong></p>
+</li>
+<li>
+<p>리포지토리가 이벤트를 감지하고 파이프라인 실행 (<strong>Build the code)</strong></p>
+</li>
+<li>
+<p>파이프라인이 리포지토리에서 최신 코드를 가져와 처리 (<strong>Run tests)</strong></p>
+</li>
+<li>
+<p>소스 단계에서 리포지토리로부터 코드를 체크아웃 (<strong>Deploy the application)</strong></p>
+</li>
+</ol>
+<h2 id="보안-및-액세스-제어"><strong>보안 및 액세스 제어</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#보안-및-액세스-제어" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>데이터 보호: HTTPS/SSH를 통한 암호화된 통신</p>
+</li>
+<li>
+<p>액세스 제어: IAM 사용자 및 권한으로 인증 및 승인 관리</p>
+</li>
+</ul>
+<p>이와 같이 코드 리포지토리는 ML 파이프라인에 필수적인 구성 요소이며, 안전하고 통제된 방식으로 관리되어야 합니다.</p>
+<h1 id="building-and-integrating-mechanisms-for-retraining"><strong>Building and Integrating Mechanisms for Retraining</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#building-and-integrating-mechanisms-for-retraining" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="모델-재학습의-필요성"><strong>모델 재학습의 필요성</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#모델-재학습의-필요성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>데이터 변화와 요구사항 변경에 따른 지속적인 모델 개선을 위해 필요</p>
+</li>
+<li>
+<p>새로운 데이터 또는 모델 코드 변경 시 재학습이 필요</p>
+</li>
+</ul>
+<h2 id="재학습-메커니즘"><strong>재학습 메커니즘</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#재학습-메커니즘" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p><strong>자동 재학습 파이프라인</strong>: ML 파이프라인에 재학습 단계 포함</p>
+</li>
+<li>
+<p><strong>예약 재학습</strong>: 정기적인 스케줄에 따라 재학습 수행</p>
+</li>
+<li>
+<p><strong>드리프트 감지 및 호출 재학습</strong>: 데이터 드리프트 감지 시 재학습 실행</p>
+</li>
+<li>
+<p><strong>점진적 학습</strong>: 새로운 데이터로 점진적으로 모델을 개선</p>
+</li>
+<li>
+<p><strong>실험 및 A/B 테스팅</strong>: 새 모델 버전 테스트 및 비교</p>
+</li>
+</ol>
+<h2 id="재학습-시-발생하는-재앙적-망각"><strong>재학습 시 발생하는 재앙적 망각</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#재학습-시-발생하는-재앙적-망각" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>새로운 작업/데이터로 학습할 때 이전 지식을 잊어버리는 현상</p>
+</li>
+<li>
+<p>과도한 적합으로 인해 발생</p>
+</li>
+</ul>
+<h2 id="재앙적-망각-해결-방법"><strong>재앙적 망각 해결 방법</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#재앙적-망각-해결-방법" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>정규화 기반 방법</strong>:</p>
+<ul>
+<li>
+<p>탄성 가중치 응집(EWC): 이전 작업의 중요 매개변수 보존</p>
+</li>
+<li>
+<p>시냅틱 지능: 매개변수 중요도를 추적하여 선택적 업데이트</p>
+</li>
+</ul>
+<p><strong>재현 기반 방법</strong>:</p>
+<ol>
+<li>
+<p><strong>경험 재현</strong>:</p>
+<ul>
+<li>
+<p>이전 작업의 데이터 일부를 저장하고 현재 작업 학습 시 재현</p>
+</li>
+<li>
+<p>이를 통해 이전 지식 유지</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>생성 재현</strong>:</p>
+<ul>
+<li>
+<p>실제 데이터를 저장하지 않고, 생성 모델로 이전 작업 데이터 합성</p>
+</li>
+<li>
+<p>합성 데이터를 현재 작업 학습에 활용</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>아키텍처 기반 방법</strong>:</p>
+<ol>
+<li>
+<p><strong>점진적 신경망</strong>:</p>
+<ul>
+<li>새로운 작업 학습 시 모델 용량을 증가시켜 이전 작업 지식 보존</li>
+</ul>
+</li>
+<li>
+<p><strong>모듈러 네트워크</strong>:</p>
+<ul>
+<li>모델을 작업별 모듈로 분리하여, 해당 모듈만 업데이트</li>
+</ul>
+</li>
+</ol>
+<p><strong>재연습 (rehearsal) 기반 방법</strong>:</p>
+<ol>
+<li>
+<p><strong>그래디언트 에피소딕 메모리</strong>:</p>
+<ul>
+<li>이전 작업 데이터의 일부를 저장하고 현재 작업 학습 시 함께 사용</li>
+</ul>
+</li>
+<li>
+<p><strong>예시 재현</strong>:</p>
+<ul>
+<li>이전 작업의 대표적인 예시를 저장하고 현재 작업 학습에 활용</li>
+</ul>
+</li>
+</ol>
+<p>이러한 다양한 기법들을 통해 재앙적 망각 문제를 해결할 수 있습니다. 각 기법의 장단점과 구현 방법은 모델 아키텍처, 작업, 리소스에 따라 달라질 수 있습니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-28.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-28.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-28-6.png" alt/></a></p>
+<h1 id="configuring-inferencing-jobs">Configuring Inferencing Jobs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#configuring-inferencing-jobs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>SageMaker 추론 전략과 CI/CD 파이프라인 구성에 대해 정리해보겠습니다.</p>
+<h3 id="추론-유형"><strong>추론 유형</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#추론-유형" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>실시간 추론</strong>: 실시간, 대화형, 낮은 지연 시간이 필요한 경우</p>
+</li>
+<li>
+<p><strong>서버리스 추론</strong>: 컴퓨팅 인스턴스를 직접 프로비저닝하지 않고 실시간 추론 처리</p>
+</li>
+<li>
+<p><strong>비동기 추론</strong>: 큰 페이로드 크기, 긴 처리 시간, 준실시간 지연 시간이 허용되는 경우</p>
+</li>
+<li>
+<p><strong>배치 변환</strong>: 대규모 데이터셋에 대한 오프라인 추론 수행</p>
+</li>
+</ul>
+<h3 id="학습과-추론의-차이"><strong>학습과 추론의 차이</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#학습과-추론의-차이" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../3-3-automate-deployment/image-29.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-29.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-29-5.png" alt/></a></p>
+<ul>
+<li>
+<p>학습은 병렬 처리와 대량 배치 처리를, 추론은 단일 입력 처리를 수행</p>
+</li>
+<li>
+<p>학습은 더 많은 계산 및 메모리 집약적, 추론은 상대적으로 가벼움</p>
+</li>
+<li>
+<p>학습은 독립적 실행, 추론은 애플리케이션 워크플로우에 통합</p>
+</li>
+</ul>
+<h3 id="codepipeline-모범-사례"><strong>CodePipeline 모범 사례</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#codepipeline-모범-사례" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>파이프라인 구조, 입력 데이터 검증, 버전 관리, 모니터링, 최적화 등</li>
+</ul>
+<p>CodePipeline 파이프라인 구성을 위한 모범 사례:</p>
+<p><strong>파이프라인 단계 구성</strong>:</p>
+<ul>
+<li>소프트웨어 개발 수명 주기와 배포 프로세스에 맞춰 단계를 논리적이고 일관되게 구성</li>
+</ul>
+<p><strong>소스 제어 통합</strong>:</p>
+<ul>
+<li>파이프라인 정의와 관련 코드의 버전 관리 및 추적성을 위해 Git 등의 신뢰할 수 있는 소스 제어 시스템 통합</li>
+</ul>
+<p><strong>자동화된 테스트</strong>:</p>
+<ul>
+<li>
+<p>단위 테스트, 통합 테스트, 보안 검사 등의 자동화된 테스트 단계 포함</p>
+</li>
+<li>
+<p>배포의 품질과 정확성 보장</p>
+</li>
+</ul>
+<p><strong>환경 일관성</strong>:</p>
+<ul>
+<li>
+<p>개발, 스테이징, 프로덕션 등 일관된 환경 유지</p>
+</li>
+<li>
+<p>배포 관련 문제 최소화</p>
+</li>
+</ul>
+<p><strong>배포 전략</strong>:</p>
+<ul>
+<li>안전하고 신뢰할 수 있는 배포를 위해 롤백 메커니즘, 블루/그린, 캐너리 등의 배포 전략 구현</li>
+</ul>
+<p>이와 같은 모범 사례를 적용하면 CodePipeline 기반의 CI/CD 파이프라인을 안정적이고 효율적으로 구축할 수 있습니다.</p>
+<h3 id="sagemaker-파이프라인-모범-사례"><strong>SageMaker 파이프라인 모범 사례</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker-파이프라인-모범-사례" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>모듈화된 구조, 데이터 검증, 재현성, 로깅 및 모니터링, 병렬 처리 활용</li>
+</ul>
+<p>SageMaker 파이프라인 구축을 위한 모범 사례:</p>
+<p><strong>파이프라인 구조</strong>:</p>
+<ul>
+<li>
+<p>명확하고 모듈화된 구조로 설계</p>
+</li>
+<li>
+<p>단계별 관심사와 책임을 분리</p>
+</li>
+<li>
+<p>유지 관리성과 이해도 향상</p>
+</li>
+</ul>
+<p><strong>입력 데이터 검증</strong>:</p>
+<ul>
+<li>
+<p>파이프라인 단계 내에 입력 데이터 검증 체크 구현</p>
+</li>
+<li>
+<p>데이터 무결성과 품질 보장</p>
+</li>
+</ul>
+<p><strong>버전 관리 및 재현성</strong>:</p>
+<ul>
+<li>
+<p>Git 리포지토리, SageMaker 모델 레지스트리 등을 활용한 버전 관리</p>
+</li>
+<li>
+<p>파이프라인 정의, 모델 아티팩트, 관련 자산의 재현성 확보</p>
+</li>
+<li>
+<p>롤백 및 재배포 용이</p>
+</li>
+</ul>
+<p><strong>로깅 및 모니터링</strong>:</p>
+<ul>
+<li>
+<p>실행 상태, 성능 지표, 오류/실패 사항에 대한 포괄적인 로깅과 모니터링</p>
+</li>
+<li>
+<p>파이프라인 실행 가시성 확보</p>
+</li>
+</ul>
+<p><strong>병렬화 및 최적화</strong>:</p>
+<ul>
+<li>
+<p>SageMaker의 병렬 처리 기능 활용</p>
+</li>
+<li>
+<p>전체 실행 시간과 효율성 개선</p>
+</li>
+</ul>
+<p>이러한 모범 사례를 적용하면 안정적이고 프로덕션 준비가 된 SageMaker 파이프라인을 구축할 수 있습니다.</p>
+<h3 id="eventbridge-규칙-모범-사례"><strong>EventBridge 규칙 모범 사례</strong>:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#eventbridge-규칙-모범-사례" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>EventBridge 규칙 활용</strong>:</p>
+<ul>
+<li>SageMaker 이벤트(모델 학습 작업, 엔드포인트 상태 변경 등)를 모니터링하고 자동화된 워크플로우 실행</li>
+</ul>
+<p><strong>규칙 구성</strong>:</p>
+<ul>
+<li>
+<p>이벤트 유형, 상호 작용 서비스, 사용 사례 등 기준으로 규칙을 논리적 그룹으로 구성</p>
+</li>
+<li>
+<p>규칙 구조의 명확성과 유지 관리성 보장</p>
+</li>
+</ul>
+<p><strong>이벤트 필터링</strong>:</p>
+<ul>
+<li>
+<p>관련성 있는 이벤트에만 규칙이 작동하도록 정확한 필터링 기준 적용</p>
+</li>
+<li>
+<p>불필요한 처리와 비용 발생 방지</p>
+</li>
+</ul>
+<p><strong>이벤트 리플레이 및 보존</strong>:</p>
+<ul>
+<li>필요 시 과거 이벤트 분석과 문제 해결을 위한 적절한 리플레이 및 보존 정책 구성</li>
+</ul>
+<p><strong>오류 처리</strong>:</p>
+<ul>
+<li>오류 알림 등 규칙 처리 중 발생할 수 있는 예외와 오류를 처리하는 메커니즘 구현</li>
+</ul>
+<p><strong>모니터링 및 경고</strong>:</p>
+<ul>
+<li>규칙 처리의 문제와 이상을 빠르게 식별하고 대응하기 위한 모니터링과 경고 설정</li>
+</ul>
+<p>이러한 모범 사례를 적용하여 EventBridge 규칙을 체계적이고 효과적으로 관리할 수 있습니다.</p>
+<p>이러한 접근법을 통해 ML 추론 전략과 CI/CD 파이프라인을 안정적이고 효율적으로 구현할 수 있습니다.</p>
+<p><a href="../../../3-3-automate-deployment/image-30.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-30.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-30-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-31.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-31.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-31-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-32.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-32.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-32-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-33.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-33.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-33-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-34.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-34.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-34-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-35.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-35.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-35-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-36.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-36.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-36-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-37.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-37.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-37-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-38.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-38.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-38-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-39.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-39.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-39-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-40.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-40.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-40-4.png" alt/></a></p>
+<p><a href="../../../3-3-automate-deployment/image-41.png" class="internal internal-link" data-slug="3-3-automate-deployment/image-41.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-41-4.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1499" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#33-automate-deployment" data-for="33-automate-deployment">3.3 Automate Deployment</a></li><li class="depth-0"><a href="#objectives" data-for="objectives">Objectives</a></li><li class="depth-0"><a href="#devops-introduction" data-for="devops-introduction">DevOps Introduction</a></li><li class="depth-1"><a href="#code-repositories" data-for="code-repositories">Code Repositories</a></li><li class="depth-0"><a href="#mlops-introduction" data-for="mlops-introduction">MLOps Introduction</a></li><li class="depth-1"><a href="#ml-모델-호스팅의-특징" data-for="ml-모델-호스팅의-특징">ML 모델 호스팅의 특징</a></li><li class="depth-1"><a href="#mlops의-필요성" data-for="mlops의-필요성">MLOps의 필요성</a></li><li class="depth-1"><a href="#mlops의-이점" data-for="mlops의-이점">MLOps의 이점</a></li><li class="depth-1"><a href="#mlops-팀의-역할" data-for="mlops-팀의-역할">MLOps 팀의 역할</a></li><li class="depth-2"><a href="#데이터-엔지니어" data-for="데이터-엔지니어">데이터 엔지니어</a></li><li class="depth-2"><a href="#데이터-과학자" data-for="데이터-과학자">데이터 과학자</a></li><li class="depth-2"><a href="#ml-엔지니어" data-for="ml-엔지니어">ML 엔지니어</a></li><li class="depth-1"><a href="#데이터와-ml-코드의-독립성" data-for="데이터와-ml-코드의-독립성">데이터와 ML 코드의 독립성</a></li><li class="depth-1"><a href="#ml의-비기능-요구사항" data-for="ml의-비기능-요구사항">ML의 비기능 요구사항</a></li><li class="depth-1"><a href="#ml-워크플로우와-devops의-차이점" data-for="ml-워크플로우와-devops의-차이점">ML 워크플로우와 DevOps의 차이점</a></li><li class="depth-0"><a href="#automating-testing-in-cicd-pipelines" data-for="automating-testing-in-cicd-pipelines">Automating Testing in CI/CD pipelines</a></li><li class="depth-1"><a href="#ml-system-reliability" data-for="ml-system-reliability">ML system reliability</a></li><li class="depth-1"><a href="#자동화된-테스트-유형" data-for="자동화된-테스트-유형">자동화된 테스트 유형</a></li><li class="depth-1"><a href="#cicd-파이프라인의-자동화된-테스팅-이점" data-for="cicd-파이프라인의-자동화된-테스팅-이점">CI/CD 파이프라인의 자동화된 테스팅 이점</a></li><li class="depth-1"><a href="#sagemaker의-자동화된-테스팅" data-for="sagemaker의-자동화된-테스팅">SageMaker의 자동화된 테스팅</a></li><li class="depth-2"><a href="#sagemaker-projects-with-cicd-practices" data-for="sagemaker-projects-with-cicd-practices">SageMaker Projects with CI/CD practices</a></li><li class="depth-0"><a href="#version-control-systems" data-for="version-control-systems">Version Control Systems</a></li><li class="depth-0"><a href="#continuous-flow-structures" data-for="continuous-flow-structures">Continuous Flow Structures</a></li><li class="depth-1"><a href="#지속적-배포의-핵심-구성-요소" data-for="지속적-배포의-핵심-구성-요소">지속적 배포의 핵심 구성 요소:</a></li><li class="depth-1"><a href="#gitflow와-github-flow" data-for="gitflow와-github-flow">Gitflow와 GitHub Flow:</a></li><li class="depth-2"><a href="#gitflow" data-for="gitflow">Gitflow</a></li><li class="depth-2"><a href="#github-flow" data-for="github-flow">GitHub Flow:</a></li><li class="depth-1"><a href="#지속적-실행-구조-시작하기" data-for="지속적-실행-구조-시작하기">지속적 실행 구조 시작하기</a></li><li class="depth-0"><a href="#continuous-delivery-services" data-for="continuous-delivery-services">Continuous Delivery Services</a></li><li class="depth-1"><a href="#소프트웨어-릴리스-라이프사이클" data-for="소프트웨어-릴리스-라이프사이클">소프트웨어 릴리스 라이프사이클:</a></li><li class="depth-1"><a href="#소스에서-프로덕션까지의-도구" data-for="소스에서-프로덕션까지의-도구">소스에서 프로덕션까지의 도구:</a></li><li class="depth-2"><a href="#git-리포지토리" data-for="git-리포지토리">Git 리포지토리:</a></li><li class="depth-2"><a href="#aws-codebuild" data-for="aws-codebuild">AWS CodeBuild:</a></li><li class="depth-2"><a href="#aws-cloudformation" data-for="aws-cloudformation">AWS CloudFormation:</a></li><li class="depth-2"><a href="#aws-codedeploy" data-for="aws-codedeploy">AWS CodeDeploy:</a></li><li class="depth-2"><a href="#aws-codepipeline" data-for="aws-codepipeline">AWS CodePipeline:</a></li><li class="depth-2"><a href="#git-리포지토리-1" data-for="git-리포지토리-1">Git 리포지토리:</a></li><li class="depth-2"><a href="#aws-codebuild-1" data-for="aws-codebuild-1">AWS CodeBuild:</a></li><li class="depth-2"><a href="#aws-codedeploy-1" data-for="aws-codedeploy-1">AWS CodeDeploy:</a></li><li class="depth-1"><a href="#quotas-and-limits-for-each-supported-aws-region" data-for="quotas-and-limits-for-each-supported-aws-region">Quotas and limits for each supported AWS Region</a></li><li class="depth-1"><a href="#best-practices-for-configuring-and-troubleshooting" data-for="best-practices-for-configuring-and-troubleshooting">Best Practices for Configuring and Troubleshooting</a></li><li class="depth-1"><a href="#automating-data-integration-in-ml-pipeline" data-for="automating-data-integration-in-ml-pipeline">Automating Data Integration in ML Pipeline</a></li><li class="depth-2"><a href="#ml-파이프라인-오케스트레이션" data-for="ml-파이프라인-오케스트레이션">ML 파이프라인 오케스트레이션:</a></li><li class="depth-0"><a href="#step-functions-and-codepipeline" data-for="step-functions-and-codepipeline">Step Functions and CodePipeline</a></li><li class="depth-1"><a href="#deployment-strategies" data-for="deployment-strategies">Deployment Strategies</a></li><li class="depth-1"><a href="#sagemaker의-점진적인-모델-배포-전략과-모니터링-기능" data-for="sagemaker의-점진적인-모델-배포-전략과-모니터링-기능">SageMaker의 점진적인 모델 배포 전략과 모니터링 기능:</a></li><li class="depth-1"><a href="#블루그린-배포" data-for="블루그린-배포">블루/그린 배포:</a></li><li class="depth-2"><a href="#트래픽-이동-모드" data-for="트래픽-이동-모드">트래픽 이동 모드:</a></li><li class="depth-2"><a href="#베이킹-기간" data-for="베이킹-기간">베이킹 기간:</a></li><li class="depth-2"><a href="#캐나리-배포" data-for="캐나리-배포">캐나리 배포:</a></li><li class="depth-2"><a href="#롤링-배포" data-for="롤링-배포">롤링 배포:</a></li><li class="depth-2"><a href="#자동-롤백" data-for="자동-롤백">자동 롤백:</a></li><li class="depth-0"><a href="#code-repositories-work" data-for="code-repositories-work">Code Repositories Work</a></li><li class="depth-1"><a href="#코드-리포지토리의-역할" data-for="코드-리포지토리의-역할">코드 리포지토리의 역할:</a></li><li class="depth-1"><a href="#git-리포지토리-2" data-for="git-리포지토리-2">Git 리포지토리:</a></li><li class="depth-1"><a href="#파이프라인-실행-시-리포지토리-활용" data-for="파이프라인-실행-시-리포지토리-활용">파이프라인 실행 시 리포지토리 활용:</a></li><li class="depth-1"><a href="#보안-및-액세스-제어" data-for="보안-및-액세스-제어">보안 및 액세스 제어:</a></li><li class="depth-0"><a href="#building-and-integrating-mechanisms-for-retraining" data-for="building-and-integrating-mechanisms-for-retraining">Building and Integrating Mechanisms for Retraining</a></li><li class="depth-1"><a href="#모델-재학습의-필요성" data-for="모델-재학습의-필요성">모델 재학습의 필요성:</a></li><li class="depth-1"><a href="#재학습-메커니즘" data-for="재학습-메커니즘">재학습 메커니즘:</a></li><li class="depth-1"><a href="#재학습-시-발생하는-재앙적-망각" data-for="재학습-시-발생하는-재앙적-망각">재학습 시 발생하는 재앙적 망각:</a></li><li class="depth-1"><a href="#재앙적-망각-해결-방법" data-for="재앙적-망각-해결-방법">재앙적 망각 해결 방법:</a></li><li class="depth-0"><a href="#configuring-inferencing-jobs" data-for="configuring-inferencing-jobs">Configuring Inferencing Jobs</a></li><li class="depth-2"><a href="#추론-유형" data-for="추론-유형">추론 유형:</a></li><li class="depth-2"><a href="#학습과-추론의-차이" data-for="학습과-추론의-차이">학습과 추론의 차이:</a></li><li class="depth-2"><a href="#codepipeline-모범-사례" data-for="codepipeline-모범-사례">CodePipeline 모범 사례:</a></li><li class="depth-2"><a href="#sagemaker-파이프라인-모범-사례" data-for="sagemaker-파이프라인-모범-사례">SageMaker 파이프라인 모범 사례:</a></li><li class="depth-2"><a href="#eventbridge-규칙-모범-사례" data-for="eventbridge-규칙-모범-사례">EventBridge 규칙 모범 사례:</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

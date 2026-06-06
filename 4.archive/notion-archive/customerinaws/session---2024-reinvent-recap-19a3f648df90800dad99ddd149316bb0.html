@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Session - 2024 reInvent reCap 19a3f648df90800dad99ddd149316bb0 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Session - 2024 reInvent reCap 19a3f648df90800dad99ddd149316bb0 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Session - 2024 reInvent reCap 19a3f648df90800dad99ddd149316bb0 | LLM Wiki"/><meta name="twitter:description" content="🏆 Session - 2024 reInvent reCap EKS Hands-On reference github.com/aws-samples/reinvent24 Reference Blog EKS Hybrid Nodes aws.amazon.com/ko/blogs/korea/use-your-on-premises-infrastructure-in-amazon-eks-clusters-with-amazon-eks-hybrid-nodes/ Amazon EKS Hybrid Nodes는 온프레미스 및 엣지 인프라를 Amazon EKS 클러스터에 ..."/><meta property="og:description" content="🏆 Session - 2024 reInvent reCap EKS Hands-On reference github.com/aws-samples/reinvent24 Reference Blog EKS Hybrid Nodes aws.amazon.com/ko/blogs/korea/use-your-on-premises-infrastructure-in-amazon-eks-clusters-with-amazon-eks-hybrid-nodes/ Amazon EKS Hybrid Nodes는 온프레미스 및 엣지 인프라를 Amazon EKS 클러스터에 ..."/><meta property="og:image:alt" content="🏆 Session - 2024 reInvent reCap EKS Hands-On reference github.com/aws-samples/reinvent24 Reference Blog EKS Hybrid Nodes aws.amazon.com/ko/blogs/korea/use-your-on-premises-infrastructure-in-amazon-eks-clusters-with-amazon-eks-hybrid-nodes/ Amazon EKS Hybrid Nodes는 온프레미스 및 엣지 인프라를 Amazon EKS 클러스터에 ..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/session---2024-reinvent-recap-19a3f648df90800dad99ddd149316bb0"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/session---2024-reinvent-recap-19a3f648df90800dad99ddd149316bb0"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🏆 Session - 2024 reInvent reCap EKS Hands-On reference github.com/aws-samples/reinvent24 Reference Blog EKS Hybrid Nodes aws.amazon.com/ko/blogs/korea/use-your-on-premises-infrastructure-in-amazon-eks-clusters-with-amazon-eks-hybrid-nodes/ Amazon EKS Hybrid Nodes는 온프레미스 및 엣지 인프라를 Amazon EKS 클러스터에 ..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/customerinaws/session---2024-reinvent-recap-19a3f648df90800dad99ddd149316bb0" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1524" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1524" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/customerinaws/">CustomerInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Session - 2024 reInvent reCap 19a3f648df90800dad99ddd149316bb0</a></div></nav><h1 class="article-title">Session - 2024 reInvent reCap 19a3f648df90800dad99ddd149316bb0</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:14.979Z">2026년 6월 06일</time><span>35 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/attachments/met_silk_kashan_carpet-23.jpg" alt/></p>
+<p>🏆</p>
+<h1 id="session---2024-reinvent-recap">Session - 2024 reInvent reCap<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#session---2024-reinvent-recap" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="eks">EKS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#eks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="hands-on-reference">Hands-On reference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hands-on-reference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://github.com/aws-samples/reinvent24" class="external external-link">https://github.com/aws-samples/reinvent24<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="reference-blog">Reference Blog<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reference-blog" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>EKS Hybrid Nodes</p>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/use-your-on-premises-infrastructure-in-amazon-eks-clusters-with-amazon-eks-hybrid-nodes/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/use-your-on-premises-infrastructure-in-amazon-eks-clusters-with-amazon-eks-hybrid-nodes/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Amazon EKS Hybrid Nodes는 온프레미스 및 엣지 인프라를 Amazon EKS 클러스터에 노드로 연결할 수 있게 해주는 새로운 기능입니다. 이를 통해 고객들은 다음과 같은 이점을 얻을 수 있습니다:</p>
+<ol>
+<li>
+<p>클라우드와 온프레미스 환경 전반에서 Kubernetes 관리 통합 및 애플리케이션 실행: EKS Hybrid Nodes를 사용하면 클라우드와 온프레미스 환경 전반에서 일관된 운영 관행과 도구를 활용할 수 있습니다.</p>
+</li>
+<li>
+<p>Kubernetes 컨트롤 플레인 관리 책임 오프로드: 고객이 온프레미스 하드웨어를 사용하면서도 Kubernetes 컨트롤 플레인 관리 책임은 AWS EKS에 위임할 수 있습니다.</p>
+</li>
+<li>
+<p>온프레미스 워크로드 용량 보존: 기존 온프레미스 하드웨어를 활용하면서 EKS의 확장성과 가용성을 활용할 수 있습니다.</p>
+</li>
+</ol>
+<p>EKS Hybrid Nodes를 사용하기 위해서는 AWS Site-to-Site VPN, AWS Direct Connect 등을 통해 온프레미스 환경과 AWS 사이의 하이브리드 네트워크 연결이 필요합니다. 또한 AWS IAM Roles Anywhere 또는 AWS Systems Manager를 통해 하이브리드 노드를 EKS 컨트롤 플레인에 인증해야 합니다.</p>
+<p>온프레미스 노드를 EKS 클러스터에 연결하는 과정은 다음과 같습니다:</p>
+<ol>
+<li>
+<p>EKS 클러스터 생성 시 하이브리드 노드 옵션 활성화</p>
+</li>
+<li>
+<p>하이브리드 노드 IAM 역할 및 EKS 클러스터 액세스 권한 설정</p>
+</li>
+<li>
+<p>온프레미스 호스트에 EKS Hybrid Nodes CLI(nodeadm) 설치 및 구성</p>
+</li>
+<li>
+<p>호스트를 EKS 클러스터에 등록</p>
+</li>
+</ol>
+<p>이렇게 등록된 하이브리드 노드는 EKS 콘솔에서 확인하고 관리할 수 있습니다. 하이브리드 노드는 고객이 직접 관리해야 하며, EKS Hybrid Nodes CLI를 활용해 소프트웨어 업데이트 및 Kubernetes 버전 업그레이드를 수행할 수 있습니다.</p>
+<p>전반적으로 EKS Hybrid Nodes를 통해 고객은 온프레미스와 클라우드 인프라 전반에 걸쳐 Kubernetes 환경을 통합하고 운영할 수 있는 유연성을 확보할 수 있습니다.</p>
+<ol>
+<li>
+<p>nodeadm은 Amazon EKS Hybrid Nodes를 사용하기 위해 온프레미스 호스트에 설치해야 하는 CLI(Command-Line Interface) 도구입니다.</p>
+<ol>
+<li>AL2023 introduces a new node initialization process <code>nodeadm</code> that uses a YAML configuration schema.</li>
+</ol>
+</li>
+<li>
+<p>nodeadm을 사용하여 온프레미스 호스트에 EKS Hybrid Nodes를 설치하고 구성하는 과정은 다음과 같습니다:</p>
+</li>
+</ol>
+<p>① 각 온프레미스 호스트에 nodeadm을 설치합니다. 이때 AWS Systems Manager 하이브리드 활성화 또는 IAM Roles Anywhere 인증 정보를 함께 제공해야 합니다.</p>
+<pre><code>$ nodeadm install 1.31 --credential-provider &lt;ssm, iam-ra>
+</code></pre>
+<p>② 설치 과정에서 nodeadm이 자동으로 필요한 구성 요소(SSM Agent, kubelet, kubectl, CNI 플러그인 등)를 호스트에 설치합니다.</p>
+<p>③ 각 호스트의 nodeConfig.yaml 파일을 생성하여 EKS 클러스터 정보(이름, 리전), 하이브리드 노드 IAM 역할, AWS Systems Manager 또는 IAM Roles Anywhere 인증 정보를 설정합니다.</p>
+<p>④ 호스트에서 nodeadm init 명령을 실행하여 EKS 클러스터에 노드를 등록합니다.</p>
+<ol>
+<li>nodeadm 외에 다음과 같은 다른 도구를 사용할 수 있습니다:</li>
+</ol>
+<ul>
+<li>
+<p>AWS CLI: EKS 클러스터를 생성하고 하이브리드 노드 옵션을 활성화할 때 사용할 수 있습니다.</p>
+</li>
+<li>
+<p>eksctl: EKS 클러스터 생성 및 관리를 위한 CLI 도구로, 하이브리드 노드 구성을 지원합니다.</p>
+</li>
+<li>
+<p>AWS CloudFormation: 인프라 코드로 EKS 클러스터와 하이브리드 노드 구성을 정의할 수 있습니다.</p>
+</li>
+</ul>
+<p>AWS IAM Roles Anywhere</p>
+<p><a href="https://aws.amazon.com/ko/blogs/security/extend-aws-iam-roles-to-workloads-outside-of-aws-with-iam-roles-anywhere/" class="external external-link">https://aws.amazon.com/ko/blogs/security/extend-aws-iam-roles-to-workloads-outside-of-aws-with-iam-roles-anywhere/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>IAM Roles Anywhere의 주요 기능:</p>
+<ol>
+<li>AWS 외부에서 실행되는 워크로드에 대해 IAM 역할 사용 가능</li>
+</ol>
+<ul>
+<li>
+<p>AWS 외부(온프레미스 서버, 컨테이너 등)에서 실행되는 애플리케이션도 IAM 역할을 사용할 수 있게 해줌</p>
+</li>
+<li>
+<p>이를 통해 장기 AWS 자격 증명(액세스 키, 시크릿 키) 관리가 필요 없어짐</p>
+</li>
+</ul>
+<ol>
+<li>PKI 기반의 인증 및 권한 부여</li>
+</ol>
+<ul>
+<li>
+<p>온프레미스 워크로드가 X.509 인증서로 자신을 인증</p>
+</li>
+<li>
+<p>IAM Roles Anywhere는 인증서 발급 기관(CA)을 신뢰 앵커로 등록하여 인증 과정 수행</p>
+</li>
+<li>
+<p>인증 후 IAM 역할 세션 생성, 임시 AWS 자격 증명 제공</p>
+</li>
+</ul>
+<p>사용 방법:</p>
+<ol>
+<li>IAM Roles Anywhere 구성 (관리자)</li>
+</ol>
+<ul>
+<li>
+<p>신뢰 앵커(CA) 생성</p>
+</li>
+<li>
+<p>IAM 역할 및 신뢰 정책 구성</p>
+</li>
+<li>
+<p>IAM Roles Anywhere 프로필 생성</p>
+</li>
+</ul>
+<ol>
+<li>온프레미스 워크로드에 인증서 프로비저닝 (인프라 관리자)</li>
+</ol>
+<ul>
+<li>X.509 인증서 및 개인 키를 온프레미스 워크로드에 설치</li>
+</ul>
+<ol>
+<li>IAM Roles Anywhere 사용 (애플리케이션 개발자)</li>
+</ol>
+<ul>
+<li>
+<p>AWS SDK의 자격 증명 프로세스 기능을 사용하여 인증서로 임시 AWS 자격 증명 획득</p>
+</li>
+<li>
+<p>AWS CLI에 자격 증명 프로세스 구성</p>
+</li>
+</ul>
+<p>이렇게 IAM Roles Anywhere를 통해 AWS 외부 워크로드에서도 IAM 역할 기반의 안전하고 편리한 AWS 서비스 액세스가 가능합니다.</p>
+<h2 id="hands-on-demo">Hands-On Demo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hands-on-demo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="cloudshell">CloudShell<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cloudshell" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Cluster 연결을 위한 kube config 설정 추가 : <a href="https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/create-kubeconfig.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/eks/latest/userguide/create-kubeconfig.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<pre><code>aws eks update-kubeconfig --region region-code --name my-cluster
+</code></pre>
+</li>
+</ul>
+<h3 id="nodepool">NodePool<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nodepool" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>기본 NodePool의 YAML</p>
+<pre><code>kubectl get nodepool system -o yaml
+apiVersion: karpenter.sh/v1
+kind: NodePool
+metadata:
+  annotations:
+    karpenter.sh/nodepool-hash: &quot;4982684901400657622&quot;
+    karpenter.sh/nodepool-hash-version: v3
+  creationTimestamp: &quot;2025-02-15T15:03:29Z&quot;
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: eks
+  name: system
+  resourceVersion: &quot;3498&quot;
+  uid: 4f367b4b-1465-408f-b4d5-d3792f994327
+spec:
+  disruption:
+    budgets:
+    - nodes: 10%
+    consolidateAfter: 30s
+    consolidationPolicy: WhenEmptyOrUnderutilized
+  template:
+    metadata: {}
+    spec:
+      expireAfter: 336h
+      nodeClassRef:
+        group: eks.amazonaws.com
+        kind: NodeClass
+        name: default
+      requirements:
+      - key: karpenter.sh/capacity-type
+        operator: In
+        values:
+        - on-demand
+      - key: eks.amazonaws.com/instance-category
+        operator: In
+        values:
+        - c
+        - m
+        - r
+      - key: eks.amazonaws.com/instance-generation
+        operator: Gt
+        values:
+        - &quot;4&quot;
+      - key: kubernetes.io/arch
+        operator: In
+        values:
+        - amd64
+        - arm64
+      - key: kubernetes.io/os
+        operator: In
+        values:
+        - linux
+      taints:
+      - effect: NoSchedule
+        key: CriticalAddonsOnly
+      terminationGracePeriod: 24h0m0s
+status:
+  conditions:
+  - lastTransitionTime: &quot;2025-02-15T15:03:39Z&quot;
+    message: &quot;&quot;
+    observedGeneration: 1
+    reason: ValidationSucceeded
+    status: &quot;True&quot;
+    type: ValidationSucceeded
+  - lastTransitionTime: &quot;2025-02-15T15:03:40Z&quot;
+    message: &quot;&quot;
+    observedGeneration: 1
+    reason: NodeClassReady
+    status: &quot;True&quot;
+    type: NodeClassReady
+  - lastTransitionTime: &quot;2025-02-15T15:03:40Z&quot;
+    message: &quot;&quot;
+    observedGeneration: 1
+    reason: Ready
+    status: &quot;True&quot;
+    type: Ready
+  resources:
+    cpu: &quot;2&quot;
+    ephemeral-storage: 81854Mi
+    hugepages-1Gi: &quot;0&quot;
+    hugepages-2Mi: &quot;0&quot;
+    hugepages-32Mi: &quot;0&quot;
+    hugepages-64Ki: &quot;0&quot;
+    memory: 3896852Ki
+    nodes: &quot;1&quot;
+    pods: &quot;27&quot;
+</code></pre>
+</li>
+<li>
+<p>구성 설명</p>
+<ul>
+<li>이 YAML 파일은 Karpenter의 NodePool 리소스를 보여줍니다. Karpenter는 Kubernetes 클러스터에서 자동으로 노드를 관리하는 오픈소스 프로젝트입니다.</li>
+</ul>
+<p>주요 내용은 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>메타데이터</strong>: NodePool의 이름, 생성 시간, 리소스 버전 등이 포함됩니다.</p>
+</li>
+<li>
+<p><strong>spec</strong>: NodePool의 실제 구성이 정의됩니다.</p>
+<ul>
+<li>
+<p><strong>disruption</strong>: 노드 디스럽션 정책을 설정합니다. 예를 들어 동시에 제거할 수 있는 노드 수를 제한할 수 있습니다.</p>
+</li>
+<li>
+<p><strong>template</strong>: 노드의 실제 구성을 정의합니다.</p>
+<ul>
+<li>
+<p><strong>expireAfter</strong>: 노드의 최대 수명을 설정합니다.</p>
+</li>
+<li>
+<p><strong>nodeClassRef</strong>: 노드 클래스를 참조합니다. 이는 노드의 기본 구성을 정의하는 Karpenter 리소스입니다.</p>
+</li>
+<li>
+<p><strong>requirements</strong>: 노드에 대한 요구사항을 정의합니다. 예를 들어 인스턴스 유형, CPU/RAM 등을 지정할 수 있습니다.</p>
+</li>
+<li>
+<p><strong>taints</strong>: 노드에 설정된 테인트를 정의합니다.</p>
+</li>
+<li>
+<p><strong>terminationGracePeriod</strong>: 노드 제거 시 유예 기간을 설정합니다.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>status</strong>: NodePool의 현재 상태를 보여줍니다.</p>
+</li>
+</ol>
+<p>이 YAML 파일을 변경하여 NodePool 구성을 업데이트할 수 있습니다. 예를 들어 <code>spec.template.spec</code> 부분을 수정하면 노드 구성을 변경할 수 있습니다. 변경 후 <code>kubectl apply -f &lt;파일명>.yaml</code> 명령으로 업데이트할 수 있습니다.</p>
+<p>주의할 점은 Karpenter는 자동으로 노드를 관리하므로, 구성을 수동으로 변경할 경우 Karpenter와 충돌할 수 있다는 것입니다. 따라서 NodePool 구성을 변경할 때는 Karpenter의 동작을 잘 이해하고 변경해야 합니다.</p>
+</li>
+</ul>
+<h3 id="node-auto-repair">Node Auto Repair<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#node-auto-repair" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>EKS Auto Mode의 Node Auto Repair 기능은 다음과 같은 노드 문제를 자동으로 해결합니다:</p>
+<ol>
+<li>
+<p><strong>Ready 상태 문제</strong>: 노드가 Kubernetes 클러스터에 준비되지 않은 상태(Ready 상태가 아님)인 경우, Node Auto Repair가 자동으로 노드를 교체합니다.</p>
+</li>
+<li>
+<p><strong>kubelet 응답 없음</strong>: 노드의 kubelet 프로세스가 응답하지 않는 경우, Node Auto Repair가 자동으로 노드를 교체합니다.</p>
+</li>
+<li>
+<p><strong>가속기(accelerator) 오류</strong>: 노드의 GPU, Inferentia 등 가속기 장치에서 오류가 발생하는 경우, Node Auto Repair가 자동으로 노드를 교체합니다.</p>
+</li>
+<li>
+<p><strong>네트워킹 문제</strong>: 노드의 네트워크 인터페이스가 실행되지 않거나 작동하지 않는 경우, Node Auto Repair가 자동으로 노드를 교체합니다.</p>
+</li>
+<li>
+<p><strong>스토리지 문제</strong>: 노드의 스토리지 관련 문제(예: XFS 클러스터 크기 작음)가 발생하는 경우, Node Auto Repair가 자동으로 노드를 교체합니다.</p>
+</li>
+</ol>
+<p>이러한 문제가 감지되면 Node Auto Repair는 자동으로 노드를 코드온(cordon)하고 새 노드로 교체합니다. 이를 통해 클러스터의 가용성을 높이고 운영 중단을 최소화할 수 있습니다.</p>
+<p>단, Node Auto Repair는 DiskPressure, MemoryPressure, PIDPressure와 같은 문제는 자동으로 해결할 수 없습니다. 이런 경우에는 수동 개입이 필요합니다.</p>
+</li>
+<li>
+<p>Kubernetes 클러스터에서 노드를 코드온(cordon)하는 것은 해당 노드에 새로운 Pod 예약을 금지하는 작업입니다. 코드온(cordon) 동작의 주요 내용은 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>스케줄링 금지</strong>: 코드온된 노드에는 새로운 Pod가 예약되지 않습니다. 즉, 해당 노드에 더 이상 새로운 워크로드가 배포되지 않게 됩니다.</p>
+</li>
+<li>
+<p><strong>기존 Pod 동작 유지</strong>: 코드온된 노드에 이미 실행 중인 Pod는 계속 동작합니다. 이미 배포된 워크로드는 계속 실행됩니다.</p>
+</li>
+<li>
+<p><strong>노드 드레이닝</strong>: 노드가 코드온되면 클러스터 관리자는 해당 노드에서 실행 중인 Pod를 다른 노드로 이동시킬 수 있습니다(노드 드레이닝). 이를 통해 노드를 제거하거나 교체할 수 있습니다.</p>
+</li>
+<li>
+<p><strong>노드 테인트</strong>: 코드온된 노드에는 자동으로 <code>node.kubernetes.io/unschedulable=true</code> 테인트가 추가됩니다. 이 테인트는 새로운 Pod가 해당 노드에 예약되지 않도록 합니다.</p>
+</li>
+</ol>
+<p>이와 같이 코드온 동작은 문제가 있는 노드에 새로운 워크로드가 배포되는 것을 막고, 노드 교체 작업을 진행할 수 있게 해줍니다. EKS Auto Mode의 Node Auto Repair 기능은 이러한 코드온 동작을 활용하여 노드 문제를 자동으로 해결합니다.</p>
+</li>
+<li>
+<p>EKS Auto Mode의 Node Auto Repair 기능은 문제가 있는 노드를 자동으로 교체하는 것이 핵심입니다. 그러나 단순히 노드를 교체하는 것만으로는 근본적인 문제를 해결하기 어렵습니다. Node Auto Repair는 다음과 같은 방식으로 문제가 있는 노드 구성을 해결합니다:</p>
+<ol>
+<li>
+<p><strong>로그 분석</strong>: Node Auto Repair는 노드의 로그를 지속적으로 분석하여 다양한 문제를 감지합니다. 이를 통해 문제의 근본 원인을 파악할 수 있습니다.</p>
+</li>
+<li>
+<p><strong>문제 유형 분류</strong>: 감지된 문제는 유형별로 분류됩니다. 예를 들어, 네트워킹 문제, 스토리지 문제, 커널 문제 등으로 구분됩니다.</p>
+</li>
+<li>
+<p><strong>자동 수정 조치</strong>: 문제 유형에 따라 자동 수정 조치가 적용됩니다. 예를 들어, 네트워킹 관련 문제가 감지되면 노드를 자동으로 교체하고, 스토리지 문제가 감지되면 노드의 파일 시스템을 재구성합니다.</p>
+</li>
+<li>
+<p><strong>재발 방지 대책</strong>: 자동 수정 조치 후에도 동일한 문제가 반복적으로 발생하면, Node Auto Repair는 근본 원인을 해결하기 위한 대책을 수립합니다. 예를 들어, 특정 인스턴스 유형의 노드에 문제가 발생하는 경우 해당 인스턴스 유형 사용을 제한하는 등의 방안을 적용합니다.</p>
+</li>
+</ol>
+<p>이와 같은 방식으로 Node Auto Repair는 문제가 있는 노드를 자동으로 교체하고, 동시에 근본적인 문제를 해결하기 위한 조치를 취합니다. 이를 통해 클러스터의 안정성과 가용성을 지속적으로 높일 수 있습니다.</p>
+</li>
+</ul>
+<h3 id="cluster-dns">Cluster DNS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cluster-dns" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>각 노드에 클러스터 DNS 서버를 배포하는 것은 기존 Kubernetes 클러스터의 DNS 구조와 비교했을 때 다음과 같은 장점이 있습니다:</p>
+<ol>
+<li>
+<p>낮은 latency:</p>
+<ul>
+<li>
+<p>기존에는 중앙 집중식 DNS 서버를 사용했기 때문에 클러스터 내의 모든 DNS 쿼리가 중앙 서버로 전달되어 latency가 높았습니다.</p>
+</li>
+<li>
+<p>각 노드에 DNS 서버를 배포하면 노드 내부에서 DNS 쿼리를 처리할 수 있어 latency가 크게 낮아집니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>확장성 향상:</p>
+<ul>
+<li>
+<p>중앙 집중식 DNS 서버는 클러스터 규모가 커지면 성능 병목 현상이 발생할 수 있습니다.</p>
+</li>
+<li>
+<p>노드 단위로 DNS 서버를 배포하면 클러스터 규모에 관계없이 일관된 DNS 성능을 보장할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>가용성 향상:</p>
+<ul>
+<li>
+<p>중앙 집중식 DNS 서버에 장애가 발생하면 전체 클러스터의 서비스 검색이 불가능해집니다.</p>
+</li>
+<li>
+<p>각 노드에 분산된 DNS 서버를 사용하면 특정 노드 장애 시에도 다른 노드의 DNS 서버를 통해 서비스 검색이 가능합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>빠른 서비스 검색:</p>
+<ul>
+<li>
+<p>각 노드의 DNS 서버는 클러스터 내부의 서비스 정보를 실시간으로 캐싱하기 때문에, 서비스 검색 속도가 빠릅니다.</p>
+</li>
+<li>
+<p>이를 통해 애플리케이션의 빠른 서비스 발견과 연결이 가능합니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>종합적으로 볼 때, 노드 단위 DNS 서버 배포 방식은 Kubernetes 클러스터의 DNS 성능, 확장성, 가용성을 크게 향상시킬 수 있는 장점이 있습니다.</p>
+</li>
+<li>
+<p>Kubernetes 클러스터에 각 노드에 DNS 서버를 배포할 때, DNS lookup table의 정보를 최신으로 유지하는 것이 중요합니다. 이를 위해 다음과 같은 방법을 사용할 수 있습니다:</p>
+<ol>
+<li>
+<p>동적 서비스 검색 업데이트:</p>
+<ul>
+<li>
+<p>Kubernetes 아피 서버에서 서비스, Pod, 엔드포인트 등의 변경 사항을 지속적으로 모니터링합니다.</p>
+</li>
+<li>
+<p>변경이 감지되면 각 노드의 DNS 서버에 실시간으로 정보를 업데이트합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>청크 업데이트:</p>
+<ul>
+<li>
+<p>대량의 서비스 변경이 발생하면 청크 단위로 데이터를 업데이트합니다.</p>
+</li>
+<li>
+<p>이를 통해 DNS 서버의 부하를 줄이고 업데이트 효율성을 높일 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>캐싱 전략 활용:</p>
+<ul>
+<li>
+<p>DNS 서버는 서비스 정보에 대한 TTL(Time To Live) 기반 캐싱을 활용합니다.</p>
+</li>
+<li>
+<p>TTL을 최적화하여 동적 변경 사항을 적절히 반영할 수 있도록 합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>증분 업데이트:</p>
+<ul>
+<li>
+<p>전체 서비스 목록을 업데이트하는 것이 아니라, 변경된 부분만 증분적으로 업데이트합니다.</p>
+</li>
+<li>
+<p>이를 통해 업데이트 처리 비용을 최소화할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>배경 프로세스 활용:</p>
+<ul>
+<li>
+<p>각 노드의 DNS 서버는 백그라운드에서 정기적으로 API 서버의 정보를 동기화합니다.</p>
+</li>
+<li>
+<p>이를 통해 실시간 변경 사항뿐만 아니라 지연된 변경 사항도 처리할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="karpenter의-기능과-동작-원리에-대한-종합적-분석">Karpenter의 기능과 동작 원리에 대한 종합적 분석<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#karpenter의-기능과-동작-원리에-대한-종합적-분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>쿠버네티스 클러스터의 자원 관리 분야에서 혁신적인 접근 방식을 제시하는 Karpenter는 AWS가 개발한 오픈소스 기반의 고성능 노드 프로비저닝 시스템입니다. 2020년 11월 첫 출시 이후 지속적인 진화를 거쳐 2025년 현재 프로덕션 환경에서 안정적으로 운영될 수 있는 수준의 성숙도를 갖추었으며[3], 기존 Cluster Autoscaler(CA)의 아키텍처적 한계를 극복한 설계로 주목받고 있습니다. 본 보고서는 Karpenter의 핵심 기능과 내부 동작 메커니즘을 다층적으로 분석합니다.</p>
+<h2 id="1-아키텍처-설계-철학">1. 아키텍처 설계 철학<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-아키텍처-설계-철학" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="11-그룹리스groupless-아키텍처">1.1 그룹리스(Groupless) 아키텍처<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-그룹리스groupless-아키텍처" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter의 근본적인 혁신은 EC2 Auto Scaling Group(ASG)에 대한 종속성 제거에 있습니다. 기존 CA가 ASG를 통해 노드 그룹 단위로 확장을 관리했던 방식과 달리, Karpenter는 EC2 Fleet API를 직접 활용하여 인스턴스 유형/가용 영역/구매 모델(on-demand/spot)을 유연하게 선택합니다[4][8]. 이로 인해 사용자는 단일 ASG 템플릿으로 다양한 인스턴스 패밀리(c, m, r 시리즈 등)를 동시에 활용할 수 있으며[1], 실제 워크로드 요구사항에 최적화된 인스턴스 선택이 가능해집니다.</p>
+<h3 id="12-jitjust-in-time-프로비저닝">1.2 JIT(Just-In-Time) 프로비저닝<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-jitjust-in-time-프로비저닝" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter의 노드 생성 프로세스는 평균 40초 이내로 완료되는 초고속 동작 특성을 보입니다[1][7]. 이는 kube-scheduler의 스케줄링 루프 주기(기본 1분)보다 빠른 반응 속도로, pending 상태의 파드 발생 시 즉각적인 대응이 가능합니다. 내부적으로는 Kubernetes API 서버의 워치 메커니즘을 활용해 Unschedulable 이벤트를 실시간 감지하며[11], 프로비저닝 결정에서 EC2 인스턴스 기동까지의 전체 과정을 단일 컨트롤 플레인이 관리합니다[9].</p>
+<h2 id="2-핵심-기능-메커니즘">2. 핵심 기능 메커니즘<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-핵심-기능-메커니즘" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="21-동적-노드-프로비저닝">2.1 동적 노드 프로비저닝<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-동적-노드-프로비저닝" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter의 노드 생성 로직은 3단계 의사결정 프로세스로 구성됩니다[13]. 첫째, 스케줄링 실패 파드의 리소스 요청사항(resource requests), 노드 셀렉터(nodeSelector), 어피니티(affinity), 톨러레이션(toleration) 등을 종합적으로 분석합니다[10]. 둘째, 가능한 인스턴스 유형 후보군을 생성한 후 비용 최적화 알고리즘을 적용해 최적의 인스턴스 유형을 선택합니다[12]. 마지막으로 EC2 Fleet API를 통해 선택된 인스턴스의 프로비저닝을 실행합니다.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># NodePool 구성 예시 (CPU 1Core 이상, Nitro 하이퍼바이저 필수)</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">apiVersion</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">karpenter.sh/v1beta1</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">kind</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">NodePool</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">metadata</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">default</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">spec</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">    spec</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">      requirements</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">key</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">karpenter.k8s.aws/instance-cpu</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">        operator</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">Gt</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">        values</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;1&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">key</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">karpenter.k8s.aws/instance-hypervisor</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">        operator</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">In</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">        values</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;nitro&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  nodeClassRef</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">    name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">default</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">][</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span></code></pre></figure>
+<h3 id="22-자동-노드-통합consolidation">2.2 자동 노드 통합(Consolidation)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-자동-노드-통합consolidation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter v0.34.0부터 도입된 Spot-to-Spot Consolidation 기능은 클러스터 내 리소스 사용 효율을 극대화합니다[1]. 시간 경과에 따라 워크로드의 리소스 사용 패턴이 변화하면, 기존 노드의 사용률을 분석해 더 작은 인스턴스 유형으로 마이그레이션하거나 다수의 노드를 단일 노드로 통합합니다. 이 과정에서 노드의 퇴거(eviction)는 Kubernetes의 graceful termination 절차를 준수하며[3], 파드의 디스럽션 버짓(disruption budget) 설정을 고려합니다.</p>
+<h3 id="23-노드-라이프사이클-관리">2.3 노드 라이프사이클 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-노드-라이프사이클-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter는 생성된 노드에 대해 TTL(Time-To-Live) 기반의 자동 만료 정책을 적용합니다. 기본값인 720시간(30일) 이후에는 노드를 강제로 교체함으로써 보안 패치 적용과 AMI 업데이트를 자동화합니다[1][8]. 또한 노드 풀(NodePool) 단위로 disruption 정책을 설정하여 언더유틸라이제이션(underutilization) 발생 시 자동 회수 기능을 활성화할 수 있습니다[1].</p>
+<h2 id="3-성능-최적화-전략">3. 성능 최적화 전략<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-성능-최적화-전략" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="31-병렬-스케줄링-메커니즘">3.1 병렬 스케줄링 메커니즘<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-병렬-스케줄링-메커니즘" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter는 kube-scheduler와의 협력 모드를 통해 스케줄링 성능을 극대화합니다[13]. 노드 생성 단계에서 파드의 스케줄링 제약 조건을 사전에 분석하여, 노드가 Ready 상태가 되는 즉시 파드를 바인딩하는 최적화된 워크플로를 구현합니다[7]. 이로 인해 기존 CA 대비 평균 60% 이상 빠른 파드 배치가 가능하며[12], 특히 배치 처리 워크로드에서 두드러진 성능 향상을 보입니다.</p>
+<h3 id="32-인스턴스-유형-최적화-알고리즘">3.2 인스턴스 유형 최적화 알고리즘<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-인스턴스-유형-최적화-알고리즘" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter의 인스턴스 선택 알고리즘은 다중 목표 최적화(Multi-Objective Optimization) 기법을 채택합니다. 리소스 적합도(resource fit), 비용(cost), 가용성 영역 밸런싱(zone balancing) 요소를 종합적으로 평가하여 Pareto 최적점을 찾아냅니다[10]. 사용자는 NodePool CRD를 통해 인스턴스 카테고리(c, m, r 시리즈), vCPU 개수, 메모리 크기 등의 제약 조건을 유연하게 설정할 수 있습니다[2].</p>
+<h2 id="4-운영-관리-기능">4. 운영 관리 기능<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-운영-관리-기능" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="41-다중-노드-풀-전략">4.1 다중 노드 풀 전략<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-다중-노드-풀-전략" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>프로덕션 환경에서는 워크로드 유형별로 전용 노드 풀을 구성하는 것이 일반적입니다. 예를 들어 GPU 가속이 필요한 AI 워크로드용 노드 풀과 범용 컴퓨팅용 노드 풀을 분리하여 관리할 수 있습니다[9]. 각 노드 풀에는 고유한 테인트(taint)와 레이블(label)을 부여함으로써 파드의 스케줄링 정확도를 제어합니다.</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># GPU 전용 NodePool 구성 예시</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">apiVersion</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">karpenter.sh/v1beta1</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">kind</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">NodePool</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">metadata</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">gpu-nodes</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">spec</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  template</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">    spec</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">      taints</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">key</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">nvidia.com/gpu</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">        value</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;true&quot;</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">        effect</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">NoSchedule</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">      requirements</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">      - </span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">key</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">karpenter.k8s.aws/instance-family</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">        operator</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">In</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">        values</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;p3&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;g4dn&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">9</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">][</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">12</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span></code></pre></figure>
+<h3 id="42-통합-모니터링-체계">4.2 통합 모니터링 체계<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#42-통합-모니터링-체계" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter Controller는 Prometheus 메트릭을 노출하여 클러스터 운영자에게 실시간 인사이트를 제공합니다. 주요 지표로는 <code>karpenter_nodes_created</code>(노드 생성 횟수), <code>karpenter_nodes_terminated</code>(노드 종료 횟수), <code>karpenter_pods_disrupted</code>(파드 중단 횟수) 등이 포함됩니다[10]. CloudWatch와의 통합을 통해 Auto Scaling 이벤트의 추적 및 경고 설정이 가능하며, Audit 로그를 통해 관리자 작업 이력의 감사(audit) 기능을 강화합니다.</p>
+<h2 id="5-보안-및-거버넌스">5. 보안 및 거버넌스<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-보안-및-거버넌스" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="51-iam-최소-권한-원칙">5.1 IAM 최소 권한 원칙<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#51-iam-최소-권한-원칙" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Karpenter는 AWS 환경에서 IRSA(IAM Roles for Service Accounts)를 통해 EC2, SSM, CloudFormation 등의 서비스 접근 권한을 관리합니다[2][8]. 노드 프로비저닝을 위한 IAM 정책은 최소한의 권한(EC2:RunInstances, EC2:TerminateInstances 등)으로 제한되며, AWS Organizations의 SCP(Service Control Policy)와 연동하여 리전/인스턴스 유형 제한 정책을 적용할 수 있습니다.</p>
+<h3 id="52-노드-격리-정책">5.2 노드 격리 정책<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#52-노드-격리-정책" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>보안 강화를 위해 Karpenter가 생성한 노드에는 기본적으로 EKS 최적화 AMI가 적용되며[3], SSM 에이전트가 사전 설치된 상태로 배포됩니다. 노드 접근 제어는 Security Group 조건부 부여 방식을 통해 구현되며, 네트워크 정책은 Calico나 Cilium 같은 CNI 플러그인과 연동하여 마이크로세그멘테이션을 강화합니다[12].</p>
+<h2 id="결론">결론<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#결론" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Karpenter는 현대적 클라우드 네이티브 환경의 요구사항을 충족시키기 위해 설계된 차세대 오토스케일링 솔루션입니다. 그룹리스 아키텍처와 JIT 프로비저닝 메커니즘을 통해 기존 Cluster Autoscaler 대비 3배 이상의 확장 속도 개선을 실현했으며[4][8], Spot 인스턴스와의 깊은 통합을 통해 컴퓨팅 비용을 최대 90% 절감할 수 있습니다[1][10]. 다만 운영 복잡도 증가와 멀티 클라우드 지원 미비 등의 과제는 여전히 존재하지만, 지속적인 커뮤니티 기여와 AWS의 적극적인 투자로 기술 성숙도가 빠르게 개선되고 있습니다.</p>
+<p>향후 과제로는 하이브리드 클라우드 환경 지원 확대, GPU 인스턴스의 동적 프로비저닝 최적화, 서버리스 컴퓨팅 서비스(예: AWS Fargate)와의 통합 강화 등이 예상됩니다. 클라우드 운영팀은 Karpenter의 도입을 통해 인프라 관리 부담을 획기적으로 감소시키는 동시에 애플리케이션의 안정성과 비용 효율성을 동시에 개선할 수 있을 것으로 기대됩니다.</p>
+<p>출처<br/>
+[1] EKS 오토스케일링(Autoscaling) - AEWS 5주차 - 장성필 기술블로그 <a href="https://hackjsp.tistory.com/48" class="external external-link">https://hackjsp.tistory.com/48<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] EKS에서 karpenter를 사용해보자 - 악분의 블로그 <a href="https://malwareanalysis.tistory.com/680" class="external external-link">https://malwareanalysis.tistory.com/680<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[3] Karpenter 소개 – 오픈 소스 고성능 Kubernetes 클러스터 오토스케일러 <a href="https://aws.amazon.com/ko/blogs/korea/introducing-karpenter-an-open-source-high-performance-kubernetes-cluster-autoscaler/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/introducing-karpenter-an-open-source-high-performance-kubernetes-cluster-autoscaler/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[4] [ k8s ] Kubernetes Cluster AutoScaler VS Karpenter <a href="https://ks1171-park.tistory.com/222" class="external external-link">https://ks1171-park.tistory.com/222<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[5] [Kubernetes] Karpenter 개념 알아보기! - 평범한 직장인이 사는 세상 <a href="https://digitalbourgeois.tistory.com/121" class="external external-link">https://digitalbourgeois.tistory.com/121<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[6] EKS 오토스케일링 <a href="http://montkim.com/eks-autosacling" class="external external-link">http://montkim.com/eks-autosacling<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[7] [EKS] Karpenter - Groupless Node AutoScaling 사용법 - Jen’s Space <a href="https://jenakim47.tistory.com/89" class="external external-link">https://jenakim47.tistory.com/89<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[8] Karpenter 활용하기 - 개발계발 - 티스토리 <a href="https://jsyeo.tistory.com/entry/Karpenter-%ED%99%9C%EC%9A%A9%ED%95%98%EA%B8%B0" class="external external-link">https://jsyeo.tistory.com/entry/Karpenter-활용하기<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[9] Karpenter 작동 원리 - 브런치 <a href="https://brunch.co.kr/@growthminder/87" class="external external-link">https://brunch.co.kr/@growthminder/87<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[10] AEWS) EKS Autoscaling - Log on Me <a href="https://www.logonme.click/tech/aews_w5/" class="external external-link">https://www.logonme.click/tech/aews_w5/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[11] AWS Node Auto Scaler Karpenter 도입기 - 비브로스 기술 블로그 <a href="https://boostbrothers.github.io/2023-11-01-infra-karpenter-migration" class="external external-link">https://boostbrothers.github.io/2023-11-01-infra-karpenter-migration<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[12] [K8s] AWS Karpenter를 통해 EKS 클러스터 효율적으로 관리하기 1편 <a href="https://danykde0til.tistory.com/160" class="external external-link">https://danykde0til.tistory.com/160<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[13] Karpenter로 쿠버네티스 클러스터 최적화: 비용 절감과 효율성 향상 <a href="https://www.youtube.com/watch?v=bowYzxbfKzc" class="external external-link">https://www.youtube.com/watch?v=bowYzxbfKzc<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[14] [EKS] Autoscaling - 준호의 발자취 - 티스토리 <a href="https://junho-foodprints.tistory.com/19" class="external external-link">https://junho-foodprints.tistory.com/19<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[15] [태그:] k8s <a href="https://bs-yang.com/tag/k8s/" class="external external-link">https://bs-yang.com/tag/k8s/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[16] eks Archives - Epiphany <a href="https://bs-yang.com/tag/eks/" class="external external-link">https://bs-yang.com/tag/eks/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[17] 가정용 사용설명서 다운로드 - 한국카처 <a href="https://www.karcher.co.kr/board/?id=home_manual" class="external external-link">https://www.karcher.co.kr/board/?id=home_manual<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[18] [EKS] Autoscaling - junkmm blog - 티스토리 <a href="https://junkmm.tistory.com/35" class="external external-link">https://junkmm.tistory.com/35<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[19] EKS클러스터 Karpenter 적용기 - 카카오스타일 기술 블로그 <a href="https://devblog.kakaostyle.com/ko/2022-10-13-1-karpenter-on-eks/" class="external external-link">https://devblog.kakaostyle.com/ko/2022-10-13-1-karpenter-on-eks/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[20] [AEWS 2기] EKS AutoScaling - Hello, My Twenties! - 티스토리 <a href="https://heea.tistory.com/entry/EKS" class="external external-link">https://heea.tistory.com/entry/EKS<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[21] Karpenter 파일럿 - 사람인 기술 블로그 <a href="https://saramin.github.io/2024-06-26-karpenter/" class="external external-link">https://saramin.github.io/2024-06-26-karpenter/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[22] [AWES] EKS - Autoscaling - 큐의 Log - 티스토리 <a href="https://sharing-for-us.tistory.com/36" class="external external-link">https://sharing-for-us.tistory.com/36<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[23] Karpenter 소개 – 오픈 소스 고성능 Kubernetes 클러스터 오토스케일러 <a href="https://aws.amazon.com/ko/blogs/korea/introducing-karpenter-an-open-source-high-performance-kubernetes-cluster-autoscaler/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/introducing-karpenter-an-open-source-high-performance-kubernetes-cluster-autoscaler/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[24] [EKS] Autoscaling - Do it, it will be better - 티스토리 <a href="https://bravesunfish.tistory.com/74" class="external external-link">https://bravesunfish.tistory.com/74<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[25] Karpenter로 쿠버네티스 클러스터 최적화: 비용 절감과 효율성 향상 <a href="https://www.youtube.com/watch?v=bowYzxbfKzc" class="external external-link">https://www.youtube.com/watch?v=bowYzxbfKzc<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[26] AWS Elastic Kubernetes Service +5 EKS Auto-Scaling (AEWS 2기) <a href="https://velog.io/@euijoo3233/AWS-Elastic-Kubernetes-Service-5-EKS-Auto-Scaling-AEWS-2%EA%B8%B0" class="external external-link">https://velog.io/@euijoo3233/AWS-Elastic-Kubernetes-Service-5-EKS-Auto-Scaling-AEWS-2기<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[27] Karpenter로 AWS EKS 환경에 AutoScaling 구현하기 <a href="https://wlsdn3004.tistory.com/45" class="external external-link">https://wlsdn3004.tistory.com/45<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[28] Karpenter - EKS 모범 사례 가이드 <a href="https://aws.github.io/aws-eks-best-practices/ko/karpenter/" class="external external-link">https://aws.github.io/aws-eks-best-practices/ko/karpenter/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[29] Karpenter로 쿠버네티스 클러스터 최적화: 비용 절감과 효율성 향상 <a href="https://ctc.oopy.io/ebcde7f2-d580-40ba-a3de-d7bcdc3358f9" class="external external-link">https://ctc.oopy.io/ebcde7f2-d580-40ba-a3de-d7bcdc3358f9<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[30] karpenter에 대한 설명, eks에 적용하기 <a href="http://tkdguq05.github.io/2022/08/20/karpenter/" class="external external-link">http://tkdguq05.github.io/2022/08/20/karpenter/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[31] LinkedIn Juyoung Song 페이지: Karpenter 작동 원리 <a href="https://kr.linkedin.com/posts/jupitersong_karpenter-%EC%9E%91%EB%8F%99-%EC%9B%90%EB%A6%AC-activity-7090632976350261249-3Nli" class="external external-link">https://kr.linkedin.com/posts/jupitersong_karpenter-작동-원리-activity-7090632976350261249-3Nli<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[32] Karpenter에 대한 중단 제어 기능 발표 - AWS <a href="https://aws.amazon.com/ko/about-aws/whats-new/2024/02/disruption-controls-karpenter/" class="external external-link">https://aws.amazon.com/ko/about-aws/whats-new/2024/02/disruption-controls-karpenter/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[33] Kubernetes 환경에서 HPA와 Karpenter를 이용하여 Autoscaling … <a href="https://blog.blux.ai/kubernetes-%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C-hpa%EC%99%80-karpenter%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-autoscaling-%EC%8B%9C%EC%8A%A4%ED%85%9C-%EA%B5%AC%EC%B6%95%ED%95%98%EA%B8%B0-17394" class="external external-link">https://blog.blux.ai/kubernetes-환경에서-hpa와-karpenter를-이용하여-autoscaling-시스템-구축하기-17394<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[34] 08. 노드 오토스케일링 – Karpenter – 제니퍼소프트 - jennifersoft <a href="https://jennifersoft.com/ko/blog/kubernetes/2023-10-18-kubernetes-8/" class="external external-link">https://jennifersoft.com/ko/blog/kubernetes/2023-10-18-kubernetes-8/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[35] Karpenter Best practice 요약 - velog <a href="https://velog.io/@alli-eunbi/Karpenter-Best-practice-%EC%9A%94%EC%95%BD" class="external external-link">https://velog.io/@alli-eunbi/Karpenter-Best-practice-요약<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="todo">ToDo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#todo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="aurora-dsql">Aurora DSQL<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aurora-dsql" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>해외 region의 사내 시스템의 latency가 pain point</p>
+</li>
+<li>
+<p>Write 작업이 빈번하게 발생</p>
+</li>
+<li>
+<p>Preview 기능 신청 혹은 DevTeam + InfraTeam 포함 검토 미팅</p>
+</li>
+</ul>
+<h2 id="aws-verified-access">AWS Verified Access<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-verified-access" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Custom port에 대한 접근 제어 가능 여부</p>
+</li>
+<li>
+<p>Azure Entra 적용에서 발생한 fail point에 대해 지원 가능 여부 확인 : 시나리오 공유 예정</p>
+</li>
+</ul>
+<h2 id="vpc-resource-gateway">VPC Resource Gateway<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-resource-gateway" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>VPC Peering 구성 없이 사용이 가능한가?</li>
+</ul>
+<h2 id="sagemaker--ai-recap">SageMaker &amp; AI reCap<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker--ai-recap" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>호주님</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1285" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#session---2024-reinvent-recap" data-for="session---2024-reinvent-recap">Session - 2024 reInvent reCap</a></li><li class="depth-0"><a href="#eks" data-for="eks">EKS</a></li><li class="depth-1"><a href="#hands-on-reference" data-for="hands-on-reference">Hands-On reference</a></li><li class="depth-1"><a href="#reference-blog" data-for="reference-blog">Reference Blog</a></li><li class="depth-1"><a href="#hands-on-demo" data-for="hands-on-demo">Hands-On Demo</a></li><li class="depth-2"><a href="#cloudshell" data-for="cloudshell">CloudShell</a></li><li class="depth-2"><a href="#nodepool" data-for="nodepool">NodePool</a></li><li class="depth-2"><a href="#node-auto-repair" data-for="node-auto-repair">Node Auto Repair</a></li><li class="depth-2"><a href="#cluster-dns" data-for="cluster-dns">Cluster DNS</a></li><li class="depth-0"><a href="#karpenter의-기능과-동작-원리에-대한-종합적-분석" data-for="karpenter의-기능과-동작-원리에-대한-종합적-분석">Karpenter의 기능과 동작 원리에 대한 종합적 분석</a></li><li class="depth-1"><a href="#1-아키텍처-설계-철학" data-for="1-아키텍처-설계-철학">1. 아키텍처 설계 철학</a></li><li class="depth-2"><a href="#11-그룹리스groupless-아키텍처" data-for="11-그룹리스groupless-아키텍처">1.1 그룹리스(Groupless) 아키텍처</a></li><li class="depth-2"><a href="#12-jitjust-in-time-프로비저닝" data-for="12-jitjust-in-time-프로비저닝">1.2 JIT(Just-In-Time) 프로비저닝</a></li><li class="depth-1"><a href="#2-핵심-기능-메커니즘" data-for="2-핵심-기능-메커니즘">2. 핵심 기능 메커니즘</a></li><li class="depth-2"><a href="#21-동적-노드-프로비저닝" data-for="21-동적-노드-프로비저닝">2.1 동적 노드 프로비저닝</a></li><li class="depth-2"><a href="#22-자동-노드-통합consolidation" data-for="22-자동-노드-통합consolidation">2.2 자동 노드 통합(Consolidation)</a></li><li class="depth-2"><a href="#23-노드-라이프사이클-관리" data-for="23-노드-라이프사이클-관리">2.3 노드 라이프사이클 관리</a></li><li class="depth-1"><a href="#3-성능-최적화-전략" data-for="3-성능-최적화-전략">3. 성능 최적화 전략</a></li><li class="depth-2"><a href="#31-병렬-스케줄링-메커니즘" data-for="31-병렬-스케줄링-메커니즘">3.1 병렬 스케줄링 메커니즘</a></li><li class="depth-2"><a href="#32-인스턴스-유형-최적화-알고리즘" data-for="32-인스턴스-유형-최적화-알고리즘">3.2 인스턴스 유형 최적화 알고리즘</a></li><li class="depth-1"><a href="#4-운영-관리-기능" data-for="4-운영-관리-기능">4. 운영 관리 기능</a></li><li class="depth-2"><a href="#41-다중-노드-풀-전략" data-for="41-다중-노드-풀-전략">4.1 다중 노드 풀 전략</a></li><li class="depth-2"><a href="#42-통합-모니터링-체계" data-for="42-통합-모니터링-체계">4.2 통합 모니터링 체계</a></li><li class="depth-1"><a href="#5-보안-및-거버넌스" data-for="5-보안-및-거버넌스">5. 보안 및 거버넌스</a></li><li class="depth-2"><a href="#51-iam-최소-권한-원칙" data-for="51-iam-최소-권한-원칙">5.1 IAM 최소 권한 원칙</a></li><li class="depth-2"><a href="#52-노드-격리-정책" data-for="52-노드-격리-정책">5.2 노드 격리 정책</a></li><li class="depth-1"><a href="#결론" data-for="결론">결론</a></li><li class="depth-0"><a href="#todo" data-for="todo">ToDo</a></li><li class="depth-1"><a href="#aurora-dsql" data-for="aurora-dsql">Aurora DSQL</a></li><li class="depth-1"><a href="#aws-verified-access" data-for="aws-verified-access">AWS Verified Access</a></li><li class="depth-1"><a href="#vpc-resource-gateway" data-for="vpc-resource-gateway">VPC Resource Gateway</a></li><li class="depth-1"><a href="#sagemaker--ai-recap" data-for="sagemaker--ai-recap">SageMaker &amp; AI reCap</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

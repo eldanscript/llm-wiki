@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Guide - ERP Migration 2163f648df90806da24bcdf07d5faa5e | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Guide - ERP Migration 2163f648df90806da24bcdf07d5faa5e | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Guide - ERP Migration 2163f648df90806da24bcdf07d5faa5e | LLM Wiki"/><meta name="twitter:description" content="📡 Guide - ERP Migration Migration Target Solution : 나온그룹웨어 / APLUS ERP (Naon Soft) Inventory List 애플리케이션(워크로드)ApplicationCPU (vCore)No."/><meta property="og:description" content="📡 Guide - ERP Migration Migration Target Solution : 나온그룹웨어 / APLUS ERP (Naon Soft) Inventory List 애플리케이션(워크로드)ApplicationCPU (vCore)No."/><meta property="og:image:alt" content="📡 Guide - ERP Migration Migration Target Solution : 나온그룹웨어 / APLUS ERP (Naon Soft) Inventory List 애플리케이션(워크로드)ApplicationCPU (vCore)No."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/guide---erp-migration-2163f648df90806da24bcdf07d5faa5e"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/guide---erp-migration-2163f648df90806da24bcdf07d5faa5e"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="📡 Guide - ERP Migration Migration Target Solution : 나온그룹웨어 / APLUS ERP (Naon Soft) Inventory List 애플리케이션(워크로드)ApplicationCPU (vCore)No."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/customerinaws/guide---erp-migration-2163f648df90806da24bcdf07d5faa5e" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1192" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1192" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/customerinaws/">CustomerInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Guide - ERP Migration 2163f648df90806da24bcdf07d5faa5e</a></div></nav><h1 class="article-title">Guide - ERP Migration 2163f648df90806da24bcdf07d5faa5e</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:14.947Z">2026년 6월 06일</time><span>18 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/attachments/met_silk_kashan_carpet-9.jpg" alt/></p>
+<p>📡</p>
+<h1 id="guide---erp-migration">Guide - ERP Migration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#guide---erp-migration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="migration-target">Migration Target<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#migration-target" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Solution : 나온그룹웨어 / APLUS ERP (Naon Soft)</p>
+</li>
+<li>
+<p>Inventory List</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td>애플리케이션(워크로드)Application</td><td>CPU (vCore)No. of Cores</td><td>CPU 최대 이용률CPU Peak Util.</td><td>메모리(GB)RAM(GB)</td><td>메모리 최대 이용률RAM Peak Util.</td><td>OSHost OS</td><td>설치된 DAS 용량(GB)DAS Capacity</td><td>DAS 실제 사용량(GB)DAS Used Space</td><td>할당된 SAN 용량(GB)SAN Capacity</td><td>SAN 실제 사용량(GB)SAN Used Space</td><td>서버 환경Environment</td><td>OS버전OS Version</td><td>CPU 평균 이용률CPU Avg. Util.</td><td>평균 메모리 이용률RAM Avg. Util.</td><td>웹서버 S/W</td><td>WAS S/W</td><td>DBMS S/W</td><td>기타 S/W</td><td>이중화방식</td><td>백업방식</td><td>백업용량(GB)</td><td>보관기간</td></tr><tr><td>그룹웨어 개발서버</td><td>48</td><td>2%</td><td>32GB</td><td>88%</td><td>Linux</td><td>888 GB</td><td>314 GB/ 40GB/gwstore 274GB</td><td></td><td></td><td>개발</td><td>Rocky Linux release 8.6 (Green Obsidian)</td><td>2%</td><td>88%</td><td>Apache 2.4</td><td>그룹웨어 Tomcat 8.5메신저 Tomcat 9.0</td><td>MariaDB 10.6.5</td><td>redis 4.0.9, rabbitmq 3.12.6</td><td>-</td><td>FileBackup</td><td>306</td><td>1년</td></tr><tr><td>그룹웨어(active)</td><td>48</td><td>5%</td><td>62GB</td><td>65%</td><td>Linux</td><td>446 GB</td><td>31GB</td><td>2000GB (/gwstore)</td><td>1200GB</td><td>운영</td><td>Rocky Linux release 8.6 (Green Obsidian)</td><td>5%</td><td>65%</td><td>Apache 2.4</td><td>그룹웨어 Tomcat 8.5</td><td>-</td><td>-</td><td>active-standby</td><td>FileBackup</td><td>1,144</td><td>1년</td></tr><tr><td>그룹웨어(stand by)</td><td>48</td><td>1%</td><td>62GB</td><td>7%</td><td>Linux</td><td>446 GB</td><td>28GB</td><td>2000GB (/gwstore)</td><td>1200GB</td><td>운영</td><td>Rocky Linux release 8.6 (Green Obsidian)</td><td>1%</td><td>7%</td><td>Apache 2.4</td><td>그룹웨어 Tomcat 8.5</td><td>-</td><td>이미지변환</td><td>active-standby</td><td>FileBackup</td><td>1,144</td><td>1년</td></tr><tr><td>메신저/이미지변환</td><td>48</td><td>2%</td><td>62GB</td><td>42%</td><td>Linux</td><td>446 GB</td><td>119 GB</td><td>2000GB (/gwstore)</td><td>199GB</td><td>운영</td><td>Rocky Linux release 8.6 (Green Obsidian)</td><td>2%</td><td>42%</td><td>Apache 2.4</td><td>메신저 Tomcat 9.0</td><td>-</td><td>redis 4.0.9, rabbitmq 3.12.6</td><td>-</td><td>FileBackup</td><td>309</td><td>1년</td></tr><tr><td>그룹웨어 DB(stand by)</td><td>48</td><td>3%</td><td>62GB</td><td>17%</td><td>Linux</td><td>414 GB</td><td>47 GB</td><td>894GB (/gwstore)</td><td>78GB</td><td>운영</td><td>Rocky Linux release 8.6 (Green Obsidian)</td><td>3%</td><td>17%</td><td>-</td><td>-</td><td>MariaDB 10.6.5</td><td>-</td><td>active-standby</td><td>FileBackup</td><td>112</td><td>1년</td></tr><tr><td>그룹웨어 DB(active)</td><td>48</td><td>5%</td><td>62GB</td><td>57%</td><td>Linux</td><td>414 GB</td><td>38 GB</td><td>894GB (/gwstore)</td><td>78GB</td><td>운영</td><td>Rocky Linux release 8.6 (Green Obsidian)</td><td>5%</td><td>57%</td><td>-</td><td>-</td><td>MariaDB 10.6.5</td><td>-</td><td>active-standby</td><td>FileBackup</td><td>103</td><td>1년</td></tr><tr><td>ERP 개발서버</td><td>32</td><td>100%</td><td>62 GB</td><td></td><td>Linux</td><td></td><td></td><td></td><td></td><td>개발</td><td>Rocky Linux 8.6</td><td>12%</td><td>37%</td><td>Apache 2.4.54</td><td>Tomcat 8.0.38</td><td>PostgreSQL 15.10</td><td></td><td></td><td>FileBackup</td><td>749</td><td>1년</td></tr><tr><td>ERP(active)</td><td>16</td><td>90%</td><td>62 GB</td><td></td><td>Linux</td><td></td><td></td><td></td><td></td><td>운영#1</td><td>Rocky Linux 8.6</td><td>0.18%</td><td>47%</td><td>Apache 2.4.54</td><td>Tomcat 8.0.38</td><td></td><td></td><td></td><td>FileBackup</td><td>512</td><td>1년</td></tr><tr><td>ERP(stand by)</td><td>16</td><td>90%</td><td>62 GB</td><td></td><td>Linux</td><td></td><td></td><td></td><td></td><td>운영#2</td><td>Rocky Linux 8.6</td><td>0.07%</td><td>2%</td><td>Apache 2.4.54</td><td>Tomcat 8.0.38</td><td></td><td></td><td></td><td>FileBackup</td><td>298</td><td>1년</td></tr><tr><td>ERP DB(active)</td><td>16</td><td>10%</td><td>125GB</td><td></td><td>Linux</td><td></td><td></td><td></td><td></td><td>운영DB#1</td><td>Rocky Linux 8.10</td><td>0.20%</td><td>3.60%</td><td></td><td></td><td>PostgreSQL 15.3</td><td></td><td></td><td>FileBackup</td><td>82</td><td>1년</td></tr><tr><td>ERP DB(stand by)</td><td>16</td><td>10%</td><td>125GB</td><td></td><td>Linux</td><td></td><td></td><td></td><td></td><td>운영DB#2</td><td>Rocky Linux 8.10</td><td></td><td></td><td></td><td></td><td>PostgreSQL 15.3</td><td></td><td></td><td>FileBackup</td><td>32</td><td>1년</td></tr></tbody></table></div>
+<p>Lift and Shift</p>
+<h1 id="나온소프트-그룹웨어erp-aws-ec2-lift-and-shift-마이그레이션-가이드">나온소프트 그룹웨어/ERP AWS EC2 Lift and Shift 마이그레이션 가이드<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#나온소프트-그룹웨어erp-aws-ec2-lift-and-shift-마이그레이션-가이드" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="1-마이그레이션-개요">1. 마이그레이션 개요<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-마이그레이션-개요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Lift and Shift 방식은 애플리케이션 코드를 변경하지 않고 온프레미스 환경에서 AWS 클라우드로 워크로드를 빠르게 이전하는 전략입니다[1]. 제공된 인벤토리 리스트를 기반으로 나온소프트의 그룹웨어와 APLUS ERP 시스템을 AWS EC2로 효율적으로 마이그레이션하기 위한 단계별 가이드를 제공합니다[2]. AWS Application Migration Service(MGN)를 활용하면 복잡한 수동 프로세스를 최소화하고 전체 서버를 자동으로 복제하여 마이그레이션 과정을 간소화할 수 있습니다[3].</p>
+<h2 id="2-인프라-분석-및-계획">2. 인프라 분석 및 계획<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-인프라-분석-및-계획" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="21-현재-인프라-구성-분석">2.1 현재 인프라 구성 분석<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-현재-인프라-구성-분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>제공된 인벤토리 리스트를 분석한 결과, 다음과 같은 서버 구성이 확인되었습니다[4]:</p>
+<ul>
+<li>
+<p><strong>그룹웨어 시스템</strong>: 개발서버 1대, 운영서버 2대(active-standby), 메신저/이미지변환 서버 1대, DB 서버 2대(active-standby)</p>
+</li>
+<li>
+<p><strong>ERP 시스템</strong>: 개발서버 1대, 운영서버 2대(active-standby), DB 서버 2대(active-standby)</p>
+</li>
+<li>
+<p><strong>운영체제</strong>: 모든 서버가 Rocky Linux 8.6/8.10 기반</p>
+</li>
+<li>
+<p><strong>애플리케이션</strong>: Apache, Tomcat, MariaDB, PostgreSQL 등 구성</p>
+</li>
+</ul>
+<h3 id="22-aws-인프라-계획">2.2 AWS 인프라 계획<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-aws-인프라-계획" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>온프레미스 환경의 서버 사양을 기반으로 AWS EC2 인스턴스 유형을 선택해야 합니다[5]. 인벤토리 분석 결과에 따른 권장 EC2 인스턴스 유형은 다음과 같습니다[6]:</p>
+<ul>
+<li>
+<p><strong>그룹웨어 서버(48 vCore)</strong>: m5.12xlarge 또는 c5.12xlarge (CPU 사용률이 낮으므로 m5 계열 권장)</p>
+</li>
+<li>
+<p><strong>그룹웨어 DB 서버(48 vCore)</strong>: r5.12xlarge (메모리 최적화 인스턴스)</p>
+</li>
+<li>
+<p><strong>ERP 서버(16/32 vCore)</strong>: m5.4xlarge 또는 c5.4xlarge</p>
+</li>
+<li>
+<p><strong>ERP DB 서버(16 vCore)</strong>: r5.4xlarge (메모리 최적화 인스턴스)</p>
+</li>
+</ul>
+<p>스토리지 구성은 EBS 볼륨을 사용하여 온프레미스 환경과 유사하게 구성할 수 있습니다[7].</p>
+<h2 id="3-aws-application-migration-servicemgn를-활용한-마이그레이션">3. AWS Application Migration Service(MGN)를 활용한 마이그레이션<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-aws-application-migration-servicemgn를-활용한-마이그레이션" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="31-사전-준비-단계">3.1 사전 준비 단계<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-사전-준비-단계" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p><strong>AWS 계정 및 IAM 설정</strong></p>
+<ul>
+<li>
+<p>AWS 계정 생성 및 필요한 권한을 가진 IAM 역할 설정[2]</p>
+</li>
+<li>
+<p>AWS MGN 서비스에 필요한 권한 부여[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>네트워크 연결 설정</strong></p>
+<ul>
+<li>
+<p>온프레미스와 AWS 간 안정적인 네트워크 연결 구성(AWS Direct Connect 또는 VPN)[1][8]</p>
+</li>
+<li>
+<p>적절한 대역폭 확보 (데이터 크기와 마이그레이션 일정 고려)[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>AWS MGN 초기화</strong></p>
+<ul>
+<li>
+<p>AWS 콘솔에서 Application Migration Service 초기화[2]</p>
+</li>
+<li>
+<p>복제 설정 템플릿 구성[2]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="32-마이그레이션-실행-단계">3.2 마이그레이션 실행 단계<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-마이그레이션-실행-단계" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p><strong>소스 서버에 복제 에이전트 설치</strong></p>
+<ul>
+<li>
+<p>각 소스 서버에 AWS MGN 복제 에이전트 설치[2]</p>
+</li>
+<li>
+<p>Linux 서버용 설치 명령어 실행[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>초기 데이터 복제</strong></p>
+<ul>
+<li>
+<p>에이전트 설치 후 초기 데이터 복제 시작[2]</p>
+</li>
+<li>
+<p>복제 상태 모니터링 및 문제 해결[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>테스트 및 검증</strong></p>
+<ul>
+<li>
+<p>테스트 인스턴스 시작 및 구성 검증[2]</p>
+</li>
+<li>
+<p>애플리케이션 기능 테스트 수행[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>전환 계획 및 실행</strong></p>
+<ul>
+<li>
+<p>전환 일정 수립 및 다운타임 최소화 계획[1]</p>
+</li>
+<li>
+<p>최종 전환 실행 및 검증[2]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="4-데이터베이스-마이그레이션-전략">4. 데이터베이스 마이그레이션 전략<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-데이터베이스-마이그레이션-전략" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="41-mariadb-마이그레이션-그룹웨어">4.1 MariaDB 마이그레이션 (그룹웨어)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-mariadb-마이그레이션-그룹웨어" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>그룹웨어 시스템의 MariaDB는 다음과 같은 방법으로 마이그레이션할 수 있습니다:</p>
+<ol>
+<li>
+<p><strong>AWS MGN을 통한 전체 서버 마이그레이션</strong></p>
+<ul>
+<li>
+<p>서버 전체를 복제하여 데이터베이스 포함 마이그레이션[2]</p>
+</li>
+<li>
+<p>기존 설정 및 구성 유지[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>고가용성 구성 설정</strong></p>
+<ul>
+<li>
+<p>EC2 인스턴스에서 MariaDB Galera Cluster 구성으로 고가용성 확보[9]</p>
+</li>
+<li>
+<p>EBS Multi-Attach 기능을 활용한 단일 AZ 내 고가용성 구성[10]</p>
+</li>
+<li>
+<p>기존 active-standby 구성 유지를 위한 설정[11]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="42-postgresql-마이그레이션-erp">4.2 PostgreSQL 마이그레이션 (ERP)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#42-postgresql-마이그레이션-erp" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>ERP 시스템의 PostgreSQL 데이터베이스는 다음과 같은 방법으로 마이그레이션할 수 있습니다:</p>
+<ol>
+<li>
+<p><strong>AWS MGN을 통한 전체 서버 마이그레이션</strong></p>
+<ul>
+<li>
+<p>서버 전체를 복제하여 데이터베이스 포함 마이그레이션[2]</p>
+</li>
+<li>
+<p>기존 설정 및 구성 유지[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>네이티브 PostgreSQL 도구를 활용한 마이그레이션</strong></p>
+<ul>
+<li>
+<p>pg_dump 및 pg_restore 도구를 사용한 데이터베이스 마이그레이션[12]</p>
+</li>
+<li>
+<p>기존 active-standby 구성 유지를 위한 설정[12]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="5-스토리지-및-백업-전략">5. 스토리지 및 백업 전략<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-스토리지-및-백업-전략" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="51-스토리지-구성">5.1 스토리지 구성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#51-스토리지-구성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>인벤토리 리스트에 기반한 스토리지 구성 방안은 다음과 같습니다[7]:</p>
+<ol>
+<li>
+<p><strong>루트 볼륨</strong>: gp3 EBS 볼륨 (OS 및 애플리케이션용)</p>
+</li>
+<li>
+<p><strong>데이터 볼륨</strong>:</p>
+<ul>
+<li>
+<p>그룹웨어: io2 또는 gp3 EBS 볼륨 (2TB /gwstore 볼륨)</p>
+</li>
+<li>
+<p>ERP: io2 또는 gp3 EBS 볼륨 (데이터 저장용)</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>고성능 요구사항</strong>: 높은 IOPS가 필요한 데이터베이스 서버는 io2 EBS 볼륨 권장[7]</p>
+</li>
+</ol>
+<h3 id="52-백업-전략">5.2 백업 전략<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#52-백업-전략" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>AWS 환경에서의 효과적인 백업 전략은 다음과 같습니다[13]:</p>
+<ol>
+<li>
+<p><strong>AWS Backup 서비스 활용</strong></p>
+<ul>
+<li>
+<p>자동화된 백업 일정 설정[13]</p>
+</li>
+<li>
+<p>백업 보존 정책 설정 (인벤토리 리스트 기준 1년)[4][13]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>다중 리전 재해 복구 계획</strong></p>
+<ul>
+<li>
+<p>백업 데이터의 다중 리전 복제 구성[13]</p>
+</li>
+<li>
+<p>리전 장애 시 신속한 복구 가능[13]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>스냅샷 수명 주기 관리</strong></p>
+<ul>
+<li>
+<p>비용 최적화를 위한 스냅샷 수명 주기 정책 설정[13]</p>
+</li>
+<li>
+<p>백업 데이터 암호화 적용[13]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="6-네트워크-및-보안-구성">6. 네트워크 및 보안 구성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-네트워크-및-보안-구성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="61-vpc-및-서브넷-구성">6.1 VPC 및 서브넷 구성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#61-vpc-및-서브넷-구성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>AWS 환경에서의 네트워크 구성은 다음과 같이 설계할 수 있습니다[8]:</p>
+<ol>
+<li>
+<p><strong>VPC 설계</strong></p>
+<ul>
+<li>
+<p>프라이빗 서브넷에 애플리케이션 및 데이터베이스 서버 배치[8]</p>
+</li>
+<li>
+<p>퍼블릭 서브넷에 로드 밸런서 및 배스천 호스트 배치[8]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>보안 그룹 구성</strong></p>
+<ul>
+<li>
+<p>서버 유형별 적절한 보안 그룹 설정[8]</p>
+</li>
+<li>
+<p>최소 권한 원칙에 따른 네트워크 액세스 제어[8]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="62-고가용성-구성">6.2 고가용성 구성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#62-고가용성-구성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>인벤토리 리스트에 나타난 active-standby 구성을 AWS 환경에서도 유지하기 위한 방안은 다음과 같습니다[11][10]:</p>
+<ol>
+<li>
+<p><strong>다중 가용 영역 배포</strong></p>
+<ul>
+<li>
+<p>서버를 여러 가용 영역에 분산 배치하여 가용성 향상[10]</p>
+</li>
+<li>
+<p>자동 장애 조치 메커니즘 구성[11]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>로드 밸런서 활용</strong></p>
+<ul>
+<li>
+<p>Application Load Balancer 또는 Network Load Balancer를 통한 트래픽 분산[1]</p>
+</li>
+<li>
+<p>상태 확인을 통한 장애 서버 자동 감지[1]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="7-마이그레이션-실행-계획">7. 마이그레이션 실행 계획<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7-마이그레이션-실행-계획" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="71-단계별-마이그레이션-계획">7.1 단계별 마이그레이션 계획<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#71-단계별-마이그레이션-계획" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>전체 시스템을 한 번에 마이그레이션하는 것보다 단계적으로 진행하는 것이 위험을 최소화할 수 있습니다[2]:</p>
+<ol>
+<li>
+<p><strong>1단계: 개발 환경 마이그레이션</strong></p>
+<ul>
+<li>
+<p>그룹웨어 개발서버 및 ERP 개발서버 마이그레이션[4][2]</p>
+</li>
+<li>
+<p>기능 검증 및 문제점 파악[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>2단계: 비핵심 시스템 마이그레이션</strong></p>
+<ul>
+<li>
+<p>메신저/이미지변환 서버 마이그레이션[4][2]</p>
+</li>
+<li>
+<p>기능 검증 및 문제점 파악[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>3단계: 핵심 시스템 마이그레이션</strong></p>
+<ul>
+<li>
+<p>그룹웨어 운영서버 및 DB 서버 마이그레이션[4][2]</p>
+</li>
+<li>
+<p>ERP 운영서버 및 DB 서버 마이그레이션[4][2]</p>
+</li>
+<li>
+<p>전체 시스템 통합 테스트[2]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="72-마이그레이션-테스트-및-검증">7.2 마이그레이션 테스트 및 검증<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#72-마이그레이션-테스트-및-검증" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>마이그레이션 후 시스템 검증을 위한 테스트 계획은 다음과 같습니다[2]:</p>
+<ol>
+<li>
+<p><strong>기능 테스트</strong></p>
+<ul>
+<li>
+<p>모든 애플리케이션 기능이 정상 작동하는지 확인[2]</p>
+</li>
+<li>
+<p>사용자 시나리오 기반 테스트 수행[2]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>성능 테스트</strong></p>
+<ul>
+<li>
+<p>마이그레이션 전후 성능 비교[2]</p>
+</li>
+<li>
+<p>필요시 인스턴스 유형 조정[14]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>장애 복구 테스트</strong></p>
+<ul>
+<li>
+<p>장애 상황 시뮬레이션 및 복구 절차 검증[2]</p>
+</li>
+<li>
+<p>백업 및 복원 기능 테스트[13]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="8-마이그레이션-후-최적화">8. 마이그레이션 후 최적화<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8-마이그레이션-후-최적화" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="81-비용-최적화">8.1 비용 최적화<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#81-비용-최적화" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>AWS 환경에서의 비용 최적화 방안은 다음과 같습니다[14]:</p>
+<ol>
+<li>
+<p><strong>인스턴스 크기 최적화</strong></p>
+<ul>
+<li>
+<p>실제 사용량에 기반한 인스턴스 크기 조정[14]</p>
+</li>
+<li>
+<p>4주 동안 CPU 및 메모리 사용률이 40% 미만인 경우 인스턴스 다운사이징 고려[14]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>예약 인스턴스 활용</strong></p>
+<ul>
+<li>
+<p>안정적인 워크로드에 대해 예약 인스턴스 구매로 비용 절감[14]</p>
+</li>
+<li>
+<p>사용 패턴에 따른 적절한 예약 인스턴스 유형 선택[14]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="82-운영-최적화">8.2 운영 최적화<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#82-운영-최적화" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>AWS 환경에서의 효율적인 운영을 위한 방안은 다음과 같습니다[1][2]:</p>
+<ol>
+<li>
+<p><strong>모니터링 및 알림 설정</strong></p>
+<ul>
+<li>
+<p>CloudWatch를 활용한 시스템 모니터링 구성[1]</p>
+</li>
+<li>
+<p>주요 지표에 대한 알림 설정[1]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>자동화 구성</strong></p>
+<ul>
+<li>
+<p>인프라스트럭처 코드화(IaC)를 통한 환경 관리[15]</p>
+</li>
+<li>
+<p>자동 확장 그룹 설정으로 부하에 따른 자동 확장/축소[14]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Rocky Linux 최적화</strong></p>
+<ul>
+<li>
+<p>AWS MGN의 CentOS에서 Rocky Linux로의 변환 기능 활용 (필요시)[16]</p>
+</li>
+<li>
+<p>AWS 환경에 최적화된 설정 적용[16]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="9-마이그레이션-체크리스트">9. 마이그레이션 체크리스트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#9-마이그레이션-체크리스트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="91-사전-준비-체크리스트">9.1 사전 준비 체크리스트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#91-사전-준비-체크리스트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AWS 계정 및 IAM 권한 설정 완료[2]</p>
+</li>
+<li>
+<p>네트워크 연결 구성 및 테스트 완료[1][8]</p>
+</li>
+<li>
+<p>AWS MGN 서비스 초기화 및 설정 완료[2]</p>
+</li>
+<li>
+<p>마이그레이션 일정 및 담당자 지정[2]</p>
+</li>
+<li>
+<p>백업 계획 수립 및 테스트 완료[13]</p>
+</li>
+</ul>
+<h3 id="92-마이그레이션-실행-체크리스트">9.2 마이그레이션 실행 체크리스트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#92-마이그레이션-실행-체크리스트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>소스 서버에 복제 에이전트 설치 완료[2]</p>
+</li>
+<li>
+<p>초기 데이터 복제 완료 및 검증[2]</p>
+</li>
+<li>
+<p>테스트 인스턴스 생성 및 기능 검증 완료[2]</p>
+</li>
+<li>
+<p>네트워크 및 보안 설정 구성 완료[8]</p>
+</li>
+<li>
+<p>최종 전환 계획 수립 및 승인 완료[2]</p>
+</li>
+</ul>
+<h3 id="93-마이그레이션-후-체크리스트">9.3 마이그레이션 후 체크리스트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#93-마이그레이션-후-체크리스트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>모든 애플리케이션 기능 정상 작동 확인[2]</p>
+</li>
+<li>
+<p>성능 모니터링 설정 및 검증 완료[1]</p>
+</li>
+<li>
+<p>백업 및 복구 절차 테스트 완료[13]</p>
+</li>
+<li>
+<p>운영 문서 업데이트 및 교육 완료[2]</p>
+</li>
+<li>
+<p>비용 최적화 방안 검토 및 적용[14]</p>
+</li>
+</ul>
+<h2 id="10-결론">10. 결론<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#10-결론" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>제공된 인벤토리 리스트를 기반으로 AWS Application Migration Service(MGN)를 활용한 Lift and Shift 방식의 마이그레이션 계획을 수립하였습니다[1][2]. 이 계획은 현재 온프레미스 환경의 구성을 최대한 유지하면서 AWS 클라우드의 이점을 활용할 수 있도록 설계되었습니다[1]. 단계적인 마이그레이션 접근법과 철저한 테스트를 통해 위험을 최소화하고 성공적인 마이그레이션을 달성할 수 있습니다[2]. 마이그레이션 후에는 AWS의 다양한 서비스와 기능을 활용하여 시스템의 가용성, 확장성, 보안성을 더욱 향상시킬 수 있을 것입니다[3].</p>
+<p>Sources<br/>
+[1] AWS Migration – Challenges and Mitigations in a Lift-and-Shift … <a href="https://www.infosys.com/iki/techcompass/aws-migration.html" class="external external-link">https://www.infosys.com/iki/techcompass/aws-migration.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] AWS Application Migration Service best practices <a href="https://aws.amazon.com/blogs/mt/aws-application-migration-service-best-practices/" class="external external-link">https://aws.amazon.com/blogs/mt/aws-application-migration-service-best-practices/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[3] AWS Application Migration Service <a href="https://aws.amazon.com/application-migration-service/" class="external external-link">https://aws.amazon.com/application-migration-service/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[4] file.pdf <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/24184870/99577444-da3e-48ad-9a46-872793aaaa3c/file.pdf" class="external external-link">https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/24184870/99577444-da3e-48ad-9a46-872793aaaa3c/file.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[5] What is an Amazon EC2 Instance? Types, Features and Pricing <a href="https://www.techtarget.com/searchaws/definition/Amazon-EC2-instances" class="external external-link">https://www.techtarget.com/searchaws/definition/Amazon-EC2-instances<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[6] [PDF] Amazon EC2 - Instance Types <a href="https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-types.pdf" class="external external-link">https://docs.aws.amazon.com/ec2/latest/instancetypes/ec2-types.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[7] Storage options for your Amazon EC2 instances - AWS Documentation <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html" class="external external-link">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[8] Setting up a network for homogeneous data migrations in AWS DMS <a href="https://docs.aws.amazon.com/dms/latest/userguide/dm-network.html" class="external external-link">https://docs.aws.amazon.com/dms/latest/userguide/dm-network.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[9] High Availability on AWS with MariaDB Galera Cluster and MariaDB … <a href="https://mariadb.com/resources/blog/high-availability-on-aws-with-mariadb-galera-cluster-and-mariadb-maxscale/" class="external external-link">https://mariadb.com/resources/blog/high-availability-on-aws-with-mariadb-galera-cluster-and-mariadb-maxscale/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[10] Deploying self-managed MariaDB high availability using Amazon … <a href="https://aws.amazon.com/blogs/storage/deploying-self-managed-mariadb-high-availability-using-amazon-ebs-multi-attach/" class="external external-link">https://aws.amazon.com/blogs/storage/deploying-self-managed-mariadb-high-availability-using-amazon-ebs-multi-attach/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[11] Ensure Amazon MQ brokers are using the active/standby … <a href="https://www.stream.security/rules/ensure-amazon-mq-brokers-are-using-the-active-standby-deployment-mode" class="external external-link">https://www.stream.security/rules/ensure-amazon-mq-brokers-are-using-the-active-standby-deployment-mode<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[12] Migrate an on-premises PostgreSQL database to Aurora PostgreSQL <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-an-on-premises-postgresql-database-to-aurora-postgresql.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-an-on-premises-postgresql-database-to-aurora-postgresql.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[13] AWS Data Backup Best Practices + (Risks and Limitations) - HYCU <a href="https://www.hycu.com/blog/aws-backup-best-practices" class="external external-link">https://www.hycu.com/blog/aws-backup-best-practices<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[14] Tips for Right Sizing - AWS Documentation <a href="https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-right-sizing/tips-for-right-sizing-your-workloads.html" class="external external-link">https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-right-sizing/tips-for-right-sizing-your-workloads.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[15] Lift and shift migration | AWS For Beginners - YouTube <a href="https://www.youtube.com/watch?v=miBw-_aTW40" class="external external-link">https://www.youtube.com/watch?v=miBw-_aTW40<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[16] AWS MGN Update – Configure DR, Convert CentOS Linux to Rocky … <a href="https://aws.amazon.com/blogs/aws/aws-mgn-update-configure-dr-convert-centos-linux-to-rocky-linux-and-convert-suse-linux-subscription/" class="external external-link">https://aws.amazon.com/blogs/aws/aws-mgn-update-configure-dr-convert-centos-linux-to-rocky-linux-and-convert-suse-linux-subscription/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[17] Migrating an on-premises database to Amazon EC2 - Microsoft SQL … <a href="https://docs.aws.amazon.com/sql-server-ec2/latest/userguide/migrate-sql-from-on-premises.html" class="external external-link">https://docs.aws.amazon.com/sql-server-ec2/latest/userguide/migrate-sql-from-on-premises.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[18] Migrating to MariaDB from PostgreSQL <a href="https://mariadb.com/docs/server/server-management/install-and-upgrade-mariadb/migrating-to-mariadb/migrating-to-mariadb-from-postgresql" class="external external-link">https://mariadb.com/docs/server/server-management/install-and-upgrade-mariadb/migrating-to-mariadb/migrating-to-mariadb-from-postgresql<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[19] Migrating a MariaDB Database to Amazon RDS for MySQL or … <a href="https://docs.aws.amazon.com/ko_kr/dms/latest/sbs/chap-mariadb2auroramysql.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dms/latest/sbs/chap-mariadb2auroramysql.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[20] How to Make Your MySQL or MariaDB Database Highly Available … <a href="https://severalnines.com/blog/how-make-mysql-mariadb-database-highly-available-aws-google-cloud/" class="external external-link">https://severalnines.com/blog/how-make-mysql-mariadb-database-highly-available-aws-google-cloud/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[21] Generating Amazon EC2 estimates - AWS Pricing Calculator <a href="https://docs.aws.amazon.com/pricing-calculator/latest/userguide/ec2-estimates.html" class="external external-link">https://docs.aws.amazon.com/pricing-calculator/latest/userguide/ec2-estimates.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[22] AWS Application Migration Service – 리프트 앤 시프트 마이그레이션 … <a href="https://aws.amazon.com/ko/blogs/korea/how-to-use-the-new-aws-application-migration-service-for-lift-and-shift-migrations/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/how-to-use-the-new-aws-application-migration-service-for-lift-and-shift-migrations/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[23] About the migration strategies - AWS Prescriptive Guidance <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/large-migration-guide/migration-strategies.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[24] The Lift and Shift: Rehosting Servers to AWS during a Cloud … <a href="https://aws.amazon.com/blogs/enterprise-strategy/the-lift-and-shift-rehosting-servers-to-aws-during-a-cloud-transformation/" class="external external-link">https://aws.amazon.com/blogs/enterprise-strategy/the-lift-and-shift-rehosting-servers-to-aws-during-a-cloud-transformation/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[25] Amazon EC2 Instance Types - Compute - AWS <a href="https://aws.amazon.com/ec2/instance-types/" class="external external-link">https://aws.amazon.com/ec2/instance-types/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[26] Amazon EC2 instance types - AWS Documentation <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html" class="external external-link">https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[27] 클라우드 컴퓨팅 인스턴스 - Amazon EC2 인스턴스 유형 <a href="https://aws.amazon.com/ko/ec2/instance-types/" class="external external-link">https://aws.amazon.com/ko/ec2/instance-types/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[28] Amazon EC2 Instance Comparison <a href="https://instances.vantage.sh/" class="external external-link">https://instances.vantage.sh<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[29] Migrate an on-premises MariaDB database to Amazon RDS for … <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-an-on-premises-mariadb-database-to-amazon-rds-for-mariadb-using-native-tools.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/migrate-an-on-premises-mariadb-database-to-amazon-rds-for-mariadb-using-native-tools.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[30] High Availability — MariaDB Documentation <a href="https://mariadb.com/docs/server/architecture/use-cases/high-availability/" class="external external-link">https://mariadb.com/docs/server/architecture/use-cases/high-availability/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-991" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#guide---erp-migration" data-for="guide---erp-migration">Guide - ERP Migration</a></li><li class="depth-0"><a href="#migration-target" data-for="migration-target">Migration Target</a></li><li class="depth-0"><a href="#나온소프트-그룹웨어erp-aws-ec2-lift-and-shift-마이그레이션-가이드" data-for="나온소프트-그룹웨어erp-aws-ec2-lift-and-shift-마이그레이션-가이드">나온소프트 그룹웨어/ERP AWS EC2 Lift and Shift 마이그레이션 가이드</a></li><li class="depth-1"><a href="#1-마이그레이션-개요" data-for="1-마이그레이션-개요">1. 마이그레이션 개요</a></li><li class="depth-1"><a href="#2-인프라-분석-및-계획" data-for="2-인프라-분석-및-계획">2. 인프라 분석 및 계획</a></li><li class="depth-2"><a href="#21-현재-인프라-구성-분석" data-for="21-현재-인프라-구성-분석">2.1 현재 인프라 구성 분석</a></li><li class="depth-2"><a href="#22-aws-인프라-계획" data-for="22-aws-인프라-계획">2.2 AWS 인프라 계획</a></li><li class="depth-1"><a href="#3-aws-application-migration-servicemgn를-활용한-마이그레이션" data-for="3-aws-application-migration-servicemgn를-활용한-마이그레이션">3. AWS Application Migration Service(MGN)를 활용한 마이그레이션</a></li><li class="depth-2"><a href="#31-사전-준비-단계" data-for="31-사전-준비-단계">3.1 사전 준비 단계</a></li><li class="depth-2"><a href="#32-마이그레이션-실행-단계" data-for="32-마이그레이션-실행-단계">3.2 마이그레이션 실행 단계</a></li><li class="depth-1"><a href="#4-데이터베이스-마이그레이션-전략" data-for="4-데이터베이스-마이그레이션-전략">4. 데이터베이스 마이그레이션 전략</a></li><li class="depth-2"><a href="#41-mariadb-마이그레이션-그룹웨어" data-for="41-mariadb-마이그레이션-그룹웨어">4.1 MariaDB 마이그레이션 (그룹웨어)</a></li><li class="depth-2"><a href="#42-postgresql-마이그레이션-erp" data-for="42-postgresql-마이그레이션-erp">4.2 PostgreSQL 마이그레이션 (ERP)</a></li><li class="depth-1"><a href="#5-스토리지-및-백업-전략" data-for="5-스토리지-및-백업-전략">5. 스토리지 및 백업 전략</a></li><li class="depth-2"><a href="#51-스토리지-구성" data-for="51-스토리지-구성">5.1 스토리지 구성</a></li><li class="depth-2"><a href="#52-백업-전략" data-for="52-백업-전략">5.2 백업 전략</a></li><li class="depth-1"><a href="#6-네트워크-및-보안-구성" data-for="6-네트워크-및-보안-구성">6. 네트워크 및 보안 구성</a></li><li class="depth-2"><a href="#61-vpc-및-서브넷-구성" data-for="61-vpc-및-서브넷-구성">6.1 VPC 및 서브넷 구성</a></li><li class="depth-2"><a href="#62-고가용성-구성" data-for="62-고가용성-구성">6.2 고가용성 구성</a></li><li class="depth-1"><a href="#7-마이그레이션-실행-계획" data-for="7-마이그레이션-실행-계획">7. 마이그레이션 실행 계획</a></li><li class="depth-2"><a href="#71-단계별-마이그레이션-계획" data-for="71-단계별-마이그레이션-계획">7.1 단계별 마이그레이션 계획</a></li><li class="depth-2"><a href="#72-마이그레이션-테스트-및-검증" data-for="72-마이그레이션-테스트-및-검증">7.2 마이그레이션 테스트 및 검증</a></li><li class="depth-1"><a href="#8-마이그레이션-후-최적화" data-for="8-마이그레이션-후-최적화">8. 마이그레이션 후 최적화</a></li><li class="depth-2"><a href="#81-비용-최적화" data-for="81-비용-최적화">8.1 비용 최적화</a></li><li class="depth-2"><a href="#82-운영-최적화" data-for="82-운영-최적화">8.2 운영 최적화</a></li><li class="depth-1"><a href="#9-마이그레이션-체크리스트" data-for="9-마이그레이션-체크리스트">9. 마이그레이션 체크리스트</a></li><li class="depth-2"><a href="#91-사전-준비-체크리스트" data-for="91-사전-준비-체크리스트">9.1 사전 준비 체크리스트</a></li><li class="depth-2"><a href="#92-마이그레이션-실행-체크리스트" data-for="92-마이그레이션-실행-체크리스트">9.2 마이그레이션 실행 체크리스트</a></li><li class="depth-2"><a href="#93-마이그레이션-후-체크리스트" data-for="93-마이그레이션-후-체크리스트">9.3 마이그레이션 후 체크리스트</a></li><li class="depth-1"><a href="#10-결론" data-for="10-결론">10. 결론</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

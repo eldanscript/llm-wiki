@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>DataBase b42150cefa724b6ea487a987ac244203 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="DataBase b42150cefa724b6ea487a987ac244203 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="DataBase b42150cefa724b6ea487a987ac244203 | LLM Wiki"/><meta name="twitter:description" content="♠️ DataBase Reference 개념에 대한 부분 DB transaction에서의 ACID에 대해 설명할 수 있는지? DB transaction이 안전하게 수행되는 것을 보장하기 위한 성질 Atomacity : ensures all-or-none rule for database modifications Consistency : Data values are consistent across the database Isolation : Two transactions are said to be independent of one an..."/><meta property="og:description" content="♠️ DataBase Reference 개념에 대한 부분 DB transaction에서의 ACID에 대해 설명할 수 있는지? DB transaction이 안전하게 수행되는 것을 보장하기 위한 성질 Atomacity : ensures all-or-none rule for database modifications Consistency : Data values are consistent across the database Isolation : Two transactions are said to be independent of one an..."/><meta property="og:image:alt" content="♠️ DataBase Reference 개념에 대한 부분 DB transaction에서의 ACID에 대해 설명할 수 있는지? DB transaction이 안전하게 수행되는 것을 보장하기 위한 성질 Atomacity : ensures all-or-none rule for database modifications Consistency : Data values are consistent across the database Isolation : Two transactions are said to be independent of one an..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/database-b42150cefa724b6ea487a987ac244203"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/database-b42150cefa724b6ea487a987ac244203"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="♠️ DataBase Reference 개념에 대한 부분 DB transaction에서의 ACID에 대해 설명할 수 있는지? DB transaction이 안전하게 수행되는 것을 보장하기 위한 성질 Atomacity : ensures all-or-none rule for database modifications Consistency : Data values are consistent across the database Isolation : Two transactions are said to be independent of one an..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/database-b42150cefa724b6ea487a987ac244203" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2137" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2137" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>DataBase b42150cefa724b6ea487a987ac244203</a></div></nav><h1 class="article-title">DataBase b42150cefa724b6ea487a987ac244203</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.480Z">2026년 6월 06일</time><span>19 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>♠️</p>
+<h1 id="database">DataBase<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#database" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="reference">Reference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="개념에-대한-부분">개념에 대한 부분<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#개념에-대한-부분" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p><strong><span class="text-highlight">DB transaction에서의 ACID에 대해 설명할 수 있는지?</span></strong></p>
+<ul>
+<li>
+<p>DB transaction이 안전하게 수행되는 것을 보장하기 위한 성질</p>
+</li>
+<li>
+<p>Atomacity : ensures all-or-none rule for database modifications</p>
+</li>
+<li>
+<p>Consistency : Data values are consistent across the database</p>
+</li>
+<li>
+<p>Isolation : Two transactions are said to be independent of one another</p>
+</li>
+<li>
+<p>Durability : Data is not lost even at the time of server failure</p>
+</li>
+</ul>
+</li>
+<li>
+<p>분산 시스템에서의 BASE에 대해 설명할 수 있는지? ACID와의 차이는?</p>
+<ul>
+<li>
+<p>Basically Available : system is guaranteed to be available, 가용성 중시</p>
+</li>
+<li>
+<p>Soft state : state of the system may change over time, even without input, 사용자가 관리(refresh, modify)하지 않으면 Data가 expire 될 수도 있음</p>
+</li>
+<li>
+<p>Eventually Consistency : system will become consistent over time</p>
+</li>
+<li>
+<p>BASE는 NoSQL에 적용, ACID는 RDBMS에 사용</p>
+</li>
+<li>
+<p>BASE는 System 전반에 대한 특성, ACID는 Transaction에 한정</p>
+</li>
+<li>
+<p>BASE는 약한 일관성, ACID는 강한 일관성</p>
+</li>
+<li>
+<p>BASE는 시스템 성능에 초점, ACID는 데이터 관리에 초점</p>
+</li>
+<li>
+<p>BASE는 query 설계가 중요, ACID는 Table 설계가 중요</p>
+</li>
+</ul>
+</li>
+<li>
+<p>RDBMS와 NoSQL의 차이는 무엇이고 어떤 경우에 사용하면 좋을지?</p>
+<ul>
+<li>
+<p>DBMS는 사용자와 데이터베이스 사이에서 사용자의 요구에 따라 정보를 생성해주고 데이터베이스를 관리해 주는 소프트웨어라고 설명을 했습니다. 또한 기존의 RDBMS에서의 저장 방식은 SQL에 의해 저장되고 있으며 정해진 스키마에 따라 데이터를 저장하여야 합니다. RDBMS에는 DBMS앞에 R이 붙어 있습니다. 이 R은(Relational)의 약자로 RDBMS는 관계형 데이터베이스 관리 시스템을 의미합니다. 이름과 같이 RDBMS는 RDB를 관리하는 시스템이며</p>
+</li>
+<li>
+<p>RDB는 관계형 데이터 모델을 기초로 두고 모든 데이터를 2차원 테이블 형태로 표현하는 데이터베이스입니다</p>
+</li>
+<li>
+<p>Non-RDBMS의 총칭이다. 단순한 data를 대용량으로 저장할 수 있고 빠른 성능을 제공하는 database이다. Data model은 key:value 형태의 저장 구조를 가지며 data간의 관계는 지원하지 않는다. data를 빠르게 읽고 쓰는데 최적화 되어 있다.</p>
+</li>
+<li>
+<p>Data 간의 관계를 정의하지 않고 peta byte급 대용량 data를 저장할 수 있다. data를 고성능 머신에 저장하는 것이 아니라 일반적인 서버 수십 대를 연결하여 저장, 처리하는 분산형 구조를 가진다. 분산형 구조를 통해 특정 서버에 장애가 났을 때에도 data 유실이나 서비스 중지가 발생하지 않는다. Table의 schema가 유동적이다.</p>
+</li>
+<li>
+<p>NoSQL의 data 저장 구조는 Key/Value, Ordered Key/Value, Document Key/Value로 분류된다. Key안에 Column과 Value 조합으로 된 여러 개의 Field (Column Family) 개념을 적용하여 Value를 저장한다. Key field는 RDBMS의 Primary Key, Column Field는 RDBMS의 일반 data field와 유사하다. Ordered Key/Value는 내부적으로 Key를 순서로 정렬하여 저장한다. Document Key/Value는 XML,JSON,YAML과 같은 구조화된 data type을 Value로 저장하는 것으로 복잡한 계층 구조를 표현할 수 있다.</p>
+</li>
+<li>
+<p>Redis는 Key/Value Store (KVS)를, MongoDB는 Document Key/Value를 사용한다.</p>
+</li>
+<li>
+<p>NoSQL : Key-Value, Document, Wide Column, Graph</p>
+</li>
+</ul>
+</li>
+<li>
+<p>RDBMS와 NoSQL 장단점</p>
+<ul>
+<li>
+<p>RDBMS는 위에서 설명을 하였듯이 정해진 스키마에 따라 데이터를 저장하여야 하므로 명확한 데이터 구조를 보장, 각 데이터를 중복없이 한 번만 저장</p>
+</li>
+<li>
+<p>테이블간테이블 간 관계를 맺고 있어 시스템이 커질 경우 JOIN문이 많은 복잡한 쿼리가 만들어질 수 있습니다. 성능 향상을 위해서는 서버의 성능을 향상 시켜야하는 Scale-up만을 지원합니다. 이로 인해 비용이 기하급수적으로 늘어날 수 있습니다. 스키마로 인해 데이터가 유연하지 못합니다. 나중에 스키마가 변경 될 경우 번거롭고 어렵습니다.</p>
+</li>
+<li>
+<p>NoSQL에서는 스키마가 없기 때문에 유연하며 자유로운 데이터 구조를 가질 수 있습니다. 언제든 저장된 데이터를 조정하고 새로운 필드를 추가할 수 있습니다. 데이터 분산이 용이하며 성능 향상을 위한 Saclue-up 뿐만이 아닌 Scale-out 또한 가능.</p>
+</li>
+<li>
+<p>데이터 중복이 발생할 수 있으며 중복된 데이터가 변경 될 경우 수정을 모든 컬렉션에서 수행을 해야 합니다. 스키마가 존재하지 않기에 명확한 데이터 구조를 보장하지 않으며 데이터 구조 결정가 어려울 수 있습니다.</p>
+</li>
+<li>
+<p>RDBMS는 데이터 구조가 명확하며 변경 될 여지가 없으며 명확한 스키마가 중요한 경우 사용하는 것이 좋습니다. 또한 중복된 데이터가 없어(데이터 무결성) 변경이 용이하기 때문에 관계를 맺고 있는 데이터가 자주 변경이 이루어지는 시스템에 적합합니다.</p>
+</li>
+<li>
+<p>NoSQL은 정확한 데이터 구조를 알 수 없고 데이터가 변경/확장이 될 수 있는 경우에 사용하는 것이 좋습니다. 또한 단점에서도 명확하듯이 데이터 중복이 발생할 수 있으며 중복된 데이터가 변경될 시에는 모든 컬렉션에서 수정을 해야 합니다. 이러한 특징들을 기반으로 Update가 많이 이루어지지 않는 시스템이 좋으며 또한 Scale-out이 가능하다는 장점을 활용해 막대한 데이터를 저장해야 해서 Database를 Scale-Out를 해야 되는 시스템에 적합합니다. 데이터 정합성이나 일관성이 최 우선 순위가 아닌 경우나 데이터가 너무 너무 많은 경우</p>
+</li>
+<li>
+<p>만약 서비스 구성하는데 비관계형 데이터베이스를 써야 하는 이유를 정확하게 알지 못하면 관계형 데이터베이스를 사용하는 것을 일단 추천합니다. 그리고 기존에 하나인 데이터베이스에서 영화 데이터와 시상 데이터를 찢어서 사용한다고 하면 분명히 두 테이블관 관계가 있는 것으로 보입니다. 만약에 관계형 데이터 형태인데 무리하게 NoSQL를 사용하려고 하면 분명히 나중에 후회를 할 것입니다. 만약에 특정 데이터, 예를 들어 보고 싶은 목록 리스트를 문서 형태로 만든다면(사실 이것도 영화와 사용자 정보 간에 관계가 있기 때문에 굳이 사용할 필요가…) PostgreSQL의 JSON형태로 저장하는 기능 활용하면 관계형과 비 관계형을 함께 효율적으로 사용할 수 있을 것 같네요.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>In-memory DB란? 어떤 경우에 사용하는가?</p>
+</li>
+<li>
+<p>Redis와 Memcached 차이점은?</p>
+<ul>
+<li>
+<p>Redis : Remote Dictionary Server, is a fast, open-source, in-memory key-value data store for use as a database, cache, message broker, and queue</p>
+<ul>
+<li>
+<p>caching, session management, gaming, leaderboards, real-time analytics, geospatial, ride-hailing, chat/messaging, media streaming, and pub/sub apps.</p>
+</li>
+<li>
+<p>지원 datatype : strings, hashes, lists, sets, sorted sets, bitmaps, and hyperloglogs</p>
+</li>
+<li>
+<p>Replication : Master - Slave</p>
+</li>
+<li>
+<p>Snapshot</p>
+</li>
+<li>
+<p>Transaction : ACID 지원</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Memcached</p>
+<ul>
+<li>Multi-thread</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Redis의 데이터 백업 방법?</p>
+<ul>
+<li>
+<p>RDB (Snapshot)</p>
+</li>
+<li>
+<p>AOF (Append Only File)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Redis에서 multiple thread를 handle하기 위한 방법이 있는가?</p>
+<ul>
+<li>A single-threaded program can definitely provide concurrency at the I/O level by using an I/O (de)multiplexing mechanism and an event loop</li>
+</ul>
+</li>
+<li>
+<p>Redis replication과 sharding의 차이는? 어떤 경우에 적용하는게 좋을까?</p>
+<ul>
+<li>
+<p>Sharding : known as partitioning, splitting the data up by key.</p>
+<ul>
+<li>Sharding is useful to increase performance, reducing the hit and memory load on any one resource</li>
+</ul>
+</li>
+<li>
+<p>Replication : known as mirroring</p>
+<ul>
+<li>useful for getting a high availability of reads. If you read from multiple replicas, you will also reduce the hit rate on all resources, but the memory requirement for all resources remains the same.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Redis의 pipelining은 무엇이고 언제 사용하는가?</p>
+<ul>
+<li>
+<p>pipelining to send them to redis all-at-once instead of one-at-a-time</p>
+</li>
+<li>
+<p>buffer several commands and execute them all at once, responding with all of the responses to all of your commands in a single reply</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="experience-question">Experience Question<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#experience-question" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h1 id="실무-경험에-대한-부분">실무 경험에 대한 부분<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#실무-경험에-대한-부분" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>DB의 Index는 무엇인지?</p>
+<ul>
+<li>
+<p>RDB (Relational DataBase)는 가장 일반적인 data base이다. table이라는 data 구조를 가지며 SQL 언어를 사용하여 table에 record 단위로 data를 추출, 입력, 삭제를 수행한다.</p>
+</li>
+<li>
+<p>DB Index는 검색 속도를 높이기 위한 Data 구조로 DB에 색인을 남기는 작업이다. Indexing 작업을 하게 되면 Query에서 속도 향상을 얻을 수 있지만 쓰기 작업에서 Index를 구성해야 하기 때문에 처리 시간이 증가하고 별도의 Storage 사용이 필요하게 된다. Index는 Key-Field 구조로 이루어져 있으며 Table에 대한 세부 정보를 가지고 있지는 않다. 대부분의 DBMS에서는 Primary Key를 자동으로 Indexing 한다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>어떤 것 들이 좋은 Index 일지? 나쁜 Index 어떤 것 일지?</p>
+<ul>
+<li>
+<p>컬럼을 정해서 설정하는 것이므로 후보 컬럼의 특징을 잘 파악해야 함</p>
+</li>
+<li>
+<p>Cardinality : 카디널리티가 높을 수록 인덱스 설정에 좋은 컬럼 (다양성이 높은 것을 의미, 한 컬럼이 갖고 있는 값의 중복 정도가 낮을 수록 좋음)</p>
+</li>
+<li>
+<p>Selectivity : 선택도가 낮을 수록 인덱스 설정에 좋은 컬럼</p>
+</li>
+<li>
+<p>활용도 : 활용도가 높을 수록 인덱스 설정에 좋은 컬럼</p>
+</li>
+<li>
+<p>중복도 : 중복도가 없을 수록 인덱스 설정에 좋은 컬럼</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="text-highlight">Shared Nothing Architecture란?</span></strong></p>
+<ul>
+<li>
+<p>각각의 node가 독립적으로 구동디고 독립적인 data를 처리 → data를 node간에 partitioning 하여 처리</p>
+</li>
+<li>
+<p>성능에 집중, node간 중복 데이터 처리 문제. 데이터 균등 분할의 이슈</p>
+</li>
+<li>
+<p>Shared everything은 각각의 node가 data store를 공유 → 자원 활용에 초점</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="text-highlight">**Sharding에 대해 설명해 줄 수 있는지?**</span></p>
+<ul>
+<li>
+<p>무공유(share-nothing) architecture를 구현하여 대규모 Database를 다수의 소규모 Database로 분할하는 기술이다.</p>
+</li>
+<li>
+<p>Database 분할은 동일한 query에 join 되지 않은 table을 다른 host로 분할하는 방법이 일반적이다.</p>
+</li>
+<li>
+<p>그외에 table을 여러 host로 복사한 후 hashing algorithm을 사용해 어떤 host로 update 할지 결정하는 방법도 있다.</p>
+</li>
+<li>
+<p>distributes a single logical database system into a cluster of machines</p>
+</li>
+<li>
+<p>Horizontal partitioning design scheme</p>
+</li>
+<li>
+<p>Sharding makes a database system highly scalable. The total number of rows in each table in each database is reduced since the tables are divided and distributed into multiple servers.</p>
+</li>
+<li>
+<p>Reduces the index size, which generally means improved search performance.</p>
+</li>
+<li>
+<p>The most common approach for creating shards is by the use of consistent hashing of a unique id in application (e.g. user id)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sharding을 할 때 신경써야 할 점은?</p>
+<ul>
+<li>
+<p>application to be aware of the data location</p>
+</li>
+<li>
+<p>Any addition or deletion of nodes from system will require some rebalance to be done in the system</p>
+</li>
+<li>
+<p>require lot of cross node join queries then your performance will be really bad</p>
+</li>
+<li>
+<p>knowing how the data will be used for querying becomes really important</p>
+</li>
+<li>
+<p>wrong sharding logic may result in worse performance</p>
+</li>
+<li>
+<p>스키마 구조를 변경하려면 DBA가 모든 샤드에 적용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CDC (Change Data Capture) 서비스가 어떤 것인지 설명해 줄 수 있는지?</p>
+<ul>
+<li>
+<p>변경된 데이터를 사용하여 동작을 취할 수 있도록 데이터를 결정하고 추적하기 위해 사용되는 여러 소프트웨어 디자인 패턴들의 모임</p>
+</li>
+<li>
+<p>Timestamp, Version number, status on rows, Log scaning</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ETL (Extarct, Transform, Load) 서비스가 어떤 것인지 설명해 줄 수 있는지?</p>
+</li>
+<li>
+<p>사용해 본 DB는? 어떤 Workload 였는지?</p>
+</li>
+<li>
+<p>Inner Join, Left Outer Join, Right Outer Join, Full Outer Join에 대해 설명한다면</p>
+<ul>
+<li>
+<p>Inner Join : 두 테이블의 교집합</p>
+</li>
+<li>
+<p>Full Outer Join : 두 테이블의 합집합</p>
+</li>
+<li>
+<p>Left Outer / Right Outer Join : Table 1 혹은 Table 2의 모든 행과 나머지의 공통 행 반환</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="experience-question-1">Experience Question<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#experience-question-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>GraphQL은 무엇이고 어떤 장점을 가지고 있는가?</p>
+<ul>
+<li>
+<p>GraphQL은 쿼리 언어이자 <a href="https://www.redhat.com/ko/topics/api/what-are-application-programming-interfaces" class="external external-link">애플리케이션 프로그래밍 인터페이스(API)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>를 위한 서버측 런타임으로, 클라이언트에게 요청한 만큼의 데이터를 제공하는 데 우선 순위를 둡니다.</p>
+</li>
+<li>
+<p>GraphQL은 API를 더욱 빠르고 유연하며 개발자 친화적으로 만들기 위해 설계되었습니다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>EAI를 설명할 수 있는지?</p>
+<ul>
+<li>
+<p>EAI는 Enterprise Architecture Integration의 약자로 기업 애플리케이션</p>
+</li>
+<li>
+<p>주로 이기종간 데이터 맵핑해주는 솔루션. 인사팀에서 ERP시스템을 통해 사원을 추가해주면 CRM시스템에도 반영시켜주어야 하겠죠? 그것을 중간에서 처리하는 시스템</p>
+</li>
+</ul>
+</li>
+<li>
+<p>DB를 직접적으로 tuning (indexing, query tuning 등)하지 않고 가능한 모든 방법을 고려하여 DB Performance를 높일 수 있는 방법은 무엇이 있을지?</p>
+</li>
+<li>
+<p>Application에서 query를 수행하여 결과가 15K이 나왔다. Database에서 15K 건을 Application으로 넘겨야 하는데 일반적으로 fetch 과정을 거치게 되는데 어떠한 mechanism으로 동작하는 것 인지?</p>
+</li>
+</ul>
+<h1 id="문제-해결에-대한-부분">문제 해결에 대한 부분<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#문제-해결에-대한-부분" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>E-Commerce 쇼핑몰을 가정하고 DB를 설계한다고 할 때 어떻게 index를 구성할 것인지? 그 이유는?</p>
+</li>
+<li>
+<p>Database의 용량이 부족하다고 할 때 어떻게 조치할 수 있는가?</p>
+<ul>
+<li>
+<p>디스크 용량 확장</p>
+</li>
+<li>
+<p>불필요한 DB 파일 삭제, DB Log 파일 삭제</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong><span class="text-highlight">웹사이트 에러 ‘데이터 베이스와 연결하는데 에러가 발생했습니다’ 가 뜬다면 어떤 절차를 밟겠습니까?</span></strong></p>
+<ul>
+<li>
+<p>데이터 베이스 커넥션 문제는 서버 로그 확인, 에러 로그로 포인트 추정, DB의 물리적 문제가 있는지, 커넥션 풀의 셋팅의 문제가 있는지, 네트워크 커넥션 문제를 확인. 타임아웃이 났다면 소켓 문제로 추정. AP서버 점검 후 DB 문제 체크.</p>
+</li>
+<li>
+<p>증권사에서 이런 문제가 많았고 미들웨어 쪽 문제가 있었고, 글로비스 쪽에 워크로드. 서버 로그가 명확하지 않았을 때 장애 포인트를 찾기 힘들었다. DB 쪽 셋팅을 디폴트로 쓰고 있었을 때 커넥션 풀이 차서 나는 경우가 많았음. DB의 TCP 소켓 커넥션관련된 셋팅을 건드렸었음</p>
+</li>
+</ul>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1628" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#database" data-for="database">DataBase</a></li><li class="depth-0"><a href="#reference" data-for="reference">Reference</a></li><li class="depth-0"><a href="#개념에-대한-부분" data-for="개념에-대한-부분">개념에 대한 부분</a></li><li class="depth-1"><a href="#experience-question" data-for="experience-question">Experience Question</a></li><li class="depth-0"><a href="#실무-경험에-대한-부분" data-for="실무-경험에-대한-부분">실무 경험에 대한 부분</a></li><li class="depth-1"><a href="#experience-question-1" data-for="experience-question-1">Experience Question</a></li><li class="depth-0"><a href="#문제-해결에-대한-부분" data-for="문제-해결에-대한-부분">문제 해결에 대한 부분</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

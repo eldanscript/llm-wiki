@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Generative AI Design Pattern | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Generative AI Design Pattern | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Generative AI Design Pattern | LLM Wiki"/><meta name="twitter:description" content="github.com/lakshmanok/generative-ai-design-patterns AI Framework LangChain Pydantic AI : github.com/pydantic/pydantic-ai DSPy : github.com/stanfordnlp/dspy FM DeepSeek Case DeepSeek : github.com/deepseek-ai/DeepSeek-LLM Process 사전훈련 방대한 토큰 데이터셋 사용 (14.8조 개) 다음 토큰 예측하도록 모델 훈련 SFT (Supervised Fine-Tun..."/><meta property="og:description" content="github.com/lakshmanok/generative-ai-design-patterns AI Framework LangChain Pydantic AI : github.com/pydantic/pydantic-ai DSPy : github.com/stanfordnlp/dspy FM DeepSeek Case DeepSeek : github.com/deepseek-ai/DeepSeek-LLM Process 사전훈련 방대한 토큰 데이터셋 사용 (14.8조 개) 다음 토큰 예측하도록 모델 훈련 SFT (Supervised Fine-Tun..."/><meta property="og:image:alt" content="github.com/lakshmanok/generative-ai-design-patterns AI Framework LangChain Pydantic AI : github.com/pydantic/pydantic-ai DSPy : github.com/stanfordnlp/dspy FM DeepSeek Case DeepSeek : github.com/deepseek-ai/DeepSeek-LLM Process 사전훈련 방대한 토큰 데이터셋 사용 (14.8조 개) 다음 토큰 예측하도록 모델 훈련 SFT (Supervised Fine-Tun..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/ai---self-learning/generative-ai-design-pattern"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/ai---self-learning/generative-ai-design-pattern"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="github.com/lakshmanok/generative-ai-design-patterns AI Framework LangChain Pydantic AI : github.com/pydantic/pydantic-ai DSPy : github.com/stanfordnlp/dspy FM DeepSeek Case DeepSeek : github.com/deepseek-ai/DeepSeek-LLM Process 사전훈련 방대한 토큰 데이터셋 사용 (14.8조 개) 다음 토큰 예측하도록 모델 훈련 SFT (Supervised Fine-Tun..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/ai---self-learning/generative-ai-design-pattern" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-855" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-855" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/ai---self-learning/">AI - Self Learning</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Generative AI Design Pattern</a></div></nav><h1 class="article-title">Generative AI Design Pattern</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:12.227Z">2026년 6월 06일</time><span>11 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><a href="https://github.com/lakshmanok/generative-ai-design-patterns" class="external external-link">https://github.com/lakshmanok/generative-ai-design-patterns<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="ai-framework">AI Framework<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ai-framework" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>LangChain</p>
+</li>
+<li>
+<p>Pydantic AI : <a href="https://github.com/pydantic/pydantic-ai" class="external external-link">https://github.com/pydantic/pydantic-ai<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>DSPy : <a href="https://github.com/stanfordnlp/dspy" class="external external-link">https://github.com/stanfordnlp/dspy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<h1 id="fm">FM<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="deepseek-case">DeepSeek Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deepseek-case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>DeepSeek : <a href="https://github.com/deepseek-ai/DeepSeek-LLM" class="external external-link">https://github.com/deepseek-ai/DeepSeek-LLM<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h3 id="process">Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#process" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>사전훈련</p>
+<ol>
+<li>
+<p>방대한 토큰 데이터셋 사용 (14.8조 개)</p>
+</li>
+<li>
+<p>다음 토큰 예측하도록 모델 훈련</p>
+</li>
+</ol>
+</li>
+<li>
+<p>SFT (Supervised Fine-Tuning, 지도학습 미세조정)</p>
+<ol>
+<li>세심하게 선별한 데이터셋으로 훈련</li>
+</ol>
+</li>
+<li>
+<p>MoE (Mixture of Experts, 전문가 혼합)</p>
+<ol>
+<li>
+<p>주어진 프롬프트에 대해 전문가들의 이상적 응답으로 모델 학습</p>
+</li>
+<li>
+<p>모델의 방대한 매개변수 중 일부만 활성화하여 성능 향상</p>
+</li>
+<li>
+<p>DeepSeek-V3 : 6710억개 매개변수 → 370억개 활성화</p>
+</li>
+</ol>
+</li>
+<li>
+<p>RLHF (Reinforcement Learning with Human Feedback, 선호도로 강화학습)</p>
+<ol>
+<li>
+<p>인간 평가자의 선호 판단 기반 모델 정교화</p>
+</li>
+<li>
+<p>모델 결과물을 인간의 기대와 가치에 정렬</p>
+</li>
+<li>
+<p>DeepSeek-V3 → DeepSeek-R1</p>
+</li>
+</ol>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>How DeepSeek-R1 Was Built; For dummies <br/>
+Learn how DeepSeek achieved OpenAI o1-level reasoning with pure RL and solved challenges through multi-stage training.<br/>
+<a href="https://www.vellum.ai/blog/the-training-of-deepseek-r1-and-ways-to-use-it" class="external external-link">https://www.vellum.ai/blog/the-training-of-deepseek-r1-and-ways-to-use-it<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p></div>
+                  
+                </div>
+</blockquote>
+</li>
+<li>
+<p>SFT 없이 Base 모델에 강화학습 직접 적용</p>
+<ol>
+<li>
+<p>복잡한 문제 해결에 CoT (Chain of Thought, 사고 연쇄) 추론 탐색</p>
+</li>
+<li>
+<p>DeepSeek-R1-Zero 개발</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Distill (증류)</p>
+<ol>
+<li>
+<p>DeepSeek-R1 기능을 수월하게 활용할 수 있도록 생성한 모델</p>
+</li>
+<li>
+<p>원천 모델 추론 능력 상당 부분 유지 하면서 일상적 하드웨어에서 실행 가능</p>
+</li>
+<li>
+<p>1.5B, 7B, 8B, 14B</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="../../../3.resources/artifacts/image-7.png" alt="image 7.png" width="auto" height="auto"/></p>
+<h2 id="모델-지형도">모델 지형도<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#모델-지형도" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>LLM Leaderboard - Best Text &amp; Chat AI Models Compared </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Compare and explore Text models ranked by overall performance.<br/>
+<a href="https://arena.ai/leaderboard/text" class="external external-link">https://arena.ai/leaderboard/text<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="모델-유형">모델 유형<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#모델-유형" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="frontier-model">Frontier Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#frontier-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>최전선 모델, 주력 모델</p>
+</li>
+<li>
+<p>SOTA (State Of The Art) 능력으로 최고 겅능 제공</p>
+</li>
+<li>
+<p>자원 소모가 크고 고 비용</p>
+</li>
+<li>
+<p>모델이 크고 독점적</p>
+</li>
+<li>
+<p>로컬 실행 어려움</p>
+</li>
+<li>
+<p>Claude Opus, GPT o, Gemini Pro</p>
+</li>
+</ul>
+<h3 id="distilled-model">Distilled Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distilled-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>성능과 효율성의 균형을 맞춘 버전</p>
+</li>
+<li>
+<p>더 낮은 비용과 빠른 응답 시간으로 합리적 성능 제공</p>
+</li>
+<li>
+<p>고용량 애플리케이션에 적합</p>
+</li>
+<li>
+<p>Claude sonnet, GPT mini, Gemini flash</p>
+</li>
+</ul>
+<h3 id="open-weight-model">Open-Weight Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#open-weight-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>가중치 (신경망 매개변수) 공개 모델</p>
+</li>
+<li>
+<p>자신의 용도에 맞게 최적화</p>
+</li>
+<li>
+<p>Llama, Mistral, DeepSeek, Qwen, Falcon</p>
+</li>
+<li>
+<p>호스팅 지원 서비스</p>
+</li>
+</ul>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Together AI | The AI Native Cloud </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Build what’s next on the AI Native Cloud.<br/>
+<a href="https://www.together.ai/" class="external external-link">https://www.together.ai/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<ul>
+<li>
+<p>인터넷과 단절된 air-gapped 시스템에서 사용</p>
+<ul>
+<li>Google Distributed Cloud</li>
+</ul>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Run Gemini and AI on-prem with Google Distributed Cloud | Google Cloud Blog <br/>
+Gemini and Google Agentspace search will soon be available on Google Distributed Cloud (GDC), bringing AI to on-premises environments.<br/>
+<a href="https://cloud.google.com/blog/products/ai-machine-learning/run-gemini-and-ai-on-prem-with-google-distributed-cloud" class="external external-link">https://cloud.google.com/blog/products/ai-machine-learning/run-gemini-and-ai-on-prem-with-google-distributed-cloud<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p></div>
+                  
+                </div>
+</blockquote>
+<ul>
+<li>Azure on-prem</li>
+</ul>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Unlocking new possibilities: Microsoft AI, database, and identity products receive authorization for Top Secret workloads - Azure Government <br/>
+Additional products in Microsoft Azure for U.<br/>
+<a href="https://devblogs.microsoft.com/azuregov/unlocking-new-possibilities/" class="external external-link">https://devblogs.microsoft.com/azuregov/unlocking-new-possibilities/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p></div>
+                  
+                </div>
+</blockquote>
+<ul>
+<li>AWS Outpost <a href="https://github.com/aws-samples/gen-ai-at-the-edge" class="external external-link">https://github.com/aws-samples/gen-ai-at-the-edge<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+</ul>
+<h1 id="agent-ai">Agent AI<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#agent-ai" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="autonomy-자율성">Autonomy (자율성)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#autonomy-자율성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="agentic-behavior">Agentic Behavior<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#agentic-behavior" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>목표 지향성</p>
+</li>
+<li>
+<p>계획 및 추론</p>
+</li>
+<li>
+<p>인지 및 행동</p>
+</li>
+<li>
+<p>적응 및 학습</p>
+</li>
+</ul>
+<h1 id="세밀한-제어">세밀한 제어<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#세밀한-제어" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="logit">Logit<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#logit" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>마지막 계층에서 ‘다음 단어‘ 예측</p>
+</li>
+<li>
+<p>언어 모델의 마지막 계층이 출력하는 원시 수치</p>
+</li>
+<li>
+<p>이 로짓을 정규화하여 각 토큰의 선택 확률 계산 : Softmax 함수 사용</p>
+</li>
+</ul>
+<h2 id="표집-방법-sampling">표집 방법 (Sampling)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#표집-방법-sampling" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="greedy-sampling-탐욕-표집">Greedy sampling (탐욕 표집)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#greedy-sampling-탐욕-표집" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>항상 가장 가능성이 큰 단어만 선택</li>
+</ul>
+<h3 id="온도-t">온도 (T)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#온도-t" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>소프트맥스 함수 적용전 로짓 값의 크기릉 조절</p>
+</li>
+<li>
+<p>토큰 선택의 무작위성을 제어</p>
+</li>
+<li>
+<p>초매개변수 (hyperparameter)</p>
+</li>
+<li>
+<p>T : 0 → 탐욕 표집</p>
+</li>
+<li>
+<p>T가 높아지면 가능성 낮은 ‘꼬리‘ 부분 단어 선택 → 창의성 높은 결과물</p>
+</li>
+</ul>
+<h3 id="상위-k-표집-top-k">상위 K 표집 (Top-K)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#상위-k-표집-top-k" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>어휘집에서 가장 가능성이 높은 토큰 k개만 선정</p>
+</li>
+<li>
+<p>온도가 높을 때 엉뚱한 후속 단어 선정을 피할 수 있음</p>
+</li>
+<li>
+<p>낮은 k 값은 흔히 볼 수 있는 결과 추출</p>
+</li>
+</ul>
+<h3 id="상위-p-표집-top-p">상위 P 표집 (Top-P)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#상위-p-표집-top-p" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>누적 확률이 임계값 p를 초과하는 토큰들의 최소 집합을 동적으로 선택</p>
+</li>
+<li>
+<p>중핵 표집 (nucleus) : 확률 질량의 대부분을 차지하는 토큰들의 중핵</p>
+</li>
+<li>
+<p>모델의 확산도에 따라 적응적으로 작동</p>
+</li>
+<li>
+<p>확산도 높은 경우 적은 수 토큰 고려</p>
+</li>
+<li>
+<p>확산도 낮은 경우 더 많은 토큰 고려</p>
+</li>
+</ul>
+<h3 id="빔-탐색-beam-search">빔 탐색 (Beam Search)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#빔-탐색-beam-search" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>결정론적 탐색</p>
+</li>
+<li>
+<p>가능한 여러 후속 토큰 시퀀스들을 병렬로 탐색 후 확률이 가장 높은 토큰 시퀀스를 찾음</p>
+</li>
+<li>
+<p>전체 시퀀스의 확률 고려</p>
+</li>
+<li>
+<p>Penalty 부여하여 선택 확률 조절</p>
+</li>
+<li>
+<p>반복 벌점</p>
+<ul>
+<li>
+<p>빈도(frequency), 출현(presence)</p>
+</li>
+<li>
+<p>이미 나타난 토큰 재현 확률 제어</p>
+</li>
+<li>
+<p>반복 루프 방지</p>
+</li>
+</ul>
+</li>
+<li>
+<p>길이 벌점</p>
+<ul>
+<li>
+<p>최소 길이, 최대 길이 : 생성 토큰 수 조절</p>
+</li>
+<li>
+<p>길이 정규화 : 짧은 시퀀스 선호 편향 방지</p>
+</li>
+</ul>
+</li>
+<li>
+<p>빔 탐색 너비 제어</p>
+<ul>
+<li>고려 하는 병렬 시퀀스 개수 제어</li>
+</ul>
+</li>
+</ul>
+<h1 id="모델-학습">모델 학습<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#모델-학습" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="컨텍스트-내-학습">컨텍스트 내 학습<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#컨텍스트-내-학습" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>모델 가중치 변경 없이 프롬프트 변경하여 사용</p>
+</li>
+<li>
+<p>예시나 지시사항 만으로 새로운 작업에 적응</p>
+</li>
+<li>
+<p>Zero Shot Learning</p>
+</li>
+<li>
+<p>Few Shot Learning</p>
+</li>
+</ul>
+<h2 id="사후학습">사후학습<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#사후학습" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>사전 훈련된 모델을 새로운 작업이나 도메인에 맞게 커스텀화</p>
+</li>
+<li>
+<p>모델의 가중치 수정</p>
+</li>
+<li>
+<p>기존 모델과 다른 종단점으로 재배포</p>
+</li>
+<li>
+<p>기초 모델의 모든 훈련 과정에 적용 가능 : 다음 단어 예측, SFT, RLHF</p>
+</li>
+</ul>
+<h3 id="cpt-continued-pretraing-후속-사전훈련">CPT (Continued Pretraing, 후속 사전훈련)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cpt-continued-pretraing-후속-사전훈련" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>기초 모델 훈련에 사용하지 않은 어휘나 데이터셋으로 기반 모델 훈련 지속</p>
+</li>
+<li>
+<p>거의 사용되지 않음</p>
+</li>
+</ul>
+<h3 id="sft-supervised-fine-tuning-지도학습-미세조정">SFT (Supervised Fine Tuning, 지도학습 미세조정)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sft-supervised-fine-tuning-지도학습-미세조정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>프롬프트, 응답 쌍으로구성된 데이터셋을 이용한 지도학습</p>
+</li>
+<li>
+<p>지시시항 조정 (instruction tuning) 기법으로 모델 성능 향상</p>
+</li>
+</ul>
+<h3 id="peft-parameter-efficient-fine-tuning-매개변수-효율적-미세조정">PeFT (Parameter efficient Fine Tuning, 매개변수 효율적 미세조정)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#peft-parameter-efficient-fine-tuning-매개변수-효율적-미세조정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>보통 LoRA (Low rank adaption, 저계수 적응) 기법 사용</p>
+</li>
+<li>
+<p>사전 훈련된 원천 가중치를 동결하고 작고 훈련 가능한 어댑터 행렬을 추가</p>
+</li>
+<li>
+<p>훈련 가능 매개변수 개수 획기적 감소, 메모리 요구량 낮음</p>
+</li>
+<li>
+<p>QLoRA는 모델 모든 가중치를 양자화 : 훈련 느리지만 메모리 효율 높음</p>
+</li>
+</ul>
+<h3 id="preference-tuning-선호도-조정">Preference Tuning (선호도 조정)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#preference-tuning-선호도-조정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>동일 프롬프트에 대해 다른 모델의 결과물을 비교하여 피드백 제공</p>
+</li>
+<li>
+<p>DPO (Direct Preference Optimization, 직접 선호도 최적화) 이용 수행하거나</p>
+</li>
+<li>
+<p>GRPO (Group Relative Policy Optimization) : 다수 응답 생성 후 그룹의 평균 보상으로 정규화 된 점수를 할당</p>
+</li>
+</ul>
+<h1 id="응답-스타일-제어">응답 스타일 제어<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#응답-스타일-제어" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="logit-masking">Logit Masking<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#logit-masking" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>모델이 일련의 규칙에 따라 텍스트 생성</p>
+</li>
+<li>
+<p>기초 모델 이용하는 클라이언트 애플리케이션에서 설정</p>
+<ul>
+<li>
+<p>브랜딩 : 모델과 연관된 브랜딩 단어를 사용하거나 사용하지 않음</p>
+</li>
+<li>
+<p>정확성 : 미리 지정된 특정 위치의 값 검증</p>
+</li>
+<li>
+<p>규정 준수 : 답변에서 포함되지 않아야 할 것 등을 지정</p>
+</li>
+<li>
+<p>스타일북 사용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Anti Pattern : 될 때까지 재시도 (try-and-try-again)</p>
+</li>
+<li>
+<p>Logit Masking : 기초 모델의 후속 시퀀스 표집 과정에 끼어들어 텍스트 생성 방식을 변조</p>
+<ul>
+<li>
+<p>각 중간 시점의 후속 시퀀스 얻은 후 규칙 미충족 시퀀스의 선택 확률을 0으로 설정</p>
+</li>
+<li>
+<p>규칙 충족 후속 시퀀스 없거나, dead end (막다른 길) 확인시 뒤로 물러나 재시도</p>
+</li>
+<li>
+<p>정해진 최대 생성 시도 회수 초과시 거절 메시지 전달</p>
+</li>
+<li>
+<p>Beam 탐색에서 규칙 따르지 않는 빔들을 가지치기 (pruning)</p>
+</li>
+</ul>
+<p><img src="../../../3.resources/artifacts/image-1-2.png" alt="image 1 2.png" width="auto" height="auto"/></p>
+<ul>
+<li>examples/01_logits_masking/0_logits_masking.ipynb</li>
+</ul>
+</li>
+<li>
+<p>Sequnce 재생성</p>
+<ul>
+<li>examples/01_logits_masking/2_sequence_regeneration.ipynb</li>
+</ul>
+</li>
+</ul>
+<h2 id="문법-패턴">문법 패턴<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#문법-패턴" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>생성 텍스트가 따르는 스타일의 규칙을 문맥 자유 메타구문 (context-free merasyntax) 으로 표현</p>
+</li>
+<li>
+<p>프롬프트로 명시하고 예시를 제공하는 것 으로 부족한 경우 모델의 스타일 규칙을 일반화</p>
+</li>
+<li>
+<p>일부 모델 프레임워크에서 후보 토큰들에 적용할 문법을 지정하는 옵션을 지원 → 허용되지 않는 토큰 확률을 0읋 만듬</p>
+</li>
+<li>
+<p>examples/02_grammar</p>
+<ul>
+<li>대부분의 데이터 포맷과 프로그래밍 언어에서 사용할 수 있는 BNF (Backus-Naur Form) 명세를 사용</li>
+</ul>
+</li>
+</ul>
+<h3 id="스타일-전이-transfer">스타일 전이 (Transfer)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#스타일-전이-transfer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>로짓 마스킹이나 문법으로 미묘한 뉘앙스 표현이 어려운 경우</p>
+</li>
+<li>
+<p>Few-shot Learning</p>
+<ul>
+<li>입력-출력 예시들을 모델에 제공하여 콘텐츠 스타일 제어</li>
+</ul>
+</li>
+<li>
+<p>Model Fine-tuning</p>
+<ul>
+<li>
+<p>입력-기대 출력 예시들로 모델을 다시 훈련</p>
+</li>
+<li>
+<p>예제 : Image Style Transfer</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="역중립화-reverse-neutralization">역중립화 (Reverse Neutralization)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#역중립화-reverse-neutralization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>먼저 중립적인 형태의 결과물을 생성 후</p>
+<ul>
+<li>개인화 입력 → 중립화 출력</li>
+</ul>
+</li>
+<li>
+<p>원하는 스타일로 미세조정 된 모델로 결과물 후처리</p>
+<ul>
+<li>중립화 출력을 입력으로 개인화 입력으루출력 쌍으로 하는 학습 데이터로 활용</li>
+</ul>
+</li>
+</ul>
+<p><img src="../../../3.resources/artifacts/image-2-2.png" alt="image 2 2.png" width="auto" height="auto"/></p>
+<ul>
+<li>
+<p>중립 형태 선택</p>
+<ul>
+<li>
+<p>원본 텍스트와 중립 텍스트의 임베딩 코사인 유사도 확인</p>
+</li>
+<li>
+<p>생성된 중립 콘텐츠의 주제 다양성 유지 확인</p>
+</li>
+</ul>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-705" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#ai-framework" data-for="ai-framework">AI Framework</a></li><li class="depth-0"><a href="#fm" data-for="fm">FM</a></li><li class="depth-1"><a href="#deepseek-case" data-for="deepseek-case">DeepSeek Case</a></li><li class="depth-2"><a href="#process" data-for="process">Process</a></li><li class="depth-1"><a href="#모델-지형도" data-for="모델-지형도">모델 지형도</a></li><li class="depth-1"><a href="#모델-유형" data-for="모델-유형">모델 유형</a></li><li class="depth-2"><a href="#frontier-model" data-for="frontier-model">Frontier Model</a></li><li class="depth-2"><a href="#distilled-model" data-for="distilled-model">Distilled Model</a></li><li class="depth-2"><a href="#open-weight-model" data-for="open-weight-model">Open-Weight Model</a></li><li class="depth-0"><a href="#agent-ai" data-for="agent-ai">Agent AI</a></li><li class="depth-1"><a href="#autonomy-자율성" data-for="autonomy-자율성">Autonomy (자율성)</a></li><li class="depth-1"><a href="#agentic-behavior" data-for="agentic-behavior">Agentic Behavior</a></li><li class="depth-0"><a href="#세밀한-제어" data-for="세밀한-제어">세밀한 제어</a></li><li class="depth-1"><a href="#logit" data-for="logit">Logit</a></li><li class="depth-1"><a href="#표집-방법-sampling" data-for="표집-방법-sampling">표집 방법 (Sampling)</a></li><li class="depth-2"><a href="#greedy-sampling-탐욕-표집" data-for="greedy-sampling-탐욕-표집">Greedy sampling (탐욕 표집)</a></li><li class="depth-2"><a href="#온도-t" data-for="온도-t">온도 (T)</a></li><li class="depth-2"><a href="#상위-k-표집-top-k" data-for="상위-k-표집-top-k">상위 K 표집 (Top-K)</a></li><li class="depth-2"><a href="#상위-p-표집-top-p" data-for="상위-p-표집-top-p">상위 P 표집 (Top-P)</a></li><li class="depth-2"><a href="#빔-탐색-beam-search" data-for="빔-탐색-beam-search">빔 탐색 (Beam Search)</a></li><li class="depth-0"><a href="#모델-학습" data-for="모델-학습">모델 학습</a></li><li class="depth-1"><a href="#컨텍스트-내-학습" data-for="컨텍스트-내-학습">컨텍스트 내 학습</a></li><li class="depth-1"><a href="#사후학습" data-for="사후학습">사후학습</a></li><li class="depth-2"><a href="#cpt-continued-pretraing-후속-사전훈련" data-for="cpt-continued-pretraing-후속-사전훈련">CPT (Continued Pretraing, 후속 사전훈련)</a></li><li class="depth-2"><a href="#sft-supervised-fine-tuning-지도학습-미세조정" data-for="sft-supervised-fine-tuning-지도학습-미세조정">SFT (Supervised Fine Tuning, 지도학습 미세조정)</a></li><li class="depth-2"><a href="#peft-parameter-efficient-fine-tuning-매개변수-효율적-미세조정" data-for="peft-parameter-efficient-fine-tuning-매개변수-효율적-미세조정">PeFT (Parameter efficient Fine Tuning, 매개변수 효율적 미세조정)</a></li><li class="depth-2"><a href="#preference-tuning-선호도-조정" data-for="preference-tuning-선호도-조정">Preference Tuning (선호도 조정)</a></li><li class="depth-0"><a href="#응답-스타일-제어" data-for="응답-스타일-제어">응답 스타일 제어</a></li><li class="depth-1"><a href="#logit-masking" data-for="logit-masking">Logit Masking</a></li><li class="depth-1"><a href="#문법-패턴" data-for="문법-패턴">문법 패턴</a></li><li class="depth-2"><a href="#스타일-전이-transfer" data-for="스타일-전이-transfer">스타일 전이 (Transfer)</a></li><li class="depth-2"><a href="#역중립화-reverse-neutralization" data-for="역중립화-reverse-neutralization">역중립화 (Reverse Neutralization)</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>백링크</h3><ul id="list-0" class="overflow"><li><a href="../../../4.archive/notion-archive/customerinaws/ai---self-learning" class="internal">AI - Self Learning</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Getting Started with Amazon OpenSearch Service 1e93f648df908058aab2ff7b8bfc9cb2 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Getting Started with Amazon OpenSearch Service 1e93f648df908058aab2ff7b8bfc9cb2 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Getting Started with Amazon OpenSearch Service 1e93f648df908058aab2ff7b8bfc9cb2 | LLM Wiki"/><meta name="twitter:description" content="🏍️ Getting Started with Amazon OpenSearch Service skillbuilder.aws/learn/AGNP6G31UQ/getting-started-with-amazon-opensearch-service/6WYZ571TJU Introduction to OpenSearch OpenSearch 서비스란? **완전 관리형 검색 및 분석 서비스** OpenSearch와 OpenSearch Dashboards를 제공 Elasticsearch 버전 1.5부터 7.10까지 지원 OpenSearch란? 오픈 소스..."/><meta property="og:description" content="🏍️ Getting Started with Amazon OpenSearch Service skillbuilder.aws/learn/AGNP6G31UQ/getting-started-with-amazon-opensearch-service/6WYZ571TJU Introduction to OpenSearch OpenSearch 서비스란? **완전 관리형 검색 및 분석 서비스** OpenSearch와 OpenSearch Dashboards를 제공 Elasticsearch 버전 1.5부터 7.10까지 지원 OpenSearch란? 오픈 소스..."/><meta property="og:image:alt" content="🏍️ Getting Started with Amazon OpenSearch Service skillbuilder.aws/learn/AGNP6G31UQ/getting-started-with-amazon-opensearch-service/6WYZ571TJU Introduction to OpenSearch OpenSearch 서비스란? **완전 관리형 검색 및 분석 서비스** OpenSearch와 OpenSearch Dashboards를 제공 Elasticsearch 버전 1.5부터 7.10까지 지원 OpenSearch란? 오픈 소스..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/getting-started-with-amazon-opensearch-service-1e93f648df908058aab2ff7b8bfc9cb2"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/getting-started-with-amazon-opensearch-service-1e93f648df908058aab2ff7b8bfc9cb2"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🏍️ Getting Started with Amazon OpenSearch Service skillbuilder.aws/learn/AGNP6G31UQ/getting-started-with-amazon-opensearch-service/6WYZ571TJU Introduction to OpenSearch OpenSearch 서비스란? **완전 관리형 검색 및 분석 서비스** OpenSearch와 OpenSearch Dashboards를 제공 Elasticsearch 버전 1.5부터 7.10까지 지원 OpenSearch란? 오픈 소스..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/getting-started-with-amazon-opensearch-service-1e93f648df908058aab2ff7b8bfc9cb2" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2212" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2212" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Getting Started with Amazon OpenSearch Service 1e93f648df908058aab2ff7b8bfc9cb2</a></div></nav><h1 class="article-title">Getting Started with Amazon OpenSearch Service 1e93f648df908058aab2ff7b8bfc9cb2</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.488Z">2026년 6월 06일</time><span>17 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/taskinaws/attachments/rijksmuseum_jansz_1641.jpg" alt/></p>
+<p>🏍️</p>
+<h1 id="getting-started-with-amazon-opensearch-service">Getting Started with Amazon OpenSearch Service<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#getting-started-with-amazon-opensearch-service" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="https://skillbuilder.aws/learn/AGNP6G31UQ/getting-started-with-amazon-opensearch-service/6WYZ571TJU" class="external external-link">https://skillbuilder.aws/learn/AGNP6G31UQ/getting-started-with-amazon-opensearch-service/6WYZ571TJU<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="introduction-to-opensearch">Introduction to OpenSearch<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#introduction-to-opensearch" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>
+<p>OpenSearch 서비스란?</p>
+<ul>
+<li>
+<p><span class="text-highlight">**완전 관리형 검색 및 분석 서비스**</span></p>
+</li>
+<li>
+<p>OpenSearch와 OpenSearch Dashboards를 제공</p>
+</li>
+<li>
+<p>Elasticsearch 버전 1.5부터 7.10까지 지원</p>
+</li>
+</ul>
+<p><a href="../../../getting-started-with-amazon-opensearch-service/image.png" class="internal internal-link" data-slug="getting-started-with-amazon-opensearch-service/image.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-95.png" alt/></a></p>
+</li>
+<li>
+<p>OpenSearch란?</p>
+<ul>
+<li>
+<p>오픈 소스 검색 및 분석 스위트</p>
+</li>
+<li>
+<p><span class="text-highlight">**Elasticsearch 7.10.2 버전을 기반으로 for**</span>k됨</p>
+</li>
+<li>
+<p>보안, 이상 감지, 경고, 관측성 등의 다양한 기능 제공</p>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenSearch 서비스의 주요 기능 및 장점</p>
+<ul>
+<li>
+<p>높은 확장성과 가용성</p>
+</li>
+<li>
+<p><span class="text-highlight">**반구조화 및 비정형 데이터 검색**</span> 지원</p>
+</li>
+<li>
+<p>트레이스 분석 기능</p>
+</li>
+<li>
+<p>인프라 문제 진단</p>
+</li>
+<li>
+<p>이상 감지 기능</p>
+</li>
+<li>
+<p>비용 효율적</p>
+</li>
+<li>
+<p>고급 보안 기능</p>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenSearch 서비스의 문제 해결</p>
+<ul>
+<li>
+<p>인프라 관리, 모니터링, 패치 등의 작업을 자동화</p>
+</li>
+<li>
+<p>CloudWatch 통합으로 도메인 상태 모니터링</p>
+</li>
+<li>
+<p>사용자 맞춤형 구성 옵션 제공</p>
+</li>
+<li>
+<p>대시보드 시각화 도구 번들링</p>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenSearch 서비스 요금</p>
+<ul>
+<li>
+<p>인스턴스, 스토리지, 데이터 전송 요금으로 구성</p>
+</li>
+<li>
+<p>예약 인스턴스 사용 시 온디맨드 대비 요금 절감</p>
+</li>
+<li>
+<p>스토리지 계층 활용으로 비용 절감 가능</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>인스턴스 요금</p>
+<ul>
+<li>
+<p>OpenSearch Service에 사용되는 Amazon EC2 인스턴스 유형에 따라 요금이 달라집니다.</p>
+</li>
+<li>
+<p>더 작은 인스턴스를 선택하면 요금이 저렴하고, 더 큰 인스턴스를 선택하면 요금이 증가합니다.</p>
+</li>
+<li>
+<p>예약 인스턴스를 선택하면 온디맨드 인스턴스보다 요금이 저렴합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>스토리지 요금</p>
+<ul>
+<li>
+<p>핫 스토리지(hot storage), 울트라워밍 스토리지(UltraWarm storage), 콜드 스토리지(cold storage)에 대한 요금이 다릅니다.</p>
+</li>
+<li>
+<p>핫 스토리지는 가장 높은 요금이 적용되며, 콜드 스토리지는 가장 낮은 요금이 적용됩니다.</p>
+</li>
+<li>
+<p>데이터 액세스 패턴에 따라 스토리지 계층을 조정하면 비용을 절감할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>데이터 전송 요금</p>
+<ul>
+<li>
+<p>Amazon Virtual Private Cloud(VPC) 내에서의 데이터 전송은 무료입니다.</p>
+</li>
+<li>
+<p>인터넷을 통한 데이터 전송에는 요금이 부과됩니다.</p>
+</li>
+<li>
+<p>리전 간 데이터 전송에도 요금이 부과됩니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="what-is-amazon-opensearch">What is Amazon OpenSearch?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-amazon-opensearch" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Amazon OpenSearch Service 개요</p>
+<ul>
+<li>
+<p>관리형 서비스로 AWS 클라우드에서 OpenSearch 클러스터를 쉽게 배포, 운영 및 확장할 수 있음</p>
+</li>
+<li>
+<p><span class="text-highlight">**OpenSearch Service 도메인**</span>은 <span class="text-highlight">**OpenSearch 클러스터와 동일**</span>하며, 사용자가 지정한 설정, <span class="text-highlight">**인스턴스 유형, 인스턴스 수, 스토리지로 구성**</span>됨</p>
+<ol>
+<li>
+<p>1:1 대응</p>
+<ul>
+<li>
+<p>OpenSearch Service 도메인은 실제 OpenSearch 클러스터와 일대일로 매핑됩니다.</p>
+</li>
+<li>
+<p>다시 말해, 하나의 OpenSearch Service 도메인은 하나의 OpenSearch 클러스터를 나타냅니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>동일한 구성 요소</p>
+<ul>
+<li>
+<p>OpenSearch Service 도메인 내에는 OpenSearch 클러스터의 모든 구성 요소가 포함됩니다.</p>
+</li>
+<li>
+<p>데이터 노드, 마스터 노드, 클라이언트 노드 등 OpenSearch 클러스터를 구성하는 모든 컴포넌트가 포함됩니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>동일한 설정 및 리소스</p>
+<ul>
+<li>
+<p>OpenSearch Service 도메인에는 사용자가 지정한 설정, 인스턴스 유형, 인스턴스 수, 스토리지 리소스 등이 그대로 반영됩니다.</p>
+</li>
+<li>
+<p>이는 OpenSearch 클러스터의 구성 및 리소스와 동일합니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>OpenSearch와 레거시 Elasticsearch OSS(최대 7.10 버전) 지원</p>
+</li>
+</ul>
+<p>OpenSearch Service 기능</p>
+<ul>
+<li>
+<p>확장성: 다양한 CPU, 메모리, 스토리지 옵션, 최대 1,002개의 데이터 노드, 25PB 스토리지 지원, 비용 효율적인 UltraWarm 및 콜드 스토리지</p>
+<ul>
+<li>AZ당 334 Hot 노드 구성 가능 → 3 AZ : 334 x 3 = 1002</li>
+</ul>
+</li>
+<li>
+<p>보안: IAM 액세스 제어, VPC 및 보안 그룹 통합, 암호화, Cognito/HTTP basic/SAML 인증, 다단계 보안 제어, 감사 로그</p>
+</li>
+<li>
+<p>안정성: 다중 AZ 배포, 전용 마스터 노드, 자동 스냅샷 기능</p>
+</li>
+<li>
+<p>유연성: SQL 지원, 사용자 정의 패키지, OpenSearch Dashboards, CloudWatch/CloudTrail 통합, S3/Kinesis/DynamoDB 데이터 수집 등</p>
+</li>
+</ul>
+<p>OpenSearch 서비스 vs. 자체 관리형 OpenSearch</p>
+<ul>
+<li>
+<p>OpenSearch 서비스: 인프라 관리가 필요 없음, 비용 관리가 용이, 다른 AWS 서비스와의 통합 이점</p>
+</li>
+<li>
+<p>자체 관리형 OpenSearch: 소스 코드 제어, 오픈 소스 선호, 멀티 클라우드 전략, 신속한 새 기능 접근</p>
+</li>
+</ul>
+<p>지원되는 Elasticsearch 및 OpenSearch 버전</p>
+<ul>
+<li>
+<p>Elasticsearch: 1.5부터 7.10까지의 버전 지원</p>
+</li>
+<li>
+<p>OpenSearch: 1.0부터 2.19까지의 버전 지원</p>
+</li>
+<li>
+<p>최신 OpenSearch 버전 사용 권장(가격-성능, 기능, 보안 개선)</p>
+</li>
+</ul>
+<p>표준 및 확장 지원</p>
+<ul>
+<li>
+<p>표준 지원 기간: 버그 및 보안 업데이트 제공</p>
+</li>
+<li>
+<p>확장 지원 기간: 표준 지원 종료 후 최소 12개월 동안 중요 보안 수정 제공(추가 요금 부과)</p>
+</li>
+<li>
+<p>확장 지원 요금은 Normalized Instance Hour(NIH) 기준으로 청구</p>
+</li>
+</ul>
+<p>가격 책정</p>
+<ul>
+<li>
+<p>EC2 인스턴스 사용 시간, EBS 스토리지 볼륨 크기 기반</p>
+</li>
+<li>
+<p>AZ 간 트래픽, 샤드 재배치 트래픽, S3와의 트래픽은 요금 부과 없음</p>
+</li>
+</ul>
+<p>관련 서비스</p>
+<ul>
+<li>CloudWatch, CloudTrail, Kinesis, S3, IAM, Lambda, DynamoDB 등 다른 AWS 서비스와 통합 가능</li>
+</ul>
+<h1 id="architecture-and-use-case">Architecture and Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#architecture-and-use-case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>OpenSearch Service를 활용한 클라우드 솔루션 아키텍처 설명:</p>
+<ol>
+<li>
+<p>OpenSearch Service의 기본 기술 개념:</p>
+<ul>
+<li>
+<p>클러스터: OpenSearch 클러스터는 <span class="text-highlight">**데이터 노드**</span>, 선택적 <span class="text-highlight">**리더 노드**</span>, 실행에 필요한 <span class="text-highlight">**스토리지**</span>로 구성됩니다.</p>
+</li>
+<li>
+<p>데이터 노드: 데이터를 저장하고 검색, 집계 등의 데이터 관련 작업을 수행합니다. 실례 스토리지 또는 EBS 볼륨을 사용합니다.</p>
+<p>데이터 노드의 인스턴스 유형별 Workload Type:</p>
+<ol>
+<li>
+<p>M 인스턴스 (Balance of CPU and memory)</p>
+<ul>
+<li>일반적인 용도의 워크로드에 적합합니다.</li>
+</ul>
+</li>
+<li>
+<p>C 인스턴스 (High-CPU clock speeds, with trade-off of less memory)</p>
+<ul>
+<li>
+<p>CPU 집약적인 워크로드에 적합합니다.</p>
+</li>
+<li>
+<p><span class="text-highlight">**더 작은 규모의 높은 빈도의 인덱싱과 쿼리 작업에 적합**</span> : 실시간 로그 분석, 웹 사이트 검색, 센서 데이터 분석 등</p>
+</li>
+</ul>
+</li>
+<li>
+<p>R 인스턴스 (High-memory allocation)</p>
+<ul>
+<li>
+<p><span class="text-highlight">**많은 메모리를 사용하는 집계 작업**</span>에 적합 : 비지니스 인텔리전스, 기계 학습, 금융 데이터 분석 등</p>
+</li>
+<li>
+<p>Scroll API를 사용하거나 메모리에 <span class="text-highlight">**큰 결과 집합을 저장**</span>하는 워크로드에 적합합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>I 인스턴스 (On-instance NVMe SSDs, providing exceptionally high levels of I/O throughput)</p>
+<ul>
+<li>매우 큰 볼륨의 데이터를 읽거나 쓰는 작업에 적합합니다.</li>
+</ul>
+</li>
+</ol>
+<p>초기 추정 후 실제 테스트를 통해 적절한 인스턴스 유형을 선택해야 합니다. CPU 사용률이 높다면 다른 인스턴스 유형을 선택해야 할 수 있습니다.</p>
+</li>
+<li>
+<p>리더 노드: <span class="text-highlight">**클러스터 관리 작업을 수행**</span>하지만 데이터를 보유하거나 데이터 업로드 요청에 응답하지 않습니다.</p>
+<ol>
+<li>
+<p>클러스터 관리 작업 수행:</p>
+<ul>
+<li>
+<p>클러스터의 모든 노드와 <span class="text-highlight">**인덱스, 샤드의 상태를 추적**</span>합니다.</p>
+</li>
+<li>
+<p>클러스터 <span class="text-highlight">**상태 변경(인덱스 생성, 노드 제거 등)이 발생하면 클러스터 상태를 업데이트**</span>합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>클러스터 상태 복제:</p>
+<ul>
+<li>
+<p>클러스터 상태 <span class="text-highlight">**변경 사항을 모든 노드에 복제**</span>합니다.</p>
+</li>
+<li>
+<p>이를 통해 클러스터의 <span class="text-highlight">**일관된 상태를 유지**</span>합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>클러스터 노드 상태 모니터링:</p>
+<ul>
+<li>
+<p>클러스터의 모든 노드에 <span class="text-highlight">**heartbeat 신호를 보내 가용성을 모니터링**</span>합니다.</p>
+</li>
+<li>
+<p>데이터 노드의 가용성을 지속적으로 체크합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>리더 노드 선출:</p>
+<ul>
+<li>
+<p>OpenSearch Service 도메인에는 <span class="text-highlight">**항상 하나의 리더 노드가 선출**</span>됩니다.</p>
+</li>
+<li>
+<p>별도의 <span class="text-highlight">**리더 노드를 배포하지 않으면 데이터 노드 중에서 리더 노드가 선출**</span>됩니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>문서, 필드, 인덱스: <span class="text-highlight">**데이터는 JSON 객체인 문서로 저장**</span>되며, <span class="text-highlight">**필드는 키-값 쌍**</span>입니다. <span class="text-highlight">**인덱스는 데이터의 논리적 그룹**</span>입니다.</p>
+</li>
+<li>
+<p>샤드: 인덱스는 샤드라는 작은 논리적 단위로 나뉘어 노드에 분산됩니다. 샤드는 기본 샤드와 복제본으로 구분됩니다.</p>
+<ol>
+<li>
+<p>샤드 크기 권장사항:</p>
+<ul>
+<li>
+<p><span class="text-highlight">**검색 지연 시간이 중요**</span>한 경우: <span class="text-highlight">**10-30GiB 사이**</span>의 샤드 크기 유지</p>
+</li>
+<li>
+<p><span class="text-highlight">**쓰기 집약적**</span>인 경우(로그 분석 등): <span class="text-highlight">**30-50GiB 사이**</span>의 샤드 크기 유지</p>
+</li>
+</ul>
+</li>
+<li>
+<p>샤드 크기 고려 사항:</p>
+<ul>
+<li>
+<p>샤드 크기가 너무 크면 장애 복구가 어려워질 수 있습니다.</p>
+</li>
+<li>
+<p><span class="text-highlight">**샤드 수가 너무 많으면 CPU와 메모리 사용이 증가하여 성능 이슈가 발생**</span>할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>기본 샤드와 복제본 샤드:</p>
+<ul>
+<li>
+<p>기본 샤드: <span class="text-highlight">**원본 데이터를 저장**</span>하는 샤드입니다.</p>
+</li>
+<li>
+<p>복제본 샤드: 기본 샤드의 복사본입니다. <span class="text-highlight">**장애 극복과 요청 처리**</span>에 사용됩니다.</p>
+</li>
+<li>
+<p>클러스터 노드 장애 발생 시 복제본 샤드가 기본 샤드로 승격됩니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>샤드 배포 전략:</p>
+<ul>
+<li>
+<p>인덱스 생성 시 적절한 샤드 수를 설정해야 합니다.</p>
+</li>
+<li>
+<p>나중에 샤드 수를 변경하기 어려우므로 초기 설정이 중요합니다.</p>
+</li>
+<li>
+<p>인덱스 크기와 쿼리 패턴을 고려하여 샤드 수를 결정해야 합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>모니터링 및 최적화:</p>
+<ul>
+<li>
+<p>OpenSearch Service의 모니터링 지표를 통해 샤드 크기와 수를 지속적으로 모니터링합니다.</p>
+</li>
+<li>
+<p><span class="text-highlight">**필요한 경우 인덱스 재색인 등의 방법으로 샤드 구성을 최적화**</span>할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>스토리지: UltraWarm 스토리지와 콜드 스토리지를 제공하여 비용 효율적인 데이터 관리가 가능합니다.</p>
+</li>
+<li>
+<p>스냅샷: 클러스터의 인덱스와 상태에 대한 백업을 자동 또는 수동으로 생성할 수 있습니다.</p>
+</li>
+<li>
+<p>Auto-Tune: 클러스터 성능과 사용량 지표를 분석하여 메모리 관련 구성 변경을 자동으로 제안합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>OpenSearch Service의 주요 사용 사례:</p>
+<ul>
+<li>
+<p>검색 및 개인화: 애플리케이션, 웹사이트, 데이터 레이크 카탈로그에 대한 빠른 검색 경험을 제공합니다.</p>
+</li>
+<li>
+<p>보안 모니터링: 로그를 중앙 집중화하여 실시간 위협 탐지 및 사고 관리를 지원합니다.</p>
+</li>
+<li>
+<p>애플리케이션 및 인프라 모니터링: 서버, 라우터, 스위치, 가상화 시스템의 로그와 메트릭을 수집하여 가시성을 제공합니다.</p>
+</li>
+<li>
+<p>옵저버빌리티 플랫폼: 로그와 트레이스 데이터를 분석하여 성능 문제의 근본 원인을 신속하게 진단할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="opensearch-service의-보안-및-접근성-특징">OpenSearch Service의 보안 및 접근성 특징<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opensearch-service의-보안-및-접근성-특징" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>
+<p>접근성:</p>
+<ul>
+<li>
+<p>Amazon Virtual Private Cloud (VPC) 또는 공개 엔드포인트를 통해 접근 가능</p>
+</li>
+<li>
+<p>VPC 엔드포인트의 경우 보안 그룹으로 네트워크 액세스 제어</p>
+</li>
+<li>
+<p>공개 엔드포인트의 경우 IP 주소로 액세스 허용 또는 제한 가능</p>
+</li>
+</ul>
+</li>
+<li>
+<p>보안 레이어:</p>
+<ul>
+<li>
+<p>네트워크 레이어: 요청이 도메인에 도달할 수 있게 허용 여부 결정</p>
+</li>
+<li>
+<p>도메인 액세스 정책: 도메인 엔드포인트에 도달한 요청에 대한 액세스 허용/거부</p>
+</li>
+<li>
+<p>세부 권한 제어: 액세스 정책 통과 후 사용자 인증 및 권한 기반 요청 처리</p>
+</li>
+</ul>
+</li>
+<li>
+<p>암호화:</p>
+<ul>
+<li>
+<p>AWS Key Management Service를 통한 저장 데이터 암호화</p>
+</li>
+<li>
+<p>노드 간 TLS 기반 통신 암호화</p>
+</li>
+<li>
+<p>HTTPS 통신 강제</p>
+</li>
+</ul>
+</li>
+<li>
+<p>로깅:</p>
+<ul>
+<li>
+<p>CloudWatch Logs를 통해 오류 로그, 검색 느린 로그, 인덱싱 느린 로그 제공</p>
+</li>
+<li>
+<p>오류, 성능, 안정성 문제 진단에 활용 가능</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="amazon-opensearch-serverless">Amazon OpenSearch Serverless<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#amazon-opensearch-serverless" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>
+<p>개요:</p>
+<ul>
+<li>
+<p>관리형 OpenSearch Service의 프로비저닝된 버전과 달리, 인프라에 대한 걱정 없이 검색 및 분석 워크로드를 실행할 수 있는 서버리스 옵션</p>
+</li>
+<li>
+<p>간헐적이거나 예측할 수 없는 워크로드에 적합</p>
+</li>
+</ul>
+</li>
+<li>
+<p>주요 특징:</p>
+<ul>
+<li>
+<p>스토리지와 컴퓨팅 리소스가 분리되어 각각 독립적으로 확장 가능</p>
+</li>
+<li>
+<p>CPU, 디스크 사용량, 메모리, 핫 샤드 상태 등의 리소스를 모니터링하고 자동으로 조정</p>
+</li>
+<li>
+<p>예를 들어 모니터링 워크로드에서 로깅 활동이 급증하면 인덱싱 컴퓨팅 노드를 자동으로 확장</p>
+</li>
+</ul>
+</li>
+<li>
+<p>장단점:</p>
+<ul>
+<li>
+<p>장점: 인프라 관리 걱정 없이 검색 및 분석 워크로드 실행 가능</p>
+</li>
+<li>
+<p>단점: 알림, 이상 탐지, k-NN 등의 고급 기능 미지원</p>
+</li>
+<li>
+<p>고급 기능이 필요한 경우 프로비저닝된 관리형 클러스터를 사용해야 함</p>
+</li>
+</ul>
+</li>
+<li>
+<p>사용 사례:</p>
+<ul>
+<li>
+<p>간헐적이거나 예측할 수 없는 워크로드</p>
+</li>
+<li>
+<p>인프라 관리에 대한 부담을 최소화해야 하는 경우</p>
+</li>
+</ul>
+</li>
+</ol></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1691" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#getting-started-with-amazon-opensearch-service" data-for="getting-started-with-amazon-opensearch-service">Getting Started with Amazon OpenSearch Service</a></li><li class="depth-0"><a href="#introduction-to-opensearch" data-for="introduction-to-opensearch">Introduction to OpenSearch</a></li><li class="depth-0"><a href="#what-is-amazon-opensearch" data-for="what-is-amazon-opensearch">What is Amazon OpenSearch?</a></li><li class="depth-0"><a href="#architecture-and-use-case" data-for="architecture-and-use-case">Architecture and Use Case</a></li><li class="depth-0"><a href="#opensearch-service의-보안-및-접근성-특징" data-for="opensearch-service의-보안-및-접근성-특징">OpenSearch Service의 보안 및 접근성 특징</a></li><li class="depth-0"><a href="#amazon-opensearch-serverless" data-for="amazon-opensearch-serverless">Amazon OpenSearch Serverless</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Architecture Guide - Access Governance 1503f648df908035b131feeb8cea7d5d | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Architecture Guide - Access Governance 1503f648df908035b131feeb8cea7d5d | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Architecture Guide - Access Governance 1503f648df908035b131feeb8cea7d5d | LLM Wiki"/><meta name="twitter:description" content="🕓 Architecture Guide - Access Governance Status SSM 사용 중 pem key 사용 중 → ISMS 권고로 사용 하지 않도록 변환할 예정 pem key 사용 인스턴스에 Session Manager 사용자 별 권한 관리가 되지 않기 때문에 외주사가 ssm_user로 접속해서 root 권한을 사용해도 되는지 보안팀과 확인 중 외주사와 내부 직원간의 권한 분리가 필요하며 이것을 SSM session manager를 통해 자동화 사용자 등록을 bash scrpt로 전달하여 등록하는 부분이 잘 안됨,..."/><meta property="og:description" content="🕓 Architecture Guide - Access Governance Status SSM 사용 중 pem key 사용 중 → ISMS 권고로 사용 하지 않도록 변환할 예정 pem key 사용 인스턴스에 Session Manager 사용자 별 권한 관리가 되지 않기 때문에 외주사가 ssm_user로 접속해서 root 권한을 사용해도 되는지 보안팀과 확인 중 외주사와 내부 직원간의 권한 분리가 필요하며 이것을 SSM session manager를 통해 자동화 사용자 등록을 bash scrpt로 전달하여 등록하는 부분이 잘 안됨,..."/><meta property="og:image:alt" content="🕓 Architecture Guide - Access Governance Status SSM 사용 중 pem key 사용 중 → ISMS 권고로 사용 하지 않도록 변환할 예정 pem key 사용 인스턴스에 Session Manager 사용자 별 권한 관리가 되지 않기 때문에 외주사가 ssm_user로 접속해서 root 권한을 사용해도 되는지 보안팀과 확인 중 외주사와 내부 직원간의 권한 분리가 필요하며 이것을 SSM session manager를 통해 자동화 사용자 등록을 bash scrpt로 전달하여 등록하는 부분이 잘 안됨,..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/architecture-guide---access-governance-1503f648df908035b131feeb8cea7d5d"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/architecture-guide---access-governance-1503f648df908035b131feeb8cea7d5d"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🕓 Architecture Guide - Access Governance Status SSM 사용 중 pem key 사용 중 → ISMS 권고로 사용 하지 않도록 변환할 예정 pem key 사용 인스턴스에 Session Manager 사용자 별 권한 관리가 되지 않기 때문에 외주사가 ssm_user로 접속해서 root 권한을 사용해도 되는지 보안팀과 확인 중 외주사와 내부 직원간의 권한 분리가 필요하며 이것을 SSM session manager를 통해 자동화 사용자 등록을 bash scrpt로 전달하여 등록하는 부분이 잘 안됨,..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/customerinaws/architecture-guide---access-governance-1503f648df908035b131feeb8cea7d5d" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-978" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-978" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/customerinaws/">CustomerInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Architecture Guide - Access Governance 1503f648df908035b131feeb8cea7d5d</a></div></nav><h1 class="article-title">Architecture Guide - Access Governance 1503f648df908035b131feeb8cea7d5d</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:12.236Z">2026년 6월 06일</time><span>17 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/attachments/woodcuts_10.jpg" alt/></p>
+<p>🕓</p>
+<h1 id="architecture-guide---access-governance">Architecture Guide - Access Governance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#architecture-guide---access-governance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="status">Status<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#status" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>SSM 사용 중</p>
+<ul>
+<li>pem key 사용 중 → ISMS 권고로 사용 하지 않도록 변환할 예정</li>
+</ul>
+</li>
+<li>
+<p>pem key 사용 인스턴스에 Session Manager</p>
+<ul>
+<li>
+<p>사용자 별 권한 관리가 되지 않기 때문에</p>
+</li>
+<li>
+<p>외주사가 ssm_user로 접속해서 root 권한을 사용해도 되는지 보안팀과 확인 중</p>
+</li>
+<li>
+<p>외주사와 내부 직원간의 권한 분리가 필요하며 이것을 SSM session manager를 통해 자동화</p>
+</li>
+<li>
+<p>사용자 등록을 bash scrpt로 전달하여 등록하는 부분이 잘 안됨, 윈도우도 고려</p>
+</li>
+<li>
+<p>SSM document로 작업할 경우 삭제 등의 관리가 어려움</p>
+</li>
+<li>
+<p>run shell script에 parameter user 정보로 구분하여 전달하고 수동으로 사용자 추가 작업</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Ansible의 Configuration manager를 사용하지 못하는 이유</p>
+<ul>
+<li>사내 시스템 tag를 기반으로</li>
+</ul>
+</li>
+<li>
+<p>EKS 1.29 → 1.30 update 예정</p>
+<ul>
+<li>
+<p>기본 AMI가 Amazon Linux 2023으로 변경이 되어서 이 부분에 대해 신경써야 할 내용 가이드</p>
+</li>
+<li>
+<p>Cluster 6개</p>
+</li>
+</ul>
+</li>
+<li>
+<p>HR chatbot 비용 추가 산정</p>
+</li>
+</ul>
+<h1 id="customer-request">Customer Request<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#customer-request" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>non pem key, non ssh</p>
+</li>
+<li>
+<p>sso + session manager 를 통한 rbac 기반 서버 접근제어</p>
+</li>
+<li>
+<p>다수 애플리케이션 서버에 각각 필요한 OS User 생성 (ssm document 외에 다른 방안은?)</p>
+</li>
+<li>
+<p>접속자별 root / non root 권한구분 (예. 인프라운영팀 root 권한, 일반 사용자 non root 권한 등)</p>
+</li>
+</ul>
+<h2 id="specialist-answer">Specialist Answer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#specialist-answer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>실제 인프라 운영간에 필요한 접근제어를 구현하신다면, 현재의 구성방안을 알아야 할 필요가 있습니다.</p>
+<p>주지하시는 것 처럼 현재고객께서 AD 기반으로 인프라 + 사용자 관리를 하신다면, 가장 간단하게 AD connector를 통해서 IAM Identity center로 연동해서 AD의 파라메타를 SCIM으로 연계시키고 변수화 한 뒤, Tag 기반 정책을 활용해서 최대한 구현할 수 가 있습니다.</p>
+<p><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html" class="external external-link">https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>하지만, 이 경우에도, 기존 AD 그룹정책을 모두 구현하기가 어렵기 때문에, 일반적으로는 인프라팀은 IAM Identity Center를 통해서 인프라 자체를 관리하고,  실제 RDP로 접근해야 하는 어플리케이션 팀은 ADFS 포탈을 사용하도록 하는 Two track을 사용하시는 고객들도 계십니다.</p>
+<p>만약, 어플리케이션 팀에서 RDP로 접속할 때 ADFS포탈 안쓰고 AWS Session Manager(fleet management)를 써서 기존 ad사용자의 권한으로 접속을 하고자 한다면, 다음 블로그도 참조할 수 있습니다.</p>
+<p><a href="https://aws.amazon.com/ko/blogs/mt/configuring-aws-systems-manager-session-manager-support-federated-users-using-session-tags/?utm_source=perplexity" class="external external-link">https://aws.amazon.com/ko/blogs/mt/configuring-aws-systems-manager-session-manager-support-federated-users-using-session-tags/?utm_source=perplexity<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="related-request-history">Related request history<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#related-request-history" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="console-login-제한-문의">Console login 제한 문의<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#console-login-제한-문의" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>내부적으로 aws 접근 제한 정책을 강화하고 있습니다.<br/>
+단계적으로 적용하기 위해서 console login에 대한 이벤트를 수집해서 모니터링 하려 하는데요.</p>
+<p>이로 인해 전체 어카운트에 event bridge 설정이 필요한 상황입니다.</p>
+<ul>
+<li>EventPattern<br/>
+{<br/>
+“source”: [“aws.signin”],<br/>
+“detail-type”: [“AWS Console Sign In via CloudTrail”]<br/>
+}</li>
+</ul>
+<p>문의사항으로 개별 어카운트에서 event bridge 설정을 하는 방법 외에 organization cloudtrail 을 통해 organization master 어카운트에서 전체 어카운트에 통합 설정이 가능한 방법이 있을지 문의드립니다.</p>
+<p>확인해보니 organization master 어카운트에서 전체 어카운트에 cloudtrail log를 수집하고 있더라도 event bridge 에서는 해당 어카운트에 event history 에 대해서만 확인하고 있어 방법이 없을 것 같지만 혹시나 다른 방안이 있을지 궁금합니다.</p>
+<ul>
+<li>
+<p>가이드 답변</p>
+<p>CloudTrail에서는 AWS Management Console sign-in events에 대한 log를 기록하고 있습니다.</p>
+<p>(<a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-aws-console-sign-in-events.html" class="external external-link">https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-aws-console-sign-in-events.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<p>그리고, CloudTrail의 Organization Event Data Stores 기능을 통해 AWS Organization의 모든 하위 account의 event를  S3에 저장할 수있습니다.</p>
+<p>(<a href="https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html#cloudtrail-lake-organizations-update-eds" class="external external-link">https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-organizations.html#cloudtrail-lake-organizations-update-eds<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> )</p>
+<p>Event Bridge를 사용하는 목적은 CloudTrail의 Console sing-in log를 S3 외에 다른 서비스로 전달하여 모니터링 하기 위해 필요하신것으로 보입니다.</p>
+<p>Event Data Store에 저장된 Sign-in log를 query하여 모니터링과 연동하시는 방법도 검토 가능하실 지 궁금 합니다.</p>
+</li>
+</ul>
+<h3 id="session-manager를-통한-file-transfer">Session Manager를 통한 File Transfer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#session-manager를-통한-file-transfer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>24년부터 pem 키 관리와 ssh, sftp port 를 사용하지 않기 위해서 개발자들에게 sso user 를 발급하고, session manager 를 통해 ec2 에 접근하게 하고 있습니다.<br/>
+이러한 환경에서 개발자의 local pc > ec2 로 file upload 가 필요한 경우, aws 에서 가이드 하는 방법이 있을지 문의 드립니다.</p>
+<p>중간에 s3 upload 후 ec2 에서 download 하는 방식은 다수 계정에 cross account role 과 assume role policy 생성이 필요하여 지양하고자 합니다.</p>
+<ul>
+<li>
+<p>가이드 답변</p>
+<p>SSM을 통해 연결된 session에서 SSH에 대한 tunneling을 생성하여 scp 명령으로 local pc file을 업로드 할 수 있습니다.</p>
+<p>이 경우 SSH connection을 형성되지만 EC2 instance에 별도로 SSH port를 open 하지는 않고 SSM session을 활용 합니다.</p>
+<p>이 경우에도 User에 대한 Session Manager에 대한 권한 설정이 필요 하여 Role 생성에 대한 번거로움은 S3 사용과 동일할 것으로보입니다.</p>
+<p>이 방법이 적합 하시다면 아래의 CLI 환경에서 설정하는 가이드를 참고하십시오.</p>
+<p><a href="https://github.com/qoomon/aws-ssm-ec2-proxy-command#prerequisits" class="external external-link">https://github.com/qoomon/aws-ssm-ec2-proxy-command#prerequisits<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ol>
+<li>
+<p>AWS CLI Session Manager Plugin 설치</p>
+</li>
+<li>
+<p>User의 IAM에 권한 설정</p>
+</li>
+<li>
+<p>SSH Proxy Command (aws-ssm-ec2-proxy-command.sh) 다운로드</p>
+</li>
+<li>
+<p>Local PC의 ssh config에 SSH Proxy Command 명령어 추가</p>
+</li>
+</ol>
+<p>host i-* mi-*</p>
+<p>IdentityFile ~/.ssh/id_rsa</p>
+<p>ProxyCommand ~/.ssh/aws-ssm-ec2-proxy-command.sh %h %r %p ~/.ssh/id_rsa.pub</p>
+<p>StrictHostKeyChecking no</p>
+<hr/>
+<ol start="5">
+<li>SSH 연결 시험</li>
+</ol>
+<p><code>ssh &lt;INSTACEC_USER>@&lt;INSTANCE_ID></code></p>
+<hr/>
+<ol start="6">
+<li>SCP 명령어를 사용하여 file upload</li>
+</ol>
+<p><code>scp localfile &lt;INSTACEC_USER>@&lt;INSTANCE_ID></code></p>
+<hr/>
+<p>추가로 ec2-instance-connect:SendSSHPublicKey 명령을 사용하여 특정 user에게 만 권한을 허용하는 방법도 가이드 하고 있으니참고 하십시오.</p>
+</li>
+</ul>
+<h1 id="what-is-ssm">What is SSM<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-ssm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>AWS Systems Manager는 다양한 기능을 제공하며, 이를 카테고리별로 나누어 설명하겠습니다.</p>
+<h2 id="기능-카테고리">기능 카테고리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#기능-카테고리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="노드-관리">노드 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#노드-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Fleet Manager: 서버 플릿의 전체 상태와 성능을 글로벌하게 볼 수 있는 기능</p>
+</li>
+<li>
+<p>Compliance: 비준수 리소스 탐지</p>
+</li>
+<li>
+<p>Patch Manager: 패치 자동화</p>
+</li>
+<li>
+<p>Session Manager: EC2 인스턴스 연결 및 관리</p>
+</li>
+<li>
+<p>Run Command: 원격으로 관리형 인스턴스 구성</p>
+</li>
+<li>
+<p>Distributor: 소프트웨어 패키징</p>
+</li>
+</ul>
+<h3 id="애플리케이션-관리">애플리케이션 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#애플리케이션-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Application Manager: 애플리케이션 및 클러스터 관리</p>
+</li>
+<li>
+<p>AppConfig: 애플리케이션 구성 관리 및 배포</p>
+</li>
+</ul>
+<h3 id="변경-관리">변경 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#변경-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Change Manager: 변경 요청 관리 및 승인</p>
+</li>
+<li>
+<p>Automation: AWS 리소스에 대한 자동화 작업 수행</p>
+</li>
+<li>
+<p>Maintenance Windows: 패치 적용을 위한 유지 보수 기간 설정</p>
+</li>
+</ul>
+<h3 id="인스턴스-및-노드">인스턴스 및 노드<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#인스턴스-및-노드" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Hybrid Activations: 하이브리드 환경의 VM 설정</li>
+</ul>
+<h3 id="공유-리소스">공유 리소스<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#공유-리소스" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Documents: Systems Manager가 수행할 수 있는 작업을 정의하는 사전 구성된 문서</li>
+</ul>
+<h3 id="운영-관리">운영 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#운영-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Incident Manager: 인시던트 관리 및 해결</p>
+</li>
+<li>
+<p>OpsCenter: 운영 문제 중앙 집중식 관리</p>
+</li>
+<li>
+<p>Explorer: AWS 리소스에 대한 통합 대시보드</p>
+</li>
+</ul>
+<h3 id="모니터링">모니터링<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#모니터링" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Parameter Store: 구성 데이터 관리 및 암호화</p>
+</li>
+<li>
+<p>State Manager: 인스턴스의 원하는 상태 정의 및 유지</p>
+</li>
+</ul>
+<h2 id="제한사항">제한사항<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#제한사항" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>동시 실행 자동화: 각 AWS 계정은 최대 100개의 자동화를 동시에 실행할 수 있습니다. 적응형 동시성을 활성화하면 최대 500개까지 증가할 수 있습니다[3].</p>
+</li>
+<li>
+<p>Application Manager의 애플리케이션 수: 최대 100개의 애플리케이션을 Application Manager에 추가할 수 있습니다[3].</p>
+</li>
+<li>
+<p>Parameter Store 제한:</p>
+<ul>
+<li>
+<p>표준 파라미터: 최대 10,000개</p>
+</li>
+<li>
+<p>고급 파라미터: 최대 100,000개</p>
+</li>
+<li>
+<p>파라미터 값 크기: 표준 4KB, 고급 8KB[3]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Patch Manager 제한:</p>
+<ul>
+<li>
+<p>AWS 계정당 패치 기준: 50개</p>
+</li>
+<li>
+<p>패치 기준당 패치 그룹: 25개[3]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Remote Desktop 세션 제한:</p>
+<ul>
+<li>
+<p>최대 세션 시간: 60분</p>
+</li>
+<li>
+<p>동시 세션 수: AWS 계정당 리전당 5개 (최대 25개까지 자동 승인 가능)[3]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>드래그 앤 드롭 기능 부재: AWS Systems Manager는 직관적인 드래그 앤 드롭 인터페이스를 제공하지 않습니다[4].</p>
+</li>
+</ol>
+<p>이러한 기능과 제한사항을 고려하여 AWS Systems Manager를 효과적으로 활용할 수 있습니다.</p>
+<p>출처<br/>
+[1] AWS Systems Manager Features – Amazon Web Services (AWS) <a href="https://aws.amazon.com/systems-manager/features/" class="external external-link">https://aws.amazon.com/systems-manager/features/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] Security best practices for Systems Manager - AWS Documentation <a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/security-best-practices.html" class="external external-link">https://docs.aws.amazon.com/systems-manager/latest/userguide/security-best-practices.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[3] AWS Systems Manager endpoints and quotas <a href="https://docs.aws.amazon.com/general/latest/gr/ssm.html" class="external external-link">https://docs.aws.amazon.com/general/latest/gr/ssm.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[4] Guide to AWS Systems Manager: Instructions &amp; Examples - OpsRamp <a href="https://www.opsramp.com/guides/aws-monitoring-tool/aws-systems-manager/" class="external external-link">https://www.opsramp.com/guides/aws-monitoring-tool/aws-systems-manager/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="ssm-blog">SSM blog<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ssm-blog" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>AWS Tech Blog에서 SSM(Systems Manager)과 관련된 내용을 주제별로 분류하여 정리했습니다:</p>
+<h2 id="인프라-관리-및-자동화">인프라 관리 및 자동화<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#인프라-관리-및-자동화" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>EC2 인스턴스 관리</p>
+<ul>
+<li>
+<p><a href="https://aws.amazon.com/de/blogs/aws/new-session-manager/" class="external external-link">EC2 인스턴스에 대한 셸 액세스를 위한 Session Manager<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/de/blogs/security/how-to-configure-your-ec2-instances-to-automatically-join-a-microsoft-active-directory-domain/" class="external external-link">EC2 인스턴스 자동 Active Directory 도메인 가입 구성<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>패치 관리</p>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/security/how-to-patch-linux-workloads-on-aws/" class="external external-link">AWS에서 Linux 워크로드 패치하기<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+<li>
+<p>구성 관리</p>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/aws/introducing-a-new-experience-for-aws-system-manager/" class="external external-link">AWS Systems Manager의 새로운 경험 소개<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+</ol>
+<h2 id="모니터링-및-로깅">모니터링 및 로깅<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#모니터링-및-로깅" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>CloudWatch 통합</p>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/aws/new-amazon-cloudwatch-agent-with-aws-systems-manager-integration-unified-metrics-log-collection-for-linux-windows/" class="external external-link">AWS Systems Manager 통합을 통한 새로운 Amazon CloudWatch 에이전트<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+</ol>
+<h2 id="보안-및-규정-준수">보안 및 규정 준수<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#보안-및-규정-준수" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>보안 테스트 자동화</p>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/security/how-to-automate-scap-testing-with-aws-systems-manager-and-security-hub/" class="external external-link">AWS Systems Manager와 Security Hub를 사용한 SCAP 테스트 자동화<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+<li>
+<p>인시던트 대응</p>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/security/how-to-automate-incident-response-to-security-events-with-aws-systems-manager-incident-manager/" class="external external-link">AWS Systems Manager Incident Manager를 사용한 보안 이벤트 인시던트 대응 자동화<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+</ol>
+<h2 id="배포-및-릴리스-관리">배포 및 릴리스 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#배포-및-릴리스-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>블루/그린 배포</p>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/devops/bluegreen-infrastructure-application-deployment-blog/" class="external external-link">AMI, AWS Developer Tools 및 Amazon EC2 Systems Manager를 사용한 인프라 및 애플리케이션 코드의 블루/그린 배포 자동화<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+</ol>
+<h2 id="장애-주입-및-복원력-테스트">장애 주입 및 복원력 테스트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#장애-주입-및-복원력-테스트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>AWS Fault Injection Simulator (FIS) 통합</p>
+<ul>
+<li><a href="https://aws.amazon.com/blogs/devops/securely-validate-business-application-resilience-with-aws-fis-and-iam/" class="external external-link">AWS FIS 및 IAM을 사용한 비즈니스 애플리케이션 복원력 안전한 검증<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+</ol>
+<p>이러한 블로그 포스트들은 AWS Systems Manager의 다양한 기능과 사용 사례를 다루고 있으며, 인프라 관리, 보안, 모니터링, 배포 자동화 등 여러 영역에서 SSM의 활용 방법을 제시하고 있습니다.</p>
+<p>출처<br/>
+[1] AWS Systems Manager Session Manager for Shell Access to EC2 … <a href="https://aws.amazon.com/de/blogs/aws/new-session-manager/" class="external external-link">https://aws.amazon.com/de/blogs/aws/new-session-manager/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] Automating Blue/Green Deployments of Infrastructure and … - AWS <a href="https://aws.amazon.com/blogs/devops/bluegreen-infrastructure-application-deployment-blog/" class="external external-link">https://aws.amazon.com/blogs/devops/bluegreen-infrastructure-application-deployment-blog/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[3] How to Configure Your EC2 Instances to Automatically Join a … - AWS <a href="https://aws.amazon.com/de/blogs/security/how-to-configure-your-ec2-instances-to-automatically-join-a-microsoft-active-directory-domain/" class="external external-link">https://aws.amazon.com/de/blogs/security/how-to-configure-your-ec2-instances-to-automatically-join-a-microsoft-active-directory-domain/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[4] Introducing a new experience for AWS Systems Manager <a href="https://aws.amazon.com/blogs/aws/introducing-a-new-experience-for-aws-system-manager/" class="external external-link">https://aws.amazon.com/blogs/aws/introducing-a-new-experience-for-aws-system-manager/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[5] Securely validate business application resilience with AWS FIS and … <a href="https://aws.amazon.com/blogs/devops/securely-validate-business-application-resilience-with-aws-fis-and-iam/" class="external external-link">https://aws.amazon.com/blogs/devops/securely-validate-business-application-resilience-with-aws-fis-and-iam/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[6] How to automate incident response to security events with AWS … <a href="https://aws.amazon.com/blogs/security/how-to-automate-incident-response-to-security-events-with-aws-systems-manager-incident-manager/" class="external external-link">https://aws.amazon.com/blogs/security/how-to-automate-incident-response-to-security-events-with-aws-systems-manager-incident-manager/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[7] New – Amazon CloudWatch Agent with AWS Systems Manager … <a href="https://aws.amazon.com/blogs/aws/new-amazon-cloudwatch-agent-with-aws-systems-manager-integration-unified-metrics-log-collection-for-linux-windows/" class="external external-link">https://aws.amazon.com/blogs/aws/new-amazon-cloudwatch-agent-with-aws-systems-manager-integration-unified-metrics-log-collection-for-linux-windows/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[8] How to automate SCAP testing with AWS Systems Manager and … <a href="https://aws.amazon.com/blogs/security/how-to-automate-scap-testing-with-aws-systems-manager-and-security-hub/" class="external external-link">https://aws.amazon.com/blogs/security/how-to-automate-scap-testing-with-aws-systems-manager-and-security-hub/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[9] How to Patch Linux Workloads on AWS | AWS Security Blog <a href="https://aws.amazon.com/blogs/security/how-to-patch-linux-workloads-on-aws/" class="external external-link">https://aws.amazon.com/blogs/security/how-to-patch-linux-workloads-on-aws/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="ssm-rbac">SSM RBAC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ssm-rbac" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>AWS Systems Manager의 Session Manager를 사용하여 RBAC(Role-Based Access Control)을 구성하는 방법은 다음과 같습니다:</p>
+<h2 id="iam-정책-및-역할-설정">IAM 정책 및 역할 설정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iam-정책-및-역할-설정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>사용자 그룹 생성: 각 역할에 맞는 IAM 사용자 그룹을 생성합니다.</p>
+</li>
+<li>
+<p>IAM 정책 생성: 각 그룹에 대한 세분화된 권한을 정의하는 IAM 정책을 생성합니다.</p>
+</li>
+<li>
+<p>정책 연결: 생성한 정책을 해당 그룹에 연결합니다.</p>
+</li>
+</ol>
+<h2 id="ec2-인스턴스-태그-지정">EC2 인스턴스 태그 지정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ec2-인스턴스-태그-지정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>EC2 인스턴스에 태그 추가: 예를 들어, “Environment”: “Production”, “Role”: “WebServer” 등의 태그를 지정합니다.</p>
+</li>
+<li>
+<p>IAM 정책에 태그 조건 추가: 특정 태그가 있는 인스턴스에만 접근할 수 있도록 정책을 구성합니다.</p>
+</li>
+</ol>
+<h2 id="session-manager-설정">Session Manager 설정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#session-manager-설정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>Session Manager 기본 설정 구성: AWS Systems Manager 콘솔에서 Session Manager 설정을 구성합니다.</p>
+</li>
+<li>
+<p>로깅 활성화: CloudWatch Logs 또는 S3 버킷에 세션 활동을 로깅하도록 설정합니다.</p>
+</li>
+<li>
+<p>세션 제한 설정: 필요한 경우 세션 시간 제한, 최대 세션 수 등을 설정합니다.</p>
+</li>
+</ol>
+<h2 id="iam-정책-예시">IAM 정책 예시<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iam-정책-예시" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;Version&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;2012-10-17&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;Statement&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Effect&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;Allow&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Action&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;ssm:StartSession&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Resource&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;arn:aws:ec2:*:*:instance/*&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Condition&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;StringEquals&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                    &quot;aws:ResourceTag/Environment&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;Production&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                    &quot;aws:ResourceTag/Role&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;WebServer&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">                }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<p>이 정책은 “Environment”: “Production”과 “Role”: “WebServer” 태그가 있는 EC2 인스턴스에만 Session Manager 세션을 시작할 수 있도록 허용합니다.</p>
+<h2 id="mfa-강제-적용">MFA 강제 적용<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mfa-강제-적용" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>IAM 정책에 MFA 조건을 추가하여 추가적인 보안을 구현할 수 있습니다.</p>
+<p>참고할 만한 기술 블로그:</p>
+<ol>
+<li>
+<p>AWS 공식 블로그: “AWS Systems Manager Session Manager, EC2 인스턴스 쉘 접근을 위한 신규 기능”[2]</p>
+</li>
+<li>
+<p>CloudMT 기술 블로그: “AWS Systems Manager의 Session Manager를 이용하여 프라이빗 환경의 서버 접근통제 구현”[1]</p>
+</li>
+</ol>
+<p>이 블로그들은 Session Manager의 기본 설정부터 고급 구성까지 상세한 가이드를 제공하고 있어 RBAC 구현에 많은 도움이 될 것입니다.</p>
+<p>출처<br/>
+[1] AWS Systems Manager의 Session Manager를 이용하여 프라이빗 … <a href="https://tech.cloudmt.co.kr/2022/09/29/aws-systems-manager%EC%9D%98-session-manager%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%ED%94%84%EB%9D%BC%EC%9D%B4%EB%B9%97-%ED%99%98%EA%B2%BD%EC%9D%98-%EC%84%9C%EB%B2%84-%EC%A0%91%EA%B7%BC%ED%86%B5%EC%A0%9C-%EA%B5%AC%ED%98%84/" class="external external-link">https://tech.cloudmt.co.kr/2022/09/29/aws-systems-manager의-session-manager를-이용하여-프라이빗-환경의-서버-접근통제-구현/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] AWS Systems Manager Session Manager, EC2 인스턴스 쉘 접근을 … <a href="https://aws.amazon.com/ko/blogs/korea/new-session-manager/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/new-session-manager/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-803" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#architecture-guide---access-governance" data-for="architecture-guide---access-governance">Architecture Guide - Access Governance</a></li><li class="depth-0"><a href="#status" data-for="status">Status</a></li><li class="depth-0"><a href="#customer-request" data-for="customer-request">Customer Request</a></li><li class="depth-1"><a href="#specialist-answer" data-for="specialist-answer">Specialist Answer</a></li><li class="depth-1"><a href="#related-request-history" data-for="related-request-history">Related request history</a></li><li class="depth-2"><a href="#console-login-제한-문의" data-for="console-login-제한-문의">Console login 제한 문의</a></li><li class="depth-2"><a href="#session-manager를-통한-file-transfer" data-for="session-manager를-통한-file-transfer">Session Manager를 통한 File Transfer</a></li><li class="depth-0"><a href="#what-is-ssm" data-for="what-is-ssm">What is SSM</a></li><li class="depth-1"><a href="#기능-카테고리" data-for="기능-카테고리">기능 카테고리</a></li><li class="depth-2"><a href="#노드-관리" data-for="노드-관리">노드 관리</a></li><li class="depth-2"><a href="#애플리케이션-관리" data-for="애플리케이션-관리">애플리케이션 관리</a></li><li class="depth-2"><a href="#변경-관리" data-for="변경-관리">변경 관리</a></li><li class="depth-2"><a href="#인스턴스-및-노드" data-for="인스턴스-및-노드">인스턴스 및 노드</a></li><li class="depth-2"><a href="#공유-리소스" data-for="공유-리소스">공유 리소스</a></li><li class="depth-2"><a href="#운영-관리" data-for="운영-관리">운영 관리</a></li><li class="depth-2"><a href="#모니터링" data-for="모니터링">모니터링</a></li><li class="depth-1"><a href="#제한사항" data-for="제한사항">제한사항</a></li><li class="depth-0"><a href="#ssm-blog" data-for="ssm-blog">SSM blog</a></li><li class="depth-1"><a href="#인프라-관리-및-자동화" data-for="인프라-관리-및-자동화">인프라 관리 및 자동화</a></li><li class="depth-1"><a href="#모니터링-및-로깅" data-for="모니터링-및-로깅">모니터링 및 로깅</a></li><li class="depth-1"><a href="#보안-및-규정-준수" data-for="보안-및-규정-준수">보안 및 규정 준수</a></li><li class="depth-1"><a href="#배포-및-릴리스-관리" data-for="배포-및-릴리스-관리">배포 및 릴리스 관리</a></li><li class="depth-1"><a href="#장애-주입-및-복원력-테스트" data-for="장애-주입-및-복원력-테스트">장애 주입 및 복원력 테스트</a></li><li class="depth-0"><a href="#ssm-rbac" data-for="ssm-rbac">SSM RBAC</a></li><li class="depth-1"><a href="#iam-정책-및-역할-설정" data-for="iam-정책-및-역할-설정">IAM 정책 및 역할 설정</a></li><li class="depth-1"><a href="#ec2-인스턴스-태그-지정" data-for="ec2-인스턴스-태그-지정">EC2 인스턴스 태그 지정</a></li><li class="depth-1"><a href="#session-manager-설정" data-for="session-manager-설정">Session Manager 설정</a></li><li class="depth-1"><a href="#iam-정책-예시" data-for="iam-정책-예시">IAM 정책 예시</a></li><li class="depth-1"><a href="#mfa-강제-적용" data-for="mfa-강제-적용">MFA 강제 적용</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

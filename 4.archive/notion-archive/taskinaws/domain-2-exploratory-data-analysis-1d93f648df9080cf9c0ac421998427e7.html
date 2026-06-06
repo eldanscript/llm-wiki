@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Domain 2 Exploratory Data Analysis 1d93f648df9080cf9c0ac421998427e7 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Domain 2 Exploratory Data Analysis 1d93f648df9080cf9c0ac421998427e7 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Domain 2 Exploratory Data Analysis 1d93f648df9080cf9c0ac421998427e7 | LLM Wiki"/><meta name="twitter:description" content="🛠️ Domain 2."/><meta property="og:description" content="🛠️ Domain 2."/><meta property="og:image:alt" content="🛠️ Domain 2."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/domain-2-exploratory-data-analysis-1d93f648df9080cf9c0ac421998427e7"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/domain-2-exploratory-data-analysis-1d93f648df9080cf9c0ac421998427e7"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🛠️ Domain 2."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/domain-2-exploratory-data-analysis-1d93f648df9080cf9c0ac421998427e7" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2165" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2165" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Domain 2 Exploratory Data Analysis 1d93f648df9080cf9c0ac421998427e7</a></div></nav><h1 class="article-title">Domain 2 Exploratory Data Analysis 1d93f648df9080cf9c0ac421998427e7</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.482Z">2026년 6월 06일</time><span>34 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/taskinaws/attachments/woodcuts_sekka_2-1.jpg" alt/></p>
+<p>🛠️</p>
+<h1 id="domain-2-exploratory-data-analysis"><strong>Domain 2. Exploratory Data Analysis</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-2-exploratory-data-analysis" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="objectives">Objectives<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#objectives" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Sanitizing and preparing data for modeling</p>
+</li>
+<li>
+<p>Performing feature engineering</p>
+</li>
+<li>
+<p>Analyzing and visualizing data for ML</p>
+</li>
+</ul>
+<h1 id="domain-21-sanitize-and-prepare-data-for-modeling"><strong>Domain 2.1: Sanitize and prepare data for modeling</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-21-sanitize-and-prepare-data-for-modeling" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>데이터 모델링을 위한 데이터 정제 및 준비 단계에 대해 자세히 살펴보겠습니다.</p>
+<ol>
+<li>
+<p>데이터에 대한 이해 높이기</p>
+<ul>
+<li>
+<p>데이터를 정제하기 전에 먼저 데이터에 대한 이해도를 높여야 합니다.</p>
+</li>
+<li>
+<p>기술 통계를 사용하여 데이터의 다양한 속성을 파악할 수 있습니다.</p>
+</li>
+<li>
+<p>변수 간 상관관계 분석, 산점도 분석, 상관 행렬 등이 도움이 됩니다.</p>
+</li>
+</ul>
+<p>데이터셋에 대한 전반적인 통계 정보는 기계 학습 모델링에 매우 중요합니다. 이러한 통계 정보는 크게 다음과 같은 세 가지 범주로 구분할 수 있습니다.</p>
+<ol>
+<li>
+<p>전체 통계:</p>
+<ul>
+<li>
+<p>데이터셋의 <span class="text-highlight">**행(인스턴스) 수와 열(특성) 수**</span>를 나타냅니다.</p>
+</li>
+<li>
+<p>이 정보를 통해 <span class="text-highlight">**데이터셋의 크기와 차원성**</span>을 파악할 수 있습니다.</p>
+</li>
+<li>
+<p>차원성이 너무 높으면 모델 성능 저하를 야기할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>속성 통계(Attribute statistics) :</p>
+<ul>
+<li>
+<p><span class="text-highlight">**숫자형 속성**</span>에 대한 통계 정보입니다.</p>
+</li>
+<li>
+<p><span class="text-highlight">**평균, 표준편차, 분산, 최솟값, 최댓값**</span> 등의 정보를 제공합니다.</p>
+</li>
+<li>
+<p>이를 통해 각 <span class="text-highlight">**속성의 분포 및 모양을 이해**</span>할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>다변량 통계(Multivariate statistics):</p>
+<ul>
+<li>
+<p>데이터셋의 <span class="text-highlight">**다양한 속성 간 상관관계와 관계**</span>를 나타냅니다.</p>
+</li>
+<li>
+<p>속성 간 상관관계를 파악하는 것은 모델 성능에 중요한 영향을 미칠 수 있습니다.</p>
+</li>
+<li>
+<p>예를 들어 높은 상관관계를 보이는 속성들은 모델 성능에 부정적인 영향을 줄 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 전반적인 통계 정보를 활용하면 데이터셋의 특성을 깊이 있게 이해할 수 있습니다. 이는 데이터 정제, 전처리, 모델 설계 등 후속 작업에 매우 유용한 정보를 제공합니다. 따라서 데이터 분석 초기 단계에서 이러한 통계 정보를 충분히 살펴보는 것이 중요합니다.</p>
+<p>데이터셋에 여러 변수나 특성이 포함된 경우, 이들 간의 상관관계를 분석하는 것이 중요합니다.</p>
+<ol>
+<li>
+<p>상관관계 파악의 중요성</p>
+<ul>
+<li>
+<p>두 특성 간 높은 상관관계는 모델 성능 저하를 초래할 수 있습니다.</p>
+</li>
+<li>
+<p><span class="text-highlight">**서로 강하게 상관된 특성들을 모델에 모두 사용하면 모델 수렴 문제 등이 발생**</span>할 수 있습니다.</p>
+<ul>
+<li>
+<p>문제 내용</p>
+<p>서로 강하게 상관된 특성(feature)들을 모델에 모두 사용하면 발생할 수 있는 문제는 다음과 같습니다:</p>
+<ol>
+<li>
+<p>다중 공선성(Multicollinearity) 문제:</p>
+<ul>
+<li>
+<p>서로 강하게 상관된 특성들이 모델에 포함되면 <span class="text-highlight">**데이터 간 선형 종속성이 발생**</span>합니다.</p>
+</li>
+<li>
+<p>이로 인해 모델의 계수 추정이 불안정해지고, 모델의 성능이 저하됩니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>모델 수렴 문제:</p>
+<ul>
+<li>
+<p>다중 공선성으로 인해 모델 파라미터 학습 과정에서 <span class="text-highlight">**수렴이 어려워질 수 있습니다**</span>.</p>
+</li>
+<li>
+<p>경사 하강법과 같은 최적화 알고리즘이 최적해를 찾기 어려워지거나, 매우 느리게 수렴할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="text-highlight">**과적합(Overfitting)**</span> 문제:</p>
+<ul>
+<li>상관된 특성들이 모델에 과도하게 반영되어 학습 데이터에는 잘 맞지만, 새로운 데이터에는 <span class="text-highlight">**일반화가 어려워질 수 있습니다**</span>.</li>
+</ul>
+</li>
+</ol>
+<p>이러한 문제를 해결하기 위해서는 다음과 같은 접근이 필요합니다:</p>
+<ul>
+<li>
+<p>상관관계가 높은 특성들을 식별하고, 중복되는 정보를 제거하는 특성 선택 및 차원 축소 기법 적용</p>
+</li>
+<li>
+<p><span class="text-highlight">**정규화(Regularization) 기법을 사용하여 모델의 복잡도를 조절**</span></p>
+</li>
+<li>
+<p><span class="text-highlight">**교차 검증(Cross-Validation)을 통해 모델 평가 및 일반화 성능 향상**</span></p>
+</li>
+</ul>
+<p>결과적으로 상관된 특성들을 모델에 과도하게 포함하면 모델 학습 과정에서 문제가 발생할 수 있으므로, 이를 해결하기 위한 노력이 필요합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>따라서 데이터셋 내 높은 상관관계를 가진 특성들을 파악하는 것이 중요합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>산점도를 통한 관계 파악</p>
+<ul>
+<li>
+<p><span class="text-highlight">**2개 이상의 수치형 특성 간 관계를 이해하기 위해 산점도를 활용**</span>할 수 있습니다.</p>
+</li>
+<li>
+<p>산점도를 통해 특성 <span class="text-highlight">**간 선형 관계의 강도를 시각적으로 확인**</span>할 수 있습니다.</p>
+</li>
+<li>
+<p>일부 특성 간에는 강한 선형 관계가 관찰되지만, 다른 특성 간에는 그렇지 않음을 알 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>상관 행렬을 통한 정량화</p>
+<ul>
+<li>
+<p>특성 간 선형 관계의 강도를 정량적으로 파악하기 위해 상관 행렬을 사용할 수 있습니다.</p>
+</li>
+<li>
+<p>상관 계수는 -1에서 1 사이의 값을 가집니다.</p>
+</li>
+<li>
+<p>상관 계수가 1이면 완벽한 양의 선형 관계, -1이면 완벽한 음의 선형 관계를 나타냅니다.</p>
+</li>
+<li>
+<p>상관 계수가 0이라면 선형 관계가 없다는 것을 의미하지만, 비선형 관계가 존재할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>요약하면, 데이터셋 내 특성 간 상관관계를 파악하는 것은 모델 성능에 중요한 영향을 미칠 수 있습니다. 산점도와 상관 행렬 분석을 통해 이러한 상관관계를 체계적으로 분석할 수 있습니다.</p>
+</li>
+<li>
+<p>데이터 표준화</p>
+<ul>
+<li>
+<p>데이터의 <span class="text-highlight">**언어와 문법을 표준화**</span>해야 합니다.</p>
+</li>
+<li>
+<p>예를 들어 모든 텍스트를 소문자로 변환하는 등의 전처리가 필요합니다.</p>
+</li>
+<li>
+<p>서로 다른 단위의 데이터도 통일해야 합니다. (same scale)</p>
+<ul>
+<li>
+<p>Scaling vs Normalization</p>
+<p>네, 서로 다른 단위의 데이터를 통일하는 것은 scaling 및 normalization 작업과 관련됩니다.</p>
+<ol>
+<li>
+<p>Scaling (스케일링):</p>
+<ul>
+<li>
+<p>서로 다른 범위의 값을 가진 특성들을 <span class="text-highlight">**동일한 범위로 변환**</span>하는 과정입니다.</p>
+</li>
+<li>
+<p>예를 들어 길이(meter), 무게(kg), 온도(°C) 등의 데이터를 모두 <span class="text-highlight">**0~1 사이의 값으로 변환**</span>하는 것이 대표적인 스케일링 기법입니다.</p>
+</li>
+<li>
+<p>이를 통해 모델 학습 과정에서 <span class="text-highlight">**특성들 간 균형을 유지**</span>할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Normalization (정규화):</p>
+<ul>
+<li>
+<p>스케일링과 유사하지만, 특성의 <span class="text-highlight">**분포 형태를 변환**</span>하는 것에 초점을 맞춘 기법입니다.</p>
+</li>
+<li>
+<p>예를 들어 평균을 0, 표준편차를 1로 만드는 <span class="text-highlight">**z-score 정규화**</span>가 대표적입니다.</p>
+</li>
+<li>
+<p>정규화를 통해 특성 간 <span class="text-highlight">**스케일 차이뿐만 아니라 분포 차이도 해소**</span>할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>데이터 전처리 과정에서 서로 다른 단위의 데이터를 통일하는 것은 주로 스케일링 기법을 사용합니다. 하지만 경우에 따라 정규화 기법을 함께 적용하여 특성 간 균형을 더 잘 맞출 수 있습니다.</p>
+<p>이러한 스케일링과 정규화 작업을 통해 모델 학습 과정에서 수치적 안정성을 확보하고, 모델 성능 향상을 기대할 수 있습니다.</p>
+</li>
+<li>
+<p>Scaling 기법</p>
+<p>데이터 스케일링(Scaling)을 위해 사용되는 대표적인 기법들은 다음과 같습니다:</p>
+<ol>
+<li>
+<p>Min-Max 스케일링 (Normalization):</p>
+<ul>
+<li>
+<p>데이터를 최소값 0, 최대값 1 사이의 범위로 변환합니다.</p>
+</li>
+<li>
+<p>공식: x_scaled = (x - min(x)) / (max(x) - min(x))</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Z-score 정규화 (Standardization):</p>
+<ul>
+<li>
+<p>데이터를 평균 0, 표준편차 1의 정규 분포 형태로 변환합니다.</p>
+</li>
+<li>
+<p>공식: x_scaled = (x - mean(x)) / std(x)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Robust 스케일링:</p>
+<ul>
+<li>
+<p>평균과 표준편차 대신 중앙값과 IQR(사분범위)를 사용하여 이상치에 강인한 스케일링을 수행합니다.</p>
+</li>
+<li>
+<p>공식: x_scaled = (x - median(x)) / IQR(x)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>MaxAbs 스케일링:</p>
+<ul>
+<li>
+<p>데이터를 절대값 최대값 1 사이의 범위로 변환합니다.</p>
+</li>
+<li>
+<p>공식: x_scaled = x / max(|x|)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Unit 벡터 스케일링:</p>
+<ul>
+<li>
+<p>데이터 벡터의 L2 norm(유클리드 거리)이 1이 되도록 스케일링합니다.</p>
+</li>
+<li>
+<p>공식: x_scaled = x / ||x||</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>각 스케일링 기법은 데이터의 분포, 이상치 존재 여부, 모델 요구사항 등에 따라 적절히 선택되어야 합니다. 스케일링을 통해 모델 학습의 효율성과 안정성을 높일 수 있습니다.</p>
+</li>
+<li>
+<p>Robust Scaling 기법</p>
+<p>Robust 스케일링 기법은 이상치에 강인한 특성을 지닌 스케일링 방법입니다. 대표적인 Robust 스케일링 기법인 Robust Scaler의 처리 과정은 다음과 같습니다:</p>
+<ol>
+<li>
+<p>중앙값(Median) 계산</p>
+<ul>
+<li>
+<p>데이터의 중앙값을 계산합니다.</p>
+</li>
+<li>
+<p>중앙값은 이상치의 영향을 받지 않는 중심 경향성 지표입니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>사분범위(IQR) 계산</p>
+<ul>
+<li>
+<p>25th 백분위수(Q1)와 75th 백분위수(Q3)의 차이를 계산합니다.</p>
+</li>
+<li>
+<p>이는 데이터 분포의 산포도를 나타내는 지표입니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>스케일링 수식 적용</p>
+<ul>
+<li>
+<p>다음 수식을 사용하여 데이터를 스케일링합니다:</p>
+</li>
+<li>
+<p>x_scaled = (x - median(x)) / IQR(x)</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이 과정에서 중앙값과 사분범위를 사용함으로써 이상치의 영향을 최소화할 수 있습니다.</p>
+<p>Robust Scaler의 특징:</p>
+<ul>
+<li>
+<p>평균과 표준편차에 민감한 표준 정규화 기법에 비해 이상치에 강인합니다.</p>
+</li>
+<li>
+<p>데이터의 상대적인 크기 관계를 잘 유지할 수 있습니다.</p>
+</li>
+<li>
+<p>데이터가 정규 분포를 따르지 않아도 적용할 수 있습니다.</p>
+</li>
+</ul>
+<p>따라서 데이터에 이상치가 포함되어 있거나 정규 분포를 가정하기 어려운 경우, Robust 스케일링 기법을 사용하면 효과적으로 데이터를 정규화할 수 있습니다.</p>
+</li>
+<li>
+<p>Unit Vector Scaling 기법</p>
+<p>네, Unit 벡터 스케일링 방법에 대해 구체적인 예시와 함께 자세히 설명하겠습니다.</p>
+<p>Unit 벡터 스케일링은 데이터의 L2 norm(유클리드 노름)이 1이 되도록 변환하는 방식입니다. 수식은 다음과 같습니다:</p>
+<p>x_scaled = x / ||x||</p>
+<p>여기서 ||x||는 데이터 벡터 x의 L2 norm을 의미합니다.</p>
+<p>예를 들어, 다음과 같은 데이터 벡터 x가 있다고 가정해 봅시다:</p>
+<p>x = [2, 3, 4]</p>
+<ol>
+<li>
+<p>L2 norm (벡터나 행렬의 크기) 계산</p>
+<ul>
+<li>||x|| = sqrt(2^2 + 3^2 + 4^2) = sqrt(13) ≈ 3.6056</li>
+</ul>
+</li>
+<li>
+<p>Unit 벡터 스케일링 적용</p>
+<ul>
+<li>x_scaled = x / ||x|| = [2/3.6056, 3/3.6056, 4/3.6056] ≈ [0.5547, 0.8321, 1.1094]</li>
+</ul>
+</li>
+</ol>
+<p>결과적으로 원래 데이터 벡터 x = [2, 3, 4]는 Unit 벡터 스케일링을 거쳐 x_scaled = [0.5547, 0.8321, 1.1094]로 변환됩니다.</p>
+<p>Unit 벡터 스케일링의 특징은 다음과 같습니다:</p>
+<ol>
+<li>
+<p>방향 보존:</p>
+<ul>
+<li>
+<p>데이터 벡터의 방향성은 그대로 유지되지만, 크기는 1로 변환됩니다.</p>
+</li>
+<li>
+<p>따라서 데이터 간 각도 관계는 보존됩니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>거리 척도 변경:</p>
+<ul>
+<li>
+<p>데이터 간 거리는 상대적으로 변경됩니다.</p>
+</li>
+<li>
+<p>하지만 각도 관계는 유지되므로, 데이터의 방향성에 초점을 맞추는 모델에 유용합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>균일한 scale:</p>
+<ul>
+<li>
+<p>모든 데이터가 L2 norm 1로 정규화되므로, 특성 간 scale이 균일해집니다.</p>
+</li>
+<li>
+<p>이는 거리 기반 모델(kNN, SVM 등)에 도움이 될 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이처럼 Unit 벡터 스케일링은 데이터의 방향성을 유지하면서도 균일한 크기로 변환하는 특성이 있습니다. 따라서 각도 정보가 중요한 모델에 효과적으로 활용될 수 있습니다.</p>
+</li>
+<li>
+<p>Normalizer 기법</p>
+<p>네, Normalizer는 데이터 스케일링 기법 중 하나입니다.</p>
+<p>Normalizer는 각 데이터 샘플을 L2 Norm이 1이 되도록 정규화합니다. 수식은 다음과 같습니다:</p>
+<p>x_normalized = x / ||x||2</p>
+<p>여기서 ||x||2는 벡터 x의 L2 Norm을 의미합니다. L2 Norm은 다음과 같이 계산됩니다:</p>
+<p id="2)">||x||2 = sqrt(x1^2 + x2^2 + … + xn</p>
+<p>Normalizer의 특징은 다음과 같습니다:</p>
+<ol>
+<li>
+<p>데이터 방향 보존:</p>
+<ul>
+<li>
+<p>Normalizer는 데이터의 방향성을 유지하면서 크기만 조정합니다.</p>
+</li>
+<li>
+<p>따라서 데이터 간 각도 관계가 보존됩니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>균일한 스케일:</p>
+<ul>
+<li>모든 데이터 샘플이 L2 Norm 1로 정규화되므로, 특성 간 스케일이 균일해집니다.</li>
+</ul>
+</li>
+<li>
+<p>거리 척도 변경:</p>
+<ul>
+<li>
+<p>데이터 간 거리 척도는 변경되지만, 방향성은 유지됩니다.</p>
+</li>
+<li>
+<p>이는 거리 기반 모델(kNN, SVM 등)에 유용할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>Normalizer는 특히 문서 분류, 추천 시스템 등의 분야에서 널리 사용됩니다. 이러한 분야에서는 데이터의 방향성이 중요하기 때문입니다.</p>
+<p>또한 Normalizer는 Unit Vector Scaling과 유사한 효과를 가지지만, 계산 복잡도가 낮아 효율적입니다.</p>
+<p>따라서 Normalizer는 데이터의 방향성을 유지하면서도 균일한 스케일을 얻을 수 있는 효과적인 스케일링 기법입니다.</p>
+</li>
+<li>
+<p>Unit Vector vs Normalizer</p>
+<p>Unit Vector Scaling은 다음과 같은 수식으로 데이터를 변환합니다:</p>
+<p>x_scaled = x / ||x||2 (모든 데이터 샘플의 L2 Norm이 1)</p>
+<p>여기서 ||x||2는 벡터 x의 L2 Norm을 의미합니다.</p>
+<p>반면, Normalizer는 다음과 같은 수식으로 데이터를 정규화합니다:</p>
+<p>x_normalized = x / ||x||2 (각 데이터 샘플의 L2 Norm이 서로 다름)</p>
+<p>두 기법의 차이점은 다음과 같습니다:</p>
+<ol>
+<li>
+<p>결과 값의 차이:</p>
+<ul>
+<li>
+<p>Unit Vector Scaling: 결과 벡터의 L2 Norm이 1</p>
+</li>
+<li>
+<p>Normalizer: 결과 벡터의 L2 Norm이 각각 다름</p>
+</li>
+</ul>
+</li>
+<li>
+<p>목적의 차이:</p>
+<ul>
+<li>
+<p>Unit Vector Scaling: <span class="text-highlight">**데이터 벡터의 방향성을 유지하면서 크기를 조절**</span></p>
+</li>
+<li>
+<p>Normalizer: <span class="text-highlight">**각 데이터 벡터의 크기를 정규화하여 균일한 크기**</span> 확보</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>즉, Unit Vector Scaling은 데이터의 방향성을 보존하는 것이 목적이지만, Normalizer는 데이터의 크기를 균일하게 하는 것이 목적입니다.</p>
+<p>따라서 Unit Vector Scaling과 Normalizer는 서로 다른 스케일링 기법이며, 각각 상황에 따라 적절히 사용되어야 합니다.</p>
+</li>
+<li>
+<p>Scaling 활용 예</p>
+<p>네, 각 스케일링 기법이 주로 사용되는 대표적인 예를 소개하겠습니다.</p>
+<ol>
+<li>
+<p>Min-Max 스케일링 (Normalization)</p>
+<ul>
+<li>
+<p>전통적인 데이터 정규화 기법</p>
+</li>
+<li>
+<p>범위 제한이 필요한 모델(SVM, KNN 등)에 적합</p>
+</li>
+<li>
+<p>이미지 픽셀값, 금융 데이터 등에 활용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Z-score 정규화 (Standardization)</p>
+<ul>
+<li>
+<p>평균 0, 표준편차 1의 정규 분포로 변환</p>
+</li>
+<li>
+<p>선형 모델(선형 회귀, 로지스틱 회귀 등)에 효과적</p>
+</li>
+<li>
+<p>다양한 도메인의 데이터에 널리 사용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Robust 스케일링</p>
+<ul>
+<li>
+<p>중앙값과 사분범위를 사용하여 이상치에 강인</p>
+</li>
+<li>
+<p>비정규 분포를 가진 데이터에 유용</p>
+</li>
+<li>
+<p>금융, 의료 데이터 등의 이상치가 많은 경우에 활용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Unit Vector Scaling</p>
+<ul>
+<li>
+<p>문서 분류, 추천 시스템 등 방향성이 중요한 모델에 활용</p>
+</li>
+<li>
+<p>자연어 처리 분야의 언어 모델(BERT, GPT 등)에 널리 사용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Normalizer</p>
+<ul>
+<li>
+<p>문서 분류, 추천 시스템 등 거리 기반 모델에 효과적</p>
+</li>
+<li>
+<p>자연어 처리, 이미지 처리 등 다양한 분야에서 활용</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이처럼 데이터와 모델의 특성에 따라 적절한 스케일링 기법을 선택하는 것이 중요합니다. 상황에 맞는 기법을 적용하여 모델 성능을 극대화할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>데이터 구조 정리</p>
+<ul>
+<li>
+<p><span class="text-highlight">**하나의 열에 여러 특성이 섞여 있는 경우 각 특성을 별도의 열로 분리**</span>해야 합니다.</p>
+</li>
+<li>
+<p>이를 통해 데이터의 이해도를 높이고 모델링 성능을 향상시킬 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이상치(Outlier) 처리</p>
+<ul>
+<li>
+<p>데이터셋에 포함된 이상치는 모델 성능에 부정적인 영향을 줄 수 있습니다.</p>
+</li>
+<li>
+<p>이상치 식별 및 제거, 또는 적절한 대체 방법을 사용해야 합니다.</p>
+<ul>
+<li>
+<p>이상치 제거 방법</p>
+<p>이상치(outlier) 처리는 데이터 전처리 과정에서 매우 중요합니다. 이상치를 적절히 다루지 않으면 모델 성능에 부정적인 영향을 줄 수 있습니다. 이상치 식별 및 제거, 그리고 대체 방법에 대해 자세히 살펴보겠습니다.</p>
+<ol>
+<li>
+<p>이상치 식별</p>
+<ul>
+<li>
+<p>산점도, 히스토그램 등의 시각화 도구를 이용하여 이상치를 식별할 수 있습니다.</p>
+</li>
+<li>
+<p>Z-score, IQR(사분범위), Isolation Forest 등의 통계적 방법을 사용하여 이상치를 탐지할 수 있습니다.</p>
+</li>
+<li>
+<p>이상치 기준은 데이터의 특성과 목적에 따라 달리 설정해야 합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이상치 제거</p>
+<ul>
+<li>
+<p>식별된 이상치는 데이터셋에서 완전히 제거할 수 있습니다.</p>
+</li>
+<li>
+<p>이 방법은 데이터 손실이 발생할 수 있지만, 모델 성능 향상에 도움이 될 수 있습니다.</p>
+</li>
+<li>
+<p>다만 이상치가 많거나 데이터가 부족한 경우에는 적절하지 않을 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>이상치 대체</p>
+<ul>
+<li>
+<p>이상치를 완전히 제거하는 것이 적절하지 않다면, 이를 적절한 값으로 대체할 수 있습니다.</p>
+</li>
+<li>
+<p>결측값 대체 기법(평균, 중앙값, 최빈값 등)을 활용하여 이상치를 대체할 수 있습니다.</p>
+</li>
+<li>
+<p>또한 보간법, 모델 기반 예측 등의 방법으로 이상치를 대체할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>모델 기반 대체</p>
+<ul>
+<li>
+<p>이상치를 단순히 제거하거나 대체하는 것 외에, 모델을 활용하여 이상치를 다룰 수 있습니다.</p>
+</li>
+<li>
+<p>강건 회귀, 이상치 탐지 모델 등을 통해 이상치의 영향을 최소화할 수 있습니다.</p>
+</li>
+<li>
+<p>이 방법은 이상치를 제거하지 않고도 모델 성능을 향상시킬 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이상치 처리 방법을 선택할 때는 데이터의 특성, 모델 요구사항, 그리고 전체 워크플로우를 고려해야 합니다. 상황에 맞는 최적의 접근법을 선택하는 것이 중요합니다.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>결측값 처리</p>
+<ul>
+<li>
+<p>데이터셋에 누락된 값이 있는 경우 이를 적절히 처리해야 합니다.</p>
+</li>
+<li>
+<p>결측값이 있는 행이나 열을 삭제하거나, 평균값 또는 다른 대체값으로 채우는 등의 방법을 사용할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 데이터 정제 및 준비 과정을 통해 ML 모델링을 위한 최적의 데이터셋을 만들 수 있습니다. 특히 데이터에 대한 충분한 이해와 분석이 중요하며, 이를 바탕으로 적절한 데이터 정제 전략을 수립해야 합니다.</p>
+<h1 id="domain-22-perform-feature-engineering"><strong>Domain 2.2: Perform feature engineering</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-22-perform-feature-engineering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>데이터 형식으로 인해 추가적인 특성 엔지니어링이 필요할 수 있습니다.</p>
+<p>ML 알고리즘에 사용되려면 <span class="text-highlight">**범주형 데이터를 수치형 데이터로 변환**</span>해야 하는 경우가 많습니다. 이때 데이터의 특성에 따라 다른 접근법을 사용해야 합니다:</p>
+<ol>
+<li>
+<p><span class="text-highlight">**순서형(Ordinal) 범주형**</span> 데이터:</p>
+<ul>
+<li>
+<p>범주 간 순서가 정의된 데이터입니다.</p>
+</li>
+<li>
+<p>예: 매우 나쁨, 나쁨, 보통, 좋음, 매우 좋음</p>
+</li>
+<li>
+<p>각 범주에 대응하는 <span class="text-highlight">**숫자 값을 부여하여 수치형으로 변환**</span>할 수 있습니다.</p>
+</li>
+<li>
+<p><span class="text-highlight">**순서 정보를 유지**</span>하는 것이 중요합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="text-highlight">**명목형(Nominal) 범주형**</span> 데이터:</p>
+<ul>
+<li>
+<p>범주 간 <span class="text-highlight">**순서가 정의되지 않은 데이터**</span>입니다.</p>
+</li>
+<li>
+<p>예: 남성, 여성, 기타</p>
+</li>
+<li>
+<p>범주를 숫자로 인코딩할 때는 범주 간 의미 있는 순서가 없도록 주의해야 합니다.</p>
+</li>
+<li>
+<p><span class="text-highlight">One-Hot Encoding → norminal</span></p>
+</li>
+<li>
+<p><span class="text-highlight">Label Encoding → ordinal</span></p>
+</li>
+</ul>
+</li>
+</ol>
+<p>범주형 데이터를 어떻게 처리하느냐에 따라 모델의 성능이 크게 달라질 수 있습니다. 따라서 데이터의 특성을 정확히 파악하고, 적절한 인코딩 기법을 선택하는 것이 중요합니다.</p>
+<p>예를 들어, 순서형 데이터에 One-Hot Encoding을 적용하면 순서 정보가 손실될 수 있습니다. 반면 <span class="text-highlight">**명목형 데이터에 Label Encoding을 적용하면 범주 간 의미 있는 순서가 부여**</span>될 수 있습니다.</p>
+<p>이처럼 데이터의 특성에 맞는 적절한 인코딩 기법을 선택하여 적용하는 것이 특성 엔지니어링의 핵심입니다. 이를 통해 모델의 성능을 향상시킬 수 있습니다.</p>
+<h1 id="domain-23-analyze-and-visualize-data-for-ml"><strong>Domain 2.3: Analyze and visualize data for ML</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#domain-23-analyze-and-visualize-data-for-ml" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>데이터 시각화는 특성과 특성 간 관계를 더 잘 이해할 수 있게 해줍니다.</p>
+<p>ML 파이프라인의 탐색적 데이터 분석 단계에서, 데이터를 분석하고 시각화하는 것은 매우 중요합니다. 이를 통해 특성(feature)과 특성 간 관계를 더 잘 파악할 수 있습니다. 데이터 정제와 특성 엔지니어링 작업에서 시각화 기법은 핵심 도구입니다.</p>
+<p>시각화 기법에는 꺾은선 그래프, 히스토그램, 다양한 맞춤형 시각화 등이 포함됩니다. 이 부분에서는 이러한 기법을 이해하고 분석하는 능력을 평가합니다.</p>
+<p>시각화를 통해 새로운 특성을 도출할 수도 있습니다:</p>
+<ul>
+<li>
+<p>데이터의 범위는 어떠한가?</p>
+</li>
+<li>
+<p>데이터의 최빈값은 어디인가?</p>
+</li>
+<li>
+<p>이상치는 있는가?</p>
+</li>
+<li>
+<p>데이터에 어떤 흥미로운 패턴이 있는가?</p>
+</li>
+</ul>
+<p>이러한 질문에 대한 답을 통해 데이터 전처리 및 모델 학습에 필요한 작업을 결정할 수 있습니다.</p>
+<p>대표적인 시각화 기법으로는 산점도와 히스토그램이 있습니다:</p>
+<ol>
+<li>
+<p>산점도:</p>
+<ul>
+<li>
+<p>두 개의 수치형 변수 간 관계를 보여줍니다.</p>
+</li>
+<li>
+<p>데이터 포인트들이 어떻게 퍼져 있는지 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>두 변수 간 상관관계의 강도와 방향을 파악할 수 있습니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>히스토그램:</p>
+<ul>
+<li>
+<p>개별 특성의 분포 특성을 보여줍니다.</p>
+</li>
+<li>
+<p>데이터의 전체적인 모양, 왜도, 첨도 등을 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>각 관측치에 대한 전반적인 정보를 얻을 수 있습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이처럼 데이터 시각화는 특성과 특성 간 관계를 깊이 있게 이해하는 데 도움이 되며, 이는 데이터 정제와 특성 공학에 필수적입니다.</p>
+<p><a href="../../../domain-2-exploratory-data-analysis/image.png" class="internal internal-link" data-slug="domain-2-exploratory-data-analysis/image.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-115.png" alt/></a></p>
+<ol>
+<li>
+<p>AWS Glue의 feature_tokenizer 기능은 없으므로 이 선택지는 제외할 수 있습니다.</p>
+</li>
+<li>
+<p>클러스터링은 차원 축소에 도움이 되지 않는 비지도 학습 기법이므로 제외할 수 있습니다.</p>
+</li>
+<li>
+<p>나머지 선택지 A, B, D 중 B와 D가 특성 엔지니어링 및 차원 축소 기법으로 보입니다.</p>
+</li>
+<li>
+<p>A의 Dropout은 정규화 기법이지만 특성 선택 기법은 아닙니다.</p>
+</li>
+<li>
+<p>따라서 가장 적절한 답변은 B와 D입니다.</p>
+</li>
+</ol>
+<p>이 문제에서 가장 적절한 기술은 다음 두 가지입니다:</p>
+<ol>
+<li>
+<p>Principal Component Analysis (PCA) 알고리즘 사용</p>
+</li>
+<li>
+<p>특성 선택 및 차원 축소 기법 활용</p>
+</li>
+</ol>
+<p>PCA는 데이터의 차원을 감소시키는 대표적인 알고리즘이므로, 이를 활용하여 가장 관련성 있는 특성들을 추출할 수 있습니다.</p>
+<p>또한 특성 선택 및 차원 축소 기법을 사용하면, 불필요한 특성들을 제거하고 모델 성능에 가장 중요한 특성들만 유지할 수 있습니다.</p>
+<p>반면, 드롭아웃은 정규화 기법이지만 차원 축소에는 도움이 되지 않습니다. 클러스터링 역시 차원 축소에 적합하지 않은 비지도 학습 알고리즘입니다.</p>
+<p>AWS Glue의 feature_tokenizer 기능은 실제로 존재하지 않습니다.</p>
+<p>따라서 가장 적절한 답변은 “PCA 알고리즘 사용”과 “특성 선택 및 차원 축소 기법 활용”입니다.</p>
+<ul>
+<li>
+<p>t-SNE</p>
+<p>t-SNE(t-Distributed Stochastic Neighbor Embedding)는 고차원 데이터를 저차원 공간에 효과적으로 시각화하는 차원 축소 기법입니다. 이를 보다 자세히 설명하겠습니다.</p>
+<p>t-SNE의 기본 원리는 다음과 같습니다:</p>
+<ol>
+<li>
+<p>고차원 데이터에서 인접한 데이터 포인트들은 저차원 공간에서도 가까이 배치되어야 합니다.</p>
+</li>
+<li>
+<p>고차원 데이터에서 멀리 떨어진 데이터 포인트들은 저차원 공간에서도 멀리 배치되어야 합니다.</p>
+</li>
+</ol>
+<p>이를 위해 t-SNE는 다음과 같은 과정을 거칩니다:</p>
+<ol>
+<li>
+<p>고차원 데이터의 유클리드 거리를 계산하여 유사도 행렬을 만듭니다.</p>
+</li>
+<li>
+<p>이 유사도 행렬을 바탕으로 저차원 공간에 데이터 포인트를 배치합니다.</p>
+</li>
+<li>
+<p>저차원 공간에서의 유클리드 거리와 고차원 공간에서의 유사도 사이의 차이를 최소화하는 방향으로 데이터 포인트를 반복적으로 업데이트합니다.</p>
+</li>
+</ol>
+<p>예를 들어, 고차원의 이미지 데이터를 2D 평면에 효과적으로 시각화할 수 있습니다. t-SNE를 통해 유사한 이미지들이 서로 가까이 배치되고, 다른 유형의 이미지들은 멀리 배치되는 것을 볼 수 있습니다.</p>
+<p>이처럼 t-SNE는 고차원 데이터의 복잡한 구조를 잘 보존하면서도 저차원 공간에 효과적으로 표현할 수 있어, 데이터 탐색과 시각화에 유용하게 사용됩니다.</p>
+<p>다만 t-SNE는 비지도 학습 알고리즘이므로 차원 축소를 위한 목적으로는 적합하지 않습니다. 대신 PCA와 같은 지도 학습 기반 차원 축소 기법이 더 효과적일 수 있습니다.</p>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1651" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#domain-2-exploratory-data-analysis" data-for="domain-2-exploratory-data-analysis">Domain 2. Exploratory Data Analysis</a></li><li class="depth-0"><a href="#objectives" data-for="objectives">Objectives</a></li><li class="depth-0"><a href="#domain-21-sanitize-and-prepare-data-for-modeling" data-for="domain-21-sanitize-and-prepare-data-for-modeling">Domain 2.1: Sanitize and prepare data for modeling</a></li><li class="depth-0"><a href="#domain-22-perform-feature-engineering" data-for="domain-22-perform-feature-engineering">Domain 2.2: Perform feature engineering</a></li><li class="depth-0"><a href="#domain-23-analyze-and-visualize-data-for-ml" data-for="domain-23-analyze-and-visualize-data-for-ml">Domain 2.3: Analyze and visualize data for ML</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

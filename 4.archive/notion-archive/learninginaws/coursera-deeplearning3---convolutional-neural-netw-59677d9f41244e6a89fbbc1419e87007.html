@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Coursera DeepLearning3 - Convolutional Neural Netw 59677d9f41244e6a89fbbc1419e87007 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Coursera DeepLearning3 - Convolutional Neural Netw 59677d9f41244e6a89fbbc1419e87007 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Coursera DeepLearning3 - Convolutional Neural Netw 59677d9f41244e6a89fbbc1419e87007 | LLM Wiki"/><meta name="twitter:description" content="⚖️ Coursera DeepLearning3 - Convolutional Neural Network AuthorAndrew NgLinkwww.coursera.org/learn/convolutional-neural-networks/home/welcomeTypeOnline Session Foundations of Convolutional Neural Networks Convolutional Neural Networks Computer Vision Edge Detection Example More Edge Detection Paddin..."/><meta property="og:description" content="⚖️ Coursera DeepLearning3 - Convolutional Neural Network AuthorAndrew NgLinkwww.coursera.org/learn/convolutional-neural-networks/home/welcomeTypeOnline Session Foundations of Convolutional Neural Networks Convolutional Neural Networks Computer Vision Edge Detection Example More Edge Detection Paddin..."/><meta property="og:image:alt" content="⚖️ Coursera DeepLearning3 - Convolutional Neural Network AuthorAndrew NgLinkwww.coursera.org/learn/convolutional-neural-networks/home/welcomeTypeOnline Session Foundations of Convolutional Neural Networks Convolutional Neural Networks Computer Vision Edge Detection Example More Edge Detection Paddin..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/learninginaws/coursera-deeplearning3---convolutional-neural-netw-59677d9f41244e6a89fbbc1419e87007"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/learninginaws/coursera-deeplearning3---convolutional-neural-netw-59677d9f41244e6a89fbbc1419e87007"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="⚖️ Coursera DeepLearning3 - Convolutional Neural Network AuthorAndrew NgLinkwww.coursera.org/learn/convolutional-neural-networks/home/welcomeTypeOnline Session Foundations of Convolutional Neural Networks Convolutional Neural Networks Computer Vision Edge Detection Example More Edge Detection Paddin..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/learninginaws/coursera-deeplearning3---convolutional-neural-netw-59677d9f41244e6a89fbbc1419e87007" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1780" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1780" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/learninginaws/">LearningInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Coursera DeepLearning3 - Convolutional Neural Netw 59677d9f41244e6a89fbbc1419e87007</a></div></nav><h1 class="article-title">Coursera DeepLearning3 - Convolutional Neural Netw 59677d9f41244e6a89fbbc1419e87007</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:15.932Z">2026년 6월 06일</time><span>18 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>⚖️</p>
+<h1 id="coursera-deeplearning3---convolutional-neural-network">Coursera DeepLearning3 - Convolutional Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#coursera-deeplearning3---convolutional-neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/list_gray-8.svg" alt/>Author</td><td>Andrew Ng</td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/link_gray-31.svg" alt/>Link</td><td><a href="https://www.coursera.org/learn/convolutional-neural-networks/home/welcome" class="external external-link">https://www.coursera.org/learn/convolutional-neural-networks/home/welcome<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/arrow-circle-down_gray-8.svg" alt/>Type</td><td>Online Session</td></tr></tbody></table></div>
+<p><a href="#96f70051-b46e-4d96-8e40-d23865f074e1" class="internal internal-link alias">Foundations of Convolutional Neural Networks</a></p>
+<p><a href="#6739c8a4-ba77-42b7-b6f4-134d8abf1fe9" class="internal internal-link alias">Convolutional Neural Networks</a></p>
+<p><a href="#c4cfd27c-f79f-4064-8a90-f05112f73332" class="internal internal-link alias">Computer Vision</a></p>
+<p><a href="#f7c07c6b-57b5-4ccd-b097-16b08eea4e16" class="internal internal-link alias">Edge Detection Example</a></p>
+<p><a href="#cf65c977-f137-48d4-8a26-076a696f32fe" class="internal internal-link alias">More Edge Detection</a></p>
+<p><a href="#6e1b661c-fde9-4af2-8f37-c80ad13e13e6" class="internal internal-link alias">Padding</a></p>
+<p><a href="#bac06717-d1b5-454f-8366-86890baffcab" class="internal internal-link alias">Strided Convolutions</a></p>
+<p><a href="#ca8a16c6-05b5-446a-98dd-6cbdaba4d10c" class="internal internal-link alias">Convolutions Over Volume</a></p>
+<p><a href="#69814a55-e335-47a9-875a-5e62d3023be4" class="internal internal-link alias">One Layer of a Convolutional Network</a></p>
+<p><a href="#a0d4618e-74ec-4dab-9a62-267edb975283" class="internal internal-link alias">Simple Convolutional Network Example</a></p>
+<p><a href="#6968cd11-6b2f-4105-b479-2c06965885c6" class="internal internal-link alias">Pooling Layers</a></p>
+<p><a href="#93825a98-0c1b-4b91-81ba-81c14b9913cb" class="internal internal-link alias">CNN Example</a></p>
+<p><a href="#baec10e2-88b1-4d44-9bb3-21b06aba016b" class="internal internal-link alias">Why Convolutions</a></p>
+<p><a href="#81adbe59-f678-4712-aefa-a4b5bf1bb903" class="internal internal-link alias">Deep Convolutional Models</a></p>
+<p><a href="#b2a3cda7-843c-4509-9f2f-9ea12c13d6cf" class="internal internal-link alias">Case Studies</a></p>
+<p><a href="#983538ba-76c0-43cc-8171-fb801ad977aa" class="internal internal-link alias">Why look at case studies?</a></p>
+<p><a href="#6454ab6b-0b2f-4f1f-acc2-0e58dbc650f4" class="internal internal-link alias">Classic Networks</a></p>
+<p><a href="#e8583162-ca6e-4714-a40a-9ea20aba36d5" class="internal internal-link alias">ResNets</a></p>
+<p><a href="#900ca241-91ef-4b10-907d-921fb3c26dbe" class="internal internal-link alias">Why ResNets Work?</a></p>
+<p><a href="#5dfd3643-bfba-42cc-9d32-366af8b7ba6e" class="internal internal-link alias">Networks in Networks and 1x1 Convolutions</a></p>
+<p><a href="#e4ae6ce0-afa4-47a6-8900-d6f4378adf9c" class="internal internal-link alias">Inception Network Motivation</a></p>
+<p><a href="#03329aa5-08a7-4168-824e-ff68fab9e404" class="internal internal-link alias">Inception Network</a></p>
+<p><a href="#44d25e20-d180-40ec-bbc7-9415c174aa9f" class="internal internal-link alias">MobileNet</a></p>
+<p><a href="#050b36db-d7f5-457f-8d5a-28f71e9933a6" class="internal internal-link alias">MobileNet Architecture</a></p>
+<p><a href="#9e8af8dc-81da-4ae8-8e89-2f03639a8d98" class="internal internal-link alias">EfficientNet</a></p>
+<p><a href="#f1506f64-b3ae-4901-af5d-4ba3ab47e044" class="internal internal-link alias">Practival Advice for Using ConvNets</a></p>
+<p><a href="#30149ca6-52f9-4b49-a92a-77590d58cda2" class="internal internal-link alias">Using Open-Source Implementation</a></p>
+<p><a href="#21aeb980-e9d0-44a5-a5d0-ffab42b0851b" class="internal internal-link alias">Transfer Learning</a></p>
+<p><a href="#43f332d2-4c4c-425d-873f-08405e3cadbc" class="internal internal-link alias">Data Augmentation</a></p>
+<p><a href="#26539012-cf25-4372-bef6-50be9c0cdbac" class="internal internal-link alias">State of Computer Vision</a></p>
+<p><a href="#be5d5f8a-5632-4c5e-9e9f-c8b03ed3e343" class="internal internal-link alias">Object Detection</a></p>
+<p><a href="#fe7d2896-dc68-493c-acd2-325bda06cea5" class="internal internal-link alias">Detection Algorithm</a></p>
+<p><a href="#5fa22a37-6c7d-4dde-9bce-6f96b8d8a43b" class="internal internal-link alias">Object Localization</a></p>
+<p><a href="#f8235646-7fa2-468c-a50d-dcc3d299a020" class="internal internal-link alias">Landmark Detection</a></p>
+<p><a href="#4d2b49f0-f014-44df-87f8-020b1cabd0e8" class="internal internal-link alias">Object Detection</a></p>
+<p><a href="#ec9ef73a-52bb-4d2d-92ff-e4b649ab11e7" class="internal internal-link alias">Convolutional Implementation of Sliding Windows</a></p>
+<p><a href="#0a6baeb4-2dff-4d8f-b79c-1b1a4c405090" class="internal internal-link alias">Bounding Box Predictions</a></p>
+<p><a href="#933f44b1-75cb-43c4-ac87-052419bc6874" class="internal internal-link alias">Intersection Over Union (IoU)</a></p>
+<p><a href="#c36484f0-2ce8-40a6-a189-80d66f9a297e" class="internal internal-link alias">Non-max Suppression</a></p>
+<p><a href="#409c618c-82f7-4972-b301-550b582c0338" class="internal internal-link alias">Anchor Boxes</a></p>
+<p><a href="#0149e64a-78bc-4c23-a904-1e0b75ffe03e" class="internal internal-link alias">YOLO Algorithm</a></p>
+<p><a href="#55fa7677-d6ba-4780-bcd7-84383cd7caf4" class="internal internal-link alias">Region Proposals</a></p>
+<p><a href="#33b0a380-8ca2-4c6f-a179-4f77640b3d1b" class="internal internal-link alias">Semantic Segmentation with U-Net</a></p>
+<p><a href="#b0dc9d67-c15b-4ab8-90b7-fa42454dd321" class="internal internal-link alias">Transpose Convolutions</a></p>
+<p><a href="#0669479c-c45a-454b-9259-2739c80b0aac" class="internal internal-link alias">U-Net Architecture Intuition</a></p>
+<p><a href="#976757a8-016d-497e-b8d2-3f9173a52a35" class="internal internal-link alias">U-Net Architecture</a></p>
+<p><a href="#c1d14499-30f3-41f2-9279-f597df65b82f" class="internal internal-link alias">Special Applications</a></p>
+<p><a href="#bc7e83d5-2452-45ba-a80d-364e368d82fa" class="internal internal-link alias">Face Recognition</a></p>
+<p><a href="#919b33db-a0b6-4635-a71d-04d0b9fff462" class="internal internal-link alias">What is Face Recognition</a></p>
+<p><a href="#3d1e2254-fcc5-4b04-b897-d248340a1bc3" class="internal internal-link alias">One Shot Learning</a></p>
+<p><a href="#16e77252-7dea-494b-bc93-b21b96723bf9" class="internal internal-link alias">Siamese Network</a></p>
+<p><a href="#6ab5f0f1-b025-4bc7-883a-17728556e888" class="internal internal-link alias">Triplet Loss</a></p>
+<p><a href="#fd985fe8-f9bc-4aaa-ab7a-15829d5146a5" class="internal internal-link alias">Face Verification and Binary Classification</a></p>
+<p><a href="#e9b0dd01-0018-4c4f-9023-b696856fdd9a" class="internal internal-link alias">Neural Style Transfer</a></p>
+<p><a href="#c7d0ac90-78c5-4139-b90e-791a716a867d" class="internal internal-link alias">What is Neural Style Transfer</a></p>
+<p><a href="#c79f5315-6318-437e-bb7d-e56401b65de8" class="internal internal-link alias">What are deep ConvNets learning</a></p>
+<p><a href="#bd49412f-c56c-451a-9364-3b82aab86cb0" class="internal internal-link alias">Cost Function</a></p>
+<p><a href="#570e114f-941b-4eca-9a60-e92511ddddc2" class="internal internal-link alias">Connect Cost Function</a></p>
+<p><a href="#6b2747d2-211d-41a3-bd3a-1c5d5b1b160d" class="internal internal-link alias">Style Cost Function</a></p>
+<p><a href="#6465aa31-4280-414b-a568-c3409c828c3f" class="internal internal-link alias">1D and 3D Generations</a></p>
+<p><a href="#f4355f5c-b1fa-4881-a284-6a9f18947fd5" class="internal internal-link alias">Quiz</a></p>
+<p><a href="#5c0f98f2-24ff-4c55-8c51-aa6dce677426" class="internal internal-link alias">Interview</a></p>
+<p><a href="#b91b7ddb-ae40-4bcd-ad91-8386a7b7528f" class="internal internal-link alias">Code</a></p>
+<p><a href="#9da0e6d5-2223-46f6-9439-820354e68a1b" class="internal internal-link alias">Reference</a></p>
+<p><a href="#e7ba556b-c1d8-4017-a385-720d63f8cb28" class="internal internal-link"><strong>Week 1:</strong></a></p>
+<p><a href="#66575631-1f84-4c4f-8f80-ba4c8a0b97c4" class="internal internal-link"><strong>Week 2:</strong></a></p>
+<p><a href="#03832b99-9db4-4b02-9146-df3f002cf4fb" class="internal internal-link"><strong>Week 3:</strong></a></p>
+<p><a href="#8c5ea5e1-8b86-4df3-9a7d-31de7667525d" class="internal internal-link"><strong>Week 4:</strong></a></p>
+<h1 id="foundations-of-convolutional-neural-networks">Foundations of Convolutional Neural Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#foundations-of-convolutional-neural-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="convolutional-neural-networks">Convolutional Neural Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#convolutional-neural-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="computer-vision">Computer Vision<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#computer-vision" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-f3842a079a734d92993ee4e142b979ca" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-f3842a079a734d92993ee4e142b979ca">🌤️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_91171624a1133362ea12dc427ce0ac17_c4w1l01-computervision.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_91171624a1133362ea12dc427ce0ac17_c4w1l01-computervision.pptx">_91171624a1133362ea12dc427ce0ac17_C4W1L01-ComputerVision.pptx</a></p>
+<ul>
+<li>
+<p>Why excited to Computer Vision?</p>
+<ul>
+<li>
+<p>Enabling brand new applications to view, though were impossbile a few years ago → Invent new products and applications</p>
+</li>
+<li>
+<p>Vison research has been so creative and inventive in coming up with new neural network architectures and algorithms → inspire that creates a lot cross-fertilization into other areas</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-136.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-1.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-1.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-1-16.png" alt/></a></p>
+<h3 id="edge-detection-example">Edge Detection Example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#edge-detection-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-6a7b6c1b11d24cafb657d6baedd85a25" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-6a7b6c1b11d24cafb657d6baedd85a25">👗Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_30c0814b1ee9821e1676197a408bd7d8_c4w1l02-edgedetectionexample.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_30c0814b1ee9821e1676197a408bd7d8_c4w1l02-edgedetectionexample.pptx">_30c0814b1ee9821e1676197a408bd7d8_C4W1L02-EdgeDetectionExample.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-2.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-2.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-2-13.png" alt/></a></p>
+<ul>
+<li>
+<p>Kernel or Filter</p>
+<ul>
+<li>
+<p>3x3 matrix</p>
+</li>
+<li>
+<p>asterisk → convolution</p>
+</li>
+</ul>
+</li>
+<li>
+<p>conv-forward</p>
+<ul>
+<li>
+<p>TensofFlow : tf.nn.cont2d</p>
+</li>
+<li>
+<p>CARIS : cont2d</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Vertical edge detection</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-3.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-3.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-3-13.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-4.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-4.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-4-12.png" alt/></a></p>
+<h3 id="more-edge-detection">More Edge Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#more-edge-detection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-8c6de5df23fd4e909688f70a6a93a9cc" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-8c6de5df23fd4e909688f70a6a93a9cc">🎁Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_30fff8167ebe1ad083160c5c763ec6aa_c4w1l03-moreedgedetection.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_30fff8167ebe1ad083160c5c763ec6aa_c4w1l03-moreedgedetection.pptx">_30fff8167ebe1ad083160c5c763ec6aa_C4W1L03-MoreEdgeDetection.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-5.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-5.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-5-11.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-6.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-6.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-6-10.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-7.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-7.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-7-11.png" alt/></a></p>
+<ul>
+<li>
+<p>Vertical edge : left value > right value</p>
+</li>
+<li>
+<p>Horizontal edge : top value > bottom value</p>
+</li>
+<li>
+<p>Positive edge : light to dark edge transition</p>
+</li>
+<li>
+<p>Negative edge : dark to light edge transition</p>
+</li>
+<li>
+<p>Sobel filter</p>
+<ul>
+<li>Puts a little bit more weight to the central orw</li>
+</ul>
+</li>
+<li>
+<p>Scharr filter</p>
+<ul>
+<li>
+<p>Just for vertical edge detection</p>
+</li>
+<li>
+<p>Flip it 90 degress → Get horizontal edge detection</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Can treat 3x3 (9 numbers) as parameters to be learned</p>
+<ul>
+<li>Using back propagation to learn these 9 numbers</li>
+</ul>
+</li>
+</ul>
+<h3 id="padding">Padding<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#padding" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-dbc8d85f88f343a8bee972513d6f0105" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-dbc8d85f88f343a8bee972513d6f0105">💶Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_ca061732d8be6f7973cc810c23e5c3df_c4w1l04-padding.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_ca061732d8be6f7973cc810c23e5c3df_c4w1l04-padding.pptx">_ca061732d8be6f7973cc810c23e5c3df_C4W1L04-Padding.pptx</a></p>
+<ul>
+<li>
+<p>f x f filter → Output : (n-f+1) x (n-f+1)</p>
+<ul>
+<li>
+<p>f is usually odd</p>
+</li>
+<li>
+<p>f is even → need some asymmetric padding</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-8.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-8.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-8-10.png" alt/></a></p>
+<ul>
+<li>
+<p>Pad the image with an additional one border → Pad with zeros</p>
+</li>
+<li>
+<p>If pad size p, output will be (n + 2p - f + 1 ) x (n + 2p - f + 1 )</p>
+</li>
+<li>
+<p>Adjust f to get the same size as the input size</p>
+</li>
+<li>
+<p>Same : 필터의 사이즈가 k이면 사방으로 k/2 만큼의 padding. Input 차원 유지</p>
+</li>
+<li>
+<p>Valid : No padding. output 차원 축소</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-9.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-9.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-9-9.png" alt/></a></p>
+<ul>
+<li>Zero padding helps keep more information at the image borders, and is helpful for building deeper networks</li>
+</ul>
+<h3 id="strided-convolutions">Strided Convolutions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#strided-convolutions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-eede09fe0966449cb6ce832879d9c162" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-eede09fe0966449cb6ce832879d9c162">♥️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_e0827700fee9f9a39e13f3142007454b_c4w1l05-stridedconv.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_e0827700fee9f9a39e13f3142007454b_c4w1l05-stridedconv.pptx">_e0827700fee9f9a39e13f3142007454b_C4W1L05-StridedConv.pptx</a></p>
+<ul>
+<li>
+<p>Step over by two step → hop over two step</p>
+</li>
+<li>
+<p>N x N image with F x F convoution filter → Padding P and Stride S</p>
+<ul>
+<li>(N + 2P- F)/S + 1 size image</li>
+</ul>
+</li>
+<li>
+<p>If result is not an integer → nearest integer</p>
+</li>
+<li>
+<p>By convention in machine learning, do not bother with this skipping operation and technically, this operation is maybe better called cross-correlation but most of the deep learning literature just calls it the convolution operator</p>
+</li>
+<li>
+<p>2D output of the convolution : Feature Map</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-10.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-10.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-10-9.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-11.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-11.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-11-8.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-12.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-12.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-12-7.png" alt/></a></p>
+<h3 id="convolutions-over-volume">Convolutions Over Volume<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#convolutions-over-volume" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-34411e04b7e249c58b6a352a76e1bf52" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-34411e04b7e249c58b6a352a76e1bf52">🏠Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_002c5817ed070e7e6e69df80d35dbf32_c4w1l06-convolutionsovervolumes.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_002c5817ed070e7e6e69df80d35dbf32_c4w1l06-convolutionsovervolumes.pptx">_002c5817ed070e7e6e69df80d35dbf32_C4W1L06-ConvolutionsOverVolumes.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-13.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-13.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-13-7.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-14.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-14.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-14-6.png" alt/></a></p>
+<h3 id="one-layer-of-a-convolutional-network">One Layer of a Convolutional Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#one-layer-of-a-convolutional-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-7c4c04b293b34bef80ebcb3458ed219c" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-7c4c04b293b34bef80ebcb3458ed219c">🥊Audio Description</a></p>
+<ul>
+<li>a0 : 6x6x3 (RGB) → w1 : 3x3x3 (RGB) / 3x3x3 (RGB) → assume 4x4x10 (not 2) fitler</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-15.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-15.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-15-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-16.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-16.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-16-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-17.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-17.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-17-5.png" alt/></a></p>
+<h3 id="simple-convolutional-network-example">Simple Convolutional Network Example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#simple-convolutional-network-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-3a45aa1563ad436d8538bf37a1d9b307" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-3a45aa1563ad436d8538bf37a1d9b307">🏒Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_2e2a959997bfd1cc5fab4f4d95e65c71_c4w1l08-simplecnnexample.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_2e2a959997bfd1cc5fab4f4d95e65c71_c4w1l08-simplecnnexample.pptx">_2e2a959997bfd1cc5fab4f4d95e65c71_C4W1L08-SimpleCNNExample.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-18.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-18.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-18-5.png" alt/></a></p>
+<ul>
+<li>
+<p>Layer in a convolutional network (ConvNet)</p>
+<ul>
+<li>
+<p>Convolution : <span class="text-highlight">**CONV**</span></p>
+</li>
+<li>
+<p>Pooling : <span class="text-highlight">**POOL**</span></p>
+</li>
+<li>
+<p>Fully Connected : <span class="text-highlight">**FC**</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Mutliple CONV layers followed by a POOL layer</p>
+</li>
+<li>
+<p>FC layers in the last few layer</p>
+</li>
+</ul>
+<h3 id="pooling-layers">Pooling Layers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pooling-layers" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-4e06393ed25f45adb22f4a0d5e18fb9d" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-4e06393ed25f45adb22f4a0d5e18fb9d">🏎️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_e4596b135bda048935d3ab4f1bc9e2b4_c4w1l09-poolinglayers.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_e4596b135bda048935d3ab4f1bc9e2b4_c4w1l09-poolinglayers.pptx">_e4596b135bda048935d3ab4f1bc9e2b4_C4W1L09-PoolingLayers.pptx</a></p>
+<ul>
+<li>
+<p>Why use pooling layers</p>
+<ul>
+<li>
+<p><span class="text-highlight">**reduce the size of the representation**</span></p>
+</li>
+<li>
+<p>speed the computation</p>
+</li>
+<li>
+<p>make some of the features that detects a bit more robust</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Max pooling</p>
+<ul>
+<li>
+<p>Output will just be the max from the corresponding region</p>
+</li>
+<li>
+<p>Describe on each channels independently</p>
+</li>
+<li>
+<p>Much more in neural network than average pooling</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-19.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-19.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-19-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-20.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-20.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-20-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-21.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-21.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-21-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-22.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-22.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-22-5.png" alt/></a></p>
+<ul>
+<li>Pooling layers gradually reduce the height and width of the input by sliding a 2D window over each specified region, then summarizing the features in that region</li>
+</ul>
+<h3 id="cnn-example">CNN Example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cnn-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-db5a0f20913c4b6bb5d643c68339f1a2" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-db5a0f20913c4b6bb5d643c68339f1a2">🏷️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_f9dbf4e74a3aa133c0a3d693920b3e69_c4w1l10-cnnexample.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_f9dbf4e74a3aa133c0a3d693920b3e69_c4w1l10-cnnexample.pptx">_f9dbf4e74a3aa133c0a3d693920b3e69_C4W1L10-CNNExample.pptx</a></p>
+<ul>
+<li>
+<p>Fully Connected Layer</p>
+<ul>
+<li>Just like the single neural network layer</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-23.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-23.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-23-5.png" alt/></a></p>
+<ul>
+<li>
+<p>208 → 608 : (5<em>5</em>3 + 1)*8</p>
+</li>
+<li>
+<p>416 → 3216 : (5_5_8 + 1) * 16</p>
+</li>
+<li>
+<p>FC3, 48001 → 48120 : 400*120 + 120 (bias should have 120 parameters, not 1)</p>
+</li>
+<li>
+<p>Softmax, 841 → 850 : 84*10 + 10</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-24.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-24.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-24-5.png" alt/></a></p>
+<h3 id="why-convolutions">Why Convolutions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-convolutions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-c97daf1c36f142de9451499f1685bdbf" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-c97daf1c36f142de9451499f1685bdbf">🚌Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_be761ecf98dc2231b4e2fc012f6bf50f_c4w1l11-whyconvs.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_be761ecf98dc2231b4e2fc012f6bf50f_c4w1l11-whyconvs.pptx">_be761ecf98dc2231b4e2fc012f6bf50f_C4W1L11-WhyConvs.pptx</a></p>
+<ul>
+<li>
+<p>Advantage</p>
+<ul>
+<li>
+<p>Parameter sharing</p>
+</li>
+<li>
+<p>Sparsity of connections</p>
+<ul>
+<li>Other pixel doesn’t affect the output</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Right example</p>
+<ul>
+<li>
+<p>Input : 32<em>32</em>3 = 3072</p>
+</li>
+<li>
+<p>Output : 28<em>28</em>6 = 4704</p>
+</li>
+<li>
+<p>Neural Network = 3072 * 4704 → 14 million</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-25.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-25.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-25-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-26.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-26.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-26-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-27.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-27.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-27-5.png" alt/></a></p>
+<h1 id="deep-convolutional-models">Deep Convolutional Models<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deep-convolutional-models" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="case-studies">Case Studies<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#case-studies" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="why-look-at-case-studies">Why look at case studies?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-look-at-case-studies" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-d718285174c940eba6af30d31874519e" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-d718285174c940eba6af30d31874519e">🌙Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_16e9d8ea112b220ff0b96ab21b7eb63b_c4w2l01-whylookatcasestudies.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_16e9d8ea112b220ff0b96ab21b7eb63b_c4w2l01-whylookatcasestudies.pptx">_16e9d8ea112b220ff0b96ab21b7eb63b_C4W2L01-WhyLookAtCaseStudies.pptx</a></p>
+<h3 id="classic-networks">Classic Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#classic-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-99d1306a6b4c49f2b27e6eb0d7559d3b" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-99d1306a6b4c49f2b27e6eb0d7559d3b">🚛Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_e31c55b6c9da2a29212994e4f3512b00_c4w2l02-classicnetworks.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_e31c55b6c9da2a29212994e4f3512b00_c4w2l02-classicnetworks.pptx">_e31c55b6c9da2a29212994e4f3512b00_C4W2L02-ClassicNetworks.pptx</a></p>
+<ul>
+<li>
+<p>LeNet-5</p>
+<ul>
+<li>
+<p>Recognize handwritten digits</p>
+</li>
+<li>
+<p>Trained on grayscal images (32 x 32 x 1)</p>
+</li>
+<li>
+<p>60K parameters : small by modern standards</p>
+</li>
+<li>
+<p>Today : from 10M to 100M parameters</p>
+</li>
+<li>
+<p>Has a non-linearity after pooling layer</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-28.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-28.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-28-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-29.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-29.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-29-5.png" alt/></a></p>
+<ul>
+<li>
+<p>AlexNet</p>
+<ul>
+<li>
+<p>60M parameters</p>
+</li>
+<li>
+<p>Better than LesNet</p>
+<ul>
+<li>Using the value activation function</li>
+</ul>
+</li>
+<li>
+<p>A complicated way of training on 2 GPUs</p>
+</li>
+<li>
+<p>Another set of a layer called a Local Response Normalization (LRN)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>VGGNet</p>
+<ul>
+<li>
+<p>Pretty large network in terms of train parameters</p>
+</li>
+<li>
+<p>VGG-19 is bigger than VGG-16</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-30.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-30.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-30-5.png" alt/></a></p>
+<h3 id="resnets">ResNets<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resnets" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-6206ef7930b44aeb9260f1760abc2888" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-6206ef7930b44aeb9260f1760abc2888">⛳Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_f968ded494544a1de4b634edc2f61336_c4w2l03-resnets.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_f968ded494544a1de4b634edc2f61336_c4w2l03-resnets.pptx">_f968ded494544a1de4b634edc2f61336_C4W2L03-ResNets.pptx</a></p>
+<ul>
+<li>
+<p>Very, very deep neural networks are difficult to train because of vanishing and exploding gradient types of problems</p>
+<ul>
+<li>
+<p>Learn about skip connections : take the activation from one layer and feed it to another layer even much deeper int the neural network</p>
+</li>
+<li>
+<p>Build ResNet : enable to train very, very deep networks (over 100 layers)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ResNets are built out of something called a residual block</p>
+</li>
+<li>
+<p>ReLU non-linearity g applied to z[l+2] as before, but now plus a[l].</p>
+</li>
+<li>
+<p>So, the addition of this a[l] here, it makes this a residual block</p>
+</li>
+<li>
+<p>Short cut : a[l] is being injected after the linear part but before the ReLU part</p>
+</li>
+<li>
+<p>Skip connection : a[l] just skipping over a layer</p>
+</li>
+<li>
+<p>Inventors found that <strong>using residual blocks allows to train much deeper neural networks</strong></p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-31.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-31.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-31-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-32.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-32.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-32-5.png" alt/></a></p>
+<ul>
+<li>
+<p>Build a ResNet by taking many of residual blocks and stacking them together to form a deep network → Residual Network</p>
+</li>
+<li>
+<p>Without short cuts or skip connection (<span class="text-highlight">**Plain Network**</span>)</p>
+<ul>
+<li>Increase # of layers → tend to decrease training error → tend to go back up</li>
+</ul>
+</li>
+<li>
+<p>With deeper neural network (<span class="text-highlight">**Residual Network**</span>)</p>
+<ul>
+<li>
+<p>Better and better on the training set</p>
+</li>
+<li>
+<p>Help with the vanishing and exploding gradient problems</p>
+</li>
+<li>
+<p>maybe at some point, this will plateau, this will flatten out,</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-33.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-33.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-33-5.png" alt/></a></p>
+</li>
+</ul>
+<h3 id="why-resnets-work">Why ResNets Work?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-resnets-work" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-651d836c37b348dbaa01463cb6791eac" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-651d836c37b348dbaa01463cb6791eac">🏈Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-34.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-34.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-34-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-35.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-35.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-35-5.png" alt/></a></p>
+<h3 id="networks-in-networks-and-1x1-convolutions">Networks in Networks and 1x1 Convolutions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#networks-in-networks-and-1x1-convolutions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-b06e4bdec8c547a78e0dbc39f16fedb9" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-b06e4bdec8c547a78e0dbc39f16fedb9">💷Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_0821596083025e580d2fb939c8859446_c4w2l05-networkinnetworkand1x1.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_0821596083025e580d2fb939c8859446_c4w2l05-networkinnetworkand1x1.pptx">_0821596083025e580d2fb939c8859446_C4W2L05-NetworkinNetworkand1x1.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-36.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-36.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-36-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-37.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-37.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-37-5.png" alt/></a></p>
+<h3 id="inception-network-motivation">Inception Network Motivation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#inception-network-motivation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-bd7757b957ad4291a693d360af6e9bbb" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-bd7757b957ad4291a693d360af6e9bbb">🧿Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_80afd661762c4293b9cd0af8a534fa6d_c4w2l06-inceptionnetworkmotivation.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_80afd661762c4293b9cd0af8a534fa6d_c4w2l06-inceptionnetworkmotivation.pptx">_80afd661762c4293b9cd0af8a534fa6d_C4W2L06-InceptionNetworkMotivation.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-38.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-38.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-38-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-39.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-39.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-39-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-40.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-40.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-40-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Implementation this bottleneck layer can shrink down the representation size significally</p>
+</li>
+<li>
+<p>Doesn’t hurt the performance, but saves a lot of computation</p>
+</li>
+<li>
+<p>You can use a 1x1 convolutional layer to reduce nCn but not nHn, nWn</p>
+</li>
+<li>
+<p>You can use a 2D pooling layer to reduce nHn, nWn, but not nCn</p>
+</li>
+</ul>
+<h3 id="inception-network">Inception Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#inception-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-7c632c4659224d458a3858ccf24d6b59" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-7c632c4659224d458a3858ccf24d6b59">🎱Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_4396e249864db33d7433b767aac5eaa5_c4w2l07-inceptionnetwork.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_4396e249864db33d7433b767aac5eaa5_c4w2l07-inceptionnetwork.pptx">_4396e249864db33d7433b767aac5eaa5_C4W2L07-InceptionNetwork.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-41.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-41.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-41-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-42.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-42.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-42-3.png" alt/></a></p>
+<h3 id="mobilenet">MobileNet<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mobilenet" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-5a07121633da4f33a83f51209f4f6ab0" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-5a07121633da4f33a83f51209f4f6ab0">🧨Audio Description</a></p>
+<ul>
+<li>Work even in low computer environment</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-43.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-43.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-43-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-44.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-44.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-44-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-45.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-45.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-45-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-46.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-46.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-46-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-47.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-47.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-47-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-48.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-48.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-48-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-49.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-49.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-49-3.png" alt/></a></p>
+<h3 id="mobilenet-architecture">MobileNet Architecture<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mobilenet-architecture" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-253376b7c42b46888230777b07a79442" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-253376b7c42b46888230777b07a79442">✂️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-50.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-50.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-50-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-51.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-51.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-51-3.png" alt/></a></p>
+<h3 id="efficientnet">EfficientNet<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#efficientnet" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-8fc907be03934dd2aad2bcb27621f2b1" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-8fc907be03934dd2aad2bcb27621f2b1">📋Audio Description</a></p>
+<ul>
+<li>
+<p>More efficient computation : different mobile phones, different edge devices</p>
+</li>
+<li>
+<p>Scale up and down neural networks for a particular device</p>
+</li>
+<li>
+<p>vary d : depth of the neural network, make the layer wider (w), scale up or down resolution of the image</p>
+</li>
+<li>
+<p>Trade-off between d, r, w</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-52.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-52.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-52-3.png" alt/></a></p>
+<h2 id="practival-advice-for-using-convnets">Practival Advice for Using ConvNets<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#practival-advice-for-using-convnets" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="using-open-source-implementation">Using Open-Source Implementation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#using-open-source-implementation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-b14188c72e1b4e40a5f8671f43986a5f" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-b14188c72e1b4e40a5f8671f43986a5f">⚱️Audio Description</a></p>
+<h3 id="transfer-learning">Transfer Learning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transfer-learning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-f18ad41e51134c719c7ffd9060427e49" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-f18ad41e51134c719c7ffd9060427e49">♟️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-53.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-53.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-53-3.png" alt/></a></p>
+<h3 id="data-augmentation">Data Augmentation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-augmentation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-b5bacc4da309416cbfca7ab951a2e332" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-b5bacc4da309416cbfca7ab951a2e332">🎄Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-54.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-54.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-54-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-55.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-55.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-55-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-56.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-56.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-56-3.png" alt/></a></p>
+<h3 id="state-of-computer-vision">State of Computer Vision<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#state-of-computer-vision" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-965a70f48ccf492db002121afe1bf4d9" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-965a70f48ccf492db002121afe1bf4d9">👖Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-57.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-57.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-57-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-58.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-58.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-58-2.png" alt/></a></p>
+<h1 id="object-detection">Object Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#object-detection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="detection-algorithm">Detection Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#detection-algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="object-localization">Object Localization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#object-localization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-9d1d31cd36164251bf7766f18d718acd" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-9d1d31cd36164251bf7766f18d718acd">🎖️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_60552557cd8ed152b08dc07972c8cf06_c4w3l01-objectlocalization.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_60552557cd8ed152b08dc07972c8cf06_c4w3l01-objectlocalization.pptx">_60552557cd8ed152b08dc07972c8cf06_C4W3L01-ObjectLocalization.pptx</a></p>
+<ul>
+<li>
+<p>Classification with localization</p>
+<ul>
+<li>Label + bounding box (red rectangle around the position)</li>
+</ul>
+</li>
+<li>
+<p>Detection problem : multiple objects in the picture, detect all localize all</p>
+</li>
+<li>
+<p>Change neural network to have a few more output units that output a bounding box</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-59.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-59.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-59-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-60.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-60.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-60-2.png" alt/></a></p>
+<ul>
+<li>
+<p>bx, by, bh, bw : 4 pramaters of bounding box</p>
+</li>
+<li>
+<p>Notational convention</p>
+<ul>
+<li>
+<p>upper letf of the image : (0,0)</p>
+</li>
+<li>
+<p>lower right of the image : (1,1)</p>
+</li>
+<li>
+<p>red rectangle requires specifying the midpoint</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Define the target label Y</p>
+<ul>
+<li>
+<p>pc : the probability that there’s an object</p>
+</li>
+<li>
+<p>bx, by, bh, bw : bounding box</p>
+</li>
+<li>
+<p>c1, c2, c3 : class 1 ~ 3 (like car, motorcycle, pedestrian)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>pc : logistics regression</p>
+</li>
+<li>
+<p>c1,c2,c3 : softmax</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-61.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-61.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-61-2.png" alt/></a></p>
+<h3 id="landmark-detection">Landmark Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#landmark-detection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-d7db69602d2d4c03a0cd7eac7b946f53" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-d7db69602d2d4c03a0cd7eac7b946f53">📼Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_dd401801ab0081916489a865c3548fa6_c4w3l02-landmarkdetection.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_dd401801ab0081916489a865c3548fa6_c4w3l02-landmarkdetection.pptx">_dd401801ab0081916489a865c3548fa6_C4W3L02-LandmarkDetection.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-62.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-62.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-62-2.png" alt/></a></p>
+<ul>
+<li>
+<p>Just adding a bunch of output units to output the x,y coordinates of different landmarks want to recognize</p>
+</li>
+<li>
+<p>The labels have to be consistent across different image</p>
+<ul>
+<li>landmark 1 : corner eye, landmark 2 : another corner eye, landmark 3 …</li>
+</ul>
+</li>
+</ul>
+<h3 id="object-detection-1">Object Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#object-detection-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-085e4147f3ef40bba76fce7a25f4e376" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-085e4147f3ef40bba76fce7a25f4e376">🧨Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_ba29e1f7f117a0e2814eccf6198067ea_c4w3l03-objectdetection.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_ba29e1f7f117a0e2814eccf6198067ea_c4w3l03-objectdetection.pptx">_ba29e1f7f117a0e2814eccf6198067ea_C4W3L03-ObjectDetection.pptx</a></p>
+<ul>
+<li>
+<p>Job of the cofinite is to output Y : there’s a car or not</p>
+</li>
+<li>
+<p>Once trained up this confinite → use it in Sliding Windows Detection</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-63.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-63.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-63-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-64.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-64.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-64-2.png" alt/></a></p>
+<ul>
+<li>
+<p>Picking a certain window size → Input into this cofinite a small rectangular region → input that into the cofinite → have a cofinite make a prediction</p>
+</li>
+<li>
+<p>Pass as input a second image bounded by red square shifted a little bit over → feed that to the cofinite again</p>
+</li>
+<li>
+<p>Cofinite will have output one for that input region → detect that there is a car</p>
+</li>
+<li>
+<p>Sliding Windows Detection</p>
+<ul>
+<li>
+<p>Take windows (square box)</p>
+</li>
+<li>
+<p>Slide them across the entire image</p>
+</li>
+<li>
+<p>Classify every square region with some stride</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Disdavantage</p>
+<ul>
+<li>
+<p>Huge computational cost</p>
+</li>
+<li>
+<p>Need a very fine granularity of a very small stride to localize the objects accurately</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="convolutional-implementation-of-sliding-windows">Convolutional Implementation of Sliding Windows<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#convolutional-implementation-of-sliding-windows" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-7afd185e60bc4bed814160c20d7ef2ae" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-7afd185e60bc4bed814160c20d7ef2ae">🎊Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_9bddadb2bdbfec97a350b58187921803_c4w3l04-convimpslidingwindows.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_9bddadb2bdbfec97a350b58187921803_c4w3l04-convimpslidingwindows.pptx">_9bddadb2bdbfec97a350b58187921803_C4W3L04-ConvImpSlidingWindows.pptx</a></p>
+<ul>
+<li>
+<p>Sliding window object detection algorithm using a CONV is too slow</p>
+<p>→ Implement algorithm convolutionally</p>
+</li>
+<li>
+<p>Turn FC layers into CONV layers</p>
+<ul>
+<li>
+<p>5x5x16 CONV → 400 FC → Softmax</p>
+</li>
+<li>
+<p>5x5x16 CONV : 16개의 filter에 대한 5x5 convolutional feature 값을 가지고 있는 것</p>
+</li>
+<li>
+<p>16개 filter 기준으로 배열한다면 output은 1x1x400 이 되는데 이것을 단순히 400개의 node로 보지 않고 1x1x400의 volume으로 본다</p>
+</li>
+<li>
+<p>이것은 이전 layer에서 16개의 activation function으로 얻은 5x5에 대한 filter 값이다.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-65.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-65.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-65-2.png" alt/></a></p>
+<ul>
+<li>Make all the predictions at the same time by one forward pass through CONV → <strong>convolutional implementation of sliding windows</strong></li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-66.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-66.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-66-2.png" alt/></a></p>
+<ul>
+<li>
+<p>Weakness</p>
+<ul>
+<li><strong>position of the bounding boxes</strong> is not going to be too accurate</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-67.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-67.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-67-2.png" alt/></a></p>
+<h3 id="bounding-box-predictions">Bounding Box Predictions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bounding-box-predictions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-8b52d1a7f5cd4ed69ad1709b61bd7e31" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-8b52d1a7f5cd4ed69ad1709b61bd7e31">🎰Audio Description</a></p>
+<ul>
+<li>More accurate alogorithm of bounding boxes is YOLO algorithm : You Only Look Once</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-68.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-68.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-68-2.png" alt/></a></p>
+<ul>
+<li>
+<p>How define the labels for training : Y label is 8 dimensional vector</p>
+</li>
+<li>
+<p>Upper left grid cell : Y will be 0 → don’t care for the rest of label</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-69.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-69.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-69-2.png" alt/></a></p>
+<ul>
+<li>
+<p>YOLO is a popular algorithm because it achieveshigh accuracy while also being able to run in real time</p>
+<ul>
+<li>You Only Look Once means <span class="text-highlight">only one forward propagation</span> pass through the network to make predictions</li>
+</ul>
+</li>
+<li>
+<p>YOLO</p>
+<ul>
+<li>
+<p>Bounding box와 class probability를 single regression problem으로 간주</p>
+</li>
+<li>
+<p>Single convolutional network를 통해 multiple bounding box에 대한 class probability를 계산</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Take the midpoint of reach of the two objects</p>
+</li>
+<li>
+<p>Assigns the object to the grid cell containing the midpoint</p>
+</li>
+<li>
+<p>Left car is assigned to this grid cell,</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-70.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-70.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-70-2.png" alt/></a></p>
+<h3 id="intersection-over-union-iou">Intersection Over Union (IoU)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#intersection-over-union-iou" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-5c7fb4da78c942fab16fb0d6d9f04eeb" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-5c7fb4da78c942fab16fb0d6d9f04eeb">⚓Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_efdad8540805987a2354e3544d2d6cbd_c4w3l06-instersecoverunion.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_efdad8540805987a2354e3544d2d6cbd_c4w3l06-instersecoverunion.pptx">_efdad8540805987a2354e3544d2d6cbd_C4W3L06-InstersecOverUnion.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-71.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-71.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-71-2.png" alt/></a></p>
+<ul>
+<li>
+<p>IoU computes the size of intersection</p>
+</li>
+<li>
+<p>IoU ≥ 0.5</p>
+</li>
+<li>
+<p>Higher the IoUs, the more accurate the bounding box</p>
+</li>
+<li>
+<p>A measure of the overlap between two bounding boxes</p>
+<ul>
+<li>
+<p>compute the intersection</p>
+</li>
+<li>
+<p>compute the union</p>
+</li>
+<li>
+<p>take the ration of the two area</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="non-max-suppression">Non-max Suppression<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#non-max-suppression" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-9a9cd325a809444ea548672a30a4ec47" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-9a9cd325a809444ea548672a30a4ec47">👟Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_e9e369378451599c3a64ba8d31be7352_c4w3l07-nonmaxsuppression.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_e9e369378451599c3a64ba8d31be7352_c4w3l07-nonmaxsuppression.pptx">_e9e369378451599c3a64ba8d31be7352_C4W3L07-NonmaxSuppression.pptx</a></p>
+<ul>
+<li>
+<p>A way to detect each object only once</p>
+</li>
+<li>
+<p>Non-max suppression → cleans up these detection → end up with just one detection per car</p>
+</li>
+<li>
+<p>Discard all the boxes, all the predictions of the bounding boxes with probability less than threshold</p>
+</li>
+<li>
+<p>Repeatedly pick the box with the highest probability</p>
+</li>
+<li>
+<p>다음으로 남은 상자를 모두 버립니다. 예측으로 출력하지 않았고 이전에 폐기되지 않은 상자입니다.<br/>
+따라서 겹치는 부분이 높은 나머지 상자는 모두 버리고 IoU가 높고 이전 단계에서 방금 출력 한 상자가 있습니다.<br/>
+while 루프의 두 번째 단계는 이전 슬라이드에서 방금 밝게 만든 경계 상자와 겹치는 나머지 경계 상자를 어둡게 만들 때였습니다.<br/>
+따라서 아직 처리하지 않은 나머지 상자가있는 동안 계속이 작업을 수행합니다. 각 상자를 가져 와서 예측으로 출력하거나 겹치는 부분이 너무 많아 버릴 때까지 감지 된 개체 중 하나에 대한 예측 위치로 방금 출력 한 상자 중 하나를 사용하여 IOU를 높입니다.</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-72.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-72.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-72-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-73.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-73.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-73-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-74.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-74.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-74-2.png" alt/></a></p>
+<h3 id="anchor-boxes">Anchor Boxes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#anchor-boxes" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-36e869d99b634097bd881217bee3d319" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-36e869d99b634097bd881217bee3d319">🎎Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_f76f188e423f8d55d407bd55d0da76e4_c4w3l08-anchorboxes.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_f76f188e423f8d55d407bd55d0da76e4_c4w3l08-anchorboxes.pptx">_f76f188e423f8d55d407bd55d0da76e4_C4W3L08-AnchorBoxes.pptx</a></p>
+<ul>
+<li>
+<p>What if a grid cell wants to detect multiple objects → Anchor Boxes</p>
+</li>
+<li>
+<p>Anchor boxes or Anchor box shapes</p>
+</li>
+<li>
+<p>See which of anchor boxes has a higher IoU</p>
+</li>
+<li>
+<p>Allow learning algorithm to specialize better</p>
+</li>
+<li>
+<p>Advance version use K-means algorithm to group together two types of objects shapes</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-75.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-75.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-75-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-76.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-76.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-76-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-77.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-77.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-77-2.png" alt/></a></p>
+<h3 id="yolo-algorithm">YOLO Algorithm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#yolo-algorithm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-22cf442e86da480995fca5be171bed9f" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-22cf442e86da480995fca5be171bed9f">🥏Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_a4099ed29be381fee86f7c7596840119_c4w3l09-yoloalgorithm.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_a4099ed29be381fee86f7c7596840119_c4w3l09-yoloalgorithm.pptx">_a4099ed29be381fee86f7c7596840119_C4W3L09-YOLOAlgorithm.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-78.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-78.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-78-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-79.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-79.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-79-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-80.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-80.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-80-2.png" alt/></a></p>
+<h3 id="region-proposals">Region Proposals<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#region-proposals" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-9bb9c24241de49e7913ed78144a5423d" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-9bb9c24241de49e7913ed78144a5423d">⛺Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_72346e4fcfbb489712c17b8bef9eb4ee_c4w3l10-regionproposals.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_72346e4fcfbb489712c17b8bef9eb4ee_c4w3l10-regionproposals.pptx">_72346e4fcfbb489712c17b8bef9eb4ee_C4W3L10-RegionProposals.pptx</a></p>
+<ul>
+<li>
+<p>Pick just a few regions that makes sense to run your continent crossfire</p>
+</li>
+<li>
+<p>Select just a few windows and run continent crossfire → the region proposal is called a segmentation algorithm</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-81.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-81.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-81-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-82.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-82.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-82-1.png" alt/></a></p>
+<h3 id="semantic-segmentation-with-u-net">Semantic Segmentation with U-Net<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#semantic-segmentation-with-u-net" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-3fede1d52a594c9f9741a980d73bb726" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-3fede1d52a594c9f9741a980d73bb726">🕚Audio Description</a></p>
+<ul>
+<li>
+<p>One step more sophisticated → semantic segmentation</p>
+</li>
+<li>
+<p>Goal is to draw a careful outline arount the object → know exactly which pixel belongs to the object and don’t</p>
+</li>
+<li>
+<p>Application : Self-driving, Medical imaging</p>
+</li>
+<li>
+<p>Algorithm used to generate this result is an algorithm called unit</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-83.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-83.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-83-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-84.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-84.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-84-1.png" alt/></a></p>
+<ul>
+<li>Take every single pixel and label every single pixel individually with the appropriate class label</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-85.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-85.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-85-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-86.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-86.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-86-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-87.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-87.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-87-1.png" alt/></a></p>
+<h3 id="transpose-convolutions">Transpose Convolutions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transpose-convolutions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-92ec235920fb4253a7bc582ba41a3644" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-92ec235920fb4253a7bc582ba41a3644">📽️Audio Description</a></p>
+<ul>
+<li>2x2 input * 3x3 filter → 4x4 output (bigger than the original input)</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-88.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-88.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-88-1.png" alt/></a></p>
+<ul>
+<li>
+<p>p padding 1, stride s 2</p>
+</li>
+<li>
+<p>Take small inputs and turn it into bigger output</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-89.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-89.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-89-1.png" alt/></a></p>
+<h3 id="u-net-architecture-intuition">U-Net Architecture Intuition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#u-net-architecture-intuition" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-abff77c2d81e45d2954410fc32df1bd3" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-abff77c2d81e45d2954410fc32df1bd3">🏀Audio Description</a></p>
+<ul>
+<li>
+<p>First Half Normal convolutions (sort of compress the image) : from a very large image to one where the heightened whiff of this activation is much smaller</p>
+<ul>
+<li>
+<p>lost a lot of spatial information because the dimension is much smaller</p>
+</li>
+<li>
+<p>but it’s much deeper</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Second Half Transpose convolution : blow the representation size up back to the size of the original input image</p>
+<ul>
+<li>
+<p>Turn this into the unit architecture</p>
+</li>
+<li>
+<p>Earlier block of activation is copied directly to the later block</p>
+</li>
+</ul>
+</li>
+<li>
+<p>2 type of information</p>
+<ul>
+<li>
+<p>High level spatial and High level contextual information : miss very detailed, fine grained spatial information</p>
+</li>
+<li>
+<p>Skip connection allows to take very high resolution, low level feature information</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Final layer has both the lower resolution but high level, spatial, high level contextual information as well as low level</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-90.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-90.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-90-1.png" alt/></a></p>
+<h3 id="u-net-architecture">U-Net Architecture<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#u-net-architecture" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-198aafac5bdd4262a87cd91f8694b547" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-198aafac5bdd4262a87cd91f8694b547">♠️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-91.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-91.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-91-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-92.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-92.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-92-1.png" alt/></a></p>
+<h1 id="special-applications">Special Applications<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#special-applications" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="face-recognition">Face Recognition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#face-recognition" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="what-is-face-recognition">What is Face Recognition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-face-recognition" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-026cb8b0781c4aad996f11e8c6572bdc" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-026cb8b0781c4aad996f11e8c6572bdc">🌇Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_373606549ba45c5ec46c3be4121fa2f8_c4w4l01-whatisfacerecog.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_373606549ba45c5ec46c3be4121fa2f8_c4w4l01-whatisfacerecog.pptx">_373606549ba45c5ec46c3be4121fa2f8_C4W4L01-WhatIsFaceRecog.pptx</a></p>
+<ul>
+<li>
+<p>Confidence : a couple important special applications of confidence</p>
+<ul>
+<li>Face recognition → Neuraosal transfer</li>
+</ul>
+</li>
+<li>
+<p>Face Verification : Is this the claimed person?</p>
+<ul>
+<li>
+<p>scan your passport and then verifying that you are the correct person</p>
+</li>
+<li>
+<p>mobile phone that unlocks using your face</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Face Recognition : Who is this person?</p>
+<ul>
+<li>employees entering the office without needing to otherwise identify themselves. This is a 1:K matching problem</li>
+</ul>
+</li>
+<li>
+<p>FaceNet learns a neural network that encodes a face image into a vector of 128 numbers</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-93.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-93.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-93-1.png" alt/></a></p>
+<h3 id="one-shot-learning">One Shot Learning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#one-shot-learning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-30c4f78c97b24df88a586b1ff87228a5" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-30c4f78c97b24df88a586b1ff87228a5">🌫️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_56c5bd000037c8638e9c358b1dd5ba2e_c4w4l02-oneshotlearning.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_56c5bd000037c8638e9c358b1dd5ba2e_c4w4l02-oneshotlearning.pptx">_56c5bd000037c8638e9c358b1dd5ba2e_C4W4L02-OneShotLearning.pptx</a></p>
+<ul>
+<li>
+<p>Despite ever having seen only one image, recognize that this is actually the same person or that’s not in the database → one shot learning</p>
+</li>
+<li>
+<p>With ConvNet model and softmax, what if new person is added?</p>
+</li>
+<li>
+<p>Learn a similarity function : input two images and outputs the degree of difference between the two images</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-94.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-94.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-94-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-95.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-95.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-95-1.png" alt/></a></p>
+<h3 id="siamese-network">Siamese Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#siamese-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-f1f613065e95446e9e733eb1663ceee5" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-f1f613065e95446e9e733eb1663ceee5">♥️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_b5d5cb97edbcd75e72653c9292ba01a1_c4w4l03-siamesenetwork.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_b5d5cb97edbcd75e72653c9292ba01a1_c4w4l03-siamesenetwork.pptx">_b5d5cb97edbcd75e72653c9292ba01a1_C4W4L03-SiameseNetwork.pptx</a></p>
+<ul>
+<li>
+<p>Siamese network : running two identical, convolutional neural networks on two different inputs and then comparing them</p>
+<ul>
+<li>These two neural networks have the same parameters</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-96.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-96.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-96-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-97.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-97.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-97-1.png" alt/></a></p>
+<h3 id="triplet-loss">Triplet Loss<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#triplet-loss" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-c4999356b8e4495b96cc10c158ed5691" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-c4999356b8e4495b96cc10c158ed5691">🧿Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_cf2b25ab570f85af4cced366d346e793_c4w4l04-tripletloss.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_cf2b25ab570f85af4cced366d346e793_c4w4l04-tripletloss.pptx">_cf2b25ab570f85af4cced366d346e793_C4W4L04-TripletLoss.pptx</a></p>
+<ul>
+<li>To train a network using the triplet loss you would need several pictures of the same person</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-98.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-98.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-98-1.png" alt/></a></p>
+<ul>
+<li>
+<p>Compare pairs of images → same person (encodings to be similar)</p>
+</li>
+<li>
+<p>always <strong>look at one anchor image</strong> and then you want to <strong>distance between the anchor and the positive image</strong> as well as the <strong>negative image</strong> : A(nchor), P(ositive), N(egative)</p>
+</li>
+<li>
+<p>The parameters of neural network of encodings</p>
+<ul>
+<li>Encoding between A - P, Encoding between A - N → distance function (d)</li>
+</ul>
+</li>
+<li>
+<p>특정 사람 image가 다른 사람의 image 보다 동일한 사람의 모든 다른 image와 더 가깝게 되기를 희망</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-99.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-99.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-99-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-100.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-100.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-100-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-101.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-101.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-101-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-102.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-102.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-102-1.png" alt/></a></p>
+<h3 id="face-verification-and-binary-classification">Face Verification and Binary Classification<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#face-verification-and-binary-classification" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-c63e786c8655480fbac435e94df3d8cd" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-c63e786c8655480fbac435e94df3d8cd">📰Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_5557fe5a817460a1f31474d1faf447ad_c4w4l05-faceverifabinaryclass.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_5557fe5a817460a1f31474d1faf447ad_c4w4l05-faceverifabinaryclass.pptx">_5557fe5a817460a1f31474d1faf447ad_C4W4L05-FaceVerifABinaryClass.pptx</a></p>
+<ul>
+<li>
+<p>Instedad of havaing to compute embedding every single time, actually do pre-compute</p>
+<ul>
+<li>
+<p>new employee walks in → compute encoding → large database of employee</p>
+</li>
+<li>
+<p>pre-computing can save a significant computation : Siamese Central architecture (binary classification as well as Triplet Loss function)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Extension face recognition as a binary classification</p>
+</li>
+<li>
+<p>The upper and lower neural networks have different input images but have exactly the same parameters → If these networks don’t have the same parameters then the encoding of the two faces are not consistent with each other</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-103.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-103.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-103-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-104.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-104.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-104-1.png" alt/></a></p>
+<h2 id="neural-style-transfer">Neural Style Transfer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-style-transfer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="what-is-neural-style-transfer">What is Neural Style Transfer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-neural-style-transfer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-070420445b964949ac6bfd4de7f40e7d" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-070420445b964949ac6bfd4de7f40e7d">🎮Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_82227f165a6ba4514a428084fd76fc55_c4w4l06-whatisneuraltransferstyle.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_82227f165a6ba4514a428084fd76fc55_c4w4l06-whatisneuraltransferstyle.pptx">_82227f165a6ba4514a428084fd76fc55_C4W4L06-WhatIsNeuralTransferStyle.pptx</a></p>
+<ul>
+<li>
+<p>In each iteration of the optimization algorithm, the neural network parameters are updated</p>
+</li>
+<li>
+<p>Neural style transfer is trained as a supervised learning task in which the goal is to input two images (x), and train a network to output a new, synthesized image (y)</p>
+<ul>
+<li>False : Neural style transfer is about training on the pixels of an image to make it look artistic, it is not learning any parameters.</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-105.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-105.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-105-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-106.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-106.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-106-1.png" alt/></a></p>
+<h3 id="what-are-deep-convnets-learning">What are deep ConvNets learning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-are-deep-convnets-learning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-46199aadf2aa4c4d8b7bc0fe5282c25e" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-46199aadf2aa4c4d8b7bc0fe5282c25e">👛Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_23fb735a2d76fb9c52f67ad4bb17c5cb_c4w4l07-whataredeepcnslearning.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_23fb735a2d76fb9c52f67ad4bb17c5cb_c4w4l07-whataredeepcnslearning.pptx">_23fb735a2d76fb9c52f67ad4bb17c5cb_C4W4L07-WhatAreDeepCNsLearning.pptx</a></p>
+<ul>
+<li>Receptive field : Pick one hidden layer unit and find images taht maximizes that unit’s activation → repeat this procedure several times</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-107.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-107.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-107-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-108.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-108.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-108-1.png" alt/></a></p>
+<h3 id="cost-function">Cost Function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cost-function" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-a8341082cc5f49dd81f9e7e6baaaacfe" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-a8341082cc5f49dd81f9e7e6baaaacfe">🏸Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_22618218ba906e7a4820b2ac41257ef4_c4w4l08-costfunction.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_22618218ba906e7a4820b2ac41257ef4_c4w4l08-costfunction.pptx">_22618218ba906e7a4820b2ac41257ef4_C4W4L08-CostFunction.pptx</a></p>
+<ul>
+<li>
+<p>Two parts of cost function</p>
+<ul>
+<li>
+<p>content cost : function of the content image and of the generated image (measure how similar is the contents of G and C)</p>
+</li>
+<li>
+<p>style cost : function of generated image and style of the image (measure how similar is the style of the G, S)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Weight two hyperparameters : weighting between the content costs and the style cost</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-109.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-109.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-109-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-110.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-110.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-110-1.png" alt/></a></p>
+<h3 id="connect-cost-function">Connect Cost Function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#connect-cost-function" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-1380308d218147a38b70279fcd5bf9a5" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-1380308d218147a38b70279fcd5bf9a5">☀️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_d3507a1511cc45810e0a498b54e3314c_c4w4l09-contentcostfunction.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_d3507a1511cc45810e0a498b54e3314c_c4w4l09-contentcostfunction.pptx">_d3507a1511cc45810e0a498b54e3314c_C4W4L09-ContentCostFunction.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-111.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-111.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-111-1.png" alt/></a></p>
+<h3 id="style-cost-function">Style Cost Function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#style-cost-function" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-52086fdad393445099be93105398e0b7" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-52086fdad393445099be93105398e0b7">🚉Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_925d6c42c571d4db8b1fa80ed6f7d0f3_c4w4l10-stylecostfunction.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_925d6c42c571d4db8b1fa80ed6f7d0f3_c4w4l10-stylecostfunction.pptx">_925d6c42c571d4db8b1fa80ed6f7d0f3_C4W4L10-StyleCostFunction.pptx</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-112.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-112.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-112-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-113.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-113.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-113-1.png" alt/></a></p>
+<ul>
+<li>style matrix G[l] can be seen as a matrix of cross-correlations between the different feature detectors</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-114.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-114.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-114-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-115.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-115.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-115-1.png" alt/></a></p>
+<h3 id="1d-and-3d-generations">1D and 3D Generations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1d-and-3d-generations" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/audio-description-458f5867ef8a411b8f4ba66d63f54404" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/audio-description-458f5867ef8a411b8f4ba66d63f54404">🌁Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/_9496ee65d1be9dc60d184e252a37a2da_c4w4l11-1d3dgeneralizations.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/_9496ee65d1be9dc60d184e252a37a2da_c4w4l11-1d3dgeneralizations.pptx">_9496ee65d1be9dc60d184e252a37a2da_C4W4L11-1D3DGeneralizations.pptx</a></p>
+<ul>
+<li>
+<p>CAT scan, Medical scan</p>
+</li>
+<li>
+<p>Could treat data as a 3D volume like movie data</p>
+</li>
+<li>
+<p>You are working with 3D data. You are building a network layer whose input volume has size 32x32x32x16 (this volume has 16 channels), and applies convolutions with 32 filters of dimension 3x3x3 (no padding, stride 1). What is the resulting output volume → 30x30x30x<strong>32</strong></p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-116.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-116.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-116-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/untitled-117.png" class="internal internal-link" data-slug="coursera-deeplearning3---convolutional-neural-netw/untitled-117.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-117-1.png" alt/></a></p>
+<h1 id="quiz">Quiz<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quiz" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/week1-7c9dd64e5d534fecb9e1555fd7d14648" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/week1-7c9dd64e5d534fecb9e1555fd7d14648">🎭Week1</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/week2-2dbd7595e2b34ae8b5730a6521f1c107" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/week2-2dbd7595e2b34ae8b5730a6521f1c107">🌌Week2</a></p>
+<h1 id="interview">Interview<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#interview" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/yann-lecun-af9ee20237804264ae13b773a4e7975c" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/yann-lecun-af9ee20237804264ae13b773a4e7975c">🌨️Yann LeCun</a></p>
+<h1 id="code">Code<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#code" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/resnet-7b9a0e22c1cb4671bbf9fd1571edba59" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/resnet-7b9a0e22c1cb4671bbf9fd1571edba59">🚉ResNet</a></p>
+<p><a href="../../../coursera-deeplearning3---convolutional-neural-netw/transfer_learning_with_mobilenet_v1-e4c4f32b59a14d4aad574c3fcfc3f9f6" class="internal internal-link alias" data-slug="coursera-deeplearning3---convolutional-neural-netw/transfer_learning_with_mobilenet_v1-e4c4f32b59a14d4aad574c3fcfc3f9f6">🧭Transfer_learning_with_MobileNet_v1</a></p>
+<h1 id="reference">Reference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h3 id="week-1"><strong>Week 1:</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><a href="https://www.tensorflow.org/guide/keras/sequential_model" class="external external-link">The Sequential model<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (TensorFlow Documentation)</p>
+</li>
+<li>
+<p><a href="https://www.tensorflow.org/guide/keras/functional" class="external external-link">The Functional API<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (TensorFlow Documentation)</p>
+</li>
+</ul>
+<h3 id="week-2"><strong>Week 2:</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/1512.03385" class="external external-link">Deep Residual Learning for Image Recognition<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (He, Zhang, Ren &amp; Sun, 2015)</p>
+</li>
+<li>
+<p><a href="https://github.com/fchollet/deep-learning-models/blob/master/resnet50.py" class="external external-link">deep-learning-models/resnet50.py/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (GitHub: fchollet)</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1704.04861" class="external external-link">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Howard, Zhu, Chen, Kalenichenko, Wang, Weyand, Andreetto, &amp; Adam, 2017)</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1801.04381" class="external external-link">MobileNetV2: Inverted Residuals and Linear Bottlenecks<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Sandler, Howard, Zhu, Zhmoginov &amp;Chen, 2018)</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1905.11946" class="external external-link">EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Tan &amp; Le, 2019)</p>
+</li>
+</ul>
+<h3 id="week-3"><strong>Week 3:</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><a href="https://arxiv.org/abs/1506.02640" class="external external-link">You Only Look Once: Unified, Real-Time Object Detection<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Redmon, Divvala, Girshick &amp; Farhadi, 2015)</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1612.08242" class="external external-link">YOLO9000: Better, Faster, Stronger<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Redmon &amp; Farhadi, 2016)</p>
+</li>
+<li>
+<p><a href="https://github.com/allanzelener/YAD2K" class="external external-link">YAD2K<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (GitHub: allanzelener)</p>
+</li>
+<li>
+<p><a href="https://pjreddie.com/darknet/yolo/" class="external external-link">YOLO: Real-Time Object Detection<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1701.08816" class="external external-link">Fully Convolutional Architectures for Multi-Class Segmentation in Chest Radiographs<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Novikov, Lenis, Major, Hladůvka, Wimmer &amp; Bühler, 2017)</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1705.03820" class="external external-link">Automatic Brain Tumor Detection and Segmentation Using U-Net Based Fully Convolutional Networks<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Dong, Yang, Liu, Mo &amp; Guo, 2017)</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1505.04597" class="external external-link">U-Net: Convolutional Networks for Biomedical Image Segmentation<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Ronneberger, Fischer &amp; Brox, 2015)</p>
+</li>
+</ul>
+<h3 id="week-4"><strong>Week 4:</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#week-4" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><a href="https://arxiv.org/pdf/1503.03832.pdf" class="external external-link">FaceNet: A Unified Embedding for Face Recognition and Clustering<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Schroff, Kalenichenko &amp; Philbin, 2015)</p>
+</li>
+<li>
+<p><a href="https://research.fb.com/wp-content/uploads/2016/11/deepface-closing-the-gap-to-human-level-performance-in-face-verification.pdf" class="external external-link">DeepFace: Closing the Gap to Human-Level Performance in Face Verification<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Taigman, Yang, Ranzato &amp; Wolf)</p>
+</li>
+<li>
+<p><a href="https://github.com/davidsandberg/facenet" class="external external-link">facenet<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (GitHub: davidsandberg)</p>
+</li>
+<li>
+<p><a href="https://machinelearningmastery.com/how-to-develop-a-face-recognition-system-using-facenet-in-keras-and-an-svm-classifier/" class="external external-link">How to Develop a Face Recognition System Using FaceNet in Keras<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Jason Brownlee, 2019)</p>
+</li>
+<li>
+<p><a href="https://github.com/nyoki-mtl/keras-facenet/blob/master/notebook/tf_to_keras.ipynb" class="external external-link">keras-facenet/notebook/tf_to_keras.ipynb<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (GitHub: nyoki-mtl)</p>
+</li>
+<li>
+<p><a href="https://arxiv.org/abs/1508.06576" class="external external-link">A Neural Algorithm of Artistic Style<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Gatys, Ecker &amp; Bethge, 2015)</p>
+</li>
+<li>
+<p><a href="https://harishnarayanan.org/writing/artistic-style-transfer/" class="external external-link">Convolutional neural networks for artistic style transfer<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="http://www.chioka.in/tensorflow-implementation-neural-algorithm-of-artistic-style" class="external external-link">TensorFlow Implementation of “A Neural Algorithm of Artistic Style”<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://arxiv.org/pdf/1409.1556.pdf" class="external external-link">Very Deep Convolutional Networks For Large-Scale Image Recognition<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Simonyan &amp; Zisserman, 2015)</p>
+</li>
+<li>
+<p><a href="https://www.vlfeat.org/matconvnet/pretrained/" class="external external-link">Pretrained models<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (MatConvNet)</p>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1429" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#coursera-deeplearning3---convolutional-neural-network" data-for="coursera-deeplearning3---convolutional-neural-network">Coursera DeepLearning3 - Convolutional Neural Network</a></li><li class="depth-0"><a href="#foundations-of-convolutional-neural-networks" data-for="foundations-of-convolutional-neural-networks">Foundations of Convolutional Neural Networks</a></li><li class="depth-1"><a href="#convolutional-neural-networks" data-for="convolutional-neural-networks">Convolutional Neural Networks</a></li><li class="depth-2"><a href="#computer-vision" data-for="computer-vision">Computer Vision</a></li><li class="depth-2"><a href="#edge-detection-example" data-for="edge-detection-example">Edge Detection Example</a></li><li class="depth-2"><a href="#more-edge-detection" data-for="more-edge-detection">More Edge Detection</a></li><li class="depth-2"><a href="#padding" data-for="padding">Padding</a></li><li class="depth-2"><a href="#strided-convolutions" data-for="strided-convolutions">Strided Convolutions</a></li><li class="depth-2"><a href="#convolutions-over-volume" data-for="convolutions-over-volume">Convolutions Over Volume</a></li><li class="depth-2"><a href="#one-layer-of-a-convolutional-network" data-for="one-layer-of-a-convolutional-network">One Layer of a Convolutional Network</a></li><li class="depth-2"><a href="#simple-convolutional-network-example" data-for="simple-convolutional-network-example">Simple Convolutional Network Example</a></li><li class="depth-2"><a href="#pooling-layers" data-for="pooling-layers">Pooling Layers</a></li><li class="depth-2"><a href="#cnn-example" data-for="cnn-example">CNN Example</a></li><li class="depth-2"><a href="#why-convolutions" data-for="why-convolutions">Why Convolutions</a></li><li class="depth-0"><a href="#deep-convolutional-models" data-for="deep-convolutional-models">Deep Convolutional Models</a></li><li class="depth-1"><a href="#case-studies" data-for="case-studies">Case Studies</a></li><li class="depth-2"><a href="#why-look-at-case-studies" data-for="why-look-at-case-studies">Why look at case studies?</a></li><li class="depth-2"><a href="#classic-networks" data-for="classic-networks">Classic Networks</a></li><li class="depth-2"><a href="#resnets" data-for="resnets">ResNets</a></li><li class="depth-2"><a href="#why-resnets-work" data-for="why-resnets-work">Why ResNets Work?</a></li><li class="depth-2"><a href="#networks-in-networks-and-1x1-convolutions" data-for="networks-in-networks-and-1x1-convolutions">Networks in Networks and 1x1 Convolutions</a></li><li class="depth-2"><a href="#inception-network-motivation" data-for="inception-network-motivation">Inception Network Motivation</a></li><li class="depth-2"><a href="#inception-network" data-for="inception-network">Inception Network</a></li><li class="depth-2"><a href="#mobilenet" data-for="mobilenet">MobileNet</a></li><li class="depth-2"><a href="#mobilenet-architecture" data-for="mobilenet-architecture">MobileNet Architecture</a></li><li class="depth-2"><a href="#efficientnet" data-for="efficientnet">EfficientNet</a></li><li class="depth-1"><a href="#practival-advice-for-using-convnets" data-for="practival-advice-for-using-convnets">Practival Advice for Using ConvNets</a></li><li class="depth-2"><a href="#using-open-source-implementation" data-for="using-open-source-implementation">Using Open-Source Implementation</a></li><li class="depth-2"><a href="#transfer-learning" data-for="transfer-learning">Transfer Learning</a></li><li class="depth-2"><a href="#data-augmentation" data-for="data-augmentation">Data Augmentation</a></li><li class="depth-2"><a href="#state-of-computer-vision" data-for="state-of-computer-vision">State of Computer Vision</a></li><li class="depth-0"><a href="#object-detection" data-for="object-detection">Object Detection</a></li><li class="depth-1"><a href="#detection-algorithm" data-for="detection-algorithm">Detection Algorithm</a></li><li class="depth-2"><a href="#object-localization" data-for="object-localization">Object Localization</a></li><li class="depth-2"><a href="#landmark-detection" data-for="landmark-detection">Landmark Detection</a></li><li class="depth-2"><a href="#object-detection-1" data-for="object-detection-1">Object Detection</a></li><li class="depth-2"><a href="#convolutional-implementation-of-sliding-windows" data-for="convolutional-implementation-of-sliding-windows">Convolutional Implementation of Sliding Windows</a></li><li class="depth-2"><a href="#bounding-box-predictions" data-for="bounding-box-predictions">Bounding Box Predictions</a></li><li class="depth-2"><a href="#intersection-over-union-iou" data-for="intersection-over-union-iou">Intersection Over Union (IoU)</a></li><li class="depth-2"><a href="#non-max-suppression" data-for="non-max-suppression">Non-max Suppression</a></li><li class="depth-2"><a href="#anchor-boxes" data-for="anchor-boxes">Anchor Boxes</a></li><li class="depth-2"><a href="#yolo-algorithm" data-for="yolo-algorithm">YOLO Algorithm</a></li><li class="depth-2"><a href="#region-proposals" data-for="region-proposals">Region Proposals</a></li><li class="depth-2"><a href="#semantic-segmentation-with-u-net" data-for="semantic-segmentation-with-u-net">Semantic Segmentation with U-Net</a></li><li class="depth-2"><a href="#transpose-convolutions" data-for="transpose-convolutions">Transpose Convolutions</a></li><li class="depth-2"><a href="#u-net-architecture-intuition" data-for="u-net-architecture-intuition">U-Net Architecture Intuition</a></li><li class="depth-2"><a href="#u-net-architecture" data-for="u-net-architecture">U-Net Architecture</a></li><li class="depth-0"><a href="#special-applications" data-for="special-applications">Special Applications</a></li><li class="depth-1"><a href="#face-recognition" data-for="face-recognition">Face Recognition</a></li><li class="depth-2"><a href="#what-is-face-recognition" data-for="what-is-face-recognition">What is Face Recognition</a></li><li class="depth-2"><a href="#one-shot-learning" data-for="one-shot-learning">One Shot Learning</a></li><li class="depth-2"><a href="#siamese-network" data-for="siamese-network">Siamese Network</a></li><li class="depth-2"><a href="#triplet-loss" data-for="triplet-loss">Triplet Loss</a></li><li class="depth-2"><a href="#face-verification-and-binary-classification" data-for="face-verification-and-binary-classification">Face Verification and Binary Classification</a></li><li class="depth-1"><a href="#neural-style-transfer" data-for="neural-style-transfer">Neural Style Transfer</a></li><li class="depth-2"><a href="#what-is-neural-style-transfer" data-for="what-is-neural-style-transfer">What is Neural Style Transfer</a></li><li class="depth-2"><a href="#what-are-deep-convnets-learning" data-for="what-are-deep-convnets-learning">What are deep ConvNets learning</a></li><li class="depth-2"><a href="#cost-function" data-for="cost-function">Cost Function</a></li><li class="depth-2"><a href="#connect-cost-function" data-for="connect-cost-function">Connect Cost Function</a></li><li class="depth-2"><a href="#style-cost-function" data-for="style-cost-function">Style Cost Function</a></li><li class="depth-2"><a href="#1d-and-3d-generations" data-for="1d-and-3d-generations">1D and 3D Generations</a></li><li class="depth-0"><a href="#quiz" data-for="quiz">Quiz</a></li><li class="depth-0"><a href="#interview" data-for="interview">Interview</a></li><li class="depth-0"><a href="#code" data-for="code">Code</a></li><li class="depth-0"><a href="#reference" data-for="reference">Reference</a></li><li class="depth-2"><a href="#week-1" data-for="week-1">Week 1:</a></li><li class="depth-2"><a href="#week-2" data-for="week-2">Week 2:</a></li><li class="depth-2"><a href="#week-3" data-for="week-3">Week 3:</a></li><li class="depth-2"><a href="#week-4" data-for="week-4">Week 4:</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

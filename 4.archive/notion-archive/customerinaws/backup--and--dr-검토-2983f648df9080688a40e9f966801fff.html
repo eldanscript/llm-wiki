@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>BackUp &amp; DR 검토 2983f648df9080688a40e9f966801fff | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="BackUp &amp; DR 검토 2983f648df9080688a40e9f966801fff | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="BackUp &amp; DR 검토 2983f648df9080688a40e9f966801fff | LLM Wiki"/><meta name="twitter:description" content="🗽 BackUp &amp; DR 검토 Meeting @December 23, 2025 Attendee Genie (IT 인프라 팀) : 김범기 차장, 황상훈, 유영환 GS Neotek : 김정수 과장 AWS : 신능선, 박경록, 김용기 SSA Discussion On-prem 구성 및 백업 현황 현재는 백업이 없는 상태로 일부 중요 장비에 대해서 적용하고자 함 Veem community version 사용 백업 후 복원 과정 진행 시험 희망 PoC 진행 IDC의 중요 장비 데이터를 AWS로 백업 후 복원에 대해 검토 비용이 들지..."/><meta property="og:description" content="🗽 BackUp &amp; DR 검토 Meeting @December 23, 2025 Attendee Genie (IT 인프라 팀) : 김범기 차장, 황상훈, 유영환 GS Neotek : 김정수 과장 AWS : 신능선, 박경록, 김용기 SSA Discussion On-prem 구성 및 백업 현황 현재는 백업이 없는 상태로 일부 중요 장비에 대해서 적용하고자 함 Veem community version 사용 백업 후 복원 과정 진행 시험 희망 PoC 진행 IDC의 중요 장비 데이터를 AWS로 백업 후 복원에 대해 검토 비용이 들지..."/><meta property="og:image:alt" content="🗽 BackUp &amp; DR 검토 Meeting @December 23, 2025 Attendee Genie (IT 인프라 팀) : 김범기 차장, 황상훈, 유영환 GS Neotek : 김정수 과장 AWS : 신능선, 박경록, 김용기 SSA Discussion On-prem 구성 및 백업 현황 현재는 백업이 없는 상태로 일부 중요 장비에 대해서 적용하고자 함 Veem community version 사용 백업 후 복원 과정 진행 시험 희망 PoC 진행 IDC의 중요 장비 데이터를 AWS로 백업 후 복원에 대해 검토 비용이 들지..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/backup--and--dr-검토-2983f648df9080688a40e9f966801fff"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/backup--and--dr-검토-2983f648df9080688a40e9f966801fff"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🗽 BackUp &amp; DR 검토 Meeting @December 23, 2025 Attendee Genie (IT 인프라 팀) : 김범기 차장, 황상훈, 유영환 GS Neotek : 김정수 과장 AWS : 신능선, 박경록, 김용기 SSA Discussion On-prem 구성 및 백업 현황 현재는 백업이 없는 상태로 일부 중요 장비에 대해서 적용하고자 함 Veem community version 사용 백업 후 복원 과정 진행 시험 희망 PoC 진행 IDC의 중요 장비 데이터를 AWS로 백업 후 복원에 대해 검토 비용이 들지..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/customerinaws/backup--and--dr-검토-2983f648df9080688a40e9f966801fff" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1074" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1074" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/customerinaws/">CustomerInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>BackUp &amp; DR 검토 2983f648df9080688a40e9f966801fff</a></div></nav><h1 class="article-title">BackUp &amp; DR 검토 2983f648df9080688a40e9f966801fff</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:14.936Z">2026년 6월 06일</time><span>69 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/attachments/met_winslow_homer_maine_coast-1.jpg" alt/></p>
+<p>🗽</p>
+<h1 id="backup--dr-검토">BackUp &amp; DR 검토<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#backup--dr-검토" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="meeting-december-23-2025">Meeting @December 23, 2025<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#meeting-december-23-2025" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="attendee">Attendee<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#attendee" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Genie (IT 인프라 팀) : 김범기 차장, 황상훈, 유영환</p>
+</li>
+<li>
+<p>GS Neotek : 김정수 과장</p>
+</li>
+<li>
+<p>AWS : 신능선, 박경록, 김용기 SSA</p>
+</li>
+</ul>
+<h2 id="discussion">Discussion<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#discussion" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="on-prem-구성-및-백업-현황">On-prem 구성 및 백업 현황<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#on-prem-구성-및-백업-현황" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>현재는 백업이 없는 상태로 일부 중요 장비에 대해서 적용하고자 함</p>
+</li>
+<li>
+<p>Veem community version 사용</p>
+</li>
+<li>
+<p>백업 후 복원 과정 진행 시험 희망</p>
+<p><a href="../../../backup--and--dr-검토/onprem-backup.png" class="internal internal-link" data-slug="backup--and--dr-검토/onprem-backup.png"><img src="../../../4.archive/notion-archive/attachments/onprem-backup.png" alt/></a></p>
+</li>
+</ul>
+<h3 id="poc-진행">PoC 진행<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#poc-진행" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>IDC의 중요 장비 데이터를 AWS로 백업 후 복원에 대해 검토</p>
+</li>
+<li>
+<p>비용이 들지 않도록 검토</p>
+</li>
+<li>
+<p>백업 대상</p>
+<ul>
+<li>
+<p>대상 instance : 60여대 정도, 전체 5TB 수준</p>
+</li>
+<li>
+<p>DB : Oracle, MySQL, MS-SQL 13대 정도 (RMAN), 단일 최대 크기 10TB, DB 전체 크기는 6~70TB</p>
+</li>
+<li>
+<p>Cron으로 scheduling 하여 Full Backup 진행</p>
+</li>
+<li>
+<p>Restore는 복원할 장비가 준비되어 있지 않아 못하고 있음 : AWS Cloud 환경에서 복원할 수 있는 방법이 있다면 복원 시험을 진행해 보고 싶음</p>
+</li>
+</ul>
+</li>
+<li>
+<p>백업 시험</p>
+<ul>
+<li>
+<p>Veem 사용 시 Network 가용 capa가 없음</p>
+<ul>
+<li>Veem 중복 제거 기능, OS 포함, 일부 Guest만 포함</li>
+</ul>
+</li>
+<li>
+<p>AWS BackUp은 Network을 분리하여 사용이 가능할 것으로 판단</p>
+</li>
+<li>
+<p>DB는 최초 Full backUp 후 incremental backup 진행</p>
+</li>
+<li>
+<p>현재 일부를 Storage Gateway로 전송</p>
+</li>
+<li>
+<p>NAS는 CDN Cache 데이터로 백업</p>
+</li>
+<li>
+<p>목표 Ransomeware에 대한 방어가 가능한가? AWS로 백업한 내용을 복구까지 확인</p>
+</li>
+<li>
+<p>백업 주기 : 하루 1회, RPO는 2일</p>
+</li>
+</ul>
+</li>
+<li>
+<p>복원 시험</p>
+<ul>
+<li>
+<p>OS와 DB는 분리하여 진행</p>
+</li>
+<li>
+<p>DB는 Storage Gateway를 사용하여 RMAN으로 저장된 데이터를 AWS에서 복원 시험</p>
+</li>
+<li>
+<p>일반 Image 백업은 Veem 사용</p>
+</li>
+<li>
+<p>Veem의 local storage를 Storage Gateway로 설정하여 진행도 가능 (GS Neotek)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="시험-제안">시험 제안<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#시험-제안" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>백업 Tool 사용 권고</p>
+</li>
+<li>
+<p>Veem 의 1차 on-prem 백업본 생성, 2차 cloud에 소산</p>
+</li>
+<li>
+<p>Oracle RMAN 이용 DB 백업과 복원 지원</p>
+</li>
+<li>
+<p>DB RMAN : Storage Gateway를 사용하여 S3에 저장</p>
+</li>
+<li>
+<p>Veem은 AWS Cloud로 저장하도록 설정하여 사용 : Veem으로 백업 image를 cloud 저장한 버전을 제대로 복원이 되는지 확인</p>
+</li>
+<li>
+<p>백업 중심 도구 선정 후 논의 가능 : Veem 사용 여부, 아크로미스는 수동 작업이 필요하여 제외</p>
+</li>
+<li>
+<p>복원 목표 : 신뢰할 수 있는 버전인지 전체 서비스 동작을 확인</p>
+</li>
+</ul>
+<h2 id="todo">ToDo<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#todo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>백업 후 복원 시험은 일부에 대해서만 진행</p>
+</li>
+<li>
+<p>Veem license 구매하여 진행 예정 : 검토 후 추가 문의</p>
+</li>
+<li>
+<p>GS Neotek의 구축 사례 함께 검토</p>
+</li>
+<li>
+<p>PoC 일정 내부 협의 후 안내</p>
+<ul>
+<li>1월 정도에 IDC 전체 백업이 되어서 이후 진행 (2월 ?)</li>
+</ul>
+</li>
+</ul>
+<h1 id="meeting-november-25-2025">Meeting @November 25, 2025<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#meeting-november-25-2025" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="backup-진행">BackUp 진행<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#backup-진행" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>연말 예정</p>
+</li>
+<li>
+<p>On-prem Backlup도구 : BEAM Community version</p>
+</li>
+<li>
+<p>대상 : 70대 대당 50GB : 3.5TB 대상</p>
+</li>
+<li>
+<p>DB : Oracle RMAN 사용</p>
+</li>
+</ul>
+<h2 id="dr-구성">DR 구성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dr-구성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>AWS BackUp 이용하여 소산 구축</li>
+</ul>
+<h2 id="storage-assessment">Storage Assessment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#storage-assessment" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>EMC Ipsilon 추가 구매 : 3.6PB</p>
+</li>
+<li>
+<p>SyncIQ</p>
+<ul>
+<li>
+<p>2.8 PB 중 접근이 거의 없는 경우 900TB에 대해서는 S3 아카이빙 용으로 사용 검토</p>
+</li>
+<li>
+<p>이 경우 EMC에 대한 Cloud license 비용 발생</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="meeting-october-28-2025">Meeting @October 28, 2025<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#meeting-october-28-2025" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="discussion-1">Discussion<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#discussion-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>보안 모니터링, 침해 감지 등을 Amazon Q로 모니터링 하기 위한 방법</li>
+</ul>
+<h1 id="summary">Summary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#summary" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>AWS 백업 및 DR 솔루션 종합 검토 보고서</p>
+<h2 id="1-이슈-내용-및-검토-목표">1. 이슈 내용 및 검토 목표<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-이슈-내용-및-검토-목표" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>귀사는 현재 AWS에서 운영 중인 <strong>EC2, RDS 등의 서비스에 대한 백업 방안</strong>과 <strong>온프레미스 IDC 서버들의 AWS 클라우드 백업/DR(재해복구) 방안</strong>에 대한 소개 자료를 준비해야 하는 상황입니다. 본 보고서는 다음 두 가지 핵심 영역에 대해 AWS 공식 문서와 검증된 외부 자료를 기반으로 가능한 방법, 적용 가능한 서비스, 그리고 준비해야 할 백데이터 및 참조 자료를 종합적으로 정리합니다.[1][2][3]</p>
+<p><strong>검토 범위:</strong></p>
+<ul>
+<li>
+<p>AWS 클라우드 내 리소스(EC2, RDS 등) 백업 전략</p>
+</li>
+<li>
+<p>온프레미스 IDC 서버의 AWS 클라우드 백업 및 DR 전략</p>
+</li>
+<li>
+<p>각 방안별 준비 데이터 및 참조 문서</p>
+</li>
+</ul>
+<h2 id="2-aws-클라우드-리소스-백업-방안">2. AWS 클라우드 리소스 백업 방안<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-aws-클라우드-리소스-백업-방안" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="21-aws-backup-서비스-활용">2.1 AWS Backup 서비스 활용<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-aws-backup-서비스-활용" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>AWS Backup</strong>은 AWS의 완전 관리형 백업 서비스로, EC2, RDS, EBS, EFS, DynamoDB 등 다양한 AWS 서비스의 백업을 중앙에서 관리할 수 있는 핵심 솔루션입니다.[2][4][1]</p>
+<p><strong>주요 기능:</strong></p>
+<ul>
+<li>
+<p><strong>중앙화된 백업 관리</strong>: 단일 콘솔에서 모든 AWS 리소스의 백업 정책 정의 및 관리[1][2]</p>
+</li>
+<li>
+<p><strong>정책 기반 백업</strong>: 백업 플랜을 통해 백업 빈도, 보존 기간, 라이프사이클 관리를 자동화[4][1]</p>
+</li>
+<li>
+<p><strong>태그 기반 백업 정책</strong>: AWS 리소스 태그를 활용한 자동 백업 리소스 할당[2][1]</p>
+</li>
+<li>
+<p><strong>교차 리전 및 교차 계정 백업</strong>: 재해 복구를 위한 다른 리전/계정으로의 백업 복제[5][6][7]</p>
+</li>
+<li>
+<p><strong>백업 볼트 락(Vault Lock)</strong>: WORM(Write Once, Read Many) 정책을 통한 백업 불변성 보장으로 규정 준수 및 랜섬웨어 방어[8][9][10]</p>
+</li>
+</ul>
+<h3 id="22-ec2-인스턴스-백업-방법">2.2 EC2 인스턴스 백업 방법<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-ec2-인스턴스-백업-방법" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>EC2 인스턴스 백업에는 세 가지 주요 접근 방식이 있습니다.[11][12][13]</p>
+<p><strong>방법 1: EBS 스냅샷</strong></p>
+<ul>
+<li>
+<p>EBS 볼륨의 블록 레벨 증분 백업</p>
+</li>
+<li>
+<p>Amazon S3에 자동 저장되며 첫 번째 스냅샷은 전체 백업, 이후는 증분 백업[14][13][11]</p>
+</li>
+<li>
+<p>다른 리전으로 복사 가능하여 지리적 복제 지원[11]</p>
+</li>
+</ul>
+<p><strong>방법 2: Amazon Machine Image (AMI)</strong></p>
+<ul>
+<li>
+<p>전체 EC2 인스턴스 구성(OS, 애플리케이션, 설정 포함) 캡처[13][11]</p>
+</li>
+<li>
+<p>인스턴스의 완전한 복제본을 빠르게 시작 가능</p>
+</li>
+<li>
+<p>확장 및 복구 작업에 적합[13]</p>
+</li>
+</ul>
+<p><strong>방법 3: AWS Backup을 통한 자동화</strong></p>
+<ul>
+<li>
+<p>EC2 인스턴스 및 EBS 볼륨에 대한 백업 플랜 생성[12][1]</p>
+</li>
+<li>
+<p>일정 기반 자동 백업 및 보존 정책 적용</p>
+</li>
+<li>
+<p>교차 리전 복사 및 라이프사이클 관리 지원[6][12]</p>
+</li>
+</ul>
+<p><strong>방법 4: AWS Data Lifecycle Manager (DLM)</strong></p>
+<ul>
+<li>
+<p>EBS 스냅샷 및 EBS 기반 AMI의 생성, 보존, 삭제 자동화[15][16][14]</p>
+</li>
+<li>
+<p>태그 기반 리소스 타겟팅</p>
+</li>
+<li>
+<p>정책당 최대 4개의 스케줄 지원(일별, 주별, 월별, 연별)[16][15]</p>
+</li>
+</ul>
+<h3 id="23-rds-데이터베이스-백업-방법">2.3 RDS 데이터베이스 백업 방법<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-rds-데이터베이스-백업-방법" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>자동 백업 (Automated Backups)</strong></p>
+<ul>
+<li>
+<p>기본적으로 활성화되며, DB 인스턴스 및 트랜잭션 로그를 자동으로 백업[17][18][19]</p>
+</li>
+<li>
+<p>백업 보존 기간: 0~35일 설정 가능(기본값: AWS CLI/API 사용 시 1일, 콘솔 사용 시 7일)[19][17]</p>
+</li>
+<li>
+<p>특정 시점으로 복원(Point-in-Time Recovery) 지원: 일반적으로 현재 시간으로부터 5분 이내[18][19]</p>
+</li>
+<li>
+<p>백업 윈도우: 사용자 정의 가능한 30분 기간 동안 자동 백업 수행[18][19]</p>
+</li>
+</ul>
+<p><strong>수동 스냅샷 (Manual DB Snapshots)</strong></p>
+<ul>
+<li>
+<p>사용자가 수동으로 생성하는 백업으로, 명시적으로 삭제하기 전까지 보존[20][19][18]</p>
+</li>
+<li>
+<p>50개 리전당 제한(자동 백업에는 적용되지 않음)[17][19]</p>
+</li>
+<li>
+<p>다른 리전 및 계정으로 복사 및 공유 가능[18]</p>
+</li>
+</ul>
+<p><strong>AWS Backup을 통한 RDS 백업</strong></p>
+<ul>
+<li>
+<p>RDS 인스턴스를 AWS Backup 플랜에 통합하여 중앙 집중식 관리[21][22]</p>
+</li>
+<li>
+<p>자동화된 백업 일정 및 보존 관리</p>
+</li>
+<li>
+<p>교차 리전 스냅샷 복사 자동화[22][21]</p>
+</li>
+<li>
+<p>기존 RDS 자동 백업이 있는 경우 증분 스냅샷 생성, 없는 경우 전체 백업 생성[22]</p>
+</li>
+</ul>
+<p><strong>교차 리전 자동 백업 복제</strong></p>
+<ul>
+<li>
+<p>RDS의 자동 백업을 다른 AWS 리전으로 복제하여 DR 기능 강화[23][24][25]</p>
+</li>
+<li>
+<p>2024년 1월 도입된 기능으로 대부분의 RDS 엔진에서 지원[25][23]</p>
+</li>
+<li>
+<p>비용 효율적: S3 스토리지 및 교차 리전 데이터 전송 비용만 발생[23]</p>
+</li>
+</ul>
+<h3 id="24-백업-비용-구조">2.4 백업 비용 구조<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#24-백업-비용-구조" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>AWS Backup 요금 모델</strong>[26][27][28]</p>
+<ul>
+<li>
+<p><strong>백업 스토리지 비용</strong>: GB-월 단위로 청구</p>
+<ul>
+<li>
+<p>Amazon EBS: $0.05/GB-월 (미국 동부)</p>
+</li>
+<li>
+<p>Amazon RDS: $0.095/GB-월 (미국 동부)</p>
+</li>
+<li>
+<p>Amazon EFS: $0.05/GB-월 (미국 동부)</p>
+</li>
+<li>
+<p>Cold Storage: EFS 기준 $0.01/GB-월 (90일 이상 보존 시 전환 가능)[27][26]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>복원 비용</strong>:</p>
+<ul>
+<li>
+<p>EBS 및 RDS: 무료</p>
+</li>
+<li>
+<p>EFS: $0.02/GB (미국 동부)</p>
+</li>
+<li>
+<p>DynamoDB: $0.15/GB[26][27]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>증분 백업</strong>: 첫 번째 백업은 전체 백업 비용, 이후 변경된 블록만 추가 비용 발생[14][19][11]</p>
+</li>
+</ul>
+<h2 id="3-온프레미스-idc-서버의-aws-클라우드-백업dr-방안">3. 온프레미스 IDC 서버의 AWS 클라우드 백업/DR 방안<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-온프레미스-idc-서버의-aws-클라우드-백업dr-방안" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="31-aws-storage-gateway를-통한-하이브리드-백업">3.1 AWS Storage Gateway를 통한 하이브리드 백업<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-aws-storage-gateway를-통한-하이브리드-백업" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>AWS Storage Gateway</strong>는 온프레미스 환경과 AWS 클라우드 스토리지를 연결하는 하이브리드 클라우드 스토리지 서비스입니다.[29][30][31][32]</p>
+<p><strong>세 가지 게이트웨이 유형</strong>:[30][31][33][32]</p>
+<p><strong>1) File Gateway</strong></p>
+<ul>
+<li>
+<p><strong>용도</strong>: 파일 서버 백업 및 아카이브</p>
+</li>
+<li>
+<p><strong>프로토콜</strong>: NFS/SMB 지원</p>
+</li>
+<li>
+<p><strong>동작 방식</strong>:</p>
+<ul>
+<li>
+<p>온프레미스 애플리케이션이 파일을 File Gateway에 저장</p>
+</li>
+<li>
+<p>데이터가 Amazon S3에 네이티브 객체로 저장</p>
+</li>
+<li>
+<p>최근 사용 데이터는 로컬 캐시에 유지하여 낮은 지연 시간 제공[33][32][30]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>라이프사이클 정책</strong>: S3 Standard, S3 IA, S3 One Zone IA, S3 Glacier로 자동 전환 지원[30][33]</p>
+</li>
+</ul>
+<p><strong>2) Volume Gateway</strong></p>
+<ul>
+<li>
+<p><strong>용도</strong>: 블록 스토리지 백업 및 재해 복구</p>
+</li>
+<li>
+<p><strong>프로토콜</strong>: iSCSI</p>
+</li>
+<li>
+<p><strong>동작 방식</strong>:</p>
+<ul>
+<li>
+<p>온프레미스 애플리케이션에 iSCSI 블록 스토리지 볼륨 제공</p>
+</li>
+<li>
+<p>데이터를 비동기적으로 Amazon S3에 백업</p>
+</li>
+<li>
+<p>EBS 스냅샷으로 저장되어 복구 시 EC2 인스턴스로 복원 가능[34][31][33]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>두 가지 모드</strong>:</p>
+<ul>
+<li>
+<p><strong>Cached Volumes</strong>: 주요 데이터는 S3에 저장, 자주 액세스하는 데이터만 로컬 캐시[32][33]</p>
+</li>
+<li>
+<p><strong>Stored Volumes</strong>: 전체 데이터세트를 온프레미스에 유지, 정기적으로 S3에 백업[33][32]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>AWS Backup 통합</strong>: Volume Gateway는 AWS Backup 서비스와 통합되어 중앙 집중식 백업 관리 가능[31][34]</p>
+</li>
+</ul>
+<p><strong>3) Tape Gateway</strong></p>
+<ul>
+<li>
+<p><strong>용도</strong>: 기존 백업 소프트웨어를 사용한 장기 아카이브</p>
+</li>
+<li>
+<p><strong>프로토콜</strong>: iSCSI-VTL (Virtual Tape Library)</p>
+</li>
+<li>
+<p><strong>동작 방식</strong>:</p>
+<ul>
+<li>
+<p>가상 테이프 라이브러리를 온프레미스에 제공</p>
+</li>
+<li>
+<p>백업 데이터를 S3에 저장, 아카이브는 S3 Glacier 또는 Glacier Deep Archive로 이동[35][36][30]</p>
+</li>
+<li>
+<p>주요 백업 소프트웨어(Veeam, Commvault 등)와 호환[37][35]</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>배포 옵션</strong>:[31][32]</p>
+<ul>
+<li>
+<p>VMware ESXi, Microsoft Hyper-V, Linux KVM에서 가상 머신으로 배포</p>
+</li>
+<li>
+<p>전용 하드웨어 어플라이언스</p>
+</li>
+<li>
+<p>VMware Cloud on AWS에서 VM으로 배포</p>
+</li>
+<li>
+<p>Amazon EC2에서 AMI로 배포</p>
+</li>
+</ul>
+<h3 id="32-aws-backup을-통한-온프레미스-vmware-백업">3.2 AWS Backup을 통한 온프레미스 VMware 백업<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-aws-backup을-통한-온프레미스-vmware-백업" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>AWS Backup의 VMware 지원</strong>:[38]</p>
+<ul>
+<li>
+<p>AWS Backup은 온프레미스 VMware 가상 머신을 직접 백업할 수 있는 기능 제공</p>
+</li>
+<li>
+<p><strong>백업 게이트웨이</strong>를 VMware ESXi 호스트에 배포하여 구현[38]</p>
+</li>
+</ul>
+<p><strong>구성 단계</strong>:[38]</p>
+<ol>
+<li>
+<p>AWS Backup 콘솔에서 VMware 가상 머신 백업 활성화</p>
+</li>
+<li>
+<p>OVF 템플릿을 다운로드하여 VMware ESXi에 백업 게이트웨이 배포</p>
+</li>
+<li>
+<p>게이트웨이에 고정 IP 설정 및 AWS에 등록</p>
+</li>
+<li>
+<p>vCenter 서버 정보를 추가하여 VM 검색</p>
+</li>
+<li>
+<p>백업할 VM에 태그 할당</p>
+</li>
+<li>
+<p>AWS Backup에서 백업 플랜 생성 (일정, 보존 기간 설정)</p>
+</li>
+<li>
+<p>태그가 지정된 VM을 백업 플랜에 할당</p>
+</li>
+<li>
+<p>백업 작업 모니터링 및 필요 시 전체 VM 또는 개별 디스크 복원[38]</p>
+</li>
+</ol>
+<h3 id="33-aws-elastic-disaster-recovery-drs-서비스">3.3 AWS Elastic Disaster Recovery (DRS) 서비스<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-aws-elastic-disaster-recovery-drs-서비스" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>AWS DRS</strong>는 온프레미스 및 클라우드 기반 애플리케이션을 AWS로 복제하여 최소한의 다운타임과 데이터 손실로 재해 복구를 제공하는 서비스입니다.[39][40][41][42]</p>
+<p><strong>핵심 기능</strong>:[40][41][42][39]</p>
+<ul>
+<li>
+<p><strong>연속 데이터 복제</strong>: 온프레미스 또는 다른 클라우드의 서버를 AWS로 실시간 복제</p>
+<ul>
+<li>
+<p>낮은 지연 시간의 블록 레벨 복제</p>
+</li>
+<li>
+<p>수 초 간격으로 복제 가능하여 RPO 최소화[41][40]</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>자동화된 페일오버</strong>: 장애 발생 시 AWS 환경으로 신속한 전환, RTO 최소화[42][40]</p>
+</li>
+<li>
+<p><strong>비파괴적 테스트</strong>: 프로덕션 복제에 영향 없이 DR 준비 상태 테스트[39][42]</p>
+</li>
+<li>
+<p><strong>특정 시점 복구</strong>: 최신 상태 또는 과거 특정 시점으로 복구 가능 (랜섬웨어 대응)[41][42][39]</p>
+</li>
+<li>
+<p><strong>비용 효율성</strong>: 유휴 복구 사이트 불필요, 실제 복구 시에만 전체 환경 비용 발생[42][39]</p>
+</li>
+<li>
+<p><strong>페일백 기능</strong>: 기본 사이트 복구 후 AWS에서 온프레미스로 다시 페일백 지원[40][39][41]</p>
+</li>
+</ul>
+<p><strong>지원 환경</strong>: 물리 서버, 가상 서버(VMware, Hyper-V), AWS EC2, 기타 퍼블릭 클라우드[43][42]</p>
+<h3 id="34-aws-application-migration-service-mgn">3.4 AWS Application Migration Service (MGN)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#34-aws-application-migration-service-mgn" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>AWS MGN</strong>은 물리적, 가상, 클라우드 서버를 AWS로 마이그레이션하는 고도로 자동화된 리프트 앤 시프트(Lift-and-Shift) 솔루션입니다.[44][45][43]</p>
+<p><strong>주요 특징</strong>:[45][44][43]</p>
+<ul>
+<li>
+<p><strong>연속 블록 레벨 복제</strong>: 소스 서버를 AWS 계정으로 연속 복제</p>
+</li>
+<li>
+<p><strong>최소 다운타임</strong>: 수 분 이내의 짧은 전환 시간</p>
+</li>
+<li>
+<p><strong>자동 변환</strong>: 소스 서버를 자동으로 AWS 환경에 맞게 변환하여 EC2 인스턴스로 실행[44][43]</p>
+</li>
+<li>
+<p><strong>지원 소스</strong>: 물리 인프라, VMware vSphere, Microsoft Hyper-V, Amazon EC2, 기타 클라우드[43][44]</p>
+</li>
+<li>
+<p><strong>CloudEndure Migration 후속</strong>: 2022년 12월 이후 대부분의 리전에서 CloudEndure 대신 MGN 사용 권장[46][44]</p>
+</li>
+</ul>
+<p><strong>MGN vs AWS SMS 비교</strong>:[47]</p>
+<ul>
+<li>
+<p>MGN: 연속 블록 레벨 복제, 에이전트 기반, 더 짧은 전환 시간</p>
+</li>
+<li>
+<p>SMS: 증분 스냅샷 기반 복제, 수 시간 단위의 전환 시간 (2023년 3월 이후 단계적 종료)[44]</p>
+</li>
+</ul>
+<h3 id="35-재해-복구dr-전략-및-rtorpo">3.5 재해 복구(DR) 전략 및 RTO/RPO<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#35-재해-복구dr-전략-및-rtorpo" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>AWS는 네 가지 주요 DR 전략을 제공하며, RTO(복구 시간 목표)와 RPO(복구 시점 목표)에 따라 선택합니다.[48][49][50][51][52]</p>
+<p><strong>1. Backup and Restore (백업 및 복원)</strong>[49][50][51]</p>
+<ul>
+<li>
+<p><strong>RPO</strong>: 수 시간</p>
+</li>
+<li>
+<p><strong>RTO</strong>: 24시간 이내</p>
+</li>
+<li>
+<p><strong>방식</strong>: 데이터를 DR 리전에 백업, 재해 시 복원</p>
+</li>
+<li>
+<p><strong>비용</strong>: 가장 낮음</p>
+</li>
+<li>
+<p><strong>적용 사례</strong>: 중요도가 낮은 워크로드, 긴 복구 시간 허용 가능한 시스템</p>
+</li>
+</ul>
+<p><strong>2. Pilot Light (파일럿 라이트)</strong>[50][51][48][49]</p>
+<ul>
+<li>
+<p><strong>RPO</strong>: 수 분</p>
+</li>
+<li>
+<p><strong>RTO</strong>: 수 시간</p>
+</li>
+<li>
+<p><strong>방식</strong>: 최소한의 핵심 요소만 DR 리전에서 항상 실행, 나머지는 재해 시 신속하게 프로비저닝[51][49]</p>
+</li>
+<li>
+<p><strong>비용</strong>: 중간</p>
+</li>
+<li>
+<p><strong>적용 사례</strong>: 중간 수준의 RTO가 필요한 워크로드, 모듈식 아키텍처</p>
+</li>
+</ul>
+<p><strong>3. Warm Standby (웜 스탠바이)</strong>[53][52][48][49][50]</p>
+<ul>
+<li>
+<p><strong>RPO</strong>: 수 초</p>
+</li>
+<li>
+<p><strong>RTO</strong>: 수 분</p>
+</li>
+<li>
+<p><strong>방식</strong>: 축소된 규모의 완전한 기능 환경을 DR 리전에서 항상 실행, 재해 시 신속하게 확장[52][49][53][51]</p>
+</li>
+<li>
+<p><strong>비용</strong>: 높음</p>
+</li>
+<li>
+<p><strong>적용 사례</strong>: 비즈니스 크리티컬 서비스, 빠른 RTO/RPO 필요</p>
+</li>
+</ul>
+<p><strong>4. Multi-Site Active/Active (멀티사이트 액티브/액티브)</strong>[49][50][51]</p>
+<ul>
+<li>
+<p><strong>RPO</strong>: 없음 또는 수 초</p>
+</li>
+<li>
+<p><strong>RTO</strong>: 수 초</p>
+</li>
+<li>
+<p><strong>방식</strong>: 여러 AWS 리전에서 완전한 프로덕션 환경 동시 운영, 즉각적인 페일오버[50][51][49]</p>
+</li>
+<li>
+<p><strong>비용</strong>: 가장 높음</p>
+</li>
+<li>
+<p><strong>적용 사례</strong>: 미션 크리티컬 애플리케이션, 금융/의료/이커머스 플랫폼</p>
+</li>
+</ul>
+<p><strong>RTO/RPO 설정 지침</strong>:[54][55][56]</p>
+<ul>
+<li>
+<p><strong>Tier 0 (미션 크리티컬)</strong>: RTO 15분, RPO 거의 0</p>
+</li>
+<li>
+<p><strong>Tier 1 (중요 애플리케이션)</strong>: RTO 4시간, RPO 2시간</p>
+</li>
+<li>
+<p><strong>Tier 2 (기타 애플리케이션)</strong>: RTO 8~24시간, RPO 4시간[56]</p>
+</li>
+</ul>
+<h2 id="4-제안-및-상세-분석">4. 제안 및 상세 분석<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-제안-및-상세-분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="41-aws-클라우드-리소스-백업-전략-제안">4.1 AWS 클라우드 리소스 백업 전략 제안<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-aws-클라우드-리소스-백업-전략-제안" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>단계별 구현 계획:</strong></p>
+<p><strong>1단계: AWS Backup 중앙화 구성</strong></p>
+<ul>
+<li>
+<p>AWS Backup 콘솔에서 백업 볼트 생성 (KMS 암호화 키 지정)[12][1][2]</p>
+</li>
+<li>
+<p>백업 플랜 정의:</p>
+<ul>
+<li>
+<p>백업 빈도: 미션 크리티컬 리소스는 일일 또는 시간별, 일반 리소스는 주별[57][58]</p>
+</li>
+<li>
+<p>보존 기간: 규정 준수 요구사항에 따라 설정 (예: 금융 기록은 7년)[59][58][57]</p>
+</li>
+<li>
+<p>라이프사이클 관리: 90일 이상 백업은 Cold Storage로 전환[5][57][59]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>리소스 태그 전략 수립 및 태그 기반 백업 플랜 할당[58][59][1]</p>
+</li>
+</ul>
+<p><strong>2단계: 교차 리전 백업 복제 설정</strong></p>
+<ul>
+<li>
+<p>주요 리소스에 대해 교차 리전 백업 복사 활성화 (DR 목적)[24][7][6][5]</p>
+</li>
+<li>
+<p>소스 리전 장애 시 DR 리전에서 복원 가능[7][24]</p>
+</li>
+</ul>
+<p><strong>3단계: 백업 볼트 락 적용 (규정 준수 및 랜섬웨어 방어)</strong></p>
+<ul>
+<li>
+<p>Compliance Mode 적용 시 백업이 보존 기간 만료 전까지 삭제 불가 (루트 사용자 포함)[9][10][8]</p>
+</li>
+<li>
+<p>Governance Mode는 IAM 권한 있는 사용자만 관리 가능[10][9]</p>
+</li>
+</ul>
+<p><strong>4단계: 모니터링 및 알림 설정</strong></p>
+<ul>
+<li>
+<p>AWS Backup Audit Manager로 백업 정책 준수 여부 감사 및 보고서 생성[6][57][1]</p>
+</li>
+<li>
+<p>CloudWatch 및 SNS를 통한 백업 실패 알림 설정[60][57]</p>
+</li>
+</ul>
+<p><strong>5단계: 정기적인 복원 테스트</strong></p>
+<ul>
+<li>RPO/RTO 목표 달성 여부 검증을 위해 정기적인 복원 훈련 수행[57][59]</li>
+</ul>
+<p><strong>EC2 인스턴스 백업 권장 사항:</strong></p>
+<ul>
+<li>
+<p><strong>중요 시스템</strong>: AWS Backup 또는 DLM을 사용한 일일 EBS 스냅샷 + 주별 AMI 생성[61][58][14]</p>
+</li>
+<li>
+<p><strong>일반 시스템</strong>: 주별 EBS 스냅샷[14]</p>
+</li>
+<li>
+<p><strong>개발/테스트</strong>: 월별 또는 필요 시 수동 스냅샷[61]</p>
+</li>
+</ul>
+<p><strong>RDS 데이터베이스 백업 권장 사항:</strong></p>
+<ul>
+<li>
+<p><strong>자동 백업 활성화</strong>: 최소 7일 보존 기간 설정 (최대 35일)[19][17][18]</p>
+</li>
+<li>
+<p><strong>중요 DB</strong>: 교차 리전 자동 백업 복제 활성화[24][25][23]</p>
+</li>
+<li>
+<p><strong>주요 변경 전</strong>: 수동 스냅샷 생성[20][18]</p>
+</li>
+<li>
+<p><strong>AWS Backup 통합</strong>: 중앙 집중식 관리 및 장기 보존 정책 적용[21][22]</p>
+</li>
+</ul>
+<h3 id="42-온프레미스-서버-aws-백업dr-전략-제안">4.2 온프레미스 서버 AWS 백업/DR 전략 제안<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#42-온프레미스-서버-aws-백업dr-전략-제안" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>시나리오 1: 파일 서버 및 애플리케이션 데이터 백업</strong></p>
+<ul>
+<li>
+<p><strong>솔루션</strong>: AWS Storage Gateway - File Gateway[29][30][33]</p>
+</li>
+<li>
+<p><strong>구성</strong>:</p>
+<ol>
+<li>
+<p>온프레미스에 File Gateway VM 배포 (VMware/Hyper-V/KVM)[32][31]</p>
+</li>
+<li>
+<p>NFS/SMB 파일 공유 생성 및 S3 버킷 매핑[29][30]</p>
+</li>
+<li>
+<p>기존 백업 애플리케이션을 File Gateway 마운트 포인트로 지정[30][33]</p>
+</li>
+<li>
+<p>S3 라이프사이클 정책 설정: S3 Standard → S3 IA → S3 Glacier[33][30]</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>비용 최적화</strong>: 자주 액세스하지 않는 백업은 자동으로 Glacier로 전환[30]</p>
+</li>
+</ul>
+<p><strong>시나리오 2: 블록 스토리지 및 데이터베이스 백업</strong></p>
+<ul>
+<li>
+<p><strong>솔루션</strong>: AWS Storage Gateway - Volume Gateway (Cached Mode)[34][31][33]</p>
+</li>
+<li>
+<p><strong>구성</strong>:</p>
+<ol>
+<li>
+<p>Volume Gateway VM 배포 및 iSCSI 볼륨 생성[31][33]</p>
+</li>
+<li>
+<p>온프레미스 애플리케이션을 iSCSI 볼륨에 연결[34][33]</p>
+</li>
+<li>
+<p>AWS Backup과 통합하여 자동 스냅샷 일정 설정[34][31]</p>
+</li>
+<li>
+<p>EBS 스냅샷으로 저장되어 EC2로 복원 가능[31][34]</p>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>시나리오 3: 기존 백업 소프트웨어 활용 (Veeam, Commvault 등)</strong></p>
+<ul>
+<li>
+<p><strong>솔루션</strong>: AWS Storage Gateway - Tape Gateway[36][35][37][30]</p>
+</li>
+<li>
+<p><strong>구성</strong>:</p>
+<ol>
+<li>
+<p>Tape Gateway VM 배포[36][30]</p>
+</li>
+<li>
+<p>백업 소프트웨어에서 가상 테이프 라이브러리로 인식[35][36]</p>
+</li>
+<li>
+<p>백업 데이터는 S3에 저장, 아카이브는 Glacier Deep Archive로 자동 이동[35][36][30]</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>비용</strong>: Glacier Deep Archive는 TB당 월 $1 수준으로 매우 저렴[36]</p>
+</li>
+</ul>
+<p><strong>시나리오 4: VMware 가상 머신 백업</strong></p>
+<ul>
+<li>
+<p><strong>솔루션</strong>: AWS Backup의 VMware 백업 기능[38]</p>
+</li>
+<li>
+<p><strong>구성</strong>: 위 섹션 3.2 참조</p>
+</li>
+<li>
+<p><strong>장점</strong>: AWS 네이티브 서비스로 중앙 집중식 관리 및 교차 리전 복제 지원[38]</p>
+</li>
+</ul>
+<p><strong>시나리오 5: 재해 복구 (DR) - 낮은 RTO/RPO 요구</strong></p>
+<ul>
+<li>
+<p><strong>솔루션</strong>: AWS Elastic Disaster Recovery (DRS)[39][40][41][42]</p>
+</li>
+<li>
+<p><strong>구성</strong>:</p>
+<ol>
+<li>
+<p>AWS DRS 초기화 및 복제 설정 템플릿 생성[41]</p>
+</li>
+<li>
+<p>온프레미스 서버에 DRS 에이전트 설치[40][41]</p>
+</li>
+<li>
+<p>연속 복제 시작 (실시간 또는 수 초 간격)[40][41]</p>
+</li>
+<li>
+<p>비파괴적 DR 테스트 정기 수행[42][39]</p>
+</li>
+<li>
+<p>재해 발생 시 AWS에서 인스턴스 실행 (RTO: 수 분)[42][40]</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>적용</strong>: 미션 크리티컬 시스템으로 Warm Standby 또는 Pilot Light 전략에 해당[48][49]</p>
+</li>
+</ul>
+<p><strong>시나리오 6: 서버 마이그레이션 (DR 준비 단계)</strong></p>
+<ul>
+<li>
+<p><strong>솔루션</strong>: AWS Application Migration Service (MGN)[45][43][44]</p>
+</li>
+<li>
+<p><strong>구성</strong>:</p>
+<ol>
+<li>
+<p>AWS MGN 초기화 및 복제 설정 생성[44]</p>
+</li>
+<li>
+<p>소스 서버에 MGN 에이전트 설치[43][44]</p>
+</li>
+<li>
+<p>연속 블록 레벨 복제 시작[43][44]</p>
+</li>
+<li>
+<p>테스트 인스턴스 실행으로 마이그레이션 검증[44]</p>
+</li>
+<li>
+<p>최종 전환 (cutover) 실행 시 프로덕션 전환[43][44]</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>적용</strong>: 온프레미스에서 AWS로의 영구 마이그레이션 또는 DR 환경 구축[44][43]</p>
+</li>
+</ul>
+<h3 id="43-베스트-프랙티스-및-권장-사항">4.3 베스트 프랙티스 및 권장 사항<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#43-베스트-프랙티스-및-권장-사항" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>1. 백업 전략 수립</strong>[58][57]</p>
+<ul>
+<li>
+<p>중요 데이터 및 리소스 식별 및 우선순위 지정</p>
+</li>
+<li>
+<p>비즈니스 영향 분석(BIA)을 통한 데이터 분류</p>
+</li>
+<li>
+<p>규정 준수 요구사항(HIPAA, SOC 2, GDPR 등) 확인[62][63][64]</p>
+</li>
+</ul>
+<p><strong>2. RTO/RPO 목표 설정</strong>[55][54][59][48]</p>
+<ul>
+<li>
+<p>애플리케이션별로 허용 가능한 다운타임 및 데이터 손실 정의</p>
+</li>
+<li>
+<p>목표에 맞는 DR 전략 선택 (Backup and Restore vs Pilot Light vs Warm Standby vs Active/Active)</p>
+</li>
+<li>
+<p>비용과 복잡성 균형 고려[55]</p>
+</li>
+</ul>
+<p><strong>3. 자동화 구현</strong>[57][58]</p>
+<ul>
+<li>
+<p>수동 프로세스 최소화하여 인적 오류 방지</p>
+</li>
+<li>
+<p>AWS Backup, DLM, 또는 CloudFormation/Terraform을 통한 인프라 자동화[54][57]</p>
+</li>
+</ul>
+<p><strong>4. 보안 및 규정 준수</strong>[60][9][57]</p>
+<ul>
+<li>
+<p>모든 백업에 대해 AWS KMS를 사용한 저장 및 전송 중 암호화[6][60]</p>
+</li>
+<li>
+<p>백업 볼트 액세스 정책 설정 및 IAM 권한 제한[60][57]</p>
+</li>
+<li>
+<p>Backup Vault Lock을 통한 WORM 정책 적용 (랜섬웨어 방어)[8][9][10]</p>
+</li>
+</ul>
+<p><strong>5. 교차 리전 및 교차 계정 복제</strong>[59][7][5][24][6]</p>
+<ul>
+<li>
+<p>지리적 분리를 통한 재해 복구 능력 강화</p>
+</li>
+<li>
+<p>교차 계정 복제로 의도치 않은 삭제 또는 악의적 활동 방어[5][6]</p>
+</li>
+</ul>
+<p><strong>6. 모니터링 및 테스트</strong>[59][58][57]</p>
+<ul>
+<li>
+<p>CloudWatch 메트릭 및 SNS 알림으로 백업 실패 모니터링[57]</p>
+</li>
+<li>
+<p>정기적인 복원 훈련 수행 (분기별 또는 반기별 권장)[59][57]</p>
+</li>
+<li>
+<p>AWS Backup Audit Manager를 통한 규정 준수 감사[6][57]</p>
+</li>
+</ul>
+<p><strong>7. 비용 최적화</strong>[65][57][59]</p>
+<ul>
+<li>
+<p>장기 보존 백업은 Cold Storage 또는 S3 Glacier로 전환[57][59]</p>
+</li>
+<li>
+<p>자동 라이프사이클 정책으로 오래된 백업 자동 삭제[5][57]</p>
+</li>
+<li>
+<p>AWS 프라이싱 계산기 또는 Cost Explorer로 백업 비용 모니터링[66][65]</p>
+</li>
+</ul>
+<h3 id="44-aws-systems-manager를-통한-온프레미스-관리">4.4 AWS Systems Manager를 통한 온프레미스 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#44-aws-systems-manager를-통한-온프레미스-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>*AWS Systems Manager (SSM)**를 활용하면 온프레미스 서버를 EC2 인스턴스처럼 관리할 수 있습니다.[67][68]</li>
+</ul>
+<p><strong>활용 방안</strong>:</p>
+<ul>
+<li>
+<p>온프레미스 서버에 SSM 에이전트 설치 및 하이브리드 활성화 등록[68]</p>
+</li>
+<li>
+<p>패치 관리, 구성 관리, 명령 실행 등 중앙 집중식 운영[67][68]</p>
+</li>
+<li>
+<p>백업 작업 자동화를 위한 Automation Runbooks 활용[67]</p>
+</li>
+</ul>
+<h2 id="5-확장-검토-사항">5. 확장 검토 사항<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-확장-검토-사항" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="51-향후-고려-사항">5.1 향후 고려 사항<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#51-향후-고려-사항" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>1. 애플리케이션 현대화</strong></p>
+<ul>
+<li>
+<p>백업 및 DR 전략 수립 후 장기적으로 애플리케이션 현대화 검토</p>
+</li>
+<li>
+<p>서버리스(Lambda), 컨테이너(ECS/EKS), Immutable Infrastructure로 전환 시 백업 필요성 감소[3]</p>
+</li>
+</ul>
+<p><strong>2. 멀티 클라우드 전략</strong></p>
+<ul>
+<li>여러 클라우드 제공업체 사용 시 AWS Storage Gateway가 하이브리드 브리지 역할 수행[69][70][71]</li>
+</ul>
+<p><strong>3. 규정 준수 자동화</strong></p>
+<ul>
+<li>AWS Config Rules 및 AWS Backup Audit Manager를 통한 지속적인 규정 준수 모니터링[6][57]</li>
+</ul>
+<p><strong>4. 비용 최적화 지속</strong></p>
+<ul>
+<li>
+<p>백업 보존 정책 정기 검토 및 불필요한 백업 삭제[59][57]</p>
+</li>
+<li>
+<p>데이터 중복 제거 및 압축 기능 활용 (일부 써드파티 솔루션)[72]</p>
+</li>
+</ul>
+<h3 id="52-준비할-백데이터-및-자료">5.2 준비할 백데이터 및 자료<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#52-준비할-백데이터-및-자료" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>백업 계획 수립을 위한 데이터:</strong></p>
+<ul>
+<li>
+<p>현재 EC2 인스턴스 목록 (인스턴스 ID, 유형, EBS 볼륨 크기, 태그)</p>
+</li>
+<li>
+<p>현재 RDS 인스턴스 목록 (DB 엔진, 크기, 백업 설정)</p>
+</li>
+<li>
+<p>온프레미스 서버 목록 (OS, 스토리지 용량, 워크로드 유형)</p>
+</li>
+<li>
+<p>각 시스템별 중요도 및 분류 (Tier 0/1/2)</p>
+</li>
+<li>
+<p>허용 가능한 RTO 및 RPO (애플리케이션별)</p>
+</li>
+<li>
+<p>규정 준수 요구사항 (데이터 보존 기간, 암호화 요구사항)</p>
+</li>
+<li>
+<p>현재 데이터 변경률 (일일/주별 변경 데이터량) - 백업 비용 추산용</p>
+</li>
+<li>
+<p>월간 백업 및 DR 예산</p>
+</li>
+</ul>
+<p><strong>참조할 AWS 공식 문서:</strong></p>
+<ol>
+<li>
+<p>AWS Backup 개발자 가이드: [<a href="https://docs.aws.amazon.com/aws-backup/" class="external external-link">https://docs.aws.amazon.com/aws-backup/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][73]</p>
+</li>
+<li>
+<p>AWS Backup 기능 페이지: [<a href="https://aws.amazon.com/backup/features/" class="external external-link">https://aws.amazon.com/backup/features/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][74]</p>
+</li>
+<li>
+<p>AWS Storage Gateway 사용자 가이드: [<a href="https://docs.aws.amazon.com/storagegateway/" class="external external-link">https://docs.aws.amazon.com/storagegateway/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][75]</p>
+</li>
+<li>
+<p>AWS Elastic Disaster Recovery 문서: [<a href="https://aws.amazon.com/disaster-recovery/" class="external external-link">https://aws.amazon.com/disaster-recovery/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][42]</p>
+</li>
+<li>
+<p>AWS 재해 복구 백서 (Disaster Recovery of Workloads on AWS):[76]</p>
+</li>
+<li>
+<p>AWS Prescriptive Guidance - Backup and Recovery: [<a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][3]</p>
+</li>
+<li>
+<p>AWS RDS 백업 및 복원 가이드: [<a href="https://aws.amazon.com/rds/features/backup/" class="external external-link">https://aws.amazon.com/rds/features/backup/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][18]</p>
+</li>
+<li>
+<p>AWS Data Lifecycle Manager 문서: [<a href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshot-lifecycle.html" class="external external-link">https://docs.aws.amazon.com/ebs/latest/userguide/snapshot-lifecycle.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][77]</p>
+</li>
+<li>
+<p>AWS Backup 요금: [<a href="https://aws.amazon.com/backup/pricing/" class="external external-link">https://aws.amazon.com/backup/pricing/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][28]</p>
+</li>
+<li>
+<p>AWS Application Migration Service 문서: [<a href="https://docs.aws.amazon.com/mgn/" class="external external-link">https://docs.aws.amazon.com/mgn/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][43]</p>
+</li>
+</ol>
+<p><strong>유용한 외부 자료 (검증된 소스):</strong></p>
+<ul>
+<li>
+<p>AWS Well-Architected Framework - Reliability Pillar[76]</p>
+</li>
+<li>
+<p>AWS 재해 복구 워크샵: [<a href="https://disaster-recovery.workshop.aws/" class="external external-link">https://disaster-recovery.workshop.aws/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>][50]</p>
+</li>
+<li>
+<p>AWS 백업 베스트 프랙티스 가이드[58][60][57]</p>
+</li>
+</ul>
+<hr/>
+<p>본 보고서는 AWS 공식 문서를 우선적으로 참조하여 작성되었으며, 부족한 부분은 검증된 외부 자료로 보완하였습니다. AWS Backup, Storage Gateway, Elastic Disaster Recovery, Application Migration Service 등 다양한 AWS 네이티브 서비스를 활용하여 클라우드 및 온프레미스 환경 모두에 대한 포괄적인 백업 및 DR 전략을 수립할 수 있습니다. 구체적인 구현은 귀사의 RTO/RPO 목표, 규정 준수 요구사항, 예산을 고려하여 단계별로 접근하시기 바랍니다.</p>
+<p>Sources<br/>
+[1] What is AWS Backup? - AWS Backup - AWS Documentation <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html" class="external external-link">https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] AWS Backup Documentation - <a href="http://amazon.com/" class="external external-link">Amazon.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> <a href="https://aws.amazon.com/documentation-overview/backup/" class="external external-link">https://aws.amazon.com/documentation-overview/backup/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[3] Backup and recovery approaches on AWS <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/welcome.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/welcome.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[4] Backup and recovery using AWS Backup <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/aws-backup.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/aws-backup.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[5] AWS Data Backup Best Practices + (Risks and Limitations) <a href="https://www.hycu.com/blog/aws-data-backup-best-practices-risks-and-limitations" class="external external-link">https://www.hycu.com/blog/aws-data-backup-best-practices-risks-and-limitations<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[6] How AWS Backup Supports AWS Services <a href="https://deployflow.co/blog/how-aws-backup-supports-aws-services/" class="external external-link">https://deployflow.co/blog/how-aws-backup-supports-aws-services/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[7] Creating backup copies across AWS Regions - AWS Backup <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/cross-region-backup.html" class="external external-link">https://docs.aws.amazon.com/aws-backup/latest/devguide/cross-region-backup.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[8] Enforcing WORM Protection with AWS Backup Vault | Pulumi AI Answers <a href="https://www.pulumi.com/ai/answers/aaDzPLzmtmPmG5zy1RXQDZ/enforcing-worm-protection-with-aws-backup-vault" class="external external-link">https://www.pulumi.com/ai/answers/aaDzPLzmtmPmG5zy1RXQDZ/enforcing-worm-protection-with-aws-backup-vault<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[9] Protecting data with AWS Backup Vault Lock | AWS Storage Blog <a href="https://aws.amazon.com/blogs/storage/protecting-data-with-aws-backup-vault-lock/" class="external external-link">https://aws.amazon.com/blogs/storage/protecting-data-with-aws-backup-vault-lock/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[10] AWS Backup Vault Lock <a href="https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html" class="external external-link">https://docs.aws.amazon.com/aws-backup/latest/devguide/vault-lock.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[11] How To Backup AWS EC2 Instances (Ultimate Guide) <a href="https://www.nakivo.com/blog/perform-aws-ec2-backup-step-step-guide/" class="external external-link">https://www.nakivo.com/blog/perform-aws-ec2-backup-step-step-guide/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[12] AWS EC2 Backup: 4 Methods and a Quick Tutorial <a href="https://spot.io/resources/aws-ec2-pricing/aws-ec2-backup-4-methods-and-a-quick-tutorial/" class="external external-link">https://spot.io/resources/aws-ec2-pricing/aws-ec2-backup-4-methods-and-a-quick-tutorial/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[13] How to Backup AWS EC2 Instances - 2025 Guide <a href="https://www.rubrik.com/insights/aws-ec2-backup" class="external external-link">https://www.rubrik.com/insights/aws-ec2-backup<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[14] 4 Ways to Back Up AWS EC2 Instances <a href="https://www.vinchin.com/vm-backup/back-up-aws-ec2-instances.html" class="external external-link">https://www.vinchin.com/vm-backup/back-up-aws-ec2-instances.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[15] AWS Data Lifecycle Manager: How It Works, Pros/Cons &amp; Best … <a href="https://n2ws.com/blog/aws-cloud/aws-data-lifecycle-manager" class="external external-link">https://n2ws.com/blog/aws-cloud/aws-data-lifecycle-manager<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[16] How Amazon Data Lifecycle Manager works - Amazon EBS <a href="https://docs.aws.amazon.com/ebs/latest/userguide/dlm-elements.html" class="external external-link">https://docs.aws.amazon.com/ebs/latest/userguide/dlm-elements.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[17] RDS backup strategy using Snapshots - DEV Community <a href="https://dev.to/aws-builders/rds-backup-strategy-using-snapshots-4hp5" class="external external-link">https://dev.to/aws-builders/rds-backup-strategy-using-snapshots-4hp5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[18] Amazon RDS Backup &amp; Restore | Cloud Relational Database <a href="https://aws.amazon.com/rds/features/backup/" class="external external-link">https://aws.amazon.com/rds/features/backup/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[19] AWS RDS DB Snapshot, Backup &amp; Restore <a href="https://jayendrapatil.com/aws-rds-db-snapshot-backup-restore/" class="external external-link">https://jayendrapatil.com/aws-rds-db-snapshot-backup-restore/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[20] Amazon RDS Automated Backups vs Manual Snapshots <a href="https://www.youtube.com/watch?v=Omd4jn3Am88" class="external external-link">https://www.youtube.com/watch?v=Omd4jn3Am88<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[21] Automated snapshots using AWS Backup <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/dr-standard-edition-amazon-rds/automated-snapshot-copy.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/dr-standard-edition-amazon-rds/automated-snapshot-copy.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[22] AWS Backup for RDS: How It Works, Limitations &amp; Doing It … <a href="https://n2ws.com/blog/aws-cloud/aws-backup-rds" class="external external-link">https://n2ws.com/blog/aws-cloud/aws-backup-rds<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[23] Replicating automated backups to another AWS Region <a href="https://dev.to/sammy_cloud/replicating-automated-backups-to-another-aws-region-2lmk" class="external external-link">https://dev.to/sammy_cloud/replicating-automated-backups-to-another-aws-region-2lmk<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[24] A Guide for Amazon RDS Cross-Region Backups with AWS Backup <a href="https://www.cloudthat.com/resources/blog/a-guide-for-amazon-rds-cross-region-backups-with-aws-backup" class="external external-link">https://www.cloudthat.com/resources/blog/a-guide-for-amazon-rds-cross-region-backups-with-aws-backup<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[25] Replicating automated backups to another AWS Region <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html" class="external external-link">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[26] Understanding AWS Backup Pricing <a href="https://www.netapp.com/blog/understanding-backup-pricing-aws-cvo-blg/" class="external external-link">https://www.netapp.com/blog/understanding-backup-pricing-aws-cvo-blg/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[27] A Comprehensive Guide to AWS EC2 Backup Pricing <a href="https://www.vinchin.com/application-backup/aws-ec2-backup-pricing.html" class="external external-link">https://www.vinchin.com/application-backup/aws-ec2-backup-pricing.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[28] AWS Backup Pricing <a href="https://aws.amazon.com/backup/pricing/" class="external external-link">https://aws.amazon.com/backup/pricing/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[29] Backup from On-Premises to AWS Backup via Storage Gateway <a href="https://www.linkedin.com/pulse/backup-from-on-premises-aws-via-storage-gateway-poramate-benchawan-hsd7c" class="external external-link">https://www.linkedin.com/pulse/backup-from-on-premises-aws-via-storage-gateway-poramate-benchawan-hsd7c<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[30] Backup your file server or any data using Hybrid Cloud — Storage Gateway Solution (AWS) <a href="https://aws.plainenglish.io/backup-your-file-server-or-any-data-using-hybrid-cloud-storage-gateway-solution-aws-ebcc527c694d?gi=a8ff94b0ac51" class="external external-link">https://aws.plainenglish.io/backup-your-file-server-or-any-data-using-hybrid-cloud-storage-gateway-solution-aws-ebcc527c694d?gi=a8ff94b0ac51<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[31] AWS Storage Gateway features <a href="https://aws.amazon.com/storagegateway/features/" class="external external-link">https://aws.amazon.com/storagegateway/features/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[32] AWS Storage Gateway | AWS Cheat Sheet <a href="https://digitalcloud.training/aws-storage-gateway/" class="external external-link">https://digitalcloud.training/aws-storage-gateway/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[33] Backup your file server or any data using Hybrid Cloud <a href="https://dev.to/aws-builders/backup-your-file-server-or-any-data-using-hybrid-cloud-storage-gateway-solution-aws-1pn0" class="external external-link">https://dev.to/aws-builders/backup-your-file-server-or-any-data-using-hybrid-cloud-storage-gateway-solution-aws-1pn0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[34] Securing Your AWS Hybrid Cloud Data using AWS Storage … <a href="https://n2ws.com/blog/aws-cloud/aws-hybrid-cloud-data-storage-gateway" class="external external-link">https://n2ws.com/blog/aws-cloud/aws-hybrid-cloud-data-storage-gateway<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[35] AWS Storage Gateway: Escape the pain of physical tape management | AWS Public Sector <a href="https://www.youtube.com/watch?v=FgxdJmfKSFs" class="external external-link">https://www.youtube.com/watch?v=FgxdJmfKSFs<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[36] AWS Storage Gateway <a href="https://www.youtube.com/watch?v=XXQNXwx8nfE" class="external external-link">https://www.youtube.com/watch?v=XXQNXwx8nfE<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[37] What is the best solution for backing up on-prem servers? <a href="https://www.reddit.com/r/aws/comments/ej7t5c/what_is_the_best_solution_for_backing_up_onprem/" class="external external-link">https://www.reddit.com/r/aws/comments/ej7t5c/what_is_the_best_solution_for_backing_up_onprem/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[38] How to Back Up On-Premise Servers to AWS: 3 Simple … <a href="https://www.vinchin.com/tech-tips/backup-on-premise-server-to-aws.html" class="external external-link">https://www.vinchin.com/tech-tips/backup-on-premise-server-to-aws.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[39] AWS Elastic Disaster Recovery (AWS DRS) <a href="https://www.alignedtg.com/disaster-recovery-guide/" class="external external-link">https://www.alignedtg.com/disaster-recovery-guide/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[40] AWS Elastic Disaster Recovery: The Basics and a Quick … <a href="https://faddom.com/aws-elastic-disaster-recovery-the-basics-and-a-quick-tutorial/" class="external external-link">https://faddom.com/aws-elastic-disaster-recovery-the-basics-and-a-quick-tutorial/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[41] Leveraging AWS Elastic Disaster Recovery - Uturn Data Solutions <a href="https://www.uturndata.com/2024/05/24/leveraging-aws-elastic-disaster-recovery/" class="external external-link">https://www.uturndata.com/2024/05/24/leveraging-aws-elastic-disaster-recovery/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[42] AWS Elastic Disaster Recovery <a href="https://aws.amazon.com/disaster-recovery/" class="external external-link">https://aws.amazon.com/disaster-recovery/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[43] What Is AWS Application Migration Service?<a href="http://docs.aws.amazon.com/" class="external external-link">docs.aws.amazon.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> › mgn › latest › what-is-application-migration-service <a href="https://docs.aws.amazon.com/mgn/latest/ug/what-is-application-migration-service.html" class="external external-link">https://docs.aws.amazon.com/mgn/latest/ug/what-is-application-migration-service.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[44] AWS MGN Overview <a href="https://dev.to/aws-builders/aws-mgn-overview-12lo" class="external external-link">https://dev.to/aws-builders/aws-mgn-overview-12lo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[45] Unlock AWS MGN: Migrate to AWS Like a Pro <a href="https://www.bacancytechnology.com/blog/aws-mgn" class="external external-link">https://www.bacancytechnology.com/blog/aws-mgn<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[46] Migrating the Virtual Machine from VMware Infrastructure to AWS using CloudEndure - MOURI Tech <a href="https://www.mouritech.com/migrating-the-virtual-machine-from-vmware-infrastructure-to-aws-using-cloudendure/" class="external external-link">https://www.mouritech.com/migrating-the-virtual-machine-from-vmware-infrastructure-to-aws-using-cloudendure/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[47] Including Differences from AWS Server Migration Service (AWS SMS) <a href="https://hidekazu-konishi.com/entry/aws_mgn_architecture_lifecycle_usage_notes.html" class="external external-link">https://hidekazu-konishi.com/entry/aws_mgn_architecture_lifecycle_usage_notes.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[48] AWS DR: Pilot Light vs Warm Standby <a href="https://awsforengineers.com/blog/aws-dr-pilot-light-vs-warm-standby/" class="external external-link">https://awsforengineers.com/blog/aws-dr-pilot-light-vs-warm-standby/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[49] 4 Proven AWS Disaster Recovery Strategies &amp; Picking the Right One <a href="https://n2ws.com/blog/aws-cloud/aws-disaster-recovery-strategies" class="external external-link">https://n2ws.com/blog/aws-cloud/aws-disaster-recovery-strategies<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[50] Disaster Recovery Strategies <a href="https://disaster-recovery.workshop.aws/en/intro/disaster-recovery.html" class="external external-link">https://disaster-recovery.workshop.aws/en/intro/disaster-recovery.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[51] AWS Disaster Recovery: 4 Strategies + 1 Bonus … <a href="https://n2ws.com/blog/aws-disaster-recovery/aws-disaster-recovery" class="external external-link">https://n2ws.com/blog/aws-disaster-recovery/aws-disaster-recovery<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[52] Disaster recovery options in the cloud - AWS Documentation <a href="https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html" class="external external-link">https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-workloads-on-aws/disaster-recovery-options-in-the-cloud.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[53] AWS Warm Standby Part III: An Automated Disaster … <a href="https://www.cloudthat.com/resources/blog/aws-warm-standby-part-iii-an-automated-disaster-recovery-solution" class="external external-link">https://www.cloudthat.com/resources/blog/aws-warm-standby-part-iii-an-automated-disaster-recovery-solution<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[54] RTO &amp; RPO in disaster recovery (DR) management <a href="https://dev.to/wakeup_flower_8591a6cb6a9/rto-rpo-in-disaster-recovery-dr-management-2gga" class="external external-link">https://dev.to/wakeup_flower_8591a6cb6a9/rto-rpo-in-disaster-recovery-dr-management-2gga<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[55] Establishing RPO and RTO Targets for Cloud Applications - AWS <a href="https://aws.amazon.com/blogs/mt/establishing-rpo-and-rto-targets-for-cloud-applications/" class="external external-link">https://aws.amazon.com/blogs/mt/establishing-rpo-and-rto-targets-for-cloud-applications/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[56] Recovery objectives - AWS Documentation <a href="https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-of-on-premises-applications-to-aws/recovery-objectives.html" class="external external-link">https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-of-on-premises-applications-to-aws/recovery-objectives.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[57] 5 AWS Backup Best Practices for Reliable Data Protection <a href="https://www.alignedtg.com/5-aws-backup-best-practices-for-reliable-data-protection/" class="external external-link">https://www.alignedtg.com/5-aws-backup-best-practices-for-reliable-data-protection/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[58] Top 10 AWS Backup Best Practices in 2025 <a href="https://n2ws.com/blog/aws-backup-best-practices" class="external external-link">https://n2ws.com/blog/aws-backup-best-practices<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[59] 4 AWS Backup Best Practices for Reliable Data Protection <a href="https://www.linkedin.com/pulse/4-aws-backup-best-practices-reliable-data-protection-naum-lavnevich-5ckoe" class="external external-link">https://www.linkedin.com/pulse/4-aws-backup-best-practices-reliable-data-protection-naum-lavnevich-5ckoe<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[60] AWS Backup Best Practices - Trend Micro <a href="https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/Backup/" class="external external-link">https://www.trendmicro.com/cloudoneconformity/knowledge-base/aws/Backup/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[61] Best was to backup EC2 instance. <a href="https://www.reddit.com/r/aws/comments/jbj2bi/best_was_to_backup_ec2_instance/" class="external external-link">https://www.reddit.com/r/aws/comments/jbj2bi/best_was_to_backup_ec2_instance/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[62] SOC 2, GDPR, HIPAA Compliance on AWS: A Complete … <a href="https://www.novelvista.com/blogs/cloud-and-aws/soc-2-gdpr-hipaa-compliance-on-aws-a-complete-guide" class="external external-link">https://www.novelvista.com/blogs/cloud-and-aws/soc-2-gdpr-hipaa-compliance-on-aws-a-complete-guide<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[63] AWS HIPAA compliance checklist for modern healthtechs <a href="https://www.justaftermidnight247.com/insights/aws-hipaa-compliance-checklist-healthtechs/" class="external external-link">https://www.justaftermidnight247.com/insights/aws-hipaa-compliance-checklist-healthtechs/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[64] HIPAA on AWS: Requirements and Best Practices - Exabeam <a href="https://www.exabeam.com/explainers/hipaa-compliance/hipaa-on-aws-requirements-and-best-practices/" class="external external-link">https://www.exabeam.com/explainers/hipaa-compliance/hipaa-on-aws-requirements-and-best-practices/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[65] Understanding AWS Backup Pricing: Key Cost Drivers … <a href="https://cloudchipr.com/blog/aws-backup-pricing" class="external external-link">https://cloudchipr.com/blog/aws-backup-pricing<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[66] Need help to figure backup pricing <a href="https://www.reddit.com/r/aws/comments/xcrr9p/need_help_to_figure_backup_pricing/" class="external external-link">https://www.reddit.com/r/aws/comments/xcrr9p/need_help_to_figure_backup_pricing/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[67] How Capgemini uses AWS Systems Manager Automation … <a href="https://aws.amazon.com/blogs/mt/how-capgemini-uses-aws-systems-manager-automation-runbooks-to-generate-reports-for-aws-backup-activity/" class="external external-link">https://aws.amazon.com/blogs/mt/how-capgemini-uses-aws-systems-manager-automation-runbooks-to-generate-reports-for-aws-backup-activity/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[68] How to use AWS to Manage On-Premises Servers <a href="https://n2ws.com/blog/how-to-guides/how-to-use-aws-to-manage-on-premise-servers" class="external external-link">https://n2ws.com/blog/how-to-guides/how-to-use-aws-to-manage-on-premise-servers<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[69] AWS Backup <a href="https://kindatechnical.com/aws-backup-guide/hybrid-backup-strategies.html" class="external external-link">https://kindatechnical.com/aws-backup-guide/hybrid-backup-strategies.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[70] AWS Hybrid Cloud: Uniting On-Premises Systems with Cloud <a href="https://www.revolutions.ai/aws-hybrid-cloud-unite-on-premises-cloud/" class="external external-link">https://www.revolutions.ai/aws-hybrid-cloud-unite-on-premises-cloud/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[71] AWS Hybrid Cloud: Uniting On-Premises Systems with Cloud | Revolutions AI <a href="https://www.revolutions.ai/blog/aws-hybrid-cloud-unite-on-premises-cloud/" class="external external-link">https://www.revolutions.ai/blog/aws-hybrid-cloud-unite-on-premises-cloud/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[72] All You Need to Know About AWS Backup Service <a href="https://www.linkedin.com/pulse/all-you-need-know-aws-backup-service-vibhay-chawla" class="external external-link">https://www.linkedin.com/pulse/all-you-need-know-aws-backup-service-vibhay-chawla<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[73] AWS Backup Documentation <a href="https://docs.aws.amazon.com/aws-backup/" class="external external-link">https://docs.aws.amazon.com/aws-backup/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[74] Data Protection Compliance… <a href="https://aws.amazon.com/backup/features/" class="external external-link">https://aws.amazon.com/backup/features/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[75] aws-storagegateway-user-guide/doc_source/WhatIsStorageGateway.md at master · awsdocs/aws-storagegateway-user-guide <a href="https://github.com/awsdocs/aws-storagegateway-user-guide/blob/master/doc_source/WhatIsStorageGateway.md" class="external external-link">https://github.com/awsdocs/aws-storagegateway-user-guide/blob/master/doc_source/WhatIsStorageGateway.md<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[76] Disaster Recovery of Workloads on AWS: Recovery in the Cloud - AWS Well-Architected Framework <a href="https://fe5e0932bbdbee188a67-ade54de1bba9a4fe61c120942a09245b.ssl.cf1.rackcdn.com/Whitepaper_(2).pdf" class="external external-link">https://fe5e0932bbdbee188a67-ade54de1bba9a4fe61c120942a09245b.ssl.cf1.rackcdn.com/Whitepaper_(2).pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[77] Automate backups with Amazon Data Lifecycle Manager <a href="https://docs.aws.amazon.com/ebs/latest/userguide/snapshot-lifecycle.html" class="external external-link">https://docs.aws.amazon.com/ebs/latest/userguide/snapshot-lifecycle.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[78] How to Take AWS RDS Backup | Automated Snapshot and Manual Snapshot <a href="https://www.youtube.com/watch?v=ek4nC4Wr-lA" class="external external-link">https://www.youtube.com/watch?v=ek4nC4Wr-lA<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[79] Amazon EC2 backup and recovery with snapshots and AMIs <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/ec2-backup.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/ec2-backup.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[80] AWS Backup: Top 15 Questions, How It Works, Pricing and … <a href="https://n2ws.com/blog/aws-cloud/overview-aws-backup" class="external external-link">https://n2ws.com/blog/aws-cloud/overview-aws-backup<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[81] Backup and recovery for Amazon EC2 with EBS volumes <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/backup-recovery-ec2-ebs.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/backup-recovery-ec2-ebs.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[82] AWS Backup: Centrally-Managed Backup for the Amazon … <a href="https://bluexp.netapp.com/blog/aws-backup-centrally-managed-cvo-blg" class="external external-link">https://bluexp.netapp.com/blog/aws-backup-centrally-managed-cvo-blg<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[83] AWS Backup Solutions for On-Premise Data | Business Compass LLC <a href="https://businesscompassllc.com/aws-backup-solutions-for-on-premise-data/" class="external external-link">https://businesscompassllc.com/aws-backup-solutions-for-on-premise-data/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[84] AWS re:Invent 2020: Modernize your on-premises backup strategy with AWS <a href="https://www.youtube.com/watch?v=Vlugjkg9z5Q" class="external external-link">https://www.youtube.com/watch?v=Vlugjkg9z5Q<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[85] Backup and recovery for hybrid architectures <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/hybrid-arch.html" class="external external-link">https://docs.aws.amazon.com/prescriptive-guidance/latest/backup-recovery/hybrid-arch.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[86] Implementing a backup solution with AWS Storage Gateway <a href="https://aws.amazon.com/blogs/storage/implementing-a-backup-solution-with-aws-storage-gateway/" class="external external-link">https://aws.amazon.com/blogs/storage/implementing-a-backup-solution-with-aws-storage-gateway/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[87] Backup and Data Protection Solutions <a href="https://aws.amazon.com/backup-restore/" class="external external-link">https://aws.amazon.com/backup-restore/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[88] AWS Hybrid Cloud | On Premises &amp; Edge <a href="https://aws.amazon.com/hybrid/" class="external external-link">https://aws.amazon.com/hybrid/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[89] 5 Factors Impacting AWS RTO and 5 Tools that Can Help <a href="https://n2ws.com/blog/backup-and-recovery/aws-rto" class="external external-link">https://n2ws.com/blog/backup-and-recovery/aws-rto<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[90] Elastic Disaster Recovery Concepts <a href="https://docs.aws.amazon.com/drs/latest/userguide/CloudEndure-Concepts.html" class="external external-link">https://docs.aws.amazon.com/drs/latest/userguide/CloudEndure-Concepts.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[91] Get Started with AWS Elastic Disaster Recovery | Amazon Web Services <a href="https://www.youtube.com/watch?v=GAMUCIJR5as" class="external external-link">https://www.youtube.com/watch?v=GAMUCIJR5as<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[92] AWS Elastic Disaster Recovery: Quick Start Guide <a href="https://aws.centraldatatech.com/aws-elastic-disaster-recovery-quick-start-guide/" class="external external-link">https://aws.centraldatatech.com/aws-elastic-disaster-recovery-quick-start-guide/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[93] RTO vs RPO: Key Differences for Modern Disaster Recovery <a href="https://launchdarkly.com/blog/rto-vs-rpo/" class="external external-link">https://launchdarkly.com/blog/rto-vs-rpo/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[94] AWS Disaster Recovery: Pilot Light, Warm Standby, Multi-site <a href="https://www.cbtnuggets.com/blog/certifications/cloud/aws-disaster-recovery-pilot-light-warm-standby-multi-site" class="external external-link">https://www.cbtnuggets.com/blog/certifications/cloud/aws-disaster-recovery-pilot-light-warm-standby-multi-site<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[95] Back to Basics: How to Implement a Multi-Region Disaster Recovery Strategy Using AWS DRS <a href="https://www.youtube.com/watch?v=OT1EJ_kyP_g" class="external external-link">https://www.youtube.com/watch?v=OT1EJ_kyP_g<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[96] Amazon Data Lifecycle Manager [Easy to Follow Tutorial] <a href="https://www.youtube.com/watch?v=x_5UaprDTTo" class="external external-link">https://www.youtube.com/watch?v=x_5UaprDTTo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[97] Streamlining EBS Snapshot Management with Amazon Data … <a href="https://tutorialsdojo.com/streamlining-ebs-snapshot-management-with-amazon-data-lifecycle-manager-automation/" class="external external-link">https://tutorialsdojo.com/streamlining-ebs-snapshot-management-with-amazon-data-lifecycle-manager-automation/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[98] How to Automate AWS Snapshots Using the Life Cycle Policy <a href="https://dev.to/ilaibavati/how-to-automate-aws-snapshots-using-the-life-cycle-policy-4p2j" class="external external-link">https://dev.to/ilaibavati/how-to-automate-aws-snapshots-using-the-life-cycle-policy-4p2j<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[99] Amazon EC2 Instance Comparison <a href="https://instances.vantage.sh/" class="external external-link">https://instances.vantage.sh<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[100] Best practices for using backup policies - AWS Organizations <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_backup_best-practices.html" class="external external-link">https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_backup_best-practices.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[101] How to Calculate cost of AWS Backups? <a href="https://www.reddit.com/r/aws/comments/1dvt8t2/how_to_calculate_cost_of_aws_backups/" class="external external-link">https://www.reddit.com/r/aws/comments/1dvt8t2/how_to_calculate_cost_of_aws_backups/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[102] Backup policies - AWS Organizations <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_backup.html" class="external external-link">https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_backup.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[103] AWS Disaster Recovery <a href="https://www.scribd.com/document/282292890/AWS-Disaster-Recovery" class="external external-link">https://www.scribd.com/document/282292890/AWS-Disaster-Recovery<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[104] AWS Storage Gateway Cheat Sheet <a href="https://tutorialsdojo.com/aws-storage-gateway/" class="external external-link">https://tutorialsdojo.com/aws-storage-gateway/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[105] Whte Paper: Using aws for disaster recovery <a href="https://www.slideshare.net/slideshow/whte-paper-using-aws-for-disaster-recovery/48988442" class="external external-link">https://www.slideshare.net/slideshow/whte-paper-using-aws-for-disaster-recovery/48988442<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[106] Amazon Storage Gateway FAQs - Amazon Web Services <a href="https://www.amazonaws.cn/en/storagegateway/faqs/" class="external external-link">https://www.amazonaws.cn/en/storagegateway/faqs/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[107] Disaster Recovery on AWS <a href="https://cloudstok.com/wp-content/uploads/2025/04/disaster-recovery-on-aws-whitepaper.pdf" class="external external-link">https://cloudstok.com/wp-content/uploads/2025/04/disaster-recovery-on-aws-whitepaper.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[108] Amazon Storage Gateway Documentation <a href="https://www.amazonaws.cn/en/documentation-overview/storagegateway/" class="external external-link">https://www.amazonaws.cn/en/documentation-overview/storagegateway/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="aws-백업-및-dr-솔루션-요약-장표-및-발표-스크립트">AWS 백업 및 DR 솔루션 요약 장표 및 발표 스크립트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-백업-및-dr-솔루션-요약-장표-및-발표-스크립트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>첨부하신 AWS 백업/DR 문서를 분석하여 고객 질문 대응용 <strong>2페이지 요약 장표</strong>와 <strong>전체 페이지 발표 스크립트</strong>를 작성했습니다.</p>
+<h2 id="작성된-문서">작성된 문서<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#작성된-문서" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-요약-장표-2페이지">1. 요약 장표 (2페이지)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-요약-장표-2페이지" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>페이지 1: AWS 클라우드 리소스 백업 전략 (EC2, RDS 등)</strong></p>
+<ul>
+<li>
+<p>백업 대상 및 방법 (데이터 + 메타데이터)</p>
+</li>
+<li>
+<p>AWS Backup 서비스 활용 (중앙 집중식 관리)</p>
+</li>
+<li>
+<p>교차 리전 백업 및 보안 (Vault Lock, Air-gaped)</p>
+</li>
+<li>
+<p>권장 백업 정책 (시스템 중요도별 차등 적용)</p>
+</li>
+</ul>
+<p><strong>페이지 2: 온프레미스 IDC 서버 AWS 클라우드 백업/DR 방안</strong></p>
+<ul>
+<li>
+<p>AWS Storage Gateway 하이브리드 백업 (File/Volume/Tape Gateway)</p>
+</li>
+<li>
+<p>AWS Elastic Disaster Recovery (연속 복제, RPO/RTO 최소화)</p>
+</li>
+<li>
+<p>DR 전략 선택 가이드 (4가지 전략 비교표)</p>
+</li>
+<li>
+<p>준비 데이터 및 참조 자료 (현황 데이터, AWS 공식 문서)</p>
+</li>
+</ul>
+<h3 id="2-전체-페이지-발표-스크립트">2. 전체 페이지 발표 스크립트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-전체-페이지-발표-스크립트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>구성:</strong></p>
+<ul>
+<li>
+<p>요약 장표 2페이지 스크립트 (핵심 문구 중심 단문)</p>
+</li>
+<li>
+<p>기존 문서 주요 페이지별 스크립트 (35개 슬라이드)</p>
+<ul>
+<li>
+<p>재해복구 개념 및 RPO/RTO</p>
+</li>
+<li>
+<p>DR 전략 4가지 및 비용 분석</p>
+</li>
+<li>
+<p>AWS Backup 아키텍처 및 구현 사례</p>
+</li>
+<li>
+<p>IaC 관리 및 의존성 분리</p>
+</li>
+<li>
+<p>AWS DRS 소개 및 작동 방식</p>
+</li>
+<li>
+<p>Demo Architecture</p>
+</li>
+<li>
+<p>3줄 요약 및 참고 자료</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="스크립트-작성-방식">스크립트 작성 방식<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#스크립트-작성-방식" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>원하신 대로 <strong>나열식 문구가 아닌 핵심 문구 기준 단문 나열</strong> 방식으로 작성했습니다:</p>
+<p><strong>예시:</strong></p>
+<pre><code>&quot;AWS Backup은 완전 관리형 백업 서비스입니다.
+중앙 집중식으로 모든 백업을 관리합니다.
+정책 기반 자동화로 운영 부담을 줄입니다.
+태그 기반으로 리소스를 자동 할당합니다.
+EC2, RDS, EBS, EFS 등 20개 이상 서비스를 지원합니다.&quot;
+</code></pre>
+<p>각 문장은:</p>
+<ul>
+<li>
+<p>하나의 핵심 메시지를 전달</p>
+</li>
+<li>
+<p>짧고 명확한 단문 구조</p>
+</li>
+<li>
+<p>청중이 이해하기 쉬운 순차적 흐름</p>
+</li>
+<li>
+<p>기술 용어와 비즈니스 가치의 균형</p>
+</li>
+</ul>
+<h2 id="주요-특징">주요 특징<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#주요-특징" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>요약 장표:</strong></p>
+<ul>
+<li>
+<p>첨부 문서의 핵심 내용을 2페이지로 압축</p>
+</li>
+<li>
+<p>고객 질문(AWS 클라우드 백업 + 온프레미스 백업/DR)에 직접 대응</p>
+</li>
+<li>
+<p>실행 가능한 권장 사항 포함</p>
+</li>
+<li>
+<p>준비 데이터 리스트 및 참조 자료 명시</p>
+</li>
+</ul>
+<p><strong>발표 스크립트:</strong></p>
+<ul>
+<li>
+<p>모든 페이지에 대한 일관된 스타일의 스크립트</p>
+</li>
+<li>
+<p>기술적 정확성 유지</p>
+</li>
+<li>
+<p>비즈니스 가치 강조</p>
+</li>
+<li>
+<p>청중 친화적 언어 사용</p>
+</li>
+</ul>
+<p>두 문서를 활용하여 효과적인 고객 대응 프레젠테이션을 준비하실 수 있습니다.</p>
+<p>Sources<br/>
+[1] 20251028-GenieMusic_AWS-BackUp-DR.pdf <a href="https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/99871431/3260db69-233b-4c57-b360-1417c9043a63/20251028-GenieMusic_AWS-BackUp-DR.pdf" class="external external-link">https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/99871431/3260db69-233b-4c57-b360-1417c9043a63/20251028-GenieMusic_AWS-BackUp-DR.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="script">Script<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#script" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="aws-백업-및-dr-솔루션-발표-스크립트"><strong>AWS 백업 및 DR 솔루션 발표 스크립트</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-백업-및-dr-솔루션-발표-스크립트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<hr/>
+<h2 id="요약-페이지-1-aws-클라우드-리소스-백업-전략-스크립트"><strong>요약 페이지 1: AWS 클라우드 리소스 백업 전략 스크립트</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#요약-페이지-1-aws-클라우드-리소스-백업-전략-스크립트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="오프닝"><strong>오프닝</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#오프닝" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“AWS 클라우드 환경에서 운영 중인 EC2, RDS 등 핵심 리소스의 체계적인 백업 전략을 소개합니다.”</p>
+<h3 id="섹션-1-백업-대상-및-방법"><strong>섹션 1: 백업 대상 및 방법</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#섹션-1-백업-대상-및-방법" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“백업은 크게 두 가지로 구분됩니다.</p>
+<p>첫째, 데이터 백업입니다.</p>
+<p>EC2는 EBS 스냅샷과 AMI로 백업합니다.</p>
+<p>RDS는 자동 백업과 수동 스냅샷을 활용합니다.</p>
+<p>둘째, 메타데이터 백업입니다.</p>
+<p>인프라 구성 정보를 IaC 코드로 관리합니다.</p>
+<p>CloudFormation, Terraform, CDK를 활용합니다.</p>
+<p>CodeCommit에서 S3로, 다시 AWS Backup으로 자동화합니다.”</p>
+<h3 id="섹션-2-aws-backup-서비스-활용"><strong>섹션 2: AWS Backup 서비스 활용</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#섹션-2-aws-backup-서비스-활용" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“AWS Backup은 완전 관리형 백업 서비스입니다.</p>
+<p>중앙 집중식으로 모든 백업을 관리합니다.</p>
+<p>정책 기반 자동화로 운영 부담을 줄입니다.</p>
+<p>태그 기반으로 리소스를 자동 할당합니다.</p>
+<p>EC2, RDS, EBS, EFS 등 20개 이상 서비스를 지원합니다.</p>
+<p>온프레미스와 하이브리드 환경도 지원합니다.”</p>
+<h3 id="섹션-3-교차-리전-백업-및-보안"><strong>섹션 3: 교차 리전 백업 및 보안</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#섹션-3-교차-리전-백업-및-보안" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“재해 복구를 위해 교차 리전 복제가 필수입니다.</p>
+<p>소스 리전 장애 시 DR 리전에서 즉시 복원합니다.</p>
+<p>교차 계정 복제로 보안을 한층 강화합니다.</p>
+<p>모든 백업은 AWS KMS로 암호화합니다.</p>
+<p>Backup Vault Lock으로 WORM 정책을 적용합니다.</p>
+<p>Compliance Mode는 보존 기간 만료 전까지 삭제가 불가능합니다.</p>
+<p>Air-gaped Vault로 백업 계정을 완전히 격리합니다.”</p>
+<h3 id="섹션-4-권장-백업-정책"><strong>섹션 4: 권장 백업 정책</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#섹션-4-권장-백업-정책" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“시스템 중요도에 따라 백업 정책을 차등 적용합니다.</p>
+<p>미션 크리티컬 EC2는 일일 스냅샷과 주별 AMI를 생성합니다.</p>
+<p>일반 시스템은 주별 스냅샷으로 충분합니다.</p>
+<p>RDS는 자동 백업을 반드시 활성화합니다.</p>
+<p>최소 7일, 최대 35일 보존 기간을 설정합니다.</p>
+<p>PITR로 5분 이내 시점으로 복구할 수 있습니다.</p>
+<p>중요 데이터베이스는 교차 리전 복제를 적용합니다.</p>
+<p>90일 이상 보존 백업은 Cold Storage로 전환합니다.</p>
+<p>CloudWatch와 SNS로 백업 실패를 즉시 감지합니다.</p>
+<p>정기적인 복원 테스트로 백업 유효성을 검증합니다.”</p>
+<h3 id="클로징"><strong>클로징</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#클로징" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“체계적인 백업 정책으로 데이터 손실 위험을 최소화할 수 있습니다.”</p>
+<hr/>
+<h2 id="요약-페이지-2-온프레미스-idc-백업dr-방안-스크립트"><strong>요약 페이지 2: 온프레미스 IDC 백업/DR 방안 스크립트</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#요약-페이지-2-온프레미스-idc-백업dr-방안-스크립트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="오프닝-1"><strong>오프닝</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#오프닝-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“온프레미스 IDC 서버를 AWS 클라우드로 백업하고 재해 복구하는 방안을 소개합니다.”</p>
+<h3 id="섹션-1-aws-storage-gateway-하이브리드-백업"><strong>섹션 1: AWS Storage Gateway 하이브리드 백업</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#섹션-1-aws-storage-gateway-하이브리드-백업" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“Storage Gateway는 세 가지 유형으로 제공됩니다.</p>
+<p>File Gateway는 파일 서버 백업에 최적화되어 있습니다.</p>
+<p>NFS와 SMB 프로토콜을 지원합니다.</p>
+<p>데이터를 S3에 네이티브 객체로 저장합니다.</p>
+<p>S3 Standard에서 Glacier까지 자동 전환됩니다.</p>
+<p>Volume Gateway는 블록 스토리지를 백업합니다.</p>
+<p>iSCSI 프로토콜로 연결합니다.</p>
+<p>EBS 스냅샷으로 S3에 저장되어 EC2로 복원됩니다.</p>
+<p>Cached Mode는 클라우드 중심, Stored Mode는 온프레미스 중심입니다.</p>
+<p>Tape Gateway는 기존 백업 소프트웨어를 그대로 활용합니다.</p>
+<p>Veeam, Commvault 등과 호환됩니다.</p>
+<p>Glacier Deep Archive는 TB당 월 1달러 수준으로 매우 저렴합니다.</p>
+<p>VMware 환경도 AWS Backup으로 직접 백업할 수 있습니다.”</p>
+<h3 id="섹션-2-aws-elastic-disaster-recovery"><strong>섹션 2: AWS Elastic Disaster Recovery</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#섹션-2-aws-elastic-disaster-recovery" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“AWS DRS는 비용 효율적인 재해 복구 솔루션입니다.</p>
+<p>연속 블록 레벨 복제를 수행합니다.</p>
+<p>RPO는 수 초, RTO는 수 분 수준입니다.</p>
+<p>온프레미스에서 AWS로 실시간 복제합니다.</p>
+<p>다른 클라우드에서도 복제 가능합니다.</p>
+<p>자동화된 페일오버와 페일백을 지원합니다.</p>
+<p>비파괴적 테스트로 프로덕션에 영향을 주지 않습니다.</p>
+<p>특정 시점 복구로 랜섬웨어에 대응할 수 있습니다.</p>
+<p>유휴 복구 사이트가 불필요하여 비용을 절감합니다.</p>
+<p>물리 서버, VMware, Hyper-V를 모두 지원합니다.</p>
+<p>Windows, Linux, Oracle, SAP 등 다양한 환경을 지원합니다.”</p>
+<h3 id="섹션-3-dr-전략-선택-가이드"><strong>섹션 3: DR 전략 선택 가이드</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#섹션-3-dr-전략-선택-가이드" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“DR 전략은 4가지로 구분됩니다.</p>
+<p>Backup and Restore는 가장 경제적입니다.</p>
+<p>RPO와 RTO는 수 시간 수준입니다.</p>
+<p>낮은 우선순위 시스템에 적합합니다.</p>
+<p>Pilot Light는 핵심 요소만 실행 상태로 유지합니다.</p>
+<p>RPO는 수 분, RTO는 수 시간입니다.</p>
+<p>중간 수준의 복구 목표에 적합합니다.</p>
+<p>Warm Standby는 축소 규모로 상시 운영합니다.</p>
+<p>RPO와 RTO 모두 수 분 수준입니다.</p>
+<p>비즈니스 크리티컬 시스템에 적합합니다.</p>
+<p>Multi-site Active/Active는 여러 리전에서 동시 운영합니다.</p>
+<p>RPO와 RTO가 거의 실시간입니다.</p>
+<p>미션 크리티컬 서비스에 필수적입니다.</p>
+<p>비용과 복구 목표 사이의 균형이 중요합니다.”</p>
+<h3 id="섹션-4-준비-데이터-및-참조-자료"><strong>섹션 4: 준비 데이터 및 참조 자료</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#섹션-4-준비-데이터-및-참조-자료" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“효과적인 백업 계획을 위해 현황 데이터가 필요합니다.</p>
+<p>EC2와 RDS 인스턴스 목록을 정리합니다.</p>
+<p>온프레미스 서버 목록과 스토리지 용량을 파악합니다.</p>
+<p>시스템별 중요도를 Tier로 분류합니다.</p>
+<p>애플리케이션별 허용 가능한 RTO와 RPO를 정의합니다.</p>
+<p>규정 준수 요구사항을 확인합니다.</p>
+<p>데이터 변경률로 백업 비용을 추산합니다.</p>
+<p>AWS 공식 문서를 참조합니다.</p>
+<p>AWS Backup과 Storage Gateway 가이드가 필수입니다.</p>
+<p>재해 복구 백서와 워크샵 자료를 활용합니다.</p>
+<p>AWS Skill Builder에서 무료 교육을 받을 수 있습니다.”</p>
+<h3 id="클로징-1"><strong>클로징</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#클로징-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“데이터와 메타데이터를 함께 백업하고 지속적으로 검증해야 합니다.</p>
+<p>재해 복구는 원타임 구축이 아닌 지속적인 프로세스입니다.”</p>
+<hr/>
+<h2 id="기존-문서-주요-페이지-스크립트"><strong>기존 문서 주요 페이지 스크립트</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#기존-문서-주요-페이지-스크립트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="슬라이드-3-재해복구-개념"><strong>슬라이드 3: 재해복구 개념</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-3-재해복구-개념" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“재해복구는 비즈니스 지속성을 위한 필수 요소입니다.</p>
+<p>자연재해, 기술적 이슈, 휴먼 액션으로 발생합니다.</p>
+<p>희귀하지만 대규모 장애 상황에 대비해야 합니다.</p>
+<p>복구 시간과 복구 시점 목표로 측정합니다.”</p>
+<h3 id="슬라이드-4-rporto-개념"><strong>슬라이드 4: RPO/RTO 개념</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-4-rporto-개념" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“RPO는 복구 시점 목표입니다.</p>
+<p>재해 발생 시 수용 가능한 데이터 손실 범위입니다.</p>
+<p>RTO는 복구 시간 목표입니다.</p>
+<p>서비스 다운타임을 얼마나 허용할 것인지 정의합니다.</p>
+<p>두 목표가 비즈니스 영향도를 결정합니다.”</p>
+<h3 id="슬라이드-5-클라우드-dr-전략-4가지"><strong>슬라이드 5: 클라우드 DR 전략 4가지</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-5-클라우드-dr-전략-4가지" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“AWS는 4가지 DR 전략을 제공합니다.</p>
+<p>Backup and Restore는 RPO와 RTO가 수 시간입니다.</p>
+<p>이벤트 발생 후 전체 리소스를 생성합니다.</p>
+<p>비용이 가장 낮고 우선순위가 낮은 시스템에 적합합니다.</p>
+<p>Pilot Light는 RPO가 수 분, RTO가 수십 분입니다.</p>
+<p>라이브 데이터를 유지하고 서비스는 유휴 상태입니다.</p>
+<p>이벤트 발생 후 일부 리소스를 생성하고 확장합니다.</p>
+<p>Warm Standby는 RPO와 RTO가 모두 수 분입니다.</p>
+<p>소규모로 상시 구동하며 비즈니스 크리티컬합니다.</p>
+<p>이벤트 발생 후 리소스를 확장합니다.</p>
+<p>Multi-site Active/Active는 실시간 RPO와 RTO입니다.</p>
+<p>무중단이며 데이터 손실이 거의 없습니다.</p>
+<p>미션 크리티컬 서비스에 필수입니다.</p>
+<p>AWS Backup과 AWS DRS가 핵심 서비스입니다.”</p>
+<h3 id="슬라이드-6-rto-기준-비용-분석"><strong>슬라이드 6: RTO 기준 비용 분석</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-6-rto-기준-비용-분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“복구 시간 목표가 짧을수록 비용이 증가합니다.</p>
+<p>서비스 중단 기간에 따라 비즈니스 영향이 달라집니다.</p>
+<p>수용 가능한 비용과 복구 목표 시간 사이의 균형이 필요합니다.</p>
+<p>재해 복구 준비 비용과 재해 영향도를 비교 분석합니다.”</p>
+<h3 id="슬라이드-7-rpo-기준-비용-분석"><strong>슬라이드 7: RPO 기준 비용 분석</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-7-rpo-기준-비용-분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“복구 시점 목표가 짧을수록 비용이 증가합니다.</p>
+<p>데이터 손실에 따라 비즈니스 영향이 달라집니다.</p>
+<p>수용 가능한 비용과 복구 시점 목표 사이의 균형이 필요합니다.</p>
+<p>재해 복구 준비 비용과 데이터 손실 영향도를 비교 분석합니다.”</p>
+<h3 id="슬라이드-10-백업-대상"><strong>슬라이드 10: 백업 대상</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-10-백업-대상" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“재해 복구를 위한 백업은 두 가지로 구분됩니다.</p>
+<p>첫째, 데이터 백업입니다.</p>
+<p>EBS 볼륨, RDS 볼륨, EFS 파일, S3 객체를 백업합니다.</p>
+<p>둘째, 메타데이터 백업입니다.</p>
+<p>VPC, RDS, ElastiCache, ALB, EC2 구성 정보를 백업합니다.</p>
+<p>인프라 구성 정보는 재해 복구 시 필수적입니다.”</p>
+<h3 id="슬라이드-11-메타데이터-백업"><strong>슬라이드 11: 메타데이터 백업</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-11-메타데이터-백업" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“메타데이터는 인프라 구성 정보입니다.</p>
+<p>온프레미스 CMDB를 AWS 클라우드로 확장합니다.</p>
+<p>IaC로 구성 정보를 코드화합니다.</p>
+<p>CloudFormation, Terraform, CDK를 활용합니다.</p>
+<p>AWS API를 통해 자동으로 관리합니다.”</p>
+<h3 id="슬라이드-12-backup--restore-아키텍처"><strong>슬라이드 12: Backup &amp; Restore 아키텍처</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-12-backup--restore-아키텍처" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“원본 리전과 DR 리전으로 구성됩니다.</p>
+<p>데이터는 Backup Vault로 백업됩니다.</p>
+<p>교차 리전 복제로 DR 리전에 저장됩니다.</p>
+<p>메타데이터는 IaC 코드로 백업됩니다.</p>
+<p>재해 발생 시 DR 리전에서 복원합니다.”</p>
+<h3 id="슬라이드-13-aws-backup-개요"><strong>슬라이드 13: AWS Backup 개요</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-13-aws-backup-개요" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“AWS Backup은 완전 관리형 정책 기반 백업 서비스입니다.</p>
+<p>여러 AWS 서비스에 걸쳐 중앙 집중식 관리를 지원합니다.</p>
+<p>컴퓨트: EC2를 백업합니다.</p>
+<p>블록 스토리지: EBS를 백업합니다.</p>
+<p>파일 스토리지: EFS, FSx를 백업합니다.</p>
+<p>데이터베이스: RDS, Aurora, DynamoDB, Neptune, DocumentDB를 백업합니다.</p>
+<p>오브젝트 스토리지: S3를 백업합니다.</p>
+<p>하이브리드: Storage Gateway, VMware Cloud on AWS, 온프레미스를 지원합니다.</p>
+<p>애플리케이션: SAP HANA, Windows VSS를 지원합니다.</p>
+<p>관리: CloudFormation으로 자동화합니다.”</p>
+<h3 id="슬라이드-14-재해복구-자동화-구현-예"><strong>슬라이드 14: 재해복구 자동화 구현 예</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-14-재해복구-자동화-구현-예" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“글로벌 서비스를 활용합니다.</p>
+<p>원본 리전에서 IaC 기반으로 AWS 리소스를 관리합니다.</p>
+<p>CodeCommit과 CodeBuild로 인프라를 코드화합니다.</p>
+<p>Route 53으로 DNS를 관리합니다.</p>
+<p>AWS Backup으로 데이터와 메타데이터를 정기 백업합니다.</p>
+<p>로컬 볼트에서 DR 볼트로 교차 리전 복제합니다.</p>
+<p>재해 발생 시 백업으로부터 재해 복구를 수행합니다.</p>
+<p>DR 리전에서 인프라를 복원하고 인스턴스를 복구합니다.”</p>
+<h3 id="슬라이드-15-iac-관리-및-백업"><strong>슬라이드 15: IaC 관리 및 백업</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-15-iac-관리-및-백업" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“형상 관리 기반 IaC 코드를 관리합니다.</p>
+<p>CodeCommit은 관리형 git 서비스입니다.</p>
+<p>IaC 코드 백업을 자동화합니다.</p>
+<p>git push 이벤트에 따라 코드가 S3 버킷으로 복제됩니다.</p>
+<p>AWS Backup으로 리전 간 복제를 자동화합니다.</p>
+<p>CloudFormation은 AWS Backup을 통해 백업 가능합니다.”</p>
+<h3 id="슬라이드-16-iac-코드-의존성-분리"><strong>슬라이드 16: IaC 코드 의존성 분리</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-16-iac-코드-의존성-분리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“재해 복구용 IaC 코드의 의존성을 분리합니다.</p>
+<p>원본 리전에 대한 의존성을 제거합니다.</p>
+<p>정적 의존성을 분리합니다.</p>
+<p>리전 정보와 가용영역 정보를 사전 작성합니다.</p>
+<p>동적 의존성을 분리합니다.</p>
+<p>AMI 정보와 DB 스냅샷 정보는 복구 시점에 작성합니다.</p>
+<p>자동화를 검토하여 수동 작업을 최소화합니다.”</p>
+<h3 id="슬라이드-17-관리형-리소스-간접-접근"><strong>슬라이드 17: 관리형 리소스 간접 접근</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-17-관리형-리소스-간접-접근" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“많은 관리형 서비스의 엔드포인트에는 리전과 고유 ID가 포함됩니다.</p>
+<p>ELB와 RDS 엔드포인트가 대표적입니다.</p>
+<p>복구 중 리소스 생성 시 엔드포인트가 변경됩니다.</p>
+<p>애플리케이션 배포 번들에 엔드포인트가 하드코딩되면 수정이 필요합니다.</p>
+<p>엔드포인트에 간접적으로 접근하도록 구성합니다.</p>
+<p>Route 53 Private Hosted Zone을 활용합니다.</p>
+<p>Systems Manager Parameter Store도 활용 가능합니다.</p>
+<p>복구 과정 중 엔드포인트 업데이트를 자동화합니다.”</p>
+<h3 id="슬라이드-18-재해복구-태스크-독립성"><strong>슬라이드 18: 재해복구 태스크 독립성</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-18-재해복구-태스크-독립성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“복구 작업은 복구 리전의 리소스만 사용해야 합니다.</p>
+<p>원본 리전에 의존하면 복구가 불가능할 수 있습니다.</p>
+<p>CodePipeline과 CodeBuild는 좋은 선택입니다.</p>
+<p>DR 리전에서 독립적으로 실행 가능합니다.”</p>
+<h3 id="슬라이드-19-지속적인-검증-및-보완"><strong>슬라이드 19: 지속적인 검증 및 보완</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-19-지속적인-검증-및-보완" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“재해 복구는 원타임 구축 대상이 아닙니다.</p>
+<p>지속적인 검증과 보완이 필수입니다.</p>
+<p>구축, 검증, 보완의 사이클을 반복합니다.</p>
+<p>유사시 원활한 재해 복구를 위해 정기적으로 테스트합니다.”</p>
+<h3 id="슬라이드-20-air-gaped-vault-보안-아키텍처"><strong>슬라이드 20: Air-gaped Vault 보안 아키텍처</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-20-air-gaped-vault-보안-아키텍처" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“보안 백업 계정 아키텍처를 구성합니다.</p>
+<p>데이터센터와 스테이징 계정에서 PULL 방식으로 백업합니다.</p>
+<p>Vault 계정은 다른 AWS 계정과 완전히 격리됩니다.</p>
+<p>S3 Object Lock으로 데이터를 보호합니다.</p>
+<p>Control Plane 보안을 강화합니다.</p>
+<p>필요 시 Vault 계정이 Recovery 계정과 Forensics 계정을 생성합니다.</p>
+<p>써드파티 클라우드도 지원합니다.”</p>
+<h3 id="슬라이드-22-클라우드-재해복구-장점"><strong>슬라이드 22: 클라우드 재해복구 장점</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-22-클라우드-재해복구-장점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“온프레미스 DR은 막대한 선결제 비용이 발생합니다.</p>
+<p>데이터 증가로 하드웨어 비용이 지속 증가합니다.</p>
+<p>비즈니스 중단 없는 테스트가 어렵습니다.</p>
+<p>전세계 분산 비즈니스의 관리 오버헤드가 큽니다.</p>
+<p>클라우드 DR은 필요할 때만 사용하고 지불합니다.</p>
+<p>IT 관리 오버헤드가 감소합니다.</p>
+<p>훨씬 더 많은 자동화가 가능합니다.</p>
+<p>운영 환경을 종료하지 않고 쉽게 테스트합니다.</p>
+<p>몇 분 만에 시스템을 가동할 수 있습니다.”</p>
+<h3 id="슬라이드-23-클라우드-dr-비즈니스-효과"><strong>슬라이드 23: 클라우드 DR 비즈니스 효과</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-23-클라우드-dr-비즈니스-효과" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“견고한 운영 체계를 구축합니다.</p>
+<p>최상위 복구 목표로 안정성과 가용성을 달성합니다.</p>
+<p>운영 효율성을 확보합니다.</p>
+<p>중복 인프라와 라이선스 필요성을 줄여 비용을 절감합니다.</p>
+<p>비즈니스 연속성에 대한 확신을 얻습니다.</p>
+<p>운영 환경에 영향 없는 쉬운 테스트로 다운타임을 최소화합니다.”</p>
+<h3 id="슬라이드-25-aws-drs-소개"><strong>슬라이드 25: AWS DRS 소개</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-25-aws-drs-소개" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“AWS DRS는 유연하고 신뢰할 수 있는 DR 솔루션입니다.</p>
+<p>모든 소스에서 복제가 가능합니다.</p>
+<p>견고하고 예측 가능한 연속 복제 기능을 제공합니다.</p>
+<p>최소한의 기술 요구사항으로 자동화됩니다.</p>
+<p>다양한 OS, 애플리케이션, 데이터베이스를 지원합니다.</p>
+<p>RPO는 수 초, RTO는 수 분 수준입니다.</p>
+<p>운영에 영향 없는 DR 테스트가 가능합니다.</p>
+<p>유휴 복구 사이트 리소스를 제거하여 비용을 절감합니다.</p>
+<p>랜섬웨어, 충돌, 인적 오류로부터 보호합니다.</p>
+<p>테스트, 복구, Fail Back의 통합 프로세스를 지원합니다.”</p>
+<h3 id="슬라이드-26-aws-drs-사용-패턴"><strong>슬라이드 26: AWS DRS 사용 패턴</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-26-aws-drs-사용-패턴" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“AWS DRS는 다양한 패턴을 지원합니다.</p>
+<p>온프레미스에서 AWS로 복제합니다.</p>
+<p>AWS 리전에서 다른 AWS 리전으로 복제합니다.</p>
+<p>다른 클라우드에서 AWS로 복제합니다.</p>
+<p>AWS 가용영역에서 다른 가용영역으로 복제합니다.”</p>
+<h3 id="슬라이드-27-aws-drs-작동-방식"><strong>슬라이드 27: AWS DRS 작동 방식</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-27-aws-drs-작동-방식" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“단일 프로세스로 재해 복제 운영과 Failover/Failback을 수행합니다.</p>
+<p>Setup 단계에서 설정을 정의하고 지속적 데이터 복제를 시작합니다.</p>
+<p>Test 단계에서 무중단 테스트용 인스턴스를 시작합니다.</p>
+<p>Failover 단계에서 몇 분 안에 AWS에서 복구 인스턴스를 시작합니다.</p>
+<p>Operate 단계에서 모니터링과 주기적 훈련으로 준비 태세를 유지합니다.</p>
+<p>Failback 단계에서 복제를 시작하고 기본 사이트로 돌아갑니다.”</p>
+<h3 id="슬라이드-28-aws-drs-지원-대상"><strong>슬라이드 28: AWS DRS 지원 대상</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-28-aws-drs-지원-대상" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“물리적, 가상, 클라우드 서버에서 확장 가능하고 비용 효율적입니다.</p>
+<p>애플리케이션: Apache, IIS, SharePoint, Active Directory, Exchange, SAP, SugarCRM 등을 지원합니다.</p>
+<p>데이터베이스: SQL Server, Oracle, SAP HANA, MySQL, MongoDB를 지원합니다.</p>
+<p>운영체제: Windows Server 2003부터 2022까지, Red Hat, CentOS, Ubuntu, Debian, SUSE를 지원합니다.</p>
+<p>소스 인프라: VMware, Hyper-V, OpenStack, AWS, Azure, GCP, IBM Cloud, Oracle Cloud, 물리 데이터센터를 지원합니다.”</p>
+<h3 id="슬라이드-29-aws-drs-아키텍처"><strong>슬라이드 29: AWS DRS 아키텍처</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-29-aws-drs-아키텍처" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“데이터센터 또는 클라우드에서 AWS로 복제합니다.</p>
+<p>소스 서버에 Replication Agent를 설치합니다.</p>
+<p>Agent 제어 프로토콜로 AWS DRS와 통신합니다.</p>
+<p>블록 레벨 지속 복제를 수행합니다.</p>
+<p>압축과 암호화를 적용합니다.</p>
+<p>스테이징 영역에 경량 복제 서버가 자동 생성됩니다.</p>
+<p>복제 서버가 상태를 보고합니다.</p>
+<p>EBS 볼륨에 데이터를 저장합니다.</p>
+<p>RTO 수 분, RPO 수 초로 복구 인스턴스를 시작합니다.</p>
+<p>Recovery Subnet에서 복구 인스턴스가 실행됩니다.”</p>
+<h3 id="슬라이드-31-demo-architecture"><strong>슬라이드 31: Demo Architecture</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-31-demo-architecture" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“서울 리전을 온프레미스로 가정합니다.</p>
+<p>WordPress WEB과 MySQL DB 서버가 있습니다.</p>
+<p>싱가포르 리전을 DR 리전으로 구성합니다.</p>
+<p>Replication Agent를 설치합니다.</p>
+<p>Agent 제어 프로토콜로 DRS와 통신합니다.</p>
+<p>블록 레벨 지속 복제를 수행합니다.</p>
+<p>스테이징 영역에 복제 서버가 자동 생성됩니다.</p>
+<p>복구 서브넷에서 WAS와 DB 인스턴스가 실행됩니다.</p>
+<p>RTO 수 분, RPO 수 초로 복구됩니다.”</p>
+<h3 id="슬라이드-32-demo-architecture-단계별"><strong>슬라이드 32: Demo Architecture 단계별</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-32-demo-architecture-단계별" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“6단계로 DR을 구현합니다.</p>
+<p>1단계: 환경을 구성합니다.</p>
+<p>2단계: Target VPC를 구성합니다.</p>
+<p>3단계: Agent를 설치합니다.</p>
+<p>4단계: 데이터를 복제합니다.</p>
+<p>5단계: 복구를 시작합니다.</p>
+<p>6단계: 서비스를 확인합니다.”</p>
+<h3 id="슬라이드-33-3줄-요약"><strong>슬라이드 33: 3줄 요약</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-33-3줄-요약" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“첫째, 데이터와 메타데이터를 함께 백업하여 재해에 대비합니다.</p>
+<p>구성 정보도 백업 대상입니다.</p>
+<p>둘째, AWS DRS로 비용 효율적인 온프레미스 재해 복구를 구성합니다.</p>
+<p>유휴 복구 사이트가 불필요합니다.</p>
+<p>셋째, 재해 복구는 원타임 구축이 아닙니다.</p>
+<p>지속적인 검증과 보완만이 비즈니스 지속성을 보장합니다.”</p>
+<h3 id="슬라이드-34-참고-자료"><strong>슬라이드 34: 참고 자료</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#슬라이드-34-참고-자료" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“AWS Backup 워크샵을 활용하세요.</p>
+<p>AWS DRS 워크샵으로 실습할 수 있습니다.</p>
+<p>AWS 재해 복구 백서를 참조하세요.</p>
+<p>AWS Skill Builder에서 무료 온라인 트레이닝을 받으세요.</p>
+<p>모든 자료는 AWS 공식 사이트에서 제공됩니다.”</p>
+<hr/>
+<h2 id="발표-마무리"><strong>발표 마무리</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#발표-마무리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>“AWS는 클라우드와 온프레미스 모두를 위한 포괄적인 백업 및 DR 솔루션을 제공합니다.</p>
+<p>AWS Backup으로 중앙 집중식 백업 관리를 구현하세요.</p>
+<p>Storage Gateway로 하이브리드 백업을 구축하세요.</p>
+<p>AWS DRS로 신속한 재해 복구 체계를 확립하세요.</p>
+<p>비즈니스 요구사항에 맞는 DR 전략을 선택하세요.</p>
+<p>지속적인 검증과 테스트로 준비 태세를 유지하세요.</p>
+<p>감사합니다.”</p>
+<h1 id="case">Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="jyp">JYP<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#jyp" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol start="2">
+<li>Amazon RDS BackUp</li>
+</ol>
+<ul>
+<li>Amazon RDS에서 사용할 수 있는 BackUp 유형은 다음과 같이 분류할 수 있습니다. (<a href="https://aws.amazon.com/blogs/database/long-term-backup-options-for-amazon-rds-and-amazon-aurora/" class="external external-link">Long-term RDS 데이터 백업 옵션 Blog<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td><strong>백업 유형</strong></td><td><strong>관리 방식</strong></td><td><strong>백업 방식</strong></td><td><strong>생성 주기</strong></td><td><strong>복구 범위</strong></td><td><strong>비용</strong></td><td><strong>사용 사례</strong></td></tr><tr><td>RDS 자동백업</td><td>RDS 내장</td><td>전체백업+트랜잭션 로그</td><td>5분(트랜잭션로그)</td><td>5분 전~ 35일전</td><td>RDS 백업스토리지</td><td>일반적인 PITR</td></tr><tr><td>RDS 수동스냅샷</td><td>사용자관리</td><td>증분 스냅샷</td><td>생성 요청 시</td><td>스냅샷생성 시점</td><td>S3 스토리지</td><td>장기 보관</td></tr><tr><td>AWS Backup</td><td>중앙 집중식</td><td>스냅샷 기반</td><td>스케줄 기반</td><td>정책 기반</td><td>AWS Backup 요금</td><td>통합 백업 관리</td></tr></tbody></table></div>
+<ul>
+<li>
+<p>90일 기간의 RDS 데이터 보존 – Hybrid 방식</p>
+<ol>
+<li>
+<p>RDS 자동 백업을 최대 35일로 설정하여 사용하여 0~35일 데이터는restore-db-instance-to-point-in-time사용하여 복원 (<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIT.html" class="external external-link">PITR 가이드링크<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+</li>
+<li>
+<p>36일 부터 90일 까지의 데이터는 일 단위로 생성한 수동 스냅샷 (cron job 등으로 자동화)을 restore-db-instance-from-db-snapshot 사용하여복원 (<a href="https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/UserGuide/USER_RestoreFromSnapshot.html" class="external external-link">스냅샷 복원 가이드 링크<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+</li>
+<li>
+<p>90일 이후 수동 스냅샷은 일 단위로 차례로 삭제</p>
+</li>
+</ol>
+</li>
+<li>
+<p>90일 기간의 RDS 데이터 보존 – 수동 스냅샷 생성</p>
+<ol>
+<li>일 단위로 수동 스냅샷을 지속 생성하고 90일 이후 스냅샷 삭제</li>
+</ol>
+</li>
+<li>
+<p>90일 기간의 RDS 데이터 보존 – AWS Backup 사용 (<a href="https://aws.amazon.com/getting-started/hands-on/amazon-rds-backup-restore-using-aws-backup/" class="external external-link">AWS Backup for RDS 가이드링크<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ol>
+<li>
+<p>AWS Backup Vault 생성 후 RDS 데이터를 90일간 Retention 하는 Backup Plan 생성</p>
+</li>
+<li>
+<p>RDS 스냅샷 생성, Retention 기간 이후 폐기 등 자동화 되며 관리 부담이 없음</p>
+</li>
+<li>
+<p>RDS 자동 백업이나 수동 스냅샷 대비 비용 증가</p>
+</li>
+</ol>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-890" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#backup--dr-검토" data-for="backup--dr-검토">BackUp &amp; DR 검토</a></li><li class="depth-0"><a href="#meeting-december-23-2025" data-for="meeting-december-23-2025">Meeting @December 23, 2025</a></li><li class="depth-1"><a href="#attendee" data-for="attendee">Attendee</a></li><li class="depth-1"><a href="#discussion" data-for="discussion">Discussion</a></li><li class="depth-2"><a href="#on-prem-구성-및-백업-현황" data-for="on-prem-구성-및-백업-현황">On-prem 구성 및 백업 현황</a></li><li class="depth-2"><a href="#poc-진행" data-for="poc-진행">PoC 진행</a></li><li class="depth-2"><a href="#시험-제안" data-for="시험-제안">시험 제안</a></li><li class="depth-1"><a href="#todo" data-for="todo">ToDo</a></li><li class="depth-0"><a href="#meeting-november-25-2025" data-for="meeting-november-25-2025">Meeting @November 25, 2025</a></li><li class="depth-1"><a href="#backup-진행" data-for="backup-진행">BackUp 진행</a></li><li class="depth-1"><a href="#dr-구성" data-for="dr-구성">DR 구성</a></li><li class="depth-1"><a href="#storage-assessment" data-for="storage-assessment">Storage Assessment</a></li><li class="depth-0"><a href="#meeting-october-28-2025" data-for="meeting-october-28-2025">Meeting @October 28, 2025</a></li><li class="depth-1"><a href="#discussion-1" data-for="discussion-1">Discussion</a></li><li class="depth-0"><a href="#summary" data-for="summary">Summary</a></li><li class="depth-1"><a href="#1-이슈-내용-및-검토-목표" data-for="1-이슈-내용-및-검토-목표">1. 이슈 내용 및 검토 목표</a></li><li class="depth-1"><a href="#2-aws-클라우드-리소스-백업-방안" data-for="2-aws-클라우드-리소스-백업-방안">2. AWS 클라우드 리소스 백업 방안</a></li><li class="depth-2"><a href="#21-aws-backup-서비스-활용" data-for="21-aws-backup-서비스-활용">2.1 AWS Backup 서비스 활용</a></li><li class="depth-2"><a href="#22-ec2-인스턴스-백업-방법" data-for="22-ec2-인스턴스-백업-방법">2.2 EC2 인스턴스 백업 방법</a></li><li class="depth-2"><a href="#23-rds-데이터베이스-백업-방법" data-for="23-rds-데이터베이스-백업-방법">2.3 RDS 데이터베이스 백업 방법</a></li><li class="depth-2"><a href="#24-백업-비용-구조" data-for="24-백업-비용-구조">2.4 백업 비용 구조</a></li><li class="depth-1"><a href="#3-온프레미스-idc-서버의-aws-클라우드-백업dr-방안" data-for="3-온프레미스-idc-서버의-aws-클라우드-백업dr-방안">3. 온프레미스 IDC 서버의 AWS 클라우드 백업/DR 방안</a></li><li class="depth-2"><a href="#31-aws-storage-gateway를-통한-하이브리드-백업" data-for="31-aws-storage-gateway를-통한-하이브리드-백업">3.1 AWS Storage Gateway를 통한 하이브리드 백업</a></li><li class="depth-2"><a href="#32-aws-backup을-통한-온프레미스-vmware-백업" data-for="32-aws-backup을-통한-온프레미스-vmware-백업">3.2 AWS Backup을 통한 온프레미스 VMware 백업</a></li><li class="depth-2"><a href="#33-aws-elastic-disaster-recovery-drs-서비스" data-for="33-aws-elastic-disaster-recovery-drs-서비스">3.3 AWS Elastic Disaster Recovery (DRS) 서비스</a></li><li class="depth-2"><a href="#34-aws-application-migration-service-mgn" data-for="34-aws-application-migration-service-mgn">3.4 AWS Application Migration Service (MGN)</a></li><li class="depth-2"><a href="#35-재해-복구dr-전략-및-rtorpo" data-for="35-재해-복구dr-전략-및-rtorpo">3.5 재해 복구(DR) 전략 및 RTO/RPO</a></li><li class="depth-1"><a href="#4-제안-및-상세-분석" data-for="4-제안-및-상세-분석">4. 제안 및 상세 분석</a></li><li class="depth-2"><a href="#41-aws-클라우드-리소스-백업-전략-제안" data-for="41-aws-클라우드-리소스-백업-전략-제안">4.1 AWS 클라우드 리소스 백업 전략 제안</a></li><li class="depth-2"><a href="#42-온프레미스-서버-aws-백업dr-전략-제안" data-for="42-온프레미스-서버-aws-백업dr-전략-제안">4.2 온프레미스 서버 AWS 백업/DR 전략 제안</a></li><li class="depth-2"><a href="#43-베스트-프랙티스-및-권장-사항" data-for="43-베스트-프랙티스-및-권장-사항">4.3 베스트 프랙티스 및 권장 사항</a></li><li class="depth-2"><a href="#44-aws-systems-manager를-통한-온프레미스-관리" data-for="44-aws-systems-manager를-통한-온프레미스-관리">4.4 AWS Systems Manager를 통한 온프레미스 관리</a></li><li class="depth-1"><a href="#5-확장-검토-사항" data-for="5-확장-검토-사항">5. 확장 검토 사항</a></li><li class="depth-2"><a href="#51-향후-고려-사항" data-for="51-향후-고려-사항">5.1 향후 고려 사항</a></li><li class="depth-2"><a href="#52-준비할-백데이터-및-자료" data-for="52-준비할-백데이터-및-자료">5.2 준비할 백데이터 및 자료</a></li><li class="depth-0"><a href="#aws-백업-및-dr-솔루션-요약-장표-및-발표-스크립트" data-for="aws-백업-및-dr-솔루션-요약-장표-및-발표-스크립트">AWS 백업 및 DR 솔루션 요약 장표 및 발표 스크립트</a></li><li class="depth-1"><a href="#작성된-문서" data-for="작성된-문서">작성된 문서</a></li><li class="depth-2"><a href="#1-요약-장표-2페이지" data-for="1-요약-장표-2페이지">1. 요약 장표 (2페이지)</a></li><li class="depth-2"><a href="#2-전체-페이지-발표-스크립트" data-for="2-전체-페이지-발표-스크립트">2. 전체 페이지 발표 스크립트</a></li><li class="depth-1"><a href="#스크립트-작성-방식" data-for="스크립트-작성-방식">스크립트 작성 방식</a></li><li class="depth-1"><a href="#주요-특징" data-for="주요-특징">주요 특징</a></li><li class="depth-0"><a href="#script" data-for="script">Script</a></li><li class="depth-0"><a href="#aws-백업-및-dr-솔루션-발표-스크립트" data-for="aws-백업-및-dr-솔루션-발표-스크립트">AWS 백업 및 DR 솔루션 발표 스크립트</a></li><li class="depth-1"><a href="#요약-페이지-1-aws-클라우드-리소스-백업-전략-스크립트" data-for="요약-페이지-1-aws-클라우드-리소스-백업-전략-스크립트">요약 페이지 1: AWS 클라우드 리소스 백업 전략 스크립트</a></li><li class="depth-2"><a href="#오프닝" data-for="오프닝">오프닝</a></li><li class="depth-2"><a href="#섹션-1-백업-대상-및-방법" data-for="섹션-1-백업-대상-및-방법">섹션 1: 백업 대상 및 방법</a></li><li class="depth-2"><a href="#섹션-2-aws-backup-서비스-활용" data-for="섹션-2-aws-backup-서비스-활용">섹션 2: AWS Backup 서비스 활용</a></li><li class="depth-2"><a href="#섹션-3-교차-리전-백업-및-보안" data-for="섹션-3-교차-리전-백업-및-보안">섹션 3: 교차 리전 백업 및 보안</a></li><li class="depth-2"><a href="#섹션-4-권장-백업-정책" data-for="섹션-4-권장-백업-정책">섹션 4: 권장 백업 정책</a></li><li class="depth-2"><a href="#클로징" data-for="클로징">클로징</a></li><li class="depth-1"><a href="#요약-페이지-2-온프레미스-idc-백업dr-방안-스크립트" data-for="요약-페이지-2-온프레미스-idc-백업dr-방안-스크립트">요약 페이지 2: 온프레미스 IDC 백업/DR 방안 스크립트</a></li><li class="depth-2"><a href="#오프닝-1" data-for="오프닝-1">오프닝</a></li><li class="depth-2"><a href="#섹션-1-aws-storage-gateway-하이브리드-백업" data-for="섹션-1-aws-storage-gateway-하이브리드-백업">섹션 1: AWS Storage Gateway 하이브리드 백업</a></li><li class="depth-2"><a href="#섹션-2-aws-elastic-disaster-recovery" data-for="섹션-2-aws-elastic-disaster-recovery">섹션 2: AWS Elastic Disaster Recovery</a></li><li class="depth-2"><a href="#섹션-3-dr-전략-선택-가이드" data-for="섹션-3-dr-전략-선택-가이드">섹션 3: DR 전략 선택 가이드</a></li><li class="depth-2"><a href="#섹션-4-준비-데이터-및-참조-자료" data-for="섹션-4-준비-데이터-및-참조-자료">섹션 4: 준비 데이터 및 참조 자료</a></li><li class="depth-2"><a href="#클로징-1" data-for="클로징-1">클로징</a></li><li class="depth-1"><a href="#기존-문서-주요-페이지-스크립트" data-for="기존-문서-주요-페이지-스크립트">기존 문서 주요 페이지 스크립트</a></li><li class="depth-2"><a href="#슬라이드-3-재해복구-개념" data-for="슬라이드-3-재해복구-개념">슬라이드 3: 재해복구 개념</a></li><li class="depth-2"><a href="#슬라이드-4-rporto-개념" data-for="슬라이드-4-rporto-개념">슬라이드 4: RPO/RTO 개념</a></li><li class="depth-2"><a href="#슬라이드-5-클라우드-dr-전략-4가지" data-for="슬라이드-5-클라우드-dr-전략-4가지">슬라이드 5: 클라우드 DR 전략 4가지</a></li><li class="depth-2"><a href="#슬라이드-6-rto-기준-비용-분석" data-for="슬라이드-6-rto-기준-비용-분석">슬라이드 6: RTO 기준 비용 분석</a></li><li class="depth-2"><a href="#슬라이드-7-rpo-기준-비용-분석" data-for="슬라이드-7-rpo-기준-비용-분석">슬라이드 7: RPO 기준 비용 분석</a></li><li class="depth-2"><a href="#슬라이드-10-백업-대상" data-for="슬라이드-10-백업-대상">슬라이드 10: 백업 대상</a></li><li class="depth-2"><a href="#슬라이드-11-메타데이터-백업" data-for="슬라이드-11-메타데이터-백업">슬라이드 11: 메타데이터 백업</a></li><li class="depth-2"><a href="#슬라이드-12-backup--restore-아키텍처" data-for="슬라이드-12-backup--restore-아키텍처">슬라이드 12: Backup &amp; Restore 아키텍처</a></li><li class="depth-2"><a href="#슬라이드-13-aws-backup-개요" data-for="슬라이드-13-aws-backup-개요">슬라이드 13: AWS Backup 개요</a></li><li class="depth-2"><a href="#슬라이드-14-재해복구-자동화-구현-예" data-for="슬라이드-14-재해복구-자동화-구현-예">슬라이드 14: 재해복구 자동화 구현 예</a></li><li class="depth-2"><a href="#슬라이드-15-iac-관리-및-백업" data-for="슬라이드-15-iac-관리-및-백업">슬라이드 15: IaC 관리 및 백업</a></li><li class="depth-2"><a href="#슬라이드-16-iac-코드-의존성-분리" data-for="슬라이드-16-iac-코드-의존성-분리">슬라이드 16: IaC 코드 의존성 분리</a></li><li class="depth-2"><a href="#슬라이드-17-관리형-리소스-간접-접근" data-for="슬라이드-17-관리형-리소스-간접-접근">슬라이드 17: 관리형 리소스 간접 접근</a></li><li class="depth-2"><a href="#슬라이드-18-재해복구-태스크-독립성" data-for="슬라이드-18-재해복구-태스크-독립성">슬라이드 18: 재해복구 태스크 독립성</a></li><li class="depth-2"><a href="#슬라이드-19-지속적인-검증-및-보완" data-for="슬라이드-19-지속적인-검증-및-보완">슬라이드 19: 지속적인 검증 및 보완</a></li><li class="depth-2"><a href="#슬라이드-20-air-gaped-vault-보안-아키텍처" data-for="슬라이드-20-air-gaped-vault-보안-아키텍처">슬라이드 20: Air-gaped Vault 보안 아키텍처</a></li><li class="depth-2"><a href="#슬라이드-22-클라우드-재해복구-장점" data-for="슬라이드-22-클라우드-재해복구-장점">슬라이드 22: 클라우드 재해복구 장점</a></li><li class="depth-2"><a href="#슬라이드-23-클라우드-dr-비즈니스-효과" data-for="슬라이드-23-클라우드-dr-비즈니스-효과">슬라이드 23: 클라우드 DR 비즈니스 효과</a></li><li class="depth-2"><a href="#슬라이드-25-aws-drs-소개" data-for="슬라이드-25-aws-drs-소개">슬라이드 25: AWS DRS 소개</a></li><li class="depth-2"><a href="#슬라이드-26-aws-drs-사용-패턴" data-for="슬라이드-26-aws-drs-사용-패턴">슬라이드 26: AWS DRS 사용 패턴</a></li><li class="depth-2"><a href="#슬라이드-27-aws-drs-작동-방식" data-for="슬라이드-27-aws-drs-작동-방식">슬라이드 27: AWS DRS 작동 방식</a></li><li class="depth-2"><a href="#슬라이드-28-aws-drs-지원-대상" data-for="슬라이드-28-aws-drs-지원-대상">슬라이드 28: AWS DRS 지원 대상</a></li><li class="depth-2"><a href="#슬라이드-29-aws-drs-아키텍처" data-for="슬라이드-29-aws-drs-아키텍처">슬라이드 29: AWS DRS 아키텍처</a></li><li class="depth-2"><a href="#슬라이드-31-demo-architecture" data-for="슬라이드-31-demo-architecture">슬라이드 31: Demo Architecture</a></li><li class="depth-2"><a href="#슬라이드-32-demo-architecture-단계별" data-for="슬라이드-32-demo-architecture-단계별">슬라이드 32: Demo Architecture 단계별</a></li><li class="depth-2"><a href="#슬라이드-33-3줄-요약" data-for="슬라이드-33-3줄-요약">슬라이드 33: 3줄 요약</a></li><li class="depth-2"><a href="#슬라이드-34-참고-자료" data-for="슬라이드-34-참고-자료">슬라이드 34: 참고 자료</a></li><li class="depth-1"><a href="#발표-마무리" data-for="발표-마무리">발표 마무리</a></li><li class="depth-0"><a href="#case" data-for="case">Case</a></li><li class="depth-1"><a href="#jyp" data-for="jyp">JYP</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Global Infra &amp; Networking 5c71e31d24ff4458b2a3625ece5cf601 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Global Infra &amp; Networking 5c71e31d24ff4458b2a3625ece5cf601 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Global Infra &amp; Networking 5c71e31d24ff4458b2a3625ece5cf601 | LLM Wiki"/><meta name="twitter:description" content="🏑 Global Infra &amp; Networking Global Infra Network Bandwidth CDN Direct Connect AWS VPC (Virtual Private Cloud) Network Architecture with VPC IP Address CIDR CIDR block change Reserved IP Public IP - EIP (Elastic IP Address) VPC Traffic Control Network ACL (NACL) Security Group NACL Rule SG Rule ..."/><meta property="og:description" content="🏑 Global Infra &amp; Networking Global Infra Network Bandwidth CDN Direct Connect AWS VPC (Virtual Private Cloud) Network Architecture with VPC IP Address CIDR CIDR block change Reserved IP Public IP - EIP (Elastic IP Address) VPC Traffic Control Network ACL (NACL) Security Group NACL Rule SG Rule ..."/><meta property="og:image:alt" content="🏑 Global Infra &amp; Networking Global Infra Network Bandwidth CDN Direct Connect AWS VPC (Virtual Private Cloud) Network Architecture with VPC IP Address CIDR CIDR block change Reserved IP Public IP - EIP (Elastic IP Address) VPC Traffic Control Network ACL (NACL) Security Group NACL Rule SG Rule ..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/global-infra--and--networking-5c71e31d24ff4458b2a3625ece5cf601"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/global-infra--and--networking-5c71e31d24ff4458b2a3625ece5cf601"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🏑 Global Infra &amp; Networking Global Infra Network Bandwidth CDN Direct Connect AWS VPC (Virtual Private Cloud) Network Architecture with VPC IP Address CIDR CIDR block change Reserved IP Public IP - EIP (Elastic IP Address) VPC Traffic Control Network ACL (NACL) Security Group NACL Rule SG Rule ..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/global-infra--and--networking-5c71e31d24ff4458b2a3625ece5cf601" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2214" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2214" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Global Infra &amp; Networking 5c71e31d24ff4458b2a3625ece5cf601</a></div></nav><h1 class="article-title">Global Infra &amp; Networking 5c71e31d24ff4458b2a3625ece5cf601</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.488Z">2026년 6월 06일</time><span>18 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🏑</p>
+<h1 id="global-infra--networking">Global Infra &amp; Networking<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#global-infra--networking" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#a9f18c7f-14b0-4de0-919a-dd80a0dc1d65" class="internal internal-link alias">Global Infra</a></p>
+<p><a href="#5aca5c9f-9c94-4741-af6b-129766d13614" class="internal internal-link alias">Network Bandwidth</a></p>
+<p><a href="#d51793aa-ae86-4512-9005-d1f0739296ab" class="internal internal-link alias">CDN</a></p>
+<p><a href="#0e8f031b-f5d9-4266-8668-aab227894d80" class="internal internal-link alias">Direct Connect</a></p>
+<p><a href="#48548811-5ad6-47e4-9016-26696751636c" class="internal internal-link alias">AWS VPC (Virtual Private Cloud)</a></p>
+<p><a href="#d92bc3fd-7b47-483b-ad5d-c634e60a563a" class="internal internal-link alias">Network Architecture with VPC</a></p>
+<p><a href="#ae9b0d83-6a09-4290-9af4-b1489ee31593" class="internal internal-link alias">IP Address</a></p>
+<p><a href="#ef4c760c-ac63-4376-bff7-c75beedcf1a2" class="internal internal-link alias">CIDR</a></p>
+<p><a href="#90255c99-5380-48d8-ac4e-9ab0828ea8f0" class="internal internal-link alias">CIDR block change</a></p>
+<p><a href="#ace734ec-05eb-4695-b6f0-bddfe1a49893" class="internal internal-link alias">Reserved IP</a></p>
+<p><a href="#12ac7322-9835-4873-bbdd-c77a643cdda7" class="internal internal-link alias">Public IP - EIP (Elastic IP Address)</a></p>
+<p><a href="#fbd3e61b-c729-42cb-9bc5-257dce3c342b" class="internal internal-link alias">VPC Traffic Control</a></p>
+<p><a href="#8a1bc1df-26c6-41ea-b743-04f0b73f566d" class="internal internal-link alias">Network ACL (NACL)</a></p>
+<p><a href="#e0b5e4df-ebb9-4d8d-9e33-3f9cd416c55f" class="internal internal-link alias">Security Group</a></p>
+<p><a href="#806335f1-d436-4deb-9b37-15fa46e88a55" class="internal internal-link alias">NACL Rule</a></p>
+<p><a href="#5b8e1277-78eb-42cc-bec5-787a9d5f8186" class="internal internal-link alias">SG Rule</a></p>
+<p><a href="#30cd3d6b-9cec-4d8b-a577-71fdcb603dad" class="internal internal-link alias">VPC Routing Enhancement - MSR (More Specific Route)</a></p>
+<p><a href="#2228f0cb-3b61-431e-9c55-190ecf52b072" class="internal internal-link alias">VPC Peering</a></p>
+<p><a href="#72db2c04-e80a-430f-9b3a-f7e7431c5bd4" class="internal internal-link alias">Inter-region VPC Peering Limitation</a></p>
+<p><a href="#f8d53082-1d3f-4698-96f6-ca64ca001351" class="internal internal-link alias">Transit Gateway</a></p>
+<p><a href="#89b56f3a-f4c5-42ce-b17f-01a39b40769e" class="internal internal-link alias">Intra-Region Peering</a></p>
+<p><a href="#da79b046-1d16-4d97-8cf3-35b7054f1bc3" class="internal internal-link alias">Enhanced Transit Gateway design for Global Network</a></p>
+<p><a href="#a0c99824-2534-40fa-9645-be6dd3af52e4" class="internal internal-link alias">Hybrid Networking</a></p>
+<p><a href="#5c932c2b-3a1a-48e5-8bee-61510ced6742" class="internal internal-link alias">VPN Connectivity</a></p>
+<p><a href="#59354a3c-bb95-4579-81ef-e0bdcb95464c" class="internal internal-link alias">Site-to-Site VPN</a></p>
+<p><a href="#7bf50552-a56f-47ac-b41e-456b7d1fbe1b" class="internal internal-link alias">Concepts</a></p>
+<p><a href="#1cd780ca-ceb7-4f62-b20d-75ff857d425b" class="internal internal-link alias">Virtual Private Gateway (VGW)</a></p>
+<p><a href="#d70a5116-adf8-439f-9e0c-3ebd58600234" class="internal internal-link alias">Routing Options</a></p>
+<p><a href="#3124963b-2208-4da9-83e3-040eb33f7ef3" class="internal internal-link alias">VPN Performance</a></p>
+<p><a href="#844db8d4-dcb5-4b49-ad76-56ab12dacfd8" class="internal internal-link alias">Direct Connect</a></p>
+<p><a href="#4a31a4b1-6aea-4a6c-8112-6e5a09fbd66d" class="internal internal-link alias">Connection</a></p>
+<p><a href="#3f71c950-b506-4d87-8ca0-10b843937b64" class="internal internal-link alias">Virtual Interfaces (VIFs)</a></p>
+<p><a href="#7353994a-390d-4444-9b3f-0905c2edb03a" class="internal internal-link alias">Performance</a></p>
+<p><a href="#93a60888-3603-4c5a-a1b7-436e3f5f09d0" class="internal internal-link alias">Direct Connect SiteLink</a></p>
+<p><a href="#4263584f-80c4-4a2e-b670-60d8489951fa" class="internal internal-link alias">AWS PrivateLink</a></p>
+<p><a href="#4b13b7e3-45bf-4be9-8217-95008214fa9b" class="internal internal-link alias">VPC Endpoint</a></p>
+<p><a href="#233f1f3f-1b13-44f4-85c7-7616b49595a5" class="internal internal-link alias">Gateway Endpoint</a></p>
+<p><a href="#bf7a3be7-0eb7-4266-8995-69c3baa5293d" class="internal internal-link alias">Interface Endpoint</a></p>
+<p><a href="#bf17025c-f339-4c0a-b70c-9344bce00d1b" class="internal internal-link alias">DX MACSec</a></p>
+<p><a href="#07897d79-b975-453f-bcfa-55a3abeab875" class="internal internal-link alias">DX SiteLink</a></p>
+<p><a href="#bc306d14-59af-4917-a9cd-c5d539c66c06" class="internal internal-link alias">Private NAT</a></p>
+<p><a href="#32fc8b16-c91f-4aec-88f3-754e72b7ee42" class="internal internal-link alias">NLB target group as ALB</a></p>
+<p><a href="#ec278a47-8d64-4356-926c-1f0d91823226" class="internal internal-link alias">CloudWAN</a></p>
+<p><a href="#0c06406c-731d-4924-84c0-b72befb80c4a" class="internal internal-link alias">Feature</a></p>
+<p><a href="#9c78fad0-b835-4ca0-a4cf-667c8206f655" class="internal internal-link alias">Terminology</a></p>
+<p><a href="#a1b0d4a3-aabe-45f2-b951-aac9468c5b3b" class="internal internal-link alias">Monitoring</a></p>
+<p><a href="#40da3df7-68b9-4a5e-ad48-d3689081f6b7" class="internal internal-link alias">VPC Flow Logs</a></p>
+<p><a href="#68c043da-9dc9-44db-90bc-a60218635f1b" class="internal internal-link alias">VPC Traffic Mirroring</a></p>
+<p><a href="#54ff2208-f6da-4b94-9577-2c47044c882a" class="internal internal-link alias">Network Manager</a></p>
+<p><a href="#d8c25f51-ef8e-413e-84c1-6c65e4a5b3f3" class="internal internal-link alias">VPC IP Address Manager (IPAM)</a></p>
+<p><a href="#fe6291a5-9edc-40d8-82f8-4d6951ec2420" class="internal internal-link alias">VPC Network Access Analyzer</a></p>
+<p><a href="#8291f53b-4ad5-4a99-a26d-19109d5bccf2" class="internal internal-link alias">Security &amp; Compliance</a></p>
+<p><a href="#cbcbccae-255f-40e4-a354-275539f01dd0" class="internal internal-link alias">Gateway Load Balancer (GWLB)</a></p>
+<p><a href="#9a333c23-71e0-4056-92db-7750d908c104" class="internal internal-link alias">Gateway Load Balancer Endpoint</a></p>
+<p><a href="#53215acc-79ad-4b77-aae0-1356341a856b" class="internal internal-link alias">AWS Network Firewall (ANFW)</a></p>
+<p><a href="#39f047c5-221d-440d-ac07-9c6d24763d45" class="internal internal-link alias">Requirements</a></p>
+<p><a href="#6cb43f0d-2132-4d02-b778-5b2a49cfa928" class="internal internal-link alias">Network Firewall</a></p>
+<p><a href="#e9352dcc-f11b-4f55-b37a-45b9402d1220" class="internal internal-link alias">Use Case</a></p>
+<p><a href="../../../global-infra--and--networking/untitled.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-172.png" alt/></a></p>
+<p><a href="../../../global-infra--and--networking/untitled-1.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-107.png" alt/></a></p>
+<h1 id="global-infra">Global Infra<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#global-infra" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Infra MAP : <a href="https://aws.amazon.com/about-aws/global-infrastructure/?nc1=h_ls" class="external external-link">https://aws.amazon.com/about-aws/global-infrastructure/?nc1=h_ls<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Infra DashBoard : <a href="https://palpatine.corp.amazon.com/" class="external external-link">https://palpatine.corp.amazon.com/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<h2 id="network-bandwidth">Network Bandwidth<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#network-bandwidth" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>parallel 100 GbE metro fiber network</li>
+</ul>
+<h2 id="cdn">CDN<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cdn" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Global Edge Location : <a href="https://aws.amazon.com/ko/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&amp;whats-new-cloudfront.sort-order=desc" class="external external-link">https://aws.amazon.com/ko/cloudfront/features/?whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&amp;whats-new-cloudfront.sort-order=desc<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h2 id="direct-connect">Direct Connect<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#direct-connect" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>DX Location : <a href="https://aws.amazon.com/ko/directconnect/locations/?nc1=h_ls" class="external external-link">https://aws.amazon.com/ko/directconnect/locations/?nc1=h_ls<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h1 id="aws-vpc-virtual-private-cloud">AWS VPC (Virtual Private Cloud)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-vpc-virtual-private-cloud" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>💡</p>
+<p>AWS cloud의 논리적으로 격리된 사용자가 정의한 네트워크 섹션 (공간) 으로 AWS 리소스를 시작(launch) 할 수 있다</p>
+<h2 id="network-architecture-with-vpc">Network Architecture with VPC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#network-architecture-with-vpc" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://docs.aws.amazon.com/quickstart/latest/vpc/architecture.html" class="external external-link">https://docs.aws.amazon.com/quickstart/latest/vpc/architecture.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>Private subnet = 2 * Public subnet</li>
+</ul>
+<h2 id="ip-address">IP Address<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ip-address" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="cidr">CIDR<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cidr" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>IP Address Class</p>
+<ul>
+<li>
+<p>Network Address + Host Address 구분 방식에 따라 분류</p>
+</li>
+<li>
+<p>Network Address : 네트워크를 식별 하기 위한 주소</p>
+</li>
+<li>
+<p>Host Address : 네트워크 내의 host computer를 식별 하기 위한 주소</p>
+</li>
+<li>
+<p>A Class</p>
+<ul>
+<li>
+<p>N 8bit : 1.0.0.0 ~ 127.0.0.0 (126)</p>
+</li>
+<li>
+<p>H 24bit : 2^24 (16M)</p>
+</li>
+<li>
+<p>Private IP : 10.0.0.0 ~ 10.255.255.255</p>
+</li>
+</ul>
+</li>
+<li>
+<p>B Class</p>
+<ul>
+<li>
+<p>N 16bit : 128.0.0.0 ~ 191.255.0.0 (16,382)</p>
+</li>
+<li>
+<p>H 16bit : 2 ^16 (64K)</p>
+</li>
+<li>
+<p>Private IP : 172.16.0.0 ~ 172.31.255.255</p>
+</li>
+</ul>
+</li>
+<li>
+<p>C Class</p>
+<ul>
+<li>
+<p>N 24bit : 192.0.0.0 ~ 223.255.255.0 (2M)</p>
+</li>
+<li>
+<p>H 8 bit : 2^8 (254)</p>
+</li>
+<li>
+<p>Private IP : 192.168.0.0 ~ 192.168.255.255</p>
+</li>
+</ul>
+</li>
+<li>
+<p>D,E Class : 연구 또는 개발용으로 예약된 IP</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CIDR notation</p>
+<ul>
+<li>
+<p>IP 주소 할당 방법, supernetting : 여러개의 작은 network를 하나의 커다란 network으로 바꾸는 작업, subnetting의 반대</p>
+</li>
+<li>
+<p>가변 길이의 subnet maasking을 기반으로 함</p>
+</li>
+<li>
+<p>CIDR block은 같은 prefix를 공유하는 address group</p>
+</li>
+<li>
+<p>Prefix (network address) + suffix (address bit)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cidr-block-change">CIDR block change<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cidr-block-change" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://aws.amazon.com/ko/premiumsupport/knowledge-center/vpc-ip-address-range/" class="external external-link">https://aws.amazon.com/ko/premiumsupport/knowledge-center/vpc-ip-address-range/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>보조 CIDR을 VPC에 추가</p>
+</li>
+<li>
+<p>선호 CIDR에서 새 VPC 생성 후 리소스 migration</p>
+</li>
+</ul>
+<h3 id="reserved-ip">Reserved IP<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reserved-ip" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Subnet의 처음 4개 IP와 마지막 1개 IP는 예약 되어 있음</p>
+<ul>
+<li>
+<p>10.0.0.0/24 subnet</p>
+</li>
+<li>
+<p>10.0.0.0 : Network address</p>
+</li>
+<li>
+<p>10.0.0.1 : Reserved for the VPC route</p>
+</li>
+<li>
+<p>10.0.0.2 : Reserved by AWS</p>
+</li>
+<li>
+<p>10.0.0.3 : Reserved for future use</p>
+</li>
+<li>
+<p>10.0.0.255 : Network broadcast address (broadcast not support)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="public-ip---eip-elastic-ip-address">Public IP - EIP (Elastic IP Address)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#public-ip---eip-elastic-ip-address" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>EIP는 생성 후 실행 중 인스턴스와 연결되지 않거나, 중지된 혹은 연결되지 않은 network interface와 연결될 경우 소액의 시간당 요금이 부과</p>
+</li>
+<li>
+<p>Amazon EIP Pool에서 주소를 할당 → Region당 기본 5개 EIP 할당 가능</p>
+</li>
+<li>
+<p>Bring Your Own IP (BYOIP)</p>
+<ul>
+<li>ARIN, RIPE, APNIC 등의 기관에 등록된 주소 범위를 가져와 사용 : up to /24 range</li>
+</ul>
+</li>
+<li>
+<p>AWS IP Range</p>
+<ul>
+<li>
+<p><a href="https://ip-ranges.amazonaws.com/ip-ranges.json" class="external external-link">https://ip-ranges.amazonaws.com/ip-ranges.json<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Seoul Region IP range print</p>
+</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> https://ip-ranges.amazonaws.com/ip-ranges.json</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> jq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -r</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '.prefixes[] | select(.region==&quot;ap-northeast-2&quot;) | select(.service==&quot;EC2&quot;) | .ip_prefix'</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">base</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">➜</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  aws-amplify-react-iot-pub-sub-using-cp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> git:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> https://ip-ranges.amazonaws.com/ip-ranges.json</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> jq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -r</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '.prefixes[] | select(.region==&quot;us-west-2&quot;) | select(.service==&quot;EC2&quot;) | .ip_prefix'</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">142.4.160.56/29</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">15.220.252.0/22</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">54.148.0.0/15</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">...</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">52.94.248.96/28</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">99.77.186.0/24</span></span></code></pre></figure>
+<ul>
+<li>IP by Service</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">base</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">➜</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  aws-amplify-react-iot-pub-sub-using-cp</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> git:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">curl</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -s</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> https://ip-ranges.amazonaws.com/ip-ranges.json</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> jq</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -r</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '.prefixes[] | select(.region==&quot;ap-northeast-2&quot;) | .service'</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">AMAZON</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">S3</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">DYNAMODB</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">EC2</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">GLOBALACCELERATOR</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">ROUTE53_HEALTHCHECKS_PUBLISHING</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">ROUTE53_RESOLVER</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">CODEBUILD</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">CLOUDFRONT</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">CLOUDFRONT_ORIGIN_FACING</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">WORKSPACES_GATEWAYS</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">EC2_INSTANCE_CONNECT</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">API_GATEWAY</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">CLOUD9</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">AMAZON</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">AMAZON_APPFLOW</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">EBS</span></span></code></pre></figure>
+</li>
+</ul>
+<h1 id="vpc-traffic-control">VPC Traffic Control<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-traffic-control" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="network-acl-nacl">Network ACL (NACL)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#network-acl-nacl" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Subnet 내부와 외부의 traffic 제어</p>
+</li>
+<li>
+<p>1개의 Subnet은 1개의 NACL에만 연결 가능</p>
+</li>
+<li>
+<p>Default는 모든 inbound 및 outbound traffic을 허용</p>
+</li>
+<li>
+<p>Network firewall</p>
+</li>
+</ul>
+<h2 id="security-group">Security Group<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#security-group" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Instance firewall</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-2.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-92.png" alt/></a></p>
+<p><a href="../../../global-infra--and--networking/untitled-3.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-82.png" alt/></a></p>
+<h2 id="nacl-rule">NACL Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nacl-rule" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>기본적으로 모든 인바운드 및 아웃바운드 IPv4 트래픽을 허용</p>
+</li>
+<li>
+<p>가장 낮은 번호가 지정된 규칙부터 시작 → 규칙에 일치하는 트래픽이 있으면 이와 모순되는 상위 규칙이 있더라도 적용</p>
+</li>
+<li>
+<p>별표로 된 기본 규칙이 포함 : 이 규칙은 패킷이 다른 어떤 규칙과도 일치하지 않을 경우에는 거부되도록 되어 있습니다. 이 규칙을 수정하거나 제거할 수 없습니다.</p>
+</li>
+<li>
+<p>Source : Where it can come from</p>
+</li>
+<li>
+<p>Destination : Where to go</p>
+</li>
+</ul>
+<h2 id="sg-rule">SG Rule<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sg-rule" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>허용 규칙을 지정할 수 있지만 거부 규칙은 지정할 수 없습니다</p>
+</li>
+<li>
+<p>보안 그룹을 처음 만들 때 인바운드 규칙이 없습니다. 따라서 보안 그룹에 인바운드 규칙을 추가하기 전에는 어떤 인바운드 트래픽도 허용되지 않습니다.</p>
+</li>
+<li>
+<p>보안 그룹을 처음 생성하면 리소스의 모든 아웃바운드 트래픽을 허용하는 아웃바운드 규칙이 있습니다.</p>
+<ul>
+<li>규칙을 제거할 수 있으며 특정 아웃바운드 트래픽만 허용하는 아웃바운드 규칙을 추가할 수 있습니다. 보안 그룹에 아웃바운드 규칙이 없는 경우 어떤 아웃바운드 트래픽도 허용되지 않습니다.</li>
+</ul>
+</li>
+<li>
+<p>Destination - Prefix List</p>
+<ul>
+<li>CIDR block set : 보안 그룹과 라우팅 테이블을 보다 쉽게 구성하고 유지, 관리</li>
+</ul>
+</li>
+</ul>
+<h2 id="vpc-routing-enhancement---msr-more-specific-route">VPC Routing Enhancement - MSR (More Specific Route)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-routing-enhancement---msr-more-specific-route" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/blogs/aws/inspect-subnet-to-subnet-traffic-with-amazon-vpc-more-specific-routing/" class="external external-link">https://aws.amazon.com/blogs/aws/inspect-subnet-to-subnet-traffic-with-amazon-vpc-more-specific-routing/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>Inspect Traffic between Subnets</p>
+</li>
+<li>
+<p>Routes in a routing table can have routes more specific than the default local route : 기본 routing 보다 상세 routing 우선 처리</p>
+</li>
+<li>
+<p>보안을 위한 VPC 내부 traffic 우회 경로로 사용 가능</p>
+<ul>
+<li>
+<p>VPC 내부 보안 / traffic 검사를 위한 우회</p>
+</li>
+<li>
+<p>VPC 내부 ANFW, GWLB 등의 보안 subnet 구성</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-4.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-82.png" alt/></a></p>
+<p><a href="../../../global-infra--and--networking/untitled-5.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-78.png" alt/></a></p>
+<p><a href="../../../global-infra--and--networking/untitled-6.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-74.png" alt/></a></p>
+<ul>
+<li>
+<p>1st subnet : bastion host in public</p>
+</li>
+<li>
+<p>2nd subnet : API &amp; database in private</p>
+</li>
+<li>
+<p>Requirements</p>
+<ul>
+<li>
+<p>Route traffic to private application for Intrusion Detection</p>
+</li>
+<li>
+<p>Create private application in 3rd subnet</p>
+</li>
+<li>
+<p>Private application could be GWLB, ANFW, 3rd party tool</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Send traffic from Bastion Host subnet to IDS subnet</p>
+<ul>
+<li>add route table : 10.0.1.0/24 → eni0 of IDS application</li>
+</ul>
+</li>
+<li>
+<p>Reply IDS subnet to Bastion Host subnet</p>
+<ul>
+<li>add route table : 10.0.0.0/24 → eni0 of Bastion Host</li>
+</ul>
+</li>
+<li>
+<p>Configure IDS appliance instance to forward all traffic</p>
+</li>
+</ul>
+<h2 id="vpc-peering">VPC Peering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-peering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>2개의 VPC간 networking connection</p>
+</li>
+<li>
+<p>다른 Account VPC, 다른 Region VPC (inter-region VPC peering) 연결 가능</p>
+</li>
+<li>
+<p>Transitive peering : Peering 전이는 지원되지 않음</p>
+</li>
+<li>
+<p>2개 VPC 사이에는 한번에 한개의 peering connection만 가능</p>
+</li>
+<li>
+<p>DNS resolution 사용</p>
+<ul>
+<li>
+<p><a href="https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html#vpc-peering-dns" class="external external-link">https://docs.aws.amazon.com/vpc/latest/peering/modify-peering-connections.html#vpc-peering-dns<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/premiumsupport/knowledge-center/vpc-peering-troubleshoot-dns-resolution/" class="external external-link">https://aws.amazon.com/premiumsupport/knowledge-center/vpc-peering-troubleshoot-dns-resolution/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/premiumsupport/knowledge-center/vpc-connectivity-reachability-analyzer/" class="external external-link">Reachability Analyzer<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>를 사용하여 VPC 피어링을 사용하여 연결된 VPC의 두 리소스 간 연결성 확인 가능</p>
+</li>
+</ul>
+<h3 id="inter-region-vpc-peering-limitation">Inter-region VPC Peering Limitation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#inter-region-vpc-peering-limitation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Max MTU : 1.5 KBytes (Jumbo Frame 지원되지 않음)</p>
+</li>
+<li>
+<p>Security Group 참조 되지 않음</p>
+</li>
+<li>
+<p>DNS resolution (해석) 되지 않음</p>
+</li>
+</ul>
+<h2 id="transit-gateway">Transit Gateway<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transit-gateway" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="intra-region-peering">Intra-Region Peering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#intra-region-peering" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://aws.amazon.com/blogs/networking-and-content-delivery/aws-transit-gateway-now-supports-intra-region-peering/" class="external external-link">https://aws.amazon.com/blogs/networking-and-content-delivery/aws-transit-gateway-now-supports-intra-region-peering/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="enhanced-transit-gateway-design-for-global-network">Enhanced Transit Gateway design for Global Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#enhanced-transit-gateway-design-for-global-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Inter-Region peering : 계층형 아키텍쳐</p>
+</li>
+<li>
+<p>Inter-Region peering : Global backbone 연계</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-7.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-72.png" alt/></a></p>
+<h1 id="hybrid-networking">Hybrid Networking<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hybrid-networking" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="vpn-connectivity">VPN Connectivity<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpn-connectivity" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>AWS Managed VPN (Site-to-Site VPN)</p>
+</li>
+<li>
+<p>AWS Direct Connect</p>
+</li>
+<li>
+<p>AWS Direct Connect + VPN</p>
+</li>
+<li>
+<p>AWS VPN CloudHub</p>
+</li>
+<li>
+<p>Software VPN</p>
+</li>
+<li>
+<p>Transit VPC</p>
+</li>
+<li>
+<p>VPC Peering</p>
+</li>
+<li>
+<p>AWS PrivateLink</p>
+</li>
+<li>
+<p>VPC Endpoints</p>
+</li>
+</ul>
+<h2 id="site-to-site-vpn">Site-to-Site VPN<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#site-to-site-vpn" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Amazon VPC와 customer on-prem network 연결</p>
+</li>
+<li>
+<p>AWS Classic VPN or AWS VPN connection</p>
+</li>
+<li>
+<p>IPsec (Internet Protocol security) VPN connection 지원</p>
+</li>
+</ul>
+<h3 id="concepts">Concepts<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#concepts" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>VPN connection : VPC와 on-prem network간의 secure connection</p>
+</li>
+<li>
+<p>VPN tunnel : Encrypted link로 customer network과 AWS간 데이터 송수신 됨. VPN connection당 2개의 VPN tunnel을 가지고 있음 (고가용성)</p>
+</li>
+<li>
+<p>Customer Gateway (CGW) &amp; Customer Gateway device : customer side gateway device or software application (Site-to-Site connection 연결을 담당)</p>
+</li>
+<li>
+<p>Target Gateway : AWS side에서 Site-to-Site VPN connection을 하는 VPN endpoint</p>
+</li>
+<li>
+<p>Virtual Private Gateway : VPN endpoint on the Amazon side로 단일 VPC에 연결 될 수 있음</p>
+</li>
+<li>
+<p>Transit Gateway : VPN endpoint on the Amazon side로 여러개의 VPC를 연결할 수 있는 transit hub 역할</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-8.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8-68.png" alt/></a></p>
+<h3 id="virtual-private-gateway-vgw">Virtual Private Gateway (VGW)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#virtual-private-gateway-vgw" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>ASN (Autonomous System Number) 지정 : 회사에서 관리하는 자율 라우터 시스템을 식별하기 위한 고유한 숫자로 망식별 번호라고 함</p>
+<ul>
+<li>
+<p>4 byte ASN ( ~ 2147483647) for VGW</p>
+</li>
+<li>
+<p>2 byte ASN ( ~ 65535) for CGW</p>
+</li>
+<li>
+<p>public ASN을 사용할 수 있고 없는 경우 private ASN을 지정하여 사용 (64512 ~ 65534) : 기본값은 65000</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Certificate 기반으로 인증할 경우 ARN의 ACM private certificate을 사용할 수 있음</p>
+</li>
+</ul>
+<h3 id="routing-options">Routing Options<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#routing-options" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Dynamic routing</p>
+<ul>
+<li>
+<p>CGW가 BGP (Border Gateway Protocol)을 지원할 경우 사용</p>
+</li>
+<li>
+<p>BGP advertising을 사용하여 VGW로 routing 할 것을 알림</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Static routing</p>
+<ul>
+<li>
+<p>BGP advertising 지원하지 않을 경우 static routing 선택하고 static IP prefix를 지정 : CIDR notation 사용</p>
+</li>
+<li>
+<p>VPC를 advertising 하기 위해 IP prefix 사용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Route table</p>
+<ul>
+<li>
+<p>VPC내 traffic의 target을 VGW로 지정 → VGW에 생성된 VPN tunnel을 통해 전송</p>
+</li>
+<li>
+<p>Route propagation을 활성화 하면 자동으로 network route를 전파</p>
+</li>
+<li>
+<p>Route가 중복될 경우 Local route가 우선</p>
+<ul>
+<li>Local route → VGW → Network Interface → Instance ID → VPC peering connection → NAT gateway → Transit gateway → Gateway VPC endpoint</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="vpn-performance">VPN Performance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpn-performance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Througput : ~ 1.25 Gbps per tunnel</p>
+</li>
+<li>
+<p>실제 througput은 더 낮음 : 인터넷 경로로 traverse 하기 때문</p>
+</li>
+<li>
+<p>Accelerated Site-to-Site VPN</p>
+<p><a href="https://aws.amazon.com/blogs/architecture/improve-vpn-network-performance-of-aws-hybrid-cloud-with-global-accelerator/" class="external external-link">https://aws.amazon.com/blogs/architecture/improve-vpn-network-performance-of-aws-hybrid-cloud-with-global-accelerator/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>AWS Global Accelerator를 사용하여 연결 성능을 향상</li>
+</ul>
+</li>
+</ul>
+<h2 id="direct-connect-1">Direct Connect<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#direct-connect-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="connection">Connection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#connection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>On-prem network와 AWS간에 standard ethernet fiber-optic cable을 통한 connection 생성</p>
+</li>
+<li>
+<p>Cable 양단에는 AWS DX Router와 Customer Router가 존재</p>
+</li>
+<li>
+<p>Dedicated Connection : 단일 customer만 연동되는 물리적 ethernet connection</p>
+</li>
+<li>
+<p>Hosted Connection : AWS DX Partner가 고객을 대신하여 연결</p>
+</li>
+<li>
+<p>DX Locations</p>
+<ul>
+<li>
+<p><a href="https://aws.amazon.com/ko/directconnect/locations/" class="external external-link">https://aws.amazon.com/ko/directconnect/locations/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Seoul : KINX, LG U+, 드림라인, 세종 텔레콤 (<a href="https://aws.amazon.com/ko/blogs/korea/new-aws-direct-connect-gateway-inter-region-vpc-access/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/new-aws-direct-connect-gateway-inter-region-vpc-access/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="virtual-interfaces-vifs">Virtual Interfaces (VIFs)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#virtual-interfaces-vifs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://aws.amazon.com/premiumsupport/knowledge-center/public-private-interface-dx/" class="external external-link">https://aws.amazon.com/premiumsupport/knowledge-center/public-private-interface-dx/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>Direct Connect Gateway (DGW)</li>
+</ul>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/new-aws-direct-connect-gateway-inter-region-vpc-access/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/new-aws-direct-connect-gateway-inter-region-vpc-access/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>VPC 연결을 위해 사용하는 Global Resource</p>
+</li>
+<li>
+<p>VPC는 VGW를 통해 연결</p>
+</li>
+<li>
+<p>다른 account의 VPC 연결 가능</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-9.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9-66.png" alt/></a></p>
+<ul>
+<li>
+<p>Private Virtual Interface</p>
+<ul>
+<li>
+<p>private IP 주소로 VPC 접근</p>
+</li>
+<li>
+<p>EC2 or LB 등의 VPC 리소스를 연결하기 위해 사용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Transit Gateway (TGW)</p>
+<ul>
+<li>
+<p>모든 가용 VPC에 대한 단일 연결을 생성</p>
+</li>
+<li>
+<p>Transit Virtual Interface를 DGW에 연결</p>
+</li>
+<li>
+<p>DGW와 TGW를 연동</p>
+</li>
+<li>
+<p>TGW는 VPC에 연결</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-10.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10-58.png" alt/></a></p>
+</li>
+<li>
+<p>Transit Virtual Interface</p>
+<ul>
+<li>
+<p>DX에 연결 된 VPC Transit Gateway에 접근</p>
+</li>
+<li>
+<p>1//2/5/10 Gbps</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Public Virtual Interface</p>
+<ul>
+<li>public IP 주소로 모든 AWS public service에 접근</li>
+</ul>
+</li>
+</ul>
+<h3 id="performance">Performance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#performance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Dedicated Connection : 1 Gbps, 10 Gbps, 100 Gbps</p>
+</li>
+<li>
+<p>Hosted Connection : 50Mbps ~ 10 Gbps</p>
+</li>
+</ul>
+<h2 id="direct-connect-sitelink">Direct Connect SiteLink<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#direct-connect-sitelink" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="aws-privatelink">AWS PrivateLink<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-privatelink" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>VPC, AWS 서비스, on-prem 애플리케이션 간의 private connectivity를 제공하는 기술</li>
+</ul>
+<h3 id="vpc-endpoint">VPC Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Service에 private하게 연결할 수 있는 VPC entry point 제공</p>
+</li>
+<li>
+<p>AWS PrivateLink와 ENI를 사용</p>
+</li>
+</ul>
+<h3 id="gateway-endpoint">Gateway Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gateway-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>S3 및 DynamoDB 연결 제공</p>
+</li>
+<li>
+<p>AWS PrivateLink를 활성화 하지 않음 → 서비스 경로를 위한 Routing Table 생성하여 연결</p>
+</li>
+<li>
+<p>동일 Region에서만 지원</p>
+</li>
+</ul>
+<h3 id="interface-endpoint">Interface Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#interface-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../global-infra--and--networking/untitled-11.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11-54.png" alt/></a></p>
+<h2 id="dx-macsec">DX MACSec<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dx-macsec" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://docs.aws.amazon.com/ko_kr/directconnect/latest/UserGuide/MACsec.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/directconnect/latest/UserGuide/MACsec.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>MACSec (MAC 보안) : Network Layer2에서 동작하는 암호화 기능으로 데이터 기밀성, 데이터 무결성 및 데이터 원본 신뢰성을 제공하는 IEEE 표준</p>
+</li>
+<li>
+<p>AWS Direct Connect location과 on-prem data center간의 Layer 2 traffic에 대한 데이터 암호화</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-12.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12-52.png" alt/></a></p>
+<h2 id="dx-sitelink">DX SiteLink<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dx-sitelink" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/new-site-to-site-connectivity-with-aws-direct-connect-sitelink/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/new-site-to-site-connectivity-with-aws-direct-connect-sitelink/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>AWS Global Network Backbone을 통해 on-prem network 간 연결을 생성</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-13.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13-50.png" alt/></a></p>
+<p><a href="../../../global-infra--and--networking/untitled-14.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-14-44.png" alt/></a></p>
+<h2 id="private-nat">Private NAT<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#private-nat" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/about-aws/whats-new/2021/06/aws-removes-nat-gateways-dependence-on-internet-gateway-for-private-communications/" class="external external-link">https://aws.amazon.com/ko/about-aws/whats-new/2021/06/aws-removes-nat-gateways-dependence-on-internet-gateway-for-private-communications/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>NAT Gateway를 Private 유형으로 생성 : on-prem 환경과 연동되는 고정 private IP 제공</p>
+</li>
+<li>
+<p>IGW가 없는 subnet에 NAT Gateway 배치</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-15.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-15-42.png" alt/></a></p>
+<h2 id="nlb-target-group-as-alb">NLB target group as ALB<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nlb-target-group-as-alb" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>NLB의 고정 IP를 기반으로 ALB 연계</p>
+</li>
+<li>
+<p>ALB가 NLB target group으로 동작</p>
+</li>
+<li>
+<p>VPC PrivateLink 연동하여 on-prem에 연동되는 고정 IP 제공</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-16.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-16-39.png" alt/></a></p>
+<h1 id="cloudwan">CloudWAN<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cloudwan" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>완전 관리형 WAN 서비스 : AWS Network Manager</p>
+</li>
+<li>
+<p>클라우드와 on-prem 환경에 걸쳐 리소스를 연결하는 글로벌 네트워크를 구축, 관리, 모니터링 하기 위한 서비스</p>
+</li>
+<li>
+<p>Data center, branch office, Cloud resource를 통합된 중앙 관리 네트워크로 연결 → 운영 비용 및 복잡도 감소</p>
+</li>
+</ul>
+<h2 id="feature">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Single unified global point of control</p>
+<ul>
+<li>단일 network policy로 전체 네트워크 설정</li>
+</ul>
+</li>
+<li>
+<p>More managed &amp; opinionated service</p>
+<ul>
+<li>Core network policy에 AWS Region 정의 → AWS에서 Region간 peering 및 dynamic routing 처리 → Full mesh connectivity</li>
+</ul>
+</li>
+<li>
+<p>Centralized dashboard, monitoring, events</p>
+</li>
+<li>
+<p>Built in automation for attachments</p>
+<ul>
+<li>새로운 route table을 추가 혹은 첨부 하여 자동으로 맵핑</li>
+</ul>
+</li>
+</ul>
+<h2 id="terminology">Terminology<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#terminology" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Core Network Edge (CNE) : Transit Gateway와 유사한 기술을 통해 Region간 연결</p>
+</li>
+<li>
+<p>Network Segment : Segment 내에서 통신이 가능한 routing domain</p>
+</li>
+<li>
+<p>Attachements : Connection 혹은 resource. VPCs, VPNs, Connect, Connect Peer</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-17.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-17-34.png" alt/></a></p>
+<h1 id="monitoring">Monitoring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="vpc-flow-logs">VPC Flow Logs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-flow-logs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Capture information about IP traffic going to and from netwrok interfaces in VPC</p>
+</li>
+<li>
+<p>Stored using CLoudWatch Logs</p>
+</li>
+<li>
+<p>Level : VPC, Subnet, Network Interface</p>
+</li>
+</ul>
+<h2 id="vpc-traffic-mirroring">VPC Traffic Mirroring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-traffic-mirroring" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/new-vpc-traffic-mirroring/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/new-vpc-traffic-mirroring/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>대규모 네트워크 traffic을 capture하고 검사</p>
+</li>
+<li>
+<p>Network 이상 및 보안 이상 감지, Compliance, 보안 제어, 문제 해결 및 운영 insight 확보</p>
+</li>
+<li>
+<p>AWS Nitro system 기반의 EC2 instance traffic mirroring</p>
+</li>
+<li>
+<p>Mirror Target : ENI, NLB</p>
+</li>
+</ul>
+<h2 id="network-manager">Network Manager<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#network-manager" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="vpc-ip-address-manager-ipam">VPC IP Address Manager (IPAM)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-ip-address-manager-ipam" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/network-address-management-and-auditing-at-scale-with-amazon-vpc-ip-address-manager/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/network-address-management-and-auditing-at-scale-with-amazon-vpc-ip-address-manager/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>Dashboard를 사용하여 조직 계정, VPC, Region 전체에서 IP 주소 배정을 관리하고 감시</li>
+</ul>
+<h2 id="vpc-network-access-analyzer">VPC Network Access Analyzer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vpc-network-access-analyzer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/new-amazon-vpc-network-access-analyzer/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/new-amazon-vpc-network-access-analyzer/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>VPC를 통과하는 네트워크 패킷에 직접 액세스할 수 있는 “가상 파이버 탭”</p>
+</li>
+<li>
+<p>의도하지 않은 네트워크 액세스로 이어지는 네트워크 구성을 식별</p>
+</li>
+<li>
+<p>보안 요구 위반 네트워크 액세스 식별</p>
+</li>
+<li>
+<p>규정 준수 확인 자동화</p>
+</li>
+</ul>
+<h1 id="security--compliance">Security &amp; Compliance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#security--compliance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="gateway-load-balancer-gwlb">Gateway Load Balancer (GWLB)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gateway-load-balancer-gwlb" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/introducing-aws-gateway-load-balancer-easy-deployment-scalability-and-high-availability-for-partner-appliances/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/introducing-aws-gateway-load-balancer-easy-deployment-scalability-and-high-availability-for-partner-appliances/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>타사 가상 어플라이언스의 가용성을 쉽고 비용 효율적으로 배포, 확장 및 관리 할 수있는 서비스 : <a href="https://aws.amazon.com/marketplace/solutions/security/firewalls-proxies" class="external external-link">방화벽<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> , <a href="https://aws.amazon.com/marketplace/solutions/infrastructure-software/ids-ips" class="external external-link">침입 감지 및 방지 시스템과<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> 클라우드의 심층 패킷 검사 시스템</p>
+</li>
+<li>
+<p>Transparent network gateway (traffic이 오가는 단일 지점) + 수요에 따라 traffic을 분산하고 가상 appliance를 조정하는 load balancer</p>
+</li>
+<li>
+<p>GWLB는 Gateway Load Balancer Endpoint (GWLBe)을 사용하여 양방향 traffic flow를 동일 appliance로 전송하고 appliance에서 상태 저장 traffic 처리를 수행</p>
+</li>
+<li>
+<p>Packet은 GENEVE capsulation</p>
+</li>
+</ul>
+<h3 id="gateway-load-balancer-endpoint">Gateway Load Balancer Endpoint<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gateway-load-balancer-endpoint" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/gateway/introduction.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/elasticloadbalancing/latest/gateway/introduction.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>Traffic을 network virtual appliance에 분산</p>
+</li>
+<li>
+<p>보안 검사, compliance, policy contnrol, 네트워크 서비스를 위해 사용</p>
+</li>
+<li>
+<p>Network virtual appliance를 배포, 확장, 관리</p>
+</li>
+<li>
+<p>OSI Layer 3 에서 동작</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-18.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-18-35.png" alt/></a></p>
+<h2 id="aws-network-firewall-anfw">AWS Network Firewall (ANFW)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-network-firewall-anfw" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/aws-network-firewall-new-managed-firewall-service-in-vpc/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/aws-network-firewall-new-managed-firewall-service-in-vpc/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="requirements">Requirements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#requirements" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AWS 서비스에 관계없이 워크로드의 모든 리소스에서 네트워크 보안을 보다 쉽게 확장할 수 있는 방법</p>
+</li>
+<li>
+<p>고유한 워크로드를 보호하거나 정부 규정 또는 상업 규정을 준수하기 위해 맞춤형 보호 기능</p>
+</li>
+<li>
+<p>아웃바운드 흐름에 대한 URL 필터링, IP/포트/프로토콜 이외의 패킷 데이터에 대한 패턴 일치, HTTP/S 이외의 프로토콜에 대한 특정 취약성에 대해 경고하는 기능 등을 사용</p>
+</li>
+</ul>
+<h3 id="network-firewall">Network Firewall<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#network-firewall" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>VPC를 위한 고가용성 네트워크 방화벽 서비스</p>
+</li>
+<li>
+<p>상태 저장 검사, 침입 차단 및 탐지, 웹 필터링 기능을 쉽게 배포 및 관리</p>
+</li>
+<li>
+<p>Traffic에 따라 자동으로 확장</p>
+</li>
+<li>
+<p>CrowdStrike, Palo Alto Networks, Splunk 등의 기존 AWS 파트너 에코 시스템과 상호 운용 가능</p>
+</li>
+<li>
+<p>커뮤니티에서 유지 관리하는 <a href="https://suricata.io/" class="external external-link">Suricata<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> 규칙 세트를 가져와 활용 가능</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-19.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-19-34.png" alt/></a></p>
+<h3 id="use-case">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>VPC가 승인되지 않은 도메인에 액세스 하지 못하도록 차단</p>
+</li>
+<li>
+<p>알려진 악성 IP 주소를 차단</p>
+</li>
+<li>
+<p>시그니처 기반 탐지를 사용하여 악의적인 활동을 식별</p>
+</li>
+</ul>
+<p><a href="../../../global-infra--and--networking/untitled-20.png" class="internal internal-link" data-slug="global-infra--and--networking/untitled-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-20-31.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1693" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#global-infra--networking" data-for="global-infra--networking">Global Infra &amp; Networking</a></li><li class="depth-0"><a href="#global-infra" data-for="global-infra">Global Infra</a></li><li class="depth-1"><a href="#network-bandwidth" data-for="network-bandwidth">Network Bandwidth</a></li><li class="depth-1"><a href="#cdn" data-for="cdn">CDN</a></li><li class="depth-1"><a href="#direct-connect" data-for="direct-connect">Direct Connect</a></li><li class="depth-0"><a href="#aws-vpc-virtual-private-cloud" data-for="aws-vpc-virtual-private-cloud">AWS VPC (Virtual Private Cloud)</a></li><li class="depth-1"><a href="#network-architecture-with-vpc" data-for="network-architecture-with-vpc">Network Architecture with VPC</a></li><li class="depth-1"><a href="#ip-address" data-for="ip-address">IP Address</a></li><li class="depth-2"><a href="#cidr" data-for="cidr">CIDR</a></li><li class="depth-2"><a href="#cidr-block-change" data-for="cidr-block-change">CIDR block change</a></li><li class="depth-2"><a href="#reserved-ip" data-for="reserved-ip">Reserved IP</a></li><li class="depth-2"><a href="#public-ip---eip-elastic-ip-address" data-for="public-ip---eip-elastic-ip-address">Public IP - EIP (Elastic IP Address)</a></li><li class="depth-0"><a href="#vpc-traffic-control" data-for="vpc-traffic-control">VPC Traffic Control</a></li><li class="depth-1"><a href="#network-acl-nacl" data-for="network-acl-nacl">Network ACL (NACL)</a></li><li class="depth-1"><a href="#security-group" data-for="security-group">Security Group</a></li><li class="depth-1"><a href="#nacl-rule" data-for="nacl-rule">NACL Rule</a></li><li class="depth-1"><a href="#sg-rule" data-for="sg-rule">SG Rule</a></li><li class="depth-1"><a href="#vpc-routing-enhancement---msr-more-specific-route" data-for="vpc-routing-enhancement---msr-more-specific-route">VPC Routing Enhancement - MSR (More Specific Route)</a></li><li class="depth-1"><a href="#vpc-peering" data-for="vpc-peering">VPC Peering</a></li><li class="depth-2"><a href="#inter-region-vpc-peering-limitation" data-for="inter-region-vpc-peering-limitation">Inter-region VPC Peering Limitation</a></li><li class="depth-1"><a href="#transit-gateway" data-for="transit-gateway">Transit Gateway</a></li><li class="depth-2"><a href="#intra-region-peering" data-for="intra-region-peering">Intra-Region Peering</a></li><li class="depth-2"><a href="#enhanced-transit-gateway-design-for-global-network" data-for="enhanced-transit-gateway-design-for-global-network">Enhanced Transit Gateway design for Global Network</a></li><li class="depth-0"><a href="#hybrid-networking" data-for="hybrid-networking">Hybrid Networking</a></li><li class="depth-1"><a href="#vpn-connectivity" data-for="vpn-connectivity">VPN Connectivity</a></li><li class="depth-1"><a href="#site-to-site-vpn" data-for="site-to-site-vpn">Site-to-Site VPN</a></li><li class="depth-2"><a href="#concepts" data-for="concepts">Concepts</a></li><li class="depth-2"><a href="#virtual-private-gateway-vgw" data-for="virtual-private-gateway-vgw">Virtual Private Gateway (VGW)</a></li><li class="depth-2"><a href="#routing-options" data-for="routing-options">Routing Options</a></li><li class="depth-2"><a href="#vpn-performance" data-for="vpn-performance">VPN Performance</a></li><li class="depth-1"><a href="#direct-connect-1" data-for="direct-connect-1">Direct Connect</a></li><li class="depth-2"><a href="#connection" data-for="connection">Connection</a></li><li class="depth-2"><a href="#virtual-interfaces-vifs" data-for="virtual-interfaces-vifs">Virtual Interfaces (VIFs)</a></li><li class="depth-2"><a href="#performance" data-for="performance">Performance</a></li><li class="depth-1"><a href="#direct-connect-sitelink" data-for="direct-connect-sitelink">Direct Connect SiteLink</a></li><li class="depth-1"><a href="#aws-privatelink" data-for="aws-privatelink">AWS PrivateLink</a></li><li class="depth-2"><a href="#vpc-endpoint" data-for="vpc-endpoint">VPC Endpoint</a></li><li class="depth-2"><a href="#gateway-endpoint" data-for="gateway-endpoint">Gateway Endpoint</a></li><li class="depth-2"><a href="#interface-endpoint" data-for="interface-endpoint">Interface Endpoint</a></li><li class="depth-1"><a href="#dx-macsec" data-for="dx-macsec">DX MACSec</a></li><li class="depth-1"><a href="#dx-sitelink" data-for="dx-sitelink">DX SiteLink</a></li><li class="depth-1"><a href="#private-nat" data-for="private-nat">Private NAT</a></li><li class="depth-1"><a href="#nlb-target-group-as-alb" data-for="nlb-target-group-as-alb">NLB target group as ALB</a></li><li class="depth-0"><a href="#cloudwan" data-for="cloudwan">CloudWAN</a></li><li class="depth-1"><a href="#feature" data-for="feature">Feature</a></li><li class="depth-1"><a href="#terminology" data-for="terminology">Terminology</a></li><li class="depth-0"><a href="#monitoring" data-for="monitoring">Monitoring</a></li><li class="depth-1"><a href="#vpc-flow-logs" data-for="vpc-flow-logs">VPC Flow Logs</a></li><li class="depth-1"><a href="#vpc-traffic-mirroring" data-for="vpc-traffic-mirroring">VPC Traffic Mirroring</a></li><li class="depth-1"><a href="#network-manager" data-for="network-manager">Network Manager</a></li><li class="depth-1"><a href="#vpc-ip-address-manager-ipam" data-for="vpc-ip-address-manager-ipam">VPC IP Address Manager (IPAM)</a></li><li class="depth-1"><a href="#vpc-network-access-analyzer" data-for="vpc-network-access-analyzer">VPC Network Access Analyzer</a></li><li class="depth-0"><a href="#security--compliance" data-for="security--compliance">Security &amp; Compliance</a></li><li class="depth-1"><a href="#gateway-load-balancer-gwlb" data-for="gateway-load-balancer-gwlb">Gateway Load Balancer (GWLB)</a></li><li class="depth-2"><a href="#gateway-load-balancer-endpoint" data-for="gateway-load-balancer-endpoint">Gateway Load Balancer Endpoint</a></li><li class="depth-1"><a href="#aws-network-firewall-anfw" data-for="aws-network-firewall-anfw">AWS Network Firewall (ANFW)</a></li><li class="depth-2"><a href="#requirements" data-for="requirements">Requirements</a></li><li class="depth-2"><a href="#network-firewall" data-for="network-firewall">Network Firewall</a></li><li class="depth-2"><a href="#use-case" data-for="use-case">Use Case</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

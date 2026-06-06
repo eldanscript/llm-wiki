@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>DataBase 6da4ea1d42044d31aa64b7f23f16fd9f | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="DataBase 6da4ea1d42044d31aa64b7f23f16fd9f | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="DataBase 6da4ea1d42044d31aa64b7f23f16fd9f | LLM Wiki"/><meta name="twitter:description" content="🌀 DataBase Data Trend 데이터의 규모, 속도, 다양성, 복잡성, 상호 연결성이 급격하게 증가 Database Category Relational 일관적인 구조와 고정된 스키마로 이루어진 table형 data를 위해 설계 ACID : Atomicity(반영 혹은 미 반영), Consitency(일관성), Isolation(고립성 - 다른 transaction 끼어들지 못함), Durability(지속성) Data transaction이 안전하고 유효하게 수행 되기 위한 특성 ERP, CRM, 전자 상거래 등의 애플리..."/><meta property="og:description" content="🌀 DataBase Data Trend 데이터의 규모, 속도, 다양성, 복잡성, 상호 연결성이 급격하게 증가 Database Category Relational 일관적인 구조와 고정된 스키마로 이루어진 table형 data를 위해 설계 ACID : Atomicity(반영 혹은 미 반영), Consitency(일관성), Isolation(고립성 - 다른 transaction 끼어들지 못함), Durability(지속성) Data transaction이 안전하고 유효하게 수행 되기 위한 특성 ERP, CRM, 전자 상거래 등의 애플리..."/><meta property="og:image:alt" content="🌀 DataBase Data Trend 데이터의 규모, 속도, 다양성, 복잡성, 상호 연결성이 급격하게 증가 Database Category Relational 일관적인 구조와 고정된 스키마로 이루어진 table형 data를 위해 설계 ACID : Atomicity(반영 혹은 미 반영), Consitency(일관성), Isolation(고립성 - 다른 transaction 끼어들지 못함), Durability(지속성) Data transaction이 안전하고 유효하게 수행 되기 위한 특성 ERP, CRM, 전자 상거래 등의 애플리..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/database-6da4ea1d42044d31aa64b7f23f16fd9f"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/database-6da4ea1d42044d31aa64b7f23f16fd9f"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌀 DataBase Data Trend 데이터의 규모, 속도, 다양성, 복잡성, 상호 연결성이 급격하게 증가 Database Category Relational 일관적인 구조와 고정된 스키마로 이루어진 table형 data를 위해 설계 ACID : Atomicity(반영 혹은 미 반영), Consitency(일관성), Isolation(고립성 - 다른 transaction 끼어들지 못함), Durability(지속성) Data transaction이 안전하고 유효하게 수행 되기 위한 특성 ERP, CRM, 전자 상거래 등의 애플리..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/database-6da4ea1d42044d31aa64b7f23f16fd9f" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2135" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2135" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>DataBase 6da4ea1d42044d31aa64b7f23f16fd9f</a></div></nav><h1 class="article-title">DataBase 6da4ea1d42044d31aa64b7f23f16fd9f</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.480Z">2026년 6월 06일</time><span>13 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🌀</p>
+<h1 id="database">DataBase<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#database" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="data-trend">Data Trend<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-trend" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>데이터의 규모, 속도, 다양성, 복잡성, 상호 연결성이 급격하게 증가</li>
+</ul>
+<h1 id="database-category">Database Category<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#database-category" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="relational">Relational<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#relational" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>일관적인 구조와 고정된 스키마로 이루어진 table형 data를 위해 설계</p>
+</li>
+<li>
+<p>ACID : Atomicity(반영 혹은 미 반영), Consitency(일관성), Isolation(고립성 - 다른 transaction 끼어들지 못함), Durability(지속성)</p>
+<ul>
+<li>Data transaction이 안전하고 유효하게 수행 되기 위한 특성</li>
+</ul>
+</li>
+<li>
+<p>ERP, CRM, 전자 상거래 등의 애플리케이션에서 transaction 로깅과 GB, TB 단위의 구조화 데이터베이스를 저장</p>
+</li>
+<li>
+<p>Aurora</p>
+<ul>
+<li>
+<p>MySQL, PostgreSQL 호환</p>
+</li>
+<li>
+<p>엔터프라이즈 데이터베이스 성능 및 가용성 + 오픈 소스 데이터베이스의 단순성 및 비용 효율성</p>
+</li>
+</ul>
+</li>
+<li>
+<p>RDS</p>
+<ul>
+<li>
+<p>클라우드에서 관계형 데이터베이스를 손쉽게 설치, 운영 및 확장할 수 있는 서비스</p>
+</li>
+<li>
+<p>Aurora</p>
+</li>
+<li>
+<p>PostgreSQL</p>
+</li>
+<li>
+<p>MySQL</p>
+</li>
+<li>
+<p>MariaDB</p>
+</li>
+<li>
+<p>Oracle Databae</p>
+</li>
+<li>
+<p>SQL Server</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Amazon Redshift</p>
+<ul>
+<li>데이터 웨어하우스 쿼리를 데이터 레이크로 확장하는 클라우드 데이터 웨어하우스</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../database/untitled.png" class="internal internal-link" data-slug="database/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-171.png" alt/></a></p>
+<h2 id="key-value">Key-Value<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#key-value" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>카-값 쌍의 컬렉션으로 저장, 하나 이상의 키가 인덱스에 대한 고유한 식별자 역활, 유연한 스키마, 규모와 무관하게 일관된 짧은 지연 시간, 선택적 일관성</p>
+</li>
+<li>
+<p>실시간 입찰, 장바구니, 제품 카탈로그, 고객 선호도, 지표, 메시지, 주문 이력과 같은 정렬 데이터 수집</p>
+</li>
+<li>
+<p>DynamoDB</p>
+<ul>
+<li>
+<p>규모에 관계없이 10밀리초 미만의 성능을 제공하는 서버리스 키-값 데이터베이스</p>
+</li>
+<li>
+<p>최종적이며 강력한 읽기 일관성</p>
+</li>
+<li>
+<p>하나 이상의 행에 걸친 트랜잭션에 작업에 대한 ACID 준수</p>
+</li>
+<li>
+<p>가장 높은 수준의 가용성과 규모 조정 탄력성을 제공</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../database/untitled-1.png" class="internal internal-link" data-slug="database/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-106.png" alt/></a></p>
+<h2 id="document">Document<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#document" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>JSON과 유사한 문서에 데이터 저장, 애플리케이션 코드에서 사용하는 것과 동일한 문서-모델 형식을 사용하여 데이터를 쉽게 저장 및 쿼리</p>
+</li>
+<li>
+<p>MongoDB 호환, 유연성, 반구조화, 계층형, 강력한 인덱싱, 빠른 쿼리</p>
+</li>
+<li>
+<p>카탈로그, 콘텐츠 관리, 개인화, 모바일</p>
+</li>
+<li>
+<p>DocumentDB</p>
+<ul>
+<li>MongoDB 워크로드를 지원하는 문서 데이터베이스 서비스</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../database/untitled-2.png" class="internal internal-link" data-slug="database/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-91.png" alt/></a></p>
+<h2 id="in-memory">In-memory<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#in-memory" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>데이터 캐싱으로 동적 데이터베이스 속도를 높여 액세스 지연 시간을 줄이고, 처리량을 늘리며, 기본 데이터베이스의 부하를 감소</p>
+</li>
+<li>
+<p>1msec 미만의 지연 시간, 초당 수백만 건 작업, 간단한 명령 세트, 리치 명령 지원 (Redis)</p>
+</li>
+<li>
+<p>캐싱, 세션 스토어, 리더보드, 지리 공간 및 실시간 분석에 유용</p>
+</li>
+<li>
+<p>MemoryDB for Redis</p>
+<ul>
+<li>
+<p>Redis와 호환 되는 인메모리 데이터 스토어</p>
+</li>
+<li>
+<p>1밀리초 미만의 지연 시간 제공하며 인터넷 규모의 실시간 애플리케이션 가동</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ElastiCache</p>
+<ul>
+<li>인메모리 키-값 스토어 서비스</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../database/untitled-3.png" class="internal internal-link" data-slug="database/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-81.png" alt/></a></p>
+<h2 id="graph">Graph<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#graph" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>고도로 연결된 데이터 세트 내에 관계를 생성</p>
+</li>
+<li>
+<p>관계형 데이터 세트를 처리할 애플리케이션을 손수비게 구축하고 운영하도록 설계된 NoSQL 데이터베이스</p>
+</li>
+<li>
+<p>SPARQL이나 Gremlin 같은 특화된 그래프 언어를 사용하여 고도로 연결된 데이터 세트를 효율적으로 탐색하는 쿼리를 구축</p>
+</li>
+<li>
+<p>데이터를 노드, 엣지, 속성 형태로 저장 : 노드는 레코드와 동일</p>
+</li>
+<li>
+<p>RDF (Resource Description Framework) 그래프에서 IRI (Internationalized Resource Identifier)가 포함된 리소스로 표현됨</p>
+</li>
+<li>
+<p>사기 탐지 소셜 네트워킹, 데이터 계보, 지식 그래프</p>
+</li>
+<li>
+<p>Neptune</p>
+<ul>
+<li>완전 관리형 그래프 데이터베이스 서비스</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../database/untitled-4.png" class="internal internal-link" data-slug="database/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-81.png" alt/></a></p>
+<h2 id="time-series">Time-series<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#time-series" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>시간 순으로 데이터를 수집, 저장, 관리</p>
+</li>
+<li>
+<p>데이터는 추가만 가능하고 쿼리는 항상 시간 간격을 두고 수행</p>
+</li>
+<li>
+<p>DevOps, 애플리케이션 모니터링, IoT애플리케이션, 산업용 텔레메트리</p>
+</li>
+<li>
+<p>TimeStream</p>
+<ul>
+<li>IoT 및 운영 애플리케이션용 빠른 시계열 데이터베이스 서비스</li>
+</ul>
+</li>
+</ul>
+<h2 id="ledger-원장">Ledger (원장)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ledger-원장" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>원장은 거래 내역을 시간별로 기록한다는 의미</p>
+</li>
+<li>
+<p>정확한 내역, 투명성, 불변성</p>
+</li>
+<li>
+<p>재무, 제조, 보험, HR, 급여, 소매, 공급망, 기록 시스템, 건강 관리 : 은행 거래에서 입금 및 출금 내역 추적, 보험금 청구 시 데이터 계보 확인, 공급망 네트워크의 품목 이동 추적</p>
+</li>
+<li>
+<p>QLDB (Quantum Ledger Database)</p>
+<ul>
+<li>
+<p>애플리케이션 데이터에 적용된 모든 변경 사항에 대해 완전하고 암호로 확인할 수 있는 기록을 제공하도록 구축된 원장 데이터베이스</p>
+</li>
+<li>
+<p>추가 전용 저널에 기록하여 개발자에게 전체 데이터 계보 (data lineage)를 제공</p>
+</li>
+<li>
+<p>블록체인, 분산 원장 기술이 아님 (<a href="https://aws.amazon.com/ko/managed-blockchain/" class="external external-link">Amazon Managed Blockchain<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) → 애플리케이션에서 모든 데이터 변경 이력이 필요 하지만 신뢰하지 않는 여러 당사자가 개입하지 않는다면 QLDB가 적합</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="wide-column">Wide Column<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#wide-column" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>대규모 확장이 가능한 데이터베이스로 빠른 성능과 대량의 데이터 저장이 필요한 애플리케이션에 적합</p>
+</li>
+<li>
+<p>테이블에 스키마가 있고, 테이블 스키마를 정의하여 쿼리 패턴을 일치 시킴 : 조인을 사용한 테이블간 쿼리 실행은 부 적합</p>
+</li>
+<li>
+<p>사용자, 디바이스, 이벤트 관련 정보 저장, Cassandra 마이그레이션 (분산 NoSQL 데이터베이스)</p>
+</li>
+<li>
+<p>산업용 장비 관리 / 플릿 관리 / 경로 최적화, 데이터 로그, 지리적 데이터</p>
+</li>
+<li>
+<p>Keyspaces (Managed Cassandra)</p>
+<ul>
+<li>
+<p>확장 가능하고 가용성이 높은 관리형 Apache Cassandra 호환 데이터베이스 서비스</p>
+</li>
+<li>
+<p>기존 CQL (Cassandra Query Language) 코드 및 도구를 활용</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="rds">RDS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rds" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="monitoring">Monitoring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="publish-to-cloudwatch-logs">Publish to CloudWatch Logs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#publish-to-cloudwatch-logs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Configure MySQL DB instance to publish log data to a log group in Amazon CloudWatch Logs → Perform real-time analysis of the log data</p>
+</li>
+<li>
+<p>MySQL (ver 5.6, 5.7, 8.0), MariaDB, PostgreSQL (ver 9.6.6 이상)</p>
+</li>
+<li>
+<p>SQL Server : error, agnet log</p>
+</li>
+<li>
+<p>Oracle : alert, trace, audit, listener, agent log</p>
+</li>
+</ul>
+<h3 id="enhanced-monitoring">Enhanced Monitoring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#enhanced-monitoring" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>DB instance의 metric을 수집 : <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling" class="external external-link">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h3 id="3rd-party-monitoring-tool">3rd party Monitoring Tool<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3rd-party-monitoring-tool" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><a href="https://www.datadoghq.com/dg/monitor/rds-benefits/?utm_source=advertisement&amp;utm_medium=search&amp;utm_campaign=dg-google-infra-apac-awsrds&amp;utm_keyword=rds%20monitoring&amp;utm_matchtype=p&amp;utm_campaignid=15832880534&amp;utm_adgroupid=136042970609&amp;gclid=CjwKCAjw9-KTBhBcEiwAr19ig4eCWY31BqWYKyFiLwHo4dIiVkO9eWeTTWJfjumzI7AqbIvaJiX0gRoC6VQQAvD_BwE" class="external external-link">DATADOG<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, <a href="https://www.sumologic.com/glossary/aws-rds-postgres-monitoring/" class="external external-link">Sumo Logic<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, <a href="https://docs.newrelic.com/docs/infrastructure/amazon-integrations/aws-integrations-list/aws-rds-monitoring-integration/" class="external external-link">New Relic<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h3 id="alarm">Alarm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#alarm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Capture system and user-defined events : deadlock, access denied, comunnication erros (<a href="https://aws.amazon.com/ko/blogs/database/monitor-errors-in-amazon-aurora-mysql-and-amazon-rds-for-mysql-using-amazon-cloudwatch-and-send-notifications-using-amazon-sns/" class="external external-link">https://aws.amazon.com/ko/blogs/database/monitor-errors-in-amazon-aurora-mysql-and-amazon-rds-for-mysql-using-amazon-cloudwatch-and-send-notifications-using-amazon-sns/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</li>
+</ul>
+<h3 id="performance-monitoring">Performance Monitoring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#performance-monitoring" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>데이터베이스 성능을 표시하여 성능에 영향을 미치는 문제를 분석</li>
+</ul>
+<h2 id="ha">HA<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ha" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="multi-az-vs-read-replicas">Multi-AZ vs Read Replicas<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multi-az-vs-read-replicas" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Multi-AZ : HA &amp; Failover → Synchronous replicated to a standby instance in a different AZ</p>
+</li>
+<li>
+<p>Read Replicas (<a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html" class="external external-link">https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Read scalability → Asynchronous replica (read-only instance from the snapshot)</p>
+</li>
+<li>
+<p>Same-AZ, Cross-AZ, Cross-Region</p>
+</li>
+<li>
+<p>Maintain the binlogs on your source instance until you have verified that they have been applied to the replica</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="rds-storage">RDS Storage<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rds-storage" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>General Purpose SSD : gp2</p>
+</li>
+<li>
+<p>Provisioned IOPS : io2</p>
+</li>
+<li>
+<p>Magnetic</p>
+</li>
+</ul>
+<h1 id="aurora">Aurora<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aurora" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="architecture">Architecture<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#architecture" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="shared-storage-system-cluster-volume">Shared Storage System (Cluster Volume)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#shared-storage-system-cluster-volume" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>전통 RDB의 Monolithic식 구조 (SQL → Transaction → Caching → Log)를 분해하여 Storage 계층을 분산 형 스토리지 시스템을 적용</p>
+<ul>
+<li>
+<p>계층 분리를 통해 DB instance node 전체가 늦어지거나 부분 Fail로 인해 전체가 Fail 되는 문제가 없음</p>
+</li>
+<li>
+<p>계층을 독립적으로 확장할 수 있어 비용 효율적임</p>
+</li>
+</ul>
+</li>
+<li>
+<p>전통 RDB는 page에 데이터 구성한 후 page 변경시 디스크에 Flushing → Aurora는 redo log records를 분산 스토리지 계층에 기록하고 요청 시 log record 를 page image로 구성하여 처리</p>
+</li>
+</ul>
+<h2 id="db-cluster">DB Cluster<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#db-cluster" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="db-instance">DB Instance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#db-instance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Primary DB instance</p>
+<ul>
+<li>
+<p>Read &amp; Write operation</p>
+</li>
+<li>
+<p>Cluster volume의 데이터 수정 작업을 수행</p>
+</li>
+<li>
+<p>DB Cluster는 1개의 Primary instance만 가진다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Aurora Replica</p>
+<ul>
+<li>
+<p>Primary DB instance와 동일 스토리지에 연결</p>
+</li>
+<li>
+<p>Only read operation</p>
+</li>
+<li>
+<p>Up to 15 Replica</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="cluster-volume">Cluster Volume<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cluster-volume" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>10GB chunk 단위로 분할하고 각 6개의 복사본을 사용하여 보호 그룹에 독립적으로 복제</li>
+</ul>
+<p><a href="../../../database/untitled-5.png" class="internal internal-link" data-slug="database/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-77.png" alt/></a></p>
+<h2 id="quorum-정족수-model">Quorum (정족수) Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quorum-정족수-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/amazon-aurora-under-the-hood-quorum-and-correlated-failure/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/amazon-aurora-under-the-hood-quorum-and-correlated-failure/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>3개의 가용 영역(AZ)에 6개의 데이터 복사본을 배포</p>
+</li>
+<li>
+<p>동기식 복제에서는 하나의 쓰기가 내구성을 가지려면 모든 복사본 확인이 필요 → 디스크, 노드, 네트워크 중 가장 성능이 낮은 요소로 지연 시간이 결정</p>
+</li>
+<li>
+<p>비 동기식 복제에서는 지연 시간을 낮출 수 있지만 내구성 확인 전 장애 발생 시 데이터 손실 가능</p>
+</li>
+<li>
+<p>Aurora에서는 Quorum model을 사용</p>
+<ul>
+<li>
+<p>읽기 세트와 Vr과 쓰기 세트 Vw 가 최소 하나의 중첩 복사본을 가져야 한다 : 세 개 데이터 복사본 존재할 경우 Vr 2, Vw 2개 필요 → 1개의 중첩 복사본 가능</p>
+</li>
+<li>
+<p>쓰기 쿼럼은 이전의 쓰기 쿼럼과 중첩되어야 한다 : Vw > V/2</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Aurora에서는 위 규칙에 따라 4개의 쓰기 세트와 3개의 읽기 세트가 있는 6개 복사본 쿼럼을 사용 → 4개 복사본에 쓰기 수행하여 완료 응답을 받으면 쓰기가 완료</p>
+</li>
+</ul>
+<h2 id="aurora-serverless">Aurora Serverless<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aurora-serverless" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="v1">V1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#v1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="v2-평가판">V2 (평가판)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#v2-평가판" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h2 id="global-database">Global Database<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#global-database" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="feature">Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>1개 region에 primary DB cluster를 5개 region에 읽기 전용 secondary (보조) DB cluster를 사용</p>
+</li>
+<li>
+<p>1초 미만의 대기 시간으로 보조 region에 데이터 복제</p>
+</li>
+</ul>
+<h3 id="pros">Pros<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pros" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Local 대기 시간으로 Global read 구성</p>
+</li>
+<li>
+<p>보조 Aurora DB cluster 확장</p>
+</li>
+</ul>
+<h3 id="limitiation">Limitiation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#limitiation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Aurora Mult-master cluster</p>
+</li>
+<li>
+<p>Aurora Serverless v1</p>
+</li>
+<li>
+<p>Amazon RDS proxy</p>
+</li>
+<li>
+<p>Aurora 내 역추적</p>
+</li>
+</ul>
+<p><a href="../../../database/untitled-6.png" class="internal internal-link" data-slug="database/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-73.png" alt/></a></p>
+<h2 id="multi-master-cluster">Multi-Master Cluster<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multi-master-cluster" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/building-highly-available-mysql-applications-using-amazon-aurora-mmsr/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/building-highly-available-mysql-applications-using-amazon-aurora-mmsr/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/AmazonRDS/latest/AuroraUserGuide/aurora-multi-master.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>최대 네 개의 DB instance 가능</p>
+</li>
+<li>
+<p>모든 instance가 동일 region에 존재</p>
+</li>
+<li>
+<p>Cross-Region Replica 사용 안 됨</p>
+</li>
+<li>
+<p>사용 가능 Region 제한 : N.Virginia, Oregon, Seoul, Mumbai, Tokyo, Frankfruit, Ireland</p>
+</li>
+</ul>
+<p><a href="../../../database/untitled-7.png" class="internal internal-link" data-slug="database/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-71.png" alt/></a></p>
+<h2 id="cross-account-replication">Cross-Account Replication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cross-account-replication" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/architecture/field-notes-how-to-set-up-your-cross-account-and-cross-region-database-for-amazon-aurora/" class="external external-link">https://aws.amazon.com/ko/blogs/architecture/field-notes-how-to-set-up-your-cross-account-and-cross-region-database-for-amazon-aurora/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://aws.amazon.com/ko/blogs/aws/amazon-aurora-fast-database-cloning/" class="external external-link">https://aws.amazon.com/ko/blogs/aws/amazon-aurora-fast-database-cloning/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="aurora-ml">Aurora ML<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aurora-ml" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.amazon.com/ko/blogs/aws/new-for-amazon-aurora-use-machine-learning-directly-from-your-databases/" class="external external-link">https://aws.amazon.com/ko/blogs/aws/new-for-amazon-aurora-use-machine-learning-directly-from-your-databases/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="dynamodb">DynamoDB<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dynamodb" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="dynamodb-accelerator-dax">DynamoDB Accelerator (DAX)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dynamodb-accelerator-dax" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>DynamoDB 테이블 앞에 논리적으로 배치되는 완전 관리 캐싱 서비스</p>
+</li>
+<li>
+<p>쓰기 모드(Write-Through)에서 작동하며 DynamoDB와 API 호환</p>
+</li>
+<li>
+<p>응답은 마이크로 초 단위로 캐시에서 반환되므로 DAX는 일관성 있는 읽기 집약적 작업 부하에 매우 적합</p>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1627" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#database" data-for="database">DataBase</a></li><li class="depth-0"><a href="#data-trend" data-for="data-trend">Data Trend</a></li><li class="depth-0"><a href="#database-category" data-for="database-category">Database Category</a></li><li class="depth-1"><a href="#relational" data-for="relational">Relational</a></li><li class="depth-1"><a href="#key-value" data-for="key-value">Key-Value</a></li><li class="depth-1"><a href="#document" data-for="document">Document</a></li><li class="depth-1"><a href="#in-memory" data-for="in-memory">In-memory</a></li><li class="depth-1"><a href="#graph" data-for="graph">Graph</a></li><li class="depth-1"><a href="#time-series" data-for="time-series">Time-series</a></li><li class="depth-1"><a href="#ledger-원장" data-for="ledger-원장">Ledger (원장)</a></li><li class="depth-1"><a href="#wide-column" data-for="wide-column">Wide Column</a></li><li class="depth-0"><a href="#rds" data-for="rds">RDS</a></li><li class="depth-1"><a href="#monitoring" data-for="monitoring">Monitoring</a></li><li class="depth-2"><a href="#publish-to-cloudwatch-logs" data-for="publish-to-cloudwatch-logs">Publish to CloudWatch Logs</a></li><li class="depth-2"><a href="#enhanced-monitoring" data-for="enhanced-monitoring">Enhanced Monitoring</a></li><li class="depth-2"><a href="#3rd-party-monitoring-tool" data-for="3rd-party-monitoring-tool">3rd party Monitoring Tool</a></li><li class="depth-2"><a href="#alarm" data-for="alarm">Alarm</a></li><li class="depth-2"><a href="#performance-monitoring" data-for="performance-monitoring">Performance Monitoring</a></li><li class="depth-1"><a href="#ha" data-for="ha">HA</a></li><li class="depth-2"><a href="#multi-az-vs-read-replicas" data-for="multi-az-vs-read-replicas">Multi-AZ vs Read Replicas</a></li><li class="depth-1"><a href="#rds-storage" data-for="rds-storage">RDS Storage</a></li><li class="depth-0"><a href="#aurora" data-for="aurora">Aurora</a></li><li class="depth-1"><a href="#architecture" data-for="architecture">Architecture</a></li><li class="depth-2"><a href="#shared-storage-system-cluster-volume" data-for="shared-storage-system-cluster-volume">Shared Storage System (Cluster Volume)</a></li><li class="depth-1"><a href="#db-cluster" data-for="db-cluster">DB Cluster</a></li><li class="depth-2"><a href="#db-instance" data-for="db-instance">DB Instance</a></li><li class="depth-2"><a href="#cluster-volume" data-for="cluster-volume">Cluster Volume</a></li><li class="depth-1"><a href="#quorum-정족수-model" data-for="quorum-정족수-model">Quorum (정족수) Model</a></li><li class="depth-1"><a href="#aurora-serverless" data-for="aurora-serverless">Aurora Serverless</a></li><li class="depth-2"><a href="#v1" data-for="v1">V1</a></li><li class="depth-2"><a href="#v2-평가판" data-for="v2-평가판">V2 (평가판)</a></li><li class="depth-1"><a href="#global-database" data-for="global-database">Global Database</a></li><li class="depth-2"><a href="#feature" data-for="feature">Feature</a></li><li class="depth-2"><a href="#pros" data-for="pros">Pros</a></li><li class="depth-2"><a href="#limitiation" data-for="limitiation">Limitiation</a></li><li class="depth-1"><a href="#multi-master-cluster" data-for="multi-master-cluster">Multi-Master Cluster</a></li><li class="depth-1"><a href="#cross-account-replication" data-for="cross-account-replication">Cross-Account Replication</a></li><li class="depth-1"><a href="#aurora-ml" data-for="aurora-ml">Aurora ML</a></li><li class="depth-0"><a href="#dynamodb" data-for="dynamodb">DynamoDB</a></li><li class="depth-1"><a href="#dynamodb-accelerator-dax" data-for="dynamodb-accelerator-dax">DynamoDB Accelerator (DAX)</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

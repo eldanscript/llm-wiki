@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Ch 8 Evaluation and Optimization 593f40fcacd442e0a9912c5f83ea8019 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Ch 8 Evaluation and Optimization 593f40fcacd442e0a9912c5f83ea8019 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Ch 8 Evaluation and Optimization 593f40fcacd442e0a9912c5f83ea8019 | LLM Wiki"/><meta name="twitter:description" content="🎹 Ch.8 Evaluation and Optimization Concept ML Objective Evaluation Step Define Evaluation Evaluate Tune Validation Offline Validation Online Validation Monitoring and Analyzing Training Metrics Validation Metrics SageMaker Environment Evaluating Model Accuracy Underfitting (과소적합) Underfitting 방지 Mo..."/><meta property="og:description" content="🎹 Ch.8 Evaluation and Optimization Concept ML Objective Evaluation Step Define Evaluation Evaluate Tune Validation Offline Validation Online Validation Monitoring and Analyzing Training Metrics Validation Metrics SageMaker Environment Evaluating Model Accuracy Underfitting (과소적합) Underfitting 방지 Mo..."/><meta property="og:image:alt" content="🎹 Ch.8 Evaluation and Optimization Concept ML Objective Evaluation Step Define Evaluation Evaluate Tune Validation Offline Validation Online Validation Monitoring and Analyzing Training Metrics Validation Metrics SageMaker Environment Evaluating Model Accuracy Underfitting (과소적합) Underfitting 방지 Mo..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/ch-8-evaluation-and-optimization-593f40fcacd442e0a9912c5f83ea8019"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/ch-8-evaluation-and-optimization-593f40fcacd442e0a9912c5f83ea8019"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🎹 Ch.8 Evaluation and Optimization Concept ML Objective Evaluation Step Define Evaluation Evaluate Tune Validation Offline Validation Online Validation Monitoring and Analyzing Training Metrics Validation Metrics SageMaker Environment Evaluating Model Accuracy Underfitting (과소적합) Underfitting 방지 Mo..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/ch-8-evaluation-and-optimization-593f40fcacd442e0a9912c5f83ea8019" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2029" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2029" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Ch 8 Evaluation and Optimization 593f40fcacd442e0a9912c5f83ea8019</a></div></nav><h1 class="article-title">Ch 8 Evaluation and Optimization 593f40fcacd442e0a9912c5f83ea8019</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.474Z">2026년 6월 06일</time><span>9 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🎹</p>
+<h1 id="ch8-evaluation-and-optimization">Ch.8 Evaluation and Optimization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ch8-evaluation-and-optimization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#c3086caf-3dc3-4eb6-a334-3c4771a5c23d" class="internal internal-link alias">Concept</a></p>
+<p><a href="#39a74d3f-1d36-4afb-8ca8-52b51a32fc52" class="internal internal-link alias">ML Objective</a></p>
+<p><a href="#276b73a7-5d87-4c3b-9d19-99410e64021a" class="internal internal-link alias">Evaluation Step</a></p>
+<p><a href="#bd48bb22-4514-4331-b92d-ab67a63008fd" class="internal internal-link alias">Define Evaluation</a></p>
+<p><a href="#cecbf5b9-4f4f-459e-b4a8-5ff3c7e89a8a" class="internal internal-link alias">Evaluate</a></p>
+<p><a href="#68926b0e-381e-4aa6-a657-f8282cc9c64e" class="internal internal-link alias">Tune</a></p>
+<p><a href="#04925dbd-bac0-4148-90cc-51a769ce2192" class="internal internal-link alias">Validation</a></p>
+<p><a href="#4df081d3-6119-4d44-86f3-9d31a5b6c54f" class="internal internal-link alias">Offline Validation</a></p>
+<p><a href="#81fab3e9-b05c-42fc-ab0c-1e44ab51152e" class="internal internal-link alias">Online Validation</a></p>
+<p><a href="#5942e8da-49b6-46aa-b764-f6589fa2f1c1" class="internal internal-link alias">Monitoring and Analyzing</a></p>
+<p><a href="#9006b7d4-d8fa-4338-b12e-01202fd9ba13" class="internal internal-link alias">Training Metrics</a></p>
+<p><a href="#edf72acc-0629-4e6d-9cd8-f6f112d88ab7" class="internal internal-link alias">Validation Metrics</a></p>
+<p><a href="#06fdb7ad-2d4a-4676-9ecb-4209926da12a" class="internal internal-link alias">SageMaker Environment</a></p>
+<p><a href="#d74ac0cc-d244-46e2-844c-4e846cd2b8a4" class="internal internal-link alias">Evaluating Model Accuracy</a></p>
+<p><a href="#5c9e3fa2-4f33-427c-879f-01bcd81e7e0f" class="internal internal-link alias">Underfitting (과소적합)</a></p>
+<p><a href="#c9e59aa7-bcc1-478c-bf63-b2ead04ed274" class="internal internal-link alias">Underfitting 방지</a></p>
+<p><a href="#3bf216ce-c2f2-41d1-ab7a-4f2b4639038d" class="internal internal-link alias">More Data</a></p>
+<p><a href="#ef91d3c8-55ca-4dda-885c-b410c8c7ff6a" class="internal internal-link alias">Train Longer</a></p>
+<p><a href="#24197cc5-9ec9-4963-b0e7-8713c99a8a92" class="internal internal-link alias">Overfitting (과적합)</a></p>
+<p><a href="#f6d28a24-99b4-4cb8-b67a-d226c9d4ee75" class="internal internal-link alias">Overfitting 방지</a></p>
+<p><a href="#c987656e-e1d1-42b2-89cf-a9ff5b8b61e1" class="internal internal-link alias">More Data</a></p>
+<p><a href="#e3e514f6-a073-4829-be42-e828718e0805" class="internal internal-link alias">Sprinkle in some noise</a></p>
+<p><a href="#f3a3cc07-d171-4553-8547-4628513c0553" class="internal internal-link alias">Ensemble</a></p>
+<p><a href="#40239a4c-42a1-4c5c-9626-6faf1adb0219" class="internal internal-link alias">Early Stopping</a></p>
+<p><a href="#8016821d-a4fe-4cab-a0e8-26be41f452a6" class="internal internal-link alias">Regulate</a></p>
+<p><a href="#5a59085b-4da9-4a32-a54b-60e7869b3fee" class="internal internal-link alias">Ditch(도랑) some Features → Feature Selection</a></p>
+<p><a href="#a11d1584-56cc-435b-afd0-3cfdf891402e" class="internal internal-link alias">Robust Model</a></p>
+<p><a href="#159803ca-599a-4801-8c55-1c3d081feba7" class="internal internal-link alias">Residual Distribution</a></p>
+<p><a href="#151d0ed5-d5c4-44ab-bee6-dc9b444bec7b" class="internal internal-link alias">RMSE (Root Mean Square Error)</a></p>
+<p><a href="#90a3af59-7cb9-4d20-8b49-3d15cdfcbf85" class="internal internal-link alias">Binary Classification Accuracy</a></p>
+<p><a href="#b5cc7c86-2f36-42f2-9f4d-33d73b2fdd27" class="internal internal-link alias">Confusion Matrix</a></p>
+<p><a href="#ea06652d-fda1-4e29-afbc-dc60cd5e3061" class="internal internal-link alias">AUC (Area Under the Curve)</a></p>
+<p><a href="#fc577728-735f-4be9-b44f-2272477d8352" class="internal internal-link alias">F1 Score</a></p>
+<p><a href="#2d83a61e-7090-45b6-bd0f-59d757d0d90f" class="internal internal-link alias">Multiclass Classification</a></p>
+<p><a href="#1a758e9c-f630-4bcc-96a0-11050579556b" class="internal internal-link alias">Improving Model Accuracy</a></p>
+<p><a href="#ea95679a-11bc-4e12-90c1-ea20d9781677" class="internal internal-link alias">Collect Data</a></p>
+<p><a href="#1605665d-4eaf-4269-973b-702d596e800c" class="internal internal-link alias">Feature Processing</a></p>
+<p><a href="#531d3cf7-b415-4ab8-af19-6037ba491c22" class="internal internal-link alias">Model Parameter Tuning</a></p>
+<p><a href="#b5e3e1a1-37f8-4148-9fa8-a28ebf668ab4" class="internal internal-link alias">Model Tuning</a></p>
+<p><a href="#0bf58c08-2985-4baf-8cdc-e498731aafc6" class="internal internal-link alias">Automatic Model Tuning</a></p>
+<p><a href="#26daac70-316a-4494-8412-28878cb8d5a0" class="internal internal-link alias">Hyperparameter Tuning</a></p>
+<p><a href="#90f352ea-d48f-41e1-aa48-35c0f0312d7a" class="internal internal-link alias">Process</a></p>
+<p><a href="#bb092eb8-a88d-40e9-990a-df50d3d09b22" class="internal internal-link alias">Bayesian Reasoning</a></p>
+<p><a href="#5e56a99e-83f6-4fc6-9f1c-76230ef3c008" class="internal internal-link alias">Bayesian Optimization</a></p>
+<p><a href="#90c91498-4375-415b-96fc-6723820930b9" class="internal internal-link alias">Reference</a></p>
+<p><a href="#2d61f0d1-081b-4220-8b66-d05ad4ea0750" class="internal internal-link alias">Quiz</a></p>
+<h1 id="concept">Concept<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#concept" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="ml-objective">ML Objective<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ml-objective" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-60.png" alt/></a></p>
+<ul>
+<li>Want <strong>Generalization</strong>, not memorization</li>
+</ul>
+<h2 id="evaluation-step">Evaluation Step<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#evaluation-step" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="define-evaluation">Define Evaluation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#define-evaluation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>알고리즘이 충분히 좋다 (정확하다…)를 판단하기 위해 어떤 척도 (metric) 혹은 척도들을 사용해야 할 지 결정</p>
+</li>
+<li>
+<p>metric은 미터법 이라고 하며 말 그대로 측정하여 판단하는 것을 의미 한다. 머신 러닝에서는 학습을 통해 목표를 얼마나 잘(못) 달성했는지를 나타내는 값으로 사용된다</p>
+</li>
+</ul>
+<h3 id="evaluate">Evaluate<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#evaluate" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>학습 과정 혹은 완료 후 metric을 평가</p>
+</li>
+<li>
+<p>알고리즘에 따라 수동 혹은 자동으로 진행할 수 있음</p>
+</li>
+</ul>
+<h3 id="tune">Tune<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tune" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Hyperparameter, 데이터, 평가 전략 (evaluation strategy)을 조정 또는 전체 알고리즘도 조정할 수 있다</p>
+</li>
+<li>
+<p>원하는 결과에 최대한 근사할 수 있도록 조정 → Tuning후 다시 Define 단계로 계속 iteration을 진행</p>
+</li>
+</ul>
+<h2 id="validation">Validation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#validation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="offline-validation">Offline Validation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#offline-validation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>시험용 데이터셋을 사용하여 검증</p>
+</li>
+<li>
+<p>Validation (올바른 제품을 만들고 있는가?) vs Verification (제품을 올바르게 만들고 있는가?)</p>
+</li>
+<li>
+<p>Validation Set, K-Fold Validation 방법 등이 있음</p>
+</li>
+</ul>
+<h3 id="online-validation">Online Validation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#online-validation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>실제 환경에서 검증</p>
+</li>
+<li>
+<p>Canary Deployment나 A/B Testing 방법 등이 있음</p>
+</li>
+</ul>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-1.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-7.png" alt/></a></p>
+<h1 id="monitoring-and-analyzing">Monitoring and Analyzing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-and-analyzing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="training-metrics">Training Metrics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#training-metrics" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Use during the training process</p>
+</li>
+<li>
+<p>See if that process is going okay</p>
+</li>
+<li>
+<p>Test prefix</p>
+</li>
+</ul>
+<h2 id="validation-metrics">Validation Metrics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#validation-metrics" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Use testing model</p>
+</li>
+<li>
+<p>Validation prefix</p>
+</li>
+</ul>
+<h2 id="sagemaker-environment">SageMaker Environment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker-environment" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>SageMaker 알고리즘은 pre-configured SageMaker container를 통해 CloudWatch로 관련 metric을 전송</p>
+</li>
+<li>
+<p>Logs of container, built-in algorithm 등과 관련된 metric 전송</p>
+</li>
+<li>
+<p>View and visualize metrics in CloudWatch</p>
+</li>
+<li>
+<p>ML 작업을 위해 EMR 혹은 Apache Mahout 을 사용할 경우 오른쪽과 같이 SageMaker 콘솔에서 chart를 통해 metric을 확인 → troubleshooting 이나 testing 과정에서 유용하게 사용 됨</p>
+</li>
+</ul>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-2.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-6.png" alt/></a></p>
+<h1 id="evaluating-model-accuracy">Evaluating Model Accuracy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#evaluating-model-accuracy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-3.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-6.png" alt/></a></p>
+<h2 id="underfitting-과소적합">Underfitting (과소적합)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#underfitting-과소적합" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>모델이 기본 데이터 모양을 반영하지 못함</p>
+</li>
+<li>
+<p>모델을 적합하게 훈련하기 위해 더 많은 변수가 필요할 수 있음</p>
+</li>
+</ul>
+<h2 id="underfitting-방지">Underfitting 방지<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#underfitting-방지" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="more-data">More Data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#more-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>엔트로피가 커질수록 불확실성이 높아지고 (발생 확률이 감소, unlikely event) 정보량이 많아짐</p>
+</li>
+<li>
+<p>Underfitting은 feature가 적고 엔트로피가 낮음</p>
+</li>
+<li>
+<p>Overfitting은 feature가 많고 엔트로피가 높음</p>
+</li>
+<li>
+<p>때로는 더 많은 데이터가 알고리즘을 과적합 (overfitting)에서 벗어나게 하기에 충분한 추가 엔트로피를 제공 → 엔트로피 값을 낮추게 하는 것이 목표</p>
+</li>
+</ul>
+<h3 id="train-longer">Train Longer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#train-longer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>에러를 최소화 하기 위해 (데이터안의 더 많은 데이터로 더 많은 반복 (iteration)을 필요로 한다</li>
+</ul>
+<h2 id="overfitting-과적합">Overfitting (과적합)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#overfitting-과적합" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>학습에 사용된 특정 데이터에 지나치게 의존적인 됨</p>
+</li>
+<li>
+<p>새로운 데이터가 학습 데이터와 유사하거나 동일하지 않다면 예측 정확도가 낮음</p>
+</li>
+<li>
+<p>알고리즘은 일반화 (generalize) 되었다기 보다는 기억 (memorize) 되었음</p>
+</li>
+<li>
+<p>모델이 어떤 수준까지 적합해 지면 overfitting 을 막기 위해 학습을 중단해야 함 → early stop</p>
+</li>
+</ul>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-4.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-6.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-5.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-6.png" alt/></a></p>
+<h2 id="overfitting-방지">Overfitting 방지<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#overfitting-방지" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="more-data-1">More Data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#more-data-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>때로는 더 많은 데이터가 알고리즘을 과적합 (overfitting)에서 벗어나게 하기에 충분한 추가 엔트로피를 제공 → 엔트로피 값을 낮추게 하는 것이 목표</li>
+</ul>
+<h3 id="sprinkle-in-some-noise">Sprinkle in some noise<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sprinkle-in-some-noise" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>학습 데이터가 너무 깨끗 (pristine) 할 수 있음</p>
+</li>
+<li>
+<p>모델을 일반화 하기 위해서는 어느 정도의 잡음이 필요할 수 있음</p>
+</li>
+</ul>
+<h3 id="ensemble">Ensemble<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ensemble" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>다른 모델을 함께 섞음</p>
+</li>
+<li>
+<p>약한 모델을 증폭 하거나 → boosting</p>
+</li>
+<li>
+<p>강한 모델을 부드럽게 함 → bagging</p>
+</li>
+</ul>
+<h3 id="early-stopping">Early Stopping<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#early-stopping" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>과도학습 (overtrain) 되기 전에 학습 과정을 중단</p>
+</li>
+<li>
+<p>Hyperparameter에 포함되어 있음</p>
+</li>
+</ul>
+<h3 id="regulate">Regulate<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#regulate" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>정규화로 모델을 일반화 → 값의 범위를 확장하거나 가중치를 변경</p>
+</li>
+<li>
+<p>가중치 주위에 제약 조건을 만들거나 입력 데이터를 부드럽게 (smoothing) 한다 → 모델을 더욱 일반화</p>
+</li>
+</ul>
+<h3 id="ditch도랑-some-features--feature-selection">Ditch(도랑) some Features → Feature Selection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ditch도랑-some-features--feature-selection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>너무 많은 무의미한 (irrelevant) 특성은 잡음으로 신호가 드러나지 않게 되어 모델에 부정적인 영향을 줄 수 있음</p>
+</li>
+<li>
+<p>어떤 특성들은 제거 할 수 있음</p>
+</li>
+</ul>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-6.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-6.png" alt/></a></p>
+<h2 id="robust-model">Robust Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#robust-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>학습 데이터에 적합화 되었으면서도 새로운 데이터가 나와도 합리적으로 예측됨</p>
+</li>
+<li>
+<p>새로운 데이터에 대해 효과적으로 일반화 할 수 있다</p>
+</li>
+<li>
+<p>데이터를 잘 따라 가지만 너무 가깝게 가지는 않는 모델</p>
+</li>
+<li>
+<p>데이터에 있는 잡음 (noise)를 다룰 (deal) 수 있다</p>
+</li>
+</ul>
+<h2 id="residual-distribution">Residual Distribution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#residual-distribution" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Residual (잔차) : 실제 값과 예측 값의 차이</li>
+</ul>
+<h3 id="rmse-root-mean-square-error">RMSE (Root Mean Square Error)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rmse-root-mean-square-error" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Measure of the distance between an actual observation and predicted value</p>
+</li>
+<li>
+<p>Lower is better</p>
+</li>
+</ul>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-7.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-6.png" alt/></a></p>
+<h2 id="binary-classification-accuracy">Binary Classification Accuracy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#binary-classification-accuracy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-8.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8-6.png" alt/></a></p>
+<h3 id="confusion-matrix">Confusion Matrix<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#confusion-matrix" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>True False (False Positive) → Type I Error</p>
+<ul>
+<li>실제 음성 / 검사 양성 : 스팸이 아닌데 스팸이라고 판정 (거짓 양성)</li>
+</ul>
+</li>
+<li>
+<p>False True (False Negative) → Type II Error</p>
+<ul>
+<li>실제 양성 / 검사 음성 : 스팸인데 스팸이 아니라고 판정 (거짓 음성)</li>
+</ul>
+</li>
+</ul>
+<h3 id="auc-area-under-the-curve">AUC (Area Under the Curve)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#auc-area-under-the-curve" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Industry standard metric for binarly classification model</p>
+</li>
+<li>
+<p>Data range : 0 ~ 1 → 1 means highly accurate</p>
+</li>
+</ul>
+<h3 id="f1-score">F1 Score<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#f1-score" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Recall (재현율) = TP / (TP + <strong>FN</strong>)</p>
+<ul>
+<li>
+<p>참인 것에 대해 어느 정도 정확했는가 → sensitivity, hit rate</p>
+</li>
+<li>
+<p>실제 Spam 인데 Spam이 아니라고 예측 → Spam이 통과됨</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Precision (정밀도) = TP / (TP + <strong>FP</strong>)</p>
+<ul>
+<li>
+<p>참이라고 예측한 것은 어느 정도 정확했는가 → PPV (Positive Predicted Value)</p>
+</li>
+<li>
+<p>Spam이라고 예측 (True) 했는데 Spam이 아님 → 합법적인 이메일이 차단</p>
+</li>
+</ul>
+</li>
+<li>
+<p>F1 Score는 Recall과 Precision의 조화 평균 (balance between Precision and Recall)</p>
+<ul>
+<li>값이 클수록 예측이 정확함을 의미</li>
+</ul>
+</li>
+</ul>
+<h2 id="multiclass-classification">Multiclass Classification<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multiclass-classification" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-9.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9-6.png" alt/></a></p>
+<h2 id="improving-model-accuracy">Improving Model Accuracy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#improving-model-accuracy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="collect-data">Collect Data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#collect-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>학습 예제의 수를 증가 → 좋은 데이터가 많을 수록 더 정확한 모델이 생성</li>
+</ul>
+<h3 id="feature-processing">Feature Processing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-processing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>추가적인 품질 변수를 제공하거나 기존 변수를 수정하여 더 많은 대표 특성이 나오도록 함</li>
+</ul>
+<h3 id="model-parameter-tuning">Model Parameter Tuning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-parameter-tuning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>학습 알고리즘에서 사용되는 Hyperparameter를 조정</li>
+</ul>
+<h1 id="model-tuning">Model Tuning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-tuning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Small Adjustments to hyperparameters → Improve the performance of the model</li>
+</ul>
+<h2 id="automatic-model-tuning">Automatic Model Tuning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#automatic-model-tuning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="hyperparameter-tuning">Hyperparameter Tuning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hyperparameter-tuning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>데이터셋에 대해 일정 범위의 hyperparameter를 시험하는 여러 작업을 수행하여 모델의 최적 버전을 찾아내는 작업</li>
+</ul>
+<h3 id="process">Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#process" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Choose tunable hyperparameter → 조정할 hyperparameter를 결정</p>
+</li>
+<li>
+<p>Choose a range of value → 조정 범위를 결정 (min/max)</p>
+</li>
+<li>
+<p>Choose the objective metric → auto tuning 작업이 최적화할 목표 metric을 지정</p>
+</li>
+</ol>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-10.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10-6.png" alt/></a></p>
+<h2 id="bayesian-reasoning">Bayesian Reasoning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bayesian-reasoning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-11.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11-6.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-12.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12-6.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-13.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13-6.png" alt/></a></p>
+<ul>
+<li>무슨 일이 일어 났는지와 현재 점수가 무엇인지 아는 것 → 베이지안 추론의 핵심</li>
+</ul>
+<h2 id="bayesian-optimization">Bayesian Optimization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bayesian-optimization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>더 많은 개선을 주는 Hyperparameter 값에 초점을 맞추어 비용이 많이 드는 반복을 피해야 함</li>
+</ul>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-14.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-14-5.png" alt/></a></p>
+<h1 id="reference">Reference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p><a href="https://aws.amazon.com/blogs/machine-learning/easily-monitor-and-visualize-metrics-while-training-models-on-amazon-sagemaker/" class="external external-link">https://aws.amazon.com/blogs/machine-learning/easily-monitor-and-visualize-metrics-while-training-models-on-amazon-sagemaker/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/blogs/aws/sagemaker-automatic-model-tuning/" class="external external-link">https://aws.amazon.com/blogs/aws/sagemaker-automatic-model-tuning/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/incremental-training.html" class="external external-link">https://docs.aws.amazon.com/sagemaker/latest/dg/incremental-training.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=ynYnZywayC4" class="external external-link">https://www.youtube.com/watch?v=ynYnZywayC4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://github.com/ACloudGuru-Resources/Course_AWS_Certified_Machine_Learning/tree/master/Chapter8" class="external external-link">https://github.com/ACloudGuru-Resources/Course_AWS_Certified_Machine_Learning/tree/master/Chapter8<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/sagemaker/latest/dg/ll_hyperparameters.html" class="external external-link">https://docs.aws.amazon.com/sagemaker/latest/dg/ll_hyperparameters.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<h1 id="quiz">Quiz<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quiz" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-15.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-15-4.png" alt/></a></p>
+<ul>
+<li>K-fold &amp; Backtesting with historic data</li>
+</ul>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-16.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-16-4.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-17.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-17-4.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-18.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-18-4.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-19.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-19-4.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-20.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-20-4.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-21.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-21.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-21-4.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-22.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-22.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-22-4.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-23.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-23.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-23-4.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-24.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-24.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-24-3.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-25.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-25.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-25-3.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-26.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-26.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-26-3.png" alt/></a></p>
+<p><a href="../../../ch-8-evaluation-and-optimization/untitled-27.png" class="internal internal-link" data-slug="ch-8-evaluation-and-optimization/untitled-27.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-27-3.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1588" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#ch8-evaluation-and-optimization" data-for="ch8-evaluation-and-optimization">Ch.8 Evaluation and Optimization</a></li><li class="depth-0"><a href="#concept" data-for="concept">Concept</a></li><li class="depth-1"><a href="#ml-objective" data-for="ml-objective">ML Objective</a></li><li class="depth-1"><a href="#evaluation-step" data-for="evaluation-step">Evaluation Step</a></li><li class="depth-2"><a href="#define-evaluation" data-for="define-evaluation">Define Evaluation</a></li><li class="depth-2"><a href="#evaluate" data-for="evaluate">Evaluate</a></li><li class="depth-2"><a href="#tune" data-for="tune">Tune</a></li><li class="depth-1"><a href="#validation" data-for="validation">Validation</a></li><li class="depth-2"><a href="#offline-validation" data-for="offline-validation">Offline Validation</a></li><li class="depth-2"><a href="#online-validation" data-for="online-validation">Online Validation</a></li><li class="depth-0"><a href="#monitoring-and-analyzing" data-for="monitoring-and-analyzing">Monitoring and Analyzing</a></li><li class="depth-1"><a href="#training-metrics" data-for="training-metrics">Training Metrics</a></li><li class="depth-1"><a href="#validation-metrics" data-for="validation-metrics">Validation Metrics</a></li><li class="depth-1"><a href="#sagemaker-environment" data-for="sagemaker-environment">SageMaker Environment</a></li><li class="depth-0"><a href="#evaluating-model-accuracy" data-for="evaluating-model-accuracy">Evaluating Model Accuracy</a></li><li class="depth-1"><a href="#underfitting-과소적합" data-for="underfitting-과소적합">Underfitting (과소적합)</a></li><li class="depth-1"><a href="#underfitting-방지" data-for="underfitting-방지">Underfitting 방지</a></li><li class="depth-2"><a href="#more-data" data-for="more-data">More Data</a></li><li class="depth-2"><a href="#train-longer" data-for="train-longer">Train Longer</a></li><li class="depth-1"><a href="#overfitting-과적합" data-for="overfitting-과적합">Overfitting (과적합)</a></li><li class="depth-1"><a href="#overfitting-방지" data-for="overfitting-방지">Overfitting 방지</a></li><li class="depth-2"><a href="#more-data-1" data-for="more-data-1">More Data</a></li><li class="depth-2"><a href="#sprinkle-in-some-noise" data-for="sprinkle-in-some-noise">Sprinkle in some noise</a></li><li class="depth-2"><a href="#ensemble" data-for="ensemble">Ensemble</a></li><li class="depth-2"><a href="#early-stopping" data-for="early-stopping">Early Stopping</a></li><li class="depth-2"><a href="#regulate" data-for="regulate">Regulate</a></li><li class="depth-2"><a href="#ditch도랑-some-features--feature-selection" data-for="ditch도랑-some-features--feature-selection">Ditch(도랑) some Features → Feature Selection</a></li><li class="depth-1"><a href="#robust-model" data-for="robust-model">Robust Model</a></li><li class="depth-1"><a href="#residual-distribution" data-for="residual-distribution">Residual Distribution</a></li><li class="depth-2"><a href="#rmse-root-mean-square-error" data-for="rmse-root-mean-square-error">RMSE (Root Mean Square Error)</a></li><li class="depth-1"><a href="#binary-classification-accuracy" data-for="binary-classification-accuracy">Binary Classification Accuracy</a></li><li class="depth-2"><a href="#confusion-matrix" data-for="confusion-matrix">Confusion Matrix</a></li><li class="depth-2"><a href="#auc-area-under-the-curve" data-for="auc-area-under-the-curve">AUC (Area Under the Curve)</a></li><li class="depth-2"><a href="#f1-score" data-for="f1-score">F1 Score</a></li><li class="depth-1"><a href="#multiclass-classification" data-for="multiclass-classification">Multiclass Classification</a></li><li class="depth-1"><a href="#improving-model-accuracy" data-for="improving-model-accuracy">Improving Model Accuracy</a></li><li class="depth-2"><a href="#collect-data" data-for="collect-data">Collect Data</a></li><li class="depth-2"><a href="#feature-processing" data-for="feature-processing">Feature Processing</a></li><li class="depth-2"><a href="#model-parameter-tuning" data-for="model-parameter-tuning">Model Parameter Tuning</a></li><li class="depth-0"><a href="#model-tuning" data-for="model-tuning">Model Tuning</a></li><li class="depth-1"><a href="#automatic-model-tuning" data-for="automatic-model-tuning">Automatic Model Tuning</a></li><li class="depth-2"><a href="#hyperparameter-tuning" data-for="hyperparameter-tuning">Hyperparameter Tuning</a></li><li class="depth-2"><a href="#process" data-for="process">Process</a></li><li class="depth-1"><a href="#bayesian-reasoning" data-for="bayesian-reasoning">Bayesian Reasoning</a></li><li class="depth-1"><a href="#bayesian-optimization" data-for="bayesian-optimization">Bayesian Optimization</a></li><li class="depth-0"><a href="#reference" data-for="reference">Reference</a></li><li class="depth-0"><a href="#quiz" data-for="quiz">Quiz</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

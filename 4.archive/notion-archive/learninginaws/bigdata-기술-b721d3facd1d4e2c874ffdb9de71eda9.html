@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>BigData 기술 b721d3facd1d4e2c874ffdb9de71eda9 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="BigData 기술 b721d3facd1d4e2c874ffdb9de71eda9 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="BigData 기술 b721d3facd1d4e2c874ffdb9de71eda9 | LLM Wiki"/><meta name="twitter:description" content="🌎 BigData 기술 Author김강원Publishing/Release DateJune 3, 2020Publisher위키북스TypeBook BigData 이해하기 BigData 개념 3V + 2V = 1V (Value) → 6V BigData Insight BigData 활용 유의점 BigData Project BigData 기술 변화 BigData 기술 영역 Infrastructure Software Platform IT Service BigData Software Data Store Apache Phoenix Apache H..."/><meta property="og:description" content="🌎 BigData 기술 Author김강원Publishing/Release DateJune 3, 2020Publisher위키북스TypeBook BigData 이해하기 BigData 개념 3V + 2V = 1V (Value) → 6V BigData Insight BigData 활용 유의점 BigData Project BigData 기술 변화 BigData 기술 영역 Infrastructure Software Platform IT Service BigData Software Data Store Apache Phoenix Apache H..."/><meta property="og:image:alt" content="🌎 BigData 기술 Author김강원Publishing/Release DateJune 3, 2020Publisher위키북스TypeBook BigData 이해하기 BigData 개념 3V + 2V = 1V (Value) → 6V BigData Insight BigData 활용 유의점 BigData Project BigData 기술 변화 BigData 기술 영역 Infrastructure Software Platform IT Service BigData Software Data Store Apache Phoenix Apache H..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/learninginaws/bigdata-기술-b721d3facd1d4e2c874ffdb9de71eda9"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/learninginaws/bigdata-기술-b721d3facd1d4e2c874ffdb9de71eda9"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌎 BigData 기술 Author김강원Publishing/Release DateJune 3, 2020Publisher위키북스TypeBook BigData 이해하기 BigData 개념 3V + 2V = 1V (Value) → 6V BigData Insight BigData 활용 유의점 BigData Project BigData 기술 변화 BigData 기술 영역 Infrastructure Software Platform IT Service BigData Software Data Store Apache Phoenix Apache H..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/learninginaws/bigdata-기술-b721d3facd1d4e2c874ffdb9de71eda9" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1751" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1751" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/learninginaws/">LearningInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>BigData 기술 b721d3facd1d4e2c874ffdb9de71eda9</a></div></nav><h1 class="article-title">BigData 기술 b721d3facd1d4e2c874ffdb9de71eda9</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:15.930Z">2026년 6월 06일</time><span>13 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🌎</p>
+<h1 id="bigdata-기술">BigData 기술<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-기술" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/list_gray-4.svg" alt/>Author</td><td>김강원</td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/calendar_gray-1.svg" alt/>Publishing/Release Date</td><td>June 3, 2020</td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/arrow-circle-down_gray-4.svg" alt/>Publisher</td><td>위키북스</td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/arrow-circle-down_gray-4.svg" alt/>Type</td><td>Book</td></tr></tbody></table></div>
+<p><a href="../../../bigdata-기술/untitled.png" class="internal internal-link" data-slug="bigdata-기술/untitled.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-130.png" alt/></a></p>
+<p><a href="#6b78998c-60c8-4fa0-af99-53bc2480e254" class="internal internal-link alias">BigData 이해하기</a></p>
+<p><a href="#a965afd8-55b7-4f24-8654-fb3b5054a21d" class="internal internal-link alias">BigData 개념</a></p>
+<p><a href="#9fa1afb8-9cd9-4bb6-be7c-aa416770562b" class="internal internal-link alias">3V + 2V = 1V (Value) → 6V</a></p>
+<p><a href="#4955a7c0-4cf8-429d-9247-2b6064a528db" class="internal internal-link alias">BigData Insight</a></p>
+<p><a href="#4e2fcf5b-22a2-418b-af70-1674f3a38a29" class="internal internal-link alias">BigData 활용</a></p>
+<p><a href="#c0d6ddd6-f5c5-4d5e-90cc-f1dc60b9a6c3" class="internal internal-link alias">유의점</a></p>
+<p><a href="#b76b3e24-2a14-4410-9aa0-893a356f219e" class="internal internal-link alias">BigData Project</a></p>
+<p><a href="#ce558ec4-2e3a-4478-8fee-d5ab3cb395b8" class="internal internal-link alias">BigData 기술 변화</a></p>
+<p><a href="#d6d6cc2d-6c2e-48dc-aa7a-5066c71b068e" class="internal internal-link alias">BigData 기술 영역</a></p>
+<p><a href="#ca2c72b4-3228-40c7-833d-7cd221d05fdc" class="internal internal-link alias">Infrastructure</a></p>
+<p><a href="#61ff5fbc-1698-4ed8-90d7-be3c0c487a5e" class="internal internal-link alias">Software Platform</a></p>
+<p><a href="#bc26d521-82ce-4a82-a1f8-eb477d7b51ba" class="internal internal-link alias">IT Service</a></p>
+<p><a href="#6a9f2253-9e00-4a18-b3b1-7c899440fd46" class="internal internal-link alias">BigData Software</a></p>
+<p><a href="#6c9a3c27-86ae-4868-a442-331840fa4efd" class="internal internal-link alias">Data Store</a></p>
+<p><a href="#2414b634-449d-4bf7-a65f-ca5f0e222a45" class="internal internal-link alias">Apache Phoenix</a></p>
+<p><a href="#d306a685-a87c-4721-8b75-734792891d1a" class="internal internal-link alias">Apache HBase</a></p>
+<p><a href="#f9e69d9e-eb7d-4434-9fe8-726eabfd6527" class="internal internal-link alias">Cassandra</a></p>
+<p><a href="#fafa14ab-733c-47ba-9f7b-984cda9981e8" class="internal internal-link alias">Stream Processing</a></p>
+<p><a href="#c11d5c0c-4524-4581-a29a-84646773800d" class="internal internal-link alias">Apache Kafka</a></p>
+<p><a href="#bd445782-63ab-4fb9-a75d-1dfdaf7b9def" class="internal internal-link alias">Apache Storm</a></p>
+<p><a href="#2bb71e71-f532-45b6-97af-d73d0c7050ca" class="internal internal-link alias">Operation &amp; Orchestration</a></p>
+<p><a href="#69d45238-1b95-4fc3-b6ef-f54974877a8f" class="internal internal-link alias">Apache ZooKeeper</a></p>
+<p><a href="#3a1bc79a-92c8-40f9-8910-e383e5ce9f17" class="internal internal-link alias">Real-time DataBase</a></p>
+<p><a href="#f395752d-d930-4647-a8d4-51893fa9f8d1" class="internal internal-link alias">HIVE</a></p>
+<p><a href="#32b81db2-0f5a-4a56-8724-b44262244dd5" class="internal internal-link alias">LLAP</a></p>
+<p><a href="#26b6658c-87c6-4c78-84a4-0acacfc8e01b" class="internal internal-link alias">Druid</a></p>
+<p><a href="#6126270c-546e-464b-9fbc-584ad5d0a7f4" class="internal internal-link alias">Data Processing</a></p>
+<p><a href="#46fab9bc-af26-40fe-b096-9c201291640f" class="internal internal-link alias">Apache Zeppelin</a></p>
+<p><a href="#ed1b667e-e4be-4270-a36c-f8e2e68d2731" class="internal internal-link alias">Apache Spark</a></p>
+<p><a href="#f81744ae-d38a-4f40-91a1-f2e3f9b4769c" class="internal internal-link alias">Software Stack</a></p>
+<p><a href="#0ad1eb7e-9581-44b4-9373-61c546b0771a" class="internal internal-link alias">Apache Hadoop</a></p>
+<p><a href="#023f435d-7e5d-4f01-8984-8819e657744c" class="internal internal-link alias">AI/ML</a></p>
+<p><a href="#e5c1c003-1101-42c4-9bbb-6b74d69a42ed" class="internal internal-link alias">Apache Submarine</a></p>
+<p><a href="#48b740f1-180e-4232-a5a9-b01ea1942b27" class="internal internal-link alias">BigData 구현 기술</a></p>
+<p><a href="#74fe2a1e-04a6-40a9-884d-9f83aaca39c8" class="internal internal-link alias">수집 (Aggregation)</a></p>
+<p><a href="#5d1ba58f-0713-41f5-aad8-587ea5a07b28" class="internal internal-link alias">적재 (Store)</a></p>
+<p><a href="#98eeaa91-43f3-44b4-9084-0ff559f8099e" class="internal internal-link alias">처리 (Processing)</a></p>
+<p><a href="#4edd4a00-1055-4744-bb8c-aa84fbafe3cf" class="internal internal-link alias">탐색 (Search)</a></p>
+<p><a href="#44c7ed79-b1ff-47dd-bac5-5a913d2c9642" class="internal internal-link alias">분석</a></p>
+<p><a href="#47e5ef1b-6c1a-4a7c-9aae-77cccbe1e667" class="internal internal-link alias">응용</a></p>
+<h1 id="bigdata-이해하기">BigData 이해하기<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-이해하기" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="bigdata-개념">BigData 개념<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-개념" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="https://www.statista.com/statistics/871513/worldwide-data-created/" class="external external-link">Volumes of Data/Information<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> : 2020 64 Zeta byte (10^21) → 2025 181 Zeta byte</p>
+</li>
+<li>
+<p>80%는 비정형 데이터 (SNS, IoT, Image, Audio, Video, …) → BigData 분석 필요</p>
+</li>
+<li>
+<p>BigData : 대규모 데이터 집합 → 기술, 분석, 통찰력 (Insight) 총칭</p>
+</li>
+</ul>
+<blockquote>
+<p>통상적인 데이터 수집, 관리, 처리를 하는 SW의 수용 한계를 넘어서는 크기의 데이터</p>
+</blockquote>
+<blockquote>
+<p>일반적 DB SW로 저장, 관리, 분석할 수 있는 범위를 초과하는 규모의 데이터</p>
+</blockquote>
+<blockquote>
+<p>대용량 데이터를 활용, 분석하여 가치 있는 정보를 추출, 생성된 지식을 바탕으로 능동적으로 대응하거나 변화하기 위한 기술</p>
+</blockquote>
+<blockquote>
+<p>기존 방법으로는 데이터 수집, 저장, 검색, 분석 등이 어려운 데이터를 총칭해서 일컫는 용어</p>
+</blockquote>
+<h3 id="3v--2v--1v-value--6v">3V + 2V = 1V (Value) → 6V<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3v--2v--1v-value--6v" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Volume : 방대한 양의 데이터</p>
+</li>
+<li>
+<p>Variety : 정형 + 비정형</p>
+</li>
+<li>
+<p>Veloctiy : 실시간 생성, 빠른 속도로 데이터 처리, 분석</p>
+</li>
+<li>
+<p>Veracity (정확성, 진실성) : 주요 의사 결정을 위한 데이터 품질, 신뢰성</p>
+</li>
+<li>
+<p>Visualization : 복잡한 데이터를 시각적으로 표현</p>
+</li>
+<li>
+<p>Value : 비지니스 효익을 실현하기 위해 궁극적 가치 창출</p>
+</li>
+</ul>
+<h3 id="bigdata-insight">BigData Insight<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-insight" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>이해 : 대규모 데이터에서 <strong>통계량을 추출</strong>해 과거에 <strong>발생한 일</strong>에 대한 <strong>이해와 원인</strong> 파악</p>
+<ul>
+<li>시계열 회원 가입 추이, 서비스 평균 이용 시간, 신규 상품 관심도, 서비스 해지율</li>
+</ul>
+</li>
+<li>
+<p>발견 : 알지 못했던 데이터 <strong>패턴들을 발견하고 해석</strong>하여 무슨 일이 <strong>새롭게 발생하는지 파악</strong></p>
+<ul>
+<li>고객(매출) 증가/감소 원인?, 회원 가입 중 Bounce 발생 원인?, 부정적 평판 점수 높아진 원인?</li>
+</ul>
+</li>
+<li>
+<p>예측 : 이해와 발견을 기반으로 <strong>예측 모형을 만들고</strong> 미래에 <strong>발생할 현상을 예측</strong></p>
+<ul>
+<li>상품 가입/이탈 고객은?, 부정거래 가망 고객은?, 상품 구매력이 높은 고객은?</li>
+</ul>
+</li>
+</ul>
+<h2 id="bigdata-활용">BigData 활용<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-활용" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>BigData Lake &amp; Warehouse : 3V</p>
+</li>
+<li>
+<p>BigData Mart : Veracity</p>
+</li>
+<li>
+<p>Visualization : Insight (이해, 발견, 예측)</p>
+</li>
+<li>
+<p>Value : Business 가치 창출</p>
+</li>
+</ol>
+<h3 id="유의점">유의점<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#유의점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>BigData는 대규모 데이터에서 pattern과 trend를 발견하고 목적에 맞게 해석하는 행위</p>
+</li>
+<li>
+<p>일부 데이터의 문제가 발생하여도 사람이 데이터를 해석하는 결과가 크게 달라지지 않는 큰 수의 법칙이 적용</p>
+</li>
+</ul>
+<h2 id="bigdata-project">BigData Project<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-project" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Platform 구축</p>
+</li>
+<li>
+<p>Data Analytics</p>
+</li>
+<li>
+<p>Data Operation</p>
+</li>
+</ul>
+<p><a href="../../../bigdata-기술/untitled-1.png" class="internal internal-link" data-slug="bigdata-기술/untitled-1.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-1-10.png" alt/></a></p>
+<h2 id="bigdata-기술-변화">BigData 기술 변화<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-기술-변화" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>대용량 저장소, 대규모 배치 처리 → 실시간 처리, 온라인 분석 → 전처리 및 분석 마트, 고급 분석 및 마이닝</li>
+</ul>
+<h2 id="bigdata-기술-영역">BigData 기술 영역<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-기술-영역" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="infrastructure">Infrastructure<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#infrastructure" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Server, Network, Storage</p>
+</li>
+<li>
+<p>HP, IBM, Cisco, Dell, RedHat</p>
+</li>
+</ul>
+<h3 id="software-platform">Software Platform<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#software-platform" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>BigData 기술을 포괄하는 Stack 구성</p>
+</li>
+<li>
+<p>BigData 수집, 적재, 처리, 분석 등의 지원 solution</p>
+</li>
+<li>
+<p>BigData system 관리 및 monitoring tool</p>
+</li>
+<li>
+<p>BigData + AI platform 확장</p>
+</li>
+<li>
+<p>Cloudera, MapR, HortonWorks, 그루터, 클라우디안, KT넥스알</p>
+</li>
+</ul>
+<h3 id="it-service">IT Service<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#it-service" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Consulting 및 구축, 전문 운영 및 유지보수, 데이터 분석 서비스, 교육센터 운영 및 인력 양성</li>
+</ul>
+<h1 id="bigdata-software">BigData Software<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-software" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="data-store">Data Store<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-store" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="apache-phoenix">Apache Phoenix<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-phoenix" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="apache-hbase">Apache HBase<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-hbase" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>[</p>
+<p>Apache HBase - Apache HBase™ Home</p>
+<p>Apache HBase™ is the Hadoop database, a distributed, scalable, big data store. Use Apache HBase™ when you need random, realtime read/write access to your Big Data. This project’s goal is the hosting of very large tables — billions of rows X millions of columns — atop clusters of commodity hardware.</p>
+<p><img src="https://hbase.apache.org/images/favicon.ico" alt/><a href="https://hbase.apache.org/" class="external external-link">https://hbase.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="https://hbase.apache.org/images/hbase_logo_with_orca_large.png" alt/>](<a href="https://hbase.apache.org/" class="external external-link">https://hbase.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h3 id="cassandra">Cassandra<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cassandra" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>[</p>
+<p>Apache Cassandra |</p>
+<p>Manage massive amounts of data, fast, without losing sleep Relive the first-ever World Party event! Watch a dozen lightning talks to learn more about Cassandra. Performant Cassandra consistently outperforms popular NoSQL alternatives in benchmarks and real applications, primarily because of fundamental architectural choices. Cassandra is used by thousands of companies with large active data sets.</p>
+<p><img src="https://cassandra.apache.org/favicon.ico" alt/><a href="https://cassandra.apache.org/" class="external external-link">https://cassandra.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="https://cassandra.apache.org/img/blog/changelog_rectangle.jpg" alt/>](<a href="https://cassandra.apache.org/" class="external external-link">https://cassandra.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="stream-processing">Stream Processing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stream-processing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="apache-kafka">Apache Kafka<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-kafka" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="apache-storm">Apache Storm<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-storm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h2 id="operation--orchestration">Operation &amp; Orchestration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#operation--orchestration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="apache-zookeeper">Apache ZooKeeper<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-zookeeper" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>[</p>
+<p>Apache ZooKeeper</p>
+<p>Apache ZooKeeper™ Apache ZooKeeper is an effort to develop and maintain an open-source server which enables highly reliable distributed coordination. ZooKeeper is a centralized service for maintaining configuration information, naming, providing distributed synchronization, and providing group services. All of these kinds of services are used in some form or another by distributed applications.</p>
+<p><img src="https://zookeeper.apache.org/images/favicon.ico" alt/><a href="https://zookeeper.apache.org/" class="external external-link">https://zookeeper.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>](<a href="https://zookeeper.apache.org/" class="external external-link">https://zookeeper.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="real-time-database">Real-time DataBase<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#real-time-database" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="hive">HIVE<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hive" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="llap">LLAP<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#llap" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="druid">Druid<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#druid" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h2 id="data-processing">Data Processing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-processing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="apache-zeppelin">Apache Zeppelin<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-zeppelin" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="apache-spark">Apache Spark<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-spark" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>[</p>
+<p>Apache Spark™ - Unified Analytics Engine for Big Data</p>
+<p>Lightning-fast unified analytics engine Apache Spark™ is a unified analytics engine for large-scale data processing. Run workloads 100x faster. Apache Spark achieves high performance for both batch and streaming data, using a state-of-the-art DAG scheduler, a query optimizer, and a physical execution engine. Write applications quickly in Java, Scala, Python, R, and SQL.</p>
+<p><img src="https://spark.apache.org/favicon.ico" alt/><a href="https://spark.apache.org/" class="external external-link">https://spark.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/spark-stack.png" alt/>](<a href="https://spark.apache.org/" class="external external-link">https://spark.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="software-stack">Software Stack<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#software-stack" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="apache-hadoop">Apache Hadoop<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-hadoop" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>[</p>
+<p>Apache Hadoop</p>
+<p>This is the first stable release of Apache Hadoop 3.3.x line. It contains 697 bug fixes, improvements and enhancements since 3.3.0. Users are encouraged to read the overview of major changes since 3.3.0. For details of 697 bug fixes, improvements, and other enhancements since the previous 3.3.0 release, please check release notes and changelog detail the changes since 3.3.0.</p>
+<p><img src="https://hadoop.apache.org/favicon.ico" alt/><a href="https://hadoop.apache.org/" class="external external-link">https://hadoop.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/hadoop-logo.jpeg" alt/>](<a href="https://hadoop.apache.org/" class="external external-link">https://hadoop.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<p><a href="../../../bigdata-기술/untitled-2.png" class="internal internal-link" data-slug="bigdata-기술/untitled-2.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-2-7.png" alt/></a></p>
+<h2 id="aiml">AI/ML<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aiml" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="apache-submarine">Apache Submarine<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#apache-submarine" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>[</p>
+<p>Hello from Apache Submarine | Apache Submarine</p>
+<p>Your Docusaurus site did not load properly. A very common reason is a wrong site baseUrl configuration. Current configured baseUrl = / (default value) We suggest trying baseUrl = Cloud Native Machine Learning Platform Submarine supports data processing and algorithm development using spark &amp; python through notebook Submarine supports multiple machine learning frameworks for model training.</p>
+<p><img src="https://submarine.apache.org/favicon.ico" alt/><a href="https://submarine.apache.org/" class="external external-link">https://submarine.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/spark-flink.png" alt/>](<a href="https://submarine.apache.org/" class="external external-link">https://submarine.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="bigdata-구현-기술">BigData 구현 기술<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bigdata-구현-기술" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="수집-aggregation">수집 (Aggregation)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#수집-aggregation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Crwaling, FTP, OpenAPI, RSS, Log Aggregation, DB Aggregation, Streaming</p>
+</li>
+<li>
+<p>기존 수집 시스템의 데이터 보다 크고 다양한 형식의 데이터를 빠르게 처리해야 함</p>
+<ul>
+<li>
+<p>EAI (Enterprise Application Interface)</p>
+</li>
+<li>
+<p>ETL (Extract-Load-Transform)</p>
+</li>
+<li>
+<p>ESB (Enterprise Service Bus)</p>
+<ul>
+<li>SOAP, REST, RNI, JNI</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>선형 확장이 가능하고 분산 처리가 가능한 architecture로 구성</p>
+<ul>
+<li>
+<p>CEP (Complex Event Processing)</p>
+</li>
+<li>
+<p>ESP (Event Stream Processing)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>주요 Software</p>
+<ul>
+<li>
+<p>Apache Flume (통나무를 운반하는 수로)</p>
+<ul>
+<li>
+<p>Log data 수집</p>
+</li>
+<li>
+<p>Streaming Data Flow Architecture</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>Welcome to Apache Flume - Apache Flume</p>
+<p>Flume is a distributed, reliable, and available service for efficiently collecting, aggregating, and moving large amounts of log data. It has a simple and flexible architecture based on streaming data flows. It is robust and fault tolerant with tunable reliability mechanisms and many failover and recovery mechanisms. It uses a simple extensible data model that allows for online analytic application.</p>
+<p><img src="https://flume.apache.org/favicon.ico" alt/><a href="https://flume.apache.org/" class="external external-link">https://flume.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/devguide_image00.png" alt/>](<a href="https://flume.apache.org/" class="external external-link">https://flume.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Fluentd</p>
+<ul>
+<li>Log data 수집</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>Fluentd | Open Source Data Collector</p>
+<p>Fluentd is an open source data collector for unified logging layer.</p>
+<p><img src="https://www.fluentd.org/favicon.ico" alt/><a href="https://www.fluentd.org/" class="external external-link">https://www.fluentd.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/feedback.png" alt/>](<a href="https://www.fluentd.org/" class="external external-link">https://www.fluentd.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Scribe</p>
+<ul>
+<li>Facebook에서 이전에 사용하던 Log 수집기, C++ 만들어져 성능이 좋음</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>facebookarchive/scribe</p>
+<p>Archived Repo ============= This is an archived project and is no longer supported or updated by Facebook. Please do not file issues or pull-requests against this repo. If you wish to continue to develop this code yourself, we recommend you fork it.</p>
+<p><img src="https://github.com/favicon.ico" alt/><a href="https://github.com/facebookarchive/scribe" class="external external-link">https://github.com/facebookarchive/scribe<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/scribe.png" alt/>](<a href="https://github.com/facebookarchive/scribe" class="external external-link">https://github.com/facebookarchive/scribe<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Calligraphus</p>
+<ul>
+<li>Facebook에서 사용하는 Log 수집기, Java로 작성</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>facebookarchive/jcommon</p>
+<p>jcommon: a set of libraries used inside Facebook java projects, internal and open source. jcommon builds and is tested on both Java 8 and Java 11. Maven pom.xml files are provided as a convenience. However, we do not regularly test them, and do not consider them supported.</p>
+<p><img src="https://github.com/favicon.ico" alt/><a href="https://github.com/facebookarchive/jcommon" class="external external-link">https://github.com/facebookarchive/jcommon<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="https://opengraph.githubassets.com/d4b2e8790367497ba6ff5f3ea2dc0607aae5b18fd63bf1433886c1c866e7ad32/facebookarchive/jcommon" alt/>](<a href="https://github.com/facebookarchive/jcommon" class="external external-link">https://github.com/facebookarchive/jcommon<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Logstash</p>
+<ul>
+<li>데이터 처리 pipeline</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>Logstash: 로그 수집, 구문 분석, 변환 | Elastic</p>
+<p>Logstash(Elastic Stack의 일부)는 이 유연한 오픈 소스 콜렉션, 구문 분석 및 강화 파이프라인으로 모든 소스, 모든 형식의 데이터를 손쉽게 통합합니다. 무료 다운로드.</p>
+<p><img src="https://www.elastic.co/favicon.ico" alt/><a href="https://www.elastic.co/kr/logstash" class="external external-link">https://www.elastic.co/kr/logstash<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/illustration-logstash-header.png" alt/>](<a href="https://www.elastic.co/kr/logstash" class="external external-link">https://www.elastic.co/kr/logstash<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Apache Chukwa</p>
+<ul>
+<li>
+<p>Data collection system for monitoring large distributed system</p>
+</li>
+<li>
+<p>Hadoop cluster log, 서버 상태 정보 관리</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>16 July 2016: Release 0.8 is available. This is a security bugfix release. This release updates Hadoop, HBase, and Solr dependencies and improve Java 8 support. See the Apache Chukwa 0.8.0 Release Notes for details. Alternatively, you can look at the Jira issue log for all releases.</p>
+<p><img src="http://chukwa.apache.org/favicon.ico" alt/><a href="http://chukwa.apache.org/" class="external external-link">http://chukwa.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/asf_logo.png" alt/>](<a href="http://chukwa.apache.org/" class="external external-link">http://chukwa.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Apache NiFi</p>
+<ul>
+<li>소프트웨어 system간 데이터 흐름 자동화, 효율적으로 처리 : Flow-Based Programiming (FBP)</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>Apache NiFi</p>
+<p>Apache NiFi supports powerful and scalable directed graphs of data routing, transformation, and system mediation logic.</p>
+<p><img src="http://nifi.apache.org/assets/images/nifi16.ico" alt/><a href="https://nifi.apache.org/" class="external external-link">https://nifi.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="http://nifi.apache.org/assets/images/flow-th.png" alt/>](<a href="https://nifi.apache.org/" class="external external-link">https://nifi.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Embulk</p>
+<ul>
+<li>Bluk data loader</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>Embulk</p>
+<p>Embulk runs on Java. Make sure Java Runtime is installed. Embulk v0.9 and v0.10 run on Java 8. Java 9 is not supported officially. curl —create-dirs -o ~/.embulk/bin/embulk -L “<a href="https://dl.embulk.org/embulk-latest.jar" class="external external-link">https://dl.embulk.org/embulk-latest.jar<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>” chmod +x ~/.embulk/bin/embulk echo ‘export PATH=“<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.0813em;">H</span><span class="mord mathnormal" style="margin-right:0.0278em;">O</span><span class="mord mathnormal" style="margin-right:0.109em;">M</span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mord">/.</span><span class="mord mathnormal">e</span><span class="mord mathnormal">mb</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.0197em;">l</span><span class="mord mathnormal" style="margin-right:0.0315em;">k</span><span class="mord">/</span><span class="mord mathnormal">bin</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span></span></span></span>PATH”’ >> ~/.bashrc source ~/.bashrc PowerShell -Command ”&amp; {[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::TLS12; Invoke-WebRequest <a href="http://dl.embulk.org/embulk-latest.jar" class="external external-link">http://dl.embulk.org/embulk-latest.jar<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> -OutFile embulk.bat}” The embulk example command generates an example CSV file.</p>
+<p><a href="https://www.embulk.org/" class="external external-link">https://www.embulk.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>](<a href="https://www.embulk.org/" class="external external-link">https://www.embulk.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+</li>
+</ul>
+<h3 id="적재-store">적재 (Store)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#적재-store" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Distributed File, No-SQL, Message Queue, Memory Cached</p>
+</li>
+<li>
+<p>수집한 데이터를 분산 스토리지에 영구 또는 임시로 저장</p>
+</li>
+<li>
+<p>HDFS (Hadoop Distributed File System) : 대용량 파일 전체를 영구적으로 저장</p>
+</li>
+<li>
+<p>NoSQL : 대규모 메시지 데이터 전체를 영구 저장</p>
+<ul>
+<li>
+<p>HBase</p>
+<ul>
+<li>HDFS위에 만들어진 distributed columnar database (<a href="https://cyberx.tistory.com/164" class="external external-link">참조 blog<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>Apache HBase - Apache HBase™ Home</p>
+<p>Apache HBase™ is the Hadoop database, a distributed, scalable, big data store. Use Apache HBase™ when you need random, realtime read/write access to your Big Data. This project’s goal is the hosting of very large tables — billions of rows X millions of columns — atop clusters of commodity hardware.</p>
+<p><img src="https://hbase.apache.org/images/favicon.ico" alt/><a href="https://hbase.apache.org/" class="external external-link">https://hbase.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="https://hbase.apache.org/images/hbase_logo_with_orca_large.png" alt/>](<a href="https://hbase.apache.org/" class="external external-link">https://hbase.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>MongoDB</p>
+<ul>
+<li>Document-based, distributed database (<a href="https://kciter.so/posts/about-mongodb" class="external external-link">참조 blog<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>The most popular database for modern apps</p>
+<p>MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. No database makes you more productive. Try MongoDB free in the cloud! Used by millions of developers to power the world’s most innovative products and services MongoDB is a document database, which means it stores data in JSON-like documents.</p>
+<p><img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt/><a href="https://www.mongodb.com/" class="external external-link">https://www.mongodb.com/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/mongodb-for-giant-ideas-bbab5c3cf8.png" alt/>](<a href="https://www.mongodb.com/" class="external external-link">https://www.mongodb.com/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Apache Cassandra</p>
+<ul>
+<li>Distributed, NoSQL database (<a href="https://nicewoong.github.io/development/2018/02/11/cassandra-feature/" class="external external-link">참조 blog<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>Apache Cassandra |</p>
+<p>Manage massive amounts of data, fast, without losing sleep Relive the first-ever World Party event! Watch a dozen lightning talks to learn more about Cassandra. Performant Cassandra consistently outperforms popular NoSQL alternatives in benchmarks and real applications, primarily because of fundamental architectural choices. Cassandra is used by thousands of companies with large active data sets.</p>
+<p><img src="https://cassandra.apache.org/favicon.ico" alt/><a href="https://cassandra.apache.org/" class="external external-link">https://cassandra.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="https://cassandra.apache.org/img/blog/changelog_rectangle.jpg" alt/>](<a href="https://cassandra.apache.org/" class="external external-link">https://cassandra.apache.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+</li>
+<li>
+<p>In-memory Cache : 대규모 메시지 데이터 일부만 임시 저장</p>
+<ul>
+<li>
+<p>Redis (<a href="https://brunch.co.kr/@jehovah/20" class="external external-link">Remote Dictionary Server<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Key-Value 구조의 비정형 데이터 저장, 관리를 위한 in-memory data store</p>
+</li>
+<li>
+<p>Single threaded</p>
+<ul>
+<li>
+<p>한 번에 딱 하나의 명령만 실행할 수 있음</p>
+</li>
+<li>
+<p>MTU보다 큰 Packet이 split되면 하나의 명령어로 합쳐서 실행</p>
+</li>
+<li>
+<p>초당 10만개 정도까지 처리 가능</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../bigdata-기술/redis-191122055453.pdf" class="internal internal-link alias" data-slug="bigdata-기술/redis-191122055453.pdf">redis-191122055453.pdf</a></p>
+</li>
+</ul>
+<p>[</p>
+<p>Redis</p>
+<p>Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker. Redis provides data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs, geospatial indexes, and streams. Redis has built-in replication, Lua scripting, LRU eviction, transactions, and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.</p>
+<p><img src="https://redis.io/images/favicon.png" alt/><a href="https://redis.io/" class="external external-link">https://redis.io/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="https://redis.io/images/redis-white.png" alt/>](<a href="https://redis.io/" class="external external-link">https://redis.io/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Memcached</p>
+</li>
+<li>
+<p>Infinispan</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Message Oriented Middleware : 대규모 메시지 데이터 전체를 buffering</p>
+<ul>
+<li>
+<p>Kafka</p>
+</li>
+<li>
+<p>RabbitMQ</p>
+</li>
+<li>
+<p>ActiveMQ</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="처리-processing">처리 (Processing)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#처리-processing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Structured Processing, Unstructured Processing, Workflow, Scheduler</li>
+</ul>
+<h3 id="탐색-search">탐색 (Search)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#탐색-search" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>SQL, Distributed Programming, Exploration Visualization, <a href="https://spidyweb.tistory.com/187" class="external external-link">Ad-Hoc<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> processing, <a href="https://sens.tistory.com/358" class="external external-link">Ad-Hoc query<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h3 id="분석">분석<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Data Mining, ML, Aanlysis</li>
+</ul>
+<h3 id="응용">응용<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#응용" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Data Export/Import, Reporting, Business Visualization</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1413" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#bigdata-기술" data-for="bigdata-기술">BigData 기술</a></li><li class="depth-0"><a href="#bigdata-이해하기" data-for="bigdata-이해하기">BigData 이해하기</a></li><li class="depth-1"><a href="#bigdata-개념" data-for="bigdata-개념">BigData 개념</a></li><li class="depth-2"><a href="#3v--2v--1v-value--6v" data-for="3v--2v--1v-value--6v">3V + 2V = 1V (Value) → 6V</a></li><li class="depth-2"><a href="#bigdata-insight" data-for="bigdata-insight">BigData Insight</a></li><li class="depth-1"><a href="#bigdata-활용" data-for="bigdata-활용">BigData 활용</a></li><li class="depth-2"><a href="#유의점" data-for="유의점">유의점</a></li><li class="depth-1"><a href="#bigdata-project" data-for="bigdata-project">BigData Project</a></li><li class="depth-1"><a href="#bigdata-기술-변화" data-for="bigdata-기술-변화">BigData 기술 변화</a></li><li class="depth-1"><a href="#bigdata-기술-영역" data-for="bigdata-기술-영역">BigData 기술 영역</a></li><li class="depth-2"><a href="#infrastructure" data-for="infrastructure">Infrastructure</a></li><li class="depth-2"><a href="#software-platform" data-for="software-platform">Software Platform</a></li><li class="depth-2"><a href="#it-service" data-for="it-service">IT Service</a></li><li class="depth-0"><a href="#bigdata-software" data-for="bigdata-software">BigData Software</a></li><li class="depth-1"><a href="#data-store" data-for="data-store">Data Store</a></li><li class="depth-2"><a href="#apache-phoenix" data-for="apache-phoenix">Apache Phoenix</a></li><li class="depth-2"><a href="#apache-hbase" data-for="apache-hbase">Apache HBase</a></li><li class="depth-2"><a href="#cassandra" data-for="cassandra">Cassandra</a></li><li class="depth-1"><a href="#stream-processing" data-for="stream-processing">Stream Processing</a></li><li class="depth-2"><a href="#apache-kafka" data-for="apache-kafka">Apache Kafka</a></li><li class="depth-2"><a href="#apache-storm" data-for="apache-storm">Apache Storm</a></li><li class="depth-1"><a href="#operation--orchestration" data-for="operation--orchestration">Operation &amp; Orchestration</a></li><li class="depth-2"><a href="#apache-zookeeper" data-for="apache-zookeeper">Apache ZooKeeper</a></li><li class="depth-1"><a href="#real-time-database" data-for="real-time-database">Real-time DataBase</a></li><li class="depth-2"><a href="#hive" data-for="hive">HIVE</a></li><li class="depth-2"><a href="#llap" data-for="llap">LLAP</a></li><li class="depth-2"><a href="#druid" data-for="druid">Druid</a></li><li class="depth-1"><a href="#data-processing" data-for="data-processing">Data Processing</a></li><li class="depth-2"><a href="#apache-zeppelin" data-for="apache-zeppelin">Apache Zeppelin</a></li><li class="depth-2"><a href="#apache-spark" data-for="apache-spark">Apache Spark</a></li><li class="depth-1"><a href="#software-stack" data-for="software-stack">Software Stack</a></li><li class="depth-2"><a href="#apache-hadoop" data-for="apache-hadoop">Apache Hadoop</a></li><li class="depth-1"><a href="#aiml" data-for="aiml">AI/ML</a></li><li class="depth-2"><a href="#apache-submarine" data-for="apache-submarine">Apache Submarine</a></li><li class="depth-1"><a href="#bigdata-구현-기술" data-for="bigdata-구현-기술">BigData 구현 기술</a></li><li class="depth-2"><a href="#수집-aggregation" data-for="수집-aggregation">수집 (Aggregation)</a></li><li class="depth-2"><a href="#적재-store" data-for="적재-store">적재 (Store)</a></li><li class="depth-2"><a href="#처리-processing" data-for="처리-processing">처리 (Processing)</a></li><li class="depth-2"><a href="#탐색-search" data-for="탐색-search">탐색 (Search)</a></li><li class="depth-2"><a href="#분석" data-for="분석">분석</a></li><li class="depth-2"><a href="#응용" data-for="응용">응용</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

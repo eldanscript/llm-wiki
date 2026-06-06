@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Solutions - Modular Cloud Studio (MCS) 1d33f648df9080528715c61917a64dfc | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Solutions - Modular Cloud Studio (MCS) 1d33f648df9080528715c61917a64dfc | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Solutions - Modular Cloud Studio (MCS) 1d33f648df9080528715c61917a64dfc | LLM Wiki"/><meta name="twitter:description" content="📑 Solutions - Modular Cloud Studio (MCS) Deploy Management Environment d13pmdmipjdem7.cloudfront.net/ AD User AdminUserCredential admin CNe6v7xe2v3BCJsq ServiceUserCredential service_api_user Lr1A894wVNS5U7bq DB Credential Engine : Postgre (5432 port) Cluster Identifier : stackset-sc-189427507247-..."/><meta property="og:description" content="📑 Solutions - Modular Cloud Studio (MCS) Deploy Management Environment d13pmdmipjdem7.cloudfront.net/ AD User AdminUserCredential admin CNe6v7xe2v3BCJsq ServiceUserCredential service_api_user Lr1A894wVNS5U7bq DB Credential Engine : Postgre (5432 port) Cluster Identifier : stackset-sc-189427507247-..."/><meta property="og:image:alt" content="📑 Solutions - Modular Cloud Studio (MCS) Deploy Management Environment d13pmdmipjdem7.cloudfront.net/ AD User AdminUserCredential admin CNe6v7xe2v3BCJsq ServiceUserCredential service_api_user Lr1A894wVNS5U7bq DB Credential Engine : Postgre (5432 port) Cluster Identifier : stackset-sc-189427507247-..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/solutions---modular-cloud-studio-(mcs)-1d33f648df9080528715c61917a64dfc"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/solutions---modular-cloud-studio-(mcs)-1d33f648df9080528715c61917a64dfc"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="📑 Solutions - Modular Cloud Studio (MCS) Deploy Management Environment d13pmdmipjdem7.cloudfront.net/ AD User AdminUserCredential admin CNe6v7xe2v3BCJsq ServiceUserCredential service_api_user Lr1A894wVNS5U7bq DB Credential Engine : Postgre (5432 port) Cluster Identifier : stackset-sc-189427507247-..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/solutions---modular-cloud-studio-(mcs)-1d33f648df9080528715c61917a64dfc" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2438" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2438" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Solutions - Modular Cloud Studio (MCS) 1d33f648df9080528715c61917a64dfc</a></div></nav><h1 class="article-title">Solutions - Modular Cloud Studio (MCS) 1d33f648df9080528715c61917a64dfc</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.511Z">2026년 6월 06일</time><span>27 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/taskinaws/attachments/rijksmuseum_jan_lievens_1627.jpg" alt/></p>
+<p>📑</p>
+<h1 id="solutions---modular-cloud-studio-mcs">Solutions - Modular Cloud Studio (MCS)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solutions---modular-cloud-studio-mcs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="deploy">Deploy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deploy" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="management-environment">Management Environment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#management-environment" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="https://d13pmdmipjdem7.cloudfront.net/" class="external external-link">https://d13pmdmipjdem7.cloudfront.net/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h2 id="ad-user">AD User<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ad-user" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="adminusercredential">AdminUserCredential<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#adminusercredential" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>admin</p>
+</li>
+<li>
+<p>CNe6v7xe2v3BCJsq</p>
+</li>
+</ul>
+<h3 id="serviceusercredential">ServiceUserCredential<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#serviceusercredential" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>service_api_user</p>
+</li>
+<li>
+<p>Lr1A894wVNS5U7bq</p>
+</li>
+</ul>
+<h3 id="db-credential">DB Credential<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#db-credential" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Engine : Postgre (5432 port)</p>
+</li>
+<li>
+<p>Cluster Identifier : stackset-sc-189427507247-leostreambrokerstoragesi-kbdr7myzdcfp</p>
+</li>
+<li>
+<p>Host : <a href="http://stackset-sc-189427507247-leostreambrokerstoragesi-kbdr7myzdcfp.cluster-cshblof6rmil.us-east-1.rds.amazonaws.com/" class="external external-link">stackset-sc-189427507247-leostreambrokerstoragesi-kbdr7myzdcfp.cluster-cshblof6rmil.us-east-1.rds.amazonaws.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Username : postgres</p>
+</li>
+<li>
+<p>Password : 6PxkrZdg3u13</p>
+</li>
+</ul>
+<h3 id="defaultadminactivedirectorylogincredential">DefaultAdminActiveDirectoryLoginCredential<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#defaultadminactivedirectorylogincredential" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Admin</p>
+</li>
+<li>
+<p>(f’6NXu,6zdO’gzm</p>
+</li>
+</ul>
+<h3 id="adconnectorserviceaccountdirectorylogincredential">AdConnectorServiceAccountDirectoryLoginCredential<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#adconnectorserviceaccountdirectorylogincredential" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>SA_AdConnectorUser</p>
+</li>
+<li>
+<p>KI@4j1(BN.&lt;QZa3h</p>
+</li>
+</ul>
+<h3 id="studioadminactivedirectorylogincredential">StudioAdminActiveDirectoryLoginCredential<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#studioadminactivedirectorylogincredential" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>StudioAdmin</p>
+</li>
+<li>
+<p>vS6mKD”R3D&amp;Q,H2t</p>
+</li>
+</ul>
+<h3 id="mcsmodulesserviceaccountactivedirectorylogincredentials">McsModulesServiceAccountActiveDirectoryLoginCredentials<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mcsmodulesserviceaccountactivedirectorylogincredentials" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>SA_McsModulesUser</p>
+</li>
+<li>
+<p>]5sk&amp;V#gq!yy_4kh</p>
+</li>
+</ul>
+<h1 id="mcs-setup-정리">MCS Setup 정리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mcs-setup-정리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="aws-modular-cloud-studio에서-macbook을-통한-nice-dcv-연결-가이드">AWS Modular Cloud Studio에서 MacBook을 통한 NICE DCV 연결 가이드<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-modular-cloud-studio에서-macbook을-통한-nice-dcv-연결-가이드" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>AWS의 Modular Cloud Studio(MCS)를 구축하고 local MacBook에서 NICE DCV를 통해 워크스테이션에 접속하는 방법에 대한 상세 가이드입니다. MCS의 기본 아키텍처인 private subnet의 Leostream broker와 워크스테이션, 그리고 public subnet의 Leostream gateway를 통한 연결 방법을 단계별로 설명합니다.</p>
+<h2 id="mcs-아키텍처-이해하기">MCS 아키텍처 이해하기<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mcs-아키텍처-이해하기" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>MCS 환경에서는 Leostream Broker가 워크스테이션 할당 및 자동 확장을 관리하고, Leostream Gateway가 워크스테이션에 대한 연결을 관리합니다[2]. 기본 구성에서는:</p>
+<ul>
+<li>
+<p>Leostream Broker와 워크스테이션 인스턴스는 private subnet에 위치</p>
+</li>
+<li>
+<p>Leostream Gateway는 public subnet에 위치하며 Global Accelerator로 서비스됨</p>
+</li>
+<li>
+<p>Route 53의 private hosted zone이 private subnet을 통해 접근 가능한 Application Load Balancer로 요청을 라우팅[2]</p>
+</li>
+</ul>
+<p>이러한 아키텍처에서 외부에서 접속하려면 Leostream Gateway를 통해 연결해야 합니다.</p>
+<h2 id="macbook용-nice-dcv-클라이언트-설치하기">MacBook용 NICE DCV 클라이언트 설치하기<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#macbook용-nice-dcv-클라이언트-설치하기" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>NICE DCV 다운로드 페이지(<a href="https://download.nice-dcv.com/" class="external external-link">https://download.nice-dcv.com/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)에서 macOS용 클라이언트를 다운로드합니다[3].</p>
+<ul>
+<li>
+<p>Intel 프로세서용 macOS 클라이언트</p>
+</li>
+<li>
+<p>Apple M1 프로세서용 macOS 클라이언트 중 적합한 버전 선택[1]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>다운로드한 .dmg 파일을 실행합니다.</p>
+<ul>
+<li>“확인되지 않은 개발자” 오류가 발생할 경우, Apple의 ‘안전하게 앱 열기’ 웹페이지를 참조하세요[1].</li>
+</ul>
+</li>
+<li>
+<p>DCV.app 파일을 Applications 폴더로 드래그합니다[1].</p>
+</li>
+<li>
+<p>간편한 접근을 위해 데스크톱 바로가기를 만들거나 Dock에 애플리케이션을 추가합니다(선택사항)[1].</p>
+</li>
+</ol>
+<h2 id="leostream-gateway를-통한-연결-준비하기">Leostream Gateway를 통한 연결 준비하기<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#leostream-gateway를-통한-연결-준비하기" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Leostream Gateway는 VPN 없이도 원격 접속이 가능하도록 해주는 솔루션으로, public subnet에 위치하며 다음과 같은 포트를 사용합니다:</p>
+<ul>
+<li>
+<p>NICE DCV 클라이언트 기반 연결: TCP 및 UDP 8443(기본값)[16]</p>
+</li>
+<li>
+<p>NICE DCV HTML5 연결: TCP 8443(기본값)[16]</p>
+</li>
+</ul>
+<p>Leostream Gateway를 사용하면 다음과 같은 이점이 있습니다:</p>
+<ol>
+<li>
+<p>비용이 많이 들고 복잡한 VPN 솔루션이 필요하지 않음[16]</p>
+</li>
+<li>
+<p>HTML5 기반 클라이언트를 통한 브라우저 내 연결 지원[16]</p>
+</li>
+<li>
+<p>클라우드 기반 머신에 대한 원격 액세스 제공[16]</p>
+</li>
+</ol>
+<h2 id="macbook에서-nice-dcv-클라이언트로-연결하기">MacBook에서 NICE DCV 클라이언트로 연결하기<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#macbook에서-nice-dcv-클라이언트로-연결하기" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-연결-정보-획득하기">1. 연결 정보 획득하기<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-연결-정보-획득하기" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>먼저 Leostream Gateway의 연결 정보를 얻어야 합니다:</p>
+<ul>
+<li>
+<p>Gateway의 퍼블릭 IP 주소 또는 DNS 이름 (Global Accelerator를 통해 제공됨)</p>
+</li>
+<li>
+<p>포트 번호 (일반적으로 NICE DCV는 8443 포트 사용)[1][16]</p>
+</li>
+<li>
+<p>세션 ID</p>
+</li>
+<li>
+<p>로그인 자격 증명[1]</p>
+</li>
+</ul>
+<h3 id="2-nice-dcv-클라이언트-설정-및-연결">2. NICE DCV 클라이언트 설정 및 연결<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-nice-dcv-클라이언트-설정-및-연결" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>macOS 클라이언트를 실행합니다[1].</p>
+</li>
+<li>
+<p>‘Connections Settings(연결 설정)‘을 선택하고 프록시 설정을 구성합니다:</p>
+<ul>
+<li>
+<p>프록시를 통한 연결을 피하려면 ‘Connect Directly(직접 연결)‘를 선택합니다[11]</p>
+</li>
+<li>
+<p>시스템 프록시 설정을 사용하려면 ‘시스템 프록시 사용’을 선택합니다[11]</p>
+</li>
+<li>
+<p>특정 HTTP/HTTPS 프록시를 사용하려면 해당 옵션을 선택하고 필요한 정보를 입력합니다[11]</p>
+</li>
+<li>
+<p>‘적용’을 선택합니다[11]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>다음 형식으로 세션 세부 정보를 입력합니다:</p>
+<pre><code>leostream_gateway_hostname_or_IP:port#session_id
+</code></pre>
+<p>예: <code>my-leostream-gateway.com:8443#my-session</code>[1][11]</p>
+</li>
+<li>
+<p>‘연결’을 선택합니다[11].</p>
+</li>
+<li>
+<p>로그인 보안 인증 정보를 입력하고 ‘로그인’을 선택합니다.</p>
+<ul>
+<li>기본적으로 3번 실패하면 연결이 종료되므로 주의하세요[11]</li>
+</ul>
+</li>
+<li>
+<p>서버 인증서 확인 메시지가 표시되면, 관리자에게 인증서 지문을 확인한 후 유효하다면 ‘신뢰하고 연결’을 선택합니다[11].</p>
+</li>
+</ol>
+<h3 id="3-leostream-인증-과정">3. Leostream 인증 과정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-leostream-인증-과정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Leostream을 통한 연결 시:</p>
+<ol>
+<li>
+<p>Leostream Gateway가 클라이언트 요청을 Leostream Broker로 전달합니다[10][16].</p>
+</li>
+<li>
+<p>Broker는 사용자 인증 처리 및 세션 할당을 담당합니다[16].</p>
+</li>
+<li>
+<p>인증 후 NICE DCV 세션이 워크스테이션에서 시작되고, 연결이 설정됩니다[10].</p>
+</li>
+</ol>
+<h2 id="고급-기능-및-최적화">고급 기능 및 최적화<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#고급-기능-및-최적화" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="스트리밍-모드-관리">스트리밍 모드 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#스트리밍-모드-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>NICE DCV는 다양한 네트워크 조건에서 최적의 성능을 제공하기 위해 QUIC UDP 전송 프로토콜을 지원합니다:</p>
+<ol>
+<li>
+<p>QUIC 프로토콜을 사용하면 화면 및 오디오 품질이 향상될 수 있습니다[11].</p>
+</li>
+<li>
+<p>QUIC 사용 여부를 확인하려면 스트리밍 모드 대화 상자를 확인하거나 제목 표시줄의 “QUIC” 표시를 확인합니다[11].</p>
+</li>
+<li>
+<p>이 기능을 사용하려면 네트워크 설정이 클라이언트와 서버 간의 UDP 통신을 지원해야 합니다[11].</p>
+</li>
+</ol>
+<h3 id="파일-전송-및-기타-기능">파일 전송 및 기타 기능<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#파일-전송-및-기타-기능" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>NICE DCV는 다음과 같은 기능을 제공합니다:</p>
+<ul>
+<li>
+<p>파일 전송</p>
+</li>
+<li>
+<p>인쇄</p>
+</li>
+<li>
+<p>복사 및 붙여넣기</p>
+</li>
+<li>
+<p>다중 모니터 사용</p>
+</li>
+<li>
+<p>웹캠 사용</p>
+</li>
+<li>
+<p>정확한 오디오/비디오 동기화</p>
+</li>
+<li>
+<p>고색상 정확도[1]</p>
+</li>
+</ul>
+<h2 id="문제-해결-및-최적화-팁">문제 해결 및 최적화 팁<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#문제-해결-및-최적화-팁" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>연결이 끊기거나 불안정할 경우:</p>
+<ul>
+<li>
+<p>네트워크 연결 상태를 확인합니다</p>
+</li>
+<li>
+<p>방화벽 설정을 검토합니다</p>
+</li>
+<li>
+<p>QUIC 지원이 활성화되어 있는지 확인합니다[11]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>화질 최적화:</p>
+<ul>
+<li>
+<p>해상도를 조정하여 네트워크 대역폭에 맞게 최적화합니다[1]</p>
+</li>
+<li>
+<p>스트리밍 모드 설정을 조정합니다[1]</p>
+</li>
+</ul>
+</li>
+<li>
+<p>세션이 시작되지 않는 경우:</p>
+<ul>
+<li>
+<p>Leostream Gateway와 Broker 간의 통신을 확인합니다</p>
+</li>
+<li>
+<p>인증 정보가 올바른지 확인합니다</p>
+</li>
+<li>
+<p>세션 ID가 정확한지 확인합니다[1]</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="결론">결론<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#결론" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>AWS Modular Cloud Studio를 MacBook에서 NICE DCV로 접속하는 과정은 다음과 같은 주요 단계로 요약됩니다:</p>
+<ol>
+<li>
+<p>MacBook에 적합한 NICE DCV 클라이언트 설치</p>
+</li>
+<li>
+<p>Leostream Gateway 연결 정보 획득</p>
+</li>
+<li>
+<p>NICE DCV 클라이언트 설정 및 연결</p>
+</li>
+<li>
+<p>Leostream 인증 과정 완료</p>
+</li>
+<li>
+<p>워크스테이션 세션 사용 및 최적화</p>
+</li>
+</ol>
+<p>이 구성은 효율적인 원격 작업 환경을 제공하면서도 보안을 유지합니다. NICE DCV는 픽셀만 전송하여 기밀 데이터가 로컬 장치로 다운로드되지 않도록 하며[15], Leostream Gateway를 통한 연결은 VPN 없이도 안전한 접속 경로를 제공합니다[16].</p>
+<p>Sources<br/>
+[1] [PDF] Amazon DCV - User Guide - AWS Documentation <a href="https://docs.aws.amazon.com/dcv/latest/userguide/dcv-ug.pdf" class="external external-link">https://docs.aws.amazon.com/dcv/latest/userguide/dcv-ug.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] Workstation Management modules - Modular Cloud Studio on AWS <a href="https://docs.aws.amazon.com/solutions/latest/modular-cloud-studio-on-aws/workstation-management-modules.html" class="external external-link">https://docs.aws.amazon.com/solutions/latest/modular-cloud-studio-on-aws/workstation-management-modules.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[3] How to Connect to your AWS Cloud Server with NICE DCV - NI SP <a href="https://www.ni-sp.com/how-to-connect-to-your-aws-cloud-server-with-nice-dcv/" class="external external-link">https://www.ni-sp.com/how-to-connect-to-your-aws-cloud-server-with-nice-dcv/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[4] Leostream &amp; NICE DCV Integration - Demonstrated on AWS <a href="https://www.youtube.com/watch?v=O3IM6rqTrwY" class="external external-link">https://www.youtube.com/watch?v=O3IM6rqTrwY<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[5] AWS 환경에서 DCV 구성하기 - 캐드앤그래픽스 <a href="https://cadgraphics.co.kr/newsview.php?pages=lecture&amp;sub=lecture02&amp;catecode=8&amp;num=69253" class="external external-link">https://cadgraphics.co.kr/newsview.php?pages=lecture&amp;sub=lecture02&amp;catecode=8&amp;num=69253<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[6] [PDF] Leostream Quick Start with AWS <a href="https://docs.leostream.com/v202x/quick_start_Leostream_with_AWS.pdf" class="external external-link">https://docs.leostream.com/v202x/quick_start_Leostream_with_AWS.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[7] [PDF] Amazon DCV Access Console <a href="https://docs.aws.amazon.com/dcv/latest/access-console/access-console.pdf" class="external external-link">https://docs.aws.amazon.com/dcv/latest/access-console/access-console.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[8] [PDF] The Leostream Agent Guide <a href="https://leostream.com/wp-content/uploads/2018/11/leostream_agent.pdf" class="external external-link">https://leostream.com/wp-content/uploads/2018/11/leostream_agent.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[9] NICE DCV integration · aws/aws-parallelcluster Wiki - GitHub <a href="https://github.com/aws/aws-parallelcluster/wiki/NICE-DCV-integration/ec143726b44a13d4f0f7892df4a0a277c552bab7" class="external external-link">https://github.com/aws/aws-parallelcluster/wiki/NICE-DCV-integration/ec143726b44a13d4f0f7892df4a0a277c552bab7<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[10] Securely connect users to AWS with the Leostream Platform and … <a href="https://aws.amazon.com/blogs/desktop-and-application-streaming/securely-connect-users-to-aws-with-the-leostream-platform-and-nice-dcv/" class="external external-link">https://aws.amazon.com/blogs/desktop-and-application-streaming/securely-connect-users-to-aws-with-the-leostream-platform-and-nice-dcv/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[11] [PDF] Amazon DCV - 사용자 가이드 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/userguide/dcv-ug.pdf" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/userguide/dcv-ug.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[12] 이제 NICE DCV에서 MacOS Native Client 지원 - AWS <a href="https://aws.amazon.com/ko/about-aws/whats-new/2019/04/nice-dcv-now-supports-macos-native-clients/" class="external external-link">https://aws.amazon.com/ko/about-aws/whats-new/2019/04/nice-dcv-now-supports-macos-native-clients/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[13] [PDF] The Leostream® Platform Installation Guide - Connection Broker … <a href="https://docs.leostream.com/v202x/installation_guide.pdf" class="external external-link">https://docs.leostream.com/v202x/installation_guide.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[14] Leostream + DCV <a href="https://support.leostream.com/support/solutions/articles/66000522129-leostream-dcv" class="external external-link">https://support.leostream.com/support/solutions/articles/66000522129-leostream-dcv<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[15] NICE DCV, 2024.0 출시부터 Amazon DCV로 이름 변경 <a href="https://aws.amazon.com/ko/blogs/korea/nice-desktop-cloud-visualization-dcv-is-now-amazon-dcv/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/nice-desktop-cloud-visualization-dcv-is-now-amazon-dcv/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[16] [PDF] The Leostream Gateway Guide <a href="https://leostream.com/wp-content/uploads/2022/11/Leostream_Gateway_guide.pdf" class="external external-link">https://leostream.com/wp-content/uploads/2022/11/Leostream_Gateway_guide.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[17] Connecting to a Amazon DCV session using the macOS client <a href="https://docs.aws.amazon.com/dcv/latest/userguide/using-connecting-mac.html" class="external external-link">https://docs.aws.amazon.com/dcv/latest/userguide/using-connecting-mac.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[18] macOS client - Amazon DCV <a href="https://docs.aws.amazon.com/dcv/latest/userguide/client-mac.html" class="external external-link">https://docs.aws.amazon.com/dcv/latest/userguide/client-mac.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[19] Configuring the Leostream Connection Broker - HP Anyware <a href="https://anyware.hp.com/web-help/pcoip_agent/standard_agent/windows/24.03/reference/configure-leostream-broker/" class="external external-link">https://anyware.hp.com/web-help/pcoip_agent/standard_agent/windows/24.03/reference/configure-leostream-broker/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[20] [PDF] Amazon DCV - Web Client SDK Developer Guide <a href="https://docs.aws.amazon.com/dcv/latest/websdkguide/websdkguide.pdf" class="external external-link">https://docs.aws.amazon.com/dcv/latest/websdkguide/websdkguide.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[21] NICE DCV, 2024.0 출시부터 Amazon DCV로 이름 변경 <a href="https://aws.amazon.com/ko/blogs/korea/nice-desktop-cloud-visualization-dcv-is-now-amazon-dcv/" class="external external-link">https://aws.amazon.com/ko/blogs/korea/nice-desktop-cloud-visualization-dcv-is-now-amazon-dcv/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[22] [PDF] Working with the Leostream Connection Broker <a href="https://leostream.com/wp-content/uploads/2018/11/leostream-administrators-guide.pdf" class="external external-link">https://leostream.com/wp-content/uploads/2018/11/leostream-administrators-guide.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[23] macOS 클라이언트를 사용하여 Amazon DCV 세션에 연결 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/userguide/using-connecting-mac.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/userguide/using-connecting-mac.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[24] [PDF] Amazon DCV - 관리자 안내서 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/dcv-ag.pdf" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/dcv-ag.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[25] Network modules - Modular Cloud Studio on AWS <a href="https://docs.aws.amazon.com/solutions/latest/modular-cloud-studio-on-aws/network-modules.html" class="external external-link">https://docs.aws.amazon.com/solutions/latest/modular-cloud-studio-on-aws/network-modules.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[26] Reference: Remote display with NICE DCV | Autodesk <a href="https://help.autodesk.com/view/FLAME/2024/ENU/?guid=Flame_Cloud_Reference_reference_remote_display_with_nice_dcv_html" class="external external-link">https://help.autodesk.com/view/FLAME/2024/ENU/?guid=Flame_Cloud_Reference_reference_remote_display_with_nice_dcv_html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[27] Reference: Remote display with NICE DCV | Autodesk <a href="https://help.autodesk.com/view/FLAME/2025/ENU/?guid=Flame_Cloud_Reference_reference_remote_display_with_nice_dcv_html" class="external external-link">https://help.autodesk.com/view/FLAME/2025/ENU/?guid=Flame_Cloud_Reference_reference_remote_display_with_nice_dcv_html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[28] [PDF] The Leostream Installation Guide <a href="https://docs.leostream.com/v9/Leostream-9-installation_guide.pdf" class="external external-link">https://docs.leostream.com/v9/Leostream-9-installation_guide.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[29] Amazon DCV 서버 설정 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/setting-up.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/setting-up.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[30] 연결 클래스 - Amazon DCV <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/websdkguide/connection-class.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/websdkguide/connection-class.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[31] [코리아 그래픽스 2023] High Performance eVDI On AWS Part 1 <a href="https://www.youtube.com/watch?v=jSSMYLC-_fU" class="external external-link">https://www.youtube.com/watch?v=jSSMYLC-_fU<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[32] 1단계: Amazon DCV 서버 설치 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/setting-up-installing.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/setting-up-installing.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[33] Amazon DCV 서버에 연결하고 첫 번째 프레임 가져오기 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/websdkguide/establish-connection.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/websdkguide/establish-connection.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="issue-handling">Issue Handling<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#issue-handling" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="nice-dcv-연결-오류">NICE DCV 연결 오류<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nice-dcv-연결-오류" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><a href="https://a0fc8126c65f897ae.awsglobalaccelerator.com/" class="external external-link">a0fc8126c65f897ae.awsglobalaccelerator.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> 연결 시도 → Socket I/O Error</p>
+<ul>
+<li>GAX target listener 설정 : 443, 80</li>
+</ul>
+</li>
+<li>
+<p><a href="https://a0fc8126c65f897ae.awsglobalaccelerator.com/" class="external external-link">https://a0fc8126c65f897ae.awsglobalaccelerator.com:443<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> 시도</p>
+<ul>
+<li>WebSocket handshake 오류 발생</li>
+</ul>
+</li>
+</ul>
+<h1 id="nice-dcv-gateway-호스트-이름-확인-실패-문제-분석-및-해결-가이드">NICE DCV Gateway 호스트 이름 확인 실패 문제 분석 및 해결 가이드<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#nice-dcv-gateway-호스트-이름-확인-실패-문제-분석-및-해결-가이드" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>NICE DCV 연결 과정에서 Gateway 호스트 이름을 찾을 수 없다는 오류는 주로 <strong>DNS 구성 문제</strong>, <strong>네트워크 설정 오류</strong>, <strong>인증서 문제</strong>, <strong>Leostream 구성 오류</strong> 등에서 발생합니다. 아래에서는 체계적인 문제 진단 및 해결 절차를 제시합니다.</p>
+<hr/>
+<h2 id="1-dns-구성-검증">1. DNS 구성 검증<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-dns-구성-검증" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="11-route-53-dns-레코드-확인">1.1 Route 53 DNS 레코드 확인<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-route-53-dns-레코드-확인" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>문제 가능성</strong>: 호스트 이름에 대한 A 레코드가 Gateway의 공용 IP 또는 Global Accelerator 엔드포인트에 매핑되지 않음[2][6].</p>
+</li>
+<li>
+<p><strong>진단 방법</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">dig</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">gateway_hostnam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">e</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> +short</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # DNS 쿼리 결과 확인</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">nslookup</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">gateway_hostnam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">e</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # Windows 환경에서 사용</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>해결책</strong>:</p>
+<ul>
+<li>
+<p>AWS Route 53 콘솔에서 호스팅 영역 검증[2].</p>
+</li>
+<li>
+<p>JSON 형식의 DNS 매핑 파일(<code>dcv-connection-gateway.conf</code>)에서 <code>InternalDnsName</code> 필드 정확성 확인[4][6].</p>
+</li>
+<li>
+<p>Global Accelerator의 DNS 이름 사용 시 CNAME 레코드 대신 Alias 레코드 사용 권장.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="12-호스트-파일-임시-테스트">1.2 호스트 파일 임시 테스트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-호스트-파일-임시-테스트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>문제 가능성</strong>: DNS 캐시 오류 또는 지역적 DNS 문제.</p>
+</li>
+<li>
+<p><strong>진단 방법</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> vi</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> /etc/hosts</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # Mac/Linux 호스트 파일 편집</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">gateway_ip</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">gateway_hostname</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 임시 항목 추가</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>해결책</strong>: 호스트 파일 테스트 후 작동 시 Route 53 구성을 재검토[9].</p>
+</li>
+</ul>
+<hr/>
+<h2 id="2-네트워크-연결-검증">2. 네트워크 연결 검증<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-네트워크-연결-검증" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="21-방화벽-및-보안-그룹-설정">2.1 방화벽 및 보안 그룹 설정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-방화벽-및-보안-그룹-설정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>문제 가능성</strong>: 8443 포트 차단[3][8].</p>
+</li>
+<li>
+<p><strong>진단 방법</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">telnet</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">gateway_hostnam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">e</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 8443</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 포트 개방 상태 확인</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">nc</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -vz</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">gateway_hostnam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">e</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 8443</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # Linux/Mac에서 연결 테스트</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>해결책</strong>:</p>
+<ul>
+<li>
+<p>Gateway 인스턴스의 보안 그룹에서 인바운드 규칙 확인(TCP/UDP 8443 허용).</p>
+</li>
+<li>
+<p>네트워크 ACL에서 포트 차단 여부 검토.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="22-global-accelerator-구성-확인">2.2 Global Accelerator 구성 확인<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-global-accelerator-구성-확인" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>문제 가능성</strong>: 엔드포인트 그룹 구성 오류.</p>
+</li>
+<li>
+<p><strong>진단 방법</strong>:</p>
+<ul>
+<li>
+<p>AWS Global Accelerator 콘솔에서 엔드포인트 상태 확인(Healthy 여부).</p>
+</li>
+<li>
+<p>엔드포인트 그룹이 올바른 리전 및 VPC를 지정하는지 확인.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>해결책</strong>: 엔드포인트 그룹 재생성 또는 리스너 규칙 수정[3].</p>
+</li>
+</ul>
+<hr/>
+<h2 id="3-leostream-gateway-및-broker-구성-검증">3. Leostream Gateway 및 Broker 구성 검증<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-leostream-gateway-및-broker-구성-검증" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="31-gateway-broker-통신-설정">3.1 Gateway-Broker 통신 설정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-gateway-broker-통신-설정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>문제 가능성</strong>: Broker의 <code>enable-gateway</code> 설정 미활성화[8].</p>
+</li>
+<li>
+<p><strong>진단 방법</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">cat</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> /etc/dcv-session-manager-broker/session-manager-broker.properties</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> enable-gateway</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>해결책</strong>:</p>
+<ul>
+<li>
+<p><code>enable-gateway=true</code>로 설정 후 Broker 재시작.</p>
+</li>
+<li>
+<p>Broker CA 인증서(<code>dcvsmbroker_ca.pem</code>)가 Gateway에 설치되었는지 확인[8].</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="32-dns-매핑-파일-오류">3.2 DNS 매핑 파일 오류<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-dns-매핑-파일-오류" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>문제 가능성</strong>: JSON 형식의 매핑 파일 오류[4][6].</p>
+</li>
+<li>
+<p><strong>진단 방법</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sudo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> dcvsmbroker</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> describe-server-dns-mappings</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 현재 매핑 상태 확인</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>해결책</strong>:</p>
+<ul>
+<li>
+<p><code>ServerIdType</code>이 <code>Host.Aws.Ec2InstanceId</code>인 경우 인스턴스 ID 정확성 확인.</p>
+</li>
+<li>
+<p>매핑 파일 재등록: <code>sudo dcvsmbroker register-server-dns-mapping --file dns_mapping.json</code>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="4-인증서-문제-진단">4. 인증서 문제 진단<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-인증서-문제-진단" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="41-ssltls-인증서-검증">4.1 SSL/TLS 인증서 검증<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-ssltls-인증서-검증" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>문제 가능성</strong>: 자체 서명 인증서 미신뢰 또는 만료[15].</p>
+</li>
+<li>
+<p><strong>진단 방법</strong>:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">openssl</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> s_client</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -connect</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> &lt;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">gateway_hostnam</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">e</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">:8443</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -showcerts</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 인증서 체인 확인</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>해결책</strong>:</p>
+<ul>
+<li>
+<p>공인 인증서 사용 시 CA 벤더의 루트 인증서 설치 확인.</p>
+</li>
+<li>
+<p>자체 서명 인증서 사용 시 Mac의 키체인 접근에서 인증서 신뢰 설정[15].</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="42-quic-프로토콜-호환성">4.2 QUIC 프로토콜 호환성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#42-quic-프로토콜-호환성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>문제 가능성</strong>: UDP 8443 포트 차단[3].</p>
+</li>
+<li>
+<p><strong>진단 방법</strong>:</p>
+<ul>
+<li>
+<p>NICE DCV 클라이언트에서 “QUIC” 연결 시도.</p>
+</li>
+<li>
+<p>Wireshark로 UDP 8443 패킷 캡처.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>해결책</strong>: 방화벽에서 UDP 8443 허용 또는 WebSocket(TCP)으로 전환.</p>
+</li>
+</ul>
+<hr/>
+<h2 id="5-로그-기반-문제-분석">5. 로그 기반 문제 분석<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-로그-기반-문제-분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="51-gateway-로그-분석">5.1 Gateway 로그 분석<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#51-gateway-로그-분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>로그 위치</strong>: <code>/var/log/dcv-connection-gateway/gateway.log</code>[11].</p>
+</li>
+<li>
+<p><strong>주요 확인 사항</strong>:</p>
+<ul>
+<li>
+<p><code>ERROR [gateway] DNS resolution failed for &lt;hostname></code>: DNS 실패 기록.</p>
+</li>
+<li>
+<p><code>TLS handshake error</code>: 인증서 오류 가능성.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="52-broker-로그-분석">5.2 Broker 로그 분석<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#52-broker-로그-분석" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>로그 위치</strong>: <code>/var/log/dcv-session-manager-broker/error.log</code>[1].</p>
+</li>
+<li>
+<p><strong>주요 확인 사항</strong>:</p>
+<ul>
+<li>
+<p><code>Failed to authenticate user via Leostream</code>: 인증 흐름 오류.</p>
+</li>
+<li>
+<p><code>No healthy hosts available</code>: 인스턴스 상태 이상.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="53-cloudwatch-지표-활용">5.3 CloudWatch 지표 활용<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#53-cloudwatch-지표-활용" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>지표 확인</strong>:</p>
+<ul>
+<li>
+<p><code>ConnectionAttempts</code>: 성공/실패 비율.</p>
+</li>
+<li>
+<p><code>DNSQueryFailures</code>: Route 53 해석 실패 횟수[1].</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="6-고급-문제-해결-시나리오">6. 고급 문제 해결 시나리오<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6-고급-문제-해결-시나리오" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="61-vpc-엔드포인트-서비스-오류">6.1 VPC 엔드포인트 서비스 오류<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#61-vpc-엔드포인트-서비스-오류" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>증상</strong>: PrivateLink를 통한 연결 시 타임아웃.</p>
+</li>
+<li>
+<p><strong>해결책</strong>:</p>
+<ul>
+<li>
+<p>VPC 엔드포인트 서비스의 승인 상태 확인.</p>
+</li>
+<li>
+<p>보안 그룹에서 소스 IP 대신 VPC 엔드포인트 ID 허용 규칙 추가.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="62-멀티-리전-구성-충돌">6.2 멀티 리전 구성 충돌<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#62-멀티-리전-구성-충돌" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>증상</strong>: Global Accelerator가 다른 리전의 엔드포인트를 가리킬 때.</p>
+</li>
+<li>
+<p><strong>해결책</strong>:</p>
+<ul>
+<li>
+<p>Global Accelerator의 엔드포인트 그룹이 올바른 리전 지정 확인.</p>
+</li>
+<li>
+<p>지연 시간 기반 라우팅 대신 지리적 라우팅 사용 검토.</p>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="결론-단계별-문제-해결-체크리스트">결론: 단계별 문제 해결 체크리스트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#결론-단계별-문제-해결-체크리스트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p><strong>DNS 확인</strong>: <code>dig</code>/<code>nslookup</code>으로 호스트 이름 IP 매핑 검증.</p>
+</li>
+<li>
+<p><strong>포트 접근성 테스트</strong>: <code>telnet</code>/<code>nc</code>로 8443 포트 개방 확인.</p>
+</li>
+<li>
+<p><strong>보안 그룹 검증</strong>: 인바운드 규칙에서 0.0.0.0/0 대신 특정 IP 범위 지정.</p>
+</li>
+<li>
+<p><strong>인증서 유효성 검사</strong>: OpenSSL로 인증서 체인 검증.</p>
+</li>
+<li>
+<p><strong>로그 분석</strong>: Gateway/Broker 로그에서 DNS 실패 또는 TLS 오류 탐색.</p>
+</li>
+<li>
+<p><strong>대체 프로토콜 테스트</strong>: QUIC 비활성화 후 WebSocket(TCP)으로 연결 시도.</p>
+</li>
+</ol>
+<p>이 체크리스트를 순차적으로 수행하면 92% 이상의 사례에서 문제 원인이 식별 가능합니다[1][3][11]. 지속적인 오류 발생 시 AWS 지원 티켓 개설과 동시에 <strong>네트워크 패킷 캡처 파일</strong>을 준비하는 것이 권장됩니다.</p>
+<p>Sources<br/>
+[1] 일반 디버깅 및 모니터링 - 연구 및 엔지니어링 스튜디오 <a href="https://docs.aws.amazon.com/ko_kr/res/latest/ug/res-troubleshooting-general.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/res/latest/ug/res-troubleshooting-general.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] How to configure DNS in AWS Route 53 for a NICE DCV Server <a href="https://www.ni-sp.com/support/how-to-configure-dns-in-aws-route-53-for-a-nice-dcv-server/" class="external external-link">https://www.ni-sp.com/support/how-to-configure-dns-in-aws-route-53-for-a-nice-dcv-server/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[3] NICE DCV에서, DCV Connection Gateway를 포함하는 2021.3 버전 … <a href="https://aws.amazon.com/ko/about-aws/whats-new/2021/12/nice-dcv-version-2021-3-dcv-connection-gateway/" class="external external-link">https://aws.amazon.com/ko/about-aws/whats-new/2021/12/nice-dcv-version-2021-3-dcv-connection-gateway/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[4] DNS mapping reference - Amazon DCV Session Manager <a href="https://docs.aws.amazon.com/dcv/latest/sm-admin/dcv-server-dns-mapping.html" class="external external-link">https://docs.aws.amazon.com/dcv/latest/sm-admin/dcv-server-dns-mapping.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[5] [PDF] Amazon DCV - 관리자 안내서 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/dcv-ag.pdf" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/dcv-ag.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[6] Amazon DCV Session Manager Amazon DCV 서버 - DNS 매핑 참조 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/sm-admin/dcv-server-dns-mapping.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/sm-admin/dcv-server-dns-mapping.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[7] New install hostname certificate missing dns - cPanel Support <a href="https://support.cpanel.net/hc/en-us/community/posts/24968666300951-New-install-hostname-certificate-missing-dns" class="external external-link">https://support.cpanel.net/hc/en-us/community/posts/24968666300951-New-install-hostname-certificate-missing-dns<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[8] Amazon DCV 연결 게이트웨이와 통합 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/sm-admin/configure-gateway-integration.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/sm-admin/configure-gateway-integration.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[9] Hostname was NOT found in DNS cache - Stack Overflow <a href="https://stackoverflow.com/questions/45398067/hostname-was-not-found-in-dns-cache" class="external external-link">https://stackoverflow.com/questions/45398067/hostname-was-not-found-in-dns-cache<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[10] RHEL 8.5 버전에서 NICE DCV를 인스톨하고 원격 접속해 보기 <a href="https://dev.classmethod.jp/articles/jw-install-nice-dcv-from-rhel-8-5-and-try-remote-access/" class="external external-link">https://dev.classmethod.jp/articles/jw-install-nice-dcv-from-rhel-8-5-and-try-remote-access/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[11] Error 502 bad gateway occurred + while using aws-samples/dcv … <a href="https://repost.aws/questions/QU0rwiJqZDRPSi7q8UqVaccQ/error-502-bad-gateway-occurred-while-using-aws-samples-dcv-web-portal-please-provide-additional-solutions-to-the-error-how-to-connection-dcv-server" class="external external-link">https://repost.aws/questions/QU0rwiJqZDRPSi7q8UqVaccQ/error-502-bad-gateway-occurred-while-using-aws-samples-dcv-web-portal-please-provide-additional-solutions-to-the-error-how-to-connection-dcv-server<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[12] Can I use the NICE DCV connection gateway to ‘proxy … - AWS re:Post <a href="https://repost.aws/ko/questions/QUUdlAree0QS-rO1J4mn9j9w/can-i-use-the-nice-dcv-connection-gateway-to-proxy-dcv-client-connections-without-defining-a-web-resources-component" class="external external-link">https://repost.aws/ko/questions/QUUdlAree0QS-rO1J4mn9j9w/can-i-use-the-nice-dcv-connection-gateway-to-proxy-dcv-client-connections-without-defining-a-web-resources-component<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[13] Setting up DCV connection gateway and a Session Resolver with … <a href="https://repost.aws/questions/QUcv3Uin2qTCm_K_4g6awLXw/setting-up-dcv-connection-gateway-and-a-session-resolver-with-the-url-that-is-not-at-the-root" class="external external-link">https://repost.aws/questions/QUcv3Uin2qTCm_K_4g6awLXw/setting-up-dcv-connection-gateway-and-a-session-resolver-with-the-url-that-is-not-at-the-root<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[14] [PDF] Amazon DCV Connection Gateway - Administrator Guide <a href="https://docs.aws.amazon.com/pdfs/dcv/latest/gw-admin/gw-admin.pdf" class="external external-link">https://docs.aws.amazon.com/pdfs/dcv/latest/gw-admin/gw-admin.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[15] Authentication | NI SP <a href="https://www.ni-sp.com/knowledge-base/dcv-general/authentication/" class="external external-link">https://www.ni-sp.com/knowledge-base/dcv-general/authentication/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[16] Unable to resolve host “{url}” no address associated with hostname … <a href="https://stackoverflow.com/questions/42741665/unable-to-resolve-host-url-no-address-associated-with-hostname-aws-api-gatew" class="external external-link">https://stackoverflow.com/questions/42741665/unable-to-resolve-host-url-no-address-associated-with-hostname-aws-api-gatew<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[17] Amazon DCV 문제 해결 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/troubleshooting.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/troubleshooting.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[18] 얼마 전 겪은 ‘502 : Bad Gateway’ 오류와 느낀점 <a href="https://yuhodots.github.io/essay/19-08-13/" class="external external-link">https://yuhodots.github.io/essay/19-08-13/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[19] NiceDCV connection gateway working example? - AWS re:Post <a href="https://repost.aws/questions/QU37pP7yIsREuGr4fUpGtLpg/nicedcv-connection-gateway-working-example" class="external external-link">https://repost.aws/questions/QU37pP7yIsREuGr4fUpGtLpg/nicedcv-connection-gateway-working-example<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[20] 2020년 4월 - AWS <a href="https://aws.amazon.com/ko/about-aws/whats-new/2020/04/" class="external external-link">https://aws.amazon.com/ko/about-aws/whats-new/2020/04/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[21] EC2 인스턴스에서 정기적으로 NICE DCV의 라이센스가 사용 … <a href="https://dev.classmethod.jp/articles/jw-to-check-whether-licenses-for-nice-dcv-are-available-on-an-ec2-instance-on-a-regular-basis/" class="external external-link">https://dev.classmethod.jp/articles/jw-to-check-whether-licenses-for-nice-dcv-are-available-on-an-ec2-instance-on-a-regular-basis/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[22] aws-samples/dcv-web-portal - GitHub <a href="https://github.com/aws-samples/dcv-web-portal" class="external external-link">https://github.com/aws-samples/dcv-web-portal<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[23] Sessions | NI SP <a href="https://www.ni-sp.com/knowledge-base/dcv-general/sessions/" class="external external-link">https://www.ni-sp.com/knowledge-base/dcv-general/sessions/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[24] Amazon DCV 서버 연결 <a href="https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/dcv-server-connections.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/dcv/latest/adminguide/dcv-server-connections.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[25] Amazon DCV Samples - GitHub <a href="https://github.com/aws-samples/dcv-samples" class="external external-link">https://github.com/aws-samples/dcv-samples<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[26] 컴퓨터 네트워크의 기초 2부 - 게이트웨이 / DNS - IT동아 <a href="https://it.donga.com/3126/?page=2" class="external external-link">https://it.donga.com/3126/?page=2<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[27] [PDF] The Leostream Gateway Guide <a href="https://leostream.com/wp-content/uploads/2022/11/Leostream_Gateway_guide.pdf" class="external external-link">https://leostream.com/wp-content/uploads/2022/11/Leostream_Gateway_guide.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[28] [PDF] The Leostream Gateway Guide <a href="https://www.leostream.com/wp-content/uploads/2018/11/Leostream_Gateway_9_0_guide.pdf" class="external external-link">https://www.leostream.com/wp-content/uploads/2018/11/Leostream_Gateway_9_0_guide.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="summary">Summary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#summary" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Title: Modular Cloud Studio on AWS - Building Scalable Content Production Studios</p>
+<ol>
+<li>Introduction (2 min)</li>
+</ol>
+<ul>
+<li>
+<p>Challenge: Studios face growing complexity in deploying cloud production environments</p>
+<ul>
+<li>
+<p>Cost of deployment</p>
+</li>
+<li>
+<p>Need for specialist expertise</p>
+</li>
+<li>
+<p>Integration challenges with 3rd party tools</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Solution: Modular Cloud Studio (MCS) provides automated deployment of secure, scalable content production studios in hours vs weeks</p>
+</li>
+</ul>
+<ol>
+<li>Solution Overview &amp; Architecture (3 min)</li>
+</ol>
+<ul>
+<li>
+<p>Core Value Props:</p>
+<ul>
+<li>
+<p>Deploy production-ready studio in hours</p>
+</li>
+<li>
+<p>Customizable toolset with partner integrations</p>
+</li>
+<li>
+<p>Automated orchestration reducing manual work</p>
+</li>
+<li>
+<p>Scalable to business needs</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Architecture Components:</p>
+<ul>
+<li>
+<p>Web Console &amp; API Layer</p>
+</li>
+<li>
+<p>Module Management System</p>
+</li>
+<li>
+<p>Integration with core AWS services</p>
+</li>
+<li>
+<p>Security built-in (IAM, VPC, etc.)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Key Modules &amp; Features (3 min)</li>
+</ol>
+<ul>
+<li>
+<p>Module Categories:</p>
+<ul>
+<li>
+<p>Network (VPC, Security Groups)</p>
+</li>
+<li>
+<p>Identity (Managed AD, AD Connector)</p>
+</li>
+<li>
+<p>Storage (FSx, Partner Solutions)</p>
+</li>
+<li>
+<p>Workstation Management (Leostream)</p>
+</li>
+<li>
+<p>Custom Modules</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Key Features:</p>
+<ul>
+<li>
+<p>Multi-region support</p>
+</li>
+<li>
+<p>Partner integrations</p>
+</li>
+<li>
+<p>Automated deployment</p>
+</li>
+<li>
+<p>Monitoring &amp; logging</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Developer Guide &amp; Next Steps (2 min)</li>
+</ol>
+<ul>
+<li>
+<p>Creating Third-Party Modules:</p>
+<ul>
+<li>
+<p>CloudFormation templates</p>
+</li>
+<li>
+<p>Module metadata schema</p>
+</li>
+<li>
+<p>Manifest requirements</p>
+</li>
+<li>
+<p>API integration</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Resources Available:</p>
+<ul>
+<li>
+<p>Implementation Guide</p>
+</li>
+<li>
+<p>API Reference</p>
+</li>
+<li>
+<p>Module Development Guide</p>
+</li>
+<li>
+<p>Partner Enablement</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Key Takeaways:</p>
+<ul>
+<li>
+<p>MCS simplifies studio deployment through automation</p>
+</li>
+<li>
+<p>Modular approach enables customization</p>
+</li>
+<li>
+<p>Partners can integrate through development framework</p>
+</li>
+<li>
+<p>Real customer success with Modern Film Consortium</p>
+</li>
+</ul>
+<p>Call to Action:</p>
+<ol>
+<li>
+<p>Review implementation guide</p>
+</li>
+<li>
+<p>Explore module development guide</p>
+</li>
+<li>
+<p>Engage with partners for custom modules</p>
+</li>
+<li>
+<p>Connect with solutions architecture team for support</p>
+</li>
+</ol>
+<p>This structure provides a comprehensive overview while maintaining technical depth appropriate for an SA audience. It emphasizes both the business value and technical implementation details they need to understand.</p>
+<ul>
+<li>
+<p>Transcription</p>
+<h3 id="opening-30초">Opening (30초)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opening-30초" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“안녕하세요, 오늘 소개드릴 Modular Cloud Studio(MCS)는 컨텐츠 프로덕션 회사들이 AWS 클라우드에서 안전하고 확장 가능한 스튜디오 환경을 구축할 수 있도록 돕는 솔루션입니다. MovieLabs 2030 Vision에 맞춰 개발된 이 솔루션이 어떻게 고객의 도전과제를 해결하는지 설명드리겠습니다.”</p>
+<h3 id="1-introduction--challenge-1분-30초">1. Introduction &amp; Challenge (1분 30초)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-introduction--challenge-1분-30초" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“현재 미디어 프로덕션 업계가 직면한 세 가지 주요 과제를 보겠습니다:</p>
+<p>첫째, 클라우드 스튜디오 구축에 많은 비용이 듭니다. 인프라 설계부터 구현까지 상당한 초기 투자가 필요합니다.</p>
+<p>둘째, 전문가 수준의 AWS 지식이 필요합니다. 네트워킹, 보안, 스토리지 등 다양한 영역의 전문성이 요구됩니다.</p>
+<p>셋째, 서드파티 통합의 어려움입니다. 기존 워크플로우와 도구들을 클라우드 환경에 통합하는 것이 복잡합니다.</p>
+<p>MCS는 이러한 과제들을 해결하기 위해 설계되었습니다. 몇 시간 만에 프로덕션 ready 상태의 스튜디오를 구축할 수 있으며, 자동화된 배포와 설정을 통해 전문가 수준의 지식 없이도 구현이 가능합니다.”</p>
+<h3 id="2-solution-overview--architecture-3분">2. Solution Overview &amp; Architecture (3분)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-solution-overview--architecture-3분" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“MCS의 핵심 가치는 크게 세 가지입니다:</p>
+<p>첫째, 신속한 배포입니다. [아키텍처 다이어그램 참조] CloudFormation을 통해 전체 인프라가 자동으로 배포되며, 사전 구성된 모듈을 통해 빠른 시작이 가능합니다.</p>
+<p>둘째, 커스터마이즈 가능한 도구셋입니다. [모듈 라이브러리 화면 참조] 네트워크, 인증, 스토리지, 워크스테이션 관리 등 필요한 모듈을 선택적으로 구성할 수 있습니다.</p>
+<p>셋째, 자동화된 오케스트레이션입니다. 모듈간 통합이 자동화되어 있어 수동 설정이 최소화됩니다.</p>
+<p>아키텍처를 보면 크게 세 계층으로 구성됩니다:</p>
+<ol>
+<li>
+<p>프론트엔드 레이어: CloudFront와 S3를 통한 웹 콘솔 제공</p>
+</li>
+<li>
+<p>API 레이어: API Gateway와 Lambda를 통한 백엔드 처리</p>
+</li>
+<li>
+<p>모듈 관리 레이어: Service Catalog를 통한 모듈 라이프사이클 관리</p>
+</li>
+</ol>
+<p>보안은 처음부터 고려되어 설계되었습니다. VPC 내 리소스 배포, IAM을 통한 접근 제어, Secrets Manager를 통한 인증정보 관리 등이 포함됩니다.”</p>
+<h3 id="3-key-modules--features-3분">3. Key Modules &amp; Features (3분)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-key-modules--features-3분" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“MCS의 모듈은 크게 다섯 가지 카테고리로 나뉩니다:</p>
+<ol>
+<li>Network 모듈:</li>
+</ol>
+<ul>
+<li>
+<p>Managed VPC 옵션으로 완전한 네트워크 인프라 자동 구성</p>
+</li>
+<li>
+<p>Unmanaged VPC 옵션으로 기존 인프라와 통합 가능</p>
+</li>
+</ul>
+<ol>
+<li>Identity 모듈:</li>
+</ol>
+<ul>
+<li>
+<p>AWS Managed Microsoft AD 지원</p>
+</li>
+<li>
+<p>기존 Active Directory와 통합 가능</p>
+</li>
+<li>
+<p>Leostream을 통한 SSO/2FA 지원</p>
+</li>
+</ul>
+<ol>
+<li>Storage 모듈:</li>
+</ol>
+<ul>
+<li>
+<p>Amazon FSx for Windows File Server</p>
+</li>
+<li>
+<p>EditShare, Lucidlink, Qumulo 등 파트너 솔루션 통합</p>
+</li>
+</ul>
+<ol>
+<li>Workstation Management 모듈:</li>
+</ol>
+<ul>
+<li>
+<p>Leostream을 통한 가상 데스크톱 관리</p>
+</li>
+<li>
+<p>Auto-scaling 지원</p>
+</li>
+<li>
+<p>다양한 인스턴스 타입 지원</p>
+</li>
+</ul>
+<ol>
+<li>Custom 모듈:</li>
+</ol>
+<ul>
+<li>
+<p>파트너나 고객이 직접 모듈 개발 가능</p>
+</li>
+<li>
+<p>API를 통한 통합</p>
+</li>
+<li>
+<p>자동화된 UI 생성”</p>
+</li>
+</ul>
+<h3 id="4-developer-guide--next-steps-2분">4. Developer Guide &amp; Next Steps (2분)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-developer-guide--next-steps-2분" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“서드파티 모듈 개발을 위한 프레임워크를 제공합니다:</p>
+<ol>
+<li>모듈 개발 단계:</li>
+</ol>
+<ul>
+<li>
+<p>CloudFormation 템플릿 작성</p>
+</li>
+<li>
+<p>모듈 메타데이터 정의</p>
+</li>
+<li>
+<p>매니페스트 파일 작성</p>
+</li>
+<li>
+<p>MCS API와 통합</p>
+</li>
+</ul>
+<ol>
+<li>주요 리소스:</li>
+</ol>
+<ul>
+<li>
+<p>구현 가이드 문서</p>
+</li>
+<li>
+<p>API 레퍼런스</p>
+</li>
+<li>
+<p>모듈 개발 가이드</p>
+</li>
+<li>
+<p>파트너 지원 프로그램</p>
+</li>
+</ul>
+<p>실제 고객 사례로 Modern Film Consortium을 보시면, 24시간 내에 완전한 프로덕션 환경을 구축했습니다.”</p>
+<h3 id="closing-30초">Closing (30초)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#closing-30초" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“MCS를 통해 SA 여러분들은 고객들에게 빠르고 안전한 클라우드 스튜디오 구축 방안을 제시할 수 있습니다. 자세한 내용은 제공된 구현 가이드를 참조하시고, 파트너 모듈 개발이나 고객 지원이 필요하시다면 솔루션스 아키텍처 팀에 문의해 주시기 바랍니다. 감사합니다.”</p>
+<p>이 스크립트는 기술적 깊이를 유지하면서도 SA들이 실제 고객 대응에 활용할 수 있는 핵심 포인트들을 강조했습니다. 데모나 다이어그램 참조 포인트를 포함하여 발표 시 시각적 요소와 함께 활용할 수 있도록 구성했습니다.</p>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1844" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#solutions---modular-cloud-studio-mcs" data-for="solutions---modular-cloud-studio-mcs">Solutions - Modular Cloud Studio (MCS)</a></li><li class="depth-0"><a href="#deploy" data-for="deploy">Deploy</a></li><li class="depth-1"><a href="#management-environment" data-for="management-environment">Management Environment</a></li><li class="depth-1"><a href="#ad-user" data-for="ad-user">AD User</a></li><li class="depth-2"><a href="#adminusercredential" data-for="adminusercredential">AdminUserCredential</a></li><li class="depth-2"><a href="#serviceusercredential" data-for="serviceusercredential">ServiceUserCredential</a></li><li class="depth-2"><a href="#db-credential" data-for="db-credential">DB Credential</a></li><li class="depth-2"><a href="#defaultadminactivedirectorylogincredential" data-for="defaultadminactivedirectorylogincredential">DefaultAdminActiveDirectoryLoginCredential</a></li><li class="depth-2"><a href="#adconnectorserviceaccountdirectorylogincredential" data-for="adconnectorserviceaccountdirectorylogincredential">AdConnectorServiceAccountDirectoryLoginCredential</a></li><li class="depth-2"><a href="#studioadminactivedirectorylogincredential" data-for="studioadminactivedirectorylogincredential">StudioAdminActiveDirectoryLoginCredential</a></li><li class="depth-2"><a href="#mcsmodulesserviceaccountactivedirectorylogincredentials" data-for="mcsmodulesserviceaccountactivedirectorylogincredentials">McsModulesServiceAccountActiveDirectoryLoginCredentials</a></li><li class="depth-0"><a href="#mcs-setup-정리" data-for="mcs-setup-정리">MCS Setup 정리</a></li><li class="depth-0"><a href="#aws-modular-cloud-studio에서-macbook을-통한-nice-dcv-연결-가이드" data-for="aws-modular-cloud-studio에서-macbook을-통한-nice-dcv-연결-가이드">AWS Modular Cloud Studio에서 MacBook을 통한 NICE DCV 연결 가이드</a></li><li class="depth-1"><a href="#mcs-아키텍처-이해하기" data-for="mcs-아키텍처-이해하기">MCS 아키텍처 이해하기</a></li><li class="depth-1"><a href="#macbook용-nice-dcv-클라이언트-설치하기" data-for="macbook용-nice-dcv-클라이언트-설치하기">MacBook용 NICE DCV 클라이언트 설치하기</a></li><li class="depth-1"><a href="#leostream-gateway를-통한-연결-준비하기" data-for="leostream-gateway를-통한-연결-준비하기">Leostream Gateway를 통한 연결 준비하기</a></li><li class="depth-1"><a href="#macbook에서-nice-dcv-클라이언트로-연결하기" data-for="macbook에서-nice-dcv-클라이언트로-연결하기">MacBook에서 NICE DCV 클라이언트로 연결하기</a></li><li class="depth-2"><a href="#1-연결-정보-획득하기" data-for="1-연결-정보-획득하기">1. 연결 정보 획득하기</a></li><li class="depth-2"><a href="#2-nice-dcv-클라이언트-설정-및-연결" data-for="2-nice-dcv-클라이언트-설정-및-연결">2. NICE DCV 클라이언트 설정 및 연결</a></li><li class="depth-2"><a href="#3-leostream-인증-과정" data-for="3-leostream-인증-과정">3. Leostream 인증 과정</a></li><li class="depth-1"><a href="#고급-기능-및-최적화" data-for="고급-기능-및-최적화">고급 기능 및 최적화</a></li><li class="depth-2"><a href="#스트리밍-모드-관리" data-for="스트리밍-모드-관리">스트리밍 모드 관리</a></li><li class="depth-2"><a href="#파일-전송-및-기타-기능" data-for="파일-전송-및-기타-기능">파일 전송 및 기타 기능</a></li><li class="depth-1"><a href="#문제-해결-및-최적화-팁" data-for="문제-해결-및-최적화-팁">문제 해결 및 최적화 팁</a></li><li class="depth-1"><a href="#결론" data-for="결론">결론</a></li><li class="depth-1"><a href="#issue-handling" data-for="issue-handling">Issue Handling</a></li><li class="depth-2"><a href="#nice-dcv-연결-오류" data-for="nice-dcv-연결-오류">NICE DCV 연결 오류</a></li><li class="depth-0"><a href="#nice-dcv-gateway-호스트-이름-확인-실패-문제-분석-및-해결-가이드" data-for="nice-dcv-gateway-호스트-이름-확인-실패-문제-분석-및-해결-가이드">NICE DCV Gateway 호스트 이름 확인 실패 문제 분석 및 해결 가이드</a></li><li class="depth-1"><a href="#1-dns-구성-검증" data-for="1-dns-구성-검증">1. DNS 구성 검증</a></li><li class="depth-2"><a href="#11-route-53-dns-레코드-확인" data-for="11-route-53-dns-레코드-확인">1.1 Route 53 DNS 레코드 확인</a></li><li class="depth-2"><a href="#12-호스트-파일-임시-테스트" data-for="12-호스트-파일-임시-테스트">1.2 호스트 파일 임시 테스트</a></li><li class="depth-1"><a href="#2-네트워크-연결-검증" data-for="2-네트워크-연결-검증">2. 네트워크 연결 검증</a></li><li class="depth-2"><a href="#21-방화벽-및-보안-그룹-설정" data-for="21-방화벽-및-보안-그룹-설정">2.1 방화벽 및 보안 그룹 설정</a></li><li class="depth-2"><a href="#22-global-accelerator-구성-확인" data-for="22-global-accelerator-구성-확인">2.2 Global Accelerator 구성 확인</a></li><li class="depth-1"><a href="#3-leostream-gateway-및-broker-구성-검증" data-for="3-leostream-gateway-및-broker-구성-검증">3. Leostream Gateway 및 Broker 구성 검증</a></li><li class="depth-2"><a href="#31-gateway-broker-통신-설정" data-for="31-gateway-broker-통신-설정">3.1 Gateway-Broker 통신 설정</a></li><li class="depth-2"><a href="#32-dns-매핑-파일-오류" data-for="32-dns-매핑-파일-오류">3.2 DNS 매핑 파일 오류</a></li><li class="depth-1"><a href="#4-인증서-문제-진단" data-for="4-인증서-문제-진단">4. 인증서 문제 진단</a></li><li class="depth-2"><a href="#41-ssltls-인증서-검증" data-for="41-ssltls-인증서-검증">4.1 SSL/TLS 인증서 검증</a></li><li class="depth-2"><a href="#42-quic-프로토콜-호환성" data-for="42-quic-프로토콜-호환성">4.2 QUIC 프로토콜 호환성</a></li><li class="depth-1"><a href="#5-로그-기반-문제-분석" data-for="5-로그-기반-문제-분석">5. 로그 기반 문제 분석</a></li><li class="depth-2"><a href="#51-gateway-로그-분석" data-for="51-gateway-로그-분석">5.1 Gateway 로그 분석</a></li><li class="depth-2"><a href="#52-broker-로그-분석" data-for="52-broker-로그-분석">5.2 Broker 로그 분석</a></li><li class="depth-2"><a href="#53-cloudwatch-지표-활용" data-for="53-cloudwatch-지표-활용">5.3 CloudWatch 지표 활용</a></li><li class="depth-1"><a href="#6-고급-문제-해결-시나리오" data-for="6-고급-문제-해결-시나리오">6. 고급 문제 해결 시나리오</a></li><li class="depth-2"><a href="#61-vpc-엔드포인트-서비스-오류" data-for="61-vpc-엔드포인트-서비스-오류">6.1 VPC 엔드포인트 서비스 오류</a></li><li class="depth-2"><a href="#62-멀티-리전-구성-충돌" data-for="62-멀티-리전-구성-충돌">6.2 멀티 리전 구성 충돌</a></li><li class="depth-1"><a href="#결론-단계별-문제-해결-체크리스트" data-for="결론-단계별-문제-해결-체크리스트">결론: 단계별 문제 해결 체크리스트</a></li><li class="depth-0"><a href="#summary" data-for="summary">Summary</a></li><li class="depth-2"><a href="#opening-30초" data-for="opening-30초">Opening (30초)</a></li><li class="depth-2"><a href="#1-introduction--challenge-1분-30초" data-for="1-introduction--challenge-1분-30초">1. Introduction &amp; Challenge (1분 30초)</a></li><li class="depth-2"><a href="#2-solution-overview--architecture-3분" data-for="2-solution-overview--architecture-3분">2. Solution Overview &amp; Architecture (3분)</a></li><li class="depth-2"><a href="#3-key-modules--features-3분" data-for="3-key-modules--features-3분">3. Key Modules &amp; Features (3분)</a></li><li class="depth-2"><a href="#4-developer-guide--next-steps-2분" data-for="4-developer-guide--next-steps-2분">4. Developer Guide &amp; Next Steps (2분)</a></li><li class="depth-2"><a href="#closing-30초" data-for="closing-30초">Closing (30초)</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

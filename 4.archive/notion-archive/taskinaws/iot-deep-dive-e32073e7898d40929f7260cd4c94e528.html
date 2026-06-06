@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>IoT Deep Dive e32073e7898d40929f7260cd4c94e528 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="IoT Deep Dive e32073e7898d40929f7260cd4c94e528 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="IoT Deep Dive e32073e7898d40929f7260cd4c94e528 | LLM Wiki"/><meta name="twitter:description" content="🗺️ IoT Deep Dive AAoD Training Workshop - Global Session Internal Material Reference from Blog Shared GGv2 IoT Core - Fleet Indexing Brief Summary New Feature IoT Core - MQTT Developer Guide IoT Device Client Device SDK Embedded C SDK Mobile SDK Retained Message IoT Core endpoints Connectivity Prot..."/><meta property="og:description" content="🗺️ IoT Deep Dive AAoD Training Workshop - Global Session Internal Material Reference from Blog Shared GGv2 IoT Core - Fleet Indexing Brief Summary New Feature IoT Core - MQTT Developer Guide IoT Device Client Device SDK Embedded C SDK Mobile SDK Retained Message IoT Core endpoints Connectivity Prot..."/><meta property="og:image:alt" content="🗺️ IoT Deep Dive AAoD Training Workshop - Global Session Internal Material Reference from Blog Shared GGv2 IoT Core - Fleet Indexing Brief Summary New Feature IoT Core - MQTT Developer Guide IoT Device Client Device SDK Embedded C SDK Mobile SDK Retained Message IoT Core endpoints Connectivity Prot..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/iot-deep-dive-e32073e7898d40929f7260cd4c94e528"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/iot-deep-dive-e32073e7898d40929f7260cd4c94e528"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🗺️ IoT Deep Dive AAoD Training Workshop - Global Session Internal Material Reference from Blog Shared GGv2 IoT Core - Fleet Indexing Brief Summary New Feature IoT Core - MQTT Developer Guide IoT Device Client Device SDK Embedded C SDK Mobile SDK Retained Message IoT Core endpoints Connectivity Prot..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/iot-deep-dive-e32073e7898d40929f7260cd4c94e528" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2273" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2273" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>IoT Deep Dive e32073e7898d40929f7260cd4c94e528</a></div></nav><h1 class="article-title">IoT Deep Dive e32073e7898d40929f7260cd4c94e528</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.492Z">2026년 6월 06일</time><span>22 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🗺️</p>
+<h1 id="iot-deep-dive">IoT Deep Dive<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-deep-dive" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#d8d491ef-ada1-46ed-85d4-3b8b55c5d613" class="internal internal-link alias">AAoD</a></p>
+<p><a href="#bb800b02-d3c3-401d-9877-e0628c59604c" class="internal internal-link alias">Training</a></p>
+<p><a href="#9bad4eb6-8495-4f4b-a90a-b75e5db3cf8b" class="internal internal-link alias">Workshop - Global</a></p>
+<p><a href="#7be6c386-6766-4c4d-ac28-364c89429217" class="internal internal-link alias">Session</a></p>
+<p><a href="#d64951f0-ec02-4eba-aa34-c431f870d6c5" class="internal internal-link alias">Internal Material</a></p>
+<p><a href="#3eba7eeb-bad2-459b-b6a1-2694738152cc" class="internal internal-link alias">Reference from Blog</a></p>
+<p><a href="#228d32bd-c2e9-4eda-a608-333340a4daca" class="internal internal-link alias">Shared</a></p>
+<p><a href="#816354f2-42f8-46c8-8cb9-ade8e73ef88a" class="internal internal-link alias">GGv2</a></p>
+<p><a href="#b7919353-8f9f-4bad-a6ac-442ac17fe4a2" class="internal internal-link alias">IoT Core - Fleet Indexing</a></p>
+<p><a href="#66dd2211-ee81-4e55-8a0a-f357cac8bd4f" class="internal internal-link alias">Brief Summary</a></p>
+<p><a href="#43f02cf6-aa1a-43f1-9b2c-e916eba61054" class="internal internal-link alias">New Feature</a></p>
+<p><a href="#7086625b-a04f-4d04-aecb-5e36ccf3def5" class="internal internal-link alias">IoT Core - MQTT</a></p>
+<p><a href="#12612c61-74b0-4856-9ece-fcdd935ad9d6" class="internal internal-link alias">Developer Guide</a></p>
+<p><a href="#6151e3c0-8b12-406a-b67a-e1f6d36ec7fb" class="internal internal-link alias">IoT Device Client</a></p>
+<p><a href="#f56dc4b5-7dd2-4d87-8ce6-798191386bb6" class="internal internal-link alias">Device SDK</a></p>
+<p><a href="#7b2cbc11-2238-447f-9dfe-0469feb7f929" class="internal internal-link alias">Embedded C SDK</a></p>
+<p><a href="#89b9dd77-6188-43d9-9b6f-b5d1f77270ef" class="internal internal-link alias">Mobile SDK</a></p>
+<p><a href="#5d03800d-7eb9-4ddb-93a8-de3845b5f799" class="internal internal-link alias">Retained Message</a></p>
+<p><a href="#9fbce8f1-b0ea-485f-b580-cd8bf99247bf" class="internal internal-link alias">IoT Core endpoints</a></p>
+<p><a href="#1baf2b62-5e6a-48e7-bdab-9abf8e3f11ca" class="internal internal-link alias">Connectivity Protocol</a></p>
+<p><a href="#cc489a1b-3525-4376-a12b-593eb0617a50" class="internal internal-link alias">Device Management</a></p>
+<p><a href="#a8547afd-a9ac-42fc-a00f-adf9053137eb" class="internal internal-link alias">Application</a></p>
+<p><a href="#ee6e83d7-4b81-471f-88c2-3ae1055d7bb0" class="internal internal-link alias">DevOps</a></p>
+<p><a href="#697bfb8d-b0fa-4ed3-bd9a-0892eeec22ea" class="internal internal-link alias">CI/CD pipeline for GGv1</a></p>
+<p><a href="#c6c7db3c-3353-43bf-90a7-6cdbaa7518a7" class="internal internal-link alias">Device Provisioning</a></p>
+<p><a href="#6dea6bd5-0de9-4749-a192-5abae887e096" class="internal internal-link alias">Onboarding devices</a></p>
+<p><a href="#f3348a95-9b7a-45cc-8a91-7dce0bf7b857" class="internal internal-link alias">지원되는 인증 방식</a></p>
+<p><a href="#3385efb7-038f-4d37-aa3b-ce5e0f61e13a" class="internal internal-link alias">X.509 Certificate</a></p>
+<p><a href="#0f028339-182f-4931-ac38-52b2c3e3d8d1" class="internal internal-link alias">Managing CA and the Chain of Trust</a></p>
+<p><a href="#ab1b8188-06fb-4994-a5ed-4c21e19bd5d6" class="internal internal-link alias">Using ATS</a></p>
+<p><a href="#339b90d7-bda7-44d0-8d79-f83b8a07b125" class="internal internal-link alias">Using Customer CA</a></p>
+<p><a href="#09c7ec05-7ee4-4ac6-a731-acf4c55c055c" class="internal internal-link alias">Using Customer CA managed by ACM (AWS Certificate Manager)</a></p>
+<p><a href="#f29f6740-afc1-4eff-b45a-61b16ad9c6ec" class="internal internal-link alias">Install Certificate before delivered</a></p>
+<p><a href="#052619e1-ffd1-4a46-8ff0-e7f70d509c35" class="internal internal-link alias">Just in Time Provisioning (JITP)</a></p>
+<p><a href="#1594ac9f-3adc-4b33-9776-b9460ad512fc" class="internal internal-link alias">Just in Time Registration (JITR)</a></p>
+<p><a href="#be7e83de-e7a0-4230-b796-0eef34773f41" class="internal internal-link alias">Multi-Account Registration (MAR)</a></p>
+<p><a href="#d8e95108-e4ec-4e0a-a7e4-2db46b2d4da2" class="internal internal-link alias">Fleet Provisioning</a></p>
+<p><a href="#80eafdb1-83d8-4a30-ae5b-73106acfae2b" class="internal internal-link alias">What is</a></p>
+<p><a href="#c4464870-9848-46e0-8e8d-22d2fbb2c3f6" class="internal internal-link alias">Background</a></p>
+<p><a href="#e06d2c0c-a7a6-49ca-9c1c-ea90cde70d27" class="internal internal-link alias">Fleet Provisioning by Trusted User</a></p>
+<p><a href="#076abc45-4756-4ae5-8ed2-721b1eab2e6d" class="internal internal-link alias">Fleet Provisioning by Claim</a></p>
+<p><a href="#7c6c0d75-9b78-43e9-b080-4e43751b84fb" class="internal internal-link alias">Transport Security</a></p>
+<p><a href="#a3ac7b13-a375-4a8c-9980-7e1ef0c9f80c" class="internal internal-link alias">MQTT</a></p>
+<p><a href="#66a303a0-e9f6-4718-8cd8-1416723b0e7a" class="internal internal-link alias">HTTP</a></p>
+<p><a href="#724bf372-d4d9-4c37-a5c5-5274ad88a9f1" class="internal internal-link alias">SNI extension</a></p>
+<p><a href="#7708fa45-09e2-4e0c-b658-742b91fe2201" class="internal internal-link alias">IoT Core Component</a></p>
+<p><a href="#19315180-494f-4afd-8e7e-d1e66b4d30dd" class="internal internal-link alias">IoT Device Gateway</a></p>
+<p><a href="#8495fd12-66cc-4a61-a63c-c59546583475" class="internal internal-link alias">IoT Registry</a></p>
+<p><a href="#6d0e5e07-ee92-42c4-bd45-9c3960bb7238" class="internal internal-link alias">Industry</a></p>
+<p><a href="#5f29e4fc-66a4-4ff5-aa16-3e8f751d2604" class="internal internal-link alias">Predictive Maintenance</a></p>
+<p><a href="#4d70dd4f-b50f-4928-adac-ea707d134ff3" class="internal internal-link alias">Device Shadow</a></p>
+<p><a href="#8263e813-fdb6-42b2-9aa2-cbe2e0102204" class="internal internal-link alias">JSON document</a></p>
+<h1 id="aaod">AAoD<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aaod" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Have you completed your 6 month onboarding? Yes, I completed MBP from April to Septemeber<br/>
+What interests you about joining this community? I had developed Smart Home project before joining AWS and still have an interest in Smart Home, Smart Factory.<br/>
+Are you already a member of a TFC? No<br/>
+If so which one(s) and would you like to be removed from an existing community? Nothing<br/>
+Do you have manager approval to commit 10% of your time to this community? Yes<br/>
+Have you completed the IoT online training? (If not please do so before applying: <a href="https://www.aws.training/learningobject/video?id=16505" class="external external-link">https://www.aws.training/learningobject/video?id=16505<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> , <a href="https://kiku.aws.training/learningobject/curriculum?id=27079" class="external external-link">https://kiku.aws.training/learningobject/curriculum?id=27079<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> , and <a href="https://kiku.aws.training/learningobject/curriculum?id=27289" class="external external-link">https://kiku.aws.training/learningobject/curriculum?id=27289<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+Have you looked at the IoT Atlas in the IoT TFC wiki?<br/>
+(If not please do so before applying <a href="http://iotatlas.net/" class="external external-link">http://iotatlas.net/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)<br/>
+Have you read the AWS IoT Well Architected framework?<br/>
+(If not please do so before applying <a href="https://d1.awsstatic.com/whitepapers/architecture/AWS-IoT-Lens.pdf" class="external external-link">https://d1.awsstatic.com/whitepapers/architecture/AWS-IoT-Lens.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> )<br/>
+Can you please describe your experience in the IoT domain?</p>
+<hr/>
+<h1 id="training">Training<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#training" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-deep-dive/aws-security,-identity-and-compliance-f53be192f35d469eb4e92a843fa6872b" class="internal internal-link alias" data-slug="iot-deep-dive/aws-security,-identity-and-compliance-f53be192f35d469eb4e92a843fa6872b">♥️AWS Security, Identity and Compliance</a></p>
+<p><a href="../../../iot-deep-dive/iot-foundation-series-e7f68ed072e54512b41bc5bb3966ee8a" class="internal internal-link alias" data-slug="iot-deep-dive/iot-foundation-series-e7f68ed072e54512b41bc5bb3966ee8a">✂️IoT Foundation Series</a></p>
+<p><a href="../../../iot-deep-dive/iot-analytics-1521b33a6d7a40efa9593451531847a7" class="internal internal-link alias" data-slug="iot-deep-dive/iot-analytics-1521b33a6d7a40efa9593451531847a7">🎹IoT Analytics</a></p>
+<hr/>
+<h1 id="workshop---global">Workshop - Global<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#workshop---global" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>AWS IoT SiteWise workshop - <a href="https://iot-sitewise.workshop.aws/" class="external external-link">https://iot-sitewise.workshop.aws/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>AWS IoT SiteWise Edge workshop – <a href="https://iot-sitewise-edge.workshop.aws/" class="external external-link">https://iot-sitewise-edge.workshop.aws/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>AWS IoT SiteWise Edge demo - <a href="https://awsbuilderspace.com/#/project/f189989f-df58-480c-9a37-321597870657" class="external external-link">https://awsbuilderspace.com/#/project/f189989f-df58-480c-9a37-321597870657<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> / <a href="https://amazon.awsapps.com/workdocs/index.html#/folder/eb4d97bbaf1d8bc534bd62f02e119c06ee2290c7d0f8d7e29af2e7ad9bbace08" class="external external-link">https://amazon.awsapps.com/workdocs/index.html#/folder/eb4d97bbaf1d8bc534bd62f02e119c06ee2290c7d0f8d7e29af2e7ad9bbace08<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Embedded Linux Workshop - <a href="https://d9cpb62az58y.cloudfront.net/" class="external external-link">https://d9cpb62az58y.cloudfront.net/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<hr/>
+<h1 id="session">Session<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#session" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-deep-dive/what's-new-in-aws-iot-95621d4c467a46a2aeca3e4a66df5a54" class="internal internal-link alias" data-slug="iot-deep-dive/what's-new-in-aws-iot-95621d4c467a46a2aeca3e4a66df5a54">🏀What’s new in AWS IoT</a></p>
+<h1 id="internal-material">Internal Material<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#internal-material" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<hr/>
+<ul>
+<li><a href="https://amazon.awsapps.com/workdocs/index.html#/folder/37a0f54055ef90f7b41f74187ed190b4ab14fc313e19550b961760b6fce9e643" class="external external-link">EMEA IoT Enablement Series<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<p><a href="../../../iot-deep-dive/rba-913592915c834ea7ace27aa92757b14c" class="internal internal-link alias" data-slug="iot-deep-dive/rba-913592915c834ea7ace27aa92757b14c">🪝RBA</a></p>
+<h1 id="reference-from-blog">Reference from Blog<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reference-from-blog" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<hr/>
+<ul>
+<li>Temporary Security Token with AWS IoT Certificate : <a href="https://musma.github.io/2020/07/20/temporary-credentials-by-certificate.html" class="external external-link">https://musma.github.io/2020/07/20/temporary-credentials-by-certificate.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h1 id="shared">Shared<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#shared" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="ggv2">GGv2<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ggv2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>GGv2 ETL Deployment using CDK : <a href="https://github.com/awslabs/aws-iot-greengrass-accelerators/tree/main/v2/etl_simple" class="external external-link">https://github.com/awslabs/aws-iot-greengrass-accelerators/tree/main/v2/etl_simple<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled.png" class="internal internal-link" data-slug="iot-deep-dive/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-213.png" alt/></a></p>
+<h2 id="iot-core---fleet-indexing">IoT Core - Fleet Indexing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-core---fleet-indexing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="brief-summary">Brief Summary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#brief-summary" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-indexing.html" class="external external-link">https://docs.aws.amazon.com/iot/latest/developerguide/iot-indexing.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/ko/about-aws/whats-new/2018/11/aws-iot-device-management-now-provides-new-features-for-fleet-indexing-and-jobs/" class="external external-link">https://aws.amazon.com/ko/about-aws/whats-new/2018/11/aws-iot-device-management-now-provides-new-features-for-fleet-indexing-and-jobs/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Managed Service</p>
+</li>
+<li>
+<p>Index, search, aggregate registry data, shadow data, device connectivity data (device lifecycle event)</p>
+</li>
+<li>
+<p>Device Fleet의 관리 메커니즘으로 사용 된다 → Fleet Indexing을 이용하여 Fleet에서 디바이스 metadata나 디바이스 상태를 query 하거나, 원격 작업을 전송, 작업 배포, 작업 상태 추적</p>
+</li>
+<li>
+<p>Indexing Type</p>
+<ul>
+<li>
+<p>Thing indexing</p>
+</li>
+<li>
+<p>Thing Group indexing</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Dynamic Thing Group (동적 사물 그룹)</p>
+<ul>
+<li>
+<p>Indexing query로 group을 정의</p>
+</li>
+<li>
+<p>구성 예) 하드웨어 버전 1.1에 속한 모든 온도 센서에서 90도 보다 높은 온도를 보고</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="new-feature">New Feature<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#new-feature" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>현재 Thing query : <a href="https://docs.aws.amazon.com/iot/latest/developerguide/example-queries.html" class="external external-link">https://docs.aws.amazon.com/iot/latest/developerguide/example-queries.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>추가 : Fleet indexing에 named shadow를 사용 → re:Invent 예상</p>
+</li>
+<li>
+<p>What is named shadow? <a href="https://aws.amazon.com/ko/about-aws/whats-new/2020/07/aws-iot-core-now-supports-multiple-shadows-for-a-single-iot-device/" class="external external-link">https://aws.amazon.com/ko/about-aws/whats-new/2020/07/aws-iot-core-now-supports-multiple-shadows-for-a-single-iot-device/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>단일 IoT 디바이스에 여러 섀도우 (디바이스의 상태 정보를 저장 및 검색하는 데 사용되는 JSON 문서) 를 생성할 수 있는 기능 (2020.9)</p>
+</li>
+<li>
+<p>이전에는 디바이스 하나에 하나의 새도우만 연결 가능 → 하나의 새도우에 모든 상태 데이터 세트를 저장 → 여러 가지 상태를 가진 디바이스의 경우 쉽게 새도우 크기 제한 (8KB) 도달</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Shadow type</p>
+<ul>
+<li>
+<p>named shadow → divide a thing object with many properties into shadows with logical group of properties, each identified by shadow name</p>
+</li>
+<li>
+<p>unnamed shadow → 단일 IoT 디바이스는 한개의 unnmaed shadow만 가능</p>
+</li>
+<li>
+<p>classic shadow → 단일 IoT 디바이스는 한개의 shadow만 가능</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="iot-core---mqtt">IoT Core - MQTT<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-core---mqtt" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="developer-guide">Developer Guide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#developer-guide" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-sdks.html#iot-device-sdks" class="external external-link">https://docs.aws.amazon.com/iot/latest/developerguide/iot-sdks.html#iot-device-sdks<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h3 id="iot-device-client">IoT Device Client<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-device-client" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Provide example code to help using AWS IoT connection, fleet provisioning task, device security policy, secure tunneling, process jobs</p>
+</li>
+<li>
+<p>Support C++ and micro, x86, ARM core</p>
+</li>
+<li>
+<p>Git repository : <a href="https://github.com/awslabs/aws-iot-device-client" class="external external-link">https://github.com/awslabs/aws-iot-device-client<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>C# : Device SDK not support, using custom code for MQTT client</p>
+<ul>
+<li>
+<p><a href="https://github.com/aws-samples/iot-dotnet-publisher-consumer/issues/9#issuecomment-666752154" class="external external-link">https://github.com/aws-samples/iot-dotnet-publisher-consumer/issues/9#issuecomment-666752154<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p><a href="https://forums.aws.amazon.com/thread.jspa?threadID=272087" class="external external-link">https://forums.aws.amazon.com/thread.jspa?threadID=272087<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="device-sdk">Device SDK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-sdk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>C++</p>
+</li>
+<li>
+<p>Python</p>
+</li>
+<li>
+<p>Java</p>
+</li>
+<li>
+<p>JavaScript</p>
+</li>
+</ul>
+<h3 id="embedded-c-sdk">Embedded C SDK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#embedded-c-sdk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="mobile-sdk">Mobile SDK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mobile-sdk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Android</p>
+</li>
+<li>
+<p>iOS</p>
+</li>
+</ul>
+<h3 id="retained-message">Retained Message<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#retained-message" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://aws.amazon.com/blogs/iot/getting-started-mqtt-retained-messages-aws-iot-core/" class="external external-link">https://aws.amazon.com/blogs/iot/getting-started-mqtt-retained-messages-aws-iot-core/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://www.megazone.com/techblog_210924/" class="external external-link">https://www.megazone.com/techblog_210924/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>Retained Message limit : 500개 (Soft)</p>
+</li>
+<li>
+<p>RETAIN flag in MQTT v3.1.1 set → GetRetainedMessage 명령어로</p>
+</li>
+<li>
+<p>Use Case</p>
+<ul>
+<li>
+<p>Store configuration settings for one or more devices → Once device is online and subscribes, retained message will be received</p>
+</li>
+<li>
+<p>Broadcast a shared configuration to multiple devices</p>
+</li>
+<li>
+<p>Storing the current state of one or more devices</p>
+<ul>
+<li>
+<p>A device could periodically publish its current state to a unique topic and set the retain flag to ‘True’ each time so that the latest state is always stored by the AWS IoT Core broker</p>
+</li>
+<li>
+<p>If another client, such as a cloud service or customer-facing application needs the device state, it can just subscribe to the particular topic and automatically receive it instead of waiting for the device to publish an update</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Message retain vs Persistent session</p>
+<p><a href="https://docs.aws.amazon.com/ko_kr/iot/latest/developerguide/mqtt.html#mqtt-persistent-sessions" class="external external-link">https://docs.aws.amazon.com/ko_kr/iot/latest/developerguide/mqtt.html#mqtt-persistent-sessions<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<h3 id="iot-core-endpoints">IoT Core endpoints<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-core-endpoints" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://docs.aws.amazon.com/general/latest/gr/iot-core.html#iot-core-data-plane-endpoints" class="external external-link">https://docs.aws.amazon.com/general/latest/gr/iot-core.html#iot-core-data-plane-endpoints<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>Control plane endpoints</p>
+<ul>
+<li>보안 설정, 디바이스 등록, 데이터 라우팅 규칙 설정, 로깅 셋업 등의 작업을 수행</li>
+</ul>
+</li>
+<li>
+<p>Data plane endpoints</p>
+<ul>
+<li>Low latency와 high throughput 유지하며 대규모 데이터 수집 (ingest)</li>
+</ul>
+</li>
+<li>
+<p>Device Management - Jobs data endpoints</p>
+</li>
+<li>
+<p>Device Management - Secure tunneling endpoints</p>
+</li>
+<li>
+<p>LoRaWAN API endpoints</p>
+</li>
+<li>
+<p>FIPS endpoints (Federal Information Processing Standard 140-2)</p>
+</li>
+</ul>
+<h2 id="connectivity-protocol">Connectivity Protocol<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#connectivity-protocol" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="device-management">Device Management<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-management" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><a href="https://gakari.tistory.com/entry/LWM2MLightweight-Machine-to-Machine" class="external external-link">https://gakari.tistory.com/entry/LWM2MLightweight-Machine-to-Machine<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>OMA (Open Mobile Association) LwM2M (Lightweight M2M)</p>
+<ul>
+<li>
+<p>oneM2M의 장치 관리 프로토콜</p>
+</li>
+<li>
+<p>LwM2M 클라이언트와 서버간의 L7 통신 프로토롤 정의</p>
+</li>
+<li>
+<p>CoA 기반 → MQTT, HTTP 지원 (v1.2)</p>
+</li>
+<li>
+<p>AWS Blog : <a href="https://aws.amazon.com/blogs/apn/how-tensoriot-reduced-delays-and-the-initial-cost-of-deploying-smart-city-iot-solutions/" class="external external-link">https://aws.amazon.com/blogs/apn/how-tensoriot-reduced-delays-and-the-initial-cost-of-deploying-smart-city-iot-solutions/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>OMA-DM (Device Management)</p>
+</li>
+<li>
+<p>TR-069 (Technical Report)</p>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-1.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-141.png" alt/></a></p>
+<h3 id="application">Application<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#application" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>CoAP (Constrained Application Protocol)</p>
+<ul>
+<li>
+<p>제한된 노드와 제한된 네트워크를 위한 <strong>경량 메시징 프로토콜</strong> → 저전력이며 손실이 많은 네트워크 대상</p>
+</li>
+<li>
+<p>클라이언트 ↔ 서버 프로토콜</p>
+<ul>
+<li>1:1 연결이 기본 이지만 1:N 및 멀티 캐스트도 지원</li>
+</ul>
+</li>
+<li>
+<p>비동기식 통신</p>
+<ul>
+<li>
+<p>Observe 방식 : Pub/Sub와 유사 하며 노드가 다른 노드를 관찰한다는 컨셉</p>
+</li>
+<li>
+<p>브로커가 없다는 점에서 MQTT와 차이가 있으며 네트워크 노드 중 하나는 Observer를 위한 메시지를 보유하고 있다는 점은 유사</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Transport Layer (전송 계층)으로 UDP 사용</p>
+<ul>
+<li>
+<p>비 연결 데이터그램 (IP 계층 패킷) 이기 때문에 낮은 오버헤드, 작은 패킷, 빠른 웨이크업과 전송 사이클의 특성을 가져 저전력 디바이스에 적합</p>
+</li>
+<li>
+<p>낮은 신뢰성은 반복적 메시징으로 보완</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Security</p>
+<ul>
+<li>DTLS 이용</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>MQTT on AWS</p>
+<ul>
+<li>
+<p>Version 3.1.1</p>
+</li>
+<li>
+<p>QoS level</p>
+<ul>
+<li>
+<p>Level 0 : Sent zero or more (at most once) → 안정적인 통신 연결에서 사용되어야 함</p>
+</li>
+<li>
+<p>Level 1 : Sent at least once and then repeatedly until a PUBACK response is received → PUBACK을 수신하여야 전송이 완료된 것으로 판단</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Persistent session</p>
+<ul>
+<li>
+<p>Store a client’s subscriptions and message → 클라이언트가 승인하지 않은 QoS 1인 클라이언트의 구독 및 메시지가 저장</p>
+</li>
+<li>
+<p>연결이 끊어진 장치가 영구 세션에 다시 연결되면 세션이 재개되고 구독이 복원</p>
+</li>
+<li>
+<p>다시 연결하기 전에 수신되고 클라이언트에서 확인되지 않은 구독된 메시지가 클라이언트로 전송</p>
+</li>
+<li>
+<p>Session expiration time : 1h (soft)</p>
+</li>
+<li>
+<p>Connection inactivity (keep-alive interval) : 30 ~ 1200sec (using VPC endpoint, 230sec) → Hard Limit</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="devops">DevOps<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#devops" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="cicd-pipeline-for-ggv1">CI/CD pipeline for GGv1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cicd-pipeline-for-ggv1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://aws.amazon.com/blogs/iot/implementing-a-ci-cd-pipeline-for-aws-iot-greengrass-projects/" class="external external-link">https://aws.amazon.com/blogs/iot/implementing-a-ci-cd-pipeline-for-aws-iot-greengrass-projects/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="device-provisioning">Device Provisioning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-provisioning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-provision.html" class="external external-link">https://docs.aws.amazon.com/iot/latest/developerguide/iot-provision.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="onboarding-devices">Onboarding devices<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#onboarding-devices" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Decision Tree : <a href="https://pythia.architecture.aws.dev/conversation/WoJ6Vp/WoJ6Vp-1601150471939/DECISION_1597212374418" class="external external-link">https://pythia.architecture.aws.dev/conversation/WoJ6Vp/WoJ6Vp-1601150471939/DECISION_1597212374418<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h3 id="지원되는-인증-방식">지원되는 인증 방식<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#지원되는-인증-방식" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/security/cert3.html" class="external external-link">X.509 인증서<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ol>
+<li>
+<p>PKI (Public Key Infrastructure - 공개키 기반 구조)를 기반으로 하여 mutual TLS 인증을 진행</p>
+</li>
+<li>
+<p>디바이스 제조사는 디바이스별로 고유한 개인키와 X.509 인증서를 제공해야 한다 - Provision a unique identity including a unique private key and X.509 certificate into each device</p>
+</li>
+</ol>
+</li>
+<li>
+<p>OAuth 자격 증명 (credential)</p>
+</li>
+<li>
+<p>Basic Auth 자격 증명 (credential)</p>
+</li>
+</ol>
+<h3 id="x509-certificate">X.509 Certificate<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#x509-certificate" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="https://d1.awsstatic.com/whitepapers/device-manufacturing-provisioning.pdf" class="external external-link">https://d1.awsstatic.com/whitepapers/device-manufacturing-provisioning.pdf<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>디바이스에 인증서 설치 방식</p>
+<ol>
+<li>
+<p>배포하기 전에 디바이스에 직접 설치</p>
+</li>
+<li>
+<p>사용자 또는 설치 프로그램이 애플리케이션을 이용해 디바이스에 설치</p>
+</li>
+<li>
+<p>사용자가 애플리케이션으로 디바이스에 설치할 수 없는 경우</p>
+</li>
+</ol>
+</li>
+<li>
+<p>디바이스 인증서 Type</p>
+<ul>
+<li>
+<p>Customer 소유 CA (Certificate Authority - 인증 기관)</p>
+</li>
+<li>
+<p>Third party CA</p>
+</li>
+<li>
+<p>AWS IoT CA</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Hardware Security Module 사용 여부 - Secure Element</p>
+</li>
+<li>
+<p>Server Side의 인증 관련 Resource</p>
+<ul>
+<li>
+<p>X.509 Certificate : CA 발급자의 공개 정보</p>
+</li>
+<li>
+<p>X.509 Certificate : Public Key와 expiration date (만료일)</p>
+</li>
+<li>
+<p>Attached IoT Policy : 인증된 디바이스에 인가된 기능</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Device Side의 인증 관련 Resource</p>
+<ul>
+<li>
+<p>Registered IoT Thing : Thing Registry에서 IoT Thing에 등록이 되어 있어야 함</p>
+</li>
+<li>
+<p>Amazon Trust Services (ATS)의 Server Certificate</p>
+</li>
+<li>
+<p>X.509 Certificate : 서버와 동일한 인증서</p>
+</li>
+<li>
+<p>X.509 Certificate : 인증서의 Public Key와 pair인 Private Key</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-2.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-124.png" alt/></a></p>
+<h2 id="managing-ca-and-the-chain-of-trust">Managing CA and the Chain of Trust<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#managing-ca-and-the-chain-of-trust" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="using-ats">Using ATS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#using-ats" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Generate Device Certificate and Private Key using AWS IoT</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-3.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-112.png" alt/></a></p>
+<ul>
+<li>
+<p>Use device generated or owned Private Key</p>
+<ul>
+<li>CSR (Certificate Signing Request)을 AWS에 요청하여 사용</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-4.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-111.png" alt/></a></p>
+<ul>
+<li>대기업의 경우 자체 self-signed Root CA를 대체적으로 가지고 있음</li>
+</ul>
+<h3 id="using-customer-ca">Using Customer CA<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#using-customer-ca" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>자체 RootCA를 가지고 Intermediate CA를 만들고 이 ICA를 사용하여 디바이스 인증서를 생성한다</p>
+</li>
+<li>
+<p>ICA를 생성하는 과정에서 Signer CA를 AWS IoT에 등록하여 CA의 무결성을 확보해야 한다.</p>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-5.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-104.png" alt/></a></p>
+<h3 id="using-customer-ca-managed-by-acm-aws-certificate-manager">Using Customer CA managed by ACM (AWS Certificate Manager)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#using-customer-ca-managed-by-acm-aws-certificate-manager" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Customer CA는 사용하고 싶지만 PKI, CA를 관리하고 싶지 않다면 ACM 서비스를 이용</p>
+</li>
+<li>
+<p>ACM에서 발급되는 X.509 인증서를 사용하고 이것을 생산 업체 혹은 Secure Element Vendor를 통해 제품에 투입</p>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-6.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-95.png" alt/></a></p>
+<h3 id="install-certificate-before-delivered">Install Certificate before delivered<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#install-certificate-before-delivered" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>JITP (Just-in-time Provisioning)</p>
+</li>
+<li>
+<p>JITR (Just-in-time Registration)</p>
+</li>
+<li>
+<p>MAR (Multi-Account Registration)</p>
+</li>
+<li>
+<p>Device Certificate이 AWS IoT에 등록되어 있어 디바이스가 처음 연결될 때 AWS IoT가 인식할 수 있게 한다</p>
+</li>
+</ul>
+<ol>
+<li>
+<p>Provision devices with unique credentials in firmware</p>
+<ol>
+<li>
+<p>X.509 인증서와 Private Key를 코드에 포함시켜 각 디바이스마다 다른 firmware를 생성하고 생산 단계에서 programming</p>
+</li>
+<li>
+<p>디바이스 제조사가 AWS IoT에 디바이스 인증서를 사전 등록하고 이것을 각 디바이스에 직접 programming</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../iot-deep-dive/untitled-7.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-92.png" alt/></a></p>
+<p><a href="../../../iot-deep-dive/untitled-8.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8-86.png" alt/></a></p>
+<h3 id="just-in-time-provisioning-jitp">Just in Time Provisioning (JITP)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#just-in-time-provisioning-jitp" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>디바이스가 인증서와 개인키를 가지고 있는 경우에 사용 된다</p>
+</li>
+<li>
+<p>디바이스 인증서는 AWS IoT에 등록되어 있는 CA에서 사인되어 있어야 한다</p>
+</li>
+<li>
+<p>인증 과정</p>
+<ul>
+<li>
+<p>디바이스가 AWS IoT에 연결하고</p>
+</li>
+<li>
+<p>인증서 Signature가 확인 되어야 한다</p>
+</li>
+<li>
+<p>Provisioning template을 사용하여 Thing, 인증서, Policy를 등록 한다</p>
+</li>
+<li>
+<p>디바이스 제조사는 사전에 <span class="text-highlight">**signer CA**</span>와 <span class="text-highlight">**provisioning template**</span>을 CA에 attach 해야 한다</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-9.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9-84.png" alt/></a></p>
+<h3 id="just-in-time-registration-jitr">Just in Time Registration (JITR)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#just-in-time-registration-jitr" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>JITP와의 차이는 추가적인 커스텀 로직이 필요하는 것임</p>
+</li>
+<li>
+<p>인증 과정</p>
+<ul>
+<li>
+<p>디바이스가 AWS IoT에 연결하고</p>
+</li>
+<li>
+<p>인증서 Signature가 확인되면 <span class="text-highlight">**인증서를 inactive 상태로 등록**</span> 한다</p>
+</li>
+<li>
+<p>AW IoT는 MOTT topic으로 Lifecycle 이벤트를 생성 한다 : $aws/events/certificates/registered/<cacertificateid></cacertificateid></p>
+</li>
+<li>
+<p>디바이스 제조사는 위 topic이 publish 될 때 마다 Lambda 함수가 trigger 되도록 IoT Rule을 구성해 두어야 한다</p>
+</li>
+<li>
+<p>Lambda 함수에서는 이차 검증 작업을 수행한다</p>
+<ul>
+<li>
+<p>Allow List, 인증서 해지 목록 (Certificate Revocation List) 적용</p>
+</li>
+<li>
+<p>특정 사용자에 등록 하거나 추가적인 온보딩 단계를 호출 한다</p>
+</li>
+<li>
+<p>Lambda 함수도 IoT Thing에 등록하고 Policy를 설정해야 한다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Lambda 함수 <span class="text-highlight">**실행이 완료되면 Certificate 상태를 active**</span>로 변경</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-10.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10-74.png" alt/></a></p>
+<ul>
+<li>디바이스의 첫번째 연결은 실패하지만 두번째 연결은 성공하는 로직을 가짐</li>
+</ul>
+<h3 id="multi-account-registration-mar">Multi-Account Registration (MAR)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multi-account-registration-mar" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>디바이스가 인증서와 개인키를 가지고 있어야 한다</p>
+</li>
+<li>
+<p>인증서는 CA sign되어 있지만 CA가 반드시 AWS IoT에 등록되어 있을 필요는 없다</p>
+</li>
+<li>
+<p>디바이스 제조사는 벤더 고유 CA로 sign된 인증서를 AWS 콘솔, API, CLI 를 사용하여 등록해야 한다. 이 때 인증서는 어떤 리전이나 어떤 계정에도 등록될 수 있다</p>
+</li>
+<li>
+<p>인증 과정</p>
+<ul>
+<li>
+<p>디바이스의 TLS stack은 SNI (Server Name Indicator) extension을 지원해야 한다</p>
+</li>
+<li>
+<p>AWS IoT Core의 endpoint는 SNI string으로 전달된다</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-11.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11-70.png" alt/></a></p>
+<ul>
+<li>
+<p>Use Case</p>
+<ul>
+<li>
+<p>디바이스 provisioning을 유연하게 하고 싶을 때 사용 된다</p>
+</li>
+<li>
+<p>AWS 계정을 sandbox, testing, production 등으로 다양하게 구성할 때 사용할 수 있다 → 이 경우 인증서는 각 계정별로 등록이 되고 디바이스는 lifecycle에 따라 다른계정으로 연결 될 수 있다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>디바이스를 글로벌하게 판매할 경우 인증서를 여러 AWS 리전에 등록하여 사용할 수 있다</p>
+</li>
+<li>
+<p>디바이스 제조사가 자체 signing CA를 가지고 있지 않고 CA를 AWS IoT에 등록할 수 없을 때</p>
+</li>
+<li>
+<p>Mode of CA certificate registration</p>
+<ul>
+<li>
+<p>DEFAULT: register a CA certificate with a verification certificate</p>
+</li>
+<li>
+<p>SNI_ONLY: register a CA certificate without a verification certificate</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Registration Case</p>
+<ul>
+<li>
+<p>Only <strong>one account can register a CA in DEFAULT mode in one region</strong>.</p>
+</li>
+<li>
+<p>Multiple accounts can register the <strong>same CA in SNI_ONLY mode in the same region</strong>. There is no limit on the number of accounts in the region where such CA is registered.</p>
+</li>
+<li>
+<p>Multiple accounts can register the <strong>same CA in either DEFAULT or SNI_ONLY modes</strong> if these accounts are in <strong>different regions</strong> — this was possible before.</p>
+</li>
+<li>
+<p><strong>A CA</strong> can be in <strong>different modes across accounts</strong>. For example, one account can register it in DEFAULT mode and another account in SNI_ONLY mode.</p>
+</li>
+<li>
+<p>In <strong>a</strong> given <strong>account</strong>, a <strong>CA can exist in only one mode</strong>. To change the mode of the registered CA, you need to delete the CA and register it again.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="fleet-provisioning">Fleet Provisioning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fleet-provisioning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="what-is">What is<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>대량의 디바이스를 AWS IoT Core에 손쉽고 안전하게 온보딩할 수 있도록 제공되는 기능</p>
+</li>
+<li>
+<p>디바이스가 IoT Core에 최초 연결 시 다음의 작업을 자동으로 수행 하거나</p>
+<ul>
+<li>
+<p>각 장치에 고유 한 디지털 ID를 안전하게 전달 합니다</p>
+</li>
+<li>
+<p>Lambda 함수를 통해 디바이스 페이로드를 검증합니다</p>
+</li>
+<li>
+<p>고객의 AWS 계정에 ID를 등록합니다</p>
+</li>
+<li>
+<p>모든 필수 권한 및 레지스트리 메타 데이터가 있는 장치를 설정합니다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>새로운 자격 증명을 부여 받거나 설정을 변경</p>
+</li>
+</ul>
+<h3 id="background">Background<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#background" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>생산 시점에 고유한 Credential을 디바이스에 provisioning 하기 어려운 경우 사용할 수 있다 → 기술적 한계, 생산 비용, 애플리케이션 사양의 제약 등 다양한 이유가 있을 수 있다</p>
+</li>
+<li>
+<p>이 경우 디바이스는 고유한 Identity를 가지지 못하고 판매가 된다</p>
+</li>
+<li>
+<p>디바이스 고유 Credential을 Provisioning하는 방식은 2가지가 있다</p>
+<ul>
+<li>
+<p>by Trusted User</p>
+</li>
+<li>
+<p>by Claim</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="fleet-provisioning-by-trusted-user">Fleet Provisioning by Trusted User<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fleet-provisioning-by-trusted-user" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>오직 Trusted User가 디바이스에 고유한 credential을 provision 할 수 있다</p>
+</li>
+<li>
+<p>Mobile 애플리케이션에서 임시 인증서와 개인키를 생성하게 한다 → API 사용</p>
+</li>
+<li>
+<p>사전에 Trusted User API를 사용하는 Mobile 애플리케이션과 Fleet Provisioning Template이 필요하다</p>
+</li>
+<li>
+<p>추가 인증 과정이 필요하면 AWS Lambda 함수를 추가하여 사용할 수 있다</p>
+</li>
+<li>
+<p>인증 과정</p>
+<ul>
+<li>
+<p>Installer는 모바일 애플리케이션을 사용하여 AWS 인증을 진행 한다</p>
+</li>
+<li>
+<p>Trusted User API를 사용하여 installer는 임시 X.509 인증서와 개인키를 받는다 → 유효 시간은 5분</p>
+</li>
+<li>
+<p>모바일 애플리케이션이 이 credential을 디바이스에 전달 한다 : BLE, WiFi, USB 등으로 연결</p>
+</li>
+<li>
+<p>디바이스는 AWS IoT에 연결하고</p>
+</li>
+<li>
+<p>전달 받은 임시 credential을 AWS CA signing된 인증서와 개인키로 교환한다</p>
+</li>
+<li>
+<p>이 과정에서 AWS 리소스 (Thing name, Policy, Certificate)가 설정 된다</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Use Case</p>
+<ul>
+<li>
+<p>높은 수준의 보안이 필요할 경우</p>
+</li>
+<li>
+<p>생산 체인을 신뢰할 수 없을 경우</p>
+</li>
+<li>
+<p>생산 체인에서 디바이스 Provisioning이 가능하지 않을 경우</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-12.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12-67.png" alt/></a></p>
+<h3 id="fleet-provisioning-by-claim">Fleet Provisioning by Claim<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fleet-provisioning-by-claim" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>디바이스가 안전하게 credential을 받을 전송 채널을 만들 수 없거나</p>
+</li>
+<li>
+<p>생산 체인에서 디바이스를 customizing 할 수 없는 경우</p>
+</li>
+<li>
+<p>디바이스가 deploy 될 때 고유한 identity를 받을 수 있도록 한다</p>
+</li>
+<li>
+<p>사전에 Fleet Provisioning template과 AWS Lambda 함수를 등록해야 한다</p>
+</li>
+<li>
+<p>Claim certificate에 대한 관리가 필요하다</p>
+</li>
+<li>
+<p>인증 과정</p>
+<ul>
+<li>
+<p>디바이스 제조사는 FW에 공유되는 claim certificate을 포함시킨다 → claim certificate은 디바이스 batch 단위로 고유해야 한다</p>
+</li>
+<li>
+<p>디바이스가 AWS IoT에 최초 연결하면</p>
+</li>
+<li>
+<p>claim certificate을 고유한 AWS CA signing된 X.509 인증서와 개인키로 교환한다</p>
+</li>
+<li>
+<p>이 때 디바이스는 고유한 token (Serial No, HW secret 등)을 AWS IoT로 전달해야 한다</p>
+</li>
+<li>
+<p>Fleet Provisioning 서비스에서는 디바이스 고유 token 정보를 Allow List와 대조 확인한다</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-deep-dive/untitled-13.png" class="internal internal-link" data-slug="iot-deep-dive/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13-65.png" alt/></a></p>
+<h2 id="transport-security">Transport Security<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transport-security" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Encrypts the connection between the device and the broker</li>
+</ul>
+<h3 id="mqtt">MQTT<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mqtt" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>TLS client authentication</p>
+</li>
+<li>
+<p>AWS IoT는 TLS 프로토콜의 클라이언트 인증 모드를 사용하여 클라이언트 인증서를 인증</p>
+</li>
+<li>
+<p>Vesion 3.1.1 support</p>
+</li>
+</ul>
+<h3 id="http">HTTP<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#http" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Authentication is delegated to AWS Signature V4</li>
+</ul>
+<h3 id="sni-extension">SNI extension<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sni-extension" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Require device to send the Server Name Indication extension to the TLS protocol</p>
+</li>
+<li>
+<p>Provide the complete endpoint address in the host_name field</p>
+</li>
+</ul>
+<h2 id="iot-core-component">IoT Core Component<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-core-component" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="iot-device-gateway">IoT Device Gateway<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-device-gateway" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AWS에 연결하는 IoT 디바이스를 위한 진입점의 역할</p>
+</li>
+<li>
+<p>모든 활성 디바이스 연결을 관리하고 여러 프로토콜의 시맨틱을 구현하여 디바이스가 AWS IoT Core와 안전하고 효율적으로 통신할 수 있도록 지원</p>
+</li>
+<li>
+<p>지원 프로토콜 : MQTT, WebSockets, HTTP 1.1</p>
+</li>
+</ul>
+<h3 id="iot-registry">IoT Registry<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-registry" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>디바이스에 대한 자격 증명을 설정하고 디바이스의 속성 및 기능 같은 메타데이터를 추적하는 기능을 가짐</p>
+</li>
+<li>
+<p>사물에 대한 정보는 레지스트리에 JSON 데이터로 저장</p>
+</li>
+<li>
+<p>일반적인 디바이스 사용 사례에서는 사물 이름을 기본 MQTT 클라이언트 ID로 사용</p>
+</li>
+<li>
+<p>사물의 레지스트리 이름과 사물의 MQTT 클라이언트 ID, 인증서 또는 섀도우 상태 사용 사이의 매핑을 강제 적용하고 있지는 않지만 사물 이름을 하나 선택하여 레지스트리 및 디바이스 섀도우 서비스 모두에서 MQTT 클라이언트 ID로 사용할 것을 권장</p>
+</li>
+<li>
+<p>디바이스에 관한 메타데이터를 저장 → 최소 7일에 한 번 이상 레지스트리 항목을 액세스 또는 업데이트하기만 하면 레지스트리에 저장된 메타데이터가 계속 유지</p>
+</li>
+</ul>
+<h1 id="industry">Industry<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#industry" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="predictive-maintenance">Predictive Maintenance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#predictive-maintenance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Predictive and preventive industrial operations - re:Invent 2020 : <a href="https://www.youtube.com/watch?v=XR1X8WeSNPU" class="external external-link">https://www.youtube.com/watch?v=XR1X8WeSNPU<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h1 id="device-shadow">Device Shadow<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-shadow" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="json-document">JSON document<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#json-document" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">	&quot;state&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">		&quot;desired&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">			&quot;property&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">		}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">	}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1729" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#iot-deep-dive" data-for="iot-deep-dive">IoT Deep Dive</a></li><li class="depth-0"><a href="#aaod" data-for="aaod">AAoD</a></li><li class="depth-0"><a href="#training" data-for="training">Training</a></li><li class="depth-0"><a href="#workshop---global" data-for="workshop---global">Workshop - Global</a></li><li class="depth-0"><a href="#session" data-for="session">Session</a></li><li class="depth-0"><a href="#internal-material" data-for="internal-material">Internal Material</a></li><li class="depth-0"><a href="#reference-from-blog" data-for="reference-from-blog">Reference from Blog</a></li><li class="depth-0"><a href="#shared" data-for="shared">Shared</a></li><li class="depth-1"><a href="#ggv2" data-for="ggv2">GGv2</a></li><li class="depth-1"><a href="#iot-core---fleet-indexing" data-for="iot-core---fleet-indexing">IoT Core - Fleet Indexing</a></li><li class="depth-2"><a href="#brief-summary" data-for="brief-summary">Brief Summary</a></li><li class="depth-2"><a href="#new-feature" data-for="new-feature">New Feature</a></li><li class="depth-1"><a href="#iot-core---mqtt" data-for="iot-core---mqtt">IoT Core - MQTT</a></li><li class="depth-2"><a href="#developer-guide" data-for="developer-guide">Developer Guide</a></li><li class="depth-2"><a href="#iot-device-client" data-for="iot-device-client">IoT Device Client</a></li><li class="depth-2"><a href="#device-sdk" data-for="device-sdk">Device SDK</a></li><li class="depth-2"><a href="#embedded-c-sdk" data-for="embedded-c-sdk">Embedded C SDK</a></li><li class="depth-2"><a href="#mobile-sdk" data-for="mobile-sdk">Mobile SDK</a></li><li class="depth-2"><a href="#retained-message" data-for="retained-message">Retained Message</a></li><li class="depth-2"><a href="#iot-core-endpoints" data-for="iot-core-endpoints">IoT Core endpoints</a></li><li class="depth-1"><a href="#connectivity-protocol" data-for="connectivity-protocol">Connectivity Protocol</a></li><li class="depth-2"><a href="#device-management" data-for="device-management">Device Management</a></li><li class="depth-2"><a href="#application" data-for="application">Application</a></li><li class="depth-1"><a href="#devops" data-for="devops">DevOps</a></li><li class="depth-2"><a href="#cicd-pipeline-for-ggv1" data-for="cicd-pipeline-for-ggv1">CI/CD pipeline for GGv1</a></li><li class="depth-1"><a href="#device-provisioning" data-for="device-provisioning">Device Provisioning</a></li><li class="depth-2"><a href="#onboarding-devices" data-for="onboarding-devices">Onboarding devices</a></li><li class="depth-2"><a href="#지원되는-인증-방식" data-for="지원되는-인증-방식">지원되는 인증 방식</a></li><li class="depth-2"><a href="#x509-certificate" data-for="x509-certificate">X.509 Certificate</a></li><li class="depth-1"><a href="#managing-ca-and-the-chain-of-trust" data-for="managing-ca-and-the-chain-of-trust">Managing CA and the Chain of Trust</a></li><li class="depth-2"><a href="#using-ats" data-for="using-ats">Using ATS</a></li><li class="depth-2"><a href="#using-customer-ca" data-for="using-customer-ca">Using Customer CA</a></li><li class="depth-2"><a href="#using-customer-ca-managed-by-acm-aws-certificate-manager" data-for="using-customer-ca-managed-by-acm-aws-certificate-manager">Using Customer CA managed by ACM (AWS Certificate Manager)</a></li><li class="depth-2"><a href="#install-certificate-before-delivered" data-for="install-certificate-before-delivered">Install Certificate before delivered</a></li><li class="depth-2"><a href="#just-in-time-provisioning-jitp" data-for="just-in-time-provisioning-jitp">Just in Time Provisioning (JITP)</a></li><li class="depth-2"><a href="#just-in-time-registration-jitr" data-for="just-in-time-registration-jitr">Just in Time Registration (JITR)</a></li><li class="depth-2"><a href="#multi-account-registration-mar" data-for="multi-account-registration-mar">Multi-Account Registration (MAR)</a></li><li class="depth-1"><a href="#fleet-provisioning" data-for="fleet-provisioning">Fleet Provisioning</a></li><li class="depth-2"><a href="#what-is" data-for="what-is">What is</a></li><li class="depth-2"><a href="#background" data-for="background">Background</a></li><li class="depth-2"><a href="#fleet-provisioning-by-trusted-user" data-for="fleet-provisioning-by-trusted-user">Fleet Provisioning by Trusted User</a></li><li class="depth-2"><a href="#fleet-provisioning-by-claim" data-for="fleet-provisioning-by-claim">Fleet Provisioning by Claim</a></li><li class="depth-1"><a href="#transport-security" data-for="transport-security">Transport Security</a></li><li class="depth-2"><a href="#mqtt" data-for="mqtt">MQTT</a></li><li class="depth-2"><a href="#http" data-for="http">HTTP</a></li><li class="depth-2"><a href="#sni-extension" data-for="sni-extension">SNI extension</a></li><li class="depth-1"><a href="#iot-core-component" data-for="iot-core-component">IoT Core Component</a></li><li class="depth-2"><a href="#iot-device-gateway" data-for="iot-device-gateway">IoT Device Gateway</a></li><li class="depth-2"><a href="#iot-registry" data-for="iot-registry">IoT Registry</a></li><li class="depth-0"><a href="#industry" data-for="industry">Industry</a></li><li class="depth-1"><a href="#predictive-maintenance" data-for="predictive-maintenance">Predictive Maintenance</a></li><li class="depth-0"><a href="#device-shadow" data-for="device-shadow">Device Shadow</a></li><li class="depth-1"><a href="#json-document" data-for="json-document">JSON document</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Coursera DeepLearning4 - Sequence Models 7d088e14f97b42f083d7435df0d5ec86 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Coursera DeepLearning4 - Sequence Models 7d088e14f97b42f083d7435df0d5ec86 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Coursera DeepLearning4 - Sequence Models 7d088e14f97b42f083d7435df0d5ec86 | LLM Wiki"/><meta name="twitter:description" content="🖼️ Coursera DeepLearning4 - Sequence Models AuthorAndrew NgLinkwww.coursera.org/learn/nlp-sequence-models/home/welcomeTypeOnline Session Recurrent Neural Networks Why Sequence Models? Notation Recurrent Neural Network Model Backpropagation Through Time Different Types of RNNs Language Model and Seq..."/><meta property="og:description" content="🖼️ Coursera DeepLearning4 - Sequence Models AuthorAndrew NgLinkwww.coursera.org/learn/nlp-sequence-models/home/welcomeTypeOnline Session Recurrent Neural Networks Why Sequence Models? Notation Recurrent Neural Network Model Backpropagation Through Time Different Types of RNNs Language Model and Seq..."/><meta property="og:image:alt" content="🖼️ Coursera DeepLearning4 - Sequence Models AuthorAndrew NgLinkwww.coursera.org/learn/nlp-sequence-models/home/welcomeTypeOnline Session Recurrent Neural Networks Why Sequence Models? Notation Recurrent Neural Network Model Backpropagation Through Time Different Types of RNNs Language Model and Seq..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/learninginaws/coursera-deeplearning4---sequence-models-7d088e14f97b42f083d7435df0d5ec86"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/learninginaws/coursera-deeplearning4---sequence-models-7d088e14f97b42f083d7435df0d5ec86"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🖼️ Coursera DeepLearning4 - Sequence Models AuthorAndrew NgLinkwww.coursera.org/learn/nlp-sequence-models/home/welcomeTypeOnline Session Recurrent Neural Networks Why Sequence Models? Notation Recurrent Neural Network Model Backpropagation Through Time Different Types of RNNs Language Model and Seq..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/learninginaws/coursera-deeplearning4---sequence-models-7d088e14f97b42f083d7435df0d5ec86" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1781" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1781" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/learninginaws/">LearningInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Coursera DeepLearning4 - Sequence Models 7d088e14f97b42f083d7435df0d5ec86</a></div></nav><h1 class="article-title">Coursera DeepLearning4 - Sequence Models 7d088e14f97b42f083d7435df0d5ec86</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:15.933Z">2026년 6월 06일</time><span>17 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🖼️</p>
+<h1 id="coursera-deeplearning4---sequence-models">Coursera DeepLearning4 - Sequence Models<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#coursera-deeplearning4---sequence-models" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/list_gray-9.svg" alt/>Author</td><td>Andrew Ng</td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/link_gray-32.svg" alt/>Link</td><td><a href="https://www.coursera.org/learn/nlp-sequence-models/home/welcome" class="external external-link">https://www.coursera.org/learn/nlp-sequence-models/home/welcome<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/arrow-circle-down_gray-9.svg" alt/>Type</td><td>Online Session</td></tr></tbody></table></div>
+<p><a href="#1d89e3d2-6caf-4d99-9156-29441001f53a" class="internal internal-link alias">Recurrent Neural Networks</a></p>
+<p><a href="#3c95baf9-ce71-43de-bfae-190c1742af85" class="internal internal-link alias">Why Sequence Models?</a></p>
+<p><a href="#f9119dbc-ad47-4fb2-bc4a-b366156f2628" class="internal internal-link alias">Notation</a></p>
+<p><a href="#fd48c162-41ab-4cd3-9b94-20a6e434e286" class="internal internal-link alias">Recurrent Neural Network Model</a></p>
+<p><a href="#42877534-0396-4505-bd72-3ab3a27a453b" class="internal internal-link alias">Backpropagation Through Time</a></p>
+<p><a href="#13dc7812-c654-4e37-abee-aa476611e056" class="internal internal-link alias">Different Types of RNNs</a></p>
+<p><a href="#78f448bf-19a3-44e1-86cc-b478e7bddfdf" class="internal internal-link alias">Language Model and Sequence Generation</a></p>
+<p><a href="#2fa2e28a-556a-429c-9e94-6e527d28db4c" class="internal internal-link alias">Sampling Novel Sequences</a></p>
+<p><a href="#fd034ce7-2a40-4401-b1d1-536b1342daa6" class="internal internal-link alias">Vanishing Gradients with RNNs</a></p>
+<p><a href="#e3b5225a-2c8c-4c25-8554-710a9d9e7667" class="internal internal-link alias">Gated Recurrent Unit (GRU)</a></p>
+<p><a href="#fa2b4be6-3103-46cb-87e3-a58409f99e10" class="internal internal-link alias">Logn Short Term Memory (LSTM)</a></p>
+<p><a href="#632d6880-425d-4f4a-aa67-7c199e0d56a4" class="internal internal-link alias">Bidirectional RNN</a></p>
+<p><a href="#4bf02229-d183-44cc-9242-1280fdd5c919" class="internal internal-link alias">Deep RNNs</a></p>
+<p><a href="#a7ba136a-6699-4e07-9203-8760abf4f994" class="internal internal-link alias">Neural Language Processing &amp; Word Embeddings</a></p>
+<p><a href="#fc8fd071-d227-4493-a7bb-b481c93adcfc" class="internal internal-link alias">Concept</a></p>
+<p><a href="#7b07a76f-7911-4edb-a750-3440bf7b2e69" class="internal internal-link alias">Word Representation</a></p>
+<p><a href="#ffabb6ea-3a35-4ac1-96df-7f72f390ca61" class="internal internal-link alias">Using Word Embeddings</a></p>
+<p><a href="#c245cfc9-fae3-41cd-853f-91d4b69168fa" class="internal internal-link alias">Properties of Word Embeddings</a></p>
+<p><a href="#c6b5798f-46be-483b-8ebf-c2366da66d0c" class="internal internal-link alias">Embedding Matrix</a></p>
+<p><a href="#20caa1d4-5f69-41e4-ab11-6e01400c0b34" class="internal internal-link alias">Learning Word Embeddings</a></p>
+<p><a href="#8b25bec7-e6ed-4d8b-a5b9-169f36eb2f35" class="internal internal-link alias">Word2Vec</a></p>
+<p><a href="#e9461797-f767-43e6-9d43-72dedbbef641" class="internal internal-link alias">Negative Sampling</a></p>
+<p><a href="#f28cb85b-6278-4db2-8fe2-5fa07a42887c" class="internal internal-link alias">GloVe Word Vectors</a></p>
+<p><a href="#d7c4a4a9-750e-4312-bc09-863422bce799" class="internal internal-link alias">Sentiment Classification</a></p>
+<p><a href="#4b7679ea-3c1e-497a-b2c2-130406ae7365" class="internal internal-link alias">Debiasing Word Embeddings</a></p>
+<p><a href="#03a53c01-f321-4a38-b61d-5d4d3f41c8de" class="internal internal-link alias">Sequence Models &amp; Attention Mechanism</a></p>
+<p><a href="#fbd030cd-0c83-4a75-add6-03df2ce24b0c" class="internal internal-link alias">Various Sequence to Sequence Architectures - Basic Models</a></p>
+<p><a href="#57b937ab-30bd-42f7-88ea-21252bd4051d" class="internal internal-link alias">Picking the Most Likely Sentence</a></p>
+<p><a href="#42b33561-96cb-4007-a032-ced96990c651" class="internal internal-link alias">Beam Search</a></p>
+<p><a href="#35d1942b-c047-4ed1-a31a-0aed05f20e68" class="internal internal-link alias">Refinements to Beam Search</a></p>
+<p><a href="#6f0d4120-8e14-4b15-b51a-6269ccb56d44" class="internal internal-link alias">Error Analysis in Beam Search</a></p>
+<p><a href="#8ff9d58e-726a-47fd-a0b6-262e7d807b58" class="internal internal-link alias">Bleu Score</a></p>
+<p><a href="#0806db42-17bb-4193-927e-c8909e683a34" class="internal internal-link alias">Attention Model Intuition</a></p>
+<p><a href="#0d0d53be-7386-414f-a9e8-1bb2de895aed" class="internal internal-link alias">Attention Model</a></p>
+<p><a href="#53cd39dc-c70b-4ff8-8535-ae88de57f93d" class="internal internal-link alias">Speech Recognition</a></p>
+<p><a href="#b02af301-dee5-4df6-830f-0e1295740eef" class="internal internal-link alias">Trigger Word Detection</a></p>
+<p><a href="#ac23b265-242a-461f-bd48-609eb22b1c23" class="internal internal-link alias">Transformer Network</a></p>
+<p><a href="#363def0c-222f-4e63-b8c9-22fb773f3de7" class="internal internal-link alias">Transformer Network Intuition</a></p>
+<p><a href="#190a65ee-6320-48d8-8cb9-07eb1b7870ac" class="internal internal-link alias">Self-Attention</a></p>
+<p><a href="#7f431935-183f-46ff-881f-5f3b683a9ba8" class="internal internal-link alias">Multi-Head Attention</a></p>
+<p><a href="#fe64a2bd-6fdc-4305-8fec-40ef0cb93f5d" class="internal internal-link alias">Transformer Network</a></p>
+<p><a href="#0dde6f67-d3a4-4b58-9ae6-8511096d8c6f" class="internal internal-link alias">Code</a></p>
+<p><a href="#67715fba-f978-4535-8f1a-1d3ff3bf68d9" class="internal internal-link alias">Quiz</a></p>
+<h1 id="recurrent-neural-networks">Recurrent Neural Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#recurrent-neural-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>💡</p>
+<p>Recurrent : 순환하는, 반복적인, Recurrent Neural Network (순환형 신경망) : 순차적 데이터 학습에 사용</p>
+<ul>
+<li>
+<p>RNN are effective for NLP (Natural Language Processing) and other sequence tasks : Why? → Have '<span class="text-highlight">**Memory**</span>'</p>
+<ul>
+<li>
+<p>Read inputs x<t> one at a time</t></p>
+</li>
+<li>
+<p>Remember some contextual information through the hidden layer activations that get passed from one time step to the next</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Unidirectional (one-way) : take information from the past to process later inputs</p>
+</li>
+<li>
+<p>Bidirectional (two-way) : take context from both the past and the future</p>
+</li>
+</ul>
+<h2 id="why-sequence-models">Why Sequence Models?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-sequence-models" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-119f0eb69b964619b290f0821f1bbda4" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-119f0eb69b964619b290f0821f1bbda4">🔔Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_bf8a04e5a00354e6e1c26241436df713_c5w1l01-whysequencemodels.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_bf8a04e5a00354e6e1c26241436df713_c5w1l01-whysequencemodels.pptx">_bf8a04e5a00354e6e1c26241436df713_C5W1L01-WhySequenceModels.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-137.png" alt/></a></p>
+<h2 id="notation">Notation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#notation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-c2a5a4b6bddc4964aa6b8f7dcabd979a" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-c2a5a4b6bddc4964aa6b8f7dcabd979a">🌡️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_ef9081bb8edeb90b65e757f6e30c2596_c5w1l02-notation.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_ef9081bb8edeb90b65e757f6e30c2596_c5w1l02-notation.pptx">_ef9081bb8edeb90b65e757f6e30c2596_C5W1L02-Notation.pptx</a></p>
+<ul>
+<li>
+<p>Sequence model to automatically tell where are the peoples names in this sentence</p>
+<ul>
+<li>
+<p>Named-entity recognition</p>
+</li>
+<li>
+<p>Used by search engines to index all the people mentioned in the news articles</p>
+</li>
+</ul>
+</li>
+<li>
+<p>9 words → 9 sets of features and index into the positions and sequence</p>
+<ul>
+<li>
+<p>x&lt;1>, x&lt;2>, x&lt;3>, …, x<t> : index t to positions in the middle of the sequence</t></p>
+</li>
+<li>
+<p>t implies that these are temporal sequences</p>
+</li>
+<li>
+<p>output y : go back at y&lt;1>, y&lt;2>, y&lt;3>, …, y&lt;9></p>
+</li>
+</ul>
+</li>
+<li>
+<p><span class="text-highlight">**Tx**</span> : 9 (the length of the input sequence), <span class="text-highlight">**Ty**</span> : 9 (the length of the output sequence)</p>
+<ul>
+<li>Tx and Ty can be different</li>
+</ul>
+</li>
+<li>
+<p><span class="text-highlight">**Tx(i)**</span> : input sequence length for training example i</p>
+</li>
+<li>
+<p><span class="text-highlight">**Ty(i)**</span> : output sequence length for training example i</p>
+</li>
+<li>
+<p><span class="text-highlight">**X(i)**</span> : i th training example, <span class="text-highlight">**X(i)<t>**</t></span> : t-th element in the sequence of training example</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-1.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-1.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-1-17.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-2.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-2.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-2-14.png" alt/></a></p>
+<ul>
+<li>
+<p>Represent individual words in a sentence</p>
+<ul>
+<li>
+<p>Dictionary : making a list of the words</p>
+</li>
+<li>
+<p>a, Aaron, and, Harry (4075 th), Potter (6830 th), …, Zulu (10,000 th) → Dictionary size 10K</p>
+</li>
+<li>
+<p>Commercial application : Dictionary size <strong>30 ~ 50K words</strong></p>
+</li>
+<li>
+<p>Large internet companies : Dictionary size 1M words</p>
+</li>
+</ul>
+</li>
+<li>
+<p>One hot representation : represent each of these words</p>
+<ul>
+<li>Harry : a vector with all zeros except for a 1 in position 4075</li>
+</ul>
+</li>
+<li>
+<p>x<t> : one-hot vector (one is on and zero everywhere else)</t></p>
+</li>
+</ul>
+<h2 id="recurrent-neural-network-model">Recurrent Neural Network Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#recurrent-neural-network-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-735a945e4d234197b8b88c4ee5d3b6cb" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-735a945e4d234197b8b88c4ee5d3b6cb">🛩️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_98266faf944cb04b732b4e02bf4833fc_c5w1l03-rnnmodel.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_98266faf944cb04b732b4e02bf4833fc_c5w1l03-rnnmodel.pptx">_98266faf944cb04b732b4e02bf4833fc_C5W1L03-RNNModel.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-3.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-3.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-3-14.png" alt/></a></p>
+<ul>
+<li>
+<p>Input : 9 words, 9 one-hot-vectors</p>
+</li>
+<li>
+<p>A few hidden layers</p>
+</li>
+<li>
+<p>Output : 9 values (0 or 1) tell each word is part of a person’s name</p>
+</li>
+<li>
+<p>2 main problems</p>
+<ul>
+<li>
+<p>Inputs and outputs can be different lengths and examples → pad or zero-pad every inputs up to maximum length but doesn’t seem like a good representation</p>
+</li>
+<li>
+<p>Naive neural network architecture doesn’t share features learned across different positions of texts → better representation let reduce the # of parameters</p>
+</li>
+</ul>
+</li>
+<li>
+<p>At each time step, the RNN that passes on as activation to the next time step</p>
+</li>
+<li>
+<p>RNN scans through the data from left to right. The parameters for each tiem step are <strong>shared</strong> → <strong>Wax</strong></p>
+</li>
+<li>
+<p>Deactivations will be governed by some set of parameters are <strong>shared</strong> → <strong>Waa</strong></p>
+</li>
+<li>
+<p>The sum governs the output predictions → <strong>Wya</strong></p>
+</li>
+<li>
+<p>Limitation : The prediction at a certain time uses inputs or uses information from the <strong>inputs earlier</strong> in the sequence but not <strong>information later</strong> in the sequence</p>
+</li>
+<li>
+<p>Forward Propagation</p>
+<ul>
+<li>
+<p>a1 = g ( Waa * a&lt;0> + Wax * x&lt;1> + b )</p>
+<ul>
+<li>
+<p>activation function will often be a tonnage in the choice of RNN</p>
+</li>
+<li>
+<p>could be different activation functions in each step</p>
+</li>
+</ul>
+</li>
+<li>
+<p>y^&lt;1> = g ( Wya * a&lt;1> + b )</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-4.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-4.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-4-13.png" alt/></a></p>
+<ul>
+<li>a : 100 dimension, x : 10K dimension → Waa 100 x 100 dimension, Wax 100 x 10K dimension</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-5.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-5.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-5-12.png" alt/></a></p>
+<ul>
+<li>Stacking these two matrices together : 100 dimension → Wa : 100 x 10100 dimension</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-6.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-6.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-6-11.png" alt/></a></p>
+<h2 id="backpropagation-through-time">Backpropagation Through Time<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#backpropagation-through-time" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-e1ac3f0773354b5eab982d7a2ae78562" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-e1ac3f0773354b5eab982d7a2ae78562">📻Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_976bfd41487bdec19fee955e8c9f4945_c5w1l04-backpropthrutime.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_976bfd41487bdec19fee955e8c9f4945_c5w1l04-backpropthrutime.pptx">_976bfd41487bdec19fee955e8c9f4945_C5W1L04-BackPropThruTime.pptx</a></p>
+<ul>
+<li>Backpropagation calculations : the opposite direction of the forward prop</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-7.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-7.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-7-12.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-8.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-8.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-8-11.png" alt/></a></p>
+<ul>
+<li>
+<p>Loss function</p>
+<ul>
+<li>
+<p>Element-wise loss force, supposed for a certain word in the sequence</p>
+</li>
+<li>
+<p>person’s name : y<t></t></p>
+</li>
+<li>
+<p>Define as the standard logistic regression loss : cross entropy loss</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="different-types-of-rnns">Different Types of RNNs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#different-types-of-rnns" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-d1d22736c4a0422791a0bccec4f2fadb" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-d1d22736c4a0422791a0bccec4f2fadb">🏈Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_1e616fcef09344656330c8be0af72ed2_c5w1l05-difftypesrnn.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_1e616fcef09344656330c8be0af72ed2_c5w1l05-difftypesrnn.pptx">_1e616fcef09344656330c8be0af72ed2_C5W1L05-DiffTypesRNN.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-9.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-9.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-9-10.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-10.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-10.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-10-10.png" alt/></a></p>
+<ul>
+<li>
+<p>One to One</p>
+<ul>
+<li>Standard generic neural network → don’t need an RNN</li>
+</ul>
+</li>
+<li>
+<p>One to many</p>
+<ul>
+<li>Music generation or sequenced generation</li>
+</ul>
+</li>
+<li>
+<p>Many to one</p>
+<ul>
+<li>Sentimental classification</li>
+</ul>
+</li>
+<li>
+<p>Many to many (Tx = Ty)</p>
+<ul>
+<li>Name entity recognition</li>
+</ul>
+</li>
+<li>
+<p>Many to many (Tx and Ty are different)</p>
+<ul>
+<li>
+<p>Machine translation ( French to English)</p>
+</li>
+<li>
+<p>Decoder and Encoder</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-11.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-11.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-11-9.png" alt/></a></p>
+<h2 id="language-model-and-sequence-generation">Language Model and Sequence Generation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#language-model-and-sequence-generation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-e04c373d145f48b3873b86d0b00fcfee" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-e04c373d145f48b3873b86d0b00fcfee">🎖️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_e47022a18b5828864077658f24472187_c5w1l06-languagemodel.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_e47022a18b5828864077658f24472187_c5w1l06-languagemodel.pptx">_e47022a18b5828864077658f24472187_C5W1L06-LanguageModel.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-12.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-12.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-12-8.png" alt/></a></p>
+<ul>
+<li>
+<p>The way a speech recognition system picks the second sentence is by using a language model</p>
+<ul>
+<li>
+<p>Tell what the probability is of either of two sentences</p>
+</li>
+<li>
+<p>Might say that the chance between first and second sentence</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Training set comprising a large corpus of english text</p>
+<ul>
+<li>corpus : 크고 구조화 된 텍스트 집합으로 구성된 언어 리소스 (NLP terminoloy that just means a large body or very large set of english text of english sentences)</li>
+</ul>
+</li>
+<li>
+<p>Tokenize sentence</p>
+<ul>
+<li>
+<p>Form a vocabulary</p>
+</li>
+<li>
+<p>Map each of these words to alter indices in vocabulary</p>
+</li>
+<li>
+<p>Model when sentences end</p>
+</li>
+<li>
+<p>Add an extra token called a EOS (End of Sentence)</p>
+</li>
+<li>
+<p>What if some of the words in training set are not in vocabulary</p>
+<ul>
+<li>Replace it with a unique token called UNK (unknown)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-13.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-13.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-13-8.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-14.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-14.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-14-7.png" alt/></a></p>
+<ul>
+<li>
+<p>Build an RNN to model the chance of these different sequences</p>
+<ul>
+<li>
+<p>Softmax to predict → y^1 is output to a soft max</p>
+</li>
+<li>
+<p>10K way Softmax output if have a 10K word vocabulary</p>
+</li>
+</ul>
+</li>
+<li>
+<p>RNN’s job to predict is the chance of a being whatever the word it is</p>
+</li>
+</ul>
+<h2 id="sampling-novel-sequences">Sampling Novel Sequences<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sampling-novel-sequences" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-438f3314b9014526b526ecd6add888d9" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-438f3314b9014526b526ecd6add888d9">🎃Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_221d31113059c8b9cf4d577c31e4446f_c5w1l07-samplingnovelseqs.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_221d31113059c8b9cf4d577c31e4446f_c5w1l07-samplingnovelseqs.pptx">_221d31113059c8b9cf4d577c31e4446f_C5W1L07-SamplingNovelSeqs.pptx</a></p>
+<ul>
+<li>
+<p>Model the chance of any particular sequence of words</p>
+</li>
+<li>
+<p>Sample from the distribution to generate noble sequences of words</p>
+</li>
+<li>
+<p>First time stamp will have some max probability over possible outputs</p>
+<ul>
+<li>
+<p>Randomly sample according to this Softmax distribution</p>
+</li>
+<li>
+<p>Softmax tells what is the chance that it refers to this</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-15.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-15.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-15-7.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-16.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-16.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-16-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-17.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-17.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-17-6.png" alt/></a></p>
+<h2 id="vanishing-gradients-with-rnns">Vanishing Gradients with RNNs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vanishing-gradients-with-rnns" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-1377160dfc254445a7155bbfa374bdba" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-1377160dfc254445a7155bbfa374bdba">🎀Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_2f4999bb8e7f19908e01903d878015e4_c5w1l08-vanishgradwrnns.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_2f4999bb8e7f19908e01903d878015e4_c5w1l08-vanishgradwrnns.pptx">_2f4999bb8e7f19908e01903d878015e4_C5W1L08-VanishGradWRNNs.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-18.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-18.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-18-6.png" alt/></a></p>
+<h2 id="gated-recurrent-unit-gru">Gated Recurrent Unit (GRU)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gated-recurrent-unit-gru" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-e7f40a5fd4844f56a7c33b31dda41f97" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-e7f40a5fd4844f56a7c33b31dda41f97">🎳Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_bdd43c3164998819a1ea41e67f8b57f3_c5w1l09-gru.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_bdd43c3164998819a1ea41e67f8b57f3_c5w1l09-gru.pptx">_bdd43c3164998819a1ea41e67f8b57f3_C5W1L09-GRU.pptx</a></p>
+<ul>
+<li>
+<p>Modification to the RNN hidden layer</p>
+<ul>
+<li>
+<p>much better capturing <span class="text-highlight">**long range connections**</span></p>
+</li>
+<li>
+<p>helps a lot with the vanishing radient problems</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-19.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-19.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-19-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-20.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-20.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-20-6.png" alt/></a></p>
+<ul>
+<li>
+<p>c : memory cell</p>
+<ul>
+<li>
+<p>provide a bit of memeory to remember</p>
+</li>
+<li>
+<p>gets much further into the sentence it can still work under consideration, singular or plural</p>
+</li>
+<li>
+<p>equal to the output activation a<t></t></p>
+</li>
+</ul>
+</li>
+<li>
+<p>The important idea of the GRU is that it has a gate → gamma u</p>
+<ul>
+<li>
+<p>gate value : 1 or 0</p>
+</li>
+<li>
+<p>depending on whether the word is singular or plural</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Try to</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-21.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-21.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-21-6.png" alt/></a></p>
+<h2 id="logn-short-term-memory-lstm">Logn Short Term Memory (LSTM)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#logn-short-term-memory-lstm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-2a3da02356ab4bf797748ff395736598" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-2a3da02356ab4bf797748ff395736598">🏉Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_fa9c8d921b4cdf34d4b74e9060dbabaf_c5w1l10-lstmunit.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_fa9c8d921b4cdf34d4b74e9060dbabaf_c5w1l10-lstmunit.pptx">_fa9c8d921b4cdf34d4b74e9060dbabaf_C5W1L10-LSTMunit.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-22.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-22.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-22-6.png" alt/></a></p>
+<ul>
+<li>
+<p>Long range connections in a sequence</p>
+<ul>
+<li>LSTM (Long Short Term Memory) units : more powerful than the GRU</li>
+</ul>
+</li>
+<li>
+<p>GRU gates</p>
+<ul>
+<li>
+<p>Optic gate</p>
+</li>
+<li>
+<p>Relevance gate</p>
+</li>
+</ul>
+</li>
+<li>
+<p>LSTM is an slightly more powerful and general version of the GRU</p>
+</li>
+<li>
+<p>LSTM is more powerful and more effective since it has three gates instead of two</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-23.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-23.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-23-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-24.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-24.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-24-6.png" alt/></a></p>
+<h2 id="bidirectional-rnn">Bidirectional RNN<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bidirectional-rnn" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-ad040be5fa164ce3a15fad578b6d3acb" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-ad040be5fa164ce3a15fad578b6d3acb">💾Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_182d09c0475e192fd0342fc7029a2792_c5w1l11-bidirectionalrnn.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_182d09c0475e192fd0342fc7029a2792_c5w1l11-bidirectionalrnn.pptx">_182d09c0475e192fd0342fc7029a2792_C5W1L11-BidirectionalRNN.pptx</a></p>
+<ul>
+<li>
+<p>At a point time, take information from both earlier and later in the sequence</p>
+</li>
+<li>
+<p>Unidirectional or forward directional only RNN → bidirectional RNN (BRNN)</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-25.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-25.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-25-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-26.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-26.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-26-6.png" alt/></a></p>
+<h2 id="deep-rnns">Deep RNNs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deep-rnns" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-6a1297a548d6421c88db582351949244" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-6a1297a548d6421c88db582351949244">🧰Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/shouvh4weeiqbaqxmnypoa_4a605e507e1611e898bd9305a8f8f25e_c5w1l12-deeprnns.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/shouvh4weeiqbaqxmnypoa_4a605e507e1611e898bd9305a8f8f25e_c5w1l12-deeprnns.pptx">ShouVH4WEeiqbAqxMNypOA_4a605e507e1611e898bd9305a8f8f25e_C5W1L12-DeepRNNs.pptx</a></p>
+<ul>
+<li>Stack multiple layers of RNNs together to build even deeper versions of models</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-27.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-27.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-27-6.png" alt/></a></p>
+<h1 id="neural-language-processing--word-embeddings">Neural Language Processing &amp; Word Embeddings<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-language-processing--word-embeddings" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="concept">Concept<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#concept" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Embedding</p>
+<ul>
+<li>
+<p>자연어를 숫자의 나열인 vector로 바꾼 결과 혹은 그 일련의 과정 전체</p>
+</li>
+<li>
+<p>단어나 문장 각각을 vector로 변환해 vector space에 ‘끼워 넣는다 (embed)‘는 의미</p>
+</li>
+<li>
+<p>Corpus (말뭉치)의 의미, 문법 정보가 응축</p>
+</li>
+<li>
+<p>사칙 연산 및 관련도 (relevance) 계산</p>
+</li>
+</ul>
+</li>
+<li>
+<p>단어 Embedding 기법</p>
+<ul>
+<li>
+<p>NPLM : Neural Probabilistic Language Model</p>
+</li>
+<li>
+<p>Word2Vec</p>
+</li>
+<li>
+<p>FastText</p>
+</li>
+<li>
+<p>LSA (잠재 의미 분석)</p>
+</li>
+<li>
+<p>GloVe</p>
+</li>
+<li>
+<p>Swivel</p>
+</li>
+</ul>
+</li>
+<li>
+<p>문장 Embedding 기법</p>
+<ul>
+<li>
+<p>LSA</p>
+</li>
+<li>
+<p>Doc2Vec</p>
+</li>
+<li>
+<p>LDA (잠재 디리클레 할당)</p>
+</li>
+<li>
+<p>ELMo</p>
+</li>
+<li>
+<p>BERT</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Transfer learning (전이 학습)</p>
+<ul>
+<li>
+<p>특정 문제를 풀기 위해 학습한 model을 다른 문제를 푸는 데 재 사용하는 기법</p>
+</li>
+<li>
+<p>대규모 corpus를 미리 학습 (pretrain)한 embeding을 문서 분류 model의 입력값으로 사용하고</p>
+</li>
+<li>
+<p>해당 embedding을 포함한 model 전체를 문서 분류를 잘할 수 있도록 업데이트 (fine-tuning) 하는 방식</p>
+</li>
+<li>
+<p>Scratch부터 학습한 model보다 문서 분류 과제를 빠르게 잘 수행</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Transfer learning 사용 model</p>
+<ul>
+<li>
+<p>ELMo : Embeddings from Language Models</p>
+</li>
+<li>
+<p>BERT : Bidirectional Encoder Representations from Transformer</p>
+</li>
+<li>
+<p>GPT : Generative Pre-Training</p>
+</li>
+</ul>
+</li>
+<li>
+<p>XLNet</p>
+</li>
+</ul>
+<h2 id="word-representation">Word Representation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#word-representation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-824634df76c641cda4bd13e175ea518b" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-824634df76c641cda4bd13e175ea518b">🚔Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/kajawn4weeic-bk3xy5k_a_91b553007e1611e8b2d56182efc9cb8e_c5w2l01-wordrepresentation.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/kajawn4weeic-bk3xy5k_a_91b553007e1611e8b2d56182efc9cb8e_c5w2l01-wordrepresentation.pptx">kaJAwn4WEeiC-BK3XY5K_A_91b553007e1611e8b2d56182efc9cb8e_C5W2L01-WordRepresentation.pptx</a></p>
+<ul>
+<li>
+<p>One of the features of AI revolutionized by deep learning is NLP (Natural Language Processing - 자연어 처리)</p>
+</li>
+<li>
+<p>One of the key ideas is <strong>Word Embeddings</strong> - A way of representing words (단어를 표현하는 방법)</p>
+</li>
+<li>
+<p>Represent words using a vocabulary of words → represent words using a one-hot vector</p>
+<ul>
+<li>
+<p>Treats each word as a thing unto itself</p>
+</li>
+<li>
+<p>Doesn’t allow an algorihm to easily generalize the cross words</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-28.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-28.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-28-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-29.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-29.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-29-6.png" alt/></a></p>
+<ul>
+<li>
+<p>Instead of a one-hot presentation → Learn a featurized representation</p>
+</li>
+<li>
+<p>Allow to generalized better across different words</p>
+<ul>
+<li>
+<p>Apple and orange are more similar</p>
+</li>
+<li>
+<p>Man and woman tend to get grouped together</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Common algorithm is the <strong>t-SNE</strong> algorithm</p>
+<ul>
+<li>A non-linear dimensionality reduction technique</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-30.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-30.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-30-6.png" alt/></a></p>
+<h2 id="using-word-embeddings">Using Word Embeddings<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#using-word-embeddings" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-069c9abc9170442cb7d6788bcf60353f" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-069c9abc9170442cb7d6788bcf60353f">🥎Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/nwu5r34weeib7g5agkifqa_9f203af07e1611e896b2cdee12a693cc_c5w2l02-usingwordembed.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/nwu5r34weeib7g5agkifqa_9f203af07e1611e896b2cdee12a693cc_c5w2l02-usingwordembed.pptx">nwU5R34WEeiB7g5AGkIFQA_9f203af07e1611e896b2cdee12a693cc_C5W2L02-UsingWordEmbed.pptx</a></p>
+<ul>
+<li>
+<p>Take representation and plug them into NLP applications</p>
+</li>
+<li>
+<p>One hot representation → featurized representation (embedding vectors)</p>
+</li>
+<li>
+<p>What if durian cultivator (less common words)?</p>
+<ul>
+<li>
+<p>If have a small label training set, durian cultivator might be person</p>
+</li>
+<li>
+<p>Word embedding tells durian is a fruit, cultivator is like a farmer</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Word embedding can examine very large text corpuses</p>
+<ul>
+<li>Very large data sets : a billion words, 100 billion words found off the internet</li>
+</ul>
+</li>
+<li>
+<p>When learning word embeddings, we create an artificial task of estimating P(target∣context). It is okay if we do poorly on this artificial prediction task; the more important by-product of this task is that we learn a useful set of word embeddings → True</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-31.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-31.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-31-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-32.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-32.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-32-6.png" alt/></a></p>
+<ul>
+<li>
+<p>Step 1) Learn word embeddings from a large text corpus</p>
+<ul>
+<li>
+<p>Use relatively lower dimensional feature vectors</p>
+</li>
+<li>
+<p>10K dimensional one-hot vector → use 300 dimensional dense vector</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Step 2) Train model on new task with a smaller label data set</p>
+</li>
+<li>
+<p>Optionally to continue to fine tune : adjust the word embeddings with the new data → do only if task has a pretty big data set</p>
+</li>
+<li>
+<p>Named entity recognition, Text summarization, Co-reference resolution, Text parsing</p>
+</li>
+<li>
+<p>You have trained word embeddings using a text dataset of m1 words. You are considering using these word embeddings for a language task, for which you have a separate labeled dataset of m2 words. Keeping in mind that using word embeddings is a form of transfer learning, under which of these circumstances would you expect the word embeddings to be helpful? → m1 >> m2</p>
+</li>
+<li>
+<p>A transfer learning is more useful when having a ton of data set for A and a relatively smaller data set for B</p>
+</li>
+<li>
+<p>Face recognition is similar : Siamese network architecture</p>
+<ul>
+<li>
+<p>Use term encoding to refer vectors f(x(i)), f(x(j))</p>
+</li>
+<li>
+<p>Difference : face recognition input any picture never seen before, word embeddings have a fixed vocabulary</p>
+</li>
+<li>
+<p>Term encoding and embedding are used somewhat intechangeably</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-33.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-33.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-33-6.png" alt/></a></p>
+<h2 id="properties-of-word-embeddings">Properties of Word Embeddings<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#properties-of-word-embeddings" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-f3ff58cc04bc461a8354b125a22e008b" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-f3ff58cc04bc461a8354b125a22e008b">🏑Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/ytkomh4weeib7g5agkifqa_c949fe107e1611e898bd9305a8f8f25e_c5w2l03-propertiesofwordembeds.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/ytkomh4weeib7g5agkifqa_c949fe107e1611e898bd9305a8f8f25e_c5w2l03-propertiesofwordembeds.pptx">yTkOmH4WEeiB7g5AGkIFQA_c949fe107e1611e898bd9305a8f8f25e_C5W2L03-PropertiesOfWordEmbeds.pptx</a></p>
+<ul>
+<li>
+<p>Reasonable analogies may not be the most important NLP application, but might also help convey a sense of what these word embeddings are doing</p>
+</li>
+<li>
+<p>Man to woman vs King to queen : Is it possible to have an algorithm figure this out automatically?</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-34.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-34.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-34-6.png" alt/></a></p>
+<ul>
+<li>
+<p>Four dimensional embeddings</p>
+<ul>
+<li>
+<p>Man - Woman is similar King - Queen → that’s approximately the same thing</p>
+</li>
+<li>
+<p>Royal, Age, Food differences are equally</p>
+</li>
+<li>
+<p>Main difference is gender</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Vector difference between man and woman is very similar to the vector difference between king and queen</p>
+</li>
+<li>
+<p>s : high degree of a similarity between</p>
+</li>
+<li>
+<p>Find the word w that maximize the similarity between</p>
+</li>
+<li>
+<p>Ew compared to Eking - Eman + Ewoman</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-35.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-35.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-35-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-36.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-36.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-36-6.png" alt/></a></p>
+<ul>
+<li>
+<p>Every one-hot vector has the same Euclidean distance from any other one-hot vector → One-hot vectors don’t do a good job of capturing the level of similarity between words.</p>
+</li>
+<li>
+<p>Parallelogram relationships in analogy pairs to hold true</p>
+</li>
+<li>
+<p>A mapping through t-SAE → many of praralleogram analogy relationships will be broken by t-SAE</p>
+</li>
+<li>
+<p>Commonly used similarity function : cosine similarity</p>
+</li>
+<li>
+<p>Similarity = uT * v / inner product between u and v</p>
+<ul>
+<li>
+<p>if u and v are very similar → inner product will tend to be large</p>
+</li>
+<li>
+<p>this is called cosine similarity</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="embedding-matrix">Embedding Matrix<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#embedding-matrix" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-1064de2de6e14327b204229af182bf7e" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-1064de2de6e14327b204229af182bf7e">🧿Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/2uyym34weeiqbaqxmnypoa_d95867b07e1611e888f013749844ce4b_c5w2l04-embeddingmatrix.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/2uyym34weeiqbaqxmnypoa_d95867b07e1611e888f013749844ce4b_c5w2l04-embeddingmatrix.pptx">2UYYM34WEeiqbAqxMNypOA_d95867b07e1611e888f013749844ce4b_C5W2L04-EmbeddingMatrix.pptx</a></p>
+<ul>
+<li>
+<p>E (embedding matrix) : 300 dimensional by 10K dimensional matrix</p>
+</li>
+<li>
+<p>10K words vocabulary and 1 extra token (different embeddings)</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-37.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-37.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-37-6.png" alt/></a></p>
+<h2 id="learning-word-embeddings">Learning Word Embeddings<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#learning-word-embeddings" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-3ef1fc60788041079f350543ac0f87af" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-3ef1fc60788041079f350543ac0f87af">🎭Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/7nfrc34weeic-bk3xy5k_a_ee89d1f07e1611e8958149118ea1cff0_c5w2l05-learningwordembedding.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/7nfrc34weeic-bk3xy5k_a_ee89d1f07e1611e8958149118ea1cff0_c5w2l05-learningwordembedding.pptx">7nfRC34WEeiC-BK3XY5K_A_ee89d1f07e1611e8958149118ea1cff0_C5W2L05-LearningWordEmbedding.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-38.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-38.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-38-5.png" alt/></a></p>
+<ul>
+<li>
+<p>Construct one add vector corresponding to the word i → One add vector with a one in position</p>
+</li>
+<li>
+<p>Matrix parameters E (embedding matrix) → Get an embedding vector e4343 = E * o4343</p>
+</li>
+<li>
+<p>This neural network feeds to a softmax, which has it’s own parameters as well</p>
+</li>
+<li>
+<p>Predict final word ‘juice’</p>
+<ul>
+<li>
+<p>Input layer : 300 dimensional word embedding * 6 words (1800 dimensional vector)</p>
+</li>
+<li>
+<p>Hidden : W1, B1 / Softmax : W2, B2</p>
+</li>
+<li>
+<p>Have a fixed historical window → predict next word with the previous 4 words (4 is a hyperparameter)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Fixed history</p>
+<ul>
+<li>
+<p>Deal with even arbitrarily long sentences because the input sizes are always fixed</p>
+</li>
+<li>
+<p>One of the earlier and pretty successful algorithms for learning word embeddings</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-39.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-39.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-39-5.png" alt/></a></p>
+<h2 id="word2vec">Word2Vec<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#word2vec" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-ee08d3ba992f46e59617d4155ba61825" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-ee08d3ba992f46e59617d4155ba61825">❄️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/ato2s34xeeiqbaqxmnypoa_014cd4407e1711e8b2d56182efc9cb8e_c5w2l06-word2vec.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/ato2s34xeeiqbaqxmnypoa_014cd4407e1711e8b2d56182efc9cb8e_c5w2l06-word2vec.pptx">ATo2s34XEeiqbAqxMNypOA_014cd4407e1711e8b2d56182efc9cb8e_C5W2L06-Word2Vec.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-40.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-40.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-40-4.png" alt/></a></p>
+<ul>
+<li>
+<p>n-gram (n개 단어) : 직전 n-1개 단어의 등장 확률로 전체 단어 시퀀스 등장 확률을 근사하는 것</p>
+</li>
+<li>
+<p>A few context to target errors to create supervised learning problem</p>
+</li>
+<li>
+<p>Randomly pick a word within some window to be the context word</p>
+</li>
+<li>
+<p>Context c → Some target t</p>
+</li>
+<li>
+<p>Take the embedding matrix E → multiply E by vector Oc → embedding vector for the input context word Ec = E * one hot vector → feed to a softmax unit</p>
+</li>
+<li>
+<p>skip-gram model because is taking as input one word like orange and then trying to predict some words <strong>skipping a few words from the left or the right side</strong></p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-41.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-41.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-41-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-42.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-42.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-42-4.png" alt/></a></p>
+<ul>
+<li>
+<p>If using a vocabulary of size 100K or 1M, gets slow to sum up over this denominator every single time</p>
+</li>
+<li>
+<p>One of solution is to use a hierarchical softmax classifier</p>
+<ul>
+<li>
+<p>Instead of trying to categorize something into all 10K carries on one go</p>
+</li>
+<li>
+<p>Target word in the first 5K words or in the second 5K words in the vocabulary</p>
+</li>
+<li>
+<p>Get down to classify exactly what word it is → leaf of tree → each of the retriever nodes of the tree can be just a binding classifier</p>
+</li>
+<li>
+<p>Hierarchical softmax classifier</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="negative-sampling">Negative Sampling<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#negative-sampling" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-331f66ad2a074b098562c1c2002fe791" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-331f66ad2a074b098562c1c2002fe791">🥽Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/ka1u034xeeiqbaqxmnypoa_281ff2507e1711e8833cbdba4f7ea3bd_c5w2l07-negativesampling.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/ka1u034xeeiqbaqxmnypoa_281ff2507e1711e8833cbdba4f7ea3bd_c5w2l07-negativesampling.pptx">KA1U034XEeiqbAqxMNypOA_281ff2507e1711e8833cbdba4f7ea3bd_C5W2L07-NegativeSampling.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-43.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-43.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-43-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-44.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-44.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-44-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-45.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-45.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-45-4.png" alt/></a></p>
+<h2 id="glove-word-vectors">GloVe Word Vectors<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#glove-word-vectors" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-04963c9f814746f1a409f4445cb25912" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-04963c9f814746f1a409f4445cb25912">💷Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/obi9wh4xeeic-bk3xy5k_a_39c2b7907e1711e888f013749844ce4b_c5w2l08-glovewordvecs.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/obi9wh4xeeic-bk3xy5k_a_39c2b7907e1711e888f013749844ce4b_c5w2l08-glovewordvecs.pptx">ObI9WH4XEeiC-BK3XY5K_A_39c2b7907e1711e888f013749844ce4b_C5W2L08-GloVeWordVecs.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-46.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-46.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-46-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-47.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-47.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-47-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-48.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-48.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-48-4.png" alt/></a></p>
+<h2 id="sentiment-classification">Sentiment Classification<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sentiment-classification" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-a39330d4a9af4f3f871eba4428a2095f" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-a39330d4a9af4f3f871eba4428a2095f">🔥Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/tpp1jx4xeeic-bk3xy5k_a_4d0b3d907e1711e8958149118ea1cff0_c5w2l09-sentientclassification.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/tpp1jx4xeeic-bk3xy5k_a_4d0b3d907e1711e8958149118ea1cff0_c5w2l09-sentientclassification.pptx">TPp1JX4XEeiC-BK3XY5K_A_4d0b3d907e1711e8958149118ea1cff0_C5W2L09-SentientClassification.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-49.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-49.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-49-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-50.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-50.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-50-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-51.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-51.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-51-4.png" alt/></a></p>
+<h2 id="debiasing-word-embeddings">Debiasing Word Embeddings<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#debiasing-word-embeddings" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-a4febb86d78d495a967555b447f95438" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-a4febb86d78d495a967555b447f95438">🛰️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/xhirqn4xeeic-bk3xy5k_a_5e23eb407e1711e896b2cdee12a693cc_c5w2l10-debiasingwordembeddings.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/xhirqn4xeeic-bk3xy5k_a_5e23eb407e1711e896b2cdee12a693cc_c5w2l10-debiasingwordembeddings.pptx">XhIRQn4XEeiC-BK3XY5K_A_5e23eb407e1711e896b2cdee12a693cc_C5W2L10-DebiasingWordEmbeddings.pptx</a></p>
+<ul>
+<li>
+<p>SVU (Singular Value Decomposition)</p>
+<ul>
+<li>similar to the principal component analysis</li>
+</ul>
+</li>
+<li>
+<p>Neurtalization step</p>
+<ul>
+<li>
+<p>Get rid of bias</p>
+</li>
+<li>
+<p>Project doctor, babysitter … onto this axis to reduce their component or to eliminate component in horizontal direction</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Equalization step</p>
+<ul>
+<li>Decide what word to neutralize</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-52.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-52.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-52-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-53.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-53.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-53-4.png" alt/></a></p>
+<h1 id="sequence-models--attention-mechanism">Sequence Models &amp; Attention Mechanism<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sequence-models--attention-mechanism" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="various-sequence-to-sequence-architectures---basic-models">Various Sequence to Sequence Architectures - Basic Models<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#various-sequence-to-sequence-architectures---basic-models" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-026f650377fb412c81d93c6a8084ae2a" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-026f650377fb412c81d93c6a8084ae2a">🧤Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_158851935cfdc922f8e05164a6cc3c64_c5w3l01-basicmodels.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_158851935cfdc922f8e05164a6cc3c64_c5w3l01-basicmodels.pptx">_158851935cfdc922f8e05164a6cc3c64_C5W3L01-BasicModels.pptx</a></p>
+<ul>
+<li>
+<p>Useful model for Speech Recognition</p>
+</li>
+<li>
+<p>Beam surge / Attention model / Models for audio data like speech</p>
+</li>
+<li>
+<p>Encoder network</p>
+<ul>
+<li>
+<p>built as a RNN</p>
+</li>
+<li>
+<p>output a vector that represent the input sentence</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Decoded network</p>
+<ul>
+<li>
+<p>take as input the encoding output by the encoding network</p>
+</li>
+<li>
+<p>trained to output the transition one word at a time</p>
+</li>
+<li>
+<p>take the generator tokens and feed them to the Knicks</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-54.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-54.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-54-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-55.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-55.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-55-4.png" alt/></a></p>
+<ul>
+<li>
+<p>Image captioning</p>
+</li>
+<li>
+<p>Learn and encoding a learner to the features of the input image</p>
+</li>
+<li>
+<p>Get rid of the final softmax unit can give 4K dimensional feature vector → Take this and fedd it to an RNN to generate the caption one word a time</p>
+</li>
+</ul>
+<h2 id="picking-the-most-likely-sentence">Picking the Most Likely Sentence<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#picking-the-most-likely-sentence" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-40212693d8a3400c96486e9b6adcc446" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-40212693d8a3400c96486e9b6adcc446">🛥️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_7321c136d8c0618ec1299639cfe0297f_c5w3l02-pickingmostlikelysent.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_7321c136d8c0618ec1299639cfe0297f_c5w3l02-pickingmostlikelysent.pptx">_7321c136d8c0618ec1299639cfe0297f_C5W3L02-PickingMostLikelySent.pptx</a></p>
+<ul>
+<li>
+<p>Sequence machine translation model</p>
+</li>
+<li>
+<p>Machine translation model is similar to the language model, which estimates the probability of a sentence except that instead of always starting along with the vector of all zeros</p>
+<ul>
+<li>Conditional language model</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-56.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-56.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-56-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-57.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-57.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-57-4.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-58.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-58.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-58-3.png" alt/></a></p>
+<h2 id="beam-search">Beam Search<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#beam-search" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-d6900d974a694421a4680bf2d8f0b47b" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-d6900d974a694421a4680bf2d8f0b47b">🛁Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_69c763f597722403da7f6d5300cca0a6_c5w3l03-beamsearch.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_69c763f597722403da7f6d5300cca0a6_c5w3l03-beamsearch.pptx">_69c763f597722403da7f6d5300cca0a6_C5W3L03-BeamSearch.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-59.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-59.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-59-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Want to output the best and the most likely text transcript → Beam search is most widely used</p>
+</li>
+<li>
+<p>Greedy search will pick only the one most likely words and move on</p>
+</li>
+<li>
+<p>Beam Search consider multiple alternatives</p>
+<ul>
+<li>Parameter called B (beam width)</li>
+</ul>
+</li>
+<li>
+<p>Beam width = 3</p>
+<ul>
+<li>Evaculating probability over different choices</li>
+</ul>
+</li>
+<li>
+<p>For each of these three choices consider what should be the second word</p>
+</li>
+<li>
+<p>multiply them by this second probabilities to get the probability of the first and second words</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-60.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-60.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-60-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-61.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-61.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-61-3.png" alt/></a></p>
+<h2 id="refinements-to-beam-search">Refinements to Beam Search<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#refinements-to-beam-search" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-df0041aa718244a49c1136c3f1998699" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-df0041aa718244a49c1136c3f1998699">⚱️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_f41260a138732eff7b130d5129c115f2_c5w3l04-refinementsbeamsearch.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_f41260a138732eff7b130d5129c115f2_c5w3l04-refinementsbeamsearch.pptx">_f41260a138732eff7b130d5129c115f2_C5W3L04-RefinementsBeamSearch.pptx</a></p>
+<ul>
+<li>
+<p>Length normalization is a small change to the beam search algorithm to get better results</p>
+</li>
+<li>
+<p>Large B</p>
+<ul>
+<li>
+<p>Consider a lot of possibilities</p>
+</li>
+<li>
+<p>Tend to get a better result</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Small B</p>
+<ul>
+<li>
+<p>Get a worse result</p>
+</li>
+<li>
+<p>Get a result faster</p>
+</li>
+<li>
+<p>The memory requirements will be lower</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Around 10 commonly</p>
+</li>
+<li>
+<p>100 would be considered very large for a production system</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-62.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-62.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-62-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-63.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-63.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-63-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Breadth First Search / Depth First Search</p>
+<ul>
+<li>
+<p>With these algorithms, Beam search runs much faster</p>
+</li>
+<li>
+<p>Doen’t gurarantee to find the exact maximum</p>
+</li>
+</ul>
+</li>
+<li>
+<p>The most useful tools is to be able to do error analysis</p>
+</li>
+</ul>
+<h2 id="error-analysis-in-beam-search">Error Analysis in Beam Search<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#error-analysis-in-beam-search" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-08a68e30dee24d4b91b5621e5e7e7705" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-08a68e30dee24d4b91b5621e5e7e7705">🔑Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_c834d997756c84807bbcb43ed00016f2_c5w3l05-erroranalysisbeamsearch.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_c834d997756c84807bbcb43ed00016f2_c5w3l05-erroranalysisbeamsearch.pptx">_c834d997756c84807bbcb43ed00016f2_C5W3L05-ErrorAnalysisBeamSearch.pptx</a></p>
+<ul>
+<li>Beam search is an approximate search algorithm, also called a heuristic search algorithm</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-64.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-64.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-64-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-65.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-65.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-65-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-66.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-66.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-66-3.png" alt/></a></p>
+<ul>
+<li>Use some sort of length normalization instead of evaluating probabilities</li>
+</ul>
+<h2 id="bleu-score">Bleu Score<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bleu-score" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-2088eaa86ec44373aa46801789477b57" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-2088eaa86ec44373aa46801789477b57">🌛Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_ba7b68530f62b1d79ef89d248a5f23ae_c5w3l06-bleuscore.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_ba7b68530f62b1d79ef89d248a5f23ae_c5w3l06-bleuscore.pptx">_ba7b68530f62b1d79ef89d248a5f23ae_C5W3L06-BleuScore.pptx</a></p>
+<ul>
+<li>
+<p>If there are mutliple equally good answers, how do you evaluate a machine translation system? how do you measure accuracy?</p>
+</li>
+<li>
+<p>The way this is done conventionally is through something called the BLEU score</p>
+</li>
+<li>
+<p>BLEU : bilingual evaluation</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-67.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-67.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-67-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-68.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-68.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-68-3.png" alt/></a></p>
+<ul>
+<li>
+<p>BLEU socre</p>
+<ul>
+<li>
+<p>Don’t want to just look at isolated words</p>
+</li>
+<li>
+<p>Want to look at pairs of words as well</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Bigrams : pairs of words appearing next to each other</p>
+<ul>
+<li>unigrams, trigrams</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-69.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-69.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-69-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-70.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-70.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-70-3.png" alt/></a></p>
+<ul>
+<li>
+<p>BLEU score is defined as, e to the this, then exponentiations, and linear operate, exponentiation is strictly monotonically increasing operation</p>
+</li>
+<li>
+<p>Actually adjust this with one more factor called the, BP penalty (brevity penalty)</p>
+</li>
+<li>
+<p>BLEU score is a useful single real number evaluation metric to use whenever you want your algorithm to generate a piece of text</p>
+</li>
+</ul>
+<h2 id="attention-model-intuition">Attention Model Intuition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#attention-model-intuition" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-79d55d6c65224340b5c7d62ae6215943" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-79d55d6c65224340b5c7d62ae6215943">🕰️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_fb10a8b44221d438814424f2e2cee3cc_c5w3l07-attentionmodelintuition.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_fb10a8b44221d438814424f2e2cee3cc_c5w3l07-attentionmodelintuition.pptx">_fb10a8b44221d438814424f2e2cee3cc_C5W3L07-AttentionModelIntuition.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-71.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-71.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-71-3.png" alt/></a></p>
+<ul>
+<li>
+<p>BLEU score comes down for very long sentences longer than 30 or 40</p>
+<ul>
+<li>Because it’ just difficult to get in network to memorize a super long sentence</li>
+</ul>
+</li>
+<li>
+<p>Attention Model translates a bit more like humans might, looking at part of the sentence at a time</p>
+</li>
+<li>
+<p>By working one part of the machine translation</p>
+</li>
+<li>
+<p>S : hidden state in bidirectional R and N</p>
+</li>
+<li>
+<p>How much should be paying attention to the first piece of information</p>
+</li>
+<li>
+<p>What is exactly the context from denoter C that we should be paying attention to</p>
+</li>
+<li>
+<p>New hidden state S and new set of the attention weights</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-72.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-72.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-72-3.png" alt/></a></p>
+<h2 id="attention-model">Attention Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#attention-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-b7459914d69341338aae8a43d7a9aca9" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-b7459914d69341338aae8a43d7a9aca9">🧩Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_eac4f222d9d468a0c29a71a3830a5c60_c5w3l08-attentionmodel.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_eac4f222d9d468a0c29a71a3830a5c60_c5w3l08-attentionmodel.pptx">_eac4f222d9d468a0c29a71a3830a5c60_C5W3L08-AttentionModel.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-73.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-73.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-73-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-74.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-74.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-74-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-75.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-75.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-75-3.png" alt/></a></p>
+<h2 id="speech-recognition">Speech Recognition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#speech-recognition" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-9fb4f7e038ce45b2a05f7d157b582129" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-9fb4f7e038ce45b2a05f7d157b582129">🥾Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_0130c1f3a63fa5bde1e03ac23d8966aa_c5w3l09-speechrecog.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_0130c1f3a63fa5bde1e03ac23d8966aa_c5w3l09-speechrecog.pptx">_0130c1f3a63fa5bde1e03ac23d8966aa_C5W3L09-SpeechRecog.pptx</a></p>
+<ul>
+<li>phonemes representations are no longer necessary</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-76.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-76.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-76-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-77.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-77.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-77-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-78.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-78.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-78-3.png" alt/></a></p>
+<h2 id="trigger-word-detection">Trigger Word Detection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trigger-word-detection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/audio-description-31fc00effb4242f8a42853954be82891" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/audio-description-31fc00effb4242f8a42853954be82891">🖼️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/_87f2c1a680ef183a8c062adc4cb4a745_c5w3l10-triggerworddetection.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/_87f2c1a680ef183a8c062adc4cb4a745_c5w3l10-triggerworddetection.pptx">_87f2c1a680ef183a8c062adc4cb4a745_C5W3L10-TriggerWordDetection.pptx</a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-79.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-79.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-79-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-80.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-80.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-80-3.png" alt/></a></p>
+<h1 id="transformer-network">Transformer Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transformer-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="transformer-network-intuition">Transformer Network Intuition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transformer-network-intuition" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Sequential neural networks such as RNNs fed inputs into the network in order about the order of data automatically fed into model</p>
+</li>
+<li>
+<p>In a Transformer Network, feed data into the model all at once → Reduce training time dramatically</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-81.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-81.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-81-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-82.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-82.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-82-2.png" alt/></a></p>
+<h2 id="self-attention">Self-Attention<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#self-attention" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-83.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-83.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-83-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-84.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-84.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-84-2.png" alt/></a></p>
+<h2 id="multi-head-attention">Multi-Head Attention<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multi-head-attention" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Q(uery)</p>
+<ul>
+<li>
+<p>Interesting questions to ask about word</p>
+</li>
+<li>
+<p>Represent a question like what’s happening there?</p>
+</li>
+</ul>
+</li>
+<li>
+<p>K(ey)</p>
+<ul>
+<li>Qualities of words</li>
+</ul>
+</li>
+<li>
+<p>V(alue)</p>
+<ul>
+<li>Specific representation of words</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-85.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-85.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-85-2.png" alt/></a></p>
+<h2 id="transformer-network-1">Transformer Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transformer-network-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>There is no information about the order of data</p>
+</li>
+<li>
+<p>Specifically encode the positions of inputs and pass them into the network using sine and cosine forumlas</p>
+<ul>
+<li>
+<p>d : dimension of the word embedding and positional encoding</p>
+</li>
+<li>
+<p>pos : position of the word</p>
+</li>
+<li>
+<p>i : each of the different dimensions of the positional encoding</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-86.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-86.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-86-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning4---sequence-models/untitled-87.png" class="internal internal-link" data-slug="coursera-deeplearning4---sequence-models/untitled-87.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-87-2.png" alt/></a></p>
+<h1 id="code">Code<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#code" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../coursera-deeplearning4---sequence-models/building-recurrent-neural-network-431aa760f74f4e0e8f08b78770116662" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/building-recurrent-neural-network-431aa760f74f4e0e8f08b78770116662">🏜️Building Recurrent Neural Network</a></p>
+<h1 id="quiz">Quiz<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quiz" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../coursera-deeplearning4---sequence-models/transformers-2530852e8516474bad9345b1a4d935a9" class="internal internal-link alias" data-slug="coursera-deeplearning4---sequence-models/transformers-2530852e8516474bad9345b1a4d935a9">🛳️Transformers</a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1430" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#coursera-deeplearning4---sequence-models" data-for="coursera-deeplearning4---sequence-models">Coursera DeepLearning4 - Sequence Models</a></li><li class="depth-0"><a href="#recurrent-neural-networks" data-for="recurrent-neural-networks">Recurrent Neural Networks</a></li><li class="depth-1"><a href="#why-sequence-models" data-for="why-sequence-models">Why Sequence Models?</a></li><li class="depth-1"><a href="#notation" data-for="notation">Notation</a></li><li class="depth-1"><a href="#recurrent-neural-network-model" data-for="recurrent-neural-network-model">Recurrent Neural Network Model</a></li><li class="depth-1"><a href="#backpropagation-through-time" data-for="backpropagation-through-time">Backpropagation Through Time</a></li><li class="depth-1"><a href="#different-types-of-rnns" data-for="different-types-of-rnns">Different Types of RNNs</a></li><li class="depth-1"><a href="#language-model-and-sequence-generation" data-for="language-model-and-sequence-generation">Language Model and Sequence Generation</a></li><li class="depth-1"><a href="#sampling-novel-sequences" data-for="sampling-novel-sequences">Sampling Novel Sequences</a></li><li class="depth-1"><a href="#vanishing-gradients-with-rnns" data-for="vanishing-gradients-with-rnns">Vanishing Gradients with RNNs</a></li><li class="depth-1"><a href="#gated-recurrent-unit-gru" data-for="gated-recurrent-unit-gru">Gated Recurrent Unit (GRU)</a></li><li class="depth-1"><a href="#logn-short-term-memory-lstm" data-for="logn-short-term-memory-lstm">Logn Short Term Memory (LSTM)</a></li><li class="depth-1"><a href="#bidirectional-rnn" data-for="bidirectional-rnn">Bidirectional RNN</a></li><li class="depth-1"><a href="#deep-rnns" data-for="deep-rnns">Deep RNNs</a></li><li class="depth-0"><a href="#neural-language-processing--word-embeddings" data-for="neural-language-processing--word-embeddings">Neural Language Processing &amp; Word Embeddings</a></li><li class="depth-1"><a href="#concept" data-for="concept">Concept</a></li><li class="depth-1"><a href="#word-representation" data-for="word-representation">Word Representation</a></li><li class="depth-1"><a href="#using-word-embeddings" data-for="using-word-embeddings">Using Word Embeddings</a></li><li class="depth-1"><a href="#properties-of-word-embeddings" data-for="properties-of-word-embeddings">Properties of Word Embeddings</a></li><li class="depth-1"><a href="#embedding-matrix" data-for="embedding-matrix">Embedding Matrix</a></li><li class="depth-1"><a href="#learning-word-embeddings" data-for="learning-word-embeddings">Learning Word Embeddings</a></li><li class="depth-1"><a href="#word2vec" data-for="word2vec">Word2Vec</a></li><li class="depth-1"><a href="#negative-sampling" data-for="negative-sampling">Negative Sampling</a></li><li class="depth-1"><a href="#glove-word-vectors" data-for="glove-word-vectors">GloVe Word Vectors</a></li><li class="depth-1"><a href="#sentiment-classification" data-for="sentiment-classification">Sentiment Classification</a></li><li class="depth-1"><a href="#debiasing-word-embeddings" data-for="debiasing-word-embeddings">Debiasing Word Embeddings</a></li><li class="depth-0"><a href="#sequence-models--attention-mechanism" data-for="sequence-models--attention-mechanism">Sequence Models &amp; Attention Mechanism</a></li><li class="depth-1"><a href="#various-sequence-to-sequence-architectures---basic-models" data-for="various-sequence-to-sequence-architectures---basic-models">Various Sequence to Sequence Architectures - Basic Models</a></li><li class="depth-1"><a href="#picking-the-most-likely-sentence" data-for="picking-the-most-likely-sentence">Picking the Most Likely Sentence</a></li><li class="depth-1"><a href="#beam-search" data-for="beam-search">Beam Search</a></li><li class="depth-1"><a href="#refinements-to-beam-search" data-for="refinements-to-beam-search">Refinements to Beam Search</a></li><li class="depth-1"><a href="#error-analysis-in-beam-search" data-for="error-analysis-in-beam-search">Error Analysis in Beam Search</a></li><li class="depth-1"><a href="#bleu-score" data-for="bleu-score">Bleu Score</a></li><li class="depth-1"><a href="#attention-model-intuition" data-for="attention-model-intuition">Attention Model Intuition</a></li><li class="depth-1"><a href="#attention-model" data-for="attention-model">Attention Model</a></li><li class="depth-1"><a href="#speech-recognition" data-for="speech-recognition">Speech Recognition</a></li><li class="depth-1"><a href="#trigger-word-detection" data-for="trigger-word-detection">Trigger Word Detection</a></li><li class="depth-0"><a href="#transformer-network" data-for="transformer-network">Transformer Network</a></li><li class="depth-1"><a href="#transformer-network-intuition" data-for="transformer-network-intuition">Transformer Network Intuition</a></li><li class="depth-1"><a href="#self-attention" data-for="self-attention">Self-Attention</a></li><li class="depth-1"><a href="#multi-head-attention" data-for="multi-head-attention">Multi-Head Attention</a></li><li class="depth-1"><a href="#transformer-network-1" data-for="transformer-network-1">Transformer Network</a></li><li class="depth-0"><a href="#code" data-for="code">Code</a></li><li class="depth-0"><a href="#quiz" data-for="quiz">Quiz</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

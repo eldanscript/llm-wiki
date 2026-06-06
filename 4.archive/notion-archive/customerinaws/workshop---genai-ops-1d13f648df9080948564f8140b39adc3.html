@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Workshop - GenAI Ops 1d13f648df9080948564f8140b39adc3 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Workshop - GenAI Ops 1d13f648df9080948564f8140b39adc3 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Workshop - GenAI Ops 1d13f648df9080948564f8140b39adc3 | LLM Wiki"/><meta name="twitter:description" content="💄 Workshop - GenAI Ops Confluence 설정 공통 confluence URL : jammylab.atlassian.net wiki_url : jammylab.atlassian.net/wiki 형권님 (confluence1) username : rainbell72+con1@gmail.com password, wiki_api_key : ATATT3xFfGF0lU4bV08cq3_tplAMhQFBi-E9ozCWSUDaLT2jo2OSPs79yIXprPuFHitLA22ErbrubJJNuz6WC9OdNmFhudtOn8O..."/><meta property="og:description" content="💄 Workshop - GenAI Ops Confluence 설정 공통 confluence URL : jammylab.atlassian.net wiki_url : jammylab.atlassian.net/wiki 형권님 (confluence1) username : rainbell72+con1@gmail.com password, wiki_api_key : ATATT3xFfGF0lU4bV08cq3_tplAMhQFBi-E9ozCWSUDaLT2jo2OSPs79yIXprPuFHitLA22ErbrubJJNuz6WC9OdNmFhudtOn8O..."/><meta property="og:image:alt" content="💄 Workshop - GenAI Ops Confluence 설정 공통 confluence URL : jammylab.atlassian.net wiki_url : jammylab.atlassian.net/wiki 형권님 (confluence1) username : rainbell72+con1@gmail.com password, wiki_api_key : ATATT3xFfGF0lU4bV08cq3_tplAMhQFBi-E9ozCWSUDaLT2jo2OSPs79yIXprPuFHitLA22ErbrubJJNuz6WC9OdNmFhudtOn8O..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/workshop---genai-ops-1d13f648df9080948564f8140b39adc3"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/workshop---genai-ops-1d13f648df9080948564f8140b39adc3"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="💄 Workshop - GenAI Ops Confluence 설정 공통 confluence URL : jammylab.atlassian.net wiki_url : jammylab.atlassian.net/wiki 형권님 (confluence1) username : rainbell72+con1@gmail.com password, wiki_api_key : ATATT3xFfGF0lU4bV08cq3_tplAMhQFBi-E9ozCWSUDaLT2jo2OSPs79yIXprPuFHitLA22ErbrubJJNuz6WC9OdNmFhudtOn8O..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/customerinaws/workshop---genai-ops-1d13f648df9080948564f8140b39adc3" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1688" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1688" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/customerinaws/">CustomerInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Workshop - GenAI Ops 1d13f648df9080948564f8140b39adc3</a></div></nav><h1 class="article-title">Workshop - GenAI Ops 1d13f648df9080948564f8140b39adc3</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:14.999Z">2026년 6월 06일</time><span>13 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/attachments/met_william_morris_1878-9.jpg" alt/></p>
+<p>💄</p>
+<h1 id="workshop---genai-ops">Workshop - GenAI Ops<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#workshop---genai-ops" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="confluence-설정">Confluence 설정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#confluence-설정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>공통</p>
+<ul>
+<li>
+<p>confluence URL : <a href="https://jammylab.atlassian.net/" class="external external-link">https://jammylab.atlassian.net<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>wiki_url : <a href="https://jammylab.atlassian.net/wiki" class="external external-link">https://jammylab.atlassian.net/wiki<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>형권님 (confluence1)
+username : rainbell72+con1@gmail.com
+password, wiki_api_key : ATATT3xFfGF0lU4bV08cq3_tplAMhQFBi-E9ozCWSUDaLT2jo2OSPs79yIXprPuFHitLA22ErbrubJJNuz6WC9OdNmFhudtOn8O19rsz3B-x7tqXCj6nDktLZFphysAoW14ixMUcieuqJulnMOg2owu7q99Xt5XGbo-r8ukDtlc5DDcoiHUw2Gs=5EDE3048
+wiki_user : rainbell72+con1@gmail.com
+</code></pre>
+<pre><code>건호님 (confluence2)
+username : rainbell72+con2@gmail.com
+password, wiki_api_key : ATATT3xFfGF0L49ZXO9iYEww53C-Fi5oKxzpu-NK-xx4JlPTehshWu5HBCFb0ojZmA7MhjmX3fpCubhUz5GdR0SwDD9rMMcIlEiK1YB-Ta6TFpQB7ch6YzZ0oDTaPdP1V5W8qaR7WlaXQntZi0pl720FE9WwhU1P9GWb63s8t01FSYxQVXwG5f8=DDA202BB
+wiki_user : rainbell72+con2@gmail.com
+</code></pre>
+<pre><code>성민님 (confluence3)
+username : rainbell72+con3@gmail.com
+password, wiki_api_key : ATATT3xFfGF0w4v5OKwj96V13tGvRV7QKM2KEo2pHkG5O3ouaFs1lk4AautxY1HlRpgeanZW_whu9KhuUsKlsxe9lJJXPIhEXxG5H1oNvTXL2wDMvT0TPpJIzsWcun7jHYI_EXHb3uzll3NUpT6C5mDr-gZo5nFoxcfkMQVyAT7PfBI6DGtf1ow=D3D5EB4D
+wiki_user : rainbell72+con3@gmail.com
+</code></pre>
+<pre><code>도영님 (confluence4)
+username : rainbell72+con4@gmail.com
+password, wiki_api_key : ATATT3xFfGF0vhxMhm4K8FC2PXpiSlY7x_b_7rMREWg8f2q90YI3v-HFVS6hKfNm-89W87XTfsD_A24A7sNllp0QJTDheepzMPCu-YMnlO7fOSHyMYY62Lvq0YyoifsPFR3pkVSozF6I028WxmJWrkQj1sUIEgzUG-fI5qKEwNATVI0BsqKTcuw=AE5235A0
+wiki_user : rainbell72+con4@gmail.com
+</code></pre>
+<pre><code>성도님 (confluence5)
+username : rainbell72+con5@gmail.com
+password, wiki_api_key : ATATT3xFfGF0kYoGVuyp9mcpA_A1m9pQwnSFwrAXPPkZy_7NfdoE3v1RjQrUhH5Fcok-vW2VOd_EwxTu3M0gnSRIHfu6vDjfsvpcZYVaptM-QqAkTOSdeIwLZRlZX-v3g83WHqvs3ODyHMuslUtXoB7fkqHWKHHVlbAHhwZ0ejPYsetzmXX7zc4=D38F8DD9
+wiki_user : rainbell72+con5@gmail.com
+</code></pre>
+<h3 id="lambda-code-수정">Lambda Code 수정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lambda-code-수정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>chatops-gw-to-slack-function</p>
+<ul>
+<li>parent_id : 66184 → 98310</li>
+</ul>
+<pre><code>def create_confluence_page(content):
+    confluence = Confluence(url=WIKI_URL, username=WIKI_USER, password=WIKI_API_KEY)
+    response = confluence.create_page(
+        space=&quot;issuehistory&quot;,
+        title=f&quot;slack reporting - {datetime.now().strftime('%Y.%m.%d %H:%M')}&quot;,
+        body=&quot;(Amazon Bedrock에 의해 요약 작성된 내용입니다.)&lt;br>&lt;br>&quot; + content.replace(&quot;\n&quot;, &quot;&lt;br>&quot;),
+        parent_id=&quot;98310&quot;
+    )
+    return response.get(&quot;id&quot;)
+</code></pre>
+</li>
+</ul>
+<h3 id="my-test-account">My Test Account<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#my-test-account" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>username : <a href="mailto:rainny@amazon.com" class="external external-link">rainny@amazon.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>password : ATATT3xFfGF0ZWXvk7v88Kjt-7JtNnIwnSnJkBjEj0OqFm6VEDPETyB9Q_rLJ-WMVmI8BiksnTIsC6MufDik25Fia95Kgdp5YrPLByuL4fo-Ta9rrQ24laFnD8McRJNT9nSWmCA-3SVUk8Vh8Xq3GHpJT1QFVxxIOM1s-Ax9htxuSwaQHa5v_kc=676C9A1D</p>
+</li>
+<li>
+<p>Slack Workspace : aws-chatops-workshop-rainny</p>
+<ul>
+<li><a href="https://awschatopswor-ppb6175.slack.com/ssb/redirect?_gl=1*13wtilq*_gcl_aw*R0NMLjE3NDQ2NDE2ODEuRUFJYUlRb2JDaE1JOTRpcGhOX1lpd01WSWVvV0JSMnhVeDViRUFBWUFTQUFFZ0xiSnZEX0J3RQ" class="external external-link">https://awschatopswor-ppb6175.slack.com/ssb/redirect?_gl=1<em>13wtilq</em>_gcl_aw*R0NMLjE3NDQ2NDE2ODEuRUFJYUlRb2JDaE1JOTRpcGhOX1lpd01WSWVvV0JSMnhVeDViRUFBWUFTQUFFZ0xiSnZEX0J3RQ<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>..__gcl_au_NzU1NzYxOTc4LjE3Mzc0NDA1MzkuMjA2NjkzNzc2OS4xNzQ0NjQxNjU0LjE3NDQ2NDE2NTQ.</li>
+</ul>
+</li>
+<li>
+<p>Bedrock Agent ARN : arn:aws:bedrock:us-west-2:781930599463:agent/DSKDDMWWDX</p>
+</li>
+<li>
+<p>Bedrock Agent Alias : 207B96IUQK</p>
+</li>
+<li>
+<p>Bedrock Agent ID : HPHNK4IGQV</p>
+</li>
+</ul>
+<pre><code>connector add JKF arn:aws:bedrock:us-west-2:670822133531:agent/HPHNK4IGQV QEKJOASYUS
+</code></pre>
+<ul>
+<li>OAuth Token</li>
+</ul>
+<pre><code>xoxb-8747973536420-8748662027586-1TEyihGRYjXB1ciZhJxru5wJ
+</code></pre>
+<h1 id="tech-blog">Tech Blog<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tech-blog" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="https://aws.amazon.com/ko/blogs/tech/generative-ai-incident-response-knowledge-base/" class="external external-link">https://aws.amazon.com/ko/blogs/tech/generative-ai-incident-response-knowledge-base/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="hands-on-preparation">Hands-On Preparation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hands-on-preparation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="실습-contents">실습 Contents<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#실습-contents" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://catalog.us-east-1.prod.workshops.aws/workshops/5e11e689-86e4-4597-a3cb-d469a78378fb/en-US" class="external external-link">https://catalog.us-east-1.prod.workshops.aws/workshops/5e11e689-86e4-4597-a3cb-d469a78378fb/en-US<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> - Intelligent ChatOps using Amazon Bedrock</p>
+<h2 id="workshop-studio-event">Workshop Studio Event<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#workshop-studio-event" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://studio.us-east-1.prod.workshops.aws/workshops/public/5e11e689-86e4-4597-a3cb-d469a78378fb" class="external external-link">https://studio.us-east-1.prod.workshops.aws/workshops/public/5e11e689-86e4-4597-a3cb-d469a78378fb<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="pre-test-access-url">Pre-Test Access URL<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pre-test-access-url" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://catalog.us-east-1.prod.workshops.aws/join?access-code=75ff-039eab-ad" class="external external-link">https://catalog.us-east-1.prod.workshops.aws/join?access-code=75ff-039eab-ad<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="hands-on-test-guide">Hands-On Test Guide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hands-on-test-guide" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="region">Region<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#region" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>실습 : us-west-2</p>
+</li>
+<li>
+<p>==<span class="text-highlight">**실제 구축 시 ap-northeast-2 region 적용하게 되면 제한점은?**</span>==</p>
+</li>
+</ul>
+<h2 id="data-source---confluence">Data Source - Confluence<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-source---confluence" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="limitation">Limitation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#limitation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>URL Type : <em><a href="https://example.atlassian.net" class="external external-link">https://example.atlassian.net<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></em> 형식 → Atlassian Cloud version 사용</p>
+</li>
+<li>
+<p>Multi-modal 미지원 :</p>
+</li>
+</ul>
+<h3 id="test-workspace">Test Workspace<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#test-workspace" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>URL : jammylab.atlassian.net</p>
+</li>
+<li>
+<p>Invitation Link : <a href="https://id.atlassian.com/invite/p/confluence?id=FswTtj05QYquqlvKvk0drg" class="external external-link">https://id.atlassian.com/invite/p/confluence?id=FswTtj05QYquqlvKvk0drg<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Space (issuehistory) : <a href="https://jammylab.atlassian.net/wiki/x/aQEB" class="external external-link">https://jammylab.atlassian.net/wiki/x/aQEB<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<h3 id="api-token-for-attendee">API Token for Attendee<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#api-token-for-attendee" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Expiration Date : 4/30</p>
+</li>
+<li>
+<p>chatops-1 : ATATT3xFfGF0WlZjpJ4LzaRHvnNr5Rl3-FZZxxO8N8gR0muLOFZBKjcFT7SroSYYRTB0vTbB1BKAehd-cWH5ex560IpCUwpQFqJQ132ZSvmjtKKm3X1p5z-62B0Cj2QKeyvp7N1_OkOiDaiR6nAvbtSTmKTX64unpFreWS2PO51RJOrGmwF4knE=57EC8E53</p>
+</li>
+<li>
+<p>chatops-2 : ATATT3xFfGF06-we8IJ4ITnRJBsRmSF2-o4CBuMz1B0Zp-G5697_8VUgHLExJ3WNfB75PUB7Xy55Phn2RwucTB50Tyacq8ir7Ja6MEW72_9VfHJcDCcuJiKdCTLER9vsG96SUHImZFnK8hyC3iUC3OSN8hNqKEZdUng_QOmYOgVuIE67wDDWEIY=1F172AF0</p>
+</li>
+<li>
+<p>chatops-3 : ATATT3xFfGF0OEeadQjn1eklCxMTLibelt5Aiu_STog6Hjfl7TnWuoE6ATmiJGrtON0HmmS6kW0K7FjhBa8iD6BgGnT-BZJTF4HCvgd6WCg2HciWYURcCykOpUHtcFxO58IWWmRGOYUNUfZ6MQT3rnUqvDmrxG1vcwzBxsvVPwXJBtYHnAk_Lpk=271BA58D</p>
+</li>
+<li>
+<p>chatops-4 : ATATT3xFfGF0lETpQjq6QUVL1My40RnZUlPbgbSQhdxw67cUlcVRJDkd7Mi-b6HRuoPfyWvXaaAVivnQKnEZLoGz0jfdNHBtFjhqj9XGdI-TsVGeM7oq7ICyG7ifV_apBHmrZA2qRiX9AdNO6xKf9Y5Wc6BUJwhYDuAaQig5ULNw7cHb5sS4yRY=F79AF9A3</p>
+</li>
+<li>
+<p>chatops-5 : ATATT3xFfGF09Ekto8HfEjkT_1QN9-ZrdDkXDxPutn7Cg99zpUrQmNPdH6y2qPNVfFTC9jmPRtxOE4hK_jaRLNJygJxiZxauWWmsTbRdVpesF4EwLw5EdHf05Hptq5tSEM1AMyg2BqcbEQubWXbZrFdaxh67FfAAo1wV1NWarzmAC0gxQ347wpo=CA9450B6</p>
+</li>
+<li>
+<p>chatops-6 : ATATT3xFfGF0yuFbUnqcxo91M5NLv7zzI8iwbtu813qB5bCrhZgx8O-firOde6A6UD2uVhpspK1KGfs5QUZR-cgqctY6pGQgWAJGIWoWmpTIwdOMHNiyIZiziJxxTm_4BAwPzSYV6I1RB_MPOS_savlCWkrg1jNL5wydlM2qap8WiiKo0sd2U3k=A488E1A5</p>
+</li>
+<li>
+<p>chatops-7 : ATATT3xFfGF0TgLF4LdLGa8e9azBFHRJ9CKJ01pL4PMLQngzaw8UO6v-SUUEycCif2AznismqsDV1ot8QIHqM_WiNPtnGV-pMWE9SoHree3yZhXJz9fZCJme4upAEEN2t9PHG5fxUYs7rcralOCyYcsjz_uDwovPVQpXFyxKI2QlUaB7GQQBb2w=B2CC3490</p>
+</li>
+<li>
+<p>chatops-8 : ATATT3xFfGF0bcW3BCYW34FzeK8Ao7thK_WJ3fMNNXUu8d0fkKbUVFFpkYGzUPM-iNrliUrkTUSSDypmzdbnpUO2pwi8fnCMxM3kEfO9YjKYbLvSfrEJ-TcdFmqzTzu7NSoW1EnetKUUjviBuFVhQZWd_c7C4n5wI6mIKsV9q3peLqF4qr0VNMQ=70CD6073</p>
+</li>
+<li>
+<p>chatops-9 : ATATT3xFfGF0QkA_wgACv4_2q8QtoVjBU8quYCv-1V217ptfMQhZBwPwiOyY4oKj-VPAvzLc4ffqpV_FqVIJUN88XdfYiyvzZeOdefJARMBVltQXlD2AZQItSP6wVlcCD-xDAfH5rqZnO6_UDgaek_SdAymemlMYIBpWpnJeAF8wnD14FNruj38=772BE293</p>
+</li>
+<li>
+<p>chatops-10 : ATATT3xFfGF0S2hz-OQ4FodaW9fLPokqA_9pXHIpXyq7d9HyjicbV0oVVAQpdHmrkppkkm-Avfx6G2-ikKos8SfiCVrUrl_4aVFigjSsf_54bJhZXNfOnA1yjTtK_WsY3zduaeKqHU83Kz2ea_R9BD7i1zW4Q-qg5XgVYLLvM3tim68NmZVr_t8=DF47AC32</p>
+</li>
+</ul>
+<h3 id="secret-key-등록">Secret Key 등록<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#secret-key-등록" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>username : confluence 사용자 e-mail</p>
+</li>
+<li>
+<p>password : confluence 등록 시 반드시 password 설정 하도록 (==<span class="text-highlight">**federation 연결 등록 시 설정 방법은? → API Token을 제공)**</span>==</p>
+</li>
+<li>
+<p><em><span class="text-highlight">**username과 password는 사전 설정하여 제공**</span></em></p>
+</li>
+<li>
+<p>wiki_api_key : 사용자 별로 할당한 API Token key</p>
+</li>
+<li>
+<p>wiki_url (Space URL) : <a href="https://jammylab.atlassian.net/wiki" class="external external-link">https://jammylab.atlassian.net/wiki<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>wiki_user : confluence 사용자 e-mail</p>
+</li>
+</ul>
+<h3 id="실습용-account를-제공">실습용 Account를 제공<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#실습용-account를-제공" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>공통 password : Hybeconfluence</p>
+</li>
+<li>
+<p>user1</p>
+</li>
+<li>
+<p>user2</p>
+</li>
+<li>
+<p>user3</p>
+</li>
+<li>
+<p>user4</p>
+</li>
+<li>
+<p>user5</p>
+</li>
+</ul>
+<h2 id="bedrock-agent">Bedrock Agent<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bedrock-agent" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="agent-iam-role">Agent IAM Role<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#agent-iam-role" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>AmazonBedrockExecutionRoleForAgents_PUE4YIKPNFQ</strong></li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    &quot;Version&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;2012-10-17&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    &quot;Statement&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            &quot;Sid&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;AmazonBedrockAgentBedrockFoundationModelPolicyProd&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            &quot;Effect&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;Allow&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            &quot;Action&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                &quot;bedrock:InvokeModel&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                &quot;bedrock:InvokeModelWithResponseStream&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            ],</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            &quot;Resource&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                &quot;arn:aws:bedrock:us-west-2::foundation-model/anthropic.claude-3-5-sonnet-20240620-v1:0&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<h3 id="add-knowledge-base">Add knowledge base<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#add-knowledge-base" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Instruction은 영문이어야 하는가? → Agent User Input Instruction은 한글이었음</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">Refer to S3 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&amp;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Confluence docs </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Bedrock </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> AWS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> cloud questions </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">from</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> IT</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> ops team via Slack. Use Claude Sonnet </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">3.5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> v1 on Amazon Bedrock to accurately summarize </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">and</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> answer questions.</span></span></code></pre></figure>
+</li>
+</ul>
+<h3 id="agent-alias">Agent Alias<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#agent-alias" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>생성 이유는?</li>
+</ul>
+<h2 id="slack-integration---amazon-q-developer-in-chat-application">Slack Integration - Amazon Q developer in chat application<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#slack-integration---amazon-q-developer-in-chat-application" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="channel-config">Channel config<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#channel-config" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>aws-chatops-workshop-role 존재 하지 않음 → chatops-ChatbotAdminRole</li>
+</ul>
+<h3 id="slack에-connector-추가">Slack에 Connector 추가<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#slack에-connector-추가" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">connector add rainnyQ arn:aws:bedrock:us</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">west</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">604797520415</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:agent</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">/</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR22N8PEDJ</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> UTT0IWSLFY</span></span></code></pre></figure>
+<h3 id="oauth-tokens">OAuth Tokens<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#oauth-tokens" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>xoxb-8747973536420-8748662027586-1TEyihGRYjXB1ciZhJxru5wJ</li>
+</ul>
+<h3 id="slack-secrets">Slack Secrets<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#slack-secrets" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>wiki_api_key :</li>
+</ul>
+<h2 id="confluence-report-등록">Confluence Report 등록<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#confluence-report-등록" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>권한 설정</p>
+<p><a href="../../../workshop---genai-ops/image.png" class="internal internal-link" data-slug="workshop---genai-ops/image.png"><img src="../../../4.archive/notion-archive/attachments/image-72.png" alt/></a></p>
+</li>
+<li>
+<p>Parent ID 수정</p>
+</li>
+</ul>
+<h3 id="lambda-function에-등록">Lambda Function에 등록<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lambda-function에-등록" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>==<span class="text-highlight">**chatops-stack-gw-to-slack-function → Not Found &amp; No Code installed**</span>==</p>
+</li>
+<li>
+<p>페이지 ID : 98310</p>
+</li>
+</ul>
+<h1 id="confluence-report">Confluence Report<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#confluence-report" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>slack reporting - 2025.01.05 09:15</li>
+</ol>
+<pre><code>1. 문제 원인:
+- EKS 클러스터(v1.28)에서 HPA(Horizontal Pod Autoscaler) 동작 이상 발생
+- 증상:
+  * Pod CPU 사용률이 임계치(80%)를 초과해도 스케일링 미발생
+  * metrics-server Pod이 CrashLoopBackOff 상태 반복
+  * kubectl top nodes/pods 명령 실패
+- 영향:
+  * 프로덕션 워크로드 성능 저하
+  * 일부 서비스 응답 시간 증가 (p95 latency 2초 → 5초)
+
+2. 해결 상태:
+a) 초기 조치:
+- metrics-server Pod 로그 분석
+  * CA 인증서 관련 오류 확인
+  * API 서버 연결 타임아웃 발견
+- kubectl describe 통한 상세 진단
+  * 리소스 제약 확인
+  * 네트워크 정책 점검
+
+b) 해결 과정:
+- metrics-server 재설치:
+  ```bash
+  kubectl delete -f &lt;https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml>
+  kubectl apply -f &lt;https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/high-availability.yaml>
+</code></pre>
+<ul>
+<li>
+<p>kubelet 인증서 갱신:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">aws</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> eks</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> update-kubeconfig</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> --name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> cluster-name</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> --region</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ap-northeast-2</span></span></code></pre></figure>
+</li>
+<li>
+<p>HPA 설정 최적화:</p>
+<ul>
+<li>
+<p>scaleUp/scaleDown 지연 시간 조정</p>
+</li>
+<li>
+<p>메트릭 수집 간격 최적화</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>c) 검증:</p>
+<ul>
+<li>
+<p>메트릭 수집 정상화 확인</p>
+</li>
+<li>
+<p>HPA 동작 테스트 완료</p>
+</li>
+<li>
+<p>부하테스트 통한 안정성 검증</p>
+</li>
+</ul>
+<ol>
+<li>참여자 및 역할:</li>
+</ol>
+<ul>
+<li>
+<p>U082F9LLV8D (김철수):</p>
+<ul>
+<li>
+<p>주임무: 문제 초기 발견 및 에스컬레이션</p>
+</li>
+<li>
+<p>메트릭 서버 로그 분석 담당</p>
+</li>
+</ul>
+</li>
+<li>
+<p>U0823KGNR9V (이영희):</p>
+<ul>
+<li>
+<p>주임무: EKS 클러스터 구성 검토</p>
+</li>
+<li>
+<p>AWS 지원 티켓 관리</p>
+</li>
+</ul>
+</li>
+<li>
+<p>U046PSLF1PD (박지민):</p>
+<ul>
+<li>
+<p>주임무: HPA 설정 최적화</p>
+</li>
+<li>
+<p>성능 테스트 수행</p>
+</li>
+</ul>
+</li>
+<li>
+<p>AWS Premium Support:</p>
+<ul>
+<li>
+<p>케이스 ID: 9876543</p>
+</li>
+<li>
+<p>EKS 클러스터 구성 검토</p>
+</li>
+<li>
+<p>모범 사례 가이드 제공</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>추가 정보:<br/>
+a) 관련 문서:</li>
+</ol>
+<ul>
+<li>
+<p>EKS 모범 사례: <a href="https://docs.aws.amazon.com/eks/latest/userguide/best-practices.html" class="external external-link">https://docs.aws.amazon.com/eks/latest/userguide/best-practices.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>metrics-server 문제 해결: <a href="https://github.com/kubernetes-sigs/metrics-server/blob/master/KNOWN_ISSUES.md" class="external external-link">https://github.com/kubernetes-sigs/metrics-server/blob/master/KNOWN_ISSUES.md<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>AWS re:Post 참조: [링크]</p>
+</li>
+</ul>
+<p>b) 예방 대책:</p>
+<ul>
+<li>
+<p>EKS 클러스터 모니터링 강화</p>
+<ul>
+<li>
+<p>CloudWatch Container Insights 활성화</p>
+</li>
+<li>
+<p>Prometheus + Grafana 대시보드 구축</p>
+</li>
+</ul>
+</li>
+<li>
+<p>자동화된 인증서 갱신 프로세스 구현</p>
+</li>
+<li>
+<p>정기적인 클러스터 헬스 체크 스케줄 수립</p>
+</li>
+</ul>
+<p>c) 향후 조치사항:</p>
+<ul>
+<li>
+<p>EKS 클러스터 버전 업그레이드 계획 수립</p>
+</li>
+<li>
+<p>장애 조치 프로세스 문서화</p>
+</li>
+<li>
+<p>운영팀 교육 일정 수립</p>
+</li>
+</ul>
+<pre><code>
+2. slack reporting - 2025.01.06 14:30
+</code></pre>
+<ol>
+<li>문제 원인:</li>
+</ol>
+<ul>
+<li>
+<p>Lambda 함수의 VPC 내 리소스 접근 지연 및 타임아웃</p>
+</li>
+<li>
+<p>증상:</p>
+<ul>
+<li>
+<p>Lambda 함수 실행 시 초기 지연시간 증가 (> 10초)</p>
+</li>
+<li>
+<p>VPC 내 RDS 연결 간헐적 실패</p>
+</li>
+<li>
+<p>ENI 생성/삭제 병목 현상</p>
+</li>
+</ul>
+</li>
+<li>
+<p>영향:</p>
+<ul>
+<li>
+<p>API 응답시간 증가</p>
+</li>
+<li>
+<p>트랜잭션 처리 실패율 증가 (0.1% → 2%)</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>해결 상태:<br/>
+a) 초기 분석:</li>
+</ol>
+<ul>
+<li>
+<p>CloudWatch Logs 검토</p>
+<ul>
+<li>
+<p>VPC 리소스 초기화 지연 확인</p>
+</li>
+<li>
+<p>네트워크 구성 검증</p>
+</li>
+</ul>
+</li>
+<li>
+<p>X-Ray 트레이스 분석</p>
+<ul>
+<li>
+<p>병목 구간 식별</p>
+</li>
+<li>
+<p>의존성 매핑</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>b) 해결 과정:</p>
+<ul>
+<li>
+<p>Lambda 함수 최적화:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 커넥션 풀링 구현</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> pymysql.cursors</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">connection_pool </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> {}</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> get_connection</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">():</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    if</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'db'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> not</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> connection_pool:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        connection_pool[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'db'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> pymysql.connect(</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">            host</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'your-rds-endpoint'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">            user</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'your-username'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">            password</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'your-password'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">            db</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'your-database'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">            cursorclass</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">pymysql.cursors.DictCursor</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">        )</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> connection_pool[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'db'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span></code></pre></figure>
+</li>
+<li>
+<p>VPC 설정 개선:</p>
+<ul>
+<li>
+<p>NAT Gateway 이중화</p>
+</li>
+<li>
+<p>서브넷 CIDR 최적화</p>
+</li>
+</ul>
+</li>
+<li>
+<p>예약된 동시성 설정:</p>
+<ul>
+<li>주요 함수에 대해 10개 설정</li>
+</ul>
+</li>
+</ul>
+<p>c) 성능 검증:</p>
+<ul>
+<li>
+<p>부하 테스트 수행</p>
+</li>
+<li>
+<p>지연시간 측정</p>
+</li>
+<li>
+<p>오류율 모니터링</p>
+</li>
+</ul>
+<pre><code>1. 문제 원인:
+- EKS Cluster Auto Scaling 환경에서 ALB Target Group 자동 등록 실패
+- 증상:
+  * Cluster Autoscaler에 의해 생성된 신규 노드가 ALB Target Group에 자동 등록되지 않음
+  * 기존 노드 제거 시 Target Group에서 정상적으로 제거되지 않음
+  * Service/Ingress 리소스는 정상이나 트래픽 분산 비정상
+- 영향:
+  * 워크로드 불균형 발생
+  * 일부 노드에 트래픽 과다 집중
+  * 서비스 응답 시간 증가
+
+2. 해결 상태:
+a) 초기 조사:
+- AWS Load Balancer Controller 로그 분석:
+  * Controller 버전 확인 (v2.6.0)
+  * 이벤트 로그 검토
+- EKS 클러스터 구성 검토:
+  * 노드 그룹 설정
+  * IAM 역할 및 정책 확인
+
+b) 원인 파악:
+- AWS Load Balancer Controller의 타겟 그룹 동기화 문제
+- 노드 레이블 및 보안 그룹 설정 미흡
+- Service 어노테이션 설정 부재
+
+c) 해결 과정:
+1) Service 매니페스트 수정:
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-service
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-type: external
+    service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: instance
+    service.beta.kubernetes.io/aws-load-balancer-target-group-attributes: preserve_client_ip.enabled=true
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  type: LoadBalancer
+  selector:
+    app: sample-app
+</code></pre>
+<ol>
+<li>AWS Load Balancer Controller 설정 업데이트:</li>
+</ol>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">apiVersion</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">v1</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">kind</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">ConfigMap</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">metadata</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">aws-load-balancer-controller-config</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  namespace</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">kube-system</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  targetGroupBindingMaxConcurrency</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;10&quot;</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  targetGroupBindingMaxExponentialBackoffDelay</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;16&quot;</span></span></code></pre></figure>
+<ol>
+<li>노드 그룹 태그 설정:</li>
+</ol>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">aws</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> eks</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> tag-resource</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \\</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --resource-arn</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> arn:aws:eks:region:account:nodegroup/cluster/nodegroup</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string"> \\</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">  --tags</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Key=kubernetes.io/cluster/cluster-name,Value=owned</span></span></code></pre></figure>
+<p>d) 검증:</p>
+<ul>
+<li>
+<p>신규 노드 생성 테스트 수행</p>
+</li>
+<li>
+<p>Target Group 등록 자동화 확인</p>
+</li>
+<li>
+<p>트래픽 분산 모니터링</p>
+</li>
+</ul>
+<ol>
+<li>참여자 및 역할:</li>
+</ol>
+<ul>
+<li>
+<p>U082F9LLV8D (김인프라):</p>
+<ul>
+<li>
+<p>주임무: 초기 문제 분석 및 로그 검토</p>
+</li>
+<li>
+<p>AWS LB Controller 구성 검토</p>
+</li>
+</ul>
+</li>
+<li>
+<p>U0823KGNR9V (박클라우드):</p>
+<ul>
+<li>
+<p>주임무: 매니페스트 수정 및 적용</p>
+</li>
+<li>
+<p>설정 변경 테스트</p>
+</li>
+</ul>
+</li>
+<li>
+<p>U046PSLF1PD (이시스템):</p>
+<ul>
+<li>
+<p>주임무: 노드 그룹 설정 수정</p>
+</li>
+<li>
+<p>성능 모니터링</p>
+</li>
+</ul>
+</li>
+<li>
+<p>AWS Support:</p>
+<ul>
+<li>
+<p>케이스 ID: 8875431</p>
+</li>
+<li>
+<p>구성 검토 및 권장 사항 제공</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>추가 정보:<br/>
+a) 참고 문서:</li>
+</ol>
+<ul>
+<li>
+<p>AWS Load Balancer Controller 문서: <a href="https://kubernetes-sigs.github.io/aws-load-balancer-controller/" class="external external-link">https://kubernetes-sigs.github.io/aws-load-balancer-controller/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>EKS 워크로드 참조: <a href="https://docs.aws.amazon.com/eks/latest/userguide/workloads.html" class="external external-link">https://docs.aws.amazon.com/eks/latest/userguide/workloads.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>AWS re:Post 참조: <a href="https://repost.aws/ko/questions/QU0KsWBrlwRmiZzUnV0Cp_Pw/" class="external external-link">https://repost.aws/ko/questions/QU0KsWBrlwRmiZzUnV0Cp_Pw/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<p>b) 모니터링 및 알림 설정:</p>
+<ul>
+<li>
+<p>CloudWatch 메트릭 설정</p>
+<ul>
+<li>
+<p>ALB 타겟 그룹 상태 확인</p>
+</li>
+<li>
+<p>노드 등록/제거 이벤트 추적</p>
+</li>
+</ul>
+</li>
+<li>
+<p>SNS 알림 구성</p>
+<ul>
+<li>
+<p>Target Group 변경 사항 알림</p>
+</li>
+<li>
+<p>노드 스케일링 이벤트 알림</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>c) 향후 조치사항:</p>
+<ul>
+<li>
+<p>AWS Load Balancer Controller 버전 업그레이드 계획</p>
+</li>
+<li>
+<p>자동화된 테스트 시나리오 구축</p>
+</li>
+<li>
+<p>운영 문서 업데이트</p>
+</li>
+<li>
+<p>모니터링 대시보드 개선</p>
+</li>
+</ul>
+<p>d) 예방 대책:</p>
+<ul>
+<li>
+<p>정기적인 설정 검토 프로세스 수립</p>
+</li>
+<li>
+<p>변경 관리 절차 강화</p>
+</li>
+<li>
+<p>운영팀 기술 교육 실시</p>
+</li>
+</ul>
+<thinking>
+<ol>
+<li>re:Post 내용 분석:</li>
+</ol>
+<ul>
+<li>
+<p>주요 이슈: WAF 규칙 탐지 조건 설정</p>
+</li>
+<li>
+<p>환경: AWS WAF와 CloudFront 연동</p>
+</li>
+<li>
+<p>문제 상황: 특정 IP 차단과 허용 로직</p>
+</li>
+<li>
+<p>해결 방안: WAF 규칙 그룹 및 규칙 우선순위 설정</p>
+</li>
+</ul>
+<ol>
+<li>보고서 구조화:</li>
+</ol>
+<ul>
+<li>
+<p>WAF 설정 상세 내용</p>
+</li>
+<li>
+<p>IP set 구성 방법</p>
+</li>
+<li>
+<p>규칙 우선순위 로직</p>
+</li>
+<li>
+<p>테스트 및 검증 방법<br/>
+</p>
+</li>
+</ul>
+<p>slack reporting - 2025.01.10 16:45</p>
+<pre><code>1. 문제 원인:
+- AWS WAF 규칙 설정에서 IP 차단과 허용 로직 충돌
+- 증상:
+  * 특정 IP 대역 차단 시 허용해야 할 IP도 함께 차단
+  * WAF 규칙 우선순위로 인한 의도하지 않은 동작
+  * CloudFront 배포와 연계된 WAF 정책 미작동
+- 영향:
+  * 정상 사용자의 서비스 접근 차단
+  * 보안 정책 비정상 적용
+  * 운영팀 수동 개입 필요성 증가
+
+2. 해결 상태:
+a) 초기 분석:
+- WAF 로그 분석:
+  * 규칙 매칭 패턴 확인
+  * IP 세트 적용 현황 검토
+- CloudWatch Logs 검토:
+  * WAF 차단 이벤트 분석
+  * 규칙 평가 순서 확인
+
+b) WAF 규칙 재구성:
+1) IP Set 생성:
+```json
+{
+    &quot;Name&quot;: &quot;Allowed-IPs&quot;,
+    &quot;Scope&quot;: &quot;CLOUDFRONT&quot;,
+    &quot;IpAddressVersion&quot;: &quot;IPV4&quot;,
+    &quot;Addresses&quot;: [
+        &quot;192.0.2.0/24&quot;,
+        &quot;198.51.100.0/24&quot;
+    ]
+}
+</code></pre>
+<ol>
+<li>WAF 규칙 그룹 설정:</li>
+</ol>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="json" data-theme="github-light github-dark"><code data-language="json" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;Name&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;IPControlRuleSet&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;Capacity&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1000</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">    &quot;Rules&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Name&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;AllowSpecificIPs&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Priority&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Statement&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;IPSetReferenceStatement&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                    &quot;ARN&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;arn:aws:wafv2:region:account:ipset/Allowed-IPs&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">                }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            },</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Action&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;Allow&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            },</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;VisibilityConfig&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;SampledRequestsEnabled&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;CloudWatchMetricsEnabled&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;MetricName&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;AllowedIPMetric&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Name&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;BlockMaliciousIPs&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Priority&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Statement&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;IPSetReferenceStatement&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                    &quot;ARN&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;arn:aws:wafv2:region:account:ipset/Blocked-IPs&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">                }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            },</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;Action&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;Block&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            },</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">            &quot;VisibilityConfig&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;SampledRequestsEnabled&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;CloudWatchMetricsEnabled&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">true</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="punctuation">                &quot;MetricName&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;BlockedIPMetric&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<p>c) 구현 절차:</p>
+<ol>
+<li>
+<p>허용 IP 세트 우선 평가</p>
+</li>
+<li>
+<p>차단 규칙 후순위 적용</p>
+</li>
+<li>
+<p>기본 동작 설정 (Default Action)</p>
+</li>
+</ol>
+<p>d) 검증:</p>
+<ul>
+<li>
+<p>허용 IP 접근 테스트</p>
+</li>
+<li>
+<p>차단 IP 접근 테스트</p>
+</li>
+<li>
+<p>CloudWatch 메트릭 모니터링</p>
+</li>
+</ul>
+<ol>
+<li>참여자 및 역할:</li>
+</ol>
+<ul>
+<li>
+<p>U082F9LLV8D (김보안):</p>
+<ul>
+<li>
+<p>주임무: WAF 규칙 설계</p>
+</li>
+<li>
+<p>정책 테스트 수행</p>
+</li>
+</ul>
+</li>
+<li>
+<p>U0823KGNR9V (이네트워크):</p>
+<ul>
+<li>
+<p>주임무: CloudFront 연동 구성</p>
+</li>
+<li>
+<p>접근 로그 분석</p>
+</li>
+</ul>
+</li>
+<li>
+<p>U046PSLF1PD (박시스템):</p>
+<ul>
+<li>
+<p>주임무: 모니터링 설정</p>
+</li>
+<li>
+<p>경보 구성</p>
+</li>
+</ul>
+</li>
+<li>
+<p>AWS Support:</p>
+<ul>
+<li>
+<p>케이스 ID: 7756921</p>
+</li>
+<li>
+<p>WAF 규칙 최적화 가이드 제공</p>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>추가 정보:<br/>
+a) 참고 문서:</li>
+</ol>
+<ul>
+<li>
+<p>AWS WAF 설명서: <a href="https://docs.aws.amazon.com/waf/" class="external external-link">https://docs.aws.amazon.com/waf/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>WAF 규칙 그룹: <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-groups.html" class="external external-link">https://docs.aws.amazon.com/waf/latest/developerguide/waf-rule-groups.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>IP Set 관리: <a href="https://docs.aws.amazon.com/waf/latest/developerguide/waf-ip-set-managing.html" class="external external-link">https://docs.aws.amazon.com/waf/latest/developerguide/waf-ip-set-managing.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<p>b) 모니터링 구성:</p>
+<ul>
+<li>
+<p>CloudWatch 대시보드 생성:</p>
+<ul>
+<li>
+<p>규칙 매칭 카운트</p>
+</li>
+<li>
+<p>차단된 요청 수</p>
+</li>
+<li>
+<p>허용된 요청 수</p>
+</li>
+</ul>
+</li>
+<li>
+<p>알림 설정:</p>
+<ul>
+<li>
+<p>비정상 트래픽 패턴</p>
+</li>
+<li>
+<p>규칙 변경 이벤트</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>c) 향후 조치사항:</p>
+<ol>
+<li>
+<p>정기적인 IP 세트 검토</p>
+</li>
+<li>
+<p>자동화된 IP 관리 시스템 구축</p>
+</li>
+<li>
+<p>WAF 로깅 개선:</p>
+</li>
+</ol>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="yaml" data-theme="github-light github-dark"><code data-language="yaml" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">logging</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  kinesis</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">    firehose</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'arn:aws:firehose:region:account:deliverystream/aws-waf-logs'</span></span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;" data-token-type="tag">  logDestinationConfigs</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    - </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'s3://bucket-name/WAF-Logs/'</span></span></code></pre></figure>
+<p>d) 보안 강화 계획:</p>
+<ul>
+<li>
+<p>WAF 규칙 주기적 업데이트</p>
+</li>
+<li>
+<p>봇 탐지 규칙 추가</p>
+</li>
+<li>
+<p>레이트 리미팅 구현</p>
+</li>
+<li>
+<p>지역 기반 차단 검토</p>
+</li>
+</ul>
+<p>e) 문서화:</p>
+<ul>
+<li>
+<p>WAF 정책 변경 절차</p>
+</li>
+<li>
+<p>IP 허용/차단 요청 프로세스</p>
+</li>
+<li>
+<p>인시던트 대응 가이드라인</p>
+</li>
+</ul></thinking></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1387" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#workshop---genai-ops" data-for="workshop---genai-ops">Workshop - GenAI Ops</a></li><li class="depth-0"><a href="#confluence-설정" data-for="confluence-설정">Confluence 설정</a></li><li class="depth-2"><a href="#lambda-code-수정" data-for="lambda-code-수정">Lambda Code 수정</a></li><li class="depth-2"><a href="#my-test-account" data-for="my-test-account">My Test Account</a></li><li class="depth-0"><a href="#tech-blog" data-for="tech-blog">Tech Blog</a></li><li class="depth-0"><a href="#hands-on-preparation" data-for="hands-on-preparation">Hands-On Preparation</a></li><li class="depth-1"><a href="#실습-contents" data-for="실습-contents">실습 Contents</a></li><li class="depth-1"><a href="#workshop-studio-event" data-for="workshop-studio-event">Workshop Studio Event</a></li><li class="depth-1"><a href="#pre-test-access-url" data-for="pre-test-access-url">Pre-Test Access URL</a></li><li class="depth-0"><a href="#hands-on-test-guide" data-for="hands-on-test-guide">Hands-On Test Guide</a></li><li class="depth-1"><a href="#region" data-for="region">Region</a></li><li class="depth-1"><a href="#data-source---confluence" data-for="data-source---confluence">Data Source - Confluence</a></li><li class="depth-2"><a href="#limitation" data-for="limitation">Limitation</a></li><li class="depth-2"><a href="#test-workspace" data-for="test-workspace">Test Workspace</a></li><li class="depth-2"><a href="#api-token-for-attendee" data-for="api-token-for-attendee">API Token for Attendee</a></li><li class="depth-2"><a href="#secret-key-등록" data-for="secret-key-등록">Secret Key 등록</a></li><li class="depth-2"><a href="#실습용-account를-제공" data-for="실습용-account를-제공">실습용 Account를 제공</a></li><li class="depth-1"><a href="#bedrock-agent" data-for="bedrock-agent">Bedrock Agent</a></li><li class="depth-2"><a href="#agent-iam-role" data-for="agent-iam-role">Agent IAM Role</a></li><li class="depth-2"><a href="#add-knowledge-base" data-for="add-knowledge-base">Add knowledge base</a></li><li class="depth-2"><a href="#agent-alias" data-for="agent-alias">Agent Alias</a></li><li class="depth-1"><a href="#slack-integration---amazon-q-developer-in-chat-application" data-for="slack-integration---amazon-q-developer-in-chat-application">Slack Integration - Amazon Q developer in chat application</a></li><li class="depth-2"><a href="#channel-config" data-for="channel-config">Channel config</a></li><li class="depth-2"><a href="#slack에-connector-추가" data-for="slack에-connector-추가">Slack에 Connector 추가</a></li><li class="depth-2"><a href="#oauth-tokens" data-for="oauth-tokens">OAuth Tokens</a></li><li class="depth-2"><a href="#slack-secrets" data-for="slack-secrets">Slack Secrets</a></li><li class="depth-1"><a href="#confluence-report-등록" data-for="confluence-report-등록">Confluence Report 등록</a></li><li class="depth-2"><a href="#lambda-function에-등록" data-for="lambda-function에-등록">Lambda Function에 등록</a></li><li class="depth-0"><a href="#confluence-report" data-for="confluence-report">Confluence Report</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

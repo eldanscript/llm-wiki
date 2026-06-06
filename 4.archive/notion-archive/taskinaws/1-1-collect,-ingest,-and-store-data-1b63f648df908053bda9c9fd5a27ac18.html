@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>1 1 Collect, Ingest, and Store Data 1b63f648df908053bda9c9fd5a27ac18 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="1 1 Collect, Ingest, and Store Data 1b63f648df908053bda9c9fd5a27ac18 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="1 1 Collect, Ingest, and Store Data 1b63f648df908053bda9c9fd5a27ac18 | LLM Wiki"/><meta name="twitter:description" content="🪪 1.1 Collect, Ingest, and Store Data Learning Objectives 이 과정은 기계학습(Machine Learning) 수명 주기 중 데이터 준비 단계를 다룹니다."/><meta property="og:description" content="🪪 1.1 Collect, Ingest, and Store Data Learning Objectives 이 과정은 기계학습(Machine Learning) 수명 주기 중 데이터 준비 단계를 다룹니다."/><meta property="og:image:alt" content="🪪 1.1 Collect, Ingest, and Store Data Learning Objectives 이 과정은 기계학습(Machine Learning) 수명 주기 중 데이터 준비 단계를 다룹니다."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/1-1-collect,-ingest,-and-store-data-1b63f648df908053bda9c9fd5a27ac18"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/1-1-collect,-ingest,-and-store-data-1b63f648df908053bda9c9fd5a27ac18"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🪪 1.1 Collect, Ingest, and Store Data Learning Objectives 이 과정은 기계학습(Machine Learning) 수명 주기 중 데이터 준비 단계를 다룹니다."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/1-1-collect,-ingest,-and-store-data-1b63f648df908053bda9c9fd5a27ac18" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1880" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1880" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>1 1 Collect, Ingest, and Store Data 1b63f648df908053bda9c9fd5a27ac18</a></div></nav><h1 class="article-title">1 1 Collect, Ingest, and Store Data 1b63f648df908053bda9c9fd5a27ac18</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:16.150Z">2026년 6월 06일</time><span>20 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/taskinaws/attachments/nasa_eagle_in_lunar_orbit.jpg" alt/></p>
+<p>🪪</p>
+<h1 id="11-collect-ingest-and-store-data">1.1 Collect, Ingest, and Store Data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11-collect-ingest-and-store-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="learning-objectives">Learning Objectives<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#learning-objectives" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>
+<p>이 과정은 기계학습(Machine Learning) 수명 주기 중 데이터 준비 단계를 다룹니다.</p>
+</li>
+<li>
+<p>이 과정에서 다루는 주요 내용은 다음과 같습니다:</p>
+<ul>
+<li>
+<p>데이터 기본 개념 - <span class="text-highlight">**데이터 유형, 효과적인 데이터 판별, 데이터 시각화 및 탐색적 데이터 분석**</span></p>
+</li>
+<li>
+<p>AWS 스토리지 옵션 - Amazon S3 등 <span class="text-highlight">**ML 프로세스에 사용되는 AWS 스토리지 서비스**</span></p>
+</li>
+<li>
+<p>데이터 수집 - <span class="text-highlight">**데이터 인제스트, 추출, 병합**</span> 등 AWS 서비스 활용</p>
+</li>
+<li>
+<p>데이터 인제스트 및 스토리지 문제 해결</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="fundamentals-of-data-collection">Fundamentals of Data Collection<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fundamentals-of-data-collection" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="introduction">Introduction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#introduction" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>데이터 수집 및 준비의 중요성</p>
+<ul>
+<li>
+<p>ML 모델 훈련을 위해 대표성 있고 가치 있는 고품질 데이터 수집이 중요</p>
+</li>
+<li>
+<p><span class="text-highlight">정확하고 깨끗한 데이터</span>가 필요하며, <span class="text-highlight">**편향성 없이 윤리적으로 수집**</span>해야 함</p>
+</li>
+<li>
+<p>적절한 데이터 수집이 이루어지면 훗날 ML 알고리즘 학습에 도움이 됨</p>
+</li>
+</ul>
+</li>
+<li>
+<p>데이터 저장소 유형</p>
+<ul>
+<li>
+<p>데이터 <span class="text-highlight">**레이크**</span>: 다양한 데이터 원천의 <span class="text-highlight">**구조화/비구조화 데이터**</span>를 모아놓은 저장소</p>
+</li>
+<li>
+<p>데이터 <span class="text-highlight">**웨어하우스**</span>: 정형화된 데이터를 <span class="text-highlight">**관계형 데이터베이스**</span>에 저장하여 분석에 최적화</p>
+</li>
+<li>
+<p><span class="text-highlight">**데이터베이스**</span>: <span class="text-highlight">**온라인 트랜잭션**</span> 처리에 최적화된 데이터 저장소</p>
+</li>
+</ul>
+</li>
+<li>
+<p>데이터 수집 및 준비 프로세스</p>
+<ul>
+<li>
+<p>데이터 원천 파악 및 <span class="text-highlight">**중앙 저장소에 데이터 수집/인제스트**</span></p>
+</li>
+<li>
+<p>수집된 데이터 클렌징, 준비, 보안 작업 수행</p>
+</li>
+</ul>
+</li>
+<li>
+<p>데이터 특성이 ML 모델 성능에 미치는 영향</p>
+<ul>
+<li>데이터의 <span class="text-highlight">**정확성, 완전성, 관련성**</span> 등 특성이 ML 모델 학습에 중요</li>
+</ul>
+</li>
+</ol>
+<h2 id="data-quality">Data Quality<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-quality" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>데이터 품질:</p>
+<ul>
+<li>
+<p>데이터 수집 단계에서 데이터의 유효성, 정확성, 완전성 등 데이터 품질에 대해 고려해야 함을 강조합니다.</p>
+</li>
+<li>
+<p>데이터 시각화와 탐색적 데이터 분석을 통해 데이터 품질을 평가하고 개선할 수 있는 방법을 설명합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>고성능 데이터:</p>
+<ul>
+<li>
+<p>기계 학습 모델의 성능을 최적화하기 위해서는 고품질의 데이터가 필요함을 강조합니다.</p>
+</li>
+<li>
+<p>AWS 스토리지 서비스 선택 시, 데이터 액세스 패턴, 비용, 성능 등을 고려하여 적절한 스토리지 솔루션을 선택하는 방법을 다룹니다.</p>
+</li>
+<li>
+<p>데이터 형식 선택 시에도 데이터 액세스 패턴을 고려하여 최적의 데이터 형식을 선택하는 방법을 설명합니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="representative-대표성">Representative (대표성)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#representative-대표성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>실제 세계를 정확하게 반영하는 고품질 데이터 사용:</p>
+<ul>
+<li>
+<p>모델에 제공되는 데이터는 <span class="text-highlight">**실제 상황을 정확하게 나타내어야**</span> 함</p>
+</li>
+<li>
+<p>예를 들어, 고객 이탈률이 실제 20%라면 데이터에도 그와 유사한 이탈률이 표현되어야 함</p>
+</li>
+<li>
+<p>그렇지 않으면 모델이 더 많거나 적은 이탈을 잘못 예측할 수 있음</p>
+</li>
+</ul>
+</li>
+<li>
+<p>데이터와 실제 세계의 불일치 주의:</p>
+<ul>
+<li>
+<p>데이터가 실제 상황을 정확하게 반영하지 못한다면, 의미 있는 패턴을 찾아내고 정확한 예측을 하기 어려움</p>
+</li>
+<li>
+<p>따라서 데이터와 실제 세계 간의 불일치를 주의 깊게 관찰해야 함</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>요약하면, 기계 학습 모델의 성능을 최적화하기 위해서는 <span class="text-highlight">**실제 상황을 정확하게 반영하는 고품질의 데이터를 사용**</span>하는 것이 매우 중요하다는 점이 핵심입니다.</p>
+<h3 id="relevant-관련성">Relevant (관련성)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#relevant-관련성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>대표성 있는 데이터 사용:</p>
+<ul>
+<li>
+<p>실제 상황을 대표성 있게 반영하는 고품질 데이터를 사용해야 함</p>
+</li>
+<li>
+<p>예를 들어 회원 탈퇴율 예측 시 회원 기간 등의 속성이 잘 포함되어야 함</p>
+</li>
+</ul>
+</li>
+<li>
+<p>관련성 있는 데이터 사용:</p>
+<ul>
+<li>
+<p>예측 대상과 관련성이 높은 속성들을 포함해야 함</p>
+</li>
+<li>
+<p>관련성이 낮은 정보가 섞여 있다면 모델의 성능을 저하시킬 수 있음</p>
+</li>
+<li>
+<p>예를 들어 회원 탈퇴율 예측 시 고객 이메일 정보는 관련성이 낮아 성능을 떨어뜨릴 수 있음</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>관련성이 높은 속성들을 포함해야 모델의 성능을 높일 수 있음</p>
+<h3 id="feature-rich-다양한-속성">Feature Rich (다양한 속성)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-rich-다양한-속성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>풍부한 특징을 가진 데이터 사용:</p>
+<ul>
+<li>
+<p>모델이 내재된 패턴을 학습할 수 있도록 다양한 특징(feature)이 포함된 데이터를 사용해야 함</p>
+</li>
+<li>
+<p>가능한 많은 관련 데이터를 포함하면 더 정확한 예측이 가능함</p>
+</li>
+<li>
+<p>특징이 제한적인 데이터는 고객 이탈 예측 등의 정확도를 떨어뜨릴 수 있음</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="consistent-일관성">Consistent (일관성)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#consistent-일관성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>일관된(consistent) 데이터 사용:</p>
+<ul>
+<li>
+<p>특징이나 형식 등 <span class="text-highlight">**데이터의 속성이 일관**</span>되어야 함</p>
+</li>
+<li>
+<p>일관성 있는 데이터는 더 정확하고 신뢰할 수 있는 결과를 제공함</p>
+</li>
+<li>
+<p>데이터 소스가 다양하여 형식이나 메타데이터가 다르다면 일관성이 떨어져 모델의 성능이 저하될 수 있음</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="types-of-data">Types of Data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#types-of-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="data-types">Data Types<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-types" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Text / Tabular / Time Series / Image</li>
+</ul>
+<h2 id="formatting-data">Formatting data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#formatting-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Unstructured data : lacks a predefined structure</p>
+</li>
+<li>
+<p>Structured data : has a well-defined schema</p>
+</li>
+<li>
+<p>Semi-structured data : has organizational properties, ex) tags, markup</p>
+</li>
+</ul>
+<h2 id="row-based-data-format">Row-based data format<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#row-based-data-format" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>each row represents a single record or entity</p>
+</li>
+<li>
+<p>the columns represent each of the features of that entity</p>
+</li>
+<li>
+<p>Row-based file types</p>
+<ul>
+<li>
+<p>CSV (Comma-separated values) : lightweight, space-efficient text files that represent tabular data</p>
+</li>
+<li>
+<p>Avro RecordIO : row-based data storage format that stores records sequentially,</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="column-based-data-format">Column-based data format<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#column-based-data-format" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>stores information with columns as the primary structure</p>
+</li>
+<li>
+<p>queries extract insights from patterns within a column</p>
+</li>
+<li>
+<p>efficient analysis of trends across large datasets</p>
+</li>
+<li>
+<p>Column-based file types</p>
+<ul>
+<li>
+<p>Parquet : columnar storage format typically used in analytics and data warehouse, data can be compressed</p>
+</li>
+<li>
+<p>ORC (Optimized row columnar) : similar to Parquet, big data workloads (Apache Hive, Spark), efficiently compress data</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="object-notation-data">Object-notation data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#object-notation-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>non-tabular, hierarchical data, such as graphs or textual data</p>
+</li>
+<li>
+<p>structured into hierarchical objects with features and key-value pairs</p>
+</li>
+<li>
+<p>Object-notation file types</p>
+<ul>
+<li>
+<p>JSON (JavaScript Object Notation) : flexible data structure, compact, hierarchical, and easy to parse</p>
+</li>
+<li>
+<p>JSONL (JavaScript Object Notation Lines)</p>
+<ul>
+<li>
+<p>newline-delimited JSON</p>
+</li>
+<li>
+<p>encoding JSON objects that are separated by new lines instead of being nested</p>
+</li>
+<li>
+<p>improves efficiency because individual objects can be processed without loading a larger JSON array</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="batch-and-streaming-data">Batch and Streaming data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#batch-and-streaming-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="batch-data">Batch data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#batch-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>collected and processed in batches rather than continuously</p>
+</li>
+<li>
+<p>processed one time or on a recurring schedule</p>
+</li>
+<li>
+<p>not time-critical and is used for long-term analysis</p>
+</li>
+</ul>
+<h3 id="streaming-data">Streaming data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#streaming-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>continuously generated and processed in real-time or near real-time</p>
+</li>
+<li>
+<p>requires additional considerations like data buffering, real-time monitoring</p>
+</li>
+</ul>
+<p><a href="../../../1-1-collect,-ingest,-and-store-data/image.png" class="internal internal-link" data-slug="1-1-collect,-ingest,-and-store-data/image.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-98.png" alt/></a></p>
+<h1 id="data-visualization-and-exploratory-data-analysis">Data Visualization and Exploratory Data Analysis<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-visualization-and-exploratory-data-analysis" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="data-visualization">Data Visualization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-visualization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>gather insights into the quality and relevance of the data</p>
+</li>
+<li>
+<p>Analyze data to understand patterns, trends, structure, and limitations → Algorithm selection</p>
+</li>
+<li>
+<p>Visualize data to identify quality issues (missing values, outliers, inconsistencies) → Clean data</p>
+</li>
+<li>
+<p>Shape data through transformations → Feature engineering to optimize for modeling</p>
+</li>
+</ul>
+<h3 id="methods-for-data-visualization">Methods for data visualization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#methods-for-data-visualization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Relationship analysis : Identifies correlations, select relevant features and remove redundancies</p>
+</li>
+<li>
+<p>Distribution analysis : central tendency, variability, shape, and outliers, understand the characteristics of the data</p>
+</li>
+<li>
+<p>Comparison : Quantifies differences between subgroups, reveals separate trends</p>
+</li>
+<li>
+<p>Composition (구성) : Identifies biases by visualizing proportions, percentages, and counts within the data (데이터 속 비율, 퍼센티지, 개수 등을 시각화하여 데이터 내의 편향성을 파악)</p>
+</li>
+</ul>
+<h2 id="graphs-for-data-visualization">Graphs for data visualization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#graphs-for-data-visualization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="categorical-data">Categorical data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#categorical-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>qualitative information (비정형 정보)</p>
+</li>
+<li>
+<p>bar charts, pie charts, heatmaps : frequency of distribution across categories</p>
+<ul>
+<li>
+<p>heatmaps : depict patterns and relationships in a dataset</p>
+</li>
+<li>
+<p>pie charts : circular graph that represents the entirety of the dataset.</p>
+</li>
+<li>
+<p>bar charts : using bars to represent the proportion of a dataset for specific attributes</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Statistical analysis : calculating frequencies, proportions, contingency tables (상관관계 표)</p>
+</li>
+</ul>
+<h3 id="numerical-data">Numerical data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#numerical-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>quantitative information (정량적 정보)</p>
+</li>
+<li>
+<p>Scatterplots</p>
+<ul>
+<li>relationship between two variables on a coordinate system</li>
+</ul>
+</li>
+<li>
+<p>Histogram</p>
+<ul>
+<li>divided into bins (구간, 범위) representing a range that variables fall within</li>
+</ul>
+</li>
+<li>
+<p>Density Plots</p>
+<ul>
+<li>
+<p>show the shape and spread of data</p>
+</li>
+<li>
+<p>the distribution of a single feature</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Box Plots</p>
+<ul>
+<li>
+<p>displaying the location of key data points</p>
+</li>
+<li>
+<p>quickly comparing distributions and identifying skewness (왜도, 데이터 분포의 치우침 정도), spread, and outliers</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="aws-storage-options">AWS Storage Options<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-storage-options" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="s3">S3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#s3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>flexible, scalable, object storage service</p>
+</li>
+<li>
+<p>data lakes, websites, cloud-centered apps, backups, archives, analytics, and ML</p>
+</li>
+</ul>
+<h3 id="use-case">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Data ingestion and storage</p>
+<ul>
+<li>
+<p>ingested into Amazon S3 through streaming or batch processing</p>
+</li>
+<li>
+<p>well-suited for storing the large volumes of data needed for effective machine learning</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Model training and evaluation</p>
+<ul>
+<li>
+<p>versioning to manage different model iterations → store training and validation data</p>
+</li>
+<li>
+<p>manage and compare models to evaluate performance</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Integration with other AWS services</p>
+</li>
+</ul>
+<h2 id="ebs">EBS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ebs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>well-suited for databases, web applications, analytics, and ML workloads</p>
+</li>
+<li>
+<p>high-performance, low-latency block storage</p>
+</li>
+<li>
+<p>Permits point-in-time snapshot backups</p>
+</li>
+</ul>
+<h3 id="use-case-1">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>High-performance storage</p>
+<ul>
+<li>
+<p>requiring fast access to large datasets</p>
+</li>
+<li>
+<p>high throughput and IOPS accelerate ML workflows and applications</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Host pre-trained models</p>
+<ul>
+<li>
+<p>upload, store, and access pre-trained ML models</p>
+</li>
+<li>
+<p>generate real-time predictions without setting up separate hosting infrastructure</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="efs">EFS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#efs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>performance remains high even as file system usage changes</p>
+</li>
+<li>
+<p>NFSv4 networking protocol to allow compute instances access to the file system across a standard file system interface</p>
+</li>
+</ul>
+<h3 id="benefits">Benefits<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#benefits" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Scalable and performant : accessed concurrently from multiple Amazon EC2 instances</p>
+</li>
+<li>
+<p>High throughput : Promotes high throughput and parallelism</p>
+</li>
+<li>
+<p>Low-latency access : low-latency access to petabyte-scale shared file systems</p>
+</li>
+</ul>
+<h3 id="use-cases">Use Cases<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-cases" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Concurrent access</p>
+<ul>
+<li>
+<p>multiple Amazon EC2 instances to access the same datasets simultaneously</p>
+</li>
+<li>
+<p>well-suited for ML workflows that require shared datasets across multiple compute instances</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Shared datasets</p>
+<ul>
+<li>
+<p>Multiple instances can access data, such as ML learning libraries, frameworks, and models, simultaneously without contention (간섭, 충돌)</p>
+</li>
+<li>
+<p>contributes to faster model training and deployment</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="fsx">FSx<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fsx" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>provides access to popular file systems : Lustre, NetApp ONTAP, OpenZFS, Windows File Server</p>
+</li>
+<li>
+<p>delivers millions of IOPS with sub-millisecond latency</p>
+</li>
+</ul>
+<h3 id="benefits-1">Benefits<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#benefits-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Shared access : mount file systems to multiple compute instances for shared access</p>
+</li>
+<li>
+<p>High performance : low latency and high throughput</p>
+</li>
+<li>
+<p>File system types : a variety of file system</p>
+</li>
+<li>
+<p>Storage options : ephemeral storage for temporary tasks, persistent storage for long-term data retention</p>
+</li>
+</ul>
+<h3 id="use-case-2">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Two types of file systems</p>
+<ul>
+<li>fully managed service that provides two types of file systems: Lustre and Windows File Server</li>
+</ul>
+</li>
+<li>
+<p>Distributed architecture</p>
+<ul>
+<li>Lustre’s distributed architecture provides highly parallel and scalable data access</li>
+</ul>
+</li>
+</ul>
+<h1 id="choosing-storage">Choosing Storage<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#choosing-storage" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="performance">Performance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#performance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Scalability Elasticity (확장 탄력성)</p>
+</li>
+<li>
+<p>Data access patterns</p>
+</li>
+<li>
+<p>Throughput Latency</p>
+</li>
+</ul>
+<h2 id="key-considerations">Key considerations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#key-considerations" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Inference workloads</p>
+<ul>
+<li>
+<p>usually don’t require high I/O performance, except for real-time inference cases : EBS gp3, EFS</p>
+</li>
+<li>
+<p>low-latency demands : EBS io2</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Training workloads</p>
+<ul>
+<li>high performance and frequent random I/O access : EBS</li>
+</ul>
+</li>
+<li>
+<p>Real-time and streaming workloads</p>
+<ul>
+<li>EFS</li>
+</ul>
+</li>
+<li>
+<p>Dataset storage</p>
+<ul>
+<li>S3</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-access-patterns">Data access patterns<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-access-patterns" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Copy and Load</p>
+<ul>
+<li>copied from Amazon S3 to a training instance backed by EBS</li>
+</ul>
+</li>
+<li>
+<p>Sequential Streaming</p>
+<ul>
+<li>
+<p>streamed to instances as batches or individual records</p>
+</li>
+<li>
+<p>from S3 to instance backed by EBS</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Randomized Access</p>
+<ul>
+<li>
+<p>with a shared file system data store</p>
+</li>
+<li>
+<p>Amazon FSx and Amazon EFS</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="cost">Cost<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cost" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>S3 : the lowest cost</p>
+</li>
+<li>
+<p>EBS : more expensive per gigabyte than Amazon S3</p>
+</li>
+<li>
+<p>EFS : read and write access and the amount of gigabyte used with different storage tiers available</p>
+</li>
+<li>
+<p>FSx : depends on the file system, storage type used for each gigabyte, throughput capacity provisioned, and requests</p>
+</li>
+</ul>
+<h3 id="cost-optimized-storage-for-ml">Cost-optimized storage for ML<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cost-optimized-storage-for-ml" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>S3</p>
+<ul>
+<li>
+<p>Use Amazon S3 storage tiers based on how often you access data</p>
+</li>
+<li>
+<p>Use Amazon S3 Intelligent-Tiering with unknown access patterns to optimal tiers</p>
+</li>
+<li>
+<p>Archive rarely-accessed data to reduce costs and delete any data no longer needed</p>
+</li>
+</ul>
+</li>
+<li>
+<p>EBS</p>
+<ul>
+<li>
+<p>Select the EBS volume type that matches the performance needs</p>
+</li>
+<li>
+<p>Right-size the capacity of volumes</p>
+</li>
+<li>
+<p>Use EBS optimized instances for dedicated throughput</p>
+</li>
+</ul>
+</li>
+<li>
+<p>EFS</p>
+<ul>
+<li>
+<p>Right-size your Amazon EFS share</p>
+</li>
+<li>
+<p>choose the best performance mode</p>
+</li>
+<li>
+<p>Manage file lifecycle management: Move infrequently-accessed data to a lower cost tier</p>
+</li>
+</ul>
+</li>
+<li>
+<p>FSx</p>
+<ul>
+<li>
+<p>Select storage capacity, throughput, and single compared with multi-Availability Zone deployment</p>
+</li>
+<li>
+<p>Use the lifecycle management : move infrequently-accessed data to lower-cost storage</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="data-structure">Data Structure<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-structure" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Optimizing the data format can significantly reduce overall costs</p>
+</li>
+<li>
+<p>Well-formatted data requires less processing time and improves data efficacy</p>
+</li>
+</ul>
+<h3 id="transform-data">Transform data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transform-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>only include relevant information</p>
+</li>
+<li>
+<p>Removing unnecessary data</p>
+</li>
+</ul>
+<h3 id="use-columnar-storage">Use columnar storage<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-columnar-storage" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>efficient, accessible format</p>
+</li>
+<li>
+<p>reduce storage needs and speed up processing</p>
+</li>
+</ul>
+<h3 id="compress-data">Compress data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#compress-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>decrease storage requirements</li>
+</ul>
+<h3 id="format-splittable-data">Format splittable data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#format-splittable-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>only necessary data chunks are loaded rather than full datasets</p>
+</li>
+<li>
+<p>allows distributed training across instances for faster parallel processing and improves overall performance</p>
+</li>
+</ul>
+<h1 id="data-ingestion">Data Ingestion<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-ingestion" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="collecting-data">Collecting data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#collecting-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>data arrives in varied formats, including unstructured, semi-structured, and structured</p>
+</li>
+<li>
+<p>AWS provides storage services that can serve as a point of origin and destination for data ingestion</p>
+</li>
+<li>
+<p>S3 often serves as the primary destination for data ingestion and collection</p>
+</li>
+</ul>
+<h2 id="data-ingestion-methods">Data Ingestion methods<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-ingestion-methods" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Batch Ingestion (historical analysis)</p>
+<ul>
+<li>
+<p>collects and processes data on scheduled intervals</p>
+</li>
+<li>
+<p>well for less time-sensitive, historical data</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Real-time Ingestion</p>
+<ul>
+<li>
+<p>streams data as it is generated</p>
+</li>
+<li>
+<p>time-sensitive data, like transactions or sensor metrics</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="use-cases-1">Use Cases<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-cases-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Time-sensitive processing</p>
+<ul>
+<li>
+<p>ingesting data and detecting insights immediately as events occur</p>
+</li>
+<li>
+<p>real-time alerts and rapid response</p>
+</li>
+<li>
+<p>fraud detection</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Historical analysis</p>
+<ul>
+<li>
+<p>ingesting data in batches over longer periods of time</p>
+</li>
+<li>
+<p>insights gathered are less time-sensitive but allow for spotting big-picture trends by aggregating data</p>
+</li>
+<li>
+<p>historical analysis of transactions</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="dedicated-streaming-services">Dedicated Streaming Services<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dedicated-streaming-services" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="kinesis">Kinesis<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kinesis" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>ingest and process in real-time data streams</p>
+</li>
+<li>
+<p>Kinesis Data Streams is primarily used for ingesting and processing data</p>
+<ul>
+<li>read and process streaming data that is durable and available for up to 7 days</li>
+</ul>
+</li>
+<li>
+<p>Firehose provides a streamlined method of streaming data to data storage locations</p>
+<ul>
+<li>destinations such as Amazon S3 and Amazon Redshift</li>
+</ul>
+</li>
+<li>
+<p>Amazon Managed Service for Apache Flink provides consumption of streaming data in real-time for analysis</p>
+<ul>
+<li>
+<p>Java or Scala applications</p>
+</li>
+<li>
+<p>manages the underlying Flink clusters and infrastructure</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Use Case</p>
+<ul>
+<li>
+<p>Data ingestion</p>
+</li>
+<li>
+<p>Data processing</p>
+</li>
+<li>
+<p>Real-time inference</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="msk">MSK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#msk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Apache Kafka to enable real-time streaming data</p>
+</li>
+<li>
+<p>provides Apache Kafka clusters with built-in high availability, security, and scalability</p>
+</li>
+</ul>
+<h1 id="data-extraction">Data Extraction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-extraction" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="transferring-data">Transferring data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transferring-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>act as sources and destinations for data</p>
+</li>
+<li>
+<p>access large datasets from diverse sources</p>
+</li>
+<li>
+<p>provides services to help transfer data between different services and sources</p>
+</li>
+</ul>
+<h2 id="data-transfer-and-extraction-tools">Data transfer and extraction tools<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-transfer-and-extraction-tools" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="cli">CLI<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cli" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>handling authentication, validation, and formatting</li>
+</ul>
+<h3 id="sdks">SDKs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sdks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Python, Java, and JavaScript</li>
+</ul>
+<h3 id="s3-transfer-acceleration">S3 Transfer Acceleration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#s3-transfer-acceleration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Amazon CloudFront edge locations to accelerate large data transfers to and from Amazon S3</p>
+</li>
+<li>
+<p>speed up data collection for ML workloads that require moving large datasets</p>
+</li>
+</ul>
+<h3 id="dms-database-migration-service">DMS (Database Migration Service)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dms-database-migration-service" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>migration between databases or to Amazon S3</p>
+</li>
+<li>
+<p>SQL, JSON, CSV, and XML</p>
+</li>
+<li>
+<p>run on schedules or in response to events for frequent data extraction</p>
+</li>
+</ul>
+<h3 id="lambda">Lambda<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lambda" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>no server management and flexible function initiation without managing infrastructure</li>
+</ul>
+<h3 id="glue">Glue<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#glue" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>fully managed extract, transform, and load (ETL) service</p>
+</li>
+<li>
+<p>discover, catalog, and extract data from S3, RDS, DynamoDB</p>
+</li>
+</ul>
+<h3 id="datasync">DataSync<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#datasync" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>efficiently transfer data between on-premises systems or AWS services</p>
+</li>
+<li>
+<p>extracting data from sources (data file systems, NAS)</p>
+</li>
+<li>
+<p>then upload data to AWS services (S3, EFS, FSx, RDS)</p>
+</li>
+<li>
+<p>moving large datasets to the cloud while reducing network costs and data transfer times</p>
+</li>
+</ul>
+<h3 id="snowball">Snowball<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#snowball" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>physical device service used to transfer large amounts of data into and out of AWS</p>
+</li>
+<li>
+<p>move terabytes or petabytes of data into Amazon S3 for initial data transfer or extraction</p>
+</li>
+</ul>
+<h2 id="services-to-extract-data-from">Services to extract data from<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#services-to-extract-data-from" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="s3-1">S3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#s3-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Amazon S3 Transfer Accelerator, AWS CLI, AWS SDK, AWS Snowball, AWS DataSync, AWS DMS, AWS Glue, and AWS Lambda</li>
+</ul>
+<h3 id="ebs-1">EBS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ebs-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>AWS CLI, or AWS SDKs</li>
+</ul>
+<h3 id="efs-1">EFS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#efs-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AWS CLI, AWS SDKs</p>
+</li>
+<li>
+<p>AWS Transfer Family, DataSync : data transfers</p>
+</li>
+<li>
+<p>provides the capability to share data from Amazon EC2 instances</p>
+</li>
+</ul>
+<h3 id="rds">RDS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rds" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>AWS DMS, the AWS CLI, and AWS SDKs</li>
+</ul>
+<h3 id="dynamodb">DynamoDB<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dynamodb" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>AWS DMS, AWS Glue, and AWS Lambda</li>
+</ul>
+<h1 id="data-merging">Data Merging<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-merging" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>merging or combining datasets is the next logical step for bringing data sources together</p>
+</li>
+<li>
+<p>efficiently combining data sources</p>
+</li>
+</ul>
+<h2 id="glue-1">Glue<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#glue-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="identify-data-sources"><strong>Identify data sources</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#identify-data-sources" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>combine or transform large datasets using Apache Spark</p>
+</li>
+<li>
+<p>process large structured and unstructured datasets in parallel</p>
+</li>
+<li>
+<p>Amazon S3, Amazon Redshift, Athena, or other Java Database Connectivity (JDBC) compliant data stores</p>
+</li>
+</ul>
+<h3 id="create-an-aws-glue-crawler"><strong>Create an AWS Glue crawler</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#create-an-aws-glue-crawler" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>scan data and populate (등록) the AWS Glue Catalog</li>
+</ul>
+<h3 id="generate-etl-scripts-and-define-jobs"><strong>Generate ETL scripts and define jobs</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#generate-etl-scripts-and-define-jobs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>start on demand or can be scheduled to run at specific intervals</li>
+</ul>
+<h3 id="output-results"><strong>Output results</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#output-results" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Clean and transformed data</li>
+</ul>
+<h2 id="emr">EMR<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#emr" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="ingest-streaming-data">Ingest streaming data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ingest-streaming-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>ETL is done using Apache Spark Streaming APIs</p>
+</li>
+<li>
+<p>source data in real time from places such as Apache Kafka and Amazon Kinesis</p>
+</li>
+<li>
+<p>Data is received and combined in real time</p>
+</li>
+</ul>
+<h3 id="distribute-across-emr-cluster">Distribute across EMR Cluster<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#distribute-across-emr-cluster" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>made up of various nodes</p>
+</li>
+<li>
+<p>nodes are configured specifically to handle parallel tasks and data processing</p>
+</li>
+</ul>
+<h3 id="transform-data-1">Transform data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transform-data-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Python, Scala, or SQL development environments</p>
+</li>
+<li>
+<p>powerful, flexible methods for scripting data workflows</p>
+</li>
+<li>
+<p>making data filtering, transformation, and aggregation more convenient</p>
+</li>
+</ul>
+<h3 id="output-to-s3">Output to S3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#output-to-s3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>results are outputted in an Amazon S3 bucket</li>
+</ul>
+<h2 id="sagemaker-data-wrangler">SageMaker Data Wrangler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker-data-wrangler" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="select-and-query">Select and query<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#select-and-query" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Import data from Amazon Redshift and Amazon Athena, or from third-party sources, such as Snowflake.</li>
+</ul>
+<h3 id="visualize">Visualize<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#visualize" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Graphically understand data</p>
+</li>
+<li>
+<p>detect outliers with preconfigured visualization templates</p>
+</li>
+</ul>
+<h3 id="cleanse-and-enrich">Cleanse and enrich<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cleanse-and-enrich" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Cleanse and explore data</p>
+</li>
+<li>
+<p>perform feature engineering with built-in data transforms</p>
+</li>
+<li>
+<p>detect statistical bias with Amazon SageMaker Clarify</p>
+</li>
+</ul>
+<h3 id="understand">Understand<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#understand" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Use a sample dataset to quickly estimate model performance, measure accuracy</p>
+</li>
+<li>
+<p>diagnose potential issues</p>
+</li>
+</ul>
+<h3 id="operationalize">Operationalize<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#operationalize" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Export a data preparation workflow to a notebook or code script</p>
+</li>
+<li>
+<p>bring the workflow into production</p>
+</li>
+</ul>
+<h3 id="integrate-a-data-preparation-workflow">Integrate a data preparation workflow<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#integrate-a-data-preparation-workflow" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Use Amazon SageMaker Pipelines to integrate a data preparation workflow</li>
+</ul>
+<h3 id="export-prepared-data">Export prepared data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#export-prepared-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Export data to Amazon SageMaker Feature Store or to Amazon S3</li>
+</ul>
+<h2 id="merging-data-with-programming-techniques"><strong>Merging data with programming techniques</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#merging-data-with-programming-techniques" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Write ETL functions or scripts using Python libraries like Pandas</p>
+<ul>
+<li>These scripts can be run on Lambda accessing datasets stored in Amazon S3</li>
+</ul>
+</li>
+<li>
+<p>Use SQL to perform joins, unions, and other transformations directly within datasets stored in databases</p>
+<ul>
+<li>Redshift or data stored in Amazon S3 using Athena</li>
+</ul>
+</li>
+<li>
+<p>Use stream processing with Amazon Managed Service for Apache Flink</p>
+<ul>
+<li>perform merging of real-time streaming data as the data is ingested</li>
+</ul>
+</li>
+</ul>
+<h1 id="data-ingestion-and-storage-troubleshooting"><strong>Data Ingestion and Storage Troubleshooting</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-ingestion-and-storage-troubleshooting" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="monitoring-tools"><strong>Monitoring tools</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-tools" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="cloudwatch-metrics">CloudWatch Metrics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cloudwatch-metrics" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>view and analyze metrics</p>
+</li>
+<li>
+<p>give insights into the performance and health of storage resources</p>
+</li>
+</ul>
+<h3 id="cloudwatch-logs">CloudWatch Logs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cloudwatch-logs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>collecting, storing, and analyzing logs from various AWS services</p>
+</li>
+<li>
+<p>gaining insights for potential issues for data ingestion and storage</p>
+</li>
+</ul>
+<h3 id="service-dashboards">Service Dashboards<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#service-dashboards" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>provides service dashboards that integrate with CloudWatch metrics</p>
+</li>
+<li>
+<p>monitor the performance and health of the services from their services dashboard</p>
+</li>
+<li>
+<p>provide real-time insights into service availability and performance</p>
+</li>
+<li>
+<p>view events across a period of operation</p>
+</li>
+</ul>
+<h2 id="aws-storage-service-metrics"><strong>AWS Storage service metrics</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-storage-service-metrics" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="ebs-2">EBS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ebs-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>VolumeReadBytes:</strong> The total number of bytes read from the volume</p>
+</li>
+<li>
+<p><strong>VolumeWriteBytes:</strong> The total number of bytes written to the volume</p>
+</li>
+<li>
+<p><strong>VolumeReadOps:</strong> The total number of read operations from the volume</p>
+</li>
+<li>
+<p><strong>VolumeWriteOps:</strong> The total number of write operations to the volume</p>
+</li>
+<li>
+<p><strong>VolumeThroughputPercentage:</strong> The percentage of provisioned IOPS being used by the volume</p>
+</li>
+<li>
+<p><strong>VolumeQueueLength:</strong> The number of outstanding I/O requests waiting to be completed</p>
+</li>
+</ul>
+<h3 id="s3-2">S3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#s3-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>BucketSizeBytes:</strong> The total size of all objects in the Amazon S3 bucket</p>
+</li>
+<li>
+<p><strong>NumberOfObjects:</strong> The total number of objects in the Amazon S3 bucket</p>
+</li>
+<li>
+<p><strong>AllRequests:</strong> The total number of requests made to the Amazon S3 bucket</p>
+</li>
+<li>
+<p><strong>GetRequests:</strong> The number of successful GET requests made to the Amazon S3 bucket</p>
+</li>
+<li>
+<p><strong>PutRequests:</strong> The number of successful PUT requests made to the Amazon S3 bucket.</p>
+</li>
+</ul>
+<h3 id="efs-2">EFS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#efs-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>StorageBytes:</strong> The total storage used by the Amazon EFS file system</p>
+</li>
+<li>
+<p><strong>PercentIOLimit:</strong> The percentage of the throughput limit that the file system is using</p>
+</li>
+<li>
+<p><strong>TotalIOBytes:</strong> The total number of bytes read from and written to the file system</p>
+</li>
+</ul>
+<h3 id="fsx-1">FSx<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fsx-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><strong>DataReadBytes:</strong> The total number of bytes read from the file system</p>
+</li>
+<li>
+<p><strong>DataWriteBytes:</strong> The total number of bytes written to the file system</p>
+</li>
+<li>
+<p><strong>ThroughputCapacity:</strong> The total throughput capacity of the file system</p>
+</li>
+<li>
+<p><strong>PercentThroughputCapacityUtilized:</strong> The percentage of the total throughput capacity that is being used</p>
+</li>
+</ul>
+<h2 id="scalability-issues"><strong>Scalability issues</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scalability-issues" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="capacity-issues-with-data-destinations"><strong>Capacity issues with data destinations</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#capacity-issues-with-data-destinations" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>lead to performance degradation</p>
+</li>
+<li>
+<p>regular monitoring of the storage utilization and capacity planning : done in advance</p>
+</li>
+<li>
+<p>seamlessly scale storage increasing or decreasing in size : S3, EFS, FSx</p>
+</li>
+</ul>
+<h3 id="latency-issues-iops-and-data-transfer-times"><strong>Latency issues, IOPs, and data transfer times</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#latency-issues-iops-and-data-transfer-times" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>slow data transfer times significantly impact performance of storage systems and data ingestion</p>
+</li>
+<li>
+<p>Network bottlenecks, undersized provisioned storage volumes, or using inefficient methods of ingestion</p>
+</li>
+<li>
+<p>provisioned IOPS volumes for Amazon EBS</p>
+</li>
+<li>
+<p>compression or batching lead to improved data-transfer efficiency</p>
+</li>
+</ul>
+<h3 id="uneven-distribution-of-data-access"><strong>Uneven distribution of data access</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#uneven-distribution-of-data-access" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Hotspots or bottlenecks by uneven distribution of data access resulting in performance degradation or data availability issues</p>
+</li>
+<li>
+<p>automatically distribute data and provide load balancing capabilities : S3, EFS</p>
+</li>
+<li>
+<p>Data partitioning : distributes data across multiple storage resources, reducing the likelihood of hotspots</p>
+</li>
+</ul>
+<h2 id="ingestion-modifications"><strong>Ingestion modifications</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ingestion-modifications" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="batching-with-amazon-kinesis"><strong>Batching with Amazon Kinesis</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#batching-with-amazon-kinesis" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>improves efficiency and throughput</p>
+</li>
+<li>
+<p>combines multiple data records into fewer API calls and network roundtrips</p>
+</li>
+<li>
+<p>helpful for combining high data volumes at peak times</p>
+</li>
+<li>
+<p>minimizes cost and latency when ingesting high throughput on Kinesis</p>
+</li>
+</ul>
+<h3 id="compressing-data-during-transfer"><strong>Compressing data during transfer</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#compressing-data-during-transfer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>cuts bandwidth use and speeds up data movement</p>
+</li>
+<li>
+<p>compression’s transfer optimization and CPU costs → balance</p>
+</li>
+</ul>
+<h3 id="data-partitioning-with-amazon-kinesis"><strong>Data partitioning with Amazon Kinesis</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-partitioning-with-amazon-kinesis" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>partition streaming data based on keys</p>
+</li>
+<li>
+<p>partitioned data is then delivered to matching Amazon S3 bucket prefixes based on the keys</p>
+</li>
+<li>
+<p>streams data in parallel to multiple locations</p>
+</li>
+<li>
+<p>improving throughput and scalability by reducing hotspots</p>
+</li>
+</ul>
+<p><a href="../../../1-1-collect,-ingest,-and-store-data/image-1.png" class="internal internal-link" data-slug="1-1-collect,-ingest,-and-store-data/image-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-1-25.png" alt/></a></p>
+<p><a href="../../../1-1-collect,-ingest,-and-store-data/image-2.png" class="internal internal-link" data-slug="1-1-collect,-ingest,-and-store-data/image-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-2-22.png" alt/></a></p>
+<p><a href="../../../1-1-collect,-ingest,-and-store-data/image-3.png" class="internal internal-link" data-slug="1-1-collect,-ingest,-and-store-data/image-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-3-17.png" alt/></a></p>
+<p><a href="../../../1-1-collect,-ingest,-and-store-data/image-4.png" class="internal internal-link" data-slug="1-1-collect,-ingest,-and-store-data/image-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-4-15.png" alt/></a></p>
+<p><a href="../../../1-1-collect,-ingest,-and-store-data/image-5.png" class="internal internal-link" data-slug="1-1-collect,-ingest,-and-store-data/image-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-5-14.png" alt/></a></p>
+<p><a href="../../../1-1-collect,-ingest,-and-store-data/image-6.png" class="internal internal-link" data-slug="1-1-collect,-ingest,-and-store-data/image-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-6-13.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1474" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#11-collect-ingest-and-store-data" data-for="11-collect-ingest-and-store-data">1.1 Collect, Ingest, and Store Data</a></li><li class="depth-0"><a href="#learning-objectives" data-for="learning-objectives">Learning Objectives</a></li><li class="depth-0"><a href="#fundamentals-of-data-collection" data-for="fundamentals-of-data-collection">Fundamentals of Data Collection</a></li><li class="depth-1"><a href="#introduction" data-for="introduction">Introduction</a></li><li class="depth-1"><a href="#data-quality" data-for="data-quality">Data Quality</a></li><li class="depth-2"><a href="#representative-대표성" data-for="representative-대표성">Representative (대표성)</a></li><li class="depth-2"><a href="#relevant-관련성" data-for="relevant-관련성">Relevant (관련성)</a></li><li class="depth-2"><a href="#feature-rich-다양한-속성" data-for="feature-rich-다양한-속성">Feature Rich (다양한 속성)</a></li><li class="depth-2"><a href="#consistent-일관성" data-for="consistent-일관성">Consistent (일관성)</a></li><li class="depth-0"><a href="#types-of-data" data-for="types-of-data">Types of Data</a></li><li class="depth-1"><a href="#data-types" data-for="data-types">Data Types</a></li><li class="depth-1"><a href="#formatting-data" data-for="formatting-data">Formatting data</a></li><li class="depth-1"><a href="#row-based-data-format" data-for="row-based-data-format">Row-based data format</a></li><li class="depth-1"><a href="#column-based-data-format" data-for="column-based-data-format">Column-based data format</a></li><li class="depth-1"><a href="#object-notation-data" data-for="object-notation-data">Object-notation data</a></li><li class="depth-1"><a href="#batch-and-streaming-data" data-for="batch-and-streaming-data">Batch and Streaming data</a></li><li class="depth-2"><a href="#batch-data" data-for="batch-data">Batch data</a></li><li class="depth-2"><a href="#streaming-data" data-for="streaming-data">Streaming data</a></li><li class="depth-0"><a href="#data-visualization-and-exploratory-data-analysis" data-for="data-visualization-and-exploratory-data-analysis">Data Visualization and Exploratory Data Analysis</a></li><li class="depth-1"><a href="#data-visualization" data-for="data-visualization">Data Visualization</a></li><li class="depth-2"><a href="#methods-for-data-visualization" data-for="methods-for-data-visualization">Methods for data visualization</a></li><li class="depth-1"><a href="#graphs-for-data-visualization" data-for="graphs-for-data-visualization">Graphs for data visualization</a></li><li class="depth-2"><a href="#categorical-data" data-for="categorical-data">Categorical data</a></li><li class="depth-2"><a href="#numerical-data" data-for="numerical-data">Numerical data</a></li><li class="depth-0"><a href="#aws-storage-options" data-for="aws-storage-options">AWS Storage Options</a></li><li class="depth-1"><a href="#s3" data-for="s3">S3</a></li><li class="depth-2"><a href="#use-case" data-for="use-case">Use Case</a></li><li class="depth-1"><a href="#ebs" data-for="ebs">EBS</a></li><li class="depth-2"><a href="#use-case-1" data-for="use-case-1">Use Case</a></li><li class="depth-1"><a href="#efs" data-for="efs">EFS</a></li><li class="depth-2"><a href="#benefits" data-for="benefits">Benefits</a></li><li class="depth-2"><a href="#use-cases" data-for="use-cases">Use Cases</a></li><li class="depth-1"><a href="#fsx" data-for="fsx">FSx</a></li><li class="depth-2"><a href="#benefits-1" data-for="benefits-1">Benefits</a></li><li class="depth-2"><a href="#use-case-2" data-for="use-case-2">Use Case</a></li><li class="depth-0"><a href="#choosing-storage" data-for="choosing-storage">Choosing Storage</a></li><li class="depth-1"><a href="#performance" data-for="performance">Performance</a></li><li class="depth-1"><a href="#key-considerations" data-for="key-considerations">Key considerations</a></li><li class="depth-1"><a href="#data-access-patterns" data-for="data-access-patterns">Data access patterns</a></li><li class="depth-1"><a href="#cost" data-for="cost">Cost</a></li><li class="depth-2"><a href="#cost-optimized-storage-for-ml" data-for="cost-optimized-storage-for-ml">Cost-optimized storage for ML</a></li><li class="depth-1"><a href="#data-structure" data-for="data-structure">Data Structure</a></li><li class="depth-2"><a href="#transform-data" data-for="transform-data">Transform data</a></li><li class="depth-2"><a href="#use-columnar-storage" data-for="use-columnar-storage">Use columnar storage</a></li><li class="depth-2"><a href="#compress-data" data-for="compress-data">Compress data</a></li><li class="depth-2"><a href="#format-splittable-data" data-for="format-splittable-data">Format splittable data</a></li><li class="depth-0"><a href="#data-ingestion" data-for="data-ingestion">Data Ingestion</a></li><li class="depth-1"><a href="#collecting-data" data-for="collecting-data">Collecting data</a></li><li class="depth-1"><a href="#data-ingestion-methods" data-for="data-ingestion-methods">Data Ingestion methods</a></li><li class="depth-2"><a href="#use-cases-1" data-for="use-cases-1">Use Cases</a></li><li class="depth-1"><a href="#dedicated-streaming-services" data-for="dedicated-streaming-services">Dedicated Streaming Services</a></li><li class="depth-2"><a href="#kinesis" data-for="kinesis">Kinesis</a></li><li class="depth-2"><a href="#msk" data-for="msk">MSK</a></li><li class="depth-0"><a href="#data-extraction" data-for="data-extraction">Data Extraction</a></li><li class="depth-1"><a href="#transferring-data" data-for="transferring-data">Transferring data</a></li><li class="depth-1"><a href="#data-transfer-and-extraction-tools" data-for="data-transfer-and-extraction-tools">Data transfer and extraction tools</a></li><li class="depth-2"><a href="#cli" data-for="cli">CLI</a></li><li class="depth-2"><a href="#sdks" data-for="sdks">SDKs</a></li><li class="depth-2"><a href="#s3-transfer-acceleration" data-for="s3-transfer-acceleration">S3 Transfer Acceleration</a></li><li class="depth-2"><a href="#dms-database-migration-service" data-for="dms-database-migration-service">DMS (Database Migration Service)</a></li><li class="depth-2"><a href="#lambda" data-for="lambda">Lambda</a></li><li class="depth-2"><a href="#glue" data-for="glue">Glue</a></li><li class="depth-2"><a href="#datasync" data-for="datasync">DataSync</a></li><li class="depth-2"><a href="#snowball" data-for="snowball">Snowball</a></li><li class="depth-1"><a href="#services-to-extract-data-from" data-for="services-to-extract-data-from">Services to extract data from</a></li><li class="depth-2"><a href="#s3-1" data-for="s3-1">S3</a></li><li class="depth-2"><a href="#ebs-1" data-for="ebs-1">EBS</a></li><li class="depth-2"><a href="#efs-1" data-for="efs-1">EFS</a></li><li class="depth-2"><a href="#rds" data-for="rds">RDS</a></li><li class="depth-2"><a href="#dynamodb" data-for="dynamodb">DynamoDB</a></li><li class="depth-0"><a href="#data-merging" data-for="data-merging">Data Merging</a></li><li class="depth-1"><a href="#glue-1" data-for="glue-1">Glue</a></li><li class="depth-2"><a href="#identify-data-sources" data-for="identify-data-sources">Identify data sources</a></li><li class="depth-2"><a href="#create-an-aws-glue-crawler" data-for="create-an-aws-glue-crawler">Create an AWS Glue crawler</a></li><li class="depth-2"><a href="#generate-etl-scripts-and-define-jobs" data-for="generate-etl-scripts-and-define-jobs">Generate ETL scripts and define jobs</a></li><li class="depth-2"><a href="#output-results" data-for="output-results">Output results</a></li><li class="depth-1"><a href="#emr" data-for="emr">EMR</a></li><li class="depth-2"><a href="#ingest-streaming-data" data-for="ingest-streaming-data">Ingest streaming data</a></li><li class="depth-2"><a href="#distribute-across-emr-cluster" data-for="distribute-across-emr-cluster">Distribute across EMR Cluster</a></li><li class="depth-2"><a href="#transform-data-1" data-for="transform-data-1">Transform data</a></li><li class="depth-2"><a href="#output-to-s3" data-for="output-to-s3">Output to S3</a></li><li class="depth-1"><a href="#sagemaker-data-wrangler" data-for="sagemaker-data-wrangler">SageMaker Data Wrangler</a></li><li class="depth-2"><a href="#select-and-query" data-for="select-and-query">Select and query</a></li><li class="depth-2"><a href="#visualize" data-for="visualize">Visualize</a></li><li class="depth-2"><a href="#cleanse-and-enrich" data-for="cleanse-and-enrich">Cleanse and enrich</a></li><li class="depth-2"><a href="#understand" data-for="understand">Understand</a></li><li class="depth-2"><a href="#operationalize" data-for="operationalize">Operationalize</a></li><li class="depth-2"><a href="#integrate-a-data-preparation-workflow" data-for="integrate-a-data-preparation-workflow">Integrate a data preparation workflow</a></li><li class="depth-2"><a href="#export-prepared-data" data-for="export-prepared-data">Export prepared data</a></li><li class="depth-1"><a href="#merging-data-with-programming-techniques" data-for="merging-data-with-programming-techniques">Merging data with programming techniques</a></li><li class="depth-0"><a href="#data-ingestion-and-storage-troubleshooting" data-for="data-ingestion-and-storage-troubleshooting">Data Ingestion and Storage Troubleshooting</a></li><li class="depth-1"><a href="#monitoring-tools" data-for="monitoring-tools">Monitoring tools</a></li><li class="depth-2"><a href="#cloudwatch-metrics" data-for="cloudwatch-metrics">CloudWatch Metrics</a></li><li class="depth-2"><a href="#cloudwatch-logs" data-for="cloudwatch-logs">CloudWatch Logs</a></li><li class="depth-2"><a href="#service-dashboards" data-for="service-dashboards">Service Dashboards</a></li><li class="depth-1"><a href="#aws-storage-service-metrics" data-for="aws-storage-service-metrics">AWS Storage service metrics</a></li><li class="depth-2"><a href="#ebs-2" data-for="ebs-2">EBS</a></li><li class="depth-2"><a href="#s3-2" data-for="s3-2">S3</a></li><li class="depth-2"><a href="#efs-2" data-for="efs-2">EFS</a></li><li class="depth-2"><a href="#fsx-1" data-for="fsx-1">FSx</a></li><li class="depth-1"><a href="#scalability-issues" data-for="scalability-issues">Scalability issues</a></li><li class="depth-2"><a href="#capacity-issues-with-data-destinations" data-for="capacity-issues-with-data-destinations">Capacity issues with data destinations</a></li><li class="depth-2"><a href="#latency-issues-iops-and-data-transfer-times" data-for="latency-issues-iops-and-data-transfer-times">Latency issues, IOPs, and data transfer times</a></li><li class="depth-2"><a href="#uneven-distribution-of-data-access" data-for="uneven-distribution-of-data-access">Uneven distribution of data access</a></li><li class="depth-1"><a href="#ingestion-modifications" data-for="ingestion-modifications">Ingestion modifications</a></li><li class="depth-2"><a href="#batching-with-amazon-kinesis" data-for="batching-with-amazon-kinesis">Batching with Amazon Kinesis</a></li><li class="depth-2"><a href="#compressing-data-during-transfer" data-for="compressing-data-during-transfer">Compressing data during transfer</a></li><li class="depth-2"><a href="#data-partitioning-with-amazon-kinesis" data-for="data-partitioning-with-amazon-kinesis">Data partitioning with Amazon Kinesis</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

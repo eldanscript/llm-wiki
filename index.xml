@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Ubuntu PC 기반 개인 AI 에이전트 생태계. MacBook에서 구축한 AI 에이전트들을 Ubuntu PC로 이전하고, 24/7 자동화 워크플로우를 구축하는 프로젝트. ]]></description>
-    <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+    <title>AWS AI 서비스 개요</title>
+    <link>https://eldanscript.github.io/llm-wiki/2.areas/aws/aws-overview</link>
+    <guid>https://eldanscript.github.io/llm-wiki/2.areas/aws/aws-overview</guid>
+    <description><![CDATA[ AWS AI 서비스 개요 Amazon Web Services의 AI/ML 서비스 포트폴리오 요약. ]]></description>
+    <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Claude-Code</title>
-    <link>https://eldanscript.github.io/llm-wiki/tools/claude-code</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tools/claude-code</guid>
-    <description><![CDATA[ Claude Code Anthropic이 제공하는 터미널 기반 AI 코딩 어시스턴트 CLI. 파일 시스템·터미널·외부 도구를 직접 제어하며 Agentic AI 팀의 핵심 실행 단위로 동작한다. ]]></description>
-    <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Concepts</title>
-    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
+    <title>self-attention</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/self-attention</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/self-attention</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 31 May 2026 23:09:56 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
   </item><item>
-    <title>Companies</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
+    <title>foundation-model</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/foundation-model</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/foundation-model</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 31 May 2026 23:09:56 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
   </item><item>
-    <title>Entities</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
+    <title>moe</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/moe</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/moe</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 31 May 2026 23:09:56 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
   </item><item>
-    <title>Projects</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/</guid>
+    <title>sparse</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/sparse</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/sparse</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 31 May 2026 23:09:56 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
   </item><item>
-    <title>Tools</title>
-    <link>https://eldanscript.github.io/llm-wiki/tools/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tools/</guid>
+    <title>active-params</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/active-params</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/active-params</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 31 May 2026 23:09:56 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
   </item><item>
-    <title>Topics</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/</guid>
+    <title>ssm</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/ssm</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/ssm</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 31 May 2026 23:09:56 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
   </item><item>
-    <title>wiki</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/wiki</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/wiki</guid>
+    <title>mamba</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/mamba</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/mamba</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 31 May 2026 23:09:56 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
   </item><item>
-    <title>agentic-ai</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/agentic-ai</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/agentic-ai</guid>
+    <title>long-context</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/long-context</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/long-context</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 31 May 2026 23:09:56 GMT</pubDate>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
+  </item><item>
+    <title>open-model</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/open-model</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/open-model</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Sat, 06 Jun 2026 10:18:59 GMT</pubDate>
   </item>
     </channel>
   </rss>

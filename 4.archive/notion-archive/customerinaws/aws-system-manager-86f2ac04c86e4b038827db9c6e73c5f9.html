@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>AWS System Manager 86f2ac04c86e4b038827db9c6e73c5f9 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="AWS System Manager 86f2ac04c86e4b038827db9c6e73c5f9 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AWS System Manager 86f2ac04c86e4b038827db9c6e73c5f9 | LLM Wiki"/><meta name="twitter:description" content="👕 AWS System Manager Operation hub for AWS applications and resources Functions Features Operation 1. Access System Manager 2. Capabilities (능력) 3."/><meta property="og:description" content="👕 AWS System Manager Operation hub for AWS applications and resources Functions Features Operation 1. Access System Manager 2. Capabilities (능력) 3."/><meta property="og:image:alt" content="👕 AWS System Manager Operation hub for AWS applications and resources Functions Features Operation 1. Access System Manager 2. Capabilities (능력) 3."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/aws-system-manager-86f2ac04c86e4b038827db9c6e73c5f9"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/aws-system-manager-86f2ac04c86e4b038827db9c6e73c5f9"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="👕 AWS System Manager Operation hub for AWS applications and resources Functions Features Operation 1. Access System Manager 2. Capabilities (능력) 3."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/customerinaws/aws-system-manager-86f2ac04c86e4b038827db9c6e73c5f9" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-943" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-943" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/customerinaws/">CustomerInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>AWS System Manager 86f2ac04c86e4b038827db9c6e73c5f9</a></div></nav><h1 class="article-title">AWS System Manager 86f2ac04c86e4b038827db9c6e73c5f9</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:12.234Z">2026년 6월 06일</time><span>10 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>👕</p>
+<h1 id="aws-system-manager">AWS System Manager<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-system-manager" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#bd64e242-ceee-4928-8b98-0367d8c7e2fc" class="internal internal-link alias">Operation hub for AWS applications and resources</a></p>
+<p><a href="#b0df995d-d6e6-43f9-8d9c-1ff7d21c202f" class="internal internal-link alias">Functions</a></p>
+<p><a href="#d555b4e6-455f-4a48-8437-a8b67cb9626e" class="internal internal-link alias">Features</a></p>
+<p><a href="#2e58fd5c-88a6-47bb-b48f-8c32c02dec0b" class="internal internal-link alias">Operation</a></p>
+<p><a href="#120b8de6-a2a0-407e-9257-814fc4624776" class="internal internal-link alias">1. Access System Manager</a></p>
+<p><a href="#2b51d5b3-b415-4126-ac7b-e2727cb29de6" class="internal internal-link alias">2. Capabilities (능력)</a></p>
+<p><a href="#a50b2e38-12dc-4b4f-9b09-bef344d6e8c1" class="internal internal-link alias">3. Verification and Processing</a></p>
+<p><a href="#428a22f9-feab-491d-bd8b-c6c372d31bd1" class="internal internal-link alias">4. Reporting</a></p>
+<p><a href="#941ddc39-84fb-4f40-b480-66db8543a960" class="internal internal-link alias">5. Operation management capabilities</a></p>
+<p><a href="#634379a9-bfea-4571-a509-f20f2e5e858e" class="internal internal-link alias">AWS Example</a></p>
+<p><a href="#efd63039-c7e4-40e3-8515-9ef41629b981" class="internal internal-link alias">Example Operation</a></p>
+<p><a href="#b0c5c04b-f942-4bf9-b32b-830035346226" class="internal internal-link alias">Configuration</a></p>
+<p><a href="#55151023-d506-40ff-9201-ef5ffe8c3849" class="internal internal-link alias">Workflow</a></p>
+<p><a href="#e5386b23-fd0b-4333-9114-920eb0e68ae2" class="internal internal-link alias">Patching Process</a></p>
+<p><a href="#b40e2608-a7dc-406e-896d-058de42dc6d8" class="internal internal-link alias">Inventory Data Gather</a></p>
+<p><a href="#ed345967-9bc2-4d4f-8e3b-f5558443e61e" class="internal internal-link alias">Hands-On Procedure</a></p>
+<p><a href="#eb9f1f16-d90b-4bdc-a66a-5e4e93e04128" class="internal internal-link alias">Multi-account environment setup</a></p>
+<p><a href="#25c4436c-538d-49aa-bd9d-583229a85090" class="internal internal-link alias">CloudFormation</a></p>
+<p><a href="#5c6e31f0-722b-4414-a5eb-1576e3583eae" class="internal internal-link alias">Central Account</a></p>
+<p><a href="#7bfe0386-bebf-4dbe-9cba-be065e97c5a0" class="internal internal-link alias">Pre-Requisites</a></p>
+<p><a href="#7a277348-19ef-47cf-992c-d3702c8ae717" class="internal internal-link alias">Create Resource - Initial</a></p>
+<p><a href="#d8a446ad-0c0a-4034-a845-d81e70d45e8c" class="internal internal-link alias">Create Resource - Operation</a></p>
+<p><a href="#09b74870-1125-4fe1-8afa-ef94a0c9de6f" class="internal internal-link alias">Create StackSet - Deploy to OU or target account</a></p>
+<p><a href="#c781f477-84a5-4b6d-a5a4-cc139324290c" class="internal internal-link alias">Target Account</a></p>
+<p><a href="#0306199d-0396-41da-9867-e86803a96d2d" class="internal internal-link alias">Stackset IAM role</a></p>
+<p><a href="#4fee534c-1880-41a4-babd-0a238380becf" class="internal internal-link alias">Resource Create</a></p>
+<p><a href="#78cccda9-4ce7-4b9e-9df5-a0687342ef69" class="internal internal-link alias">Automation</a></p>
+<p><a href="#c07349e4-865e-4ab4-a199-ce408c8a1dde" class="internal internal-link alias">IAM Role Assign</a></p>
+<p><a href="#3ff275d1-bf88-4c9b-ba82-780d8e3d8ed5" class="internal internal-link alias">Lambda Code</a></p>
+<h1 id="operation-hub-for-aws-applications-and-resources">Operation hub for AWS applications and resources<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#operation-hub-for-aws-applications-and-resources" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Secure</p>
+</li>
+<li>
+<p>End-to-end</p>
+</li>
+<li>
+<p>Management solution</p>
+</li>
+<li>
+<p>For hybrid cloud environment that enables secure operation at scale</p>
+</li>
+</ul>
+<p>💡</p>
+<p>Systems Manager 관리 서비스를 통해 소프트웨어 인벤토리를 자동으로 수집하고 OS 패치를 적용하고 관리 작업 및 복잡한 워크플로를 자동화하는 방법에 대해 알아보십시오. 또한 배스천 호스트가 리소스를 관리해야 하는 번거로움을 어떻게 덜어주는지도 확인할 수 있습니다. Run Command, 상태 관리자, 인벤토리, 패치 관리자, 유지 관리 기간, 자동화, 파라미터 스토어, 세션 관리자, OpsCenter, Explorer, Change Calendar, Distributor 등의 기능을 살펴봅니다.</p>
+<h2 id="functions">Functions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#functions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>소프트웨어 인벤토리를 자동으로 수집</li>
+</ul>
+<p>💡</p>
+<p>Inventory : 플레이어가 소유하는 아이템이 수납되는 장소의 총칭, 수납된 물품 목록, 재고 목록</p>
+<ul>
+<li>
+<p>OS 패치를 적용</p>
+</li>
+<li>
+<p>관리 작업 및 복잡한 워크플로를 자동화</p>
+</li>
+</ul>
+<h2 id="features">Features<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#features" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Application Management</p>
+<ul>
+<li>
+<p>Application Manager</p>
+</li>
+<li>
+<p>AppConfig</p>
+</li>
+<li>
+<p>Parameter Store</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Change Management</p>
+<ul>
+<li>
+<p>Change Manager</p>
+</li>
+<li>
+<p>Automation</p>
+</li>
+<li>
+<p>Change Calendar</p>
+</li>
+<li>
+<p>Maitenance Windows</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Node Management</p>
+<ul>
+<li>
+<p>Compliance</p>
+</li>
+<li>
+<p>Fleet Manager</p>
+</li>
+<li>
+<p>Inventory</p>
+</li>
+<li>
+<p>Session Manager</p>
+</li>
+<li>
+<p>Run Command</p>
+</li>
+<li>
+<p>State Manager</p>
+</li>
+<li>
+<p>Patch Manager</p>
+</li>
+<li>
+<p>Distributor</p>
+</li>
+<li>
+<p>Hybrid Activations</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Operations Management</p>
+<ul>
+<li>
+<p>Incident Manager</p>
+</li>
+<li>
+<p>Explorer</p>
+</li>
+<li>
+<p>OpsCenter</p>
+</li>
+<li>
+<p>CloudWatch Dashboards</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Shared Resources</p>
+<ul>
+<li>
+<p>Documents (SSM document) : SSM이 수행할 동작을 정의</p>
+</li>
+<li>
+<p>JSON, YAML</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="operation">Operation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#operation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-access-system-manager">1. Access System Manager<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-access-system-manager" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>System Manager console</p>
+</li>
+<li>
+<p>AWS IoT GG V2 console</p>
+</li>
+<li>
+<p>AWS CLI</p>
+</li>
+<li>
+<p>AWS SDK</p>
+</li>
+</ul>
+<h3 id="2-capabilities-능력">2. Capabilities (능력)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-capabilities-능력" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>상태 관리자 (State Manager)</p>
+</li>
+<li>
+<p>인벤토리 (Inventory)</p>
+</li>
+<li>
+<p>패치 관리자 (Patch Manager)</p>
+</li>
+<li>
+<p>유지 관리 기간 (Maintenance Windows)</p>
+</li>
+<li>
+<p>세션 관리자 (Session Manager)</p>
+</li>
+<li>
+<p>Fleet Manager</p>
+</li>
+</ul>
+<h3 id="3-verification-and-processing">3. Verification and Processing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-verification-and-processing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>무엇을 검증 : 지정된 작업에 적합한 권한을 가지고 있는지</p>
+</li>
+<li>
+<p>System Manager는 지정된 동작을 수행 혹은 System Manager를 대표해서 동작을 수행할 AWS 서비스와 통신</p>
+</li>
+</ul>
+<h3 id="4-reporting">4. Reporting<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-reporting" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h3 id="5-operation-management-capabilities">5. Operation management capabilities<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-operation-management-capabilities" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Operation 데이터를 수집</p>
+</li>
+<li>
+<p>리소스의 이벤트나 에러에 따라 결과물(artifiact)을 생성</p>
+<ul>
+<li>Artifiact : OpsItems (작업 결과 아이템) + Incident (사건)</li>
+</ul>
+</li>
+<li>
+<p>애플리케이션이나 리소스에 대한 운영 통찰력을 제공</p>
+</li>
+<li>
+<p>해결해야 할 문제(troubleshoot problem)를 돕는 자동 완화 솔루션을 제공</p>
+</li>
+<li>
+<p>Explorer</p>
+<ul>
+<li>a customizable operations dashboard that reports information about your AWS resources</li>
+</ul>
+</li>
+<li>
+<p>OpsCenter</p>
+<ul>
+<li>view, investigate, and resolve operational work items (OpsItems)</li>
+</ul>
+</li>
+<li>
+<p>Incident Manager</p>
+<ul>
+<li>manage incidents occurring in your AWS hosted applications</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../aws-system-manager/untitled.png" class="internal internal-link" data-slug="aws-system-manager/untitled.png"><img src="../../../4.archive/notion-archive/attachments/untitled-130.png" alt/></a></p>
+<h1 id="aws-example">AWS Example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>[</p>
+<p>aws-management-and-governance-samples/AWSSystemsManager/CentralizedPatchManagement at master · aws-samples/aws-management-and-governance-samples</p>
+<p>The purpose of this series of AWS CloudFormation templates is to setup a scheduled multi-account and multi-Region (MAMR) patching operation using Amazon EventBridge rules, AWS Lambda, and AWS Systems Manager Automation. Additionally, Systems Manager Inventory is enabled using a State Manager association.</p>
+<p><img src="https://github.com/favicon.ico" alt/><a href="https://github.com/aws-samples/aws-management-and-governance-samples/tree/master/AWSSystemsManager/CentralizedPatchManagement" class="external external-link">https://github.com/aws-samples/aws-management-and-governance-samples/tree/master/AWSSystemsManager/CentralizedPatchManagement<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="https://opengraph.githubassets.com/8aff376b4c39f787e398d351ef20ba8392fe44e9f6cebb4b2d4fbd75b52980f2/aws-samples/aws-management-and-governance-samples" alt/>](<a href="https://github.com/aws-samples/aws-management-and-governance-samples/tree/master/AWSSystemsManager/CentralizedPatchManagement" class="external external-link">https://github.com/aws-samples/aws-management-and-governance-samples/tree/master/AWSSystemsManager/CentralizedPatchManagement<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="example-operation">Example Operation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#example-operation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../aws-system-manager/untitled-1.png" class="internal internal-link" data-slug="aws-system-manager/untitled-1.png"><img src="../../../4.archive/notion-archive/attachments/untitled-1-86.png" alt/></a></p>
+<h3 id="configuration">Configuration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#configuration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Central Account : Automation Account</p>
+</li>
+<li>
+<p>Target Account : EC2 instance, On-prem instance</p>
+</li>
+</ul>
+<h3 id="workflow">Workflow<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#workflow" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>CloudWatch Event → Lambda function → Call a MAMR (multi-account and multi-region) Automation operation</p>
+</li>
+<li>
+<p>Command document (AWS-RunPatchBaseline)로 managed instances 패치</p>
+</li>
+<li>
+<p>제공된 스케줄에 따라 CloudWatch Event로 최초 수행 이후 패치 작업과 패치 규정 준수 데이터는 대상 인스턴스에서 사용 가능</p>
+<ul>
+<li>스케줄 메커니즘 : EventBridge rule 혹은 System Manager Maintenace Window 사용</li>
+</ul>
+</li>
+<li>
+<p>패치 작업</p>
+<ul>
+<li>
+<p>빠진 업데이트를 스캔</p>
+</li>
+<li>
+<p>관리 인스턴스는 patch baseline 승인 규칙에 따라 패치를 스캔</p>
+</li>
+</ul>
+</li>
+<li>
+<p>상태 관리자 Association이 생성되어 소프트웨어 인벤토리 데이터를 수집</p>
+<ul>
+<li>설치된 애플리케이션, AWS 컴포넌트, 네트워크 구성</li>
+</ul>
+</li>
+<li>
+<p>인벤토리 데이터 수집이 성공 여부에 따라 규정 준수 데이터 리포트</p>
+</li>
+<li>
+<p>Resource Data Sync는 패치 데이터, 인벤토리 데이터, 규정 준수 데이터를 중앙 집중화된 S3 버킷으로 export</p>
+</li>
+</ul>
+<p>💡</p>
+<p>Scan (missing update) → Patch → Gather (Inventory data) → Report (Data Sync)</p>
+<h3 id="patching-process">Patching Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#patching-process" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>CloudWatch Event triggers based on schedule.</p>
+</li>
+<li>
+<p>CloudWatch Event rule initiates the Lambda function to call the Automation API <code>StartAutomationExecution</code> against the targeted accounts and regions.</p>
+</li>
+<li>
+<p>The Automation workflow is initiated in each target account and region.</p>
+</li>
+<li>
+<p>The workflow initiates the Run Command document <code>AWS-RunPatchBaseline</code> with the operation specified.</p>
+</li>
+<li>
+<p>Results from the Run Command task are outputted to the centralized S3 bucket.</p>
+</li>
+<li>
+<p>Patch Compliance data is reported to Patch Manager.</p>
+</li>
+<li>
+<p>The Resource Data Sync takes the Patch Compliance data and outputs to the centralized S3 bucket.</p>
+</li>
+</ol>
+<h3 id="inventory-data-gather">Inventory Data Gather<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#inventory-data-gather" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>The State Manager Association triggers using the rate of 1 day to gather software inventory data.</p>
+</li>
+<li>
+<p>The Inventory data is reported to Systems Manager.</p>
+</li>
+<li>
+<p>The Resource Data Sync takes the Inventory data and outputs to the centralized S3 bucket.</p>
+</li>
+</ol>
+<h1 id="hands-on-procedure">Hands-On Procedure<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hands-on-procedure" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="multi-account-environment-setup">Multi-account environment setup<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multi-account-environment-setup" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="cloudformation">CloudFormation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cloudformation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>git clone <a href="https://github.com/aws-samples/aws-management-and-governance-samples.git" class="external external-link">https://github.com/aws-samples/aws-management-and-governance-samples.git<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>folder : aws-management-and-governance-samples/AWSSystemsManager/CentralizedPatchManagement</p>
+</li>
+</ul>
+<h2 id="central-account">Central Account<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#central-account" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://github.com/aws-samples/aws-management-and-governance-samples/tree/master/AWSSystemsManager/CentralizedPatchManagement#resources-created---central-account" class="external external-link">https://github.com/aws-samples/aws-management-and-governance-samples/tree/master/AWSSystemsManager/CentralizedPatchManagement#resources-created---central-account<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../aws-system-manager/untitled-2.png" class="internal internal-link" data-slug="aws-system-manager/untitled-2.png"><img src="../../../4.archive/notion-archive/attachments/untitled-2-57.png" alt/></a></p>
+<h3 id="pre-requisites">Pre-Requisites<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pre-requisites" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Root Organization account 혹은</p>
+</li>
+<li>
+<p>Delegated Administrator account (<a href="https://docs.aws.amazon.com/ko_kr/systems-manager/latest/userguide/Explorer-setup-delegated-administrator.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/systems-manager/latest/userguide/Explorer-setup-delegated-administrator.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+</li>
+</ul>
+<h3 id="create-resource---initial">Create Resource - Initial<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#create-resource---initial" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Template File</p>
+<p><a href="../../../aws-system-manager/opsmgmt-central-account.yaml" class="internal internal-link alias" data-slug="aws-system-manager/opsmgmt-central-account.yaml">opsmgmt-central-account.yaml</a></p>
+</li>
+<li>
+<p>Parameter</p>
+<ul>
+<li>
+<p>OrganizationId : root organization account Id (Delegated Adminstrator account Id)</p>
+</li>
+<li>
+<p>TagName : APP</p>
+</li>
+<li>
+<p>TagValue : SSM</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Resource Output</p>
+</li>
+</ul>
+<p><a href="../../../aws-system-manager/untitled-3.png" class="internal internal-link" data-slug="aws-system-manager/untitled-3.png"><img src="../../../4.archive/notion-archive/attachments/untitled-3-44.png" alt/></a></p>
+<ul>
+<li>Resource Output : Lambda Function</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> json</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">import os</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">import boto3</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">CRAWLER_NAME = os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'CRAWLER_NAME'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">DATABASE_NAME = os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'DATABASE_NAME'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">TABLE_NAME = </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'aws_instanceinformation'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">COLUMN_NAME = </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'resourcetype'</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">glue_client = boto3.client(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'glue'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">def lambda_handler(event, context):</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    print(json.dumps(event, </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">default</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">=str))</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    # Get the crawler name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> the event.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    event_crawler_name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> event[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'detail'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">][</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'crawlerName'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> event_crawler_name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">==</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> CRAWLER_NAME</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        # This is the crawler we</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'re looking for, so get a reference to the righ</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic;" data-token-type="error">t</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        # table and </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">delete</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> the column.</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        response </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> glue_client.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">get_table</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            CatalogId</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">context.invoked_function_arn.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">split</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;:&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">],</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            DatabaseName</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">DATABASE_NAME</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            Name</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">TABLE_NAME</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        )</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        # Update the column name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> the table exists.</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> response[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'Table'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]:</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            table </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> response[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'Table'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            # We have a reference to the table, so get the columns.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            columns </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> table[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'StorageDescriptor'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">][</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'Columns'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            # Remove the unwanted column.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            updated_columns </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> [i for i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> columns if </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">not</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> (i[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'Name'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">==</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> COLUMN_NAME</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            # Updat the columns for the table object.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            table[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'StorageDescriptor'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">][</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'Columns'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">] </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> updated_columns</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            # Remove unnecessary fields.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            table.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">pop</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'DatabaseName'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, None)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            table.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">pop</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'CreatedBy'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, None)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            table.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">pop</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'CreateTime'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, None)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            table.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">pop</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'UpdateTime'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, None)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            table.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">pop</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'IsRegisteredWithLakeFormation'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, None)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            table.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">pop</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'CatalogId'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, None)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            # Update the table </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">with</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> the removed </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'resourcetype'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> column.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">            response </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> glue_client.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">update_table</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">                CatalogId</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">context.invoked_function_arn.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">split</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;:&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">],</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">                DatabaseName</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">DATABASE_NAME</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">                TableInput</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">table</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            )</span></span></code></pre></figure>
+<h3 id="create-resource---operation">Create Resource - Operation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#create-resource---operation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Template file</p>
+<p><a href="../../../aws-system-manager/opsmgmt-operations-central-account.yaml" class="internal internal-link alias" data-slug="aws-system-manager/opsmgmt-operations-central-account.yaml">opsmgmt-operations-central-account.yaml</a></p>
+</li>
+<li>
+<p>Parameter</p>
+</li>
+<li>
+<p>Resource Output</p>
+</li>
+</ul>
+<p><a href="../../../aws-system-manager/untitled-4.png" class="internal internal-link" data-slug="aws-system-manager/untitled-4.png"><img src="../../../4.archive/notion-archive/attachments/untitled-4-37.png" alt/></a></p>
+<ul>
+<li>Lambda Function</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> boto3</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">import os</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">import string</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">import uuid</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">client = boto3.client(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ssm'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">def handler(event,context):</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetAccounts=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'TargetAccounts'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    b = str(TargetAccounts)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetAccountsArray = b.split(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;,&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetRegionIds=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'TargetRegionIds'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    b = str(TargetRegionIds)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetRegionIdsArray = b.split(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;,&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    RunPatchBaselineOperation=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'RunPatchBaselineOperation'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    RunPatchBaselineRebootOption=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'RunPatchBaselineRebootOption'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    RunPatchBaselineInstallOverrideList=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'RunPatchBaselineInstallOverrideList'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetLocationMaxConcurrency=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'TargetLocationMaxConcurrency'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetLocationMaxErrors=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'TargetLocationMaxErrors'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    ExecutionRoleName=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ExecutionRoleName'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    MasterAccountID=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'MasterAccountID'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    AutomationDocumentMamrRunPatchBaseline=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'AutomationDocumentMamrRunPatchBaseline'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    if len(RunPatchBaselineInstallOverrideList) > 0:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        response = client.start_automation_execution(</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        DocumentName=f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{AutomationDocumentMamrRunPatchBaseline}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        Parameters={</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'AutomationAssumeRole'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">:[f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'arn:aws:iam::{MasterAccountID}:role/AWS-SystemsManager-AutomationAdministrationRole'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'Operation'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineOperation}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'RebootOption'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineRebootOption}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'InstallOverrideList'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineInstallOverrideList}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'SnapshotId'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [str(uuid.uuid4())]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        TargetLocations=[</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">            {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'Accounts'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: TargetAccountsArray,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'Regions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: TargetRegionIdsArray,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'TargetLocationMaxConcurrency'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{TargetLocationMaxConcurrency}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'TargetLocationMaxErrors'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{TargetLocationMaxErrors}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'ExecutionRoleName'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{ExecutionRoleName}'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">            }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    )</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    else:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        response = client.start_automation_execution(</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        DocumentName=f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{AutomationDocumentMamrRunPatchBaseline}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        Parameters={</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'AutomationAssumeRole'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">:[f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'arn:aws:iam::{MasterAccountID}:role/AWS-SystemsManager-AutomationAdministrationRole'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'Operation'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineOperation}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'RebootOption'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineRebootOption}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'SnapshotId'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [str(uuid.uuid4())]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        TargetLocations=[</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">            {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'Accounts'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: TargetAccountsArray,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'Regions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: TargetRegionIdsArray,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'TargetLocationMaxConcurrency'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{TargetLocationMaxConcurrency}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'TargetLocationMaxErrors'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{TargetLocationMaxErrors}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'ExecutionRoleName'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{ExecutionRoleName}'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">            }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    )</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    print(response)</span></span></code></pre></figure>
+<ul>
+<li>SSM Document : Patch Baseline</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  &quot;schemaVersion&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;0.3&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  &quot;description&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;**Description**</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">This document runs the Command document ```AWS-RunPatchBaseline``` on the specified instances.&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  &quot;assumeRole&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;{{ AutomationAssumeRole }}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  &quot;parameters&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    &quot;AutomationAssumeRole&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;description&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;The ARN of the Automation service role to assume.&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;type&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;String&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    },</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    &quot;SnapshotId&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;default&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;description&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;(Optional) The snapshot ID to use to retrieve a patch baseline snapshot.&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;type&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;String&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    },</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    &quot;RebootOption&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;default&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;RebootIfNeeded&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;description&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;(Optional) Reboot behavior after a patch Install operation. If you choose NoReboot and patches are installed, the instance is marked as non-compliant  until a subsequent reboot and scan.&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;type&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;String&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    },</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    &quot;InstallOverrideList&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;default&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;description&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;(Optional) An https URL or an Amazon S3 path-style URL to the list of patches to be installed. This patch installation list overrides the patches specified by the default patch baseline.&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;type&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;String&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    },</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">    &quot;Operation&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;default&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;Scan&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;description&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;(Required) The update or configuration to perform on the instance. The system checks if patches specified in the patch baseline are installed on the instance. The install operation installs patches missing from the baseline.&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;type&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;String&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">  },</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">  &quot;mainSteps&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: [</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;inputs&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;OutputS3KeyPrefix&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;patching/accountid={{global:ACCOUNT_ID}}/region={{global:REGION}}/executionid={{automation:EXECUTION_ID}}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;MaxErrors&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;10%&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;Parameters&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">          &quot;SnapshotId&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;{{ SnapshotId }}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">          &quot;RebootOption&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;{{ RebootOption }}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">          &quot;InstallOverrideList&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;{{ InstallOverrideList }}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">          &quot;Operation&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;{{ Operation }}&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        },</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;MaxConcurrency&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;10%&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;Targets&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">          {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            &quot;Values&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: [</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">              &quot;WebServers&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            ],</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            &quot;Key&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;resource-groups:Name&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">          }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        ],</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;OutputS3BucketName&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;ssm-execution-logs-us-east-1-651042272095&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;DocumentName&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;AWS-RunPatchBaseline&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">      },</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;name&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;runPatchBaseline&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;action&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;aws:runCommand&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;timeoutSeconds&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">7200</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;onFailure&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;Abort&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">      &quot;description&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;This command runs the Command document ```AWS-RunPatchBaseline``` on the specified instances.&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<h3 id="create-stackset---deploy-to-ou-or-target-account">Create StackSet - Deploy to OU or target account<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#create-stackset---deploy-to-ou-or-target-account" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Permission</p>
+<p><a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html" class="external external-link">https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>Self-managed</p>
+<ul>
+<li>
+<p>Administrator account role template : <a href="https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/AWSCloudFormationStackSetAdministrationRole.yml" class="external external-link">https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/AWSCloudFormationStackSetAdministrationRole.yml<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Target account role template : <a href="https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/AWSCloudFormationStackSetExecutionRole.yml" class="external external-link">https://s3.amazonaws.com/cloudformation-stackset-sample-templates-us-east-1/AWSCloudFormationStackSetExecutionRole.yml<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Service-managed</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Template file</p>
+</li>
+</ul>
+<p><a href="../../../aws-system-manager/opsmgmt-target-account.yaml" class="internal internal-link alias" data-slug="aws-system-manager/opsmgmt-target-account.yaml">opsmgmt-target-account.yaml</a></p>
+<ul>
+<li>
+<p>Parameter</p>
+</li>
+<li>
+<p>Resource Output</p>
+</li>
+</ul>
+<h2 id="target-account">Target Account<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#target-account" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://github.com/aws-samples/aws-management-and-governance-samples/tree/master/AWSSystemsManager/CentralizedPatchManagement#resources-created---target-accounts" class="external external-link">https://github.com/aws-samples/aws-management-and-governance-samples/tree/master/AWSSystemsManager/CentralizedPatchManagement#resources-created---target-accounts<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="../../../aws-system-manager/untitled-5.png" class="internal internal-link" data-slug="aws-system-manager/untitled-5.png"><img src="../../../4.archive/notion-archive/attachments/untitled-5-27.png" alt/></a></p>
+<h3 id="stackset-iam-role">Stackset IAM role<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stackset-iam-role" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>AWSCloudFormationStackSetExecutionRole.yaml</p>
+<h3 id="resource-create">Resource Create<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#resource-create" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Target Account Hash</p>
+<ul>
+<li>
+<p>b7c0-0500a27e04-69</p>
+</li>
+<li>
+<p>6ee7-0b37b4da04-bb</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Test Instance : Amazon Linux, Windows 2019</p>
+</li>
+<li>
+<p>Template file</p>
+</li>
+</ul>
+<p><a href="../../../aws-system-manager/opsmgmt-deploy-test-instances.yaml" class="internal internal-link alias" data-slug="aws-system-manager/opsmgmt-deploy-test-instances.yaml">opsmgmt-deploy-test-instances.yaml</a></p>
+<ul>
+<li>
+<p>Parameter</p>
+<ul>
+<li>Execution Log S3 bucket : <strong>ssm-execution-logs-us-east-1-651042272095</strong></li>
+</ul>
+</li>
+</ul>
+<h1 id="automation">Automation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#automation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="iam-role-assign">IAM Role Assign<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iam-role-assign" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://docs.aws.amazon.com/systems-manager/latest/userguide/running-automations-multiple-accounts-regions.html" class="external external-link">https://docs.aws.amazon.com/systems-manager/latest/userguide/running-automations-multiple-accounts-regions.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="lambda-code">Lambda Code<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lambda-code" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> boto3</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">import os</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">import string</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">import uuid</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">client = boto3.client(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ssm'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">def handler(event,context):</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetAccounts=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'TargetAccounts'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    b = str(TargetAccounts)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetAccountsArray = b.split(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;,&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetRegionIds=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'TargetRegionIds'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    b = str(TargetRegionIds)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetRegionIdsArray = b.split(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;,&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    RunPatchBaselineOperation=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'RunPatchBaselineOperation'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    RunPatchBaselineRebootOption=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'RunPatchBaselineRebootOption'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    RunPatchBaselineInstallOverrideList=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'RunPatchBaselineInstallOverrideList'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetLocationMaxConcurrency=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'TargetLocationMaxConcurrency'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    TargetLocationMaxErrors=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'TargetLocationMaxErrors'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    ExecutionRoleName=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ExecutionRoleName'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    MasterAccountID=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'MasterAccountID'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    AutomationDocumentMamrRunPatchBaseline=os.environ[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'AutomationDocumentMamrRunPatchBaseline'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    if len(RunPatchBaselineInstallOverrideList) > 0:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        response = client.start_automation_execution(</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        DocumentName=f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{AutomationDocumentMamrRunPatchBaseline}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        Parameters={</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'AutomationAssumeRole'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">:[f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'arn:aws:iam::{MasterAccountID}:role/AWS-SystemsManager-AutomationAdministrationRole'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'Operation'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineOperation}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'RebootOption'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineRebootOption}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'InstallOverrideList'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineInstallOverrideList}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'SnapshotId'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [str(uuid.uuid4())]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        TargetLocations=[</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">            {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'Accounts'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: TargetAccountsArray,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'Regions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: TargetRegionIdsArray,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'TargetLocationMaxConcurrency'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{TargetLocationMaxConcurrency}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'TargetLocationMaxErrors'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{TargetLocationMaxErrors}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'ExecutionRoleName'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{ExecutionRoleName}'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">            }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    )</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    else:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        response = client.start_automation_execution(</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        DocumentName=f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{AutomationDocumentMamrRunPatchBaseline}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        Parameters={</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'AutomationAssumeRole'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">:[f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'arn:aws:iam::{MasterAccountID}:role/AWS-SystemsManager-AutomationAdministrationRole'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'Operation'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineOperation}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'RebootOption'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{RunPatchBaselineRebootOption}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">] ,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">            'SnapshotId'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword"> : [str(uuid.uuid4())]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        },</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        TargetLocations=[</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">            {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'Accounts'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: TargetAccountsArray,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'Regions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: TargetRegionIdsArray,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'TargetLocationMaxConcurrency'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{TargetLocationMaxConcurrency}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'TargetLocationMaxErrors'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{TargetLocationMaxErrors}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">                'ExecutionRoleName'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">: f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'{ExecutionRoleName}'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">            }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">        ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    )</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="keyword">    print(response)</span></span></code></pre></figure></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-773" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#aws-system-manager" data-for="aws-system-manager">AWS System Manager</a></li><li class="depth-0"><a href="#operation-hub-for-aws-applications-and-resources" data-for="operation-hub-for-aws-applications-and-resources">Operation hub for AWS applications and resources</a></li><li class="depth-1"><a href="#functions" data-for="functions">Functions</a></li><li class="depth-1"><a href="#features" data-for="features">Features</a></li><li class="depth-1"><a href="#operation" data-for="operation">Operation</a></li><li class="depth-2"><a href="#1-access-system-manager" data-for="1-access-system-manager">1. Access System Manager</a></li><li class="depth-2"><a href="#2-capabilities-능력" data-for="2-capabilities-능력">2. Capabilities (능력)</a></li><li class="depth-2"><a href="#3-verification-and-processing" data-for="3-verification-and-processing">3. Verification and Processing</a></li><li class="depth-2"><a href="#4-reporting" data-for="4-reporting">4. Reporting</a></li><li class="depth-2"><a href="#5-operation-management-capabilities" data-for="5-operation-management-capabilities">5. Operation management capabilities</a></li><li class="depth-0"><a href="#aws-example" data-for="aws-example">AWS Example</a></li><li class="depth-1"><a href="#example-operation" data-for="example-operation">Example Operation</a></li><li class="depth-2"><a href="#configuration" data-for="configuration">Configuration</a></li><li class="depth-2"><a href="#workflow" data-for="workflow">Workflow</a></li><li class="depth-2"><a href="#patching-process" data-for="patching-process">Patching Process</a></li><li class="depth-2"><a href="#inventory-data-gather" data-for="inventory-data-gather">Inventory Data Gather</a></li><li class="depth-0"><a href="#hands-on-procedure" data-for="hands-on-procedure">Hands-On Procedure</a></li><li class="depth-0"><a href="#multi-account-environment-setup" data-for="multi-account-environment-setup">Multi-account environment setup</a></li><li class="depth-1"><a href="#cloudformation" data-for="cloudformation">CloudFormation</a></li><li class="depth-1"><a href="#central-account" data-for="central-account">Central Account</a></li><li class="depth-2"><a href="#pre-requisites" data-for="pre-requisites">Pre-Requisites</a></li><li class="depth-2"><a href="#create-resource---initial" data-for="create-resource---initial">Create Resource - Initial</a></li><li class="depth-2"><a href="#create-resource---operation" data-for="create-resource---operation">Create Resource - Operation</a></li><li class="depth-2"><a href="#create-stackset---deploy-to-ou-or-target-account" data-for="create-stackset---deploy-to-ou-or-target-account">Create StackSet - Deploy to OU or target account</a></li><li class="depth-1"><a href="#target-account" data-for="target-account">Target Account</a></li><li class="depth-2"><a href="#stackset-iam-role" data-for="stackset-iam-role">Stackset IAM role</a></li><li class="depth-2"><a href="#resource-create" data-for="resource-create">Resource Create</a></li><li class="depth-0"><a href="#automation" data-for="automation">Automation</a></li><li class="depth-1"><a href="#iam-role-assign" data-for="iam-role-assign">IAM Role Assign</a></li><li class="depth-1"><a href="#lambda-code" data-for="lambda-code">Lambda Code</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

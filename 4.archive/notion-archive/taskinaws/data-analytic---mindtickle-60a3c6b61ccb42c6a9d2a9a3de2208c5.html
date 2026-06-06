@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Data Analytic - mindtickle 60a3c6b61ccb42c6a9d2a9a3de2208c5 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Data Analytic - mindtickle 60a3c6b61ccb42c6a9d2a9a3de2208c5 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Data Analytic - mindtickle 60a3c6b61ccb42c6a9d2a9a3de2208c5 | LLM Wiki"/><meta name="twitter:description" content="🏗️ Data Analytic - mindtickle [Data Analytic Tech Knowledge Check] A customer has plain text files in S3 and would like to query the data."/><meta property="og:description" content="🏗️ Data Analytic - mindtickle [Data Analytic Tech Knowledge Check] A customer has plain text files in S3 and would like to query the data."/><meta property="og:image:alt" content="🏗️ Data Analytic - mindtickle [Data Analytic Tech Knowledge Check] A customer has plain text files in S3 and would like to query the data."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/data-analytic---mindtickle-60a3c6b61ccb42c6a9d2a9a3de2208c5"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/data-analytic---mindtickle-60a3c6b61ccb42c6a9d2a9a3de2208c5"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🏗️ Data Analytic - mindtickle [Data Analytic Tech Knowledge Check] A customer has plain text files in S3 and would like to query the data."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/data-analytic---mindtickle-60a3c6b61ccb42c6a9d2a9a3de2208c5" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2126" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2126" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Data Analytic - mindtickle 60a3c6b61ccb42c6a9d2a9a3de2208c5</a></div></nav><h1 class="article-title">Data Analytic - mindtickle 60a3c6b61ccb42c6a9d2a9a3de2208c5</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.479Z">2026년 6월 06일</time><span>7 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🏗️</p>
+<h1 id="data-analytic---mindtickle">Data Analytic - mindtickle<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-analytic---mindtickle" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>[Data Analytic Tech Knowledge Check]</strong></p>
+<p>A customer has plain text files in S3 and would like to query the data. They are not interested in spinning up any infrastructure and would like to use SQL as the query language. Since they do not have a data warehouse, what is the best AWS Service to recommend to them to accomplish this ask?</p>
+<ul>
+<li>
+<p>EMR</p>
+</li>
+<li>
+<p>Redshift Spectrum</p>
+</li>
+<li>
+<p>Redshift</p>
+</li>
+<li>
+<p><strong>Athena</strong></p>
+</li>
+</ul>
+<p>For big data workloads, a customer is exploring using Apache Flink to process streams of data. They currently have zero AWS infrastructure and would like to begin developing/testing with Flink. What is the quickest way for them to get going with Flink on AWS?</p>
+<ul>
+<li>
+<p>Deploy the reference “Apache Flink on AWS” implementation from the AWS Solutions Library</p>
+</li>
+<li>
+<p>Flink is not supported on AWS and would have to be installed on-premises</p>
+</li>
+<li>
+<p><strong>Deploy an EMR cluster with Flink installed on the cluster</strong></p>
+</li>
+<li>
+<p>Deploy the Apache Flink Kinesis Data Streams Connector</p>
+</li>
+</ul>
+<p>Which are valid options for importing data into AWS Lake Formation’s S3 storage. [SELECT 3]</p>
+<ul>
+<li>
+<p><strong>Using blueprints to import database data from Amazon RDS or EC2</strong></p>
+</li>
+<li>
+<p><strong>Pointing Lake Formation to existing S3 buckets</strong></p>
+</li>
+<li>
+<p>Automatically crawl data sources using Sagemaker Data Insight</p>
+</li>
+<li>
+<p><strong>Creating custom ETL jobs with AWS Glue for importig</strong></p>
+</li>
+</ul>
+<p>A customer has a Redshift cluster where they perform all their Business Intelligence work. They have recently started importing data in their S3 data lake and realized they want to query the data using SQL. What is the simplest way to make that data available to their Redshift cluster?</p>
+<ul>
+<li>
+<p>Use Amazon Athena</p>
+</li>
+<li>
+<p><strong>Use Amazon Redshift Spectrum</strong></p>
+</li>
+<li>
+<p>Use Amazon Redshift Federated Query</p>
+</li>
+<li>
+<p>Use an elevated Amazon IAM policy</p>
+</li>
+</ul>
+<p>What is the concept of data gravity?</p>
+<ul>
+<li>
+<p><strong>As data accumulates there is a greater likelihood that additional services and applications will be attracted to this data.</strong></p>
+</li>
+<li>
+<p><strong>Data has weight to it depending on where it</strong> is stored. Databases are the heaviest type whereas Data warehouses are the lightest</p>
+</li>
+<li>
+<p>The speed of data ingestion determines the gravity. The quicker the ingestion the higher the gravity of the data</p>
+</li>
+<li>
+<p>Data is less likely to be queried if it is compressed. The amount of compression determines the query speed</p>
+</li>
+</ul>
+<p>Which of the following are server-less AWS Services or features? [SELECT 3]</p>
+<ul>
+<li>
+<p><strong>Redshift spectrum</strong></p>
+</li>
+<li>
+<p>EC2</p>
+</li>
+<li>
+<p><strong>Athena</strong></p>
+</li>
+<li>
+<p>EMR</p>
+</li>
+<li>
+<p><strong>Glue</strong></p>
+</li>
+</ul>
+<p>A customer wants to stream data into S3 from an EC2 instance. Which of the following options would be the quickest way for them to do that?</p>
+<ul>
+<li>
+<p>Write a streaming function and deploy it to the EC2 instance</p>
+</li>
+<li>
+<p><strong>Use Amazon Kinesis Data Firehose to stream the data</strong></p>
+</li>
+<li>
+<p>Use Amazon Simple Queue Service to push data to S3</p>
+</li>
+<li>
+<p>Create a batch streaming Lambda function paired with SQS</p>
+</li>
+</ul>
+<p>Which of the following AWS Services support general availability of Federated Query as of June 2020?</p>
+<ul>
+<li>
+<p>Athena</p>
+</li>
+<li>
+<p><strong>Redshift</strong></p>
+</li>
+<li>
+<p>SQS</p>
+</li>
+<li>
+<p>Snowball Edge</p>
+</li>
+</ul>
+<p>A customer has an Amazon Redshift cluster, an RDS PostgreSQL database and an S3 datalake. What’s the simplest way they can access their PostgreSQL data from Redshift?</p>
+<ul>
+<li>
+<p><a href="https://docs.aws.amazon.com/redshift/latest/dg/federated-overview.html" class="external external-link"><strong>Use RedShfit Federated Query</strong><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Use RedShfit Spectrum</p>
+</li>
+<li>
+<p>Use Lake Formation to index PostgreSQL</p>
+</li>
+<li>
+<p>Use Quicksight connectors for Redshift and PostgreSQL</p>
+</li>
+</ul>
+<p>A customer has an existing Teradata deployment along with data sitting in S3. They would like to visualize these datasets as embedded dashboards in their website so users can see all their data at once. Which of the following options is the simplest to accomplish this goal?</p>
+<ul>
+<li>
+<p>Use Amazon Athena to query both the Teradata cluster and S3 then visualize using Javascript</p>
+</li>
+<li>
+<p>Import data onto a staging Amazon EC2 instance and use Tableau to visualize</p>
+</li>
+<li>
+<p><strong>Use Amazon Quicksight to visualize since it supports S3 and 3rd party tools like Teradata</strong></p>
+</li>
+<li>
+<p>Write a custom EMR connector for querying and AWS AppSync for visualizing</p>
+</li>
+</ul>
+<p>A customer is using Amazon Athena to query the table pointing to human readable text files stored on Amazon S3. What would you recommend to help them improve their cost?</p>
+<ul>
+<li>
+<p>Reduce S3 fragmentation by turning on S3 columnar storage</p>
+</li>
+<li>
+<p><strong>Convert the text files to a text-optimized format like Parquet</strong></p>
+</li>
+<li>
+<p>Insert AWS Glue in between Amazon Athena and Amazon S3</p>
+</li>
+<li>
+<p>Build a Redshift cluster and use Redshift Spectrum</p>
+</li>
+</ul>
+<p>A customer wants to setup a data lake with 90% of data being copied to the data lake. They would also like to access data from remote locations such as live production databases so they always have the latest version of data. What two patterns could they implement in their data lake to achiever this? [SELECT 2]</p>
+<ul>
+<li>
+<p><strong>Centralized</strong></p>
+</li>
+<li>
+<p><strong>Virtualized</strong></p>
+</li>
+<li>
+<p>Spherical</p>
+</li>
+<li>
+<p>Conglomerated</p>
+</li>
+<li>
+<p>Dynamic</p>
+</li>
+</ul>
+<hr/>
+<h2 id="data-lake">Data Lake<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-lake" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Data Gravity</p>
+<ul>
+<li>
+<p>More data = More request</p>
+</li>
+<li>
+<p>The more data you have, the more requests for that data are going to come in</p>
+</li>
+</ul>
+<p>💡</p>
+<p>How can handle this? Without having to overload APIs, access raw data, or have each service create their own copies of the same data.</p>
+</li>
+<li>
+<p>Data Lake</p>
+<ul>
+<li>
+<p>Centralized repository to store all structured and unstructured data at any scale</p>
+</li>
+<li>
+<p>Centralized : data lake exists as the single source of truth</p>
+</li>
+<li>
+<p>Data will exist in the source and the only copy is in the data lake itself</p>
+</li>
+<li>
+<p>A service decides what data it wants to export and in what format which is independent from its underlying database</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Schema on Read</p>
+<ul>
+<li>Schema created only when reading the relevant data</li>
+</ul>
+<p>💡</p>
+<p>Customers don’t need to define the schema or transform the data at ingestion</p>
+</li>
+<li>
+<p>AWS Lake Formation</p>
+<ul>
+<li>
+<p>Setup a data lake in days</p>
+<ul>
+<li>
+<p>Performs all the heavy lifting of setting up a secure, scalable, and cost-effective data lake for customers</p>
+</li>
+<li>
+<p>Setup where the data sources are, along with data access and security policies</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Lake Formation copies the data over to Amazon S3</p>
+<ul>
+<li>
+<p>Use blueprints to import data from MySQL, PostgreSQL, SQL Server, Maria DB, Oracle DB locate on RDS or hosted on EC2, or On-Premises databases using Java Database Connectivity (JDBC)</p>
+</li>
+<li>
+<p>Create custom ETL jobs with AWS Glue</p>
+</li>
+<li>
+<p>Register S3 buckets to Lake Formation</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Amazon Athena Queries</p>
+<p>💡</p>
+<p>If plain text files are stored in S3, convert them to a text-optimized format like Parquet to increase performance and potentially decrease Athena costs</p>
+</li>
+<li>
+<p>Amazon EMR</p>
+<ul>
+<li>
+<p>Spin up clusters for short or long-term processing of big data workloads</p>
+</li>
+<li>
+<p>Customer needs to process data using frameworks such as Hive, Spark or Flink</p>
+</li>
+<li>
+<p>Provision clusters in minutes and run favorite frameworks natively</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Amazon RedShift</p>
+<ul>
+<li>
+<p>Fully managed cloud data warehouse to analyze all data</p>
+</li>
+<li>
+<p>To modernize a customer’s data warehouse, recommend to migrate it to flagship data warehouse service, RedShift</p>
+</li>
+</ul>
+</li>
+<li>
+<p>RedShift Spectrum</p>
+<ul>
+<li>
+<p>Combine RedShift data with S3 data</p>
+</li>
+<li>
+<p>Serverless using SQL queries</p>
+</li>
+<li>
+<p>Execute highly sophisticated queries against an exabyte of data or more, in mere minutes</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When to use Athena vs RedShift Spectrum</p>
+<p>Athena for ad-hoc interactive queries</p>
+<p>RedShift Spectrum to join RedShfit data with data sitting in S3</p>
+</li>
+<li>
+<p><a href="https://aws.amazon.com/ko/blogs/korea/query-any-data-source-with-amazon-athenas-new-federated-query/" class="external external-link">Federated Query<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>In preview for Athena, but GA for RedShift</p>
+</li>
+<li>
+<p>Allow customers to query live data across one or more Amazon RDS and Aurora PostgreSQL using RedShift external schemas</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Virtualized data lake</p>
+<ul>
+<li>
+<p>Federated Query pulls the metadata from these source databases through system views and driver APIs</p>
+</li>
+<li>
+<p>This allows QuickSight and other BI tools to connect and query data without having to make local copies of the actual data</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Analytics Lens</p>
+<ul>
+<li>
+<p>Data Ingestion</p>
+</li>
+<li>
+<p>Security and Governance</p>
+</li>
+<li>
+<p>Catalog and Search</p>
+</li>
+<li>
+<p>Central Storage</p>
+</li>
+<li>
+<p>Processing and Analytics</p>
+</li>
+<li>
+<p>User Access</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../data-analytic---mindtickle/untitled.png" class="internal internal-link" data-slug="data-analytic---mindtickle/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-144.png" alt/></a></p>
+<p>Customer Cases - Amazon Prime Video</p>
+<ul>
+<li>
+<p>Introduce a state machine to keep track of a user state for aggregated events</p>
+</li>
+<li>
+<p>Ingestion using Kinesis Data Stream and EC2</p>
+</li>
+<li>
+<p>EC2 processing step 1</p>
+<ul>
+<li>
+<p>persist the long-term state into Amazon DynamoDB : what title user’s watching and what portrait they chose…</p>
+</li>
+<li>
+<p>short-term state into Amazon ElastiCache : user clicking ‘pause’</p>
+</li>
+</ul>
+</li>
+<li>
+<p>EC2 processing step 2</p>
+<ul>
+<li>
+<p>push the data to Amazon Kinesis Data Streams for real-time telemetry analysis</p>
+</li>
+<li>
+<p>results were stored in ElasticSearch</p>
+</li>
+<li>
+<p>dashboards could be generated on-the-fly in memory</p>
+</li>
+</ul>
+</li>
+<li>
+<p>EC2 processing step 3</p>
+<ul>
+<li>
+<p>raw data was persisted to S3</p>
+</li>
+<li>
+<p>messaged using Amazon EMR</p>
+</li>
+<li>
+<p>Glue catalog was set up on the resulting S3 bucket</p>
+</li>
+<li>
+<p>Athena allowing SQL access to the data</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Metrics were pushed through to Amazon CloudWatch</p>
+<ul>
+<li>How healthy is the service along with automated alarms</li>
+</ul>
+</li>
+<li>
+<p>Results</p>
+<ul>
+<li>
+<p>Data was able to be ingested into ElasticSearch within seconds</p>
+</li>
+<li>
+<p>Process hundreds of billions of events everyday</p>
+</li>
+<li>
+<p>Successful ingestion of petabytes of data every week into data lake</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../data-analytic---mindtickle/untitled-1.png" class="internal internal-link" data-slug="data-analytic---mindtickle/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-80.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1619" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#data-analytic---mindtickle" data-for="data-analytic---mindtickle">Data Analytic - mindtickle</a></li><li class="depth-1"><a href="#data-lake" data-for="data-lake">Data Lake</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

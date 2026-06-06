@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Demo1 - Data Preparation c4d1a12ce7e84c71bf081156fe3a2b38 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Demo1 - Data Preparation c4d1a12ce7e84c71bf081156fe3a2b38 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Demo1 - Data Preparation c4d1a12ce7e84c71bf081156fe3a2b38 | LLM Wiki"/><meta name="twitter:description" content="💹 Demo1 - Data Preparation Use Case Which percentage of users are male vs female? What are the ages of most of the users? Of the users, how many are in their 20s, 30s, 40s, etc? Convert data from JSON to CSV and store it in S3 Transform ‘gender’ feature to binary value (e.g."/><meta property="og:description" content="💹 Demo1 - Data Preparation Use Case Which percentage of users are male vs female? What are the ages of most of the users? Of the users, how many are in their 20s, 30s, 40s, etc? Convert data from JSON to CSV and store it in S3 Transform ‘gender’ feature to binary value (e.g."/><meta property="og:image:alt" content="💹 Demo1 - Data Preparation Use Case Which percentage of users are male vs female? What are the ages of most of the users? Of the users, how many are in their 20s, 30s, 40s, etc? Convert data from JSON to CSV and store it in S3 Transform ‘gender’ feature to binary value (e.g."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/demo1---data-preparation-c4d1a12ce7e84c71bf081156fe3a2b38"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/demo1---data-preparation-c4d1a12ce7e84c71bf081156fe3a2b38"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="💹 Demo1 - Data Preparation Use Case Which percentage of users are male vs female? What are the ages of most of the users? Of the users, how many are in their 20s, 30s, 40s, etc? Convert data from JSON to CSV and store it in S3 Transform ‘gender’ feature to binary value (e.g."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/demo1---data-preparation-c4d1a12ce7e84c71bf081156fe3a2b38" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2142" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2142" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Demo1 - Data Preparation c4d1a12ce7e84c71bf081156fe3a2b38</a></div></nav><h1 class="article-title">Demo1 - Data Preparation c4d1a12ce7e84c71bf081156fe3a2b38</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.481Z">2026년 6월 06일</time><span>7 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>💹</p>
+<h1 id="demo1---data-preparation">Demo1 - Data Preparation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#demo1---data-preparation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="use-case">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Which percentage of users are male vs female?</p>
+</li>
+<li>
+<p>What are the ages of most of the users?</p>
+</li>
+<li>
+<p>Of the users, how many are in their 20s, 30s, 40s, etc?</p>
+</li>
+<li>
+<p>Convert data from JSON to CSV and store it in S3</p>
+</li>
+<li>
+<p>Transform ‘gender’ feature to binary value (e.g. male to 1, female to 0)</p>
+</li>
+</ul>
+<h1 id="user-data">User Data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Key/Value → Stored in S3 as CSV format</p>
+</li>
+<li>
+<p>First Name : first</p>
+</li>
+<li>
+<p>Last Name : last</p>
+</li>
+<li>
+<p>Age : age</p>
+</li>
+<li>
+<p>Gender (male : 1, female : 0) : gender</p>
+</li>
+<li>
+<p>Latitude : latitude</p>
+</li>
+<li>
+<p>Longitude : longitude</p>
+</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;first&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;tony&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;last&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;armstron&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;age&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">:45,</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;gender&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;male&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;latitude&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">:7.6876,</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;longitude&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">:-138.0943}</span></span></code></pre></figure>
+<h1 id="method">Method<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#method" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Amazon Athena to query the data collected to answer business question</li>
+</ul>
+<p><a href="../../../demo1---data-preparation/untitled.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-64.png" alt/></a></p>
+<ul>
+<li>Setup an AWS Glue job to run Apache Spark code to transform data and convert to CSV format</li>
+</ul>
+<p><a href="../../../demo1---data-preparation/untitled-1.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-11.png" alt/></a></p>
+<h1 id="aws-glue--athena">AWS Glue &amp; Athena<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-glue--athena" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="process">Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#process" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>Upload user data to S3 as raw data</p>
+</li>
+<li>
+<p>Run AWS Crawler</p>
+</li>
+<li>
+<p>Create Data Catalog</p>
+</li>
+<li>
+<p>Create Database Table</p>
+</li>
+<li>
+<p>Create Ahtena query</p>
+</li>
+</ol>
+<h2 id="aws-crawler">AWS Crawler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-crawler" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="what-is">What is<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>완전 관리형 ETL(데이터 추출, 변환, 적재) 서버리스 서비스</p>
+</li>
+<li>
+<p>사용이 간단하며 비용 효율적으로 데이터를 분류(categorize), 정제(clean) 및 보강(enrich)하고 다양한 데이터 소스와 데이터 스트림 간의 안정적인 데이터 이동을 수행</p>
+</li>
+<li>
+<p><a href="../../../4.archive/notion-archive/taskinaws/ch2-data-collection-c3c1234f6d5a4ba4854e566390632f31" class="internal internal-link alias" data-slug="4.archive/notion-archive/taskinaws/ch2-data-collection-c3c1234f6d5a4ba4854e566390632f31">반정형 데이터</a>를 처리하도록 설계</p>
+<ul>
+<li>
+<p>Dynamic Frame을 사용하여 스키마 없이 데이터를 행과 열로 조직(organize)하고 추상화</p>
+</li>
+<li>
+<p>Apache Spark dataframe과 유사</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../demo1---data-preparation/untitled-2.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-10.png" alt/></a></p>
+<h3 id="구성">구성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#구성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AWS Glue Data Catalog : 중앙 메타데이터 저장소 (central metadata repository)</p>
+</li>
+<li>
+<p>ETL engine : 자동으로 Python 또는 Scala 코드 생성</p>
+</li>
+<li>
+<p>Job System : 종속성 확인(dependency resolution), 작업 모니터링 및 재시도를 관리</p>
+</li>
+</ul>
+<h3 id="use-case-1">Use Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#use-case-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>데이터 웨어하우스나 데이터 레이크의 스토리지 데이터를 조직(organize), 정제(clean), 인증(validate) 및 형식(format) 구성</p>
+</li>
+<li>
+<p>S3 데이터 레이크에 대해 서버리스 쿼리 실행</p>
+</li>
+<li>
+<p>ETL 파이프라인 생성</p>
+</li>
+<li>
+<p>데이터 자산 이해</p>
+</li>
+</ul>
+<h3 id="process-1">Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#process-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li>
+<p>Source type</p>
+<ol>
+<li>
+<p>Data Store</p>
+<ol>
+<li>
+<p>S3, RDS, DynamoDB, DocumentDB</p>
+</li>
+<li>
+<p>JDBC accessible database</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Data Stream</p>
+<ol>
+<li>
+<p>KDS</p>
+</li>
+<li>
+<p>Apache Kafka</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-3.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-10.png" alt/></a></p>
+<ol start="3">
+<li>IAM role</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-4.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-10.png" alt/></a></p>
+<ul>
+<li>AWSGlueServiceRole + ManagedPolicy</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">    &quot;Version&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;2012-10-17&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">    &quot;Statement&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        {</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">            &quot;Effect&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Allow&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">            &quot;Action&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                &quot;s3:GetObject&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                &quot;s3:PutObject&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            ],</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">            &quot;Resource&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">                &quot;arn:aws:s3:::rainny-cloudguru/gender-analysis/raw-data*&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">        }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    ]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span></code></pre></figure>
+<ol start="6">
+<li>
+<p>Run Crawler</p>
+<ol>
+<li>Create Table</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-5.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-10.png" alt/></a></p>
+<ol start="8">
+<li>Edit Query</li>
+</ol>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">SELECT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> *</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> FROM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> raw_data</span></span></code></pre></figure>
+<p><a href="../../../demo1---data-preparation/untitled-6.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-10.png" alt/></a></p>
+<ol start="2">
+<li>
+<p>Data Store</p>
+<ol>
+<li>
+<p>S3, RDS, DocumentDB</p>
+</li>
+<li>
+<p>JDBC accessible database</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-7.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-10.png" alt/></a></p>
+<ol start="4">
+<li>
+<p>Scheduling</p>
+<ol>
+<li>
+<p>On-demand</p>
+</li>
+<li>
+<p>Hourly, Daily, Weekly, Monthly</p>
+</li>
+<li>
+<p>Specific Week Days and Start hour and minute</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-8.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8-10.png" alt/></a></p>
+<ol start="5">
+<li>Output</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-9.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9-9.png" alt/></a></p>
+<ol start="7">
+<li>
+<p>Open Athena Query</p>
+<ol>
+<li>Select table → Action → View data</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-10.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10-9.png" alt/></a></p>
+<p><a href="../../../demo1---data-preparation/untitled-11.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11-9.png" alt/></a></p>
+<h2 id="athena-query">Athena Query<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#athena-query" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="which-percentage-of-users-are-male-vs-female">Which percentage of users are male vs female?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#which-percentage-of-users-are-male-vs-female" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>SQL Query</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">SELECT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> gender,</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (COUNT(gender) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 100.0 / (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">SELECT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> COUNT</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">FROM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> raw_data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)) AS percent</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">FROM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> raw_data</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">GROUP</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> gender</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span></code></pre></figure>
+<ul>
+<li>Result</li>
+</ul>
+<p><a href="../../../demo1---data-preparation/untitled-12.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12-9.png" alt/></a></p>
+<h3 id="what-are-the-ages-of-most-of-the-users">What are the ages of most of the users?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-are-the-ages-of-most-of-the-users" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>SQL Query</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">SELECT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> age,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> COUNT</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">age</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">AS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> occurances</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">FROM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> raw_data</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">GROUP</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> age</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">ORDER</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BY</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> occurances</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> DESC</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">LIMIT</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span></code></pre></figure>
+<ul>
+<li>Result</li>
+</ul>
+<p><a href="../../../demo1---data-preparation/untitled-13.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13-9.png" alt/></a></p>
+<h3 id="of-the-users-how-many-are-in-their-20s-30s-40s-etc">Of the users, how many are in their 20s, 30s, 40s, etc?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#of-the-users-how-many-are-in-their-20s-30s-40s-etc" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>SQL Query</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">SELECT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> SUM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">CASE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> age</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BETWEEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 21</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> AND</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 29</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> THEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ELSE</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> END</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">AS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;21-29&quot;,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        SUM(CASE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> age</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BETWEEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 30</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> AND</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 39</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> THEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ELSE</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> END</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) AS </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;30-39&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        SUM(CASE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> age</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BETWEEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 40</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> AND</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 49</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> THEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ELSE</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> END</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) AS </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;40-49&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        SUM(CASE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> age</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BETWEEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 50</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> AND</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 59</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> THEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ELSE</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> END</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) AS </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;50-59&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        SUM(CASE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> age</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BETWEEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 60</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> AND</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 69</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> THEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ELSE</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> END</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) AS </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;60-69&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">        SUM(CASE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> WHEN</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> age</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> BETWEEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 70</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> AND</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 79</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> THEN</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ELSE</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> END</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) AS </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;70-79&quot;</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> FROM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> raw_data</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">;</span></span></code></pre></figure>
+<ul>
+<li>Result</li>
+</ul>
+<p><a href="../../../demo1---data-preparation/untitled-14.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-14-8.png" alt/></a></p>
+<h1 id="transform-data---glue-etl-job">Transform Data - Glue ETL Job<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transform-data---glue-etl-job" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Job : AWS Glue 작업을 추출, 변환 및 로드(ETL)하는 데 필요한 비즈니스 로직</p>
+</li>
+<li>
+<p>스크립트 실행 : 소스에서 데이터 추출 → 데이터 변환 → 대상으로 로드</p>
+</li>
+</ul>
+<p><a href="../../../demo1---data-preparation/untitled-15.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-15-7.png" alt/></a></p>
+<h2 id="create-job">Create Job<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#create-job" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>Select Add job</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-16.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-16-7.png" alt/></a></p>
+<ol start="3">
+<li>
+<p>Select Type</p>
+<ol>
+<li>
+<p>Spark → PySpark 사용</p>
+</li>
+<li>
+<p>Python Shell</p>
+<ol>
+<li>
+<p>Python script를 shell에서 실행 : v2.7, v3.6 호환 script</p>
+</li>
+<li>
+<p>Support library : Boto3, collections, CSV, gzip, multiprocessing, NumPy, Pandas, Pickle, PyGreSQL, SciPy, Sklearn</p>
+</li>
+<li>
+<p>Apache Spark 작업에 사용할 수 있는 대부분의 기능은 Python 셸 작업에서도 사용 가능 : 작업 북마크 사용 안됨 (작업 북마크는 상태 정보를 유지하고 이전 데이터의 재처리를 방지하는 기능)</p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-17.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-17-7.png" alt/></a></p>
+<ul>
+<li>Advanced Option</li>
+</ul>
+<p><a href="../../../demo1---data-preparation/untitled-18.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-18-7.png" alt/></a></p>
+<ol start="2">
+<li>
+<p>IAM Role</p>
+<ol>
+<li>
+<p>Check S3 bucket access permission : include job related bucket</p>
+</li>
+<li>
+<p>앞단계에서 설정한 role을 수정하여 사용</p>
+</li>
+</ol>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-19.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-19-7.png" alt/></a></p>
+<ol start="4">
+<li>Data Source</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-20.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-20-7.png" alt/></a></p>
+<ol start="5">
+<li>Transform type</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-21.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-21.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-21-7.png" alt/></a></p>
+<ol start="6">
+<li>
+<p>Target</p>
+<ol>
+<li>Data Catalog에서 생성한 table을 사용할 경우</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-22.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-22.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-22-7.png" alt/></a></p>
+<p>b. 새로운 table을 생성 하도록 진행 → Target format : CSV</p>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-23.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-23.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-23-7.png" alt/></a></p>
+<p><a href="../../../demo1---data-preparation/untitled-24.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-24.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-24-6.png" alt/></a></p>
+<ol start="7">
+<li>
+<p>Create Transform Code</p>
+<ol>
+<li>
+<p>Schema 확인 후 다음 단계를 진행하면 기본 python script을 제공</p>
+</li>
+<li>
+<p>Gender 값을 변환하는 script 추가</p>
+</li>
+</ol>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> sys</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> awsglue.transforms</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> import</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> *</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> awsglue.utils</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> getResolvedOptions</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> pyspark.context</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> SparkContext</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> awsglue.context</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> GlueContext</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> awsglue.job</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Job</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## Add Custom Code</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> itertools</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> chain</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> pyspark.sql.functions</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> create_map,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> lit</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> awsglue.dynamicframe</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> import</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> DynamicFrame</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @params: [JOB_NAME]</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">args</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> getResolvedOptions</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sys.argv,</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'JOB_NAME'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">])</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sc</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> SparkContext</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">()</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">glueContext</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> GlueContext</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">spark</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> glueContext.spark_session</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">job</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Job</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">glueContext</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">job.init(args[</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">'JOB_NAME'</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">],</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> args</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @type: DataSource</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @args: [database = &quot;cloudguru-userdata&quot;, table_name = &quot;raw_data&quot;, transformation_ctx = &quot;datasource0&quot;]</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @return: datasource0</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @inputs: []</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">datasource0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> glueContext.create_dynamic_frame.from_catalog</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">database</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;cloudguru-userdata&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> table_name</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;raw_data&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> transformation_ctx</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;datasource0&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @type: ApplyMapping</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @args: [mapping = [(&quot;first&quot;, &quot;string&quot;, &quot;first&quot;, &quot;string&quot;), (&quot;last&quot;, &quot;string&quot;, &quot;last&quot;, &quot;string&quot;), (&quot;age&quot;, &quot;int&quot;, &quot;age&quot;, &quot;int&quot;), (&quot;gender&quot;, &quot;string&quot;, &quot;gender&quot;, &quot;string&quot;), (&quot;latitude&quot;, &quot;double&quot;, &quot;latitude&quot;, &quot;double&quot;), (&quot;longitude&quot;, &quot;double&quot;, &quot;longitude&quot;, &quot;double&quot;)], transformation_ctx = &quot;applymapping1&quot;]</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @return: applymapping1</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @inputs: [frame = datasource0]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## Add Custom Code</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># transforming DynamicFrame that AWS Glue creates into a Spark DataFrame</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">df</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> datasource0.toDF</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() </span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># Create a gender dictionary which map male to one and female to zero</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">gender_dict</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'male':</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 1,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'femaile':</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 0</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> }</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">mapping_expr</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> create_map</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">([lit(x) for x in chain(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">gender_dict.items())])</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">df</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> df.withColumn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">'gender'</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> mapping_expr[df['gender']]</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">datasource_transformed</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> DynamicFrame.fromDF</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">df,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> glueContext,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;datasource0&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">applymapping1</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ApplyMapping.apply</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">frame</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> datasource_transformed,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> mappings</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;first&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;string&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;first&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;string&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">,</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;last&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;string&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;last&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;string&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">), (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;age&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;int&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;age&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;int&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">), (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;gender&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;string&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;gender&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;string&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">), (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;latitude&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;double&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;latitude&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;double&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">), (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">&quot;longitude&quot;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;double&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;longitude&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;double&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)], transformation_ctx = </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;applymapping1&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">##</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># applymapping1 = ApplyMapping.apply(frame = datasource0, mappings = [(&quot;first&quot;, &quot;string&quot;, &quot;first&quot;, &quot;string&quot;), (&quot;last&quot;, &quot;string&quot;, &quot;last&quot;, &quot;string&quot;), (&quot;age&quot;, &quot;int&quot;, &quot;age&quot;, &quot;int&quot;), (&quot;gender&quot;, &quot;string&quot;, &quot;gender&quot;, &quot;string&quot;), (&quot;latitude&quot;, &quot;double&quot;, &quot;latitude&quot;, &quot;double&quot;), (&quot;longitude&quot;, &quot;double&quot;, &quot;longitude&quot;, &quot;double&quot;)], transformation_ctx = &quot;applymapping1&quot;)</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @type: DataSink</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @args: [connection_type = &quot;s3&quot;, connection_options = {&quot;path&quot;: &quot;s3://rainny-cloudguru/gender-analysis/csv-transformed&quot;}, format = &quot;csv&quot;, transformation_ctx = &quot;datasink2&quot;]</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @return: datasink2</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">## @inputs: [frame = applymapping1]</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">datasink2</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> glueContext.write_dynamic_frame.from_options</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">frame</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> applymapping1,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> connection_type</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;s3&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> connection_options</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {&quot;path&quot;:</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;s3://rainny-cloudguru/gender-analysis/csv-transformed&quot;},</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> format</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;csv&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> transformation_ctx</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;datasink2&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">job.commit</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">()</span></span></code></pre></figure>
+</li>
+<li>
+<p>Save and Run Job</p>
+</li>
+<li>
+<p>S3 bucket에 output target 생성 확인</p>
+</li>
+</ol>
+<p><a href="../../../demo1---data-preparation/untitled-25.png" class="internal internal-link" data-slug="demo1---data-preparation/untitled-25.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-25-6.png" alt/></a></p>
+<ul>
+<li>CSV format과 gender 값이 0, 1로 변경</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">first,last,age,gender,latitude,longitude</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">tony,armstron,45,1,7.6876,-138.0943</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">kelly,griffin,35,1,-82.5088,-8.7742</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">milly,selstad,33,,49.4328,20.6618</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">delia,fleury,32,,-57.2241,38.172</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">lucille,simmons,41,,-86.4193,154.9268</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">gerry,long,62,1,17.2081,-160.2707</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">tristan,sims,69,1,8.7664,-43.6753</span></span></code></pre></figure></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1633" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#demo1---data-preparation" data-for="demo1---data-preparation">Demo1 - Data Preparation</a></li><li class="depth-0"><a href="#use-case" data-for="use-case">Use Case</a></li><li class="depth-0"><a href="#user-data" data-for="user-data">User Data</a></li><li class="depth-0"><a href="#method" data-for="method">Method</a></li><li class="depth-0"><a href="#aws-glue--athena" data-for="aws-glue--athena">AWS Glue &amp; Athena</a></li><li class="depth-1"><a href="#process" data-for="process">Process</a></li><li class="depth-1"><a href="#aws-crawler" data-for="aws-crawler">AWS Crawler</a></li><li class="depth-2"><a href="#what-is" data-for="what-is">What is</a></li><li class="depth-2"><a href="#구성" data-for="구성">구성</a></li><li class="depth-2"><a href="#use-case-1" data-for="use-case-1">Use Case</a></li><li class="depth-2"><a href="#process-1" data-for="process-1">Process</a></li><li class="depth-1"><a href="#athena-query" data-for="athena-query">Athena Query</a></li><li class="depth-2"><a href="#which-percentage-of-users-are-male-vs-female" data-for="which-percentage-of-users-are-male-vs-female">Which percentage of users are male vs female?</a></li><li class="depth-2"><a href="#what-are-the-ages-of-most-of-the-users" data-for="what-are-the-ages-of-most-of-the-users">What are the ages of most of the users?</a></li><li class="depth-2"><a href="#of-the-users-how-many-are-in-their-20s-30s-40s-etc" data-for="of-the-users-how-many-are-in-their-20s-30s-40s-etc">Of the users, how many are in their 20s, 30s, 40s, etc?</a></li><li class="depth-0"><a href="#transform-data---glue-etl-job" data-for="transform-data---glue-etl-job">Transform Data - Glue ETL Job</a></li><li class="depth-1"><a href="#create-job" data-for="create-job">Create Job</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

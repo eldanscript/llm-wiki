@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>KVS Session bcd9e57578344dbead1e23b9fc0ac98e | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="KVS Session bcd9e57578344dbead1e23b9fc0ac98e | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="KVS Session bcd9e57578344dbead1e23b9fc0ac98e | LLM Wiki"/><meta name="twitter:description" content="💈 KVS Session Streaming Producer API (PutMedia) Consumer API (GetMedia) Chunk Streaming Protocol HLS (HTTP Live Streaming) MPEG-DASH (Dynamic Adaptive Streaming over HTTP) Media Codec Video Audio Container Transcoding vs Transmuxing Transcoding Transmuxing Transrating BitRate AWS Video Services IVS..."/><meta property="og:description" content="💈 KVS Session Streaming Producer API (PutMedia) Consumer API (GetMedia) Chunk Streaming Protocol HLS (HTTP Live Streaming) MPEG-DASH (Dynamic Adaptive Streaming over HTTP) Media Codec Video Audio Container Transcoding vs Transmuxing Transcoding Transmuxing Transrating BitRate AWS Video Services IVS..."/><meta property="og:image:alt" content="💈 KVS Session Streaming Producer API (PutMedia) Consumer API (GetMedia) Chunk Streaming Protocol HLS (HTTP Live Streaming) MPEG-DASH (Dynamic Adaptive Streaming over HTTP) Media Codec Video Audio Container Transcoding vs Transmuxing Transcoding Transmuxing Transrating BitRate AWS Video Services IVS..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/kvs-session-bcd9e57578344dbead1e23b9fc0ac98e"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/kvs-session-bcd9e57578344dbead1e23b9fc0ac98e"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="💈 KVS Session Streaming Producer API (PutMedia) Consumer API (GetMedia) Chunk Streaming Protocol HLS (HTTP Live Streaming) MPEG-DASH (Dynamic Adaptive Streaming over HTTP) Media Codec Video Audio Container Transcoding vs Transmuxing Transcoding Transmuxing Transrating BitRate AWS Video Services IVS..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/kvs-session-bcd9e57578344dbead1e23b9fc0ac98e" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2295" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2295" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>KVS Session bcd9e57578344dbead1e23b9fc0ac98e</a></div></nav><h1 class="article-title">KVS Session bcd9e57578344dbead1e23b9fc0ac98e</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.496Z">2026년 6월 06일</time><span>15 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>💈</p>
+<h1 id="kvs-session">KVS Session<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kvs-session" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#799bd009-71d1-4359-aa6b-16f3f27dd953" class="internal internal-link alias">Streaming</a></p>
+<p><a href="#49980079-f9ce-4cf9-b677-3e5e38e3b429" class="internal internal-link alias">Producer API (PutMedia)</a></p>
+<p><a href="#937153ed-b3f2-4526-aa1a-c9b126bce2f4" class="internal internal-link alias">Consumer API (GetMedia)</a></p>
+<p><a href="#ac55c8d3-fed6-4f02-92d8-f29a34dede63" class="internal internal-link alias">Chunk</a></p>
+<p><a href="#dd5354c1-0e4a-43f6-b0e9-8080b14b843c" class="internal internal-link alias">Streaming Protocol</a></p>
+<p><a href="#4faf6774-7e24-4cfe-a888-6932c43f65a3" class="internal internal-link alias">HLS (HTTP Live Streaming)</a></p>
+<p><a href="#3dea67c4-8ad2-4330-8e57-d002d72db4e1" class="internal internal-link alias">MPEG-DASH (Dynamic Adaptive Streaming over HTTP)</a></p>
+<p><a href="#de3093e8-b7fc-4ff6-8a4e-0ea596736b9e" class="internal internal-link alias">Media Codec</a></p>
+<p><a href="#e96b4485-a7c6-4461-a57c-b5b0fdd82b99" class="internal internal-link alias">Video</a></p>
+<p><a href="#ba4421c5-74e5-4eba-9a47-a7753238950a" class="internal internal-link alias">Audio</a></p>
+<p><a href="#c3a54162-f6d0-4671-a85b-83e1774b1ec7" class="internal internal-link alias">Container</a></p>
+<p><a href="#caa8de33-5ae6-41e0-bc57-0473cd9385ec" class="internal internal-link alias">Transcoding vs Transmuxing</a></p>
+<p><a href="#4d23e34d-d96a-47b5-abfb-f7d603598515" class="internal internal-link alias">Transcoding</a></p>
+<p><a href="#a5df213a-7fd1-4d29-a922-30b68270dddf" class="internal internal-link alias">Transmuxing</a></p>
+<p><a href="#6ecc3d4a-0c71-4655-bb17-69752c71d92b" class="internal internal-link alias">Transrating</a></p>
+<p><a href="#f6ad776b-7ace-490c-b267-e4d5168a163c" class="internal internal-link alias">BitRate</a></p>
+<p><a href="#5b8d1ad5-6d43-467f-8d47-4e3df4f15158" class="internal internal-link alias">AWS Video Services</a></p>
+<p><a href="#865aa947-6022-4e1d-a101-2f8f523d62be" class="internal internal-link alias">IVS</a></p>
+<p><a href="#f69af1e7-ab3c-4d60-ae13-f7b98ff476eb" class="internal internal-link alias">Chime</a></p>
+<p><a href="#6965b5b2-b6dc-4042-a201-576afdd41c2a" class="internal internal-link alias">KVS</a></p>
+<p><a href="#029a27fe-3002-49c3-ab8f-253746afa2f8" class="internal internal-link alias">KVS with WebRTC</a></p>
+<p><a href="#9c937f85-a2fb-4006-9189-e4b82e10dab9" class="internal internal-link alias">Elemental Live</a></p>
+<p><a href="#72ab98ce-e886-4eab-a890-1daa21cd9028" class="internal internal-link alias">KVS vs KVS with WebRTC</a></p>
+<p><a href="#6fb53585-5944-4788-9b90-c980ba34899b" class="internal internal-link alias">KVS - Fully Managed Streaming</a></p>
+<p><a href="#ebe63364-bdb1-4bf3-962d-e98d7b72171e" class="internal internal-link alias">Kinesis Video SDK</a></p>
+<p><a href="#e7723927-a04a-4570-b761-081147c53e71" class="internal internal-link alias">Producer - Ingest video into KVS</a></p>
+<p><a href="#ebbbf2e5-e1b4-486b-a915-ca6f20b2b4a1" class="internal internal-link alias">Producer Client</a></p>
+<p><a href="#91d2fdbf-2484-4fe7-8ca7-0e5c4f315586" class="internal internal-link alias">Producer Libraries</a></p>
+<p><a href="#f481b3a6-d0f0-4fcc-82a5-a373af5681c3" class="internal internal-link alias">Consumer - Custom video processing</a></p>
+<p><a href="#1a3f14b4-3fba-4e4a-8295-287f3e8eb7f4" class="internal internal-link alias">KVS with WebRTC</a></p>
+<p><a href="#46df63ec-e21e-47f0-85bf-f39d886ee0a9" class="internal internal-link alias">Signaling</a></p>
+<p><a href="#1b6d1ae3-0f26-463c-afff-15b105db711a" class="internal internal-link"></a><a href="https://aws.amazon.com/kinesis/video-streams/pricing/" class="external external-link">Pricing<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="#551c7eaf-88ba-48f8-aed9-d3e0a0e9b551" class="internal internal-link alias">WebRTC SDK</a></p>
+<p><a href="#e06c4b1b-6df7-4e57-a750-56abd0e5f401" class="internal internal-link alias">Embedded SDK</a></p>
+<p><a href="#a97b2024-303c-47bf-8723-dacbde6334ea" class="internal internal-link alias">Client SDK</a></p>
+<p><a href="#439bc041-fa52-42ad-abcc-bd8045b9d7d1" class="internal internal-link alias">Alexa Integration</a></p>
+<p><a href="#a71941b0-d60a-4d1d-aa8e-7541869d535b" class="internal internal-link alias">Reference Architecture</a></p>
+<p><a href="#5c5b94b9-ec3c-4dd6-aee7-b1a6e7c760b3" class="internal internal-link alias">Comcast Xfinity - 서비스 공급자</a></p>
+<p><a href="#ede8df7a-0f75-43e1-bb95-92f0346d5a4a" class="internal internal-link alias">Comcast</a></p>
+<p><a href="#4f6343ef-7888-4680-85ea-0932b23ede24" class="internal internal-link alias">Comcast Xfinity (엑스피니티)</a></p>
+<p><a href="#ef97081c-9376-4248-9117-987d1418bcb7" class="internal internal-link alias">Kinesis Video Stream</a></p>
+<p><a href="#f57ed012-ce63-4e35-982d-44f45fbce1d2" class="internal internal-link alias">Why AWS</a></p>
+<p><a href="#6ce6ef64-ea97-4c6d-a261-0b23584559d3" class="internal internal-link alias">Architecture</a></p>
+<p><a href="#eb6f8521-6f74-4bf5-bd80-104f864bf5c3" class="internal internal-link alias">WYZE Labs - 디바이스 제조사</a></p>
+<p><a href="#ab83d184-f1cb-40eb-b6e9-4cc6f9c05371" class="internal internal-link alias">Company</a></p>
+<p><a href="#afddd6c3-86d9-4e77-918f-8b898300c7c0" class="internal internal-link alias">Solution</a></p>
+<p><a href="#cb499855-829d-4b44-8646-b4f858173814" class="internal internal-link alias">Benefit</a></p>
+<p><a href="#8dbb6b20-18b0-4c5b-99d9-351168955fa6" class="internal internal-link alias">SERCOM - 솔루션 공급자</a></p>
+<p><a href="#ab16f024-1475-4a22-8a00-6b3f80fa639e" class="internal internal-link alias">Company</a></p>
+<p><a href="#4b5aa577-6ded-46b9-b27f-754c2b16c4c3" class="internal internal-link alias">Solution</a></p>
+<p><a href="#5eb98e95-4c52-4e46-8c8d-6822c075a8d3" class="internal internal-link alias">Vivotek</a></p>
+<p><a href="#4fd5c05f-3028-48cf-b07e-308873225cd9" class="internal internal-link alias">Company</a></p>
+<p><a href="#98c9278f-6d6e-4273-b260-4ec5e7f89082" class="internal internal-link alias">Solution</a></p>
+<p><a href="#57cc6170-443d-4c3c-8d52-b542fd99d028" class="internal internal-link alias">AWS IoT Security</a></p>
+<p><a href="#d677dbef-adde-4c0d-9a0c-3cc0acb68071" class="internal internal-link alias">Fleet Provisioning</a></p>
+<p><a href="#791d81cd-02e3-478a-917d-48c025f5cb69" class="internal internal-link alias">AWS STS (Security Token Service)</a></p>
+<h1 id="streaming">Streaming<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#streaming" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../kvs-session/untitled.png" class="internal internal-link" data-slug="kvs-session/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-225.png" alt/></a></p>
+<h2 id="producer-api-putmedia">Producer API (PutMedia)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#producer-api-putmedia" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Media data (sends a stream of media fragments) → KVS (assigns a unique fragment number in increasing order)</p>
+</li>
+<li>
+<p>Fragments : self-contained <span class="text-highlight">**sequence of frames**</span></p>
+</li>
+</ul>
+<h2 id="consumer-api-getmedia">Consumer API (GetMedia)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#consumer-api-getmedia" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>KVS → Video processing applications (packed into a structured format)</p>
+</li>
+<li>
+<p>Archived in the data store / Available in real time</p>
+</li>
+</ul>
+<h2 id="chunk">Chunk<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chunk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Copy of media metadata</p>
+</li>
+<li>
+<p>A fragment</p>
+</li>
+<li>
+<p>KVS specific metadata : producer-side, server-side timestamps for each fragment</p>
+</li>
+</ul>
+<h2 id="streaming-protocol">Streaming Protocol<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#streaming-protocol" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="hls-http-live-streaming">HLS (HTTP Live Streaming)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hls-http-live-streaming" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>HTTP-based media streaming communication protocol</p>
+</li>
+<li>
+<p>For live playback or To view archived video</p>
+</li>
+<li>
+<p>Latency : 3 ~ 5 sec (typically) → can be 1 ~ 10 sec (depend on the use case and network conditions)</p>
+</li>
+<li>
+<p>Codec : AVC</p>
+</li>
+</ul>
+<h3 id="mpeg-dash-dynamic-adaptive-streaming-over-http">MPEG-DASH (Dynamic Adaptive Streaming over HTTP)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#mpeg-dash-dynamic-adaptive-streaming-over-http" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Adaptive bitrate streaming protocol → Hight quality streaming of media content over the internet</p>
+</li>
+<li>
+<p>For live playback</p>
+</li>
+<li>
+<p>Latency : 3 ~ 5 sec (typically) → can be 1 ~ 10 sec (depend on the use case and network conditions)</p>
+</li>
+<li>
+<p>Codec : AVC or HVEC</p>
+</li>
+</ul>
+<h2 id="media-codec">Media Codec<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#media-codec" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="video">Video<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#video" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>H.264 (AVC - Advanced Video Coding)</p>
+</li>
+<li>
+<p>H.265 (HVEC - High Efficiency Video Coding)</p>
+</li>
+</ul>
+<h3 id="audio">Audio<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#audio" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>AAC (Advanced Audio Coding)</p>
+</li>
+<li>
+<p>G.711</p>
+</li>
+</ul>
+<h3 id="container">Container<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#container" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Contains various media codecs</p>
+</li>
+<li>
+<p>KVS Stream uses</p>
+<ul>
+<li>
+<p>MKV (Matroska, 마트료시카) : .mkv</p>
+<ul>
+<li>
+<p>Open Standard Free container format</p>
+</li>
+<li>
+<p>Video + Audio + Image + Subtitle → one file</p>
+</li>
+</ul>
+</li>
+<li>
+<p>MPEG-4</p>
+<ul>
+<li>
+<p>fMP4 (fragmented MP4) : .mp4</p>
+</li>
+<li>
+<p>CMAF (Common Media Application Format) : .mp4</p>
+</li>
+</ul>
+</li>
+<li>
+<p>MPEG-2</p>
+<ul>
+<li>TS (Transport Stream) chunks : .ts</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="transcoding-vs-transmuxing">Transcoding vs Transmuxing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transcoding-vs-transmuxing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="transcoding">Transcoding<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transcoding" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../kvs-session/untitled-1.png" class="internal internal-link" data-slug="kvs-session/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-146.png" alt/></a></p>
+<ul>
+<li>
+<p>Convert from 1 <strong><span class="text-highlight">codec</span></strong> to another</p>
+</li>
+<li>
+<p>Analog to analog / digital to digital</p>
+</li>
+<li>
+<p>KVS does not transcode</p>
+</li>
+</ul>
+<h3 id="transmuxing">Transmuxing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transmuxing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../kvs-session/untitled-2.png" class="internal internal-link" data-slug="kvs-session/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-126.png" alt/></a></p>
+<ul>
+<li>
+<p>Convert from 1 <span class="text-highlight">**container**</span> to another</p>
+</li>
+<li>
+<p>Re-packaging, Transpackaging</p>
+</li>
+<li>
+<p>preserve original content</p>
+</li>
+</ul>
+<h3 id="transrating">Transrating<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transrating" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../kvs-session/untitled-3.png" class="internal internal-link" data-slug="kvs-session/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-114.png" alt/></a></p>
+<ul>
+<li>
+<p>YouTube</p>
+</li>
+<li>
+<p>Create different version of video : different bitrate</p>
+</li>
+</ul>
+<h2 id="bitrate">BitRate<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bitrate" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>3 Levers</p>
+<ul>
+<li>
+<p>Compression</p>
+</li>
+<li>
+<p>Resolution</p>
+</li>
+<li>
+<p>Framerate</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Codec</p>
+<ul>
+<li>
+<p>H.264 : 720@30FPS → 2Mbps</p>
+</li>
+<li>
+<p>H.265 : 720@30FPS → 1Mbps</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="aws-video-services">AWS Video Services<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-video-services" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>[</p>
+<p>Choose the right AWS video service for your use case | Amazon Web Services</p>
+<p>Today, customers rely on video enabled data, audio data and time-encoded data for many use cases, including live streaming, home security, video on demand, predictive maintenance in industrial settings or doing peer video chats at work. Many organizations and consumers are embracing video enabled technology to improve their professional and personal interactions.</p>
+<p><iframe class="external-embed youtube" allow="fullscreen" frameborder="0" width="600px" src="https://www.youtube.com/embed/favicon.ico"></iframe><a href="https://aws.amazon.com/blogs/iot/choose-the-right-aws-video-service-for-your-use-case/" class="external external-link">https://aws.amazon.com/blogs/iot/choose-the-right-aws-video-service-for-your-use-case/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/taskinaws/attachments/awsvideoservices.png" alt/>](<a href="https://aws.amazon.com/blogs/iot/choose-the-right-aws-video-service-for-your-use-case/" class="external external-link">https://aws.amazon.com/blogs/iot/choose-the-right-aws-video-service-for-your-use-case/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="ivs">IVS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ivs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../kvs-session/untitled-4.png" class="internal internal-link" data-slug="kvs-session/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-112.png" alt/></a></p>
+<ul>
+<li>
+<p>Time to First Frame</p>
+<ul>
+<li>6 ~ 12 sec (depends on IDR/Keyframe)</li>
+</ul>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/ivs/latest/userguide/streaming-config.html#reducing-latency" class="external external-link">End to end latency<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>~ 5 sec</li>
+</ul>
+</li>
+<li>
+<p>Streaming Protocol</p>
+<ul>
+<li>RTMPS : Secure version of Real-Time Messaging Protocol (TLS)</li>
+</ul>
+</li>
+<li>
+<p>Codec</p>
+<ul>
+<li>H.264, AAC</li>
+</ul>
+</li>
+</ul>
+<h3 id="chime">Chime<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#chime" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../kvs-session/untitled-5.png" class="internal internal-link" data-slug="kvs-session/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-105.png" alt/></a></p>
+<ul>
+<li>
+<p>Time to First Frame</p>
+</li>
+<li>
+<p>End to end latency</p>
+</li>
+</ul>
+<h2 id="kvs">KVS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kvs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../kvs-session/untitled-6.png" class="internal internal-link" data-slug="kvs-session/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-96.png" alt/></a></p>
+<ul>
+<li>
+<p>Time to First Frame</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/troubleshooting.html#troubleshooting-general-latency" class="external external-link">End to end latency<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>KVS with the producer SDK : similar with RTSP</p>
+</li>
+<li>
+<p>3 ~ 5 sec : The reason is that KVS managed live playback is over HLS which is a streaming protocol with a built in latency</p>
+</li>
+<li>
+<p>able to optimize the latency by reducing the GOP size</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="kvs-with-webrtc">KVS with WebRTC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kvs-with-webrtc" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../kvs-session/untitled-7.png" class="internal internal-link" data-slug="kvs-session/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-93.png" alt/></a></p>
+<ul>
+<li>
+<p>Time to First Frame</p>
+</li>
+<li>
+<p>End to end latency</p>
+<ul>
+<li>
+<p>sub seconds : ~ 500msec</p>
+</li>
+<li>
+<p>P2P streaming</p>
+</li>
+<li>
+<p>using TURN : more 30% time</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="elemental-live">Elemental Live<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#elemental-live" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Time to First Frame</p>
+</li>
+<li>
+<p>End to end latency</p>
+<ul>
+<li>3 ~ 4 sec</li>
+</ul>
+</li>
+<li>
+<p>Streaming Protocol</p>
+<ul>
+<li>HLS, DASH</li>
+</ul>
+</li>
+</ul>
+<h1 id="kvs-vs-kvs-with-webrtc">KVS vs KVS with WebRTC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kvs-vs-kvs-with-webrtc" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="kvs---fully-managed-streaming">KVS - Fully Managed Streaming<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kvs---fully-managed-streaming" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Recording</p>
+<ul>
+<li>I want to store video from my camera in the cloud for 30 days</li>
+</ul>
+</li>
+<li>
+<p>Playback</p>
+<ul>
+<li>I want to playback the video using mobile devices</li>
+</ul>
+</li>
+<li>
+<p>ML Integration</p>
+</li>
+</ul>
+<p><a href="../../../kvs-session/untitled-8.png" class="internal internal-link" data-slug="kvs-session/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8-87.png" alt/></a></p>
+<p><a href="../../../kvs-session/untitled-9.png" class="internal internal-link" data-slug="kvs-session/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9-85.png" alt/></a></p>
+<h2 id="kinesis-video-sdk">Kinesis Video SDK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kinesis-video-sdk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="producer---ingest-video-into-kvs">Producer - Ingest video into KVS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#producer---ingest-video-into-kvs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>C : <a href="https://github.com/awslabs/amazon-kinesis-video-streams-producer-c" class="external external-link">https://github.com/awslabs/amazon-kinesis-video-streams-producer-c<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>C++ : <a href="https://github.com/awslabs/amazon-kinesis-video-streams-producer-sdk-cpp" class="external external-link">https://github.com/awslabs/amazon-kinesis-video-streams-producer-sdk-cpp<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Java (JNI) : <a href="https://github.com/awslabs/amazon-kinesis-video-streams-producer-sdk-java" class="external external-link">https://github.com/awslabs/amazon-kinesis-video-streams-producer-sdk-java<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>PIC (Platform Independent Codebase) : <a href="https://github.com/awslabs/amazon-kinesis-video-streams-pic/" class="external external-link">https://github.com/awslabs/amazon-kinesis-video-streams-pic/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<h3 id="producer-client">Producer Client<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#producer-client" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>KinesisVideoClient class : Manage media source, receive data from the source</p>
+</li>
+<li>
+<p>Does not provide built-in implementations for media-producing devices such as cameras</p>
+</li>
+<li>
+<p>for <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-sdk-javaapi.html" class="external external-link">Java<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, <a href="https://docs.aws.amazon.com/kinesisvideostreams/latest/dg/producer-sdk-android.html" class="external external-link">Android<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> applications</p>
+</li>
+</ul>
+<h3 id="producer-libraries">Producer Libraries<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#producer-libraries" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>For tasks to create producer for Amazon Kinesis : <a href="https://github.com/awslabs/amazon-kinesis-producer" class="external external-link">https://github.com/awslabs/amazon-kinesis-producer<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Linux, iOS</p>
+</li>
+</ul>
+<h3 id="consumer---custom-video-processing">Consumer - Custom video processing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#consumer---custom-video-processing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>contained within the Kinesis Video Streams Producer Client</p>
+</li>
+<li>
+<p>Implements the state machine for streaming to Kinesis Video Streams</p>
+</li>
+<li>
+<p>For the device does not have JVM</p>
+</li>
+<li>
+<p>Want to write application code in language other than Java</p>
+</li>
+<li>
+<p>Want to reduce the overhead in code</p>
+</li>
+<li>
+<p>Using C++ Producer Library</p>
+</li>
+</ul>
+<h2 id="kvs-with-webrtc-1">KVS with WebRTC<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kvs-with-webrtc-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Fully Managed</p>
+</li>
+<li>
+<p>Sub second latency</p>
+</li>
+<li>
+<p>2-way communication</p>
+</li>
+<li>
+<p>Case</p>
+<ul>
+<li>
+<p>Build a video-doorbell</p>
+</li>
+<li>
+<p>View my camera using an Alexa device</p>
+</li>
+<li>
+<p>Want to control robot</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../kvs-session/untitled-10.png" class="internal internal-link" data-slug="kvs-session/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10-75.png" alt/></a></p>
+<h3 id="signaling">Signaling<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#signaling" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>TURN (Traversal Using Relays around NAT)</p>
+</li>
+<li>
+<p>STUN (Session Traversal Utilties for NAT)</p>
+</li>
+</ul>
+<p><a href="../../.././../aws-customer/workload/kvs-sdk-8a9b9e86bcc74601a28e3b75da38a140" class="internal internal-link alias" data-slug="aws-customer/workload/kvs-sdk-8a9b9e86bcc74601a28e3b75da38a140">🎬KVS SDK</a></p>
+<h3 id="pricing"><a href="https://aws.amazon.com/kinesis/video-streams/pricing/" class="external external-link">Pricing<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pricing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Active signaling channel (per month) : $0.03</p>
+</li>
+<li>
+<p>Signaling message (per million) : $2.25</p>
+</li>
+<li>
+<p>TURN Streaming minutes (per thousand) : $0.12</p>
+</li>
+</ul>
+<h2 id="webrtc-sdk">WebRTC SDK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#webrtc-sdk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="embedded-sdk">Embedded SDK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#embedded-sdk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>C for Embedded devices : <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-c" class="external external-link">https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-c<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>for IoT camera device</p>
+</li>
+<li>
+<p>Support <a href="https://wormwlrm.github.io/2021/01/24/Introducing-WebRTC.html" class="external external-link">trickle ICE<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> for faster connectivity</p>
+<ul>
+<li>
+<p>초기 offer 혹은 answer를 다른 유저에게 이미 전달을 했음에도 계속해서 candidate를 보내는 과정</p>
+</li>
+<li>
+<p>비효율적인 후보 교환 작업을 병렬 프로세스로 수행할 수 있게 만드는 것</p>
+</li>
+<li>
+<p>두 개의 피어가 ICE 후보를 수집하고 교환하는 과정을, <em>동기적 프로세스</em> 에서 <em>비동기적 프로세스</em> 로 만드는 기술</p>
+</li>
+<li>
+<p>각 피어에서 ICE 후보를 찾아내는 그 즉시 교환을 시작</p>
+</li>
+</ul>
+</li>
+<li>
+<p>H.264, VP8</p>
+</li>
+<li>
+<p>Opus, G.711</p>
+</li>
+</ul>
+<h3 id="client-sdk">Client SDK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#client-sdk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>for browser and mobile platform</p>
+</li>
+<li>
+<p>Java for Web Applications : <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-js" class="external external-link">https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-js<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Android : <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-android" class="external external-link">https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-android<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>iOS : <a href="https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-ios" class="external external-link">https://github.com/awslabs/amazon-kinesis-video-streams-webrtc-sdk-ios<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<h2 id="alexa-integration">Alexa Integration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#alexa-integration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../kvs-session/untitled-11.png" class="internal internal-link" data-slug="kvs-session/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11-71.png" alt/></a></p>
+<ul>
+<li>
+<p>KVS WebRTC <strong>provides simple HTTP APIs</strong> to integrate with Alexa Smart Home Skills.</p>
+</li>
+<li>
+<p>Using these APIs, the <strong>developer sends the SDP offer</strong> received from Alexa <strong>to KVS Master (device)</strong> and <strong>receives</strong> the resulting <strong>SDP answer from KVS Master</strong>, which they can use <strong>to respond back to Alexa</strong>.</p>
+</li>
+<li>
+<p>KVS <strong>WebRTC provides</strong> ultra-low latency <strong>live stream</strong> and <strong>2-way-audio</strong> as the video/audio feed is directly ingested from the camera to Alexa.</p>
+</li>
+<li>
+<p>Also state the <strong>WWA (Works with Alexa) requirement for devices</strong> which support 2-way audio</p>
+</li>
+<li>
+<p><strong>Engage customers</strong> with headless devices, with <strong>WebRTC full duplex 2-way-audio</strong></p>
+</li>
+</ul>
+<h1 id="reference-architecture">Reference Architecture<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reference-architecture" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">First,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ODM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> have</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> partnered</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> with</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Kinesis</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Video</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Streams</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> AWS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> IoT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> offer</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> a</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> variety</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> of</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> proven</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> reference</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> designs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> for</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> indoor,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> outdoor,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> LTE</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> doorbells</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> products.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> These</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> reference</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> designs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> are</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> already</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> integrated</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> with</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> AWS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> IoT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Kinesis</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Video</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Streams.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> They</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> can</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> be</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> customized</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> customer</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> product</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> specifications</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> help</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> them</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> further</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> reduce</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> the</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> risk</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> time</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> market</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> launch</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> their</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> solution.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Our</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> IoT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Lab</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> team</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> in</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Taiwan</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> China</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> is</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> working</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> directly</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> with</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> these</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ODMs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> on</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> behalf</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> of</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> our</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> customers.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Because</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> of</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> what</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> we</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> have</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> learned,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> we</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> can</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> also</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> engage</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> quickly</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> with</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> any</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> other</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ODMs</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> our</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> customers</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> are</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> working</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> with</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> today.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Virtually</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> every</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> target</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> customer</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> works</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> with</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> an</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ODM.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> No</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> one</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> is</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> developing</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> their</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> devices</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> firmware</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> by</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> themselves,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> we</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> will</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> always</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> engage</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> the</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ODM.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> We</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> will</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> also</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> recommend</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> our</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ODM</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> partners</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> customers</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> who</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> are</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> new</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> camera</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> devices.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">Second,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> we</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> have</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> IoT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Video</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> platforms</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> partners.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Not</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> every</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> customers</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> will</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> need</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> them.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Many</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> smart</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> home</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> companies</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> have</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> their</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> own</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> engineering</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> resources</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> have</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> build</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> video</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> products</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> from</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> scratch.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> But,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> some</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> new</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> type</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> of</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> customers</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> like</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Telcos</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> who</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> have</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> no</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> existing</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> engineering</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> are</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> too</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> big</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> and</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> too</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> slow</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> will</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> want</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> work</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> with</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> these</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> partners.</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Sercomm</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (ADT, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">Comcast,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ATT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> Life</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) has built a cloud platform based on IoT Core, KVS, KVS WebRTC and Alexa. SmartCom has built an IoT platform </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> Telcos for kids smart watches, and extended its capabilities to video with KVS WebRTC. Celstream is an India based SI who is building the platform for a customer on IoT Core and KVS.</span></span></code></pre></figure>
+<ol>
+<li>
+<p>카메라 ODM</p>
+<ol>
+<li>
+<p>Kinesis 비디오 스트림과 AWS IoT와 파트너가 실내, 실외, LTE 및 초인종 카메라 제품을 위한 다양한 입증 된 카메라 참조 디자인을 제공합니다.</p>
+</li>
+<li>
+<p>이러한 참조 설계는 이미 AWS IoT 및 Kinesis 비디오 스트림과 통합되어 있습니다.</p>
+</li>
+<li>
+<p>고객 제품 사양에 맞게 사용자 정의 할 수 있으며 해결책을 발사하기 위해 시장에 대한 위험 및 시간을 더욱 줄일 수 있습니다.</p>
+</li>
+<li>
+<p>대만과 중국의 IoT Lab 팀은 고객을 대신하여 이러한 카메라 ODM과 직접 일하고 있습니다.</p>
+</li>
+<li>
+<p>우리가 배웠던 것에 의해 우리는 고객이 오늘날 우리와 함께 일하고 있는 다른 카메라 ODM과 신속하게 참여할 수도 있습니다.</p>
+</li>
+<li>
+<p>거의 모든 대상 고객은 카메라 ODM에서 작동합니다. 아무도 자신의 장치와 펌웨어를 스스로 개발하고 있지 않으며 항상 카메라 ODM에 항상 참여할 것입니다.</p>
+</li>
+<li>
+<p>또한 카메라 ODM 파트너에게 카메라 장치를 처음 사용하는 고객에게 추천 해 드리겠습니다.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>IoT 및 비디오 플랫폼 파트너</p>
+<ol>
+<li>
+<p>모든 고객이 필요할 수있는 것은 아닙니다. 많은 스마트 홈 회사는 자신의 엔지니어링 자원을 가지고 있으며 처음부터 비디오 제품을 구축합니다.</p>
+</li>
+<li>
+<p>그러나 기존 엔지니어링이 없고 너무 크고 너무 느리지 않은 Telcos와 같은 새로운 유형의 고객은 이러한 파트너와 협력하고 싶습니다.</p>
+</li>
+<li>
+<p>Sercomm (ADT, Comcast, ATT Life)은 IoT Core, KVS, KVS WebRTC 및 Alexa를 기반으로 한 클라우드 플랫폼을 구축했습니다.</p>
+</li>
+<li>
+<p>SmartCom은 아이들을 위한 Telcos 용 IoT 플랫폼을 만들었고 KVS WebRTC로 비디오에 대한 기능을 확장했습니다.</p>
+</li>
+<li>
+<p>Celstream은 IoT 핵심 및 KV에서 고객을위한 플랫폼을 구축하고있는 인도 기반 SI입니다.</p>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="comcast-xfinity---서비스-공급자">Comcast Xfinity - 서비스 공급자<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#comcast-xfinity---서비스-공급자" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="comcast">Comcast<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#comcast" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>미국의 통신 회사이자 미디어 그룹으로 미국 1위 인터넷 서비스 업체이다. NBC 유니버설 인수 이후 AT&amp;T, 월트 디즈니와 함께 세계 3대 미디어 그룹으로 불리고 있다</li>
+</ul>
+<h3 id="comcast-xfinity-엑스피니티">Comcast Xfinity (엑스피니티)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#comcast-xfinity-엑스피니티" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>케이블 TV, 인터넷, 전화 및 무선 서비스를 제공</p>
+</li>
+<li>
+<p>Xfinity Home이라고 하는 Connected Home 서비스 제공</p>
+</li>
+</ul>
+<h3 id="kinesis-video-stream">Kinesis Video Stream<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kinesis-video-stream" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=WvURDV9Ezsc" class="external external-link">https://www.youtube.com/watch?v=WvURDV9Ezsc<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>Connected Home Market에 AWS 서비스 사용 하였으며 Home Security &amp; Monitoring 부분에 Kinesis Video Stream 기능을 적용</p>
+</li>
+<li>
+<p>Use Case</p>
+<ul>
+<li>
+<p>보안 카메라에 ML 기반 솔루션을 적용하여 얼굴 인식으로 가족이 아닌 경우 애플리케이션으로 알림, 침입을 감지 알림</p>
+</li>
+<li>
+<p>Connected 도어락과 영상 도어벨을 스마트폰 및 AI 어시스턴트를 통해 제어하고 손님에게 도어를 오픈</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="why-aws">Why AWS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-aws" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>완전 관리형</p>
+</li>
+<li>
+<p>수백만개의 디바이스로 부터 비디오 스트림 (규모 확장, Scalability)</p>
+</li>
+<li>
+<p>실시간 컴퓨터 비전 애플리케이션 구축이 간단하고 Amazon Rekognition, 비디오 분석 및 다양한 ML 프레임웍 기능과의 통합이 가능</p>
+</li>
+<li>
+<p>AWS IAM을 통해 비디오 스트림에 대한 접근 관리가 가능하고 AWS KMS를 이용하여 전송되는 비디오 스트림과 저장되는 비디오 레코딩에 대한 암호화를 통해 데이터 보호</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/iot/latest/apireference/API_CreateCertificateFromCsr.html" class="external external-link">Create Certificate from CSR<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (Certificate Signing Request)</p>
+</li>
+</ul>
+<h3 id="architecture">Architecture<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#architecture" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../kvs-session/untitled-12.png" class="internal internal-link" data-slug="kvs-session/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12-68.png" alt/></a></p>
+<p><a href="../../../kvs-session/untitled-13.png" class="internal internal-link" data-slug="kvs-session/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13-66.png" alt/></a></p>
+<h2 id="wyze-labs---디바이스-제조사">WYZE Labs - 디바이스 제조사<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#wyze-labs---디바이스-제조사" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="company">Company<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#company" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>미국 워싱턴 주 커클랜드에 본사를 둔 스마트 홈 제품 및 무선 카메라를 전문으로 하는 회사</p>
+</li>
+<li>
+<p>국내에서도 와이즈캠으로 판매. 저렴한 가격으로 스마트 홈 디바이스에서 크게 성장하고 있음</p>
+</li>
+</ul>
+<h3 id="solution">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Amazon KVS을 사용하여 수백만대 디바이스의 비디오 스트림을 입력하기 위한 모든 인프라를 자동으로 공급하고 탄력적으로 조정</li>
+</ul>
+<h3 id="benefit">Benefit<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#benefit" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Focus on differentiating feature set. Push all commodity features to suppliers.</p>
+</li>
+<li>
+<p>Video Ingest와 digest가 간단하고 안전</p>
+</li>
+</ul>
+<h2 id="sercom---솔루션-공급자">SERCOM - 솔루션 공급자<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sercom---솔루션-공급자" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://youtu.be/64t7us6UhVw" class="external external-link">https://youtu.be/64t7us6UhVw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="company-1">Company<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#company-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Connected Home and Building 솔루션 개발 회사</p>
+</li>
+<li>
+<p>고객사가 Smart Home과 SMB 비지니스를 빠르게 론칭 하도록 돕고 있음</p>
+</li>
+</ul>
+<h3 id="solution-1">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Video Surveillance as a service : 비디오 감시 기능을 SW 서비스로 사용</p>
+</li>
+<li>
+<p>Auto-scaling video storage, 실시간 비디오 스트리밍과 양방향 오디오 제공</p>
+</li>
+</ul>
+<h2 id="vivotek">Vivotek<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vivotek" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[</p>
+<p>Video streaming and deep learning: Using Amazon Kinesis Video Streams with Deep Java Library | Amazon Web Services</p>
+<p>Amazon Kinesis Video Streams allows you to easily ingest video data from connected devices for processing. One of the most effective ways to process this video data is using the power of deep learning. You can create an efficient service infrastructure to run these computations with a Java server, but Java support for deep learning […]</p>
+<p><iframe class="external-embed youtube" allow="fullscreen" frameborder="0" width="600px" src="https://www.youtube.com/embed/favicon.ico"></iframe><a href="https://aws.amazon.com/blogs/machine-learning/video-streaming-and-deep-learning-using-amazon-kinesis-video-streams-with-deep-java-library/" class="external external-link">https://aws.amazon.com/blogs/machine-learning/video-streaming-and-deep-learning-using-amazon-kinesis-video-streams-with-deep-java-library/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/taskinaws/attachments/blog-post_thumbnail.png" alt/>](<a href="https://aws.amazon.com/blogs/machine-learning/video-streaming-and-deep-learning-using-amazon-kinesis-video-streams-with-deep-java-library/" class="external external-link">https://aws.amazon.com/blogs/machine-learning/video-streaming-and-deep-learning-using-amazon-kinesis-video-streams-with-deep-java-library/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h3 id="company-2">Company<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#company-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>글로벌 보안 감시 솔루션 회사</p>
+</li>
+<li>
+<p>네트워크 카메라, 네트워크 비디오 레코더, 비디오 관리 솔루션 보유</p>
+</li>
+</ul>
+<h3 id="solution-2">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>여러 애플리케이션에서 공유하기 위해 비디오 정보를 수집하고 사용자에게 다양한 방식으로 시각화 정보를 제공</li>
+</ul>
+<h1 id="aws-iot-security">AWS IoT Security<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-iot-security" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="fleet-provisioning">Fleet Provisioning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fleet-provisioning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[</p>
+<p>How to automate onboarding of IoT devices to AWS IoT Core at scale with Fleet Provisioning | Amazon Web Services</p>
+<p>Customers use AWS IoT to analyze the data generated by their IoT devices to quickly gain meaningful insights about their business. This helps them solve a variety of problems, such as identifying required improvements to their manufacturing processes, predicting device failures, or quickly diagnosing and troubleshooting device issues for their customers.</p>
+<p><iframe class="external-embed youtube" allow="fullscreen" frameborder="0" width="600px" src="https://www.youtube.com/embed/favicon.ico"></iframe><a href="https://aws.amazon.com/blogs/iot/how-to-automate-onboarding-of-iot-devices-to-aws-iot-core-at-scale-with-fleet-provisioning/" class="external external-link">https://aws.amazon.com/blogs/iot/how-to-automate-onboarding-of-iot-devices-to-aws-iot-core-at-scale-with-fleet-provisioning/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/taskinaws/attachments/fleet-provisioning-1.jpg" alt/>](<a href="https://aws.amazon.com/blogs/iot/how-to-automate-onboarding-of-iot-devices-to-aws-iot-core-at-scale-with-fleet-provisioning/" class="external external-link">https://aws.amazon.com/blogs/iot/how-to-automate-onboarding-of-iot-devices-to-aws-iot-core-at-scale-with-fleet-provisioning/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>다량의 디바이스를 AWS IoT Core에 손쉽게 온보딩할 수 있도록 제공되는 기능으로</p>
+</li>
+<li>
+<p>완전 관리형 템플릿 기반으로 디바이스를 프로비저닝 하고 온보딩 워크플로우를 통해 프로세스를 자동화 및 간소화</p>
+</li>
+<li>
+<p>고유한 자격 증명으로 디바이스를 설정하고 각 디바이스가 IoT Core를 통해 안전하게 연결 될 수 있도록 클라우드 측 구성을 수행</p>
+</li>
+</ul>
+<h2 id="aws-sts-security-token-service">AWS STS (Security Token Service)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-sts-security-token-service" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>AWS 리소스에 대한 액세스를 제어할 수 있는 임시 보안 자격 증명을 생성하여 제공</p>
+</li>
+<li>
+<p>동적으로 생성되어 요청시 사용자에게 제공</p>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1745" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#kvs-session" data-for="kvs-session">KVS Session</a></li><li class="depth-0"><a href="#streaming" data-for="streaming">Streaming</a></li><li class="depth-1"><a href="#producer-api-putmedia" data-for="producer-api-putmedia">Producer API (PutMedia)</a></li><li class="depth-1"><a href="#consumer-api-getmedia" data-for="consumer-api-getmedia">Consumer API (GetMedia)</a></li><li class="depth-1"><a href="#chunk" data-for="chunk">Chunk</a></li><li class="depth-1"><a href="#streaming-protocol" data-for="streaming-protocol">Streaming Protocol</a></li><li class="depth-2"><a href="#hls-http-live-streaming" data-for="hls-http-live-streaming">HLS (HTTP Live Streaming)</a></li><li class="depth-2"><a href="#mpeg-dash-dynamic-adaptive-streaming-over-http" data-for="mpeg-dash-dynamic-adaptive-streaming-over-http">MPEG-DASH (Dynamic Adaptive Streaming over HTTP)</a></li><li class="depth-1"><a href="#media-codec" data-for="media-codec">Media Codec</a></li><li class="depth-2"><a href="#video" data-for="video">Video</a></li><li class="depth-2"><a href="#audio" data-for="audio">Audio</a></li><li class="depth-2"><a href="#container" data-for="container">Container</a></li><li class="depth-1"><a href="#transcoding-vs-transmuxing" data-for="transcoding-vs-transmuxing">Transcoding vs Transmuxing</a></li><li class="depth-2"><a href="#transcoding" data-for="transcoding">Transcoding</a></li><li class="depth-2"><a href="#transmuxing" data-for="transmuxing">Transmuxing</a></li><li class="depth-2"><a href="#transrating" data-for="transrating">Transrating</a></li><li class="depth-1"><a href="#bitrate" data-for="bitrate">BitRate</a></li><li class="depth-0"><a href="#aws-video-services" data-for="aws-video-services">AWS Video Services</a></li><li class="depth-1"><a href="#ivs" data-for="ivs">IVS</a></li><li class="depth-2"><a href="#chime" data-for="chime">Chime</a></li><li class="depth-1"><a href="#kvs" data-for="kvs">KVS</a></li><li class="depth-1"><a href="#kvs-with-webrtc" data-for="kvs-with-webrtc">KVS with WebRTC</a></li><li class="depth-1"><a href="#elemental-live" data-for="elemental-live">Elemental Live</a></li><li class="depth-0"><a href="#kvs-vs-kvs-with-webrtc" data-for="kvs-vs-kvs-with-webrtc">KVS vs KVS with WebRTC</a></li><li class="depth-1"><a href="#kvs---fully-managed-streaming" data-for="kvs---fully-managed-streaming">KVS - Fully Managed Streaming</a></li><li class="depth-1"><a href="#kinesis-video-sdk" data-for="kinesis-video-sdk">Kinesis Video SDK</a></li><li class="depth-2"><a href="#producer---ingest-video-into-kvs" data-for="producer---ingest-video-into-kvs">Producer - Ingest video into KVS</a></li><li class="depth-2"><a href="#producer-client" data-for="producer-client">Producer Client</a></li><li class="depth-2"><a href="#producer-libraries" data-for="producer-libraries">Producer Libraries</a></li><li class="depth-2"><a href="#consumer---custom-video-processing" data-for="consumer---custom-video-processing">Consumer - Custom video processing</a></li><li class="depth-1"><a href="#kvs-with-webrtc-1" data-for="kvs-with-webrtc-1">KVS with WebRTC</a></li><li class="depth-2"><a href="#signaling" data-for="signaling">Signaling</a></li><li class="depth-2"><a href="#pricing" data-for="pricing">Pricing</a></li><li class="depth-1"><a href="#webrtc-sdk" data-for="webrtc-sdk">WebRTC SDK</a></li><li class="depth-2"><a href="#embedded-sdk" data-for="embedded-sdk">Embedded SDK</a></li><li class="depth-2"><a href="#client-sdk" data-for="client-sdk">Client SDK</a></li><li class="depth-1"><a href="#alexa-integration" data-for="alexa-integration">Alexa Integration</a></li><li class="depth-0"><a href="#reference-architecture" data-for="reference-architecture">Reference Architecture</a></li><li class="depth-1"><a href="#comcast-xfinity---서비스-공급자" data-for="comcast-xfinity---서비스-공급자">Comcast Xfinity - 서비스 공급자</a></li><li class="depth-2"><a href="#comcast" data-for="comcast">Comcast</a></li><li class="depth-2"><a href="#comcast-xfinity-엑스피니티" data-for="comcast-xfinity-엑스피니티">Comcast Xfinity (엑스피니티)</a></li><li class="depth-2"><a href="#kinesis-video-stream" data-for="kinesis-video-stream">Kinesis Video Stream</a></li><li class="depth-2"><a href="#why-aws" data-for="why-aws">Why AWS</a></li><li class="depth-2"><a href="#architecture" data-for="architecture">Architecture</a></li><li class="depth-1"><a href="#wyze-labs---디바이스-제조사" data-for="wyze-labs---디바이스-제조사">WYZE Labs - 디바이스 제조사</a></li><li class="depth-2"><a href="#company" data-for="company">Company</a></li><li class="depth-2"><a href="#solution" data-for="solution">Solution</a></li><li class="depth-2"><a href="#benefit" data-for="benefit">Benefit</a></li><li class="depth-1"><a href="#sercom---솔루션-공급자" data-for="sercom---솔루션-공급자">SERCOM - 솔루션 공급자</a></li><li class="depth-2"><a href="#company-1" data-for="company-1">Company</a></li><li class="depth-2"><a href="#solution-1" data-for="solution-1">Solution</a></li><li class="depth-1"><a href="#vivotek" data-for="vivotek">Vivotek</a></li><li class="depth-2"><a href="#company-2" data-for="company-2">Company</a></li><li class="depth-2"><a href="#solution-2" data-for="solution-2">Solution</a></li><li class="depth-0"><a href="#aws-iot-security" data-for="aws-iot-security">AWS IoT Security</a></li><li class="depth-1"><a href="#fleet-provisioning" data-for="fleet-provisioning">Fleet Provisioning</a></li><li class="depth-1"><a href="#aws-sts-security-token-service" data-for="aws-sts-security-token-service">AWS STS (Security Token Service)</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

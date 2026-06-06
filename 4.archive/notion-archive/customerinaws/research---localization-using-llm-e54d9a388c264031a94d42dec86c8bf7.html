@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Research - Localization using LLM e54d9a388c264031a94d42dec86c8bf7 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Research - Localization using LLM e54d9a388c264031a94d42dec86c8bf7 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Research - Localization using LLM e54d9a388c264031a94d42dec86c8bf7 | LLM Wiki"/><meta name="twitter:description" content="🧳 Research - Localization using LLM STT Error Rate 측정 Test용 소스 컨텐츠 /Users/rainny/Documents/10-Account/30-MNE/72-HanKyungTV/Video Summarization/RawContents 종목핫라인_20240710_20min.mp4 종목핫라인_20240710_20min.json Content Split 20분 길이의 종목핫라인을 5분 단위의 4개 파일로 분리 ffmpeg -i 종목핫라인_202..."/><meta property="og:description" content="🧳 Research - Localization using LLM STT Error Rate 측정 Test용 소스 컨텐츠 /Users/rainny/Documents/10-Account/30-MNE/72-HanKyungTV/Video Summarization/RawContents 종목핫라인_20240710_20min.mp4 종목핫라인_20240710_20min.json Content Split 20분 길이의 종목핫라인을 5분 단위의 4개 파일로 분리 ffmpeg -i 종목핫라인_202..."/><meta property="og:image:alt" content="🧳 Research - Localization using LLM STT Error Rate 측정 Test용 소스 컨텐츠 /Users/rainny/Documents/10-Account/30-MNE/72-HanKyungTV/Video Summarization/RawContents 종목핫라인_20240710_20min.mp4 종목핫라인_20240710_20min.json Content Split 20분 길이의 종목핫라인을 5분 단위의 4개 파일로 분리 ffmpeg -i 종목핫라인_202..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/research---localization-using-llm-e54d9a388c264031a94d42dec86c8bf7"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/research---localization-using-llm-e54d9a388c264031a94d42dec86c8bf7"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🧳 Research - Localization using LLM STT Error Rate 측정 Test용 소스 컨텐츠 /Users/rainny/Documents/10-Account/30-MNE/72-HanKyungTV/Video Summarization/RawContents 종목핫라인_20240710_20min.mp4 종목핫라인_20240710_20min.json Content Split 20분 길이의 종목핫라인을 5분 단위의 4개 파일로 분리 ffmpeg -i 종목핫라인_202..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/customerinaws/research---localization-using-llm-e54d9a388c264031a94d42dec86c8bf7" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1487" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1487" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/customerinaws/">CustomerInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Research - Localization using LLM e54d9a388c264031a94d42dec86c8bf7</a></div></nav><h1 class="article-title">Research - Localization using LLM e54d9a388c264031a94d42dec86c8bf7</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:14.975Z">2026년 6월 06일</time><span>131 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/attachments/met_jules_tavernier_1878-3.jpg" alt/></p>
+<p>🧳</p>
+<h1 id="research---localization-using-llm">Research - Localization using LLM<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#research---localization-using-llm" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="stt-error-rate-측정">STT Error Rate 측정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stt-error-rate-측정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="test용-소스-컨텐츠">Test용 소스 컨텐츠<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#test용-소스-컨텐츠" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>/Users/rainny/Documents/10-Account/30-MNE/72-HanKyungTV/Video Summarization/RawContents</li>
+</ul>
+<p><a href="../../../research---localization-using-llm/-percente1-percent84-percent8c-percente1-percent85-percenta9-percente1-percent86-percentbc-percente1-percent84-percent86-percente1-percent85-percenta9-percente1-percent86-percenta8-percente1-percent84-percent92-percente1-percent85-percenta1-percente1-percent86-percentba-percente1-percent84-percent85-percente1-percent85-percenta1-percente1-percent84-percent8b-percente1-percent85-percentb5-percente1-percent86-percentab_20240710_20min.mp4" class="internal internal-link alias" data-slug="research---localization-using-llm/-percente1-percent84-percent8c-percente1-percent85-percenta9-percente1-percent86-percentbc-percente1-percent84-percent86-percente1-percent85-percenta9-percente1-percent86-percenta8-percente1-percent84-percent92-percente1-percent85-percenta1-percente1-percent86-percentba-percente1-percent84-percent85-percente1-percent85-percenta1-percente1-percent84-percent8b-percente1-percent85-percentb5-percente1-percent86-percentab_20240710_20min.mp4">종목핫라인_20240710_20min.mp4</a></p>
+<p><a href="../../../research---localization-using-llm/-percente1-percent84-percent8c-percente1-percent85-percenta9-percente1-percent86-percentbc-percente1-percent84-percent86-percente1-percent85-percenta9-percente1-percent86-percenta8-percente1-percent84-percent92-percente1-percent85-percenta1-percente1-percent86-percentba-percente1-percent84-percent85-percente1-percent85-percenta1-percente1-percent84-percent8b-percente1-percent85-percentb5-percente1-percent86-percentab_20240710_20min.json" class="internal internal-link alias" data-slug="research---localization-using-llm/-percente1-percent84-percent8c-percente1-percent85-percenta9-percente1-percent86-percentbc-percente1-percent84-percent86-percente1-percent85-percenta9-percente1-percent86-percenta8-percente1-percent84-percent92-percente1-percent85-percenta1-percente1-percent86-percentba-percente1-percent84-percent85-percente1-percent85-percenta1-percente1-percent84-percent8b-percente1-percent85-percentb5-percente1-percent86-percentab_20240710_20min.json">종목핫라인_20240710_20min.json</a></p>
+<h2 id="content-split">Content Split<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#content-split" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>20분 길이의 종목핫라인을 5분 단위의 4개 파일로 분리</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">ffmpeg </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">i 종목핫라인_20240710_20min.mp4 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">f segment </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">segment_time </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">300</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> -</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">c copy </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">reset_timestamps </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 종목핫라인_20240710_</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">03d.mp4</span></span></code></pre></figure>
+<h2 id="수동-스크립트와-amazon-transcribe-생성-결과-비교">수동 스크립트와 Amazon Transcribe 생성 결과 비교<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#수동-스크립트와-amazon-transcribe-생성-결과-비교" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>전체 단어 수 (<a href="https://lettercounter.net/" class="external external-link">https://lettercounter.net/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) : 725개</p>
+</li>
+<li>
+<p>오류 단어 수 : 39개 (오류비율 5.3%)</p>
+<ol>
+<li>
+<p><span class="text-highlight">풍 정밀</span> : 풍원정밀</p>
+</li>
+<li>
+<p><span class="text-highlight">ATMM</span> : FMM</p>
+</li>
+<li>
+<p><span class="text-highlight">풍 정밀</span> : 풍원정밀</p>
+</li>
+<li>
+<p><span class="text-highlight">풍 정밀</span> : 풍원정밀</p>
+</li>
+<li>
+<p><span class="text-highlight">이유에</span> : 이후에</p>
+</li>
+<li>
+<p><span class="text-highlight">면서</span> : 그러면서</p>
+</li>
+<li>
+<p><span class="text-highlight">일 많은</span> : 일만원</p>
+</li>
+<li>
+<p><span class="text-highlight">이학</span> : 이와</p>
+</li>
+<li>
+<p><span class="text-highlight">포 정리</span>도 : 풍원정밀</p>
+</li>
+<li>
+<p><span class="text-highlight">있죠</span> : 이죠</p>
+</li>
+<li>
+<p><span class="text-highlight">오 LED</span> : OLED</p>
+</li>
+<li>
+<p><span class="text-highlight">증착 연</span> : 증착용</p>
+</li>
+<li>
+<p><span class="text-highlight">금성</span> : 금속</p>
+</li>
+<li>
+<p><span class="text-highlight">각각</span> : x</p>
+</li>
+<li>
+<p><span class="text-highlight">비 스</span> : 디바이스</p>
+</li>
+<li>
+<p><span class="text-highlight">엑셀</span> : XR</p>
+</li>
+<li>
+<p><span class="text-highlight">삼성전자 에스</span> : 삼성전자에서</p>
+</li>
+<li>
+<p><span class="text-highlight">브레드</span> : 브레이크</p>
+</li>
+<li>
+<p><span class="text-highlight">잠정 치료는</span> : 잠정치로는</p>
+</li>
+<li>
+<p><span class="text-highlight">어항이</span> : 업황이</p>
+</li>
+<li>
+<p><span class="text-highlight">사익 양양</span> : 사입 양</p>
+</li>
+<li>
+<p><span class="text-highlight">비 엠 피 사가</span> : DNP사가</p>
+</li>
+<li>
+<p><span class="text-highlight">양상이</span> : 양산이</p>
+</li>
+<li>
+<p><span class="text-highlight">이 월 달에</span> : 유월달에</p>
+</li>
+<li>
+<p><span class="text-highlight">폭 케이</span> : 4K</p>
+</li>
+<li>
+<p><span class="text-highlight">자치를</span> : 자체를</p>
+</li>
+<li>
+<p><span class="text-highlight">비 엠 피 사</span> : DNP사</p>
+</li>
+<li>
+<p><span class="text-highlight">부분이었고</span> : 부분이었다면</p>
+</li>
+<li>
+<p><span class="text-highlight">폭언 정립이</span> : 풍원정밀이</p>
+</li>
+<li>
+<p><span class="text-highlight">시장 스럽게</span> : 시장에서</p>
+</li>
+<li>
+<p><span class="text-highlight">통한 정밀</span> : 풍원정밀이</p>
+</li>
+<li>
+<p><span class="text-highlight">또</span> : 도움</p>
+</li>
+<li>
+<p><span class="text-highlight">BHH 아이</span> : BHI</p>
+</li>
+<li>
+<p><span class="text-highlight">사이비</span> : 설비</p>
+</li>
+<li>
+<p><span class="text-highlight">L 엔 G</span> : LNG</p>
+</li>
+<li>
+<p><span class="text-highlight">썩는다</span> : 섞는다</p>
+</li>
+<li>
+<p><span class="text-highlight">수준인데</span> : 수주인데</p>
+</li>
+<li>
+<p><span class="text-highlight">선비</span> : 설비</p>
+</li>
+<li>
+<p><span class="text-highlight">공신 인데</span> : 공시인데</p>
+</li>
+</ol>
+</li>
+<li>
+<p>종목 오류 (풍원정밀) 수정 시 오류 단어 수 : 33개 (오류비율 4.5%)</p>
+</li>
+</ul>
+<h3 id="original-transcript---manual">Original Transcript - Manual<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#original-transcript---manual" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 종목 한 라인 세 번째 종목으로 풍원정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일본이 독점하고 있는 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 국산화와 관련된 이슈가 있는데 풍원정밀이 유월에 시장에서 재 평가가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">유월에 한 팔십팔 퍼센트가 올라왔고 유월 이십칠일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">풍원정밀의 모멘텀에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">마찬가지로 시장에서 새롭게 재평가 된 이후에 최근에 조정 나온 종목들 그러면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 디스플레이가 일만원 언더에서 지금 저점 대비에 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이와 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 풍원정밀도 마찬가지 이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일단 그 뭐 하는 기업인지 부터 먼저 말씀드리면 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착용 금속 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">쉽게</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> (생각) 말씀드리면 오픈 메탈 마스크는 이런 대면적 이런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파이 파이 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 그 다비이스, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">XR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 중에서 이제 오픈 메달 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 뭐 이쪽도 실적 이런 것들 삼성전자에서 브레이크 다운 아직 구체적인 내용은 안 나왔지만 잠정치로는 대략 한 일조원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 개선하는 모습 자체가 같이 이런 부분도 포착이 되고있다 라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 업황이 개선이 되면서 이에 따른 소재 사입 양 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 가장 큰 특징은 파이 메탈 마스크 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 쪽이에요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이쪽이 일본은 DNP사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사도 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이 메탈 마스크 어 국산화에 성공해서 SDC에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그리고 올 하반기부터 이런 부분이 양산이 되기 때문에 유월달 어 하반기를 앞두고 유월달에 이런 부분을 가치 재 평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 볼 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그러한 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">4</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">K</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, 8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">K</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 갈 때 이런 금속판에 어 미세한 구멍 자체를 여러 개 뚫게 되는데 이게 엄청난 기술력이 필요한 거고, </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 동안에 일본은 DNP사 외에는 못하는 부분이었다면 이제 이 이 부분의 국산화에 성공한 풍원정밀이 지금 현재의 시장에서 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 올 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">추가적으로 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에서 어느 정도 그 레퍼런스를 쌓은 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 풍원정밀과 관련해서 도움 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전과 관련된 종목이죠 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수주 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">하지만 칠월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전 설비 공급 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 어떻습니까</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 뭐 이 이 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">예를 들면 석탄과 LNG를 섞는다 던가 요런 이제 기반에 이제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수주인데 지금 체코에 대한 기대감이 지금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하기 때문에 이 이제 발전 설비 이제 수주에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이천 삼백억 짜리 어 이제 발전 설비 계약한 거가 이제 취소 됐다는 공시인데 요게 이제 어 중간 벤더가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀 주가로</span></span></code></pre></figure>
+<h3 id="amazon-transcribe-transcript">Amazon Transcribe Transcript<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#amazon-transcribe-transcript" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 종목 한 라인 세 번째 종목으로 풍 정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일본이 독점하고 있는 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">ATMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 국산 화와 관련된 이슈가 있는데 풍 정밀 유월에 시장에서 재 평가가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">유월에 한 팔십팔 퍼센트가 올라왔고 유 월 이십칠 일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">풍 정밀 모멘텀 에에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">마찬가지로 시장에서 새롭게 재평가 된 이유에 최근에 조정 나온 종목들 면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 디스플레이가 일 많은 언더 에서 지금 저점 대비에 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이학 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 포 정리도 마찬가지 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일단 그 뭐 하는 기업인 부터 말씀드리면 오 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 연 금성 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">쉽게 각각 말씀드리면 오픈 메탈 마스크는 이런 대면 적 이 런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파이 파이 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 그 비 스 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 엑셀 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 중에서 이제 오픈 메달 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SBC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 뭐 이 이쪽도 실적 이런 것들 삼성전자 에스 브레드 다운 아직 구체적인 내용은 안 나왔지만 잠정 치료는 대략 한 일조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 계산하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 어항이 개선이 되면서 이에 따른 소재 사익 양양 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 가장 큰 특징은 파이 메탈 마스크 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 쪽이에요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이쪽이 일본은 비 엠 피 사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이 메탈 마스크 어 국산화에 성공해서 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그리고 올 하반기부터 이런 부분이 양상이 되기 때문에 유 월 달 어 하반기를 앞두고 이 월 달에 이런 부분을 가치 재 평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 올 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그런 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">폭 케이 팔 케이 갈 때 이런 금속 판에 어 미세한 구멍 자치를 여러 개 뚫 게 되는데 이게 엄청난 기술력이 필요한 거고, </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그동안에 일본은 비 엠 피 사 외에는 못하는 부분이었고 이제 이 이 부분의 국산화에 성공한 폭언 정립이 지금 현재의 시장 스럽게 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 오늘 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">추가적으로 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에서 어느 정도 그 레퍼런스를 쌓 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 통한 정밀 관련해서 또 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전 과 관련된 종목이죠 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHH</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 아이 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수주 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">하지만 칠월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전, 사이비 공급, 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 어떻습니까</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 뭐 이 이 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">예를 들면 석탄과 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">L</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 엔 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">G</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 를 썩는다 던가 요런 이제 기반에 이 제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수준인데 지금 체코에 대한 기대감이 지 금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하 하기 때문에 이 이제 발전 설비 이제 수준에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이천 삼백억 짜리 어 이제 발전 선비 계약한 거가 이제 취소 됐다는 공신 인데 요게 이제 어 중간 벤더 가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀 주가가</span></span></code></pre></figure>
+<h2 id="claude35-sonnet을-사용한-transcript-교정">Claude3.5 Sonnet을 사용한 transcript 교정<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#claude35-sonnet을-사용한-transcript-교정" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="prompt">Prompt<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#prompt" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">당신은 금융 및 증권 분야의 전문 교정자입니다. 라이브 증권 방송의 트랜스크립트를 검토하고 오탈자를 수정해야 합니다. 다음 지침을 따라 텍스트를 교정해 </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">주세요</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 금융 및 증권 관련 전문 용어를 정확히 파악하고 올바르게 수정하세요.</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 문맥을 고려하여 오탈자를 수정하되, 원래의 단어 표현을 그대로 유지하세요.</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">3.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 구어체 표현도 그대로 유지하고, 명확성을 위해 수정하지 마세요.</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">4.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 숫자, 퍼센트, 통화 단위 등을 정확히 표기하세요.</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">5.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 고유명사, 회사명, 상품명 등을 올바르게 수정하세요.</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">6.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 불필요한 반복이 있더라도 제거하지 말고 화자의 표현을 유지해 주세요.</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">7.</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 수정한 내용에 대해 간단한 설명을 덧붙여 주세요.</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">아래는 교정이 필요한 트랜스크립트입니다. 위의 지침에 따라 텍스트를 교정하고, 수정된 버전을 제공해 </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">주세요</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 종목 한 라인 세 번째 종목으로 풍 정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일본이 독점하고 있는 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">ATMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 국산 화와 관련된 이슈가 있는데 풍 정밀 유월에 시장에서 재 평가가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">유월에 한 팔십팔 퍼센트가 올라왔고 유 월 이십칠 일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">풍 정밀 모멘텀 에에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">마찬가지로 시장에서 새롭게 재평가 된 이유에 최근에 조정 나온 종목들 면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 디스플레이가 일 많은 언더 에서 지금 저점 대비에 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이학 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 포 정리도 마찬가지 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일단 그 뭐 하는 기업인 부터 말씀드리면 오 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 연 금성 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">쉽게 각각 말씀드리면 오픈 메탈 마스크는 이런 대면 적 이 런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파이 파이 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 그 비 스 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 엑셀 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 중에서 이제 오픈 메달 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SBC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 뭐 이 이쪽도 실적 이런 것들 삼성전자 에스 브레드 다운 아직 구체적인 내용은 안 나왔지만 잠정 치료는 대략 한 일조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 계산하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 어항이 개선이 되면서 이에 따른 소재 사익 양양 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 가장 큰 특징은 파이 메탈 마스크 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 쪽이에요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이쪽이 일본은 비 엠 피 사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이 메탈 마스크 어 국산화에 성공해서 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그리고 올 하반기부터 이런 부분이 양상이 되기 때문에 유 월 달 어 하반기를 앞두고 이 월 달에 이런 부분을 가치 재 평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 올 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그런 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">폭 케이 팔 케이 갈 때 이런 금속 판에 어 미세한 구멍 자치를 여러 개 뚫 게 되는데 이게 엄청난 기술력이 필요한 거고, </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그동안에 일본은 비 엠 피 사 외에는 못하는 부분이었고 이제 이 이 부분의 국산화에 성공한 폭언 정립이 지금 현재의 시장 스럽게 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 오늘 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">추가적으로 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에서 어느 정도 그 레퍼런스를 쌓 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 통한 정밀 관련해서 또 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전 과 관련된 종목이죠 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHH</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 아이 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수주 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">하지만 칠월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전, 사이비 공급, 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 어떻습니까</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 뭐 이 이 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">예를 들면 석탄과 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">L</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 엔 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">G</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 를 썩는다 던가 요런 이제 기반에 이 제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수준인데 지금 체코에 대한 기대감이 지 금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하 하기 때문에 이 이제 발전 설비 이제 수준에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이천 삼백억 짜리 어 이제 발전 선비 계약한 거가 이제 취소 됐다는 공신 인데 요게 이제 어 중간 벤더 가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀 주가</span></span></code></pre></figure>
+<h2 id="수동-스크립트와-lmm-교정-결과-비교">수동 스크립트와 LMM 교정 결과 비교<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#수동-스크립트와-lmm-교정-결과-비교" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>전체 단어 수 (<a href="https://lettercounter.net/" class="external external-link">https://lettercounter.net/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) : 725개</p>
+</li>
+<li>
+<p>오류 단어 수 : 18개 (오류비율 2.4%)</p>
+<ol>
+<li>
+<p><span class="text-highlight">풍산정밀</span> : 풍원정밀</p>
+</li>
+<li>
+<p><span class="text-highlight">풍산정밀</span> : 풍원정밀</p>
+</li>
+<li>
+<p><span class="text-highlight">풍산정밀</span> : 풍원정밀</p>
+</li>
+<li>
+<p><span class="text-highlight">이유에</span> : 이후에</p>
+</li>
+<li>
+<p><span class="text-highlight">종목들이면서</span> : 종목들 그러면서</p>
+</li>
+<li>
+<p><span class="text-highlight">최근 많은 언더에서</span> : 일만원 언더에서</p>
+</li>
+<li>
+<p><span class="text-highlight">이학</span> : 이와</p>
+</li>
+<li>
+<p><span class="text-highlight">종목들이</span> : 종목들을</p>
+</li>
+<li>
+<p><span class="text-highlight">풍산정밀도</span> : 풍원정밀도</p>
+</li>
+<li>
+<p><span class="text-highlight">삼성전자</span>: 삼성전자에서</p>
+</li>
+<li>
+<p><span class="text-highlight">2분기 실적 다운</span>: 브레이크 다운</p>
+</li>
+<li>
+<p><span class="text-highlight">수요가</span> : 업항이</p>
+</li>
+<li>
+<p><span class="text-highlight">수요량</span> : 사입양</p>
+</li>
+<li>
+<p><span class="text-highlight">부분이었고</span> : 부분이었다면</p>
+</li>
+<li>
+<p><span class="text-highlight">풍산정밀이</span> : 풍원정밀이</p>
+</li>
+<li>
+<p><span class="text-highlight">풍산정밀</span> : 풍원정밀</p>
+</li>
+<li>
+<p><span class="text-highlight">사고를 연속</span> : x</p>
+</li>
+<li>
+<p><span class="text-highlight">이런</span> : 요런</p>
+</li>
+</ol>
+</li>
+<li>
+<p>종목 오류 (풍원정밀) 수정 시 오류 단어 수 : 12개 (오류비율 1.6%)</p>
+</li>
+</ul>
+<h3 id="original-transcript---manual-1">Original Transcript - Manual/<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#original-transcript---manual-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 종목 한 라인 세 번째 종목으로 풍원정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일본이 독점하고 있는 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 국산화와 관련된 이슈가 있는데 풍원정밀이 유월에 시장에서 재 평가가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">유월에 한 팔십팔 퍼센트가 올라왔고 유월 이십칠일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">풍원정밀의 모멘텀에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">마찬가지로 시장에서 새롭게 재평가 된 이후에 최근에 조정 나온 종목들 그러면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 디스플레이가 일만원 언더에서 지금 저점 대비에 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이와 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 풍원정밀도 마찬가지 이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일단 그 뭐 하는 기업인지 부터 먼저 말씀드리면 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착용 금속 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">쉽게 말씀드리면 오픈 메탈 마스크는 이런 대면적 이런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파이 파이 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 그 다비이스, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">XR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 중에서 이제 오픈 메달 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 뭐 이쪽도 실적 이런 것들 삼성전자에서 브레이크 다운 아직 구체적인 내용은 안 나왔지만 잠정치로는 대략 한 일조원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 개선하는 모습 자체가 같이 이런 부분도 포착이 되고있다 라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 업황이 개선이 되면서 이에 따른 소재 사입 양 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 가장 큰 특징은 파이 메탈 마스크 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 쪽이에요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이쪽이 일본은 DNP사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사도 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이 메탈 마스크 어 국산화에 성공해서 SDC에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그리고 올 하반기부터 이런 부분이 양산이 되기 때문에 유월달 어 하반기를 앞두고 유월달에 이런 부분을 가치 재 평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 볼 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그러한 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">4</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">K</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, 8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">K</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 갈 때 이런 금속판에 어 미세한 구멍 자체를 여러 개 뚫게 되는데 이게 엄청난 기술력이 필요한 거고, </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 동안에 일본은 DNP사 외에는 못하는 부분이었다면 이제 이 이 부분의 국산화에 성공한 풍원정밀이 지금 현재의 시장에서 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 올 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">추가적으로 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에서 어느 정도 그 레퍼런스를 쌓은 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 풍원정밀과 관련해서 도움 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전과 관련된 종목이죠 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수주 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">하지만 칠월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전 설비 공급 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 어떻습니까</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 뭐 이 이 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">예를 들면 석탄과 LNG를 섞는다 던가 요런 이제 기반에 이제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수주인데 지금 체코에 대한 기대감이 지금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하기 때문에 이 이제 발전 설비 이제 수주에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이천 삼백억 짜리 어 이제 발전 설비 계약한 거가 이제 취소 됐다는 공시인데 요게 이제 어 중간 벤더가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀 주가로</span></span></code></pre></figure>
+<h3 id="claude35-sonnet-교정-결과">Claude3.5 Sonnet 교정 결과<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#claude35-sonnet-교정-결과" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 종목 한 라인 세 번째 종목으로 풍산정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일본이 독점하고 있는 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 국산화와 관련된 이슈가 있는데 풍산정밀 6월에 시장에서 재평가가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">6월에 한 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">88</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">가 올라왔고 6월 27일 고점 대비해서 지금 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">25</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">풍산정밀 모멘텀에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">마찬가지로 시장에서 새롭게 재평가된 이유에 최근에 조정 나온 종목들이면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 LG디스플레이가 최근 많은 언더에서 지금 저점 대비에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">20</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">%</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 이상 올라오는 모습이 포착이 되고 있죠.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이학 관련된 종목들이 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 풍산정밀도 마찬가지이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일단 그 뭐 하는 기업인지부터 말씀드리면 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착용 금속 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파인 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">쉽게 각각 말씀드리면 오픈 메탈 마스크는 이런 대면적 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파인 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">XR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 중에서 이제 오픈 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성디스플레이, LG디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 뭐 이쪽도 실적 이런 것들 삼성전자 2분기 실적 다운 아직 구체적인 내용은 안 나왔지만 잠정치로는 대략 한 1조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 개선하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 수요가 개선이 되면서 이에 따른 소재 수요량 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 가장 큰 특징은 파인 메탈 마스크 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 쪽이에요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이쪽이 일본의 DNP사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파인 메탈 마스크 국산화에 성공해서 SDC에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그리고 올 하반기부터 이런 부분이 양산이 되기 때문에 6월 달 하반기를 앞두고 6월 달에 이런 부분을 가치 재평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져볼 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그런 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요.</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">4</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">K</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, 8</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">K</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 갈 때 이런 금속 판에 미세한 구멍 자체를 여러 개 뚫게 되는데 이게 엄청난 기술력이 필요한 거고, </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그동안에 일본의 DNP사 외에는 못하는 부분이었고 이제 이 부분의 국산화에 성공한 풍산정밀이 지금 현재 시장에서 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 오늘 하반기 양산이기 때문에 작년까지 이런 부분이 적자였지만 하반기에 조심스럽게 흑자 전환까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">추가적으로 SDC에서 어느 정도 그 레퍼런스를 쌓은 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 풍산정밀 관련해서 또 말씀 들어봤습니다. 마지막 종목은 어떤 종목인지 화면으로 만나보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전과 관련된 종목이죠. </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 체코 원전 수주에 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">하지만 7월 며칠 전 초만 하더라도 또 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,322억 규모의 발전설비 공급 계약 해지를 했다라는 소식으로 인해서 또 하락을 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 어떻습니까</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 뭐 이 BHI라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">예를 들면 석탄과 LNG를 섞는다던가 이런 이제 기반에 이제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수주인데 지금 체코에 대한 기대감이 지금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하기 때문에 이 이제 발전 설비 이제 수주에 대한 기대감이 상당히 좀 있는 회사인데 어 7월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,300억 짜리 어 이제 발전 설비 계약한 거가 이제 취소됐다는 공시인데 요게 이제 어 중간 벤더가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,300억에 대한 취소 공시가 약간 좀 주가</span></span></code></pre></figure>
+<h2 id="stt-오류-계산-코드---한국어-자동-음성-인식-평가를-위한-유사도-측정-함수-패키지">STT 오류 계산 코드 - <strong>한국어 자동 음성 인식 평가를 위한 유사도 측정 함수 패키지</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stt-오류-계산-코드---한국어-자동-음성-인식-평가를-위한-유사도-측정-함수-패키지" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://github.com/hyeonsangjeon/computing-Korean-STT-error-rates" class="external external-link">https://github.com/hyeonsangjeon/computing-Korean-STT-error-rates<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="test-code">Test Code<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#test-code" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> nlptutti </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> metrics</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">refs </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;네, 종목 한 라인 세 번째 종목으로 풍원정밀 준비를 했습니다. 일본이 독점하고 있는 FMM 국산화와 관련된 이슈가 있는데 풍원정밀이 유월에 시장에서 재 평가가 된 상황이죠. 유월에 한 팔십팔 퍼센트가 올라왔고 유월 이십칠일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. 풍원정밀의 모멘텀에 대해서 자세한 설명 들어보죠. 마찬가지로 시장에서 새롭게 재평가 된 이후에 최근에 조정 나온 종목들 그러면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요. 특히나 이제 OLED 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 LG 디스플레이가 일만원 언더에서 지금 저점 대비에 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠. 조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이와 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 풍원정밀도 마찬가지 이죠. 일단 그 뭐 하는 기업인지 부터 먼저 말씀드리면 OLED 증착용 금속 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 쉽게 말씀드리면 오픈 메탈 마스크는 이런 대면적 이런 OLED 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파이 파이 메탈 마스크는 이런 중소형 OLED. 그러니까 우리가 스마트폰이나 이런 그 다비이스, VR, XR 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. 그 중에서 이제 오픈 메달 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. 최근에 SDC 뭐 이쪽도 실적 이런 것들 삼성전자에서 브레이크 다운 아직 구체적인 내용은 안 나왔지만 잠정치로는 대략 한 일조원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 개선하는 모습 자체가 같이 이런 부분도 포착이 되고있다 라고 생각을 하시면 될 것 같습니다. 최근에 업황이 개선이 되면서 이에 따른 소재 사입 양 자체도 확실히 증가를 하고 있는 거죠. 어, 가장 큰 특징은 파이 메탈 마스크 FMM 쪽이에요. 이쪽이 일본은 DNP사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사도 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이 메탈 마스크 어 국산화에 성공해서 SDC에 새롭게 공급을 새롭게 시작을 했다는 거죠. 그리고 올 하반기부터 이런 부분이 양산이 되기 때문에 유월달 어 하반기를 앞두고 유월달에 이런 부분을 가치 재 평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 볼 필요가 있는 거죠. 그러한 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요. 4K, 8K 갈 때 이런 금속판에 어 미세한 구멍 자체를 여러 개 뚫게 되는데 이게 엄청난 기술력이 필요한 거고, 그 동안에 일본은 DNP사 외에는 못하는 부분이었다면 이제 이 이 부분의 국산화에 성공한 풍원정밀이 지금 현재의 시장에서 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 올 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. 추가적으로 SDC 에서 어느 정도 그 레퍼런스를 쌓은 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. 네, 풍원정밀과 관련해서 도움 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. 네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전과 관련된 종목이죠 BHI 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수주 대한 기대감으로 올라오고 있습니다. 하지만 칠월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전 설비 공급 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요? 어떻습니까? 어, 뭐 이 이 BHI 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. 예를 들면 석탄과 LNG를 섞는다 던가 요런 이제 기반에 이제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수주인데 지금 체코에 대한 기대감이 지금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하기 때문에 이 이제 발전 설비 이제 수주에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. 이천 삼백억 짜리 어 이제 발전 설비 계약한 거가 이제 취소 됐다는 공시인데 요게 이제 어 중간 벤더가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀 주가로/&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">preds </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;네, 종목 한 라인 세 번째 종목으로 풍 정밀 준비를 했습니다. 일본이 독점하고 있는 ATMM 국산 화와 관련된 이슈가 있는데 풍 정밀 유월에 시장에서 재 평가가 된 상황이죠. 유월에 한 팔십팔 퍼센트가 올라왔고 유 월 이십칠 일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. 풍 정밀 모멘텀 에에 대해서 자세한 설명 들어보죠. 마찬가지로 시장에서 새롭게 재평가 된 이유에 최근에 조정 나온 종목들 면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요 특히나 이제 OLED 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 LG 디스플레이가 일 많은 언더 에서 지금 저점 대비에 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠 조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이학 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 포 정리도 마찬가지 있죠. 일단 그 뭐 하는 기업인 부터 말씀드리면 오 LED 증착 연 금성 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 쉽게 각각 말씀드리면 오픈 메탈 마스크는 이런 대면 적 이 런 OLED 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파이 파이 메탈 마스크는 이런 중소형 OLED. 그러니까 우리가 스마트폰이나 이런 그 비 스 VR 엑셀 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. 그 중에서 이제 오픈 메달 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. 최근에 SBC 뭐 이 이쪽도 실적 이런 것들 삼성전자 에스 브레드 다운 아직 구체적인 내용은 안 나왔지만 잠정 치료는 대략 한 일조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 계산하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. 최근에 어항이 개선이 되면서 이에 따른 소재 사익 양양 자체도 확실히 증가를 하고 있는 거죠. 어, 가장 큰 특징은 파이 메탈 마스크 FMM 쪽이에요 이쪽이 일본은 비 엠 피 사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이 메탈 마스크 어 국산화에 성공해서 SDC 에 새롭게 공급을 새롭게 시작을 했다는 거죠. 그리고 올 하반기부터 이런 부분이 양상이 되기 때문에 유 월 달 어 하반기를 앞두고 이 월 달에 이런 부분을 가치 재 평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 올 필요가 있는 거죠. 그런 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요 폭 케이 팔 케이 갈 때 이런 금속 판에 어 미세한 구멍 자치를 여러 개 뚫 게 되는데 이게 엄청난 기술력이 필요한 거고, 그동안에 일본은 비 엠 피 사 외에는 못하는 부분이었고 이제 이 이 부분의 국산화에 성공한 폭언 정립이 지금 현재의 시장 스럽게 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 오늘 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. 추가적으로 SDC 에서 어느 정도 그 레퍼런스를 쌓 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. 네, 통한 정밀 관련해서 또 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. 네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전 과 관련된 종목이죠 BHH 아이 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수주 대한 기대감으로 올라오고 있습니다. 하지만 칠월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전, 사이비 공급, 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요? 어떻습니까? 어, 뭐 이 이 BHI 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. 예를 들면 석탄과 L 엔 G 를 썩는다 던가 요런 이제 기반에 이 제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수준인데 지금 체코에 대한 기대감이 지 금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하 하기 때문에 이 이제 발전 설비 이제 수준에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. 이천 삼백억 짜리 어 이제 발전 선비 계약한 거가 이제 취소 됐다는 공신 인데 요게 이제 어 중간 벤더 가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀 주가가&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">preds2 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;네, 종목 한 라인 세 번째 종목으로 풍산정밀 준비를 했습니다. 일본이 독점하고 있는 FMM 국산화와 관련된 이슈가 있는데 풍산정밀 6월에 시장에서 재평가가 된 상황이죠. 6월에 한 88%가 올라왔고 6월 27일 고점 대비해서 지금 25% 정도 조정을 받고 있는 상황입니다. 풍산정밀 모멘텀에 대해서 자세한 설명 들어보죠. 마찬가지로 시장에서 새롭게 재평가된 이유에 최근에 조정 나온 종목들이면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요. 특히나 이제 OLED 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 LG디스플레이가 최근 많은 언더에서 지금 저점 대비에 20% 이상 올라오는 모습이 포착이 되고 있죠. 조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이학 관련된 종목들이 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 풍산정밀도 마찬가지이죠. 일단 그 뭐 하는 기업인지부터 말씀드리면 OLED 증착용 금속 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파인 메탈 마스크 두 가지로 나눠지는데 쉽게 각각 말씀드리면 오픈 메탈 마스크는 이런 대면적 OLED 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파인 메탈 마스크는 이런 중소형 OLED. 그러니까 우리가 스마트폰이나 이런 VR, XR 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. 그 중에서 이제 오픈 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성디스플레이, LG디스플레이 모두 다 납품을 하고 있고요. 최근에 SDC 뭐 이쪽도 실적 이런 것들 삼성전자 2분기 실적 다운 아직 구체적인 내용은 안 나왔지만 잠정치로는 대략 한 1조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 개선하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. 최근에 수요가 개선이 되면서 이에 따른 소재 수요량 자체도 확실히 증가를 하고 있는 거죠. 어, 가장 큰 특징은 파인 메탈 마스크 FMM 쪽이에요. 이쪽이 일본의 DNP사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파인 메탈 마스크 국산화에 성공해서 SDC에 새롭게 공급을 새롭게 시작을 했다는 거죠. 그리고 올 하반기부터 이런 부분이 양산이 되기 때문에 6월 달 하반기를 앞두고 6월 달에 이런 부분을 가치 재평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져볼 필요가 있는 거죠. 그런 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요. 4K, 8K 갈 때 이런 금속 판에 미세한 구멍 자체를 여러 개 뚫게 되는데 이게 엄청난 기술력이 필요한 거고, 그동안에 일본의 DNP사 외에는 못하는 부분이었고 이제 이 부분의 국산화에 성공한 풍산정밀이 지금 현재 시장에서 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 오늘 하반기 양산이기 때문에 작년까지 이런 부분이 적자였지만 하반기에 조심스럽게 흑자 전환까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아들고 있는 것 같습니다. 추가적으로 SDC에서 어느 정도 그 레퍼런스를 쌓은 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. 네, 풍산정밀 관련해서 또 말씀 들어봤습니다. 마지막 종목은 어떤 종목인지 화면으로 만나보겠습니다. 네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전과 관련된 종목이죠. BHI 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 체코 원전 수주에 대한 기대감으로 올라오고 있습니다. 하지만 7월 며칠 전 초만 하더라도 또 2,322억 규모의 발전설비 공급 계약 해지를 했다라는 소식으로 인해서 또 하락을 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요? 어떻습니까? 어, 뭐 이 BHI라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발했습니다. 예를 들면 석탄과 LNG를 섞는다던가 이런 이제 기반에 이제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수주인데 지금 체코에 대한 기대감이 지금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하기 때문에 이 이제 발전 설비 이제 수주에 대한 기대감이 상당히 좀 있는 회사인데 어 7월 이제 초에 갑자기 주가가 좀 급락을 했습니다. 2,300억 짜리 어 이제 발전 설비 계약한 거가 이제 취소됐다는 공시인데 요게 이제 어 중간 벤더가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 2,300억에 대한 취소 공시가 약간 좀 주가&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> metrics.get_cer(refs, preds)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cer </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> result[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'cer'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">substitutions </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> result[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'substitutions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">deletions </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> result[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'deletions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">insertions </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> result[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'insertions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;Amazon Transcribe Result [cer : </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">cer</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">100}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">%, substitutions : </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">substitutions</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">, deletions : </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">deletions</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">, insertions : </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">insertions</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">]&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">result </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> metrics.get_cer(refs, preds2)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">cer </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> result[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'cer'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">substitutions </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> result[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'substitutions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">deletions </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> result[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'deletions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">insertions </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> result[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'insertions'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;LLM Correction Result [cer : </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">cer</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">*</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">100}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">%, substitutions : </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">substitutions</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">, deletions : </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">deletions</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">, insertions : </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">insertions</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">]&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span></code></pre></figure>
+<h3 id="amazon-transcribe-result">Amazon Transcribe Result<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#amazon-transcribe-result" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>cer : 4.719917012448133%, substitutions : 56, deletions : 20, insertions : 15</li>
+</ul>
+<h3 id="amazon-transcribe--claude35-sonnet">Amazon Transcribe + Claude3.5 Sonnet<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#amazon-transcribe--claude35-sonnet" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>cer : 6.308654848800835%, substitutions : 65, deletions : 51, insertions : 5</p>
+</li>
+<li>
+<p>숫자 표현 병경으로 증가된 것으로 계산</p>
+</li>
+</ul>
+<h2 id="speech-enhancement">Speech Enhancement<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#speech-enhancement" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="dl">DL<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dl" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>DeepFilterNet : <a href="https://github.com/Rikorose/DeepFilterNet?tab=readme-ov-file" class="external external-link">https://github.com/Rikorose/DeepFilterNet?tab=readme-ov-file<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h3 id="ffmpeg">FFmpeg<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ffmpeg" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> os</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 입력 및 출력 파일 정의</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">input_file </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'input_video.mp4'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">out_audio_file </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'extracted_audio.wav'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">noise_reduced_file </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'noise_reduced_audio.wav'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">enhanced_audio_file </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'enhanced_audio.wav'</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 오디오 추출</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">ffmpeg_command </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ffmpeg -i </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">input_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> -q:a 0 -map a </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">out_audio_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">os.system(ffmpeg_command)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 노이즈 제거</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">ffmpeg_command_noise_reduction </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ffmpeg -i </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">out_audio_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> -af &quot;afftdn&quot; </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">noise_reduced_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">os.system(ffmpeg_command_noise_reduction)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 음성 선명도 향상</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">ffmpeg_command_enhancement </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ffmpeg -i </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">noise_reduced_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> -af &quot;equalizer=f=1000:t=q:w=200:g=10,equalizer=f=3000:t=q:w=200:g=10&quot; </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">enhanced_audio_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">os.system(ffmpeg_command_enhancement)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># WAV 파일을 MP3 포맷으로 변환</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">ffmpeg_command_conversion </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'ffmpeg -i </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">enhanced_audio_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> -q:a 0 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">final_audio_file</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">os.system(ffmpeg_command_conversion)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;Audio processing completed.&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span></code></pre></figure>
+<h3 id="original-speech-transcribe-result">Original Speech Transcribe Result<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#original-speech-transcribe-result" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 종목 한 라인 세 번째 종목으로 풍 정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일본이 독점하고 있는 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">ATMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 국산 화와 관련된 이슈가 있는데 풍 정밀 유월에 시장에서 재 평가가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">유월에 한 팔십팔 퍼센트가 올라왔고 유 월 이십칠 일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">풍 정밀 모멘텀 에에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">마찬가지로 시장에서 새롭게 재평가 된 이유에 최근에 조정 나온 종목들 면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 디스플레이가 일 많은 언더 에서 지금 저점 대비에 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이학 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 포 정리도 마찬가지 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일단 그 뭐 하는 기업인 부터 말씀드리면 오 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 연 금성 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">쉽게 각각 말씀드리면 오픈 메탈 마스크는 이런 대면 적 이 런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파이 파이 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 그 비 스 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 엑셀 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 중에서 이제 오픈 메달 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SBC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 뭐 이 이쪽도 실적 이런 것들 삼성전자 에스 브레드 다운 아직 구체적인 내용은 안 나왔지만 잠정 치료는 대략 한 일조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 계산하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 어항이 개선이 되면서 이에 따른 소재 사익 양양 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 가장 큰 특징은 파이 메탈 마스크 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 쪽이에요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이쪽이 일본은 비 엠 피 사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이 메탈 마스크 어 국산화에 성공해서 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그리고 올 하반기부터 이런 부분이 양상이 되기 때문에 유 월 달 어 하반기를 앞두고 이 월 달에 이런 부분을 가치 재 평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 올 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그런 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">폭 케이 팔 케이 갈 때 이런 금속 판에 어 미세한 구멍 자치를 여러 개 뚫 게 되는데 이게 엄청난 기술력이 필요한 거고, </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그동안에 일본은 비 엠 피 사 외에는 못하는 부분이었고 이제 이 이 부분의 국산화에 성공한 폭언 정립이 지금 현재의 시장 스럽게 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 오늘 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">추가적으로 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에서 어느 정도 그 레퍼런스를 쌓 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 통한 정밀 관련해서 또 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전 과 관련된 종목이죠 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHH</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 아이 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수주 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">하지만 칠월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전, 사이비 공급, 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 어떻습니까</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 뭐 이 이 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">예를 들면 석탄과 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">L</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 엔 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">G</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 를 썩는다 던가 요런 이제 기반에 이 제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수준인데 지금 체코에 대한 기대감이 지 금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하 하기 때문에 이 이제 발전 설비 이제 수준에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이천 삼백억 짜리 어 이제 발전 선비 계약한 거가 이제 취소 됐다는 공신 인데 요게 이제 어 중간 벤더 가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀 주가가</span></span></code></pre></figure>
+<h3 id="speech-enhancement-transcribe-result---mp3">Speech Enhancement Transcribe Result - MP3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#speech-enhancement-transcribe-result---mp3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">네, 종목 한 라인 세 번째 종목으로 통원 정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">일본이 독점하고 있는 에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">TMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 국산화 관련된 이슈가 있는데 풍 정밀 유월에 시장에서 재평가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">유 월에 한 팔십팔 퍼센트가 올라왔고 유월 이십칠일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">풍 정밀 모멘텀 에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">마찬가지로 시장에서 새롭게 재평가 된 이유에 최근에 조정 나온 종목들, 그러면서 이 시작할 수 있는 종목들, 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 디스플레이가 일만은 언더 에서 지금 저점 대비해서 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이와 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 폭언 정리도 마찬가지 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">일단 그 뭐 하는 기업인 부터 먼저 말씀드리면 오 디디 증착 연 금성 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">쉽게 생각 말씀드리면 오픈 메탈 마스크는 이런 대면 적 이런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 징 쪽에 사용되는 소재라 생각하시면 될 것 같고, 파이 파이 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 그 비스 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 엑셀 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">그 중에서 이제 오픈 메탈 마스크는 곡선 있 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 뭐 이 이쪽도 실적 이런 것도 삼성전자에서 브레드 아직 구체적인 내용은 안 나왔지만 잠정 치료는 대략 한 일 조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 계산하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">최근에 어항이 개선이 되면서 이에 따른 소재 사익 양 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">어 가 큰 특징은 파이 메탈 마스크 F 엠 맨 쪽이에요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">이쪽이 일본은 비 엠 피 사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이터 마스크 어 국산화에 성공해서 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">그리고 올 하반기부터 이런 부분이 양상이 되기 때문에 유 월 달 어 하반기를 앞두고 유 월 달에 이런 부분을 같이 있었던 거 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 볼 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">그러한 부분을 생각을 하시면 될 것 같고, 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">폭 케이 팔 케이 갈 때 이런 금속의 어 미세한 구멍 자치를 여러 개 뚫 되는데 이게 엄청난 기술력이 필요한 거고, </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">그동안에 일본은 D 엠 피 사 외에는 못 하는 부분이 였다면 이제 이 이 부분의 국산화에 성공한 폭언 정립이 지금 현재의 시장에서 새롭게 재평가를 받고 있기 때문에 그러한 부분은 우리가 체크를 하면서 오늘 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지 도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">추가적으로 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 에서 어느 정도 그 레퍼런스를 쌓 이후에 향후의 중복 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">네, 통한 정밀 관련해서도 도움 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전 과 관련된 종목이죠 B 에 H 아이 준비를 했습니다. 역대 최대 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수출에 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">하지만 칠 월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전, 사이비 공급, 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic;" data-token-type="error">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 어떻습니까</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic;" data-token-type="error">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">어, 뭐 이 이 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어, 왜 그렇게 갑자기 됐냐하면 원 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">예를 들면 석탄과 L 엔 지 를 썩는다 던가 요런 이제 기반에 이제 복합 활력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수준인데 지금 체코에 대한 기대감이 지금 상당히 좀 높아져 있고 내년에 또 아랍에미리트가 또 건이 있고 하기 하기 때문에 이 이제 발전 설비 이제 수준에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">이천 삼백억 짜리 어 이제 발전 선비 계약한 거가 이제 취소 됐다는 공신 인데 요게 이제 어 중간 밴드가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀좀 주가가</span></span></code></pre></figure>
+<h3 id="original-speech-transcribe-result-1">Original Speech Transcribe Result<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#original-speech-transcribe-result-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="jsx" data-theme="github-light github-dark"><code data-language="jsx" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 종목 한 라인 세 번째 종목으로 풍 정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일본이 독점하고 있는 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">ATMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 국산 화와 관련된 이슈가 있는데 풍 정밀 유월에 시장에서 재 평가가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">유월에 한 팔십팔 퍼센트가 올라왔고 유 월 이십칠 일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">풍 정밀 모멘텀 에에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">마찬가지로 시장에서 새롭게 재평가 된 이유에 최근에 조정 나온 종목들 면서 이제 다시 시작할 수 있는 종목들 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 디스플레이가 일 많은 언더 에서 지금 저점 대비에 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이학 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 포 정리도 마찬가지 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">일단 그 뭐 하는 기업인 부터 말씀드리면 오 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 연 금성 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">쉽게 각각 말씀드리면 오픈 메탈 마스크는 이런 대면 적 이 런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 증착 쪽에 사용되는 소재라 생각하시면 될 것 같고 파이 파이 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 그 비 스 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 엑셀 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그 중에서 이제 오픈 메달 메탈 마스크는 국산화에 이미 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SBC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 뭐 이 이쪽도 실적 이런 것들 삼성전자 에스 브레드 다운 아직 구체적인 내용은 안 나왔지만 잠정 치료는 대략 한 일조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 계산하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">최근에 어항이 개선이 되면서 이에 따른 소재 사익 양양 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 가장 큰 특징은 파이 메탈 마스크 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">FMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 쪽이에요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이쪽이 일본은 비 엠 피 사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이 메탈 마스크 어 국산화에 성공해서 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그리고 올 하반기부터 이런 부분이 양상이 되기 때문에 유 월 달 어 하반기를 앞두고 이 월 달에 이런 부분을 가치 재 평가가 큰 폭으로 나타났고, 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 올 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그런 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">폭 케이 팔 케이 갈 때 이런 금속 판에 어 미세한 구멍 자치를 여러 개 뚫 게 되는데 이게 엄청난 기술력이 필요한 거고, </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">그동안에 일본은 비 엠 피 사 외에는 못하는 부분이었고 이제 이 이 부분의 국산화에 성공한 폭언 정립이 지금 현재의 시장 스럽게 재평가를 받고 있기 때문에 그러한 부분을 우리가 체크를 하면서 오늘 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">추가적으로 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 에서 어느 정도 그 레퍼런스를 쌓 이후에 향후의 중국 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 통한 정밀 관련해서 또 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전 과 관련된 종목이죠 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHH</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 아이 준비를 했습니다. 역대 최대의 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수주 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">하지만 칠월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전, 사이비 공급, 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 어떻습니까</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">어, 뭐 이 이 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면 원 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">예를 들면 석탄과 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">L</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 엔 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">G</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> 를 썩는다 던가 요런 이제 기반에 이 제 복합 화력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수준인데 지금 체코에 대한 기대감이 지 금 상당히 좀 높아져 있고 내년에는 또 아랍에미리트가 또 건이 있고 하 하기 때문에 이 이제 발전 설비 이제 수준에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">이천 삼백억 짜리 어 이제 발전 선비 계약한 거가 이제 취소 됐다는 공신 인데 요게 이제 어 중간 벤더 가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀 주가가</span></span></code></pre></figure>
+<h3 id="speech-enhancement-transcribe-result---wave">Speech Enhancement Transcribe Result - Wave<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#speech-enhancement-transcribe-result---wave" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">네, 종목 한 라인 세 번째 종목으로 풍 정밀 준비를 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">일본이 독점하고 있는 에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">TMM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 국산화 관련된 이슈가 있는데 풍 정밀 유월에 시장에서 재 평가가 된 상황이죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">유 월에 한 팔십팔 퍼센트가 올라왔고 유월 이십칠일 고점 대비해서 지금 이십오 퍼센트 정도 조정을 받고 있는 상황입니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">풍 정밀 모멘텀 에 대해서 자세한 설명 들어보죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">마찬가지로 시장에서 새롭게 재평가 된 이유에 최근에 조정 나온 종목들, 그러면서 이 시작할 수 있는 종목들, 이런 부분에 대해서 오늘 좀 종목들을 가져와 봤고요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">특히나 이제 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 관련된 종목에 대한 관심도가 좀 높아지고 있는데 특히 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">LG</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 디스플레이가 일만은 언더 에서 지금 저점 대비해서 이십 퍼센트 이상 올라오는 모습이 포착이 되고 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">조심스럽게 바닥 탈출 얘기가 나타나면서 최근 이와 관련된 종목들을 수혜를 받을 수 있는 기업들이 지금 계속해서 시장에서 회자가 되고 있습니다. 폭언 정리도 마찬가지 있죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">일단 그 뭐 하는 기업인 부터 먼저 말씀드리면 오 디디 증착 연 금성 마스크를 전문적으로 제조하는 기업이고 크게 오픈 메탈 마스크, 파이 메탈 마스크 두 가지로 나눠지는데 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">쉽게 생각 말씀드리면 오픈 메탈 마스크는 이런 대면 적 이런 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 증착 쪽에 사용되는 소재 라고 생각하시면 될 것 같고, 파이 파이 메탈 마스크는 이런 중소형 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">OLED</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">. 그러니까 우리가 스마트폰이나 이런 그 비스 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">VR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 엑셀 기기 뭐 이런 쪽이라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">그 중에서 이제 오픈 메달 메탈 마스크는 곡 사나 있 성공을 해가지고 국내 삼성 디스플레이, 엘지 디스플레이 모두 다 납품을 하고 있고요. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">최근에 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 뭐 이 이쪽도 실적 이런 것도 삼성전자에서 브레드 아직 구체적인 내용은 안 나왔지만 잠정 치료는 대략 한 일 조 원 가까이 수익이 났을 것으로 기대가 되고 있기 때문에 확실히 수익 계산하는 모습 자체가 같이 이런 부분도 포착이 되고 있다라고 생각을 하시면 될 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">최근에 어항이 개선이 되면서 이에 따른 소재 사익 양 자체도 확실히 증가를 하고 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">어 가 큰 특징은 파이 메탈 마스크에 F 엠 맨 쪽이에요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">이쪽이 일본은 비 엠 피 사가 독점적으로 세계에서 납품을 하고 있었고, 국내 양사 마찬가지로 삼성 디스플레이 쪽에서 이쪽을 주로 채택을 해서 쓰고 있었는데, 지금 이번에 바뀐 게 파이터 마스크 어 국산화에 성공해서 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 에 새롭게 공급을 새롭게 시작을 했다는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">그리고 올 하반기부터 이런 부분이 양상이 되기 때문에 유 월 달 어 하반기를 앞두고 유 월 달에 이런 부분을 같이 있었던 거 큰 폭으로 나타났고 그 이후에 지금 조정 나와서 약간은 쉬어 가고 있는데 확실히 현시점에서 우리가 좀 관심을 가져 볼 필요가 있는 거죠. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">그러한 부분을 생각을 하시면 될 것 같고 특히나 이제 이런 것들이 해상도를 높이는 데 필수적으로 쓰이거든요 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">폭 케이 팔 케이 갈 때 이런 금속 판에 어, 미세한 구멍 자치를 여러 개 뚫 되는데 이게 엄청난 기술력이 필요한 거고 </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">그동안에 일본은 D 엠 피 사 외에는 못 하는 부분이 었다고 이제 이 이 부분의 국산화에 성공한 폭언 정립이 지금 현재의 시장에서 새롭게 재평가를 받고 있기 때문에 그러한 부분은 우리가 체크를 하면서 오늘 하반기 양산 이기 때문에 작년까지 이런 부분이 적자 였지만 하반기에 조심스럽게 흑자 전환 까지 도 좀 일부 기대해 볼 수 있는 이러한 부분이 주가에 그대로 녹아 들고 있는 것 같습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">추가적으로 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">SDC</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 에서 어느 정도 그 레퍼런스를 쌓 이후에 향후의 중복 쪽 진출할 계획이 있기 때문에 그러한 부분도 계속 체크해 나가도록 하겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">네, 통한 정밀 관련해서도 도움 말씀 들어봤습니다. 마지막 종목은 어떤 종목 인지 화면으로 만나 보겠습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">네, 마지막으로는 요즘 다시 핫하게 떠오르고 있는 원전 과 관련된 종목이죠 B 에 H 아이 준비를 했습니다. 역대 최대 수주 달성에 대한 기대감이 있는데 지금 사고를 연속 체코 원전 수출에 대한 기대감으로 올라오고 있습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">하지만 칠 월 뭐 며칠 전 초만 하더라도 또 이천삼백 이십이억 규모의 발전, 사이비 공급, 계약 해지를 했다라는 소식으로 인해서 또 하락을 어 한 모습이 나타나기도 했었는데 이걸 극복하고 올라갈 수 있는 건가요</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic;" data-token-type="error">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 어떻습니까</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic;" data-token-type="error">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">어 뭐 이 이 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">BHI</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 라는 회사는 지금 수주 잔고가 역대 최대의 호황을 좀 누리고 있는 회사입니다. 어 왜 그렇게 갑자기 됐냐하면</span><span style="--shiki-light:#B31D28;--shiki-light-font-style:italic;--shiki-dark:#FDAEB7;--shiki-dark-font-style:italic;" data-token-type="error">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> 원 원래는 이제 석탄 발전소 기반의 이제 제품들을 좀 많이 하다가 어, 이제 석탄 발전소가 이제 시장이 좀 줄어들게 되면서 이제 신 재생 에너지로 좀 변하게 되면서 이제 어, 복합 화력 발전을 많이 개발 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">예를 들면 석탄과 L 엔 지 를 썩는다 던가 요런 이제 기반에 이제 복합 활력 발전을 좀 많이 하다 보니까 최근에 수주가 급격하게 늘어나고 있고 여기에 이제 어 이제 피크를 아웃을 칠 것이 바로 이제 원전 수준인데 지금 체코에 대한 기대감이 지금 상당히 좀 높아져 있고 내년에 또 아랍에미리트가 또 건이 있고 하기 하기 때문에 이 이제 발전 설비 이제 수준에 대한 기대감이 상당히 좀 있는 회사인데 어 칠월 이제 초에 갑자기 주가가 좀 급락을 했습니다. </span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">이천 삼백억 짜리 어 이제 발전 선비 계약한 거가 이제 취소 됐다는 공신 인데 요게 이제 어 중간 밴드가 이제 요청에 의해서 취소를 한 거고 원 그 프로젝트 이제 어 사와 개별 단독 그 이제 어 직접 계약을 다시 진행하기로 지금 진행을 좀 하고 있기 때문에 어 이천삼백 억에 대한 취소 공시가 약간 좀좀 주가가</span></span></code></pre></figure>
+<h1 id="transcript-품질-개선-방법">Transcript 품질 개선 방법<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transcript-품질-개선-방법" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="오디오-입력-파일-전처리">오디오 입력 파일 전처리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#오디오-입력-파일-전처리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>배경 노이즈 제거</p>
+<ul>
+<li>
+<p>스펙트럼 노이즈 게이트 알고리즘 적용: 배경 소음을 제거하고 음성 신호를 보존합니다[1].</p>
+</li>
+<li>
+<p>다중 마이크 어레이 사용: 여러 마이크를 통해 음성과 배경 소음을 더 효과적으로 구분합니다[2].</p>
+</li>
+</ul>
+</li>
+<li>
+<p>음성 주파수 대역 강화</p>
+<ul>
+<li>
+<p>부분 상세 라우드니스(partial specific loudness) 모델 적용: 각 주파수 대역의 음성 신호를 강화하여 잡음이 없을 때의 라우드니스와 유사하게 조절합니다[4].</p>
+</li>
+<li>
+<p>이퀄라이저 적용: 음성 주파수 대역(300Hz-3kHz)을 강화합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>오디오 정규화</p>
+<ul>
+<li>볼륨 레벨 표준화: 오디오의 전체적인 볼륨을 일정 수준으로 조정합니다[2].</li>
+</ul>
+</li>
+<li>
+<p>음성 활동 감지(VAD)</p>
+<ul>
+<li>음성이 있는 부분만 선별하여 인식 시스템에 입력합니다[2].</li>
+</ul>
+</li>
+</ol>
+<p><a href="https://github.com/facebookresearch/denoiser" class="external external-link">https://github.com/facebookresearch/denoiser<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h2 id="transcript-후처리">Transcript 후처리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transcript-후처리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>LLM을 활용한 교정</p>
+<ul>
+<li>
+<p>GPT 모델 활용: 문맥을 고려하여 오류가 있는 단어나 문장을 교정합니다.</p>
+</li>
+<li>
+<p>BERT 모델 활용: 마스킹된 단어 예측을 통해 오류 단어를 교정합니다.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>문장 구조 개선</p>
+<ul>
+<li>
+<p>구두점 및 대소문자 교정: 적절한 위치에 마침표, 쉼표 등을 추가하고 대소문자를 교정합니다.</p>
+</li>
+<li>
+<p>문장 분리 및 결합: 긴 문장을 적절히 분리하거나 짧은 문장을 결합하여 가독성을 높입니다[5].</p>
+</li>
+</ul>
+</li>
+<li>
+<p>전문용어 및 고유명사 처리</p>
+<ul>
+<li>도메인 특화 사전 활용: 특정 분야의 전문용어나 고유명사 목록을 활용하여 교정합니다.</li>
+</ul>
+</li>
+</ol>
+<h2 id="오디오-컨텐츠별-적용-방법">오디오 컨텐츠별 적용 방법<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#오디오-컨텐츠별-적용-방법" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>뉴스 및 강연</p>
+<ul>
+<li>
+<p>배경 노이즈 제거 중점 적용</p>
+</li>
+<li>
+<p>전문용어 및 고유명사 처리에 집중</p>
+</li>
+<li>
+<p>LLM을 활용한 문맥 기반 교정</p>
+</li>
+</ul>
+</li>
+<li>
+<p>영화 및 드라마</p>
+<ul>
+<li>
+<p>다양한 배경음 처리를 위한 고급 노이즈 제거 기술 적용</p>
+</li>
+<li>
+<p>감정 표현 및 대화체 특성을 고려한 LLM 교정</p>
+</li>
+</ul>
+</li>
+<li>
+<p>음악 프로그램</p>
+<ul>
+<li>
+<p>음성과 음악을 분리하는 전처리 기술 적용</p>
+</li>
+<li>
+<p>가사 인식을 위한 특화된 모델 사용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>회의 및 인터뷰</p>
+<ul>
+<li>
+<p>다중 화자 구분 기술 적용</p>
+</li>
+<li>
+<p>전문용어 처리 및 문장 구조 개선에 중점</p>
+</li>
+</ul>
+</li>
+<li>
+<p>전화 통화 녹음</p>
+<ul>
+<li>
+<p>전화 음질에 특화된 주파수 대역 강화</p>
+</li>
+<li>
+<p>짧은 발화 및 비문법적 표현 처리를 위한 LLM 교정</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="stt-quality-test">STT Quality Test<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stt-quality-test" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="goal">Goal<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#goal" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>STT 서비스 및 솔루션에 대한 List Up 및 품질(한국어 중심)에 대한 평가</p>
+</li>
+<li>
+<p>고객에게 제안 가능한 범위 및 판단 기준점 수립</p>
+</li>
+<li>
+<p>상품화에 필요한 수준을 확보화기 위한 방법</p>
+</li>
+</ul>
+<h2 id="scope">Scope<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#scope" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>처리 방법 : 실시간 혹은 배치</p>
+</li>
+<li>
+<p>언어 : 한국어, 영어</p>
+</li>
+</ul>
+<h1 id="stt-기술-동향">STT 기술 동향<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stt-기술-동향" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>음성을 텍스트로 변환하는 서비스와 기술은 다양한 분야에서 활용되며, 여러 종류로 나눌 수 있습니다. 이 기술들은 각기 다른 장점과 단점을 가지고 있으며, 최근 몇 년간 빠르게 발전하고 있습니다.</p>
+<h2 id="음성-텍스트-변환-기술의-종류">음성 텍스트 변환 기술의 종류<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#음성-텍스트-변환-기술의-종류" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><strong>클라우드 기반 서비스</strong>: AWS, Google Cloud, Microsoft Azure 등과 같은 클라우드 플랫폼은 강력한 음성 인식 API를 제공하여 대규모 데이터 처리와 높은 정확도를 지원합니다[3].</p>
+</li>
+<li>
+<p><strong>모바일 및 데스크톱 애플리케이션</strong>: 네이버 클로바노트와 같은 애플리케이션은 사용자 친화적인 인터페이스를 통해 회의나 인터뷰를 쉽게 기록하고 관리할 수 있습니다[4].</p>
+</li>
+<li>
+<p><strong>오픈 소스 소프트웨어</strong>: Kaldi, Mozilla DeepSpeech 등은 개발자들이 커스터마이징할 수 있는 오픈 소스 음성 인식 엔진을 제공합니다.</p>
+</li>
+</ul>
+<h2 id="장점">장점<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#장점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><strong>효율성</strong>: 음성을 텍스트로 변환함으로써 회의록 작성, 데이터 분석 등을 자동화하여 시간을 절약할 수 있습니다[1].</p>
+</li>
+<li>
+<p><strong>접근성 향상</strong>: 청각 장애인을 위한 자막 생성 등 다양한 접근성 기능을 제공할 수 있습니다[2].</p>
+</li>
+<li>
+<p><strong>데이터 활용</strong>: 텍스트로 변환된 음성 데이터는 자연어 처리(NLP) 기술을 통해 더욱 깊이 있는 분석이 가능합니다[1].</p>
+</li>
+</ul>
+<h2 id="단점">단점<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#단점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><strong>정확도 문제</strong>: 배경 소음, 억양, 발음 차이 등으로 인해 인식률이 떨어질 수 있습니다[3].</p>
+</li>
+<li>
+<p><strong>문맥 이해 부족</strong>: 현재의 기술은 문맥을 완벽히 이해하지 못하여 오역이 발생할 수 있습니다[2].</p>
+</li>
+<li>
+<p><strong>전문 용어 인식 한계</strong>: 특정 도메인에 특화된 용어를 인식하는 데 어려움이 있을 수 있습니다[2].</p>
+</li>
+</ul>
+<h2 id="주요-동향">주요 동향<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#주요-동향" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><strong>AI 및 머신러닝의 발전</strong>: 음성 인식 기술은 AI와 머신러닝의 발전에 힘입어 더욱 정교해지고 있으며, 특히 딥러닝 기반의 모델들이 정확도를 크게 향상시키고 있습니다.</p>
+</li>
+<li>
+<p><strong>멀티모달 접근</strong>: 음성 인식과 함께 영상 분석을 결합하여 더 나은 사용자 경험을 제공하는 멀티모달 시스템이 주목받고 있습니다.</p>
+</li>
+<li>
+<p><strong>개인화된 서비스</strong>: 사용자 맞춤형 음성 인식 기능이 개발되어, 개인의 발음 습관에 맞춘 인식률 개선이 이루어지고 있습니다.</p>
+</li>
+</ul>
+<p>이러한 기술들은 지속적으로 발전하고 있으며, 다양한 산업 분야에서 활용도가 높아지고 있습니다.</p>
+<p>Citations:<br/>
+[1] <a href="https://www.seoulpa.kr/bbs/board.php?bo_table=npo_aca&amp;sfl=mb_id&amp;stx=saycrid&amp;wr_id=74264" class="external external-link">https://www.seoulpa.kr/bbs/board.php?bo_table=npo_aca&amp;sfl=mb_id&amp;stx=saycrid&amp;wr_id=74264<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[2] <a href="https://transkriptor.com/ko/%EC%9D%8C%EC%84%B1-%ED%85%8D%EC%8A%A4%ED%8A%B8-%EB%B3%80%ED%99%98-%EC%9E%91%EB%8F%99-%EB%B0%A9%EC%8B%9D/" class="external external-link">https://transkriptor.com/ko/음성-텍스트-변환-작동-방식/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[3] <a href="https://aws.amazon.com/ko/what-is/speech-to-text/" class="external external-link">https://aws.amazon.com/ko/what-is/speech-to-text/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+[4] <a href="https://www.dentalzero.com/news/articleView.html?idxno=21334" class="external external-link">https://www.dentalzero.com/news/articleView.html?idxno=21334<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="현재-솔루션-평가">현재 솔루션 평가<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#현재-솔루션-평가" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="research-organization">Research Organization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#research-organization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>AWS Solution List</p>
+<ul>
+<li>
+<p>Live</p>
+</li>
+<li>
+<p>Batch</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Solution 평가 기준 및 방법</p>
+</li>
+<li>
+<p>한국어 평가</p>
+</li>
+<li>
+<p>성능 보안 방법론 및 솔루션</p>
+</li>
+<li>
+<p>연동 가능 솔루션 리스트</p>
+</li>
+</ul>
+<h1 id="partners">Partners<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#partners" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="returnzero">ReturnZero<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#returnzero" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://www.rtzr.ai/en" class="external external-link">https://www.rtzr.ai/en<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h1 id="aws-tech">AWS Tech<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-tech" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="genai-powered-intelligent-speech-analytics-isa">GenAI Powered Intelligent Speech Analytics (ISA)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#genai-powered-intelligent-speech-analytics-isa" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://aws.highspot.com/items/662a62c1181b78b7553fd0a2?lfrm=srp.0" class="external external-link">https://aws.highspot.com/items/662a62c1181b78b7553fd0a2?lfrm=srp.0<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<h3 id="stt-overview">STT Overview<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#stt-overview" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Speech Analytics offers a range of benefits across multiple industries.</p>
+</li>
+<li>
+<p>One of the main advantages is its ability to extract valuable insights from complex speech data such as customer service and call center calls, outbound marketing conversations, lectures, voice bot interactions, meeting recordings, marketing assets such as videos and podcasts, TV shows, and training videos, as well as processing patient-clinician conversations.</p>
+</li>
+<li>
+<p><strong>Intelligent Speech Analytics</strong> use powerful speech to text models combined with generative AI to analyze the transcriptions from these complex files, and summarize, identify and categorize content, providing deeper insights that help deliver delightful customer and employee experiences.</p>
+</li>
+<li>
+<p>Generative AI is driving increased attention and additional opportunities for the use of speech analytics, so we are expanding our scope from using our speech recognition and speech analytics capabilities exclusively in the<br/>
+contact center, to other emerging use cases discussed below - in addition to the existing contact center use cases: post-call analytics and real-time analytics with agent assist.</p>
+</li>
+<li>
+<p>Get automated transcription and actionable insights from customer conversations - in real time or batch - to improve customer experience and employee productivity</p>
+</li>
+<li>
+<p>Obtain deeper insights (deeper understanding and context) from valuable assets such as meeting recordings, videos, podcasts, lectures, TV shows, training videos</p>
+</li>
+<li>
+<p>Generate automated content classification and summarization making it easier to organize and search through a large number of audio datasets</p>
+</li>
+</ul>
+<h1 id="aws-solutions">AWS Solutions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aws-solutions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="ai-for-marketing">AI for Marketing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ai-for-marketing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="discovering-hot-topics"><a href="https://aws.amazon.com/solutions/implementations/discovering-hot-topics-using-machine-learning/?did=sl_card&amp;trk=sl_card" class="external external-link">Discovering Hot Topics<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#discovering-hot-topics" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../research---localization-using-llm/image.png" class="internal internal-link" data-slug="research---localization-using-llm/image.png"><img src="../../../4.archive/notion-archive/attachments/image-71.png" alt/></a></p>
+<h2 id="content-localization"><a href="https://aws.amazon.com/solutions/implementations/content-localization-on-aws/?did=sl_card&amp;trk=sl_card" class="external external-link">Content Localization<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#content-localization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../research---localization-using-llm/image-1.png" class="internal internal-link" data-slug="research---localization-using-llm/image-1.png"><img src="../../../4.archive/notion-archive/attachments/image-1-27.png" alt/></a></p>
+<h1 id="partner-meeting">Partner Meeting<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#partner-meeting" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="flitto">Flitto<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#flitto" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="고객사">고객사<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#고객사" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>LGE에서 글로벌 엔지니어 교육에 사용</p>
+</li>
+<li>
+<p>Live Translation 진행 : Google Asia Pacific 행사, Dubai 자이텍스</p>
+</li>
+<li>
+<p>대형 Entertainment 사에 K-Pop 영상 및 쇼츠에 대한 솔루션 공급</p>
+<ul>
+<li>
+<p>5~6년 전 부터 매뉴얼 작업으로 진행 (번역)</p>
+</li>
+<li>
+<p>MTPE (Machine Training Post Editing)</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="summit">Summit<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#summit" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><a href="https://youtu.be/xYYHB5zfNmo?si=xeM_ZwTHnZOO8xm9" class="external external-link">https://youtu.be/xYYHB5zfNmo?si=xeM_ZwTHnZOO8xm9<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<h2 id="solution">Solution<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#solution" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Chat 기반 통역 서비스</p>
+<ul>
+<li>
+<p>인천 공항 등 다중 고객을 위한 통역 솔루션</p>
+</li>
+<li>
+<p>음성 인식 (VA) 기반 발화</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Live Translation</p>
+<ul>
+<li>
+<p>스피커 및 Audience 용 App 제공</p>
+</li>
+<li>
+<p>38개 언어 지원</p>
+</li>
+<li>
+<p>Manual cut 혹 ML을 통한 cut 버전 제공</p>
+</li>
+<li>
+<p>실시간 전사 후 형태소 분석에 들어가서 맥락적 분석을 통해 cut</p>
+</li>
+<li>
+<p>화자 분리는 아직 준비 중</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Demo 계정 제공 가능</p>
+</li>
+<li>
+<p>주요 언어의 STT는 95% 정확도를 제공하고 있음, 그 외 언어는 90% 정확도</p>
+</li>
+</ul>
+<h2 id="technology">Technology<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#technology" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>음성 정제 프로세스</p>
+<ul>
+<li>
+<p>client 데이터를 수집하여 정제용으로 학습 : NDA를 통해 사용자</p>
+</li>
+<li>
+<p>client specific 및 domain specific한 모델을 만들어서 제공 : 고객사 전용 학습 모델 구축 가능</p>
+</li>
+</ul>
+</li>
+<li>
+<p>한 문장에 대한 100개 정도가 학습 되어야 유의미한 개선 효과가 발생</p>
+</li>
+<li>
+<p>STT Annotation도 추가 가능</p>
+</li>
+<li>
+<p>Transcribe의 결과 값을 수동으로 교정하여 Transcribe team의 모델 개선에 사용하는 비지니스도 검토</p>
+</li>
+<li>
+<p>LLM 모델에 대한 교정 개선 작업도 검토 (국내 업체 포함 …)</p>
+</li>
+<li>
+<p>STT engine to Translate : 1.5sec 이내 처리</p>
+<ul>
+<li>Audio Format은 Wave 지원 (비 압축 포맷)</li>
+</ul>
+</li>
+<li>
+<p>솔루션으로 제공하는 것에 집중하고 있으며</p>
+</li>
+<li>
+<p>g4 및 g5 instance에 설치형으로 구축이 가능 → 가격을 고객 단위로 제공</p>
+</li>
+</ul>
+<h2 id="squadx">SquadX<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#squadx" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Geminisoft가 Cloud 기반의 서비스를 위한 Architecture가 어느 정도 준비가 되어 있는지?</p>
+</li>
+<li>
+<p>RFP 제안서 준비가 어느 정도 되어 있는지?</p>
+</li>
+<li>
+<p>얻고자 하는 부분은?</p>
+<ul>
+<li>
+<p>On-prem CMS</p>
+</li>
+<li>
+<p>Cloud CMS</p>
+</li>
+<li>
+<p>AI : GPT + Video Indexer, Multi-Cloud 전략 (Fargate → Kubernetes)</p>
+</li>
+<li>
+<p>사업 관리 및 PM</p>
+</li>
+</ul>
+</li>
+<li>
+<p>TIPS 과제에서 영상 분석 진행</p>
+<ul>
+<li>
+<p>PaaS 모델 보다는 향후 확장 가능한 형식으로 발전하기를 희망 : 구축형 보다는 SaaS 형식으로 (네이버 G Cloud)</p>
+</li>
+<li>
+<p>방송, 미디어, 엔터테인먼트 사를 대상으로 하는 솔루션으로 고객사를 확장</p>
+</li>
+<li>
+<p>MSP가 되지 않는다면?</p>
+</li>
+</ul>
+</li>
+<li>
+<p>추가 의문</p>
+<ul>
+<li>
+<p>SaaS형 이라고 하기에는 고객의 커스터마이징 요건이 많이 있을텐데 이런 부분이 가능할지?</p>
+<ul>
+<li>형상은 PaaS 형 방식으로 구축하고 base를 구축하는 방식으로</li>
+</ul>
+</li>
+<li>
+<p>CMS 영역은 고유 솔루션이 아닌데 추가 개발에 대한 범위</p>
+<ul>
+<li>Plan B 로 개발 주도도 고려하고 있음</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Cloud Editing</p>
+</li>
+</ul></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1253" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#research---localization-using-llm" data-for="research---localization-using-llm">Research - Localization using LLM</a></li><li class="depth-0"><a href="#stt-error-rate-측정" data-for="stt-error-rate-측정">STT Error Rate 측정</a></li><li class="depth-1"><a href="#test용-소스-컨텐츠" data-for="test용-소스-컨텐츠">Test용 소스 컨텐츠</a></li><li class="depth-1"><a href="#content-split" data-for="content-split">Content Split</a></li><li class="depth-1"><a href="#수동-스크립트와-amazon-transcribe-생성-결과-비교" data-for="수동-스크립트와-amazon-transcribe-생성-결과-비교">수동 스크립트와 Amazon Transcribe 생성 결과 비교</a></li><li class="depth-2"><a href="#original-transcript---manual" data-for="original-transcript---manual">Original Transcript - Manual</a></li><li class="depth-2"><a href="#amazon-transcribe-transcript" data-for="amazon-transcribe-transcript">Amazon Transcribe Transcript</a></li><li class="depth-1"><a href="#claude35-sonnet을-사용한-transcript-교정" data-for="claude35-sonnet을-사용한-transcript-교정">Claude3.5 Sonnet을 사용한 transcript 교정</a></li><li class="depth-2"><a href="#prompt" data-for="prompt">Prompt</a></li><li class="depth-1"><a href="#수동-스크립트와-lmm-교정-결과-비교" data-for="수동-스크립트와-lmm-교정-결과-비교">수동 스크립트와 LMM 교정 결과 비교</a></li><li class="depth-2"><a href="#original-transcript---manual-1" data-for="original-transcript---manual-1">Original Transcript - Manual/</a></li><li class="depth-2"><a href="#claude35-sonnet-교정-결과" data-for="claude35-sonnet-교정-결과">Claude3.5 Sonnet 교정 결과</a></li><li class="depth-1"><a href="#stt-오류-계산-코드---한국어-자동-음성-인식-평가를-위한-유사도-측정-함수-패키지" data-for="stt-오류-계산-코드---한국어-자동-음성-인식-평가를-위한-유사도-측정-함수-패키지">STT 오류 계산 코드 - 한국어 자동 음성 인식 평가를 위한 유사도 측정 함수 패키지</a></li><li class="depth-2"><a href="#test-code" data-for="test-code">Test Code</a></li><li class="depth-2"><a href="#amazon-transcribe-result" data-for="amazon-transcribe-result">Amazon Transcribe Result</a></li><li class="depth-2"><a href="#amazon-transcribe--claude35-sonnet" data-for="amazon-transcribe--claude35-sonnet">Amazon Transcribe + Claude3.5 Sonnet</a></li><li class="depth-1"><a href="#speech-enhancement" data-for="speech-enhancement">Speech Enhancement</a></li><li class="depth-2"><a href="#dl" data-for="dl">DL</a></li><li class="depth-2"><a href="#ffmpeg" data-for="ffmpeg">FFmpeg</a></li><li class="depth-2"><a href="#original-speech-transcribe-result" data-for="original-speech-transcribe-result">Original Speech Transcribe Result</a></li><li class="depth-2"><a href="#speech-enhancement-transcribe-result---mp3" data-for="speech-enhancement-transcribe-result---mp3">Speech Enhancement Transcribe Result - MP3</a></li><li class="depth-2"><a href="#original-speech-transcribe-result-1" data-for="original-speech-transcribe-result-1">Original Speech Transcribe Result</a></li><li class="depth-2"><a href="#speech-enhancement-transcribe-result---wave" data-for="speech-enhancement-transcribe-result---wave">Speech Enhancement Transcribe Result - Wave</a></li><li class="depth-0"><a href="#transcript-품질-개선-방법" data-for="transcript-품질-개선-방법">Transcript 품질 개선 방법</a></li><li class="depth-1"><a href="#오디오-입력-파일-전처리" data-for="오디오-입력-파일-전처리">오디오 입력 파일 전처리</a></li><li class="depth-1"><a href="#transcript-후처리" data-for="transcript-후처리">Transcript 후처리</a></li><li class="depth-1"><a href="#오디오-컨텐츠별-적용-방법" data-for="오디오-컨텐츠별-적용-방법">오디오 컨텐츠별 적용 방법</a></li><li class="depth-0"><a href="#stt-quality-test" data-for="stt-quality-test">STT Quality Test</a></li><li class="depth-1"><a href="#goal" data-for="goal">Goal</a></li><li class="depth-1"><a href="#scope" data-for="scope">Scope</a></li><li class="depth-0"><a href="#stt-기술-동향" data-for="stt-기술-동향">STT 기술 동향</a></li><li class="depth-1"><a href="#음성-텍스트-변환-기술의-종류" data-for="음성-텍스트-변환-기술의-종류">음성 텍스트 변환 기술의 종류</a></li><li class="depth-1"><a href="#장점" data-for="장점">장점</a></li><li class="depth-1"><a href="#단점" data-for="단점">단점</a></li><li class="depth-1"><a href="#주요-동향" data-for="주요-동향">주요 동향</a></li><li class="depth-0"><a href="#현재-솔루션-평가" data-for="현재-솔루션-평가">현재 솔루션 평가</a></li><li class="depth-0"><a href="#research-organization" data-for="research-organization">Research Organization</a></li><li class="depth-0"><a href="#partners" data-for="partners">Partners</a></li><li class="depth-1"><a href="#returnzero" data-for="returnzero">ReturnZero</a></li><li class="depth-0"><a href="#aws-tech" data-for="aws-tech">AWS Tech</a></li><li class="depth-1"><a href="#genai-powered-intelligent-speech-analytics-isa" data-for="genai-powered-intelligent-speech-analytics-isa">GenAI Powered Intelligent Speech Analytics (ISA)</a></li><li class="depth-2"><a href="#stt-overview" data-for="stt-overview">STT Overview</a></li><li class="depth-0"><a href="#aws-solutions" data-for="aws-solutions">AWS Solutions</a></li><li class="depth-1"><a href="#ai-for-marketing" data-for="ai-for-marketing">AI for Marketing</a></li><li class="depth-2"><a href="#discovering-hot-topics" data-for="discovering-hot-topics">Discovering Hot Topics</a></li><li class="depth-1"><a href="#content-localization" data-for="content-localization">Content Localization</a></li><li class="depth-0"><a href="#partner-meeting" data-for="partner-meeting">Partner Meeting</a></li><li class="depth-1"><a href="#flitto" data-for="flitto">Flitto</a></li><li class="depth-2"><a href="#고객사" data-for="고객사">고객사</a></li><li class="depth-2"><a href="#summit" data-for="summit">Summit</a></li><li class="depth-1"><a href="#solution" data-for="solution">Solution</a></li><li class="depth-1"><a href="#technology" data-for="technology">Technology</a></li><li class="depth-1"><a href="#squadx" data-for="squadx">SquadX</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

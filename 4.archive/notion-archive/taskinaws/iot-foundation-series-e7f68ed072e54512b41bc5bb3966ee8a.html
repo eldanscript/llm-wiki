@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>IoT Foundation Series e7f68ed072e54512b41bc5bb3966ee8a | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="IoT Foundation Series e7f68ed072e54512b41bc5bb3966ee8a | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="IoT Foundation Series e7f68ed072e54512b41bc5bb3966ee8a | LLM Wiki"/><meta name="twitter:description" content="✂️ IoT Foundation Series Device Gateway Secure Communication IoT Device Gateway IoT Message Broker IoT Rule Engine IoT Device Shadow Service IoT Registry Device vs Thing Device Authentication Device Authorization Message broker IoT Device Registry IoT Rules Engine IoT Analytics Device Management Pil..."/><meta property="og:description" content="✂️ IoT Foundation Series Device Gateway Secure Communication IoT Device Gateway IoT Message Broker IoT Rule Engine IoT Device Shadow Service IoT Registry Device vs Thing Device Authentication Device Authorization Message broker IoT Device Registry IoT Rules Engine IoT Analytics Device Management Pil..."/><meta property="og:image:alt" content="✂️ IoT Foundation Series Device Gateway Secure Communication IoT Device Gateway IoT Message Broker IoT Rule Engine IoT Device Shadow Service IoT Registry Device vs Thing Device Authentication Device Authorization Message broker IoT Device Registry IoT Rules Engine IoT Analytics Device Management Pil..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/iot-foundation-series-e7f68ed072e54512b41bc5bb3966ee8a"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/iot-foundation-series-e7f68ed072e54512b41bc5bb3966ee8a"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="✂️ IoT Foundation Series Device Gateway Secure Communication IoT Device Gateway IoT Message Broker IoT Rule Engine IoT Device Shadow Service IoT Registry Device vs Thing Device Authentication Device Authorization Message broker IoT Device Registry IoT Rules Engine IoT Analytics Device Management Pil..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/iot-foundation-series-e7f68ed072e54512b41bc5bb3966ee8a" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2276" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2276" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>IoT Foundation Series e7f68ed072e54512b41bc5bb3966ee8a</a></div></nav><h1 class="article-title">IoT Foundation Series e7f68ed072e54512b41bc5bb3966ee8a</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.493Z">2026년 6월 06일</time><span>8 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>✂️</p>
+<h1 id="iot-foundation-series">IoT Foundation Series<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-foundation-series" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#a2740032-03f6-4ce0-81f7-8c5271ab51b0" class="internal internal-link alias">Device Gateway</a></p>
+<p><a href="#46b259ec-3180-4ddd-a308-9156355590cd" class="internal internal-link alias">Secure Communication</a></p>
+<p><a href="#a170597e-65f3-456e-8743-96d7252198bc" class="internal internal-link alias">IoT Device Gateway</a></p>
+<p><a href="#3274ba3a-24ae-4bce-8ef4-c01eba2cda1b" class="internal internal-link alias">IoT Message Broker</a></p>
+<p><a href="#05667a70-6202-4cbc-9bf3-cf96acf76dc4" class="internal internal-link alias">IoT Rule Engine</a></p>
+<p><a href="#154b6eb3-38fa-4d3a-b719-a1f6323f4d9c" class="internal internal-link alias">IoT Device Shadow Service</a></p>
+<p><a href="#705b814a-c997-4183-981b-725c1b62bb32" class="internal internal-link alias">IoT Registry</a></p>
+<p><a href="#535a4883-0611-47e9-a2c6-c7c5a8506342" class="internal internal-link alias">Device vs Thing</a></p>
+<p><a href="#a6deda51-d509-4043-a249-e694d1b962d8" class="internal internal-link alias">Device Authentication</a></p>
+<p><a href="#e719448e-e3b1-48db-8f33-5986989505cd" class="internal internal-link alias">Device Authorization</a></p>
+<p><a href="#98fd7e61-95ae-4efa-88a0-a91e6c4215f9" class="internal internal-link alias">Message broker</a></p>
+<p><a href="#43f92bc8-9f6d-41b8-90ff-c94c71ffe6b0" class="internal internal-link alias">IoT Device Registry</a></p>
+<p><a href="#6a5915cb-bd3b-495e-87a9-f5db642009e7" class="internal internal-link alias">IoT Rules Engine</a></p>
+<p><a href="#dcf76474-29a0-4426-845b-c4029a8d88ea" class="internal internal-link alias">IoT Analytics</a></p>
+<p><a href="#27c6bff0-6f5b-4132-b0c6-c885cc05d378" class="internal internal-link alias">Device Management Pillars</a></p>
+<p><a href="#341e9367-699d-40a3-aa06-68166ab122ed" class="internal internal-link alias">Onboard</a></p>
+<p><a href="#12a5d702-d21e-43a8-ac91-5510e4194698" class="internal internal-link alias">Organize</a></p>
+<p><a href="#34cd3f59-d674-48aa-b2df-9ce56b46e1b4" class="internal internal-link alias">Monitor</a></p>
+<p><a href="#3359649e-9043-4042-8a76-6706810ec023" class="internal internal-link alias">Update</a></p>
+<p><a href="#59b1a780-4833-40db-82c0-9a89c5844378" class="internal internal-link alias">Fleet Management</a></p>
+<p><a href="#2ad5c66a-5d23-431e-8fad-e001346311f8" class="internal internal-link alias">Track</a></p>
+<p><a href="#2730a5af-5d8f-4dfb-b690-5a366127add4" class="internal internal-link alias">Provision</a></p>
+<p><a href="#428011c0-36c9-46a2-99ed-368945c3d30f" class="internal internal-link alias">Organize</a></p>
+<p><a href="#cb5d72ad-f51a-4445-886b-b67ca414a761" class="internal internal-link alias">Registry Events</a></p>
+<p><a href="#a8eeba3a-d95a-403e-9bf8-3ff4896c91a5" class="internal internal-link alias">Grouping and Searching for Devices</a></p>
+<p><a href="#9f6e862b-e465-4f4a-a750-68c91d021918" class="internal internal-link alias">Device Provisioning</a></p>
+<p><a href="#1af3adc7-e7d4-4d59-9ea5-c45306228b80" class="internal internal-link alias">Provisioning Options</a></p>
+<p><a href="#409f1932-23b1-43d4-9a55-9ecce8404765" class="internal internal-link alias">Provisioning with the API</a></p>
+<p><a href="#cc51adee-d41c-4bd6-a83d-5cb404f84f76" class="internal internal-link alias">Provisioning in advance</a></p>
+<p><a href="#1000557e-8309-4dba-907f-b49c56d900e6" class="internal internal-link alias">Provisioning on demand</a></p>
+<p><a href="#a146d5ab-0058-4518-99c8-5f6a865d409d" class="internal internal-link alias">Just-In-Time Provisioning</a></p>
+<p><a href="#1cec271f-9ecf-4567-a39f-b2c40b41da7a" class="internal internal-link alias">Just-In-Time Registration</a></p>
+<p><a href="#86e23ab3-0619-4041-a7a6-64ad3ba582e6" class="internal internal-link alias">JITP vs JITR</a></p>
+<p><a href="#41d2d5ea-f7bd-4b41-9210-c5f4006aeb5a" class="internal internal-link alias">Fleet Management</a></p>
+<p><a href="#0cedf4d6-4874-412f-9064-814a67071d07" class="internal internal-link alias">Monitoring Device Events</a></p>
+<p><a href="#10c746a0-4f4e-4f81-8dc3-afadede95b6f" class="internal internal-link alias">Best Practices</a></p>
+<h1 id="device-gateway">Device Gateway<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-gateway" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled.png" class="internal internal-link" data-slug="iot-foundation-series/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-210.png" alt/></a></p>
+<h1 id="secure-communication">Secure Communication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#secure-communication" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Certificates for mutual authentication by using Message Queuing Telemetry Transport (MQTT) over Transport Layer Security (TLS) v1.2</p>
+</li>
+<li>
+<p>SigV4 over HTTP - Access Key ID, Secret Access Key</p>
+</li>
+<li>
+<p>MQTT over WebSockets, which is similar to other AWS services</p>
+</li>
+<li>
+<p>Custom authentication tokens that are provided by your authentication or authorization service</p>
+</li>
+<li>
+<p>Provides flexible authorization options and fine-grained access control through JavaScript Object Notation (JSON) policies</p>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-1.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-138.png" alt/></a></p>
+<h1 id="iot-device-gateway">IoT Device Gateway<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-device-gateway" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled-2.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2-121.png" alt/></a></p>
+<ul>
+<li>
+<p>Enables devices to securely and efficiently communicate with AWS IoT Core</p>
+</li>
+<li>
+<p>IoT Device Gateway can exchange messages using a publish/subscribe model</p>
+</li>
+<li>
+<p>Enables one-to-one and one-to-many communications</p>
+</li>
+</ul>
+<h1 id="iot-message-broker">IoT Message Broker<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-message-broker" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Processes and routes data from your devices into AWS IoT Core</p>
+</li>
+<li>
+<p>Message broker is scalable, has low-latency, and provides reliable message routing</p>
+</li>
+<li>
+<p>Uses a publish and subscribe model to decouple devices and applications</p>
+</li>
+<li>
+<p>Allows two-way message streaming between devices and applications and provides an opportunity for data transformation, rerouting, and enhancement with external data sources</p>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-3.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3-110.png" alt/></a></p>
+<p><a href="../../../iot-foundation-series/untitled-4.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4-109.png" alt/></a></p>
+<h1 id="iot-rule-engine">IoT Rule Engine<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-rule-engine" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled-5.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5-102.png" alt/></a></p>
+<ul>
+<li>
+<p>Listens for incoming messages that match a rule</p>
+</li>
+<li>
+<p>When a matching message is received, the rule acts on the data</p>
+</li>
+</ul>
+<h1 id="iot-device-shadow-service">IoT Device Shadow Service<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-device-shadow-service" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Often referred to as a thing shadow or a digital twin</p>
+</li>
+<li>
+<p>Maintains a shadow for each device you connect to AWS IoT</p>
+</li>
+<li>
+<p>Use the shadow to get and set the state of a device over MQTT or HTTP, regardless of whether the device is connected to the Internet</p>
+</li>
+<li>
+<p>Each device’s shadow is uniquely identified by the name of the corresponding thing</p>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-6.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6-93.png" alt/></a></p>
+<ul>
+<li>
+<p>Topics</p>
+</li>
+<li>
+<p>State</p>
+</li>
+<li>
+<p>Metadata</p>
+</li>
+<li>
+<p>Lifecycle</p>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-7.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7-90.png" alt/></a></p>
+<ul>
+<li>
+<p>Things</p>
+<ul>
+<li>
+<p>Reports the current state to shadow</p>
+</li>
+<li>
+<p>Retrieve desired state from shadow</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Device Shadow</p>
+<ul>
+<li>
+<p>Coordinates and synchronizes shadow document updates</p>
+</li>
+<li>
+<p>Publish update events on related shadow topics</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Mobile App</p>
+<ul>
+<li>
+<p>Set the desired state of a device</p>
+</li>
+<li>
+<p>Get the last reported state of the device</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">{ </span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">	&quot;state&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> </span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">							&quot;desired&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;lights&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;color&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;RED&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> },</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;engine&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;ON&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> },</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">							&quot;reported&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;lights&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;color&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;GREEN&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> },</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;engine&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;ON&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> },</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">							&quot;delta&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;lights&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> {</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;color&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;RED&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> }</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> }</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">	},</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">	&quot;version&quot;</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> :</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 10</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<ul>
+<li>
+<p>Device Shadow MQTT Topics</p>
+<ul>
+<li>
+<p>UPDATE : **$aws/things/**thingName/<strong>shadow/update</strong></p>
+</li>
+<li>
+<p>GET : **$aws/things/**thingName/<strong>shadow/get</strong></p>
+</li>
+<li>
+<p>DELETE ; **$aws/things/**thingName/<strong>shadow/delete</strong></p>
+</li>
+<li>
+<p>DELTA ; **$aws/things/**thingName/<strong>shadow/delta</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="iot-registry">IoT Registry<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-registry" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled-8.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8-84.png" alt/></a></p>
+<ul>
+<li>
+<p>A database of devices</p>
+</li>
+<li>
+<p>The registry helps you manage your device ecosystem effectively and acts as a repository for device certificates</p>
+</li>
+<li>
+<p>The registry also enables you to search for your things based on attributes and tags</p>
+</li>
+</ul>
+<h1 id="device-vs-thing">Device vs Thing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-vs-thing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Device refers to the physical entity</p>
+</li>
+<li>
+<p>Thing refers to the logical entity</p>
+<ul>
+<li>
+<p>identified by a name - unique within your account</p>
+</li>
+<li>
+<p>thing type and groups must be unique within your account</p>
+</li>
+<li>
+<p><a href="https://docs.aws.amazon.com/iot/latest/developerguide/thing-types.html" class="external external-link">thing type<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> is a method to organize IoT things into logical categories</p>
+</li>
+<li>
+<p>Associate things to only one thing type at a time</p>
+</li>
+<li>
+<p>Thing type can have up to 50 attributes</p>
+</li>
+<li>
+<p>A thing that is not associated with a thing type can have three attributes</p>
+</li>
+<li>
+<p>Associate things with up to 10 groups at the same time</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="device-authentication">Device Authentication<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-authentication" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Authentication enables you to verify the identity of a client or a server</p>
+</li>
+<li>
+<p>Server authentication</p>
+<ul>
+<li>Process by which devices or other clients ensure that they are communicating with an actual AWS IoT endpoint (디바이스 또는 다른 클라이언트가 실제 AWS IoT 엔드 포인트와 통신하는지 확인하는 프로세스)</li>
+</ul>
+</li>
+<li>
+<p>Client authentication</p>
+<ul>
+<li>Process by which devices authenticate themselves with AWS IoT Core (디바이스가 AWS IoT Core로 자신을 인증하는 프로세스)</li>
+</ul>
+</li>
+<li>
+<p>Store Keys on devic</p>
+<ul>
+<li>
+<p>Certificates enable asymmetric keys to be used with devices</p>
+</li>
+<li>
+<p>Burn private keys into secure storage on a device</p>
+</li>
+<li>
+<p>Sensitive cryptographic material never leaves the device</p>
+</li>
+<li>
+<p>Certificates also provide stronger client authentication over other methods, such as user name and password or bearer tokens, because the secret key never leaves the device</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Use X.509 certificate</p>
+<ul>
+<li>
+<p>Use a public key infrastructure standard to associate a public key with an identity contained in a certificate</p>
+</li>
+<li>
+<p>X.509 certificates are issued by a third party called a certification authority (CA).</p>
+</li>
+<li>
+<p>The CA maintains one or more special certificates called CA certificates that it uses to issue X.509 certificates</p>
+</li>
+<li>
+<p>X.509 certificate chains are used both for server authentication by clients and client authentication by the server</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Activate and revoke certificate</p>
+<ul>
+<li>
+<p>Certificates are created within AWS IoT Core and downloaded to the device through TLS v1.2</p>
+</li>
+<li>
+<p>Before the device can authenticate, the certificate must be activated</p>
+</li>
+<li>
+<p>Certificates can be revoked if there’s concern that the device has been compromised or is being decommissioned</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="device-authorization">Device Authorization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-authorization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Authorization is the process of granting permissions to an authenticated identity</p>
+</li>
+<li>
+<p>Policies for AWS IoT define what an authenticated identity can do</p>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-9.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9-82.png" alt/></a></p>
+<ul>
+<li>
+<p>IoT policies primarily control an identity’s access to the IoT data plane</p>
+<ul>
+<li>
+<p>The data plane enables you to send data to and receive data from AWS IoT</p>
+</li>
+<li>
+<p>Defines whether you can connect to the message broker, send or receive MQTT messages, or publish or subscribe to a specific topic</p>
+</li>
+</ul>
+</li>
+<li>
+<p>IAM policies grant an IAM identity, or AWS resource, permissions to access a service or perform a function with AWS</p>
+</li>
+<li>
+<p>IAM roles work with IAM policies to grant AWS IoT Core permissions to access the rest of AWS</p>
+</li>
+<li>
+<p>Policy format</p>
+<ul>
+<li>Effect, Action, Resource</li>
+</ul>
+</li>
+</ul>
+<h1 id="message-broker">Message broker<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#message-broker" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>[</p>
+<p>MQTT - The Standard for IoT Messaging</p>
+<p>MQTT clients are very small, require minimal resources so can be used on small microcontrollers. MQTT message headers are small to optimize network bandwidth. MQTT allows for messaging between device to cloud and cloud to device. This makes for easy broadcasting messages to groups of things.</p>
+<p><img src="https://mqtt.org/favicon-16x16.png" alt/><a href="https://mqtt.org/" class="external external-link">https://mqtt.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/taskinaws/attachments/mqtt-publish-subscribe.png" alt/>](<a href="https://mqtt.org/" class="external external-link">https://mqtt.org/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<ul>
+<li>
+<p>Topics are 8-bit Unicode Transformation Format (UTF-8) encoded hierarchical strings that use a forward slash (/) to separate the levels in the hierarchy</p>
+</li>
+<li>
+<p>The message broker maintains a list of all client sessions and the subscriptions for each session</p>
+</li>
+<li>
+<p>AWS IoT Core supports MQTT over WebSockets to enable browser-based and remote applications to send and receive data using AWS credential</p>
+</li>
+</ul>
+<h1 id="iot-device-registry">IoT Device Registry<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-device-registry" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Helps you manage things and organizes the resources associated with each device in the AWS Cloud</p>
+</li>
+<li>
+<p>Associate certificates and MQTT client IDs with each device to improve your ability to manage and troubleshoot them</p>
+</li>
+<li>
+<p>A catalog of static metadata and attributes about the devices</p>
+</li>
+<li>
+<p>Fully managed and scales to over a billion devices</p>
+</li>
+<li>
+<p>A repository of the device certificates</p>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-10.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10-72.png" alt/></a></p>
+<h1 id="iot-rules-engine">IoT Rules Engine<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-rules-engine" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Rules engine is one of the primary methods of filtering and directing communication from AWS IoT Core to other AWS services</p>
+</li>
+<li>
+<p>When data comes into the AWS IoT Core, rules are analyzed and actions are performed based on the MQTT topic stream</p>
+</li>
+<li>
+<p>Rule engine language</p>
+<ul>
+<li>
+<p>Uses SQL-like statements that are built within a structured development environment to filter and route MQTT messages</p>
+</li>
+<li>
+<p>roleARN gives AWS IoT permission</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-11.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11-68.png" alt/></a></p>
+<h1 id="iot-analytics">IoT Analytics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#iot-analytics" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled-12.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12-65.png" alt/></a></p>
+<ul>
+<li>
+<p>Automates the steps required to analyze data from AWS IoT devices</p>
+</li>
+<li>
+<p>Channel</p>
+<ul>
+<li>Collects and archives raw, unprocessed message data before publishing this data to a pipeline</li>
+</ul>
+</li>
+<li>
+<p>Pipeline</p>
+<ul>
+<li>Consumes messages from a channel and enables you to process and filter the messages before storing them in a data store</li>
+</ul>
+</li>
+<li>
+<p>Data Store</p>
+<ul>
+<li>Not a database, but it is a scalable and queryable repository of your messages. You can have multiple data stores for messages that come from different devices or locations</li>
+</ul>
+</li>
+<li>
+<p>Dataset</p>
+<ul>
+<li>Retrieve data from a data store by creating a dataset. AWS IoT Analytics enables you to create a SQL dataset or a container dataset. Here, the simple SQL dataset is similar to a materialized view from a SQL database. In fact, you create a SQL dataset by applying a SQL action</li>
+</ul>
+</li>
+<li>
+<p>Dataset contents</p>
+<ul>
+<li>The results. After you create dataset contents, you can view them from the console</li>
+</ul>
+</li>
+<li>
+<p>Analysis of the process</p>
+<ul>
+<li>
+<p>Collect</p>
+<ul>
+<li>Define an AWS IoT analytics channel and selecting the specific data to collect</li>
+</ul>
+</li>
+<li>
+<p>Process</p>
+<ul>
+<li>Configure AWS IoT Analytics pipelines to process data</li>
+</ul>
+</li>
+<li>
+<p>Store</p>
+<ul>
+<li>After processing the data in the pipeline, AWS IoT Analytics stores it in an IoT-optimized data store for analysis</li>
+</ul>
+</li>
+<li>
+<p>Analyze</p>
+<ul>
+<li>Query the data store by using the built-in SQL query engine in AWS IoT Analytics to answer specific business questions</li>
+</ul>
+</li>
+<li>
+<p>Build</p>
+<ul>
+<li>Build visualizations and dashboards to get business insights quickly from your AWS IoT Analytics data using Amazon QuickSight</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-13.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13-63.png" alt/></a></p>
+</li>
+</ul>
+<h1 id="device-management-pillars">Device Management Pillars<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-management-pillars" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="onboard">Onboard<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#onboard" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Batch Fleet Provisioning</p>
+</li>
+<li>
+<p>Custom Authentication</p>
+</li>
+</ul>
+<h2 id="organize">Organize<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#organize" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Thing Groups</p>
+</li>
+<li>
+<p>Group Policy</p>
+</li>
+<li>
+<p>Real-time Fleet Index and Search</p>
+</li>
+</ul>
+<h2 id="monitor">Monitor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitor" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Fine-Grained Device Logging and Monitoring</p>
+</li>
+<li>
+<p>Metrics, Logging, Events</p>
+</li>
+</ul>
+<h2 id="update">Update<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#update" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>OTA Updates</p>
+</li>
+<li>
+<p>Device Jobs</p>
+</li>
+</ul>
+<h1 id="fleet-management">Fleet Management<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fleet-management" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="track">Track<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#track" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="provision">Provision<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provision" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="organize-1">Organize<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#organize-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="registry-events">Registry Events<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#registry-events" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Event messages are published when Thing, Thing Type, Thing Group are Created, Updated, Deleted</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-14.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-14-56.png" alt/></a></p>
+<h1 id="grouping-and-searching-for-devices">Grouping and Searching for Devices<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#grouping-and-searching-for-devices" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled-15.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-15-53.png" alt/></a></p>
+<p><a href="../../../iot-foundation-series/untitled-16.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-16-50.png" alt/></a></p>
+<p><a href="../../../iot-foundation-series/untitled-17.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-17-45.png" alt/></a></p>
+<p><a href="../../../iot-foundation-series/untitled-18.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-18-46.png" alt/></a></p>
+<h1 id="device-provisioning">Device Provisioning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#device-provisioning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>A certificate</p>
+</li>
+<li>
+<p>A policy which is attached to the certificate</p>
+</li>
+<li>
+<p>A unique identifier for thing</p>
+</li>
+<li>
+<p>Attributes associated with the thing, which might include associating the thing to a thing type or to one or more thing groups</p>
+</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-19.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-19-44.png" alt/></a></p>
+<h2 id="provisioning-options">Provisioning Options<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provisioning-options" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../iot-foundation-series/untitled-20.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-20-41.png" alt/></a></p>
+<h2 id="provisioning-with-the-api">Provisioning with the API<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provisioning-with-the-api" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../iot-foundation-series/untitled-21.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-21.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-21-39.png" alt/></a></p>
+<h2 id="provisioning-in-advance">Provisioning in advance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provisioning-in-advance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../iot-foundation-series/untitled-22.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-22.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-22-38.png" alt/></a></p>
+<h2 id="provisioning-on-demand">Provisioning on demand<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#provisioning-on-demand" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="just-in-time-provisioning">Just-In-Time Provisioning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#just-in-time-provisioning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>$aws/events/certificates/registered/certificateID</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-23.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-23.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-23-37.png" alt/></a></p>
+<h3 id="just-in-time-registration">Just-In-Time Registration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#just-in-time-registration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>$aws/events/certificates/registered/CAcertificateID</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-24.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-24.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-24-32.png" alt/></a></p>
+<h3 id="jitp-vs-jitr">JITP vs JITR<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#jitp-vs-jitr" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../iot-foundation-series/untitled-25.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-25.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-25-31.png" alt/></a></p>
+<ul>
+<li>
+<p>Register own CA</p>
+</li>
+<li>
+<p>Enable automatic registration</p>
+</li>
+<li>
+<p>Associate the template to CA</p>
+</li>
+<li>
+<p>Generate a PKI and certificate</p>
+</li>
+</ul>
+<h1 id="fleet-management-1">Fleet Management<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#fleet-management-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled-26.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-26.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-26-30.png" alt/></a></p>
+<ul>
+<li>Job Documents</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-27.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-27.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-27-26.png" alt/></a></p>
+<ul>
+<li>Job Agent</li>
+</ul>
+<p><a href="../../../iot-foundation-series/untitled-28.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-28.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-28-25.png" alt/></a></p>
+<h1 id="monitoring-device-events">Monitoring Device Events<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-device-events" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled-29.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-29.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-29-24.png" alt/></a></p>
+<h1 id="best-practices">Best Practices<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#best-practices" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../iot-foundation-series/untitled-30.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-30.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-30-21.png" alt/></a></p>
+<p><a href="../../../iot-foundation-series/untitled-31.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-31.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-31-21.png" alt/></a></p>
+<p><a href="../../../iot-foundation-series/untitled-32.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-32.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-32-19.png" alt/></a></p>
+<p><a href="../../../iot-foundation-series/untitled-33.png" class="internal internal-link" data-slug="iot-foundation-series/untitled-33.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-33-19.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1732" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#iot-foundation-series" data-for="iot-foundation-series">IoT Foundation Series</a></li><li class="depth-0"><a href="#device-gateway" data-for="device-gateway">Device Gateway</a></li><li class="depth-0"><a href="#secure-communication" data-for="secure-communication">Secure Communication</a></li><li class="depth-0"><a href="#iot-device-gateway" data-for="iot-device-gateway">IoT Device Gateway</a></li><li class="depth-0"><a href="#iot-message-broker" data-for="iot-message-broker">IoT Message Broker</a></li><li class="depth-0"><a href="#iot-rule-engine" data-for="iot-rule-engine">IoT Rule Engine</a></li><li class="depth-0"><a href="#iot-device-shadow-service" data-for="iot-device-shadow-service">IoT Device Shadow Service</a></li><li class="depth-0"><a href="#iot-registry" data-for="iot-registry">IoT Registry</a></li><li class="depth-0"><a href="#device-vs-thing" data-for="device-vs-thing">Device vs Thing</a></li><li class="depth-0"><a href="#device-authentication" data-for="device-authentication">Device Authentication</a></li><li class="depth-0"><a href="#device-authorization" data-for="device-authorization">Device Authorization</a></li><li class="depth-0"><a href="#message-broker" data-for="message-broker">Message broker</a></li><li class="depth-0"><a href="#iot-device-registry" data-for="iot-device-registry">IoT Device Registry</a></li><li class="depth-0"><a href="#iot-rules-engine" data-for="iot-rules-engine">IoT Rules Engine</a></li><li class="depth-0"><a href="#iot-analytics" data-for="iot-analytics">IoT Analytics</a></li><li class="depth-0"><a href="#device-management-pillars" data-for="device-management-pillars">Device Management Pillars</a></li><li class="depth-1"><a href="#onboard" data-for="onboard">Onboard</a></li><li class="depth-1"><a href="#organize" data-for="organize">Organize</a></li><li class="depth-1"><a href="#monitor" data-for="monitor">Monitor</a></li><li class="depth-1"><a href="#update" data-for="update">Update</a></li><li class="depth-0"><a href="#fleet-management" data-for="fleet-management">Fleet Management</a></li><li class="depth-1"><a href="#track" data-for="track">Track</a></li><li class="depth-1"><a href="#provision" data-for="provision">Provision</a></li><li class="depth-1"><a href="#organize-1" data-for="organize-1">Organize</a></li><li class="depth-1"><a href="#registry-events" data-for="registry-events">Registry Events</a></li><li class="depth-0"><a href="#grouping-and-searching-for-devices" data-for="grouping-and-searching-for-devices">Grouping and Searching for Devices</a></li><li class="depth-0"><a href="#device-provisioning" data-for="device-provisioning">Device Provisioning</a></li><li class="depth-1"><a href="#provisioning-options" data-for="provisioning-options">Provisioning Options</a></li><li class="depth-1"><a href="#provisioning-with-the-api" data-for="provisioning-with-the-api">Provisioning with the API</a></li><li class="depth-1"><a href="#provisioning-in-advance" data-for="provisioning-in-advance">Provisioning in advance</a></li><li class="depth-1"><a href="#provisioning-on-demand" data-for="provisioning-on-demand">Provisioning on demand</a></li><li class="depth-2"><a href="#just-in-time-provisioning" data-for="just-in-time-provisioning">Just-In-Time Provisioning</a></li><li class="depth-2"><a href="#just-in-time-registration" data-for="just-in-time-registration">Just-In-Time Registration</a></li><li class="depth-2"><a href="#jitp-vs-jitr" data-for="jitp-vs-jitr">JITP vs JITR</a></li><li class="depth-0"><a href="#fleet-management-1" data-for="fleet-management-1">Fleet Management</a></li><li class="depth-0"><a href="#monitoring-device-events" data-for="monitoring-device-events">Monitoring Device Events</a></li><li class="depth-0"><a href="#best-practices" data-for="best-practices">Best Practices</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Transformer — Dive into Deep Learning 0 16 6 docum bc1ba79e356a40caa1f9cd877394197a | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Transformer — Dive into Deep Learning 0 16 6 docum bc1ba79e356a40caa1f9cd877394197a | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Transformer — Dive into Deep Learning 0 16 6 docum bc1ba79e356a40caa1f9cd877394197a | LLM Wiki"/><meta name="twitter:description" content="🕞 Transformer — Dive into Deep Learning 0.16.6 documentation 10.7.1."/><meta property="og:description" content="🕞 Transformer — Dive into Deep Learning 0.16.6 documentation 10.7.1."/><meta property="og:image:alt" content="🕞 Transformer — Dive into Deep Learning 0.16.6 documentation 10.7.1."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/transformer-—-dive-into-deep-learning-0-16-6-docum-bc1ba79e356a40caa1f9cd877394197a"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/transformer-—-dive-into-deep-learning-0-16-6-docum-bc1ba79e356a40caa1f9cd877394197a"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🕞 Transformer — Dive into Deep Learning 0.16.6 documentation 10.7.1."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/transformer-—-dive-into-deep-learning-0-16-6-docum-bc1ba79e356a40caa1f9cd877394197a" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2473" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2473" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Transformer — Dive into Deep Learning 0 16 6 docum bc1ba79e356a40caa1f9cd877394197a</a></div></nav><h1 class="article-title">Transformer — Dive into Deep Learning 0 16 6 docum bc1ba79e356a40caa1f9cd877394197a</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.514Z">2026년 6월 06일</time><span>17 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🕞</p>
+<h1 id="transformer--dive-into-deep-learning-0166-documentation">Transformer — Dive into Deep Learning 0.16.6 documentation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#transformer--dive-into-deep-learning-0166-documentation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="1071-model">10.7.1. Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1071-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>As an instance of the encoder-decoder architecture, the overall architecture of the transformer is presented in <a href="https://d2l.ai/chapter_attention-mechanisms/transformer.html" class="external external-link">Fig. 10.7.1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. As we can see, the transformer is composed of an encoder and a decoder. Different from Bahdanau attention for sequence to sequence learning in <a href="https://d2l.ai/chapter_attention-mechanisms/bahdanau-attention.html" class="external external-link">Fig. 10.4.1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, the input (source) and output (target) sequence embeddings are added with positional encoding before being fed into the encoder and the decoder that stack modules based on self-attention.</p>
+<p>The transformer architecture.</p>
+<p><a href="../../../transformer-—-dive-into-deep-learning-0-16-6-docum/transformer.svg" class="internal internal-link" data-slug="transformer-—-dive-into-deep-learning-0-16-6-docum/transformer.svg"><img src="../../../4.archive/notion-archive/taskinaws/attachments/transformer.svg" alt/></a></p>
+<p>Fig. 10.7.1</p>
+<p>Now we provide an overview of the transformer architecture in <a href="https://d2l.ai/chapter_attention-mechanisms/transformer.html" class="external external-link">Fig. 10.7.1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. On a high level, the transformer encoder is a stack of multiple identical layers, where each layer has two sublayers (either is denoted as ). The first is a multi-head self-attention pooling and the second is a positionwise feed-forward network. Specifically, in the encoder self-attention, queries, keys, and values are all from the the outputs of the previous encoder layer. Inspired by the ResNet design in <a href="https://d2l.ai/chapter_convolutional-modern/resnet.html" class="external external-link">Section 7.6<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, a residual connection is employed around both sublayers. In the transformer, for any input at any position of the sequence, we require that so that the residual connection is feasible. This addition from the residual connection is immediately followed by layer normalization <a href="../../../ba-et-al.,-2016" class="internal internal-link alias" data-slug="ba-et-al.,-2016">Ba et al., 2016</a>(<a href="https://d2l.ai/chapter_references/zreferences.html" class="external external-link">https://d2l.ai/chapter_references/zreferences.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>). As a result, the transformer encoder outputs a -dimensional vector representation for each position of the input sequence.</p>
+<p>The transformer decoder is also a stack of multiple identical layers with residual connections and layer normalizations. Besides the two sublayers described in the encoder, the decoder inserts a third sublayer, known as the encoder-decoder attention, between these two. In the encoder-decoder attention, queries are from the outputs of the previous decoder layer, and the keys and values are from the transformer encoder outputs. In the decoder self-attention, queries, keys, and values are all from the the outputs of the previous decoder layer. However, each position in the decoder is allowed to only attend to all positions in the decoder up to that position. This <em>masked</em> attention preserves the auto-regressive property, ensuring that the prediction only depends on those output tokens that have been generated.</p>
+<p>We have already described and implemented multi-head attention based on scaled dot-products in <a href="https://d2l.ai/chapter_attention-mechanisms/multihead-attention.html" class="external external-link">Section 10.5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> and positional encoding in <a href="https://d2l.ai/chapter_attention-mechanisms/self-attention-and-positional-encoding.html" class="external external-link">Section 10.6.3<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. In the following, we will implement the rest of the transformer model.</p>
+<h2 id="1072-positionwise-feed-forward-networks">10.7.2. Positionwise Feed-Forward Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1072-positionwise-feed-forward-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The positionwise feed-forward network transforms the representation at all the sequence positions using the same MLP. This is why we call it <em>positionwise</em>. In the implementation below, the input <code>X</code> with shape (batch size, number of time steps or sequence length in tokens, number of hidden units or feature dimension) will be transformed by a two-layer MLP into an output tensor of shape (batch size, number of time steps, <code>ffn_num_outputs</code>).</p>
+<pre><code>#@save
+class PositionWiseFFN(nn.Block):
+    &quot;&quot;&quot;Positionwise feed-forward network.&quot;&quot;&quot;
+    def __init__(self, ffn_num_hiddens, ffn_num_outputs, **kwargs):
+        super(PositionWiseFFN, self).__init__(**kwargs)
+        self.dense1 = nn.Dense(ffn_num_hiddens, flatten=False,
+                               activation='relu')
+        self.dense2 = nn.Dense(ffn_num_outputs, flatten=False)
+
+    def forward(self, X):
+        return self.dense2(self.dense1(X))
+</code></pre>
+<p>The following example shows that the innermost dimension of a tensor changes to the number of outputs in the positionwise feed-forward network. Since the same MLP transforms at all the positions, when the inputs at all these positions are the same, their outputs are also identical.</p>
+<pre><code>array([[ 0.00239431,  0.00927085, -0.00021069, -0.00923989, -0.0082903 ,
+        -0.00162741,  0.00659031,  0.00023905],
+       [ 0.00239431,  0.00927085, -0.00021069, -0.00923989, -0.0082903 ,
+        -0.00162741,  0.00659031,  0.00023905],
+       [ 0.00239431,  0.00927085, -0.00021069, -0.00923989, -0.0082903 ,
+        -0.00162741,  0.00659031,  0.00023905]])
+</code></pre>
+<h2 id="1073-residual-connection-and-layer-normalization">10.7.3. Residual Connection and Layer Normalization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1073-residual-connection-and-layer-normalization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Now let us focus on the “add &amp; norm” component in <a href="https://d2l.ai/chapter_attention-mechanisms/transformer.html" class="external external-link">Fig. 10.7.1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>. As we described at the beginning of this section, this is a residual connection immediately followed by layer normalization. Both are key to effective deep architectures.</p>
+<p>In <a href="https://d2l.ai/chapter_convolutional-modern/batch-norm.html" class="external external-link">Section 7.5<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, we explained how batch normalization recenters and rescales across the examples within a minibatch. Layer normalization is the same as batch normalization except that the former normalizes across the feature dimension. Despite its pervasive applications in computer vision, batch normalization is usually empirically less effective than layer normalization in natural language processing tasks, whose inputs are often variable-length sequences.</p>
+<p>The following code snippet compares the normalization across different dimensions by layer normalization and batch normalization.</p>
+<pre><code>ln = nn.LayerNorm()
+ln.initialize()
+bn = nn.BatchNorm()
+bn.initialize()
+X = np.array([[1, 2], [2, 3]])
+# Compute mean and variance from `X` in the training mode
+with autograd.record():
+    print('layer norm:', ln(X), '\nbatch norm:', bn(X))
+</code></pre>
+<pre><code>layer norm: [[-0.99998  0.99998]
+ [-0.99998  0.99998]]
+batch norm: [[-0.99998 -0.99998]
+ [ 0.99998  0.99998]]
+</code></pre>
+<p>Now we can implement the <code>AddNorm</code> class using a residual connection followed by layer normalization. Dropout is also applied for regularization.</p>
+<pre><code>#@save
+class AddNorm(nn.Block):
+    &quot;&quot;&quot;Residual connection followed by layer normalization.&quot;&quot;&quot;
+    def __init__(self, dropout, **kwargs):
+        super(AddNorm, self).__init__(**kwargs)
+        self.dropout = nn.Dropout(dropout)
+        self.ln = nn.LayerNorm()
+
+    def forward(self, X, Y):
+        return self.ln(self.dropout(Y) + X)
+</code></pre>
+<p>The residual connection requires that the two inputs are of the same shape so that the output tensor also has the same shape after the addition operation.</p>
+<h2 id="1074-encoder">10.7.4. Encoder<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1074-encoder" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>With all the essential components to assemble the transformer encoder, let us start by implementing a single layer within the encoder. The following <code>EncoderBlock</code> class contains two sublayers: multi-head self-attention and positionwise feed-forward networks, where a residual connection followed by layer normalization is employed around both sublayers.</p>
+<pre><code>#@save
+class EncoderBlock(nn.Block):
+    &quot;&quot;&quot;Transformer encoder block.&quot;&quot;&quot;
+    def __init__(self, num_hiddens, ffn_num_hiddens, num_heads, dropout,
+                 use_bias=False, **kwargs):
+        super(EncoderBlock, self).__init__(**kwargs)
+        self.attention = d2l.MultiHeadAttention(num_hiddens, num_heads,
+                                                dropout, use_bias)
+        self.addnorm1 = AddNorm(dropout)
+        self.ffn = PositionWiseFFN(ffn_num_hiddens, num_hiddens)
+        self.addnorm2 = AddNorm(dropout)
+
+    def forward(self, X, valid_lens):
+        Y = self.addnorm1(X, self.attention(X, X, X, valid_lens))
+        return self.addnorm2(Y, self.ffn(Y))
+</code></pre>
+<p>As we can see, any layer in the transformer encoder does not change the shape of its input.</p>
+<pre><code>X = np.ones((2, 100, 24))
+valid_lens = np.array([3, 2])
+encoder_blk = EncoderBlock(24, 48, 8, 0.5)
+encoder_blk.initialize()
+encoder_blk(X, valid_lens).shape
+</code></pre>
+<p>In the following transformer encoder implementation, we stack <code>num_layers</code> instances of the above <code>EncoderBlock</code> classes. Since we use the fixed positional encoding whose values are always between -1 and 1, we multiply values of the learnable input embeddings by the square root of the embedding dimension to rescale before summing up the input embedding and the positional encoding.</p>
+<pre><code>#@save
+class TransformerEncoder(d2l.Encoder):
+    &quot;&quot;&quot;Transformer encoder.&quot;&quot;&quot;
+    def __init__(self, vocab_size, num_hiddens, ffn_num_hiddens, num_heads,
+                 num_layers, dropout, use_bias=False, **kwargs):
+        super(TransformerEncoder, self).__init__(**kwargs)
+        self.num_hiddens = num_hiddens
+        self.embedding = nn.Embedding(vocab_size, num_hiddens)
+        self.pos_encoding = d2l.PositionalEncoding(num_hiddens, dropout)
+        self.blks = nn.Sequential()
+        for _ in range(num_layers):
+            self.blks.add(
+                EncoderBlock(num_hiddens, ffn_num_hiddens, num_heads, dropout,
+                             use_bias))
+
+    def forward(self, X, valid_lens, *args):
+        # Since positional encoding values are between -1 and 1, the embedding
+        # values are multiplied by the square root of the embedding dimension
+        # to rescale before they are summed up
+        X = self.pos_encoding(self.embedding(X) * math.sqrt(self.num_hiddens))
+        self.attention_weights = [None] * len(self.blks)
+        for i, blk in enumerate(self.blks):
+            X = blk(X, valid_lens)
+            self.attention_weights[
+                i] = blk.attention.attention.attention_weights
+        return X
+</code></pre>
+<p>Below we specify hyperparameters to create a two-layer transformer encoder. The shape of the transformer encoder output is (batch size, number of time steps, <code>num_hiddens</code>).</p>
+<h2 id="1075-decoder">10.7.5. Decoder<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1075-decoder" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>As shown in <a href="https://d2l.ai/chapter_attention-mechanisms/transformer.html" class="external external-link">Fig. 10.7.1<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, the transformer decoder is composed of multiple identical layers. Each layer is implemented in the following <code>DecoderBlock</code> class, which contains three sublayers: decoder self-attention, encoder-decoder attention, and positionwise feed-forward networks. These sublayers employ a residual connection around them followed by layer normalization.</p>
+<p>As we described earlier in this section, in the masked multi-head decoder self-attention (the first sublayer), queries, keys, and values all come from the outputs of the previous decoder layer. When training sequence-to-sequence models, tokens at all the positions (time steps) of the output sequence are known. However, during prediction the output sequence is generated token by token; thus, at any decoder time step only the generated tokens can be used in the decoder self-attention. To preserve auto-regression in the decoder, its masked self-attention specifies <code>dec_valid_lens</code> so that any query only attends to all positions in the decoder up to the query position.</p>
+<pre><code>class DecoderBlock(nn.Block):
+    # The `i`-th block in the decoder
+    def __init__(self, num_hiddens, ffn_num_hiddens, num_heads, dropout, i,
+                 **kwargs):
+        super(DecoderBlock, self).__init__(**kwargs)
+        self.i = i
+        self.attention1 = d2l.MultiHeadAttention(num_hiddens, num_heads,
+                                                 dropout)
+        self.addnorm1 = AddNorm(dropout)
+        self.attention2 = d2l.MultiHeadAttention(num_hiddens, num_heads,
+                                                 dropout)
+        self.addnorm2 = AddNorm(dropout)
+        self.ffn = PositionWiseFFN(ffn_num_hiddens, num_hiddens)
+        self.addnorm3 = AddNorm(dropout)
+
+    def forward(self, X, state):
+        enc_outputs, enc_valid_lens = state[0], state[1]
+        # During training, all the tokens of any output sequence are processed
+        # at the same time, so `state[2][self.i]` is `None` as initialized.
+        # When decoding any output sequence token by token during prediction,
+        # `state[2][self.i]` contains representations of the decoded output at
+        # the `i`-th block up to the current time step
+        if state[2][self.i] is None:
+            key_values = X
+        else:
+            key_values = np.concatenate((state[2][self.i], X), axis=1)
+        state[2][self.i] = key_values
+
+        if autograd.is_training():
+            batch_size, num_steps, _ = X.shape
+            # Shape of `dec_valid_lens`: (`batch_size`, `num_steps`), where
+            # every row is [1, 2, ..., `num_steps`]
+            dec_valid_lens = np.tile(np.arange(1, num_steps + 1, ctx=X.ctx),
+                                     (batch_size, 1))
+        else:
+            dec_valid_lens = None
+
+        # Self-attention
+        X2 = self.attention1(X, key_values, key_values, dec_valid_lens)
+        Y = self.addnorm1(X, X2)
+        # Encoder-decoder attention. Shape of `enc_outputs`:
+        # (`batch_size`, `num_steps`, `num_hiddens`)
+        Y2 = self.attention2(Y, enc_outputs, enc_outputs, enc_valid_lens)
+        Z = self.addnorm2(Y, Y2)
+        return self.addnorm3(Z, self.ffn(Z)), state
+</code></pre>
+<p>To facilitate scaled dot-product operations in the encoder-decoder attention and addition operations in the residual connections, the feature dimension (<code>num_hiddens</code>) of the decoder is the same as that of the encoder.</p>
+<pre><code>decoder_blk = DecoderBlock(24, 48, 8, 0.5, 0)
+decoder_blk.initialize()
+X = np.ones((2, 100, 24))
+state = [encoder_blk(X, valid_lens), valid_lens, [None]]
+decoder_blk(X, state)[0].shape
+</code></pre>
+<p>Now we construct the entire transformer decoder composed of <code>num_layers</code> instances of <code>DecoderBlock</code>. In the end, a fully-connected layer computes the prediction for all the <code>vocab_size</code> possible output tokens. Both of the decoder self-attention weights and the encoder-decoder attention weights are stored for later visualization.</p>
+<pre><code>class TransformerDecoder(d2l.AttentionDecoder):
+    def __init__(self, vocab_size, num_hiddens, ffn_num_hiddens, num_heads,
+                 num_layers, dropout, **kwargs):
+        super(TransformerDecoder, self).__init__(**kwargs)
+        self.num_hiddens = num_hiddens
+        self.num_layers = num_layers
+        self.embedding = nn.Embedding(vocab_size, num_hiddens)
+        self.pos_encoding = d2l.PositionalEncoding(num_hiddens, dropout)
+        self.blks = nn.Sequential()
+        for i in range(num_layers):
+            self.blks.add(
+                DecoderBlock(num_hiddens, ffn_num_hiddens, num_heads, dropout,
+                             i))
+        self.dense = nn.Dense(vocab_size, flatten=False)
+
+    def init_state(self, enc_outputs, enc_valid_lens, *args):
+        return [enc_outputs, enc_valid_lens, [None] * self.num_layers]
+
+    def forward(self, X, state):
+        X = self.pos_encoding(self.embedding(X) * math.sqrt(self.num_hiddens))
+        self._attention_weights = [[None] * len(self.blks) for _ in range(2)]
+        for i, blk in enumerate(self.blks):
+            X, state = blk(X, state)
+            # Decoder self-attention weights
+            self._attention_weights[0][
+                i] = blk.attention1.attention.attention_weights
+            # Encoder-decoder attention weights
+            self._attention_weights[1][
+                i] = blk.attention2.attention.attention_weights
+        return self.dense(X), state
+
+    @property
+    def attention_weights(self):
+        return self._attention_weights
+</code></pre>
+<h2 id="1076-training">10.7.6. Training<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1076-training" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Let us instantiate an encoder-decoder model by following the transformer architecture. Here we specify that both the transformer encoder and the transformer decoder have 2 layers using 4-head attention. Similar to <a href="https://d2l.ai/chapter_recurrent-modern/seq2seq.html" class="external external-link">Section 9.7.4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>, we train the transformer model for sequence to sequence learning on the English-French machine translation dataset.</p>
+<pre><code>num_hiddens, num_layers, dropout, batch_size, num_steps = 32, 2, 0.1, 64, 10
+lr, num_epochs, device = 0.005, 200, d2l.try_gpu()
+ffn_num_hiddens, num_heads = 64, 4
+
+train_iter, src_vocab, tgt_vocab = d2l.load_data_nmt(batch_size, num_steps)
+
+encoder = TransformerEncoder(len(src_vocab), num_hiddens, ffn_num_hiddens,
+                             num_heads, num_layers, dropout)
+decoder = TransformerDecoder(len(tgt_vocab), num_hiddens, ffn_num_hiddens,
+                             num_heads, num_layers, dropout)
+net = d2l.EncoderDecoder(encoder, decoder)
+d2l.train_seq2seq(net, train_iter, lr, num_epochs, tgt_vocab, device)
+</code></pre>
+<p><a href="../../../transformer-—-dive-into-deep-learning-0-16-6-docum/output_transformer_5722f1_159_1.svg" class="internal internal-link" data-slug="transformer-—-dive-into-deep-learning-0-16-6-docum/output_transformer_5722f1_159_1.svg"><img src="../../../4.archive/notion-archive/taskinaws/attachments/output_transformer_5722f1_159_1.svg" alt/></a></p>
+<p>After training, we use the transformer model to translate a few English sentences into French and compute their BLEU scores.</p>
+<pre><code>engs = ['go .', &quot;i lost .&quot;, 'he\'s calm .', 'i\'m home .']
+fras = ['va !', 'j\'ai perdu .', 'il est calme .', 'je suis chez moi .']
+for eng, fra in zip(engs, fras):
+    translation, dec_attention_weight_seq = d2l.predict_seq2seq(
+        net, eng, src_vocab, tgt_vocab, num_steps, device, True)
+    print(f'{eng} => {translation}, ',
+          f'bleu {d2l.bleu(translation, fra, k=2):.3f}')
+</code></pre>
+<pre><code>go . => va !,  bleu 1.000
+i lost . => j'ai perdu .,  bleu 1.000
+he's calm . => il est calme .,  bleu 1.000
+i'm home . => je suis chez moi suis bien suis bien suis bien,  bleu 0.481
+</code></pre>
+<p>Let us visualize the transformer attention weights when translating the last English sentence into French. The shape of the encoder self-attention weights is (number of encoder layers, number of attention heads, <code>num_steps</code> or number of queries, <code>num_steps</code> or number of key-value pairs).</p>
+<p>In the encoder self-attention, both queries and keys come from the same input sequence. Since padding tokens do not carry meaning, with specified valid length of the input sequence, no query attends to positions of padding tokens. In the following, two layers of multi-head attention weights are presented row by row. Each head independently attends based on a separate representation subspaces of queries, keys, and values.</p>
+<pre><code>d2l.show_heatmaps(enc_attention_weights, xlabel='Key positions',
+                  ylabel='Query positions',
+                  titles=['Head %d' % i
+                          for i in range(1, 5)], figsize=(7, 3.5))
+</code></pre>
+<p><a href="../../../transformer-—-dive-into-deep-learning-0-16-6-docum/output_transformer_5722f1_195_0.svg" class="internal internal-link" data-slug="transformer-—-dive-into-deep-learning-0-16-6-docum/output_transformer_5722f1_195_0.svg"><img src="../../../4.archive/notion-archive/taskinaws/attachments/output_transformer_5722f1_195_0.svg" alt/></a></p>
+<p>To visualize both the decoder self-attention weights and the encoder-decoder attention weights, we need more data manipulations. For example, we fill the masked attention weights with zero. Note that the decoder self-attention weights and the encoder-decoder attention weights both have the same queries: the beginning-of-sequence token followed by the output tokens.</p>
+<pre><code>dec_attention_weights_2d = [
+    np.array(head[0]).tolist() for step in dec_attention_weight_seq
+    for attn in step for blk in attn for head in blk]
+dec_attention_weights_filled = np.array(
+    pd.DataFrame(dec_attention_weights_2d).fillna(0.0).values)
+dec_attention_weights = dec_attention_weights_filled.reshape(
+    (-1, 2, num_layers, num_heads, num_steps))
+dec_self_attention_weights, dec_inter_attention_weights = \
+    dec_attention_weights.transpose(1, 2, 3, 0, 4)
+dec_self_attention_weights.shape, dec_inter_attention_weights.shape
+</code></pre>
+<p>Due to the auto-regressive property of the decoder self-attention, no query attends to key-value pairs after the query position.</p>
+<pre><code># Plus one to include the beginning-of-sequence token
+d2l.show_heatmaps(
+    dec_self_attention_weights[:, :, :, :len(translation.split()) + 1],
+    xlabel='Key positions', ylabel='Query positions',
+    titles=['Head %d' % i for i in range(1, 5)], figsize=(7, 3.5))
+</code></pre>
+<p><a href="../../../transformer-—-dive-into-deep-learning-0-16-6-docum/output_transformer_5722f1_219_0.svg" class="internal internal-link" data-slug="transformer-—-dive-into-deep-learning-0-16-6-docum/output_transformer_5722f1_219_0.svg"><img src="../../../4.archive/notion-archive/taskinaws/attachments/output_transformer_5722f1_219_0.svg" alt/></a></p>
+<p>Similar to the case in the encoder self-attention, via the specified valid length of the input sequence, no query from the output sequence attends to those padding tokens from the input sequence.</p>
+<pre><code>d2l.show_heatmaps(dec_inter_attention_weights, xlabel='Key positions',
+                  ylabel='Query positions',
+                  titles=['Head %d' % i
+                          for i in range(1, 5)], figsize=(7, 3.5))
+</code></pre>
+<p><a href="../../../transformer-—-dive-into-deep-learning-0-16-6-docum/output_transformer_5722f1_231_0.svg" class="internal internal-link" data-slug="transformer-—-dive-into-deep-learning-0-16-6-docum/output_transformer_5722f1_231_0.svg"><img src="../../../4.archive/notion-archive/taskinaws/attachments/output_transformer_5722f1_231_0.svg" alt/></a></p>
+<p>Although the transformer architecture was originally proposed for sequence-to-sequence learning, as we will discover later in the book, either the transformer encoder or the transformer decoder is often individually used for different deep learning tasks.</p>
+<h2 id="1077-summary">10.7.7. Summary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1077-summary" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>The transformer is an instance of the encoder-decoder architecture, though either the encoder or the decoder can be used individually in practice.</p>
+</li>
+<li>
+<p>In the transformer, multi-head self-attention is used for representing the input sequence and the output sequence, though the decoder has to preserve the auto-regressive property via a masked version.</p>
+</li>
+<li>
+<p>Both the residual connections and the layer normalization in the transformer are important for training a very deep model.</p>
+</li>
+<li>
+<p>The positionwise feed-forward network in the transformer model transforms the representation at all the sequence positions using the same MLP.</p>
+</li>
+</ul>
+<h2 id="1078-exercises">10.7.8. Exercises<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1078-exercises" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>Train a deeper transformer in the experiments. How does it affect the training speed and the translation performance?</p>
+</li>
+<li>
+<p>Is it a good idea to replace scaled dot-product attention with additive attention in the transformer? Why?</p>
+</li>
+<li>
+<p>For language modeling, should we use the transformer encoder, decoder, or both? How to design this method?</p>
+</li>
+<li>
+<p>What can be challenges to transformers if input sequences are very long? Why?</p>
+</li>
+<li>
+<p>How to improve computational and memory efficiency of transformers? Hint: you may refer to the survey paper by Tay et al. <a href="../../../tay-et-al.,-2020" class="internal internal-link alias" data-slug="tay-et-al.,-2020">Tay et al., 2020</a>(<a href="https://d2l.ai/chapter_references/zreferences.html" class="external external-link">https://d2l.ai/chapter_references/zreferences.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>).</p>
+</li>
+<li>
+<p>How can we design transformer-based models for image classification tasks without using CNNs? Hint: you may refer to the vision transformer <a href="../../../dosovitskiy-et-al.,-2021" class="internal internal-link alias" data-slug="dosovitskiy-et-al.,-2021">Dosovitskiy et al., 2021</a>(<a href="https://d2l.ai/chapter_references/zreferences.html" class="external external-link">https://d2l.ai/chapter_references/zreferences.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>).</p>
+</li>
+</ol>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/2" class="external external-link">Jul ‘20<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Why are we using a fixed positional encoding here? Sure I can see how this encoding works and the relationship between positions are found in later layers of the network, but can’t we remove the need for this layer by learning the positional encoding? For instance we could train a d x 1 convolutional filter as the positional encoding.</p>
+<p>In fact why do we add the positional encoding to the original data? Wouldn’t that make us lose some data in the process of adding in the encoding? What’s wrong with simply appending the position onto each data point?</p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/2" class="external external-link">1 reply<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/3" class="external external-link">Jul ‘20<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>I found the answer to my question here</p>
+<p>You can learn the positional embedding, and there are several ways to do it. However, the difference between learned and other non-learned, but well done manual embeddings are small.</p>
+<p>Concatenation of the position is a good idea, in most cases as it ensures orthogonality. However, the dimensions are so high in most embeddings, so we get an approximate orthogonality. Now it is better to add, as we have less parameters to solve for.</p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/3" class="external external-link">1 reply<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/5" class="external external-link">Nov ‘20<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>In multiheadattention layer, the transpose_qkv function splits the embedding vector and ‘brings’ the ‘num_heads’ to ‘batch_size’ dimension</p>
+<p>(<code>batch_size</code>, <code>seq_len</code>, <code>num_hiddens</code>) to<br/>
+(<code>batch_size</code> * <code>num_heads</code>, <code>seq_len</code>, <code>num_hiddens</code> / <code>num_heads</code>)</p>
+<p>e.g.<br/>
+batch_soze = 2, seq_len = 3, num_hiddens = 4<br/>
+num_heads = 2</p>
+<p>X = np.arange(24)<br/>
+X = X.reshape(2,3,4)<br/>
+X = transpose_qkv(X, num_heads)<br/>
+(2,3,4) -> (4,3,2)</p>
+<p>[[[ 0 1 2 3][ 4 5 6 7][ 8 9 10 11]]<br/>
+[[12 13 14 15][16 17 18 19][20 21 22 23]]]</p>
+<p>After tranpose_qkv, the order of output element order is<br/>
+(1 2) -> (1 1 2 2)</p>
+<p>[[[ 0 1][ 4 5][ 8 9]]<br/>
+[[ 2 3][ 6 7][10 11]]<br/>
+[[12 13][16 17][20 21]]<br/>
+[[14 15][18 19][22 23]]]</p>
+<p>However, the valid_len vector has produced a different element order<br/>
+valid_len = np.array([1,2])<br/>
+valid_len = np.tile(valid_len, num_heads)<br/>
+(1 2) -> (1 2 1 2)</p>
+<p>token order = (1 1 2 2)<br/>
+valid_len order = (1 2 1 2)</p>
+<p>The following codes fix this bug:<br/>
+valid_len = np.tile(valid_len, self.num_heads)<br/>
+valid_len = valid_len.reshape(self.num_heads, -1)<br/>
+valid_len = valid_len.transpose(1,0)<br/>
+valid_len = valid_len.reshape(-1)</p>
+<p>valid_len order = (1 1 2 2)</p>
+<p>Tested the fix with SQUAD problem.<br/>
+With original code, the training does not converge. It is able to converge with the changes.</p>
+<p>Appreciate any help to verify. Many thanks!</p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/5" class="external external-link">2 replies<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/6" class="external external-link">Nov ‘20<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> <a href="https://discuss.d2l.ai/t/transformer/348/5" class="external external-link">▶ karloon<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://discuss.d2l.ai/u/goldpiggy" class="external external-link">@goldpiggy<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> hi, there, i have the same question here in Multi-Head Attention Part.</p>
+<p>to my understanding,<br/>
+let we have n batches, m heads.</p>
+<p>then,<br/>
+X in dimension: (<code>batch_size</code> * <code>num_heads</code>, <code>seq_len</code>, <code>num_hiddens</code> / <code>num_heads</code>)</p>
+<p>shoud be see as</p>
+<blockquote>
+<p>batch 1, head 1, … batch 1, head 2, … … batch 1, head m, … … … batch n, head m, …</p>
+</blockquote>
+<p>the valid_len is in dimension (<code>batch_size</code>)</p>
+<p>with np.tile we extend it to (<code>batch_size</code> * <code>num_heads</code>)</p>
+<blockquote>
+<p>batch 1, head 1 batch 2, head 1 … batch n, head 1 … … batch n, head m</p>
+</blockquote>
+<p>as self.attention implemented in 10.1 Attention Mechanisms - Dot Product Attention<br/>
+the X and valid_len will be used in the same order,<br/>
+so we get</p>
+<blockquote>
+<p>X | valid_len batch 1, head 1, … —> batch 1, head 1 batch 1, head 2, … —> batch 2, head 1 (starting to get things wrong) … batch 1, head m, … —> batch n, head m (wrong) … … batch n, head m, …</p>
+</blockquote>
+<p>if this make sense, the transpose_qkv shoud be change to</p>
+<blockquote>
+<p>def transpose_qkv(X, num_heads): # Input X shape: (batch_size, seq_len, num_hiddens). # Output X shape: # (batch_size, seq_len, num_heads, num_hiddens / num_heads) X = X.reshape(X.shape[0], X.shape[1], num_heads, -1) # X shape: # (num_heads, batch_size, seq_len, num_hiddens / num_heads) X = X.transpose(2, 0, 1, 3) # output shape: # (num_heads*batch_size , seq_len, num_hiddens / num_heads) output = X.reshape(-1, X.shape[2], X.shape[3]) return output</p>
+</blockquote>
+<p>so does the correspond transpose_output function.</p>
+<p>hoping to get your reply soon.</p>
+<p>regards</p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/7" class="external external-link">Dec ‘20<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> <a href="https://discuss.d2l.ai/t/transformer/348/5" class="external external-link">▶ karloon<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Thanks <a href="https://discuss.d2l.ai/u/karloon" class="external external-link">@karloon<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> and <a href="https://discuss.d2l.ai/u/yaohwang" class="external external-link">@yaohwang<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>! We should use <code>repeat(axis=0)</code> instead of <code>tile</code> (fixed at <a href="http://preview.d2l.ai/d2l-en/master/" class="external external-link">http://preview.d2l.ai/d2l-en/master/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>). The former does the following: on axis 0, copy the first item (scalar or vector) for <code>N</code> times, then copy the next item, and so on.</p>
+<p>To explain, in our <code>d2l.transpose_output</code> function, we have:</p>
+<p><code>X = X.reshape(-1, num_heads, X.shape[1], X.shape[2])</code>,</p>
+<p>which means that our head-wise copy should align with shape:</p>
+<p>(<code>batch_size</code>, <code>num_heads</code>, <code>num_steps</code>, <code>num_hiddens</code> / <code>num_heads</code>).</p>
+<p>Suppose that <code>num_heads=4</code>, <code>valid_lens</code> is <code>[[1,2,3],[4,5,6]]</code> (which means <code>batch_size=2</code>, <code>num_steps=3</code>)</p>
+<p><code>valid_lens = valid_lens.repeat(self.num_heads, axis=0)</code></p>
+<p>gives <code>[[1,2,3],[1,2,3],[1,2,3],[1,2,3],[4,5,6],[4,5,6],[4,5,6],[4,5,6]]</code>, whose reshaping to</p>
+<p><code>[[[1,2,3],[1,2,3],[1,2,3],[1,2,3]], [[4,5,6],[4,5,6],[4,5,6],[4,5,6]]]</code>shows that our valid lengths are copied along the head axis: this is what we want.</p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/7" class="external external-link">2 replies<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/10" class="external external-link">Dec ‘20<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> <a href="https://discuss.d2l.ai/t/transformer/348/7" class="external external-link">▶ astonzhang<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Yes, this is cleaner.</p>
+<p>num_heads = 2<br/>
+valid_len = np.array([1,2])<br/>
+valid_lens = valid_lens.repeat(num_heads, axis=0)</p>
+<p>(1 2) -> (1 1 2 2)</p>
+<p>token order = (1 1 2 2)<br/>
+valid_len order = (1 1 2 2)</p>
+<p><a href="https://discuss.d2l.ai/t/transformer/348/13" class="external external-link">27 Apr<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>10.7.4. Encoder<br/>
+Since we use the fixed positional encoding whose values are always between -1 and 1, we multiply values of the learnable input embeddings by the square root of the embedding dimension to rescale before summing up the input embedding and the positional encoding.</p>
+<p>Why the embedding multiply the square root of the embedding dimension? Why rescale the values? Why the ratio is the square root of the embedding dimension?</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1871" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#transformer--dive-into-deep-learning-0166-documentation" data-for="transformer--dive-into-deep-learning-0166-documentation">Transformer — Dive into Deep Learning 0.16.6 documentation</a></li><li class="depth-1"><a href="#1071-model" data-for="1071-model">10.7.1. Model</a></li><li class="depth-1"><a href="#1072-positionwise-feed-forward-networks" data-for="1072-positionwise-feed-forward-networks">10.7.2. Positionwise Feed-Forward Networks</a></li><li class="depth-1"><a href="#1073-residual-connection-and-layer-normalization" data-for="1073-residual-connection-and-layer-normalization">10.7.3. Residual Connection and Layer Normalization</a></li><li class="depth-1"><a href="#1074-encoder" data-for="1074-encoder">10.7.4. Encoder</a></li><li class="depth-1"><a href="#1075-decoder" data-for="1075-decoder">10.7.5. Decoder</a></li><li class="depth-1"><a href="#1076-training" data-for="1076-training">10.7.6. Training</a></li><li class="depth-1"><a href="#1077-summary" data-for="1077-summary">10.7.7. Summary</a></li><li class="depth-1"><a href="#1078-exercises" data-for="1078-exercises">10.7.8. Exercises</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

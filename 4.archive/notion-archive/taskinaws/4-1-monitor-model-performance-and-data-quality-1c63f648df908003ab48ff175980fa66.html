@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>4 1 Monitor Model Performance and Data Quality 1c63f648df908003ab48ff175980fa66 | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="4 1 Monitor Model Performance and Data Quality 1c63f648df908003ab48ff175980fa66 | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="4 1 Monitor Model Performance and Data Quality 1c63f648df908003ab48ff175980fa66 | LLM Wiki"/><meta name="twitter:description" content="🕙 4.1 Monitor Model Performance and Data Quality Overview 모델 성능 모니터링: 입력 데이터 품질 변화에 따른 모델 정확성 및 성능 모니터링 **데이터 품질, 모델 품질, 통계적 편향, 특성 기여도** 등 4가지 드리프트 유형 탐지 모델 모니터링 및 문제 해결 도구 활용, 알림 생성, 자동 조치 수행 인프라와 비용 최적화: 호스팅 인프라의 적절성과 비용 효율성 평가 SageMaker Inference Recommender를 사용한 컴퓨팅 리소스 최적화 비용 관리 도구 활용, 태깅을 통..."/><meta property="og:description" content="🕙 4.1 Monitor Model Performance and Data Quality Overview 모델 성능 모니터링: 입력 데이터 품질 변화에 따른 모델 정확성 및 성능 모니터링 **데이터 품질, 모델 품질, 통계적 편향, 특성 기여도** 등 4가지 드리프트 유형 탐지 모델 모니터링 및 문제 해결 도구 활용, 알림 생성, 자동 조치 수행 인프라와 비용 최적화: 호스팅 인프라의 적절성과 비용 효율성 평가 SageMaker Inference Recommender를 사용한 컴퓨팅 리소스 최적화 비용 관리 도구 활용, 태깅을 통..."/><meta property="og:image:alt" content="🕙 4.1 Monitor Model Performance and Data Quality Overview 모델 성능 모니터링: 입력 데이터 품질 변화에 따른 모델 정확성 및 성능 모니터링 **데이터 품질, 모델 품질, 통계적 편향, 특성 기여도** 등 4가지 드리프트 유형 탐지 모델 모니터링 및 문제 해결 도구 활용, 알림 생성, 자동 조치 수행 인프라와 비용 최적화: 호스팅 인프라의 적절성과 비용 효율성 평가 SageMaker Inference Recommender를 사용한 컴퓨팅 리소스 최적화 비용 관리 도구 활용, 태깅을 통..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/4-1-monitor-model-performance-and-data-quality-1c63f648df908003ab48ff175980fa66"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/4-1-monitor-model-performance-and-data-quality-1c63f648df908003ab48ff175980fa66"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🕙 4.1 Monitor Model Performance and Data Quality Overview 모델 성능 모니터링: 입력 데이터 품질 변화에 따른 모델 정확성 및 성능 모니터링 **데이터 품질, 모델 품질, 통계적 편향, 특성 기여도** 등 4가지 드리프트 유형 탐지 모델 모니터링 및 문제 해결 도구 활용, 알림 생성, 자동 조치 수행 인프라와 비용 최적화: 호스팅 인프라의 적절성과 비용 효율성 평가 SageMaker Inference Recommender를 사용한 컴퓨팅 리소스 최적화 비용 관리 도구 활용, 태깅을 통..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/4-1-monitor-model-performance-and-data-quality-1c63f648df908003ab48ff175980fa66" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1917" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1917" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>4 1 Monitor Model Performance and Data Quality 1c63f648df908003ab48ff175980fa66</a></div></nav><h1 class="article-title">4 1 Monitor Model Performance and Data Quality 1c63f648df908003ab48ff175980fa66</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:16.155Z">2026년 6월 06일</time><span>54 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/taskinaws/attachments/woodcuts_7.jpg" alt/></p>
+<p>🕙</p>
+<h1 id="41-monitor-model-performance-and-data-quality">4.1 Monitor Model Performance and Data Quality<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#41-monitor-model-performance-and-data-quality" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="overview">Overview<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#overview" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>모델 성능 모니터링</strong>:</p>
+<ul>
+<li>
+<p>입력 데이터 품질 변화에 따른 모델 정확성 및 성능 모니터링</p>
+</li>
+<li>
+<p><span class="text-highlight">**데이터 품질, 모델 품질, 통계적 편향, 특성 기여도**</span> 등 4가지 드리프트 유형 탐지</p>
+</li>
+<li>
+<p>모델 모니터링 및 문제 해결 도구 활용, 알림 생성, 자동 조치 수행</p>
+</li>
+</ul>
+<p><strong>인프라와 비용 최적화</strong>:</p>
+<ul>
+<li>
+<p>호스팅 인프라의 적절성과 비용 효율성 평가</p>
+</li>
+<li>
+<p>SageMaker Inference Recommender를 사용한 컴퓨팅 리소스 최적화</p>
+</li>
+<li>
+<p>비용 관리 도구 활용, 태깅을 통한 비용 관리, 구매 옵션 선택</p>
+</li>
+</ul>
+<p><strong>보안 및 규정 준수</strong>:</p>
+<ul>
+<li>
+<p>IAM을 통한 액세스 제어</p>
+</li>
+<li>
+<p>최소 권한 원칙 적용</p>
+</li>
+<li>
+<p>SageMaker의 규정 준수 및 거버넌스 기능 활용</p>
+</li>
+</ul>
+<h1 id="monitoring-ml-solutions">Monitoring ML Solutions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-ml-solutions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>
+<p><strong>비즈니스 요구사항 충족</strong>:</p>
+<ul>
+<li>
+<p>모니터링을 통해 ML 솔루션이 비즈니스 목표를 달성하고 있는지 평가</p>
+</li>
+<li>
+<p>핵심 성과 지표(KPI) 분석으로 투자 수익(ROI) 확인 및 전략적 조정</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>인프라 성능 모니터링</strong>:</p>
+<ul>
+<li>
+<p>ML 솔루션은 많은 컴퓨팅 리소스 요구</p>
+</li>
+<li>
+<p>CPU/GPU 사용률, 메모리 사용량, 네트워크 처리량 등의 모니터링으로 효율적 운영 보장</p>
+</li>
+<li>
+<p>수요 변화에 맞춰 리소스 확장 지원</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>모델 성능 평가</strong>:</p>
+<ul>
+<li>
+<p>실제 환경에서 모델의 정확도, 효율성, 전반적 효과성 모니터링</p>
+</li>
+<li>
+<p>정확도, 재현율, F1 점수, 추론 시간 등의 지표 추적</p>
+</li>
+<li>
+<p>엣지 케이스와 고장 모드에 대한 모델 성능 평가</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>모델 재학습 지원</strong>:</p>
+<ul>
+<li>
+<p>데이터와 환경 변화에 따른 모델 노후화 문제 해결</p>
+</li>
+<li>
+<p>데이터 분포 변화, 예측 성능 저하 등의 지표 모니터링으로 재학습 시기 파악</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>규제 및 산업 표준 준수</strong>:</p>
+<ul>
+<li>
+<p>개인정보 보호, 보안, 공정성 등의 규정 준수 필요</p>
+</li>
+<li>
+<p>데이터 보호, 윤리적 AI/ML 원칙 준수를 위한 모니터링 체계 구축</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="ml-lens">ML Lens<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ml-lens" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>ML 워크로드를 위한 모범 사례와 설계 원칙</strong>:</p>
+<ul>
+<li>
+<p>안전하고, 고성능이며, 복원력 있고, 효율적인 ML 워크로드 구축 및 운영을 지원</p>
+</li>
+<li>
+<p>소유권 지정, 보호, 리소스 최적화, 지속적 개선, 비용 절감, 자동화, 복원력, 재사용성, 재현성, 환경적 영향 최소화 등 실현</p>
+</li>
+</ul>
+<p><strong>리소스 최적화</strong>:</p>
+<ul>
+<li>
+<p>컴퓨팅, 스토리지, 네트워킹 등 클라우드 리소스의 효율적 활용</p>
+</li>
+<li>
+<p>리소스 풀링, 캐싱, 데이터 관리 등의 방법 활용</p>
+<ol>
+<li>
+<p><strong>리소스 풀링</strong>:</p>
+<ul>
+<li>
+<p>여러 워크로드에 걸쳐 컴퓨팅, 스토리지, 네트워킹 리소스를 공유</p>
+</li>
+<li>
+<p>리소스 활용도 향상 및 비용 절감</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>캐싱</strong>:</p>
+<ul>
+<li>
+<p>자주 액세스되는 데이터 또는 중간 결과에 대한 캐싱 전략 구현</p>
+</li>
+<li>
+<p>계산 오버헤드 감소 및 성능 향상</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>데이터 관리</strong>:</p>
+<ul>
+<li>
+<p>데이터 압축, 파티셔닝, 수명 주기 관리 등의 효율적인 데이터 관리 실행</p>
+</li>
+<li>
+<p>스토리지 및 처리 비용 최적화</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p><strong>수요 기반 확장성</strong>:</p>
+<ul>
+<li>Auto Scaling, SageMaker, Lambda 등을 통한 동적 확장 지원</li>
+</ul>
+<p><strong>비용 관리</strong>:</p>
+<ul>
+<li>
+<p>태깅을 통한 ML 활동별 비용 모니터링</p>
+</li>
+<li>
+<p>ROI 추적, 수요 예측, 인스턴스 유형 최적화 등으로 비용 절감</p>
+</li>
+</ul>
+<p><strong>지속적 개선</strong>:</p>
+<ul>
+<li>
+<p>피드백 루프 구축, 성능 모니터링, 자동 재학습 파이프라인 구축</p>
+</li>
+<li>
+<p>SageMaker Model Monitor, CloudWatch 활용</p>
+<p><strong>피드백 루프 구축</strong>:</p>
+<ul>
+<li>
+<p>ML 생애주기 전반에 걸쳐 이해관계자, 전문가, 최종 사용자의 피드백 수집</p>
+</li>
+<li>
+<p>성공/실패 사례, 운영 활동을 분석하여 개선 영역 파악</p>
+</li>
+<li>
+<p>데이터 증강, 알고리즘 변경, 학습 접근법 실험으로 최적 성과 달성</p>
+</li>
+<li>
+<p>발견 사항을 문서화하여 프로세스 반복적으로 개선</p>
+</li>
+</ul>
+<p><strong>성능 모니터링</strong>:</p>
+<ul>
+<li>
+<p>SageMaker Model Monitor를 사용하여 개념 drift와 모델 drift 지속 평가</p>
+</li>
+<li>
+<p>CloudWatch를 통해 이상 징후 탐지 시 신속한 조치 지원</p>
+</li>
+<li>
+<p>SageMaker Model Dashboard로 성능 지표와 과거 행동 추적</p>
+</li>
+</ul>
+<p><strong>자동 재학습 파이프라인</strong>:</p>
+<ul>
+<li>
+<p>SageMaker Model Monitor에서 이상 또는 drift 감지 시 EventBridge 규칙으로 자동 재학습 파이프라인 실행</p>
+</li>
+<li>
+<p>신속한 모델 반복 및 프로덕션 배포로 ML 솔루션의 최신성과 고성능 유지</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="detecting-drift-in-monitoring">Detecting Drift in Monitoring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#detecting-drift-in-monitoring" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>드리프트의 정의</strong>:</p>
+<ul>
+<li>
+<p><span class="text-highlight">**모델의 예측 성능이 시간에 따라 저하**</span>되는 현상</p>
+</li>
+<li>
+<p>사용자 행동, 시장 환경, 외부 요인 등의 <span class="text-highlight">**변화로 인해 발생**</span></p>
+</li>
+<li>
+<p><span class="text-highlight">**데이터 분포 변화로 모델 성능 저하**</span>(정확도, 정밀도, 재현율 등)</p>
+</li>
+<li>
+<p><span class="text-highlight">**편향된 예측을 초래하여 공정성 문제**</span> 발생 가능</p>
+</li>
+</ul>
+<h2 id="types-of-drift">Types of drift<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#types-of-drift" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ML 모델에서 모니터링 단계에서 발견될 수 있는 4가지 유형의 드리프트:</p>
+<ol>
+<li>
+<p><strong>데이터 품질 드리프트</strong>:</p>
+<ul>
+<li>
+<p>모델 학습 데이터와 실제 프로덕션 <span class="text-highlight">**데이터 분포의 차이**</span></p>
+</li>
+<li>
+<p>프로덕션 데이터의 <span class="text-highlight">**통계적 특성이 학습 데이터와 달라져 모델 정확성 저하**</span></p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-108.png" alt/></a></p>
+</li>
+<li>
+<p><strong>모델 품질 드리프트</strong>:</p>
+<ul>
+<li>
+<p>모델의 예측 결과와 <span class="text-highlight">**실제 정답 라벨 간의 차이**</span></p>
+</li>
+<li>
+<p><span class="text-highlight">**모델 성능이 시간에 따라 저하**</span>되는 현상</p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-1.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-1-35.png" alt/></a></p>
+</li>
+<li>
+<p><strong>편향 드리프트</strong>:</p>
+<ul>
+<li>
+<p>모델 <span class="text-highlight">**예측에 영향을 미치는 편향이 증가**</span>하는 현상</p>
+</li>
+<li>
+<p>학습 데이터의 <span class="text-highlight">**편향성, 중요 데이터 누락 등으로 인해 발생**</span></p>
+</li>
+<li>
+<p>실제 <span class="text-highlight">**데이터의 변화로 인해 새로운 편향이 도입**</span>되는 경우도 있음</p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-2.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-2-32.png" alt/></a></p>
+</li>
+<li>
+<p><strong>특성 기여도 (Feature Attribution) 드리프트</strong>:</p>
+<ul>
+<li>
+<p>모델 예측에 대한 <span class="text-highlight">**개별 특성의 기여도가 학습 기준과 달라지는 현상**</span></p>
+</li>
+<li>
+<p>개념 드리프트라고도 불림 (Concept drift)</p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-3.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-3-27.png" alt/></a></p>
+</li>
+</ol>
+<p>이러한 다양한 유형의 드리프트를 모니터링 단계에서 탐지하고 대응하는 것이 중요합니다.</p>
+<h2 id="monitoring-data-quality-and-model-performance"><strong>Monitoring data quality and model performance</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-data-quality-and-model-performance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ML 모델의 다양한 유형의 드리프트를 모니터링하는 방법:</p>
+<p><strong>데이터 품질 모니터링</strong>:</p>
+<ul>
+<li>
+<p>입력 데이터의 형식, 범위, 품질 검사 (<strong>data validation checks)</strong></p>
+</li>
+<li>
+<p>평균, 표준 편차, 결측값, 이상치 등의 통계 지표 계산 및 기준과 비교 (<strong>Calculate statistical metrics)</strong></p>
+</li>
+<li>
+<p>데이터 분포 변화 탐지(Kolmogorov-Smirnov 검정, 최대 평균 차이 등) (<strong>data drift detection)</strong></p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-4.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-4-25.png" alt/></a></p>
+<p><strong>모델 품질 모니터링</strong>:</p>
+<ul>
+<li>
+<p>테스트 데이터 또는 프로덕션 샘플에서 정확도, 정밀도, 재현율, F1-score, AUC-ROC 등의 평가 지표 계산 (<strong>relevant evaluation metrics)</strong></p>
+</li>
+<li>
+<p>신뢰 점수 임계값 설정, 불확실성 추정 기법 활용으로 신뢰할 수 없는 예측 식별 (<strong>confidence thresholding or uncertainty estimation)</strong></p>
+</li>
+<li>
+<p>다양한 데이터 세그먼트에 대한 성능 모니터링으로 편향 이슈 파악 (<strong>different subpopulations, low confidence or high uncertainty)</strong></p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-5.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-5-24.png" alt/></a></p>
+<p><strong>편향 드리프트 모니터링</strong>:</p>
+<ul>
+<li>
+<p>격차 지수, 기회 균등 차이, 평균 오즈 차이 등의 편향 지표 계산 (<strong>Calculate bias metrics)</strong></p>
+</li>
+<li>
+<p>기준값 또는 허용 임계값과 비교하여 편향 증가 탐지 (<strong>Compare the bias metrics with baseline values or acceptable thresholds)</strong></p>
+</li>
+<li>
+<p>역전파 디바이어싱, 균등 오즈 보정 등의 기법으로 편향 완화 (<strong>adversarial debiasing or calibrated equalized odds to mitigate bias)</strong></p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-6.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-6-23.png" alt/></a></p>
+<p><strong>특성 기여도 드리프트 모니터링</strong>:</p>
+<ul>
+<li>
+<p>SHAP 등의 기법으로 특성 중요도 점수 계산</p>
+</li>
+<li>
+<p>특성 중요도 통계 지표(평균, 표준 편차) 산출 및 기준과 비교</p>
+</li>
+<li>
+<p>특성 중요도 변화가 큰 것을 식별하여 데이터 또는 모델 드리프트 파악</p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-7.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-7-20.png" alt/></a></p>
+<p>이러한 모니터링 기법을 활용하여 다양한 유형의 드리프트를 조기에 감지하고 대응할 수 있습니다.</p>
+<h1 id="sagemaker-model-monitor">SageMaker Model Monitor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker-model-monitor" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>SageMaker Model Monitor란?</strong></p>
+<ul>
+<li>
+<p>프로덕션 환경의 <span class="text-highlight">**ML 모델 품질을 지속적으로 모니터링하는 완전 관리형 서비스**</span></p>
+</li>
+<li>
+<p><span class="text-highlight">**데이터와 모델 성능을 가시화**</span>하고, <span class="text-highlight">**문제 발생 시 알림 제공**</span></p>
+</li>
+</ul>
+<p><strong>동작 방식</strong>:</p>
+<p><strong>학습 데이터셋 기준 설정</strong>:</p>
+<ul>
+<li>
+<p>SageMaker Model Monitor는 모델 학습에 사용된 데이터셋을 기준으로 삼음</p>
+</li>
+<li>
+<p>데이터셋의 통계량(평균, 표준 편차 등)을 기준으로 설정</p>
+</li>
+</ul>
+<p><strong>신규 데이터와 비교</strong>:</p>
+<ul>
+<li>
+<p>프로덕션 환경에서 들어오는 새로운 데이터를 기준 데이터와 비교</p>
+</li>
+<li>
+<p>데이터 품질 이슈가 있는지 검사</p>
+</li>
+</ul>
+<p><strong>모니터링 레포트 생성</strong>:</p>
+<ul>
+<li>
+<p>데이터 품질 문제 발견 시 그 내용을 포함한 레포트를 생성</p>
+</li>
+<li>
+<p>레포트는 지정된 Amazon S3 버킷에 저장</p>
+</li>
+</ul>
+<p><strong>4가지 모니터링 유형</strong>:</p>
+<ol>
+<li>
+<p><strong>데이터 품질</strong> 모니터링: 입력 데이터 무결성 검사</p>
+</li>
+<li>
+<p><strong>모델 품질</strong> 모니터링: 모델 성능 지표의 변화 탐지</p>
+</li>
+<li>
+<p><strong>편향 드리프트</strong> 모니터링: 민감 속성에 따른 편향 증가 탐지</p>
+</li>
+<li>
+<p><strong>특성 기여도 드리프트</strong> 모니터링: 특성 중요도 변화 탐지</p>
+</li>
+</ol>
+<p>이를 통해 SageMaker Model Monitor는 데이터 품질, 모델 성능, 편향, 특성 기여도 등의 다양한 측면에서 ML 모델의 품질을 지속적으로 모니터링할 수 있습니다.</p>
+<h2 id="sagemaker-model-monitor의-주요-이점">SageMaker Model Monitor의 주요 이점:<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker-model-monitor의-주요-이점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p><strong>모델 성능 및 정확도 향상</strong>:</p>
+<ul>
+<li>
+<p>지속적인 데이터 품질 모니터링으로 가장 정확하고 신뢰할 수 있는 데이터 사용 보장</p>
+</li>
+<li>
+<p>이를 통해 모델 성능과 정확도 개선</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>데이터 품질 이슈의 조기 탐지</strong>:</p>
+<ul>
+<li>
+<p>모델 데이터에 문제가 생기면 신속히 식별</p>
+</li>
+<li>
+<p>성능 저하 발생 전에 문제를 해결할 수 있어 시간과 자원 절감</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>데이터 모니터링 운영 오버헤드 감소</strong>:</p>
+<ul>
+<li>
+<p>데이터 품질 모니터링을 자동화하여 수작업 부담 경감</p>
+</li>
+<li>
+<p>팀이 모델 개발 및 배포의 다른 핵심 영역에 집중할 수 있게 함</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>데이터 품질 표준 준수</strong>:</p>
+<ul>
+<li>
+<p>다양한 산업과 조직의 데이터 품질 표준 준수 지원</p>
+</li>
+<li>
+<p>규제 관련 문제 발생 위험 감소</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-8.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-8-18.png" alt/></a></p>
+<p><strong>실시간 모니터링</strong>:</p>
+<ul>
+<li>프로덕션에 배포된 ML 모델의 실시간 성능 모니터링 가능</li>
+</ul>
+<p><strong>다른 AWS 서비스와의 통합</strong>:</p>
+<ul>
+<li>
+<p>CloudWatch, CloudWatch Logs, EventBridge, CloudTrail 등과 통합되어 다양한 모니터링 및 감사 기능 제공</p>
+</li>
+<li>
+<p>SageMaker Clarify와 연계하여 편향 문제에 대한 가시성 개선</p>
+</li>
+</ul>
+<p><strong>SageMaker와의 긴밀한 연계</strong>:</p>
+<ul>
+<li>
+<p>SageMaker의 기능 중 하나로, 특성별 지표를 CloudWatch로 내보냄</p>
+</li>
+<li>
+<p>SageMaker 전반에 걸쳐 모니터링 및 감사 기능을 제공</p>
+</li>
+</ul>
+<p><strong>활용 시나리오</strong>:</p>
+<ol>
+<li>
+<p><strong>실시간 엔드포인트 모니터링</strong>: 실시간 엔드포인트에 배포된 모델의 지속적인 모니터링</p>
+</li>
+<li>
+<p><strong>배치 변환 작업 모니터링</strong>: 정기적 또는 예약된 배치 작업에 사용되는 모델 모니터링</p>
+</li>
+<li>
+<p><strong>온디맨드 모니터링 작업</strong>: 언제든 모델 성능을 평가할 수 있는 온디맨드 모니터링 작업</p>
+</li>
+</ol>
+<p><strong>모니터링 빈도</strong>:</p>
+<ul>
+<li>
+<p>실시간 엔드포인트: 연속 모니터링으로 데이터 품질 이슈의 신속한 탐지</p>
+</li>
+<li>
+<p>배치 작업: 데이터 가용성과 원하는 빈도에 따라 조정 가능</p>
+</li>
+</ul>
+<p><strong>모니터링 작업 스케줄링</strong>:</p>
+<ul>
+<li>
+<p>Cron 표현식을 사용하여 원하는 빈도로 작업 예약</p>
+</li>
+<li>
+<p>매시간, 매일 특정 시간, 요일, 월별 등의 일정 지원</p>
+</li>
+</ul>
+<p><strong>모니터링 작업 상태</strong>:</p>
+<ul>
+<li>
+<p>완료: 제약 위반 없음</p>
+</li>
+<li>
+<p>위반 있음: 제약 조건 위반 탐지</p>
+</li>
+<li>
+<p>실패: 권한, 인프라 문제로 인한 작업 실패</p>
+</li>
+</ul>
+<p><strong>모니터링 작업 출력</strong>:</p>
+<p><strong>통계(STATISTICS):</strong></p>
+<ul>
+<li>
+<p>기준(baseline) 데이터와 모니터링 대상 데이터에 대한 통계 지표</p>
+</li>
+<li>
+<p>레코드 수, 각 특성의 평균, 최대/최소값, 결측값 수 등</p>
+</li>
+</ul>
+<p><strong>위반 사항(VIOLATIONS):</strong></p>
+<ul>
+<li>
+<p>제약 조건(constraints.json 파일에 정의)을 데이터에 적용했을 때의 위반 내역</p>
+</li>
+<li>
+<p>위반 사항은 constraints_violations.json 파일에 출력</p>
+</li>
+</ul>
+<p><strong>지표(METRICS):</strong></p>
+<ul>
+<li>
+<p>SageMaker Model Monitor는 특성별 지표를 CloudWatch로 내보냄</p>
+</li>
+<li>
+<p>CloudWatch의 지표를 기반으로 대시보드와 경보를 설정할 수 있음</p>
+</li>
+<li>
+<p>SageMaker Studio에서도 요약 지표 확인 가능</p>
+</li>
+</ul>
+<p><strong>로그(LOGS):</strong></p>
+<ul>
+<li>
+<p>모니터링 작업의 시작 시간, 종료 시간, 상태 등의 정보가 포함된 로그</p>
+</li>
+<li>
+<p>CloudWatch 콘솔에서 로그 확인 가능</p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-9.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-9-18.png" alt/></a></p>
+<h1 id="monitoring-for-data-quality-drift">Monitoring for Data Quality Drift<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-for-data-quality-drift" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="how-works">How works<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-works" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p><strong>데이터 캡처 구성 설정</strong>:</p>
+<ul>
+<li>SageMaker 엔드포인트에서 데이터 캡처 구성 설정</li>
+</ul>
+</li>
+<li>
+<p><strong>기준선 생성</strong>:</p>
+<ul>
+<li>
+<p>SageMaker에 기준 제약 조건과 통계 지표 생성을 요청</p>
+</li>
+<li>
+<p>학습 데이터에 대한 기준선 생성</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>기준선 통계 및 제약 조건</strong>:</p>
+<ul>
+<li>기준선 실행 후 각 특성에 대한 통계 지표 출력</li>
+</ul>
+</li>
+<li>
+<p><strong>데이터 드리프트 모니터링 작업</strong>:</p>
+<ul>
+<li>
+<p>배포된 엔드포인트에서 새로운 추론 데이터 캡처</p>
+</li>
+<li>
+<p>기준선과 비교하여 위반 사항 또는 데이터 품질 이슈 보고</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 단계를 거쳐 SageMaker Model Monitor는 프로덕션 환경의 데이터 품질과 모델 성능을 지속적으로 모니터링할 수 있습니다.</p>
+<p>데이터 캡처 구성 설정과 기준선 생성으로 모니터링의 기준을 마련하고, 이후 실시간으로 드리프트를 탐지하여 보고하는 방식입니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-10.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-10-14.png" alt/></a></p>
+<h2 id="step-to-monitor">Step to monitor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-to-monitor" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-11.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-11-14.png" alt/></a></p>
+<p>SageMaker Model Monitor를 활용하여 데이터 품질 드리프트를 모니터링하는 단계는 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>엔드포인트의 데이터 캡처 활성화</strong>:</p>
+<ul>
+<li>DataCaptureConfig를 사용하여 <span class="text-highlight">**추론 요청/응답 데이터를 S3에 캡처**</span></li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> sagemaker.model_monitor </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> DataCaptureConfig</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">#Enable data capture. Percentage and S3 destination are optional.</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">data_capture_config </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function"> DataCaptureConfig(</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">     enable_capture</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">enable_capture,</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">     sampling_percentage</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">100</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">     destination_s3_uri</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">s3_capture_upload_path)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">predictor </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> model.deploy(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">initial_instancecount</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">instance_type</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;ml.m5.xlarge&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">,</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">     endpoint_name</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">endpoint_name,</span></span>
+<span data-line><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">      data_capture_config</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">data_capture_config )</span></span></code></pre></figure>
+</li>
+<li>
+<p><strong>기준선 생성</strong>:</p>
+<ul>
+<li>
+<p>SageMaker에 기준 제약 조건과 통계 지표 생성을 요청</p>
+</li>
+<li>
+<p>학습 데이터에 대한 기준선 생성</p>
+</li>
+<li>
+<p>필요에 따라 기준 제약 조건 수정</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>데이터 품질 모니터링 작업 정의 및 예약</strong>:</p>
+<ul>
+<li>
+<p>모니터링 작업의 스케줄 이름과 매개변수 정의</p>
+</li>
+<li>
+<p>기준선과 비교하여 실시간 트래픽 분석</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>CloudWatch와의 데이터 품질 모니터링 통합</strong>:</p>
+<ul>
+<li>SageMaker Model Monitor 컨테이너의 CloudWatch 지표 활용</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-12.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-12-12.png" alt/></a></p>
+<ul>
+<li>
+<p>데이터 품질 드리프트에 대한 CloudWatch 경보 구성</p>
+</li>
+<li>
+<p>경보 발생 시 모델 재학습 등의 자동 조치 실행</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>모니터링 결과 해석 및 분석</strong>:</p>
+<ul>
+<li>
+<p>제약 조건 위반 사항이 포함된 제약 위반 레포트 확인</p>
+</li>
+<li>
+<p>데이터 유형 검사, 데이터 완전성 검사, 기준선 드리프트 검사 등의 결과 분석</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 단계를 거쳐 SageMaker Model Monitor는 데이터 품질 이슈를 지속적으로 모니터링하고 관리할 수 있습니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-13.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-13-12.png" alt/></a></p>
+<h1 id="monitoring-for-model-quality-drift">Monitoring for Model Quality Drift<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-for-model-quality-drift" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="how-works-1">How works<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-works-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>유사점</strong>:</p>
+<ul>
+<li>
+<p>데이터 캡처, 기준선 작업, 기준 통계 및 제약 조건 설정 등의 프로세스가 유사</p>
+</li>
+<li>
+<p>추론 요청 및 예측 처리 방식도 동일</p>
+</li>
+</ul>
+<p><strong>차이점</strong>:</p>
+<ul>
+<li>
+<p><strong>사람의 개입(Human in the Loop)</strong>:</p>
+<ul>
+<li>
+<p>모델 품질 모니터링에서는 <span class="text-highlight">**Ground Truth 라벨의 확인이 필요**</span></p>
+</li>
+<li>
+<p>Ground Truth는 모델이 예측하거나 분류하고자 하는 진짜 라벨 또는 값</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Merge 작업</strong>:</p>
+<ul>
+<li>모니터링 작업에서 <span class="text-highlight">**예측과 Ground Truth 데이터를 병합하여 비교**</span></li>
+</ul>
+</li>
+</ul>
+<p>즉, 데이터 품질 모니터링과 달리 모델 품질 모니터링에서는 사람이 개입하여 Ground Truth 데이터를 제공하고, 이를 기반으로 모델의 예측과 비교하는 과정이 추가됩니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-14.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-14-11.png" alt/></a></p>
+<p>SageMaker Model Monitor를 활용한 모델 품질 모니터링 방식을 정리하면 다음과 같습니다:</p>
+<p><strong>개요</strong>:</p>
+<ul>
+<li>
+<p>모델 품질 모니터링 작업에는 다음과 같은 입력이 필요:</p>
+<ul>
+<li>
+<p>기준 데이터</p>
+</li>
+<li>
+<p>배포된 모델의 추론 입력 및 예측</p>
+</li>
+<li>
+<p>모델 입력에 대한 SageMaker Ground Truth 라벨</p>
+</li>
+</ul>
+</li>
+<li>
+<p>모델 예측과 Ground Truth 라벨을 비교하여 모델 품질을 평가</p>
+</li>
+</ul>
+<p><strong>모델 품질 지표</strong>:</p>
+<ul>
+<li>
+<p>문제 유형(이진 분류, 다중 분류, 회귀)에 따라 다른 지표 분석</p>
+</li>
+<li>
+<p>이진 분류의 경우 정확도, 재현율, 정밀도, F1 점수 등</p>
+</li>
+<li>
+<p>다중 분류와 회귀에도 유사한 핵심 지표 적용</p>
+</li>
+</ul>
+<p><strong>모델 품질 모니터링 고려 사항</strong>:</p>
+<ol>
+<li>
+<p><strong>SageMaker Ground Truth 데이터 수집</strong>:</p>
+<ul>
+<li>최신 라벨 데이터 확보로 정확한 평가 보장</li>
+</ul>
+</li>
+<li>
+<p><strong>고유 식별자</strong>:</p>
+<ul>
+<li>예측과 Ground Truth 라벨을 정확히 연결하기 위한 고유 식별자 필요</li>
+</ul>
+</li>
+<li>
+<p><strong>SageMaker Ground Truth 통합</strong>:</p>
+<ul>
+<li>라벨이 있는 데이터만 모니터링 작업에 사용하도록 시간 범위 조정</li>
+</ul>
+</li>
+</ol>
+<p>이러한 방식으로 SageMaker Model Monitor는 모델 품질을 지속적으로 모니터링하고 평가할 수 있습니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-15.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-15-11.png" alt/></a></p>
+<h1 id="monitoring-for-statistical-bias-drift-with-sagemaker-clarify">Monitoring for Statistical Bias Drift with SageMaker Clarify<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-for-statistical-bias-drift-with-sagemaker-clarify" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>SageMaker Clarify는 ML 모델의 편향성 탐지와 설명 가능성 향상을 지원하는 서비스입니다. SageMaker Model Monitor와 연계하여 다음과 같은 방식으로 활용할 수 있습니다:</p>
+<p><strong>통계적 편향 탐지</strong>:</p>
+<ul>
+<li>
+<p>모델이 시간이 지남에 따라 통계적 편향이 발생하는 사례 소개</p>
+</li>
+<li>
+<p>SageMaker Clarify가 모델의 편향성과 특성 기여도를 모니터링하는 역할 설명</p>
+</li>
+</ul>
+<p><strong>SageMaker Model Monitor와의 통합</strong>:</p>
+<ul>
+<li>
+<p>예측 데이터와 SageMaker Ground Truth 라벨을 병합하여 편향 메트릭 계산</p>
+</li>
+<li>
+<p>편향 드리프트 탐지, CloudWatch 지표 및 경보 생성</p>
+</li>
+</ul>
+<p>SageMaker Model Monitor가 SageMaker Clarify와 통합되어 편향 모니터링을 수행하는 과정은 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>예측 데이터와 SageMaker Ground Truth 라벨 병합</strong>:</p>
+<ul>
+<li>모델의 예측 결과와 실제 정답 라벨을 연결</li>
+</ul>
+</li>
+<li>
+<p><strong>기준선 통계 및 제약 조건 계산</strong>:</p>
+<ul>
+<li>기준이 되는 통계 지표와 제약 조건 산출</li>
+</ul>
+</li>
+<li>
+<p><strong>병합 데이터 검사 및 편향 지표/위반 사항 생성</strong>:</p>
+<ul>
+<li>병합된 데이터를 분석하여 편향 지표와 제약 조건 위반 사항 도출</li>
+</ul>
+</li>
+<li>
+<p><strong>CloudWatch 지표 내보내기와 트리거 설정</strong>:</p>
+<ul>
+<li>편향 드리프트 감지 결과를 CloudWatch 지표로 내보내어 경보 및 자동화 작업 실행</li>
+</ul>
+</li>
+<li>
+<p><strong>편향 드리프트 감지에 대한 보고 및 경보</strong>:</p>
+<ul>
+<li>편향 드리프트 탐지 내용을 보고서로 제공하고, 경보를 발생시킴</li>
+</ul>
+</li>
+<li>
+<p><strong>시각화 분석을 위한 보고서 제공</strong>:</p>
+<ul>
+<li>편향 분석 결과를 시각적으로 확인할 수 있는 보고서 생성</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 일련의 과정을 통해 SageMaker Model Monitor는 SageMaker Clarify와의 통합을 기반으로 ML 모델의 편향성을 지속적으로 모니터링하고 관리할 수 있습니다.</p>
+<p><strong>SageMaker Clarify 활용 방법</strong>:</p>
+<ol>
+<li>
+<p><strong>직접 사용</strong>:</p>
+<ul>
+<li>
+<p>SageMaker Clarify 처리 작업을 직접 구성하여 실행</p>
+</li>
+<li>
+<p>SageMaker Python SDK API를 사용하여 작업 입력, 출력, 리소스, 분석 구성 설정</p>
+</li>
+<li>
+<p>SageMaker Clarify 컨테이너 이미지 URI 검색 및 분석 구성 파일 생성 필요</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>SageMaker Model Monitor와 연계</strong>:</p>
+<ul>
+<li>
+<p>SageMaker Model Monitor가 SageMaker Clarify를 활용하여 데이터와 모델의 편향성 분석</p>
+</li>
+<li>
+<p>편향 드리프트 모니터링을 위한 기준선 생성 및 모니터링 작업 예약</p>
+</li>
+<li>
+<p>예측 데이터와 Ground Truth 라벨 병합, 편향 지표 계산, 제약 조건 위반 탐지</p>
+</li>
+<li>
+<p>편향 보고서 생성, CloudWatch 지표 및 경보 설정</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>SageMaker Data Wrangler와 연계</strong>:</p>
+<ul>
+<li>
+<p>SageMaker Data Wrangler에서 SageMaker Clarify 활용</p>
+</li>
+<li>
+<p>성별, 나이 등의 입력 특성을 지정하면 SageMaker Clarify가 편향 분석 수행</p>
+</li>
+<li>
+<p>데이터 준비 단계에서 잠재적 편향 탐지</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이를 통해 SageMaker Clarify는 SageMaker Model Monitor와 함께 ML 모델의 편향성을 지속적으로 모니터링하고 관리할 수 있습니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-16.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-16-11.png" alt/></a></p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-17.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-17-10.png" alt/></a></p>
+<h1 id="monitoring-for-feature-attribution-drift">Monitoring for Feature Attribution Drift<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-for-feature-attribution-drift" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>특성 기여도란?</strong>:</p>
+<ul>
+<li>
+<p>모델 예측 또는 출력에 대한 각 특성의 기여도나 중요도를 이해하고 정량화하는 것</p>
+</li>
+<li>
+<p>가장 관련성 높은 특성과 상대적 중요도를 식별</p>
+</li>
+</ul>
+<p><strong>특성 기여도 활용 사례</strong>:</p>
+<ul>
+<li>
+<p>날씨 예보: 기상학적 요인들의 기여도</p>
+</li>
+<li>
+<p>교통 흐름 예측: 역사적 데이터 또는 센서 데이터의 기여도</p>
+</li>
+<li>
+<p>신용 위험 평가: 금융 기록, 인구통계 요인의 기여도</p>
+</li>
+</ul>
+<p><strong>특성 기여도 드리프트 모니터링</strong>:</p>
+<ul>
+<li>
+<p>프로덕션 모델의 실제 데이터 분포 변화로 인한 특성 기여도 변화 탐지</p>
+</li>
+<li>
+<p>SageMaker Model Monitor와 SageMaker Clarify 통합으로 배포된 모델의 설명 가능성 모니터링</p>
+</li>
+</ul>
+<p><strong>모니터링 방법</strong>:</p>
+<ol>
+<li>
+<p>데이터 캡처 활성화</p>
+</li>
+<li>
+<p>기준선 설정</p>
+</li>
+<li>
+<p>모니터링 스케줄 또는 작업 생성</p>
+</li>
+</ol>
+<p><strong>SHAP(SHapley Additive exPlanations)</strong>:</p>
+<ul>
+<li>
+<p>협력 게임 이론의 Shapley 값에 기반한 게임 이론적 접근방식</p>
+</li>
+<li>
+<p>특정 예측에 대한 각 특성의 중요도 값(SHAP 값) 제공</p>
+</li>
+<li>
+<p>SageMaker Clarify가 이를 확장성 있게 구현</p>
+</li>
+</ul>
+<p>이를 통해 SageMaker Model Monitor는 특성 기여도 드리프트를 지속적으로 모니터링하고 관리할 수 있습니다.</p>
+<h2 id="how-works-2">How works<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-works-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>특성 기여도 드리프트 모니터링을 위한 단계는 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>데이터 캡처 구성</strong>:</p>
+<ul>
+<li>다른 모델 모니터링과 마찬가지로 엔드포인트에 대한 데이터 캡처 활성화</li>
+</ul>
+</li>
+<li>
+<p><strong>기준선 생성</strong>:</p>
+<ul>
+<li>
+<p>실시간 또는 배치 변환 추론 데이터 캡처를 구성</p>
+</li>
+<li>
+<p>민감 그룹, 예측 캡처 방식, 모델 및 사후 훈련 편향 지표 등을 지정</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>기준선 통계 및 제약 조건</strong>:</p>
+<ul>
+<li>기준선 작업 완료 후 SageMaker가 기준선 제약 조건과 설명 통계를 제안</li>
+</ul>
+</li>
+</ol>
+<p>이러한 과정을 거쳐 특성 기여도 드리프트에 대한 기준을 마련합니다. 이후 모니터링 작업을 통해 기준과 실제 데이터를 비교하여 드리프트를 탐지할 수 있습니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-18.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-18-10.png" alt/></a></p>
+<p>SageMaker Model Monitor의 주요 이점은 다음과 같습니다:</p>
+<ol>
+<li>
+<p><strong>기준선 생성 및 특성 통계 계산</strong>:</p>
+<ul>
+<li>모델 성능, 데이터 품질, 편향, 특성 기여도에 대한 기준선 생성</li>
+</ul>
+</li>
+<li>
+<p><strong>병합 데이터 검사 및 품질 지표/위반 사항 생성</strong>:</p>
+<ul>
+<li>
+<p>예측 데이터와 Ground Truth 데이터 병합</p>
+</li>
+<li>
+<p>KernelShap을 사용하여 특성 중요도 계산</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Amazon S3에 보고서 저장</strong>:</p>
+<ul>
+<li>
+<p>모니터링 결과를 보고서로 생성하여 S3에 저장</p>
+</li>
+<li>
+<p>추후 노트북에서 분석 가능</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>CloudWatch 지표 내보내기</strong>:</p>
+<ul>
+<li>모니터링 결과를 CloudWatch 지표로 내보내어 경보 및 자동화 작업 설정</li>
+</ul>
+</li>
+</ol>
+<p>이러한 자동화된 기능을 통해 SageMaker Model Monitor는 ML 모델의 지속적인 모니터링과 관리를 지원합니다.</p>
+<h1 id="monitoring-model-performance-using-ab-testing"><strong>Monitoring Model Performance Using A/B Testing</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-model-performance-using-ab-testing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="ab-testing">A/B Testing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ab-testing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>A/B 테스팅이란 다음과 같은 기법입니다: split testing, bucket testing</p>
+<ul>
+<li>
+<p>둘 이상의 모델의 <span class="text-highlight">**상대적인 성능을 동시에 평가**</span>하는 기법</p>
+</li>
+<li>
+<p><span class="text-highlight">**실제 데이터와 프로덕션 트래픽을 활용하여 평가**</span></p>
+</li>
+<li>
+<p>여러 모델을 병렬로 실행하고 제한된 프로덕션 트래픽에 노출하여 각 모델의 강점, 약점, 실제 성능 특성을 파악</p>
+</li>
+</ul>
+<p>이를 통해 현재 프로덕션 모델을 계속 사용할지, 새로운 모델을 배포할지에 대한 판단을 내릴 수 있습니다.</p>
+<p><span class="text-highlight">**SageMaker에서는 프로덕션 variant를 사용하여 동일한 엔드포인트에서 다양한 모델 또는 모델 버전을 테스트**</span>할 수 있습니다.</p>
+<p>프로덕션 variant는 엔드포인트 호출 시 요청을 어떻게 라우팅할지에 대한 유연성을 제공합니다. 각 프로덕션 variant는 ML 모델과 이를 호스팅하는 리소스를 식별합니다.</p>
+<h2 id="ab-테스팅의-주요-이점">A/B 테스팅의 주요 이점<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ab-테스팅의-주요-이점" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>실제 성능 평가</strong>:</p>
+<ul>
+<li>
+<p>실제 데이터와 사용자 상호 작용에 노출하여 <span class="text-highlight">**프로덕션 환경에서의 모델 성능을 더 정확하게 평가**</span></p>
+</li>
+<li>
+<p>오프라인 테스트에서는 발견되지 않았던 잠재적 문제나 편향 식별 가능</p>
+</li>
+</ul>
+<p><strong>데이터 기반 의사 결정</strong>:</p>
+<ul>
+<li>
+<p>실제 프로덕션 환경에서 다양한 모델을 비교하여 가장 우수한 성능을 내는 모델을 객관적으로 선별</p>
+</li>
+<li>
+<p>저성능 모델 배포로 인한 위험을 완화하고 최적의 성능과 사용자 경험 보장</p>
+</li>
+</ul>
+<p><strong>지속적 모니터링</strong>:</p>
+<ul>
+<li>
+<p>다양한 모델 간 지속적인 성능 비교를 통해 성능 저하나 개념 drift를 신속히 감지하고 대응</p>
+</li>
+<li>
+<p>잠재적 문제를 선제적으로 파악하여 애플리케이션과 사용자에 미치는 영향을 최소화</p>
+</li>
+</ul>
+<p><strong>위험 완화</strong>:</p>
+<ul>
+<li>새로운 모델을 점진적으로 일부 사용자 또는 데이터에 도입하여 광범위한 성능 문제나 부정적 영향 최소화</li>
+</ul>
+<p><strong>사용자 경험 최적화</strong>:</p>
+<ul>
+<li>사용자 경험이 핵심인 애플리케이션에서 최적의 모델 선별</li>
+</ul>
+<p><strong>통제 실험</strong>:</p>
+<ul>
+<li>
+<p>제한된 프로덕션 트래픽에 모델을 노출하여 변경 사항의 영향을 격리 및 분석</p>
+</li>
+<li>
+<p>더 나은 의사결정과 반복적 개선 지원</p>
+</li>
+</ul>
+<p><strong>모델 성능 향상</strong>:</p>
+<ul>
+<li>
+<p>실제 환경에서 직접 모델을 비교하여 최고의 성능을 내는 모델을 선택</p>
+</li>
+<li>
+<p>정확도, 효율성, 전반적인 모델 성능 개선</p>
+</li>
+</ul>
+<p><strong>신뢰도 향상</strong>:</p>
+<ul>
+<li>실제 프로덕션 환경에서 검증된 A/B 테스트 결과로 인한 이해관계자의 신뢰 및 확신 제고</li>
+</ul>
+<p>이처럼 A/B 테스팅은 ML 모델 배포와 모니터링 과정에서 다양한 이점을 제공합니다.</p>
+<h2 id="how-works-3">How works<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-works-3" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>A/B 테스팅을 활용한 프로덕션 모델 모니터링 과정을 정리하면 다음과 같습니다:</p>
+<p><strong>프로덕션 환경 업데이트</strong>:</p>
+<ul>
+<li>기존 프로덕션 모델 variant와 후보 replacement 모델 variant를 모두 지원하도록 업데이트</li>
+</ul>
+<p><strong>추론 요청 라우팅</strong>:</p>
+<ul>
+<li>
+<p>추론 요청을 무작위로 A(현재 프로덕션 variant) 또는 B(후보 variant)로 라우팅</p>
+</li>
+<li>
+<p>SageMaker의 다중 모델 엔드포인트 배포 기능을 직접 활용</p>
+</li>
+</ul>
+<p><strong>트래픽 분배</strong>:</p>
+<ul>
+<li>
+<p>모델 간 요청 분배 비율 지정 가능</p>
+</li>
+<li>
+<p>예: 프로덕션 모델 45%, variant1 10%, variant2 20%, variant3 15%, variant4 10%</p>
+</li>
+<li>
+<p>특정 모델의 새로운 기능 테스트를 위해 직접 호출 가능</p>
+</li>
+</ul>
+<p><strong>지표 내보내기</strong>:</p>
+<ul>
+<li>지연 시간, 호출 수, 각 variant에 대한 호출 분배 등의 CloudWatch 지표 제공</li>
+</ul>
+<p><strong>SageMaker Model Monitor 지표 활성화 및 구성</strong>:</p>
+<ul>
+<li>
+<p>모델 성능 지표는 기본적으로 내보내지 않으므로 별도 활성화 필요</p>
+</li>
+<li>
+<p>모니터링 유형에 따른 CloudWatch 지표 캡처 구성 필요</p>
+</li>
+</ul>
+<p>이를 통해 프로덕션 환경에서 다양한 모델 variant를 A/B 테스팅 방식으로 비교하고, 성능 지표와 모니터링 데이터를 활용할 수 있습니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-19.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-19-10.png" alt/></a></p>
+<h2 id="when-to-use">When to use<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-to-use" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>A/B 테스팅이 필요한 상황은 다음과 같습니다:</p>
+<p><strong>실제 데이터 분포와 학습 데이터 분포의 차이</strong>:</p>
+<ul>
+<li>실제 데이터 분포와 학습 데이터 분포의 차이로 인한 프로덕션 상의 성능 격차</li>
+</ul>
+<p><strong>의도하지 않은 결과 감지</strong>:</p>
+<ul>
+<li>오프라인 테스트에서 포착되지 않은 데이터 drift, 개념 drift, 예상치 못한 사용자 행동 등의 문제 식별</li>
+</ul>
+<p><strong>사용자 상호 작용 및 피드백</strong>:</p>
+<ul>
+<li>추천 시스템, 대화형 에이전트 등 사용자 피드백에 크게 의존하는 모델의 경우 오프라인 평가만으로는 한계</li>
+</ul>
+<p><strong>동적 환경</strong>:</p>
+<ul>
+<li>전자상거래, 금융 등 <span class="text-highlight">**빠르게 변화하는 환경에서 모델의 신속한 적응이 필요할 때**</span> A/B 테스팅이 유용</li>
+</ul>
+<p><strong>비즈니스 영향 평가</strong>:</p>
+<ul>
+<li>새로운 모델 배포 시 수익, 고객 만족도, 사용자 참여 등 <span class="text-highlight">**핵심 비즈니스 지표에 미치는 영향 파악**</span></li>
+</ul>
+<p><strong>고위험 의사결정</strong>:</p>
+<ul>
+<li>저성능 모델 배포로 인한 심각한 결과가 우려되는 의료, 금융 분야에서 추가적인 검증 필요</li>
+</ul>
+<p>이러한 다양한 상황에서 A/B 테스팅을 활용하면 ML 모델의 실제 성능을 평가하고 최적의 모델을 선택할 수 있습니다.</p>
+<h1 id="sagemaker-model-dashboard">SageMaker Model Dashboard<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker-model-dashboard" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-20.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-20-10.png" alt/></a></p>
+<p>ML 모델 모니터링 및 유지 관리의 과제:</p>
+<ul>
+<li>
+<p>모델 성능 추적, 드리프트 탐지, 문제 조사 등이 복잡하고 시간이 많이 소요되는 작업</p>
+</li>
+<li>
+<p>모델에 대한 파편화된 가시성, 비용이 많이 드는 사용자 정의 계측이 필요</p>
+</li>
+<li>
+<p>예상 동작에서의 편차를 모니터링하기 위한 경보 수동 구성이 오류 발생 가능성이 높음</p>
+</li>
+</ul>
+<p>이러한 과제를 해결하기 위해 SageMaker Model Dashboard가 도움을 줄 수 있습니다.</p>
+<p><strong>SageMaker Model Dashboard</strong>의 주요 기능:</p>
+<ol>
+<li>
+<p><strong>통합된 관점 제공</strong>:</p>
+<ul>
+<li>모든 모델에 대한 종합적인 모니터링 결과 표시</li>
+</ul>
+</li>
+<li>
+<p><strong>중앙 집중형 포털</strong>:</p>
+<ul>
+<li>
+<p>SageMaker 콘솔의 중앙 집중형 포털에서 모델 관리</p>
+</li>
+<li>
+<p>SageMaker Model Monitor로 구성된 모니터링 지표 확인</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>모델 카드, 워크플로 추적, 엔드포인트 성능 모니터링</strong>:</p>
+<ul>
+<li>다른 SageMaker 기능의 정보를 통합 표시</li>
+</ul>
+</li>
+<li>
+<p><strong>모델 거버넌스 솔루션 내장</strong>:</p>
+<ul>
+<li>모델 품질 보장 범위 검토</li>
+</ul>
+</li>
+<li>
+<p><strong>모니터링 결과 Amazon S3 저장 및 분석</strong>:</p>
+<ul>
+<li>CloudWatch 지표와 경보를 통한 자동 조치 트리거</li>
+</ul>
+</li>
+<li>
+<p><strong>다양한 시각화 도구와 통합</strong>:</p>
+<ul>
+<li>TensorBoard, Amazon QuickSight, Tableau 등</li>
+</ul>
+</li>
+</ol>
+<p>이를 통해 SageMaker Model Dashboard는 ML 모델 모니터링 및 유지 관리의 통합된 가시성과 관리 기능을 제공합니다.</p>
+<h2 id="dashboard-features">Dashboard features<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dashboard-features" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>SageMaker Model Dashboard의 주요 기능:</p>
+<ol>
+<li>
+<p><strong>경보</strong>:</p>
+<ul>
+<li>
+<p>SageMaker Model Monitor의 경보 정보를 표시</p>
+</li>
+<li>
+<p>각 경보의 상태(실행 중, 실패) 확인 가능</p>
+</li>
+<li>
+<p>경보 기준(평가 기간, 경보 발생 데이터 포인트 수) 수정 가능</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>위험도 등급</strong>:</p>
+<ul>
+<li>
+<p>모델 카드의 위험도 등급(낮음, 중간, 높음) 표시</p>
+</li>
+<li>
+<p>모델의 <span class="text-highlight">**비즈니스 영향력을 범주화**</span>한 지표</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>엔드포인트 성능</strong>:</p>
+<ul>
+<li>
+<p>실시간 추론을 위한 엔드포인트의 성능 지표 표시</p>
+</li>
+<li>
+<p>CPU 사용률, 메모리 사용률, 디스크 사용률 등</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>최근 배치 변환 작업</strong>:</p>
+<ul>
+<li>
+<p>모델이 사용된 최근 배치 변환 작업 정보 표시</p>
+</li>
+<li>
+<p>모델의 배치 추론 활용 현황 파악 가능</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>모델 계보 그래프</strong>:</p>
+<ul>
+<li>
+<p><span class="text-highlight">**데이터 준비부터 배포까지의 ML 워크플로우 시각화**</span></p>
+</li>
+<li>
+<p>각 단계의 메타데이터 정보 제공</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>모델 세부 사항 링크</strong>:</p>
+<ul>
+<li>
+<p>개별 모델 페이지로의 링크 제공</p>
+</li>
+<li>
+<p>모델 계보, 모델 카드, 경보 내역, 엔드포인트 성능 등 확인 가능</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이와 같은 통합된 대시보드 기능을 통해 ML 모델의 모니터링 및 유지 관리를 효율적으로 수행할 수 있습니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-21.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-21.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-21-10.png" alt/></a></p>
+<p>The model lineage graphs in the SageMaker Model Dashboard record the S3 URL of input data sources used for each job. This facilitates further analysis and verification of the data sources for compliance purposes. The graph also stores information about each step, helping you to recreate any step or track model and dataset lineage</p>
+<h1 id="choosing-your-monitoring-approach"><strong>Choosing Your Monitoring Approach</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#choosing-your-monitoring-approach" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>ML 모델 모니터링 전략을 수립할 때 고려해야 할 주요 요인들:</p>
+<p><strong>모델 복잡성</strong>:</p>
+<ul>
+<li>
+<p>단순한 모델과 복잡한 모델에 적합한 모니터링 접근법이 다를 수 있음</p>
+</li>
+<li>
+<p>복잡한 모델일수록 더 면밀한 모니터링이 필요할 수 있음</p>
+</li>
+</ul>
+<p><strong>애플리케이션 중요도</strong>:</p>
+<ul>
+<li>
+<p>모델이 사용되는 애플리케이션의 비즈니스적 중요성</p>
+</li>
+<li>
+<p>중요도가 높은 경우 더욱 엄격한 모니터링이 필요</p>
+</li>
+</ul>
+<p><strong>자원 가용성</strong>:</p>
+<ul>
+<li>
+<p>모니터링을 위한 컴퓨팅, 스토리지, 네트워크 자원의 여유</p>
+</li>
+<li>
+<p>자원이 제한적인 경우 효율적인 모니터링 전략이 필요</p>
+</li>
+</ul>
+<p><strong>규제 및 준수 요건</strong>:</p>
+<ul>
+<li>
+<p>특정 산업이나 지역의 규제 및 준수 요구사항</p>
+</li>
+<li>
+<p>이에 부합하는 모니터링 기능 및 거버넌스 체계가 필요</p>
+</li>
+</ul>
+<p><strong>모델 수명 주기</strong>:</p>
+<ul>
+<li>
+<p>모델 개발, 배포, 운영 단계별 모니터링 요구사항 차이</p>
+</li>
+<li>
+<p>단계에 따른 맞춤형 모니터링 접근법 필요</p>
+</li>
+</ul>
+<p><strong>이해관계자 요구사항</strong>:</p>
+<ul>
+<li>
+<p>비즈니스 부문, 운영 부문, 데이터 과학 부문 등 다양한 이해관계자의 니즈 고려</p>
+</li>
+<li>
+<p>통합적이고 균형 잡힌 모니터링 전략 수립</p>
+</li>
+</ul>
+<p>이러한 다양한 요인을 종합적으로 고려하여 상황에 맞는 최적의 ML 모델 모니터링 접근법을 설계해야 합니다.</p>
+<h2 id="influence-factors">Influence Factors<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#influence-factors" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>원활한 모델 모니터링을 위해 고려해야 할 주요 요인들을 정리하면 다음과 같습니다:</p>
+<p><strong>모델 복잡성</strong>:</p>
+<ul>
+<li>
+<p>기본적인 모델은 집중적인 모니터링이 필요하지 않을 수 있음</p>
+</li>
+<li>
+<p>복잡한 아키텍처의 모델은 더 정교한 모니터링 기법이 요구될 수 있음</p>
+</li>
+</ul>
+<p><strong>애플리케이션의 중요도</strong>:</p>
+<ul>
+<li>
+<p>금융, 의료, 안전 관련 애플리케이션과 같은 고위험 분야는 더 엄격한 모니터링과 신속한 대응 필요</p>
+</li>
+<li>
+<p>중요도가 낮은 애플리케이션은 상대적으로 완화된 모니터링 전략 가능</p>
+</li>
+</ul>
+<p><strong>모니터링 빈도와 실시간성</strong>:</p>
+<ul>
+<li>
+<p>실시간 모니터링은 즉각적인 영향이 우려되는 핵심 애플리케이션에 필요</p>
+</li>
+<li>
+<p>배치 모니터링은 비교적 중요도가 낮은 애플리케이션에서 적합</p>
+</li>
+</ul>
+<p>실제 사례 예시:</p>
+<ul>
+<li>자율 주행 자동차 시스템: 실시간, 고위험, 높은 상호 작용이 필요하므로 데이터 및 모델 중심의 포괄적이고 저지연 모니터링 접근법 필요</li>
+</ul>
+<p><strong>가용 자원</strong>:</p>
+<ul>
+<li>
+<p>인력, 계산 자원, 예산 등의 제약에 따라 모니터링 기법의 적용 수준이 달라질 수 있음</p>
+</li>
+<li>
+<p>여유 자원이 충분한 경우 집중적인 모니터링이 가능하지만, 제한된 자원에서는 간소화된 접근법이 필요</p>
+</li>
+</ul>
+<p>이와 같은 다양한 요인을 고려하여 상황에 맞는 최적의 ML 모델 모니터링 전략을 수립해야 합니다.</p>
+<h2 id="model-quality-monitoring">Model Quality Monitoring<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-quality-monitoring" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>SageMaker Model Monitor를 활용한 ML 모델 모니터링 단계:</p>
+<ol>
+<li>
+<p><strong>데이터 캡처 구성</strong>:</p>
+<ul>
+<li>SageMaker 엔드포인트에 대한 데이터 캡처 설정</li>
+</ul>
+</li>
+<li>
+<p><strong>모델 성능 모니터링</strong>:</p>
+<ul>
+<li>
+<p>정확도, 정밀도, 재현율, F1 점수 등의 핵심 성능 지표 추적</p>
+</li>
+<li>
+<p>허용 가능한 성능 임계값을 설정하고 위반 시 경보 발생</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>특성 기여도 모니터링</strong>:</p>
+<ul>
+<li>특성 중요도 변화를 해석 기법(SHAP 등)으로 모니터링</li>
+</ul>
+</li>
+<li>
+<p><strong>기준선 통계 및 제약 조건</strong>:</p>
+<ul>
+<li>
+<p>편향 지표를 계산하고 기준과 비교</p>
+</li>
+<li>
+<p>편향 완화 기법 구현</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이를 통해 SageMaker Model Monitor는 다양한 측면에서 ML 모델의 성능과 품질을 지속적으로 모니터링하고 관리할 수 있습니다.</p>
+<h2 id="additional-approaches-to-monitoring"><strong>Additional approaches to monitoring</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#additional-approaches-to-monitoring" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ML 모델 모니터링을 위한 추가적인 접근법 및 고려 사항:</p>
+<p><strong>추론 데이터 모니터링</strong>:</p>
+<ul>
+<li>
+<p>입력 데이터 검증: 형식, 범위, 제약 조건 준수 여부 확인</p>
+</li>
+<li>
+<p>출력 데이터 모니터링: 이상 패턴 감지</p>
+</li>
+<li>
+<p>추론 지연 시간 및 처리량: 성능 요구사항 충족 여부 확인</p>
+</li>
+</ul>
+<p><strong>애플리케이션 사용 패턴 모니터링</strong>:</p>
+<ul>
+<li>
+<p>사용자 행동 모니터링: 사용자 경험 개선 및 추가 안내 필요 영역 식별</p>
+</li>
+<li>
+<p>트래픽 패턴 모니터링: 용량 계획 및 확장 의사결정에 활용</p>
+</li>
+<li>
+<p>오류 및 예외 모니터링: 문제 진단 및 해결에 도움</p>
+</li>
+</ul>
+<p><strong>비용 최적화</strong>:</p>
+<ul>
+<li>
+<p>데이터 캡처 구성: 필요한 최소 샘플링, 요청/응답 캡처 범위 결정</p>
+</li>
+<li>
+<p>Savings Plans, 리소스 태깅, ROI 보고 등으로 비용 관리</p>
+</li>
+<li>
+<p>사용자 정의 규칙보다는 기본 제공 규칙 활용</p>
+</li>
+<li>
+<p>유휴 리소스 정지 등으로 비용 절감</p>
+</li>
+</ul>
+<p><strong>지속적인 개선</strong>:</p>
+<ul>
+<li>
+<p>모니터링 접근법의 효과성 지속 검토 및 개선</p>
+</li>
+<li>
+<p>최신 기술 동향 파악 및 적용</p>
+</li>
+<li>
+<p>요구사항 변화에 맞춰 모니터링 접근 조정</p>
+</li>
+</ul>
+<p>이와 같은 추가적인 고려 사항들을 반영하여 ML 모델 모니터링 전략을 지속적으로 최적화할 수 있습니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-22.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-22.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-22-8.png" alt/></a></p>
+<p>Batch monitoring of data quality, and model performance. In this scenario, the model is deployed in a batch processing pipeline that runs weekly, which means real-time monitoring is not necessary. Instead, a batch monitoring approach that focuses on data quality, and model performance would be most suitable. This approach aligns with the batch processing nature of the application and ensures the model’s predictions remain reliable over time.</p>
+<h1 id="automated-remediation-and-troubleshooting"><strong>Automated Remediation and Troubleshooting</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#automated-remediation-and-troubleshooting" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="automated-remediation-and-notifications">Automated Remediation and notifications<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#automated-remediation-and-notifications" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ML 모델 모니터링을 통한 자동화된 개선 및 알림 방법:</p>
+<ol>
+<li>
+<p><strong>이해관계자 알림</strong>:</p>
+<ul>
+<li>모니터링 지표가 비즈니스 KPI에 영향을 줄 때 관련자에게 알림 전송</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-23.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-23.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-23-8.png" alt/></a></p>
+</li>
+<li>
+<p><strong>데이터 분석 자동화</strong>:</p>
+<ul>
+<li>데이터 드리프트 또는 누락 감지 시 데이터 과학자에게 알림</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-24.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-24.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-24-8.png" alt/></a></p>
+</li>
+<li>
+<p><strong>모델 재학습 자동화</strong>:</p>
+<ul>
+<li>드리프트, 편향, 성능 저하 감지 시 자동으로 모델 재학습 구동</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-25.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-25.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-25-7.png" alt/></a></p>
+</li>
+<li>
+<p><strong>자동 수평 스케일링</strong>:</p>
+<ul>
+<li>
+<p>인프라 모니터링 지표(CPU/메모리/디스크 사용률 등)를 토대로 자동 수평 스케일링 실행</p>
+</li>
+<li>
+<p>비용 절감을 위해 활용</p>
+</li>
+</ul>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-26.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-26.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-26-7.png" alt/></a></p>
+</li>
+</ol>
+<p>이러한 자동화된 조치를 통해 ML 모델의 신뢰성과 안정성을 높일 수 있습니다. 모니터링을 통해 탐지된 문제를 신속하게 해결하고, 리소스 활용도를 최적화할 수 있습니다.</p>
+<h2 id="model-retraining-strategies">Model Retraining Strategies<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-retraining-strategies" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ML 모델 재학습 전략을 정리하면 다음과 같습니다:</p>
+<p><strong>재학습 접근법</strong>:</p>
+<ol>
+<li>
+<p><strong>이벤트 기반 재학습</strong>:</p>
+<ul>
+<li>
+<p>CloudWatch 경보를 통해 드리프트 탐지 시 자동 재학습 파이프라인 실행</p>
+</li>
+<li>
+<p>비용과 시간이 많이 소요되므로 필요한 경우에만 재학습 수행</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>온디맨드 재학습</strong>:</p>
+<ul>
+<li>
+<p>시장 환경 변화 등 특정 비즈니스 이벤트에 대응하여 재학습 수행</p>
+</li>
+<li>
+<p>데이터 과학자와 이해관계자에게 자동 알림 전송</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>예약 재학습</strong>:</p>
+<ul>
+<li>
+<p>계절성 변화나 추론 데이터, 모델 성능 패턴을 토대로 주기적 재학습 예약</p>
+</li>
+<li>
+<p>정적 환경의 ML 모델에 적합</p>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>동적 환경의 적응형 재학습</strong>:</p>
+<ul>
+<li>
+<p>경쟁 가격, 금리 변동 등 급변하는 요인에 의존하는 모델</p>
+</li>
+<li>
+<p>비즈니스 지표 대비 성능 저하 시 자동으로 재학습 실행</p>
+</li>
+<li>
+<p>예를 들어 평균 예측이 10% 감소하면 개념 drift 발생 가능성</p>
+</li>
+</ul>
+<p>이러한 다양한 재학습 전략을 통해 모델의 지속적인 최신성과 정확성을 유지할 수 있습니다.</p>
+<h2 id="monitoring-for-automated-retraining">Monitoring for automated retraining<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#monitoring-for-automated-retraining" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-27.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-27.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-27-7.png" alt/></a></p>
+<h2 id="manual-intervention">Manual Intervention<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#manual-intervention" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>자동화된 개선 조치만으로는 해결되지 않는 상황에서의 수동 개입 필요성:</p>
+<p><strong>데이터 변화 관찰</strong>:</p>
+<ul>
+<li>
+<p>예상치 못한 데이터 변화 또는 누락 발생</p>
+</li>
+<li>
+<p>데이터 특성 변화(예: 카메라 업그레이드로 인한 영상 데이터 변화)</p>
+</li>
+<li>
+<p>데이터 과학자의 분석과 개입이 필요</p>
+</li>
+</ul>
+<p><strong>규제 및 준수 문제</strong>:</p>
+<ul>
+<li>
+<p>데이터나 모델이 규제 요건에 부합하는지 수동 검토 필요</p>
+</li>
+<li>
+<p>의료, 금융 등 규제 산업의 경우 추론 결과 검토</p>
+</li>
+</ul>
+<p><strong>비즈니스 변화 및 문제 영역 변화</strong>:</p>
+<ul>
+<li>
+<p>이자율 변동, 대출 정책 변경 등 비즈니스 변화에 대한 대응 필요</p>
+</li>
+<li>
+<p>모델 예측 결과가 잘못 사용되고 있는지 확인</p>
+</li>
+</ul>
+<p><strong>KPI 및 문제 정의 재평가</strong>:</p>
+<ul>
+<li>
+<p>비즈니스 목표 달성을 위한 올바른 KPI 측정 여부 검토</p>
+</li>
+<li>
+<p>변화된 비즈니스에 맞는 ML 솔루션인지 재평가</p>
+</li>
+</ul>
+<p>이와 같이 모니터링을 통해 탐지된 문제 중 일부는 데이터 과학자, 비즈니스 관계자 등의 수동 개입과 분석이 필요합니다. 자동화된 조치와 수동 개입을 적절히 조합하여 ML 모델의 안정적 운영을 달성할 수 있습니다.</p>
+<h2 id="tools-for-troubleshooting-issues">Tools for troubleshooting issues<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tools-for-troubleshooting-issues" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ML 모델 및 데이터 문제 해결을 위해 활용할 수 있는 주요 도구:</p>
+<ol>
+<li>
+<p><strong>모델 레지스트리, 모델 카드, 계보 추적</strong>:</p>
+<ul>
+<li>
+<p><strong>모델 레지스트리</strong>: 프로덕션 모델 카탈로그와 버전 관리</p>
+</li>
+<li>
+<p><strong>모델 카드</strong>: 모델 문서화, 학습 데이터, 평가 결과, 비즈니스 정보 등 중앙 관리</p>
+</li>
+<li>
+<p><strong>계보 추적</strong>: <span class="text-highlight">**아티팩트 생성 파이프라인과 이벤트 추적, 근본 원인 분석**</span></p>
+</li>
+</ul>
+</li>
+</ol>
+<p>이를 통해 다음과 같은 이점을 얻을 수 있습니다:</p>
+<ul>
+<li>
+<p>모델 이력 관리 및 문서화로 문제 해결 지원</p>
+</li>
+<li>
+<p>문제의 근본 원인 파악과 지속적인 영향 파악</p>
+</li>
+<li>
+<p>문제가 감지되지 않은 경우에도 선제적 조치 가능</p>
+</li>
+</ul>
+<p>이러한 도구들은 ML 모델과 데이터 관련 문제를 효과적으로 해결하고 미리 대응하는 데 도움이 됩니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-28.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-28.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-28-7.png" alt/></a></p>
+<h2 id="sagemaker-linear-tracking">SageMaker Linear Tracking<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sagemaker-linear-tracking" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-29.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-29.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-29-6.png" alt/></a></p>
+<p>SageMaker Lineage Tracking을 활용한 문제 해결 방법:</p>
+<p><strong>문제 상황 예시</strong>:</p>
+<ul>
+<li>
+<p>학습 작업 실행, 모델 레지스트리 등록, 엔드포인트 배포의 워크플로우</p>
+</li>
+<li>
+<p>문제가 있는 데이터셋 발견, 해당 데이터로 학습된 모델이 배포된 엔드포인트 롤백 필요</p>
+</li>
+</ul>
+<p><strong>SageMaker Lineage Tracking 활용</strong>:</p>
+<ol>
+<li>
+<p>문제가 있는 모델의 학습에 사용된 데이터셋 식별</p>
+</li>
+<li>
+<p>해당 모델이 배포된 엔드포인트 또는 애플리케이션 파악</p>
+</li>
+</ol>
+<p>이를 통해 다음과 같은 효과를 얻을 수 있습니다:</p>
+<ul>
+<li>
+<p>근본 원인 조사와 잠재적 영향 파악</p>
+</li>
+<li>
+<p>문제 해결을 위한 집중적이고 효과적인 대응 가능</p>
+</li>
+</ul>
+<p>즉, SageMaker Lineage Tracking은 ML 워크플로우의 추적 정보를 제공하여 문제의 근본 원인을 파악하고 필요한 조치를 취할 수 있게 합니다.</p>
+<p>이는 모니터링 시스템에서 발견된 문제를 신속히 해결하고, 관련 영향을 최소화하는 데 도움이 됩니다.</p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-30.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-30.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-30-5.png" alt/></a></p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-31.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-31.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-31-5.png" alt/></a></p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-32.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-32.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-32-5.png" alt/></a></p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-33.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-33.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-33-5.png" alt/></a></p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-34.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-34.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-34-5.png" alt/></a></p>
+<p><a href="../../../4-1-monitor-model-performance-and-data-quality/image-35.png" class="internal internal-link" data-slug="4-1-monitor-model-performance-and-data-quality/image-35.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/image-35-5.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1501" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#41-monitor-model-performance-and-data-quality" data-for="41-monitor-model-performance-and-data-quality">4.1 Monitor Model Performance and Data Quality</a></li><li class="depth-0"><a href="#overview" data-for="overview">Overview</a></li><li class="depth-0"><a href="#monitoring-ml-solutions" data-for="monitoring-ml-solutions">Monitoring ML Solutions</a></li><li class="depth-0"><a href="#ml-lens" data-for="ml-lens">ML Lens</a></li><li class="depth-0"><a href="#detecting-drift-in-monitoring" data-for="detecting-drift-in-monitoring">Detecting Drift in Monitoring</a></li><li class="depth-1"><a href="#types-of-drift" data-for="types-of-drift">Types of drift</a></li><li class="depth-1"><a href="#monitoring-data-quality-and-model-performance" data-for="monitoring-data-quality-and-model-performance">Monitoring data quality and model performance</a></li><li class="depth-0"><a href="#sagemaker-model-monitor" data-for="sagemaker-model-monitor">SageMaker Model Monitor</a></li><li class="depth-1"><a href="#sagemaker-model-monitor의-주요-이점" data-for="sagemaker-model-monitor의-주요-이점">SageMaker Model Monitor의 주요 이점:</a></li><li class="depth-0"><a href="#monitoring-for-data-quality-drift" data-for="monitoring-for-data-quality-drift">Monitoring for Data Quality Drift</a></li><li class="depth-1"><a href="#how-works" data-for="how-works">How works</a></li><li class="depth-1"><a href="#step-to-monitor" data-for="step-to-monitor">Step to monitor</a></li><li class="depth-0"><a href="#monitoring-for-model-quality-drift" data-for="monitoring-for-model-quality-drift">Monitoring for Model Quality Drift</a></li><li class="depth-1"><a href="#how-works-1" data-for="how-works-1">How works</a></li><li class="depth-0"><a href="#monitoring-for-statistical-bias-drift-with-sagemaker-clarify" data-for="monitoring-for-statistical-bias-drift-with-sagemaker-clarify">Monitoring for Statistical Bias Drift with SageMaker Clarify</a></li><li class="depth-0"><a href="#monitoring-for-feature-attribution-drift" data-for="monitoring-for-feature-attribution-drift">Monitoring for Feature Attribution Drift</a></li><li class="depth-1"><a href="#how-works-2" data-for="how-works-2">How works</a></li><li class="depth-0"><a href="#monitoring-model-performance-using-ab-testing" data-for="monitoring-model-performance-using-ab-testing">Monitoring Model Performance Using A/B Testing</a></li><li class="depth-1"><a href="#ab-testing" data-for="ab-testing">A/B Testing</a></li><li class="depth-1"><a href="#ab-테스팅의-주요-이점" data-for="ab-테스팅의-주요-이점">A/B 테스팅의 주요 이점</a></li><li class="depth-1"><a href="#how-works-3" data-for="how-works-3">How works</a></li><li class="depth-1"><a href="#when-to-use" data-for="when-to-use">When to use</a></li><li class="depth-0"><a href="#sagemaker-model-dashboard" data-for="sagemaker-model-dashboard">SageMaker Model Dashboard</a></li><li class="depth-1"><a href="#dashboard-features" data-for="dashboard-features">Dashboard features</a></li><li class="depth-0"><a href="#choosing-your-monitoring-approach" data-for="choosing-your-monitoring-approach">Choosing Your Monitoring Approach</a></li><li class="depth-1"><a href="#influence-factors" data-for="influence-factors">Influence Factors</a></li><li class="depth-1"><a href="#model-quality-monitoring" data-for="model-quality-monitoring">Model Quality Monitoring</a></li><li class="depth-1"><a href="#additional-approaches-to-monitoring" data-for="additional-approaches-to-monitoring">Additional approaches to monitoring</a></li><li class="depth-0"><a href="#automated-remediation-and-troubleshooting" data-for="automated-remediation-and-troubleshooting">Automated Remediation and Troubleshooting</a></li><li class="depth-1"><a href="#automated-remediation-and-notifications" data-for="automated-remediation-and-notifications">Automated Remediation and notifications</a></li><li class="depth-1"><a href="#model-retraining-strategies" data-for="model-retraining-strategies">Model Retraining Strategies</a></li><li class="depth-1"><a href="#monitoring-for-automated-retraining" data-for="monitoring-for-automated-retraining">Monitoring for automated retraining</a></li><li class="depth-1"><a href="#manual-intervention" data-for="manual-intervention">Manual Intervention</a></li><li class="depth-1"><a href="#tools-for-troubleshooting-issues" data-for="tools-for-troubleshooting-issues">Tools for troubleshooting issues</a></li><li class="depth-1"><a href="#sagemaker-linear-tracking" data-for="sagemaker-linear-tracking">SageMaker Linear Tracking</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

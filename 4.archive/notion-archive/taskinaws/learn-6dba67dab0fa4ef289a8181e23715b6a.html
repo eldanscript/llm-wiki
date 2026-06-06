@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Learn 6dba67dab0fa4ef289a8181e23715b6a | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Learn 6dba67dab0fa4ef289a8181e23715b6a | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Learn 6dba67dab0fa4ef289a8181e23715b6a | LLM Wiki"/><meta name="twitter:description" content="🌌 Learn 1.2 What is ML? 1.3 Components of ML 2.1 Five."/><meta property="og:description" content="🌌 Learn 1.2 What is ML? 1.3 Components of ML 2.1 Five."/><meta property="og:image:alt" content="🌌 Learn 1.2 What is ML? 1.3 Components of ML 2.1 Five."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/learn-6dba67dab0fa4ef289a8181e23715b6a"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/taskinaws/learn-6dba67dab0fa4ef289a8181e23715b6a"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🌌 Learn 1.2 What is ML? 1.3 Components of ML 2.1 Five."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/taskinaws/learn-6dba67dab0fa4ef289a8181e23715b6a" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2319" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2319" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/taskinaws/">TaskInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Learn 6dba67dab0fa4ef289a8181e23715b6a</a></div></nav><h1 class="article-title">Learn 6dba67dab0fa4ef289a8181e23715b6a</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:20.500Z">2026년 6월 06일</time><span>13 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🌌</p>
+<h1 id="learn">Learn<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#learn" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="#0ae13691-135e-4725-860d-c66f5bdc3482" class="internal internal-link alias">1.2 What is ML?</a></p>
+<p><a href="#bd12dea8-b130-43d4-acee-f9e26ebdc021" class="internal internal-link alias">1.3 Components of ML</a></p>
+<p><a href="#9af3594e-a658-4be3-b314-35e823fccd92" class="internal internal-link alias">2.1 Five. ML Steps</a></p>
+<p><a href="#03691189-a75a-4329-a19f-418e4c31ddc7" class="internal internal-link alias">2.2 Define the problem</a></p>
+<p><a href="#8a301342-b409-417d-9d9a-2e102c122af7" class="internal internal-link alias">2.3 Build a dataset</a></p>
+<p><a href="#88717df3-71af-43c9-bcf2-7a2a2e7e697d" class="internal internal-link alias">2.4 Model training</a></p>
+<p><a href="#5c32a1eb-d225-420a-8846-ab8bcbaf647d" class="internal internal-link alias">Linear model</a></p>
+<p><a href="#6b91e839-acbf-4e82-b600-29a0d366c24e" class="internal internal-link alias">Tree-based model</a></p>
+<p><a href="#fd9024c0-2d92-47d8-9475-17274a4b0436" class="internal internal-link alias">Deep learning model</a></p>
+<p><a href="#8bd59b66-07ff-40e4-ad16-f8106b35d6f8" class="internal internal-link alias">2.5 Model evaluation</a></p>
+<p><a href="#7b19f329-1ecf-46d1-934c-d08c0e7b7a83" class="internal internal-link alias">Log Loss</a></p>
+<p><a href="#69ab7be0-bcd2-4039-b136-6500c2f17fc0" class="internal internal-link alias">2.6 Model Inference</a></p>
+<p><a href="#f39711c6-0c8d-4245-ab42-290a696af702" class="internal internal-link alias">2.7 Summary</a></p>
+<p><a href="#9b65b580-e93f-48fe-ae4a-905dbf9d27a0" class="internal internal-link alias">3.1 Example - Linear Model</a></p>
+<p><a href="#2d53e0e0-d33f-426e-877c-1e939e244302" class="internal internal-link alias">Problem define</a></p>
+<p><a href="#833cf3c5-f891-44a0-8fcd-b725adbf7cc7" class="internal internal-link alias">Build the dataset</a></p>
+<p><a href="#d7be1af0-4c16-45e7-a099-9a4d5e82b819" class="internal internal-link alias">Model Training</a></p>
+<p><a href="#297a44b3-94e8-45c9-ba7e-24ac82fdad4f" class="internal internal-link alias">Model Evalutaion</a></p>
+<p><a href="#420d7ac4-8c2f-4603-ba52-9fdae69f54e3" class="internal internal-link alias">Model Inference</a></p>
+<p><a href="#441275a0-f76a-4379-bc64-6f7393b80e03" class="internal internal-link alias">3.2 Example - ML Model</a></p>
+<p><a href="#8187119c-4c61-4ee1-9c90-808d701a310a" class="internal internal-link alias">Problem Define</a></p>
+<p><a href="#c616b47e-0506-4f06-b7ff-93c9ee6f40a8" class="internal internal-link alias">Build the dataset</a></p>
+<p><a href="#014ff166-862a-45de-85c8-36785d9f8009" class="internal internal-link alias">Model Training</a></p>
+<p><a href="#1d1d0523-c415-4a51-95b1-047302762ffe" class="internal internal-link alias">Model Evaluation</a></p>
+<p><a href="#febcfdc9-0845-40f3-9ff0-802ae8e93fb8" class="internal internal-link alias">Model Inference</a></p>
+<p><a href="#c7dbf153-2ae8-423b-b535-8bdee5814e19" class="internal internal-link alias">Terminology</a></p>
+<p><a href="#fbd4c40a-2962-46a0-a8c5-35c655120970" class="internal internal-link alias">3.3 Example - ML Model</a></p>
+<p><a href="#34d0a499-9f4a-4dcc-b33a-7fb5dc318ab5" class="internal internal-link alias">Problem Define</a></p>
+<p><a href="#4ffeb098-b31b-4f3e-b387-8233eb59c527" class="internal internal-link alias">Build the dataset</a></p>
+<p><a href="#53722d6e-8ffe-42e6-82dd-c57602171758" class="internal internal-link alias">Model Training</a></p>
+<p><a href="#ceebb775-dee0-492b-9f76-5ca8fa731538" class="internal internal-link alias">Model Evaluation</a></p>
+<p><a href="#cf3e2316-ed0e-4bae-9638-d6ec502ce667" class="internal internal-link alias">Model Inference</a></p>
+<p><a href="#6080a87b-a26c-4813-bb46-32b1cf7b6766" class="internal internal-link alias">Summary</a></p>
+<p><a href="#08a94a0c-6226-4022-9ffa-072810dcc0d8" class="internal internal-link alias">Evaluation Metric</a></p>
+<h1 id="12-what-is-ml">1.2 What is ML?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12-what-is-ml" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>AI - Perform activities using human-like intelligence</p>
+</li>
+<li>
+<p>ML - automatically learn and improve from experience without explictly programmed to do so</p>
+</li>
+</ul>
+<p><a href="../../../learn/untitled.png" class="internal internal-link" data-slug="learn/untitled.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1.png" alt/></a></p>
+<p><a href="../../../learn/untitled-1.png" class="internal internal-link" data-slug="learn/untitled-1.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-1-1.png" alt/></a></p>
+<p><a href="../../../learn/untitled-2.png" class="internal internal-link" data-slug="learn/untitled-2.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-2.png" alt/></a></p>
+<p><a href="../../../learn/untitled-3.png" class="internal internal-link" data-slug="learn/untitled-3.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-3.png" alt/></a></p>
+<p><a href="../../../learn/untitled-4.png" class="internal internal-link" data-slug="learn/untitled-4.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-4.png" alt/></a></p>
+<p><a href="../../../learn/untitled-5.png" class="internal internal-link" data-slug="learn/untitled-5.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-5.png" alt/></a></p>
+<ul>
+<li>
+<p><strong>supervised learning</strong>,</p>
+<ul>
+<li>every training sample from the dataset has a corresponding label or output value associated with it. As a result, the algorithm learns to predict labels or output values.</li>
+</ul>
+</li>
+<li>
+<p><strong>reinforcement learning</strong>,</p>
+<ul>
+<li>the algorithm figures out which actions to take in a situation to maximize a reward (in the form of a number) on the way to reaching a specific goal.</li>
+</ul>
+</li>
+<li>
+<p><strong>unsupervised learning</strong>,</p>
+<ul>
+<li>there are no labels for the training data. A machine learning algorithm tries to learn the underlying patterns or distributions that govern the data</li>
+</ul>
+</li>
+</ul>
+<h1 id="13-components-of-ml">1.3 Components of ML<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#13-components-of-ml" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p><em>A model</em></p>
+<ul>
+<li>
+<p><em>an extremely generic program (or block of code)</em></p>
+</li>
+<li>
+<p><em>made specific by the data used to train it</em></p>
+</li>
+<li>
+<p><em>used to solve different problems</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-6.png" class="internal internal-link" data-slug="learn/untitled-6.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-6.png" alt/></a></p>
+<p><a href="../../../learn/untitled-7.png" class="internal internal-link" data-slug="learn/untitled-7.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-7.png" alt/></a></p>
+<ul>
+<li>
+<p>Training Algorithm</p>
+<ul>
+<li>
+<p><strong>Think about the changes that need to be made</strong></p>
+<ul>
+<li>uses the model to process data and then compares the results against some end goal</li>
+</ul>
+</li>
+<li>
+<p><strong>Make those changes</strong></p>
+<ul>
+<li>gently nudges specific parts of the model in a direction that brings the model closer to achieving the goal</li>
+</ul>
+</li>
+<li>
+<p><strong>Repeat</strong></p>
+<ul>
+<li>
+<p>iterating these steps over and over</p>
+</li>
+<li>
+<p>until you determine that you’re close enough and then you can stop</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Inference Algorithm</p>
+<ul>
+<li>the trained model is used to generate predictions</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-8.png" class="internal internal-link" data-slug="learn/untitled-8.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-8.png" alt/></a></p>
+<p><a href="../../../learn/untitled-9.png" class="internal internal-link" data-slug="learn/untitled-9.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-9.png" alt/></a></p>
+<h1 id="21-five-ml-steps">2.1 Five. ML Steps<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#21-five-ml-steps" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p><strong>Clustering</strong> is an <span class="text-highlight">**unsupervised learning task**</span> that helps to determine if there are any naturally occurring groupings in the data.</p>
+</li>
+<li>
+<p><strong>Discrete</strong> is a term taken from <span class="text-highlight">**statistics referring to an outcome**</span> that takes only a finite number of values (such as days of the week).</p>
+</li>
+<li>
+<p>A <strong>categorical label</strong> has a discrete set of possible values, such as “is a cat” and “is not a cat.”</p>
+</li>
+<li>
+<p>A <strong>continuous (regression) label</strong> does not have a discrete set of possible values, which means there are potentially an unlimited number of possibilities.</p>
+</li>
+<li>
+<p>A <strong>label</strong> refers to data that already contains the solution.</p>
+</li>
+<li>
+<p>Using <strong>unlabeled data</strong> means you don’t need to provide the model with any kind of label or solution while the model is being trained</p>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-10.png" class="internal internal-link" data-slug="learn/untitled-10.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-10.png" alt/></a></p>
+<h1 id="22-define-the-problem">2.2 Define the problem<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#22-define-the-problem" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Define a very specific task</p>
+<ul>
+<li>
+<p><strong>Question:</strong> Does adding a $1.00 charge for sprinkles on a hot fudge sundae increase the sales of hot fudge sundaes?</p>
+</li>
+<li>
+<p><strong>Question:</strong> Does adding a $0.50 charge for organic flavors in your snow cone increase the sales of snow cones?</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Identify the used ML task to solve this problem</p>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-11.png" class="internal internal-link" data-slug="learn/untitled-11.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-11.png" alt/></a></p>
+<p><a href="../../../learn/untitled-12.png" class="internal internal-link" data-slug="learn/untitled-12.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-12.png" alt/></a></p>
+<ul>
+<li>
+<p>Supervised Tasks</p>
+<ul>
+<li>
+<p>using labeled data</p>
+</li>
+<li>
+<p>labeled to refer to data that already contains the solutions, called <em>labels</em></p>
+</li>
+<li>
+<p>Categorical label</p>
+<ul>
+<li>discrete set of possible values</li>
+</ul>
+</li>
+<li>
+<p>Continous (Regression) label</p>
+<ul>
+<li>does not have a discrete set of possible values, often working with numerical data</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Unsupervised Tasks</p>
+<ul>
+<li>
+<p>using <em>unlabeled data</em></p>
+</li>
+<li>
+<p>don’t need to provide the model with any kind of label or solution while the model is being trained</p>
+</li>
+<li>
+<p><span class="text-highlight">**Clustering**</span> helps to determine if there are any naturally occurring groupings in the data</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-13.png" class="internal internal-link" data-slug="learn/untitled-13.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-13.png" alt/></a></p>
+<p><a href="../../../learn/untitled-14.png" class="internal internal-link" data-slug="learn/untitled-14.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-14.png" alt/></a></p>
+<h1 id="23-build-a-dataset">2.3 Build a dataset<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#23-build-a-dataset" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../learn/untitled-15.png" class="internal internal-link" data-slug="learn/untitled-15.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-15.png" alt/></a></p>
+<p><a href="../../../learn/untitled-16.png" class="internal internal-link" data-slug="learn/untitled-16.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-16.png" alt/></a></p>
+<p><a href="../../../learn/untitled-17.png" class="internal internal-link" data-slug="learn/untitled-17.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-17.png" alt/></a></p>
+<p><a href="../../../learn/untitled-18.png" class="internal internal-link" data-slug="learn/untitled-18.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-18.png" alt/></a></p>
+<p><a href="../../../learn/untitled-19.png" class="internal internal-link" data-slug="learn/untitled-19.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-19.png" alt/></a></p>
+<ul>
+<li>
+<p>check that your data is in line with the underlying assumptions of the machine learning model that you chose</p>
+</li>
+<li>
+<p><strong>Impute</strong> (대체) is a common term referring to different statistical tools that can be used to calculate missing values from your dataset.</p>
+</li>
+<li>
+<p><strong>Outliers</strong> are data points that are significantly different from other date in the same sample.</p>
+</li>
+</ul>
+<h1 id="24-model-training">2.4 Model training<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#24-model-training" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>💡</p>
+<p>The model training algorithm iteratively updates a model’s parameters to minimize some loss function.</p>
+<ul>
+<li>
+<p>Split Dataset</p>
+<ul>
+<li>
+<p><em>Training dataset</em>: The data on which the model will be trained. Most of your data will be here. Many developers estimate about 80%.</p>
+</li>
+<li>
+<p><em>Test dataset</em>: The data withheld from the model during training, which is used to test how well your model will generalize to new data</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Model parameter</p>
+<ul>
+<li>settings or configurations that the training algorithm can update to change how the model behaves</li>
+</ul>
+</li>
+<li>
+<p>Loss function</p>
+<ul>
+<li>codify the model’s distance from a goal</li>
+</ul>
+</li>
+<li>
+<p>Training process</p>
+<ul>
+<li>
+<p>Feed the training data into the model</p>
+</li>
+<li>
+<p>Compute the loss function on the results</p>
+</li>
+<li>
+<p>Update the model parameters in a direction that reduces loss</p>
+</li>
+<li>
+<p>continue to cycle until you reach a predefined stop condition - training time, the number of training cycles, or an even more intelligent or application-aware mechanism</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-20.png" class="internal internal-link" data-slug="learn/untitled-20.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-20.png" alt/></a></p>
+<p><a href="../../../learn/untitled-21.png" class="internal internal-link" data-slug="learn/untitled-21.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-21.png" alt/></a></p>
+<p><a href="../../../learn/untitled-22.png" class="internal internal-link" data-slug="learn/untitled-22.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-22.png" alt/></a></p>
+<ul>
+<li>
+<p>Use machine learning frameworks that already have working implementations of models and model training algorithms</p>
+</li>
+<li>
+<p>Use a process called model selection to determine which model or models to use.</p>
+</li>
+<li>
+<p><em>Hyperparameters</em> are settings on the model</p>
+<ul>
+<li>
+<p>not changed during training</p>
+</li>
+<li>
+<p>can affect how quickly or how reliably the model trains</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Be prepared to iterate</p>
+</li>
+<li>
+<p>Foster a habit of trying new things, measuring success, and comparing results across iterations</p>
+</li>
+</ul>
+<h3 id="linear-model">Linear model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#linear-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Most common model</p>
+</li>
+<li>
+<p>Simply describe the relationship between a set of input numbers and a set of output numbers through a linear function</p>
+<ul>
+<li>y = mx + b</li>
+</ul>
+</li>
+<li>
+<p>Fast to train and give a great baseline against which to compare more complex model</p>
+</li>
+</ul>
+<h3 id="tree-based-model">Tree-based model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tree-based-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>2nd most common model</p>
+</li>
+<li>
+<p>Learn to categorize or regress by building an extremely large structure of nested if/else blocks, splitting the world into different regions at each if/else block</p>
+</li>
+<li>
+<p>Training determeines exactly where these splits happen and what value is assigned at each leaf region</p>
+</li>
+<li>
+<p>XGBoost is commonly used as an off-the-shelf implementation</p>
+</li>
+<li>
+<p>Get a baseline before moving on to more complex models</p>
+</li>
+</ul>
+<h3 id="deep-learning-model">Deep learning model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deep-learning-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Conceptual model of how the human brain functions - composed of collections of neurons</p>
+</li>
+<li>
+<p>The training process finds values for each weight</p>
+</li>
+<li>
+<p>FFNN (Feed Forward Neural Network)</p>
+<ul>
+<li>
+<p>Most straightforward way of structuring a NN</p>
+</li>
+<li>
+<p>Structures neurons in a series of layers - each neuron containing weights to all neurons in the previous layer</p>
+</li>
+</ul>
+</li>
+<li>
+<p>CNN (Convolutional Neural Networks)</p>
+<ul>
+<li>
+<p>Represent nested (중첩) filters over grid-organized data</p>
+</li>
+<li>
+<p>Most commonly used for processing images</p>
+</li>
+</ul>
+</li>
+<li>
+<p>RNN/LSTN (Recurrent Neural Networks / Long Short-Term Memory)</p>
+<ul>
+<li>
+<p>Effectively represent for loops in traditional computing, collecting state while iterating over some object</p>
+</li>
+<li>
+<p>Processing sequences of data</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Transformer</p>
+<ul>
+<li>
+<p>More modern replacement for RNN/LSTMs</p>
+</li>
+<li>
+<p>Enables training over large datasets involving sequences of data</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ML Library</p>
+<ul>
+<li>
+<p>Classical model (linear, tree-based) : scikit-learn</p>
+</li>
+<li>
+<p>Deep Learning : MXNet, TensorFlow, PyTorch</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="25-model-evaluation">2.5 Model evaluation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#25-model-evaluation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>Model Accuracy : the fraction of predictions (예측 비율) a model gets right</li>
+</ul>
+<p><a href="../../../learn/untitled-23.png" class="internal internal-link" data-slug="learn/untitled-23.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-23.png" alt/></a></p>
+<p><a href="../../../learn/untitled-24.png" class="internal internal-link" data-slug="learn/untitled-24.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-24.png" alt/></a></p>
+<p><a href="../../../learn/untitled-25.png" class="internal internal-link" data-slug="learn/untitled-25.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-25.png" alt/></a></p>
+<h3 id="log-loss">Log Loss<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#log-loss" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Log loss could be used to understand your <span class="text-highlight">**model's uncertainty**</span> about a given prediction</p>
+</li>
+<li>
+<p>Log loss enables to measure how strongly the model believes that its prediction is accurate</p>
+</li>
+<li>
+<p>trying to predict how likely a customer is to buy either a jacket or t-shirt</p>
+<ul>
+<li>
+<p>In an instance, model predicts with 5% certainty that customer will buy a t-shirt</p>
+</li>
+<li>
+<p>In another instance, model predicts with 80% certainty that customer will buy a t-shirt</p>
+</li>
+<li>
+<p>In above, model predicts that a customer will buy a t-shirt, but the model’s certainty about that prediction can change</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="26-model-inference">2.6 Model Inference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#26-model-inference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Once you have trained your model, have evaluated its effectiveness, and are satisfied with the results, you’re ready to generate predictions on real-world problems using unseen data in the field.</p>
+</li>
+<li>
+<p>In machine learning, this process is often called <strong>inference</strong>.</p>
+</li>
+<li>
+<p>Even after you deploy your model, you’re always monitoring to make sure your model is producing the kinds of results that you expect.</p>
+</li>
+<li>
+<p>There may be times where you reinvestigate the data, modify some of the parameters in your model training algorithm, or even change the model type used for training.</p>
+</li>
+</ul>
+<h1 id="27-summary">2.7 Summary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#27-summary" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>
+<p><em>Solving problems using machine learning is an</em> <strong><em>evolving and iterative process</em></strong><em>.</em></p>
+</li>
+<li>
+<p><em>To solve a problem successfully in machine learning</em> <strong><em>finding high quality data is essential</em></strong><em>.</em></p>
+</li>
+<li>
+<p><em>To evaluate models, you often</em> <strong><em>use statistical metrics</em></strong><em>. The metrics you choose are tailored to a specific use case.</em></p>
+</li>
+</ol>
+<h1 id="31-example---linear-model">3.1 Example - Linear Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#31-example---linear-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>💡</p>
+<p>Predicting home prices - <em>estimate the price of a house based on lot size or the number of bedrooms</em></p>
+<h2 id="problem-define">Problem define<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#problem-define" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Access the sale prices for recently sold homes or have them appraised → this is a supervised learning task</p>
+</li>
+<li>
+<p>Want to predict a continuous numeric value → a regression task</p>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-26.png" class="internal internal-link" data-slug="learn/untitled-26.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-26.png" alt/></a></p>
+<h2 id="build-the-dataset">Build the dataset<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#build-the-dataset" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../learn/untitled-27.png" class="internal internal-link" data-slug="learn/untitled-27.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-27.png" alt/></a></p>
+<p><a href="../../../learn/untitled-28.png" class="internal internal-link" data-slug="learn/untitled-28.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-28.png" alt/></a></p>
+<ul>
+<li>
+<p>Data Collection</p>
+</li>
+<li>
+<p>Data exploration (탐색)</p>
+<ul>
+<li>
+<p>confirm that all of your data is numerical because most machine learning models operate on sequences of numbers</p>
+</li>
+<li>
+<p>If there is textual data, you need to transform it into numbers</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data cleaning</p>
+<ul>
+<li>
+<p>missing information or outliers, such as the 10-room mansion</p>
+</li>
+<li>
+<p>use several techniques to handle outliers, but you can also just remove them from your dataset</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data Visualization</p>
+<ul>
+<li>want to look for trends in your data</li>
+</ul>
+</li>
+<li>
+<p>Data Split</p>
+<ul>
+<li>The standard practice is to put 80% of your dataset into a training dataset and 20% into a test dataset</li>
+</ul>
+</li>
+</ul>
+<h2 id="model-training">Model Training<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-training" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>As you see in the preceding chart, when lot size increases, home values increase too. This relationship is simple enough that a linear model can be used to represent this relationship → Linear Model selection</p>
+</li>
+<li>
+<p>Using a Python scikit-learn library</p>
+</li>
+</ul>
+<h2 id="model-evalutaion">Model Evalutaion<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-evalutaion" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>One of the most common evaluation metrics in a regression scenario is called <em>root mean square</em> or <em>RMS</em></p>
+</li>
+<li>
+<p>RMS can be thought of roughly as the “average error” across your test dataset</p>
+</li>
+<li>
+<p>Many machine learning engineers manually count how many predictions were off by a threshold (for example, $50,000 in this house pricing problem) to help determine and verify the model’s accuracy</p>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-29.png" class="internal internal-link" data-slug="learn/untitled-29.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-29.png" alt/></a></p>
+<h2 id="model-inference">Model Inference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-inference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../learn/untitled-30.png" class="internal internal-link" data-slug="learn/untitled-30.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-30.png" alt/></a></p>
+<ul>
+<li>
+<p>seeing how well it predicts with new data not seen during model training</p>
+</li>
+<li>
+<p><strong>Hyperplane:</strong> A mathematical term for a surface that contains more than two planes</p>
+</li>
+</ul>
+<h1 id="32-example---ml-model">3.2 Example - ML Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#32-example---ml-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>💡</p>
+<p>how the machine learning process can be applied to an unsupervised machine learning task that uses book description text to identify different micro-genres</p>
+<h2 id="problem-define-1">Problem Define<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#problem-define-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../learn/untitled-31.png" class="internal internal-link" data-slug="learn/untitled-31.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-31.png" alt/></a></p>
+<ul>
+<li>
+<p>believe that a trend called “micro-genres” exists, and you have confidence that you can use the book description text to identify these micro-genres</p>
+</li>
+<li>
+<p>unsupervised machine learning technique → clustering</p>
+</li>
+</ul>
+<h2 id="build-the-dataset-1">Build the dataset<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#build-the-dataset-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Data cleaning and exploration</p>
+<ul>
+<li>
+<p>capitalization and verb tense will not matter</p>
+</li>
+<li>
+<p>remove capitals and convert all verbs to the same tense</p>
+</li>
+<li>
+<p>remove punctuation and words you don’t think have useful meaning</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data preprocessing</p>
+<ul>
+<li>
+<p>Vectorization : process whereby words are converted into numbers</p>
+</li>
+<li>
+<p>transform this book description text into what is called a <em>bag of words representation → understandable by machine learning models</em></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-32.png" class="internal internal-link" data-slug="learn/untitled-32.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-32.png" alt/></a></p>
+<h2 id="model-training-1">Model Training<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-training-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>pick a common cluster-finding model called <em>k-means</em></p>
+</li>
+<li>
+<p>a model parameter, <em>k</em>, to be equal to how many clusters the model will try to find in your dataset</p>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-33.png" class="internal internal-link" data-slug="learn/untitled-33.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-33.png" alt/></a></p>
+<p><a href="../../../learn/untitled-34.png" class="internal internal-link" data-slug="learn/untitled-34.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-34.png" alt/></a></p>
+<h2 id="model-evaluation">Model Evaluation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-evaluation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>In this use case, the <em>silhouette coefficient</em> is a good choice</p>
+</li>
+<li>
+<p>This metric describes how well your data was clustered by the model</p>
+</li>
+<li>
+<p>plot the silhouette coefficient : k = 19</p>
+</li>
+<li>
+<p>if every cluster is going to be as cohesive as this, but you decide to use this model to see if you can find anything interesting about which to write an article</p>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-35.png" class="internal internal-link" data-slug="learn/untitled-35.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-35.png" alt/></a></p>
+<p><a href="../../../learn/untitled-36.png" class="internal internal-link" data-slug="learn/untitled-36.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-36.png" alt/></a></p>
+<h2 id="model-inference-1">Model Inference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-inference-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../learn/untitled-37.png" class="internal internal-link" data-slug="learn/untitled-37.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-37.png" alt/></a></p>
+<p><a href="../../../learn/untitled-38.png" class="internal internal-link" data-slug="learn/untitled-38.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-38.png" alt/></a></p>
+<h2 id="terminology">Terminology<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#terminology" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><strong>Bag of words (BOW)</strong></p>
+<ul>
+<li>
+<p>A technique used to extract features from text.</p>
+</li>
+<li>
+<p>It counts how many times a word appears in a document (corpus), and then transforms that information into a dataset.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Data vectorization</strong></p>
+<ul>
+<li>A process that converts non-numeric data into a numerical format so that it can be used by a machine learning model.</li>
+</ul>
+</li>
+<li>
+<p><strong>Silhouette coefficients</strong></p>
+<ul>
+<li>
+<p>A score from -1 to 1 describing the clusters found during modeling.</p>
+</li>
+<li>
+<p>A score near zero indicates overlapping clusters</p>
+</li>
+<li>
+<p>scores less than zero indicate data points assigned to incorrect clusters</p>
+</li>
+<li>
+<p>A score approaching 1 indicates successful identification of discrete non-overlapping clusters.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Stop words (불용어)</strong></p>
+<ul>
+<li>
+<p>A list of words removed by natural language processing tools when building your dataset.</p>
+</li>
+<li>
+<p>There is no single universal list of stop words used by all-natural language processing tools</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="33-example---ml-model">3.3 Example - ML Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#33-example---ml-model" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>💡</p>
+<p>offers specialized on-site janitorial services - classical methods like linear models and k-means to solve machine learning tasks</p>
+<h2 id="problem-define-2">Problem Define<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#problem-define-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>predict if each image belongs to one of the following classes</p>
+<ul>
+<li>Contains spill or Does not contain spill</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-39.png" class="internal internal-link" data-slug="learn/untitled-39.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-39.png" alt/></a></p>
+<p><a href="../../../learn/untitled-40.png" class="internal internal-link" data-slug="learn/untitled-40.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-40.png" alt/></a></p>
+<h2 id="build-the-dataset-2">Build the dataset<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#build-the-dataset-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Data Collecting</p>
+<ul>
+<li>
+<p>Using historical data, as well as safely staged spills</p>
+</li>
+<li>
+<p>quickly build a collection of images</p>
+<ul>
+<li>
+<p>contain both spills and non-spills</p>
+</li>
+<li>
+<p>in multiple lighting conditions and environments</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Data Exploring and Cleaning</p>
+<ul>
+<li>
+<p>Go through all of the photos to ensure that the spill is clearly in the shot</p>
+</li>
+<li>
+<p>Python tools and other techniques available to improve image quality</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Data Verctorization</p>
+<ul>
+<li>require numerical data → Python tools can help you do this automatically</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-41.png" class="internal internal-link" data-slug="learn/untitled-41.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-41.png" alt/></a></p>
+<h2 id="model-training-2">Model Training<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-training-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../learn/untitled-42.png" class="internal internal-link" data-slug="learn/untitled-42.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-42.png" alt/></a></p>
+<ul>
+<li>CNN</li>
+</ul>
+<h2 id="model-evaluation-1">Model Evaluation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-evaluation-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>accuracy might not be the best evaluation mechanism</p>
+</li>
+<li>
+<p>The model will see the <em>does not contain spill’</em> class almost all the time → any model that just predicts <em>no spill</em> most of the time will seem pretty accurate</p>
+</li>
+<li>
+<p>What you really care about is an evaluation tool that <strong>rarely misses a real spill</strong></p>
+</li>
+<li>
+<p><em>precision (정밀도) : Of all predictions of a spill, how many were right?</em></p>
+</li>
+<li>
+<p><em>recall (재현률) : Of all actual spills, how many did we detect?</em></p>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-43.png" class="internal internal-link" data-slug="learn/untitled-43.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-43.png" alt/></a></p>
+<h2 id="model-inference-2">Model Inference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-inference-2" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../learn/untitled-44.png" class="internal internal-link" data-slug="learn/untitled-44.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-44.png" alt/></a></p>
+<ul>
+<li>
+<p>The model can be deployed on a system that enables you to run machine learning workloads such as AWS Panorama</p>
+</li>
+<li>
+<p>when the class <em>contains spill’</em> is detected, a simple paging system could alert the team to respond</p>
+</li>
+</ul>
+<h2 id="summary">Summary<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#summary" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>
+<p>For some applications of machine learning, you need to use more complicated techniques to solve the problem. While<br/>
+modern neural networks are a powerful tool, don’t forget their cost in terms of being easily explained.</p>
+</li>
+<li>
+<p>High quality data once again was very important to the success of this application, to the point where <strong>even staging some fake data was required</strong>. Once again, the process of data vectorization was required so it was important to convert the images into numbers so that they could be used by the neural network.</p>
+</li>
+<li>
+<p>During model inference you continued to inspect the predictions for accuracy. It is especially important in this case because you created some fake data to use when training your model.</p>
+</li>
+</ol>
+<h2 id="evaluation-metric">Evaluation Metric<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#evaluation-metric" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Accuracy</p>
+</li>
+<li>
+<p>Confusion matrix</p>
+<ul>
+<li>
+<p>False positive rate (Type I error) : 틀렸음 → 아닌것을 맞다고 함 (Predict True, Actual False / 거짓 양성)</p>
+</li>
+<li>
+<p>False negative rate (Type II error) : 틀렸음 → 맞는것을 틀리다고 함 (Predict False, Actual True / 거짓 음성)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>F1 score</p>
+<ul>
+<li>
+<p>Precession (정밀도) : 맞다고 한 것 중 실제 맞는 것은 얼마인가 (Actual True / Predict True)</p>
+</li>
+<li>
+<p>Recall (재현율) : 실제 맞는것을 얼마나 맞다고 했는가 (Predict True / Actual True)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ROC Curve</p>
+</li>
+<li>
+<p>Log loss</p>
+<ul>
+<li>
+<p>Model’s uncertainity</p>
+</li>
+<li>
+<p>Score using Binary Cross Entropy</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Negative predictive value</p>
+</li>
+<li>
+<p>Sensitivity → Recall (TPR, 민감도)</p>
+<ul>
+<li>질병에 양성 진단, 실제도 양성</li>
+</ul>
+</li>
+<li>
+<p>Specificity → True negative rate (TNR, 특이도)</p>
+<ul>
+<li>질병에 음성 진단, 실제도 음성</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../learn/untitled-45.png" class="internal internal-link" data-slug="learn/untitled-45.png"><img src="../../../4.archive/notion-archive/taskinaws/attachments/untitled-45.png" alt/></a></p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1763" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#learn" data-for="learn">Learn</a></li><li class="depth-0"><a href="#12-what-is-ml" data-for="12-what-is-ml">1.2 What is ML?</a></li><li class="depth-0"><a href="#13-components-of-ml" data-for="13-components-of-ml">1.3 Components of ML</a></li><li class="depth-0"><a href="#21-five-ml-steps" data-for="21-five-ml-steps">2.1 Five. ML Steps</a></li><li class="depth-0"><a href="#22-define-the-problem" data-for="22-define-the-problem">2.2 Define the problem</a></li><li class="depth-0"><a href="#23-build-a-dataset" data-for="23-build-a-dataset">2.3 Build a dataset</a></li><li class="depth-0"><a href="#24-model-training" data-for="24-model-training">2.4 Model training</a></li><li class="depth-2"><a href="#linear-model" data-for="linear-model">Linear model</a></li><li class="depth-2"><a href="#tree-based-model" data-for="tree-based-model">Tree-based model</a></li><li class="depth-2"><a href="#deep-learning-model" data-for="deep-learning-model">Deep learning model</a></li><li class="depth-0"><a href="#25-model-evaluation" data-for="25-model-evaluation">2.5 Model evaluation</a></li><li class="depth-2"><a href="#log-loss" data-for="log-loss">Log Loss</a></li><li class="depth-0"><a href="#26-model-inference" data-for="26-model-inference">2.6 Model Inference</a></li><li class="depth-0"><a href="#27-summary" data-for="27-summary">2.7 Summary</a></li><li class="depth-0"><a href="#31-example---linear-model" data-for="31-example---linear-model">3.1 Example - Linear Model</a></li><li class="depth-1"><a href="#problem-define" data-for="problem-define">Problem define</a></li><li class="depth-1"><a href="#build-the-dataset" data-for="build-the-dataset">Build the dataset</a></li><li class="depth-1"><a href="#model-training" data-for="model-training">Model Training</a></li><li class="depth-1"><a href="#model-evalutaion" data-for="model-evalutaion">Model Evalutaion</a></li><li class="depth-1"><a href="#model-inference" data-for="model-inference">Model Inference</a></li><li class="depth-0"><a href="#32-example---ml-model" data-for="32-example---ml-model">3.2 Example - ML Model</a></li><li class="depth-1"><a href="#problem-define-1" data-for="problem-define-1">Problem Define</a></li><li class="depth-1"><a href="#build-the-dataset-1" data-for="build-the-dataset-1">Build the dataset</a></li><li class="depth-1"><a href="#model-training-1" data-for="model-training-1">Model Training</a></li><li class="depth-1"><a href="#model-evaluation" data-for="model-evaluation">Model Evaluation</a></li><li class="depth-1"><a href="#model-inference-1" data-for="model-inference-1">Model Inference</a></li><li class="depth-1"><a href="#terminology" data-for="terminology">Terminology</a></li><li class="depth-0"><a href="#33-example---ml-model" data-for="33-example---ml-model">3.3 Example - ML Model</a></li><li class="depth-1"><a href="#problem-define-2" data-for="problem-define-2">Problem Define</a></li><li class="depth-1"><a href="#build-the-dataset-2" data-for="build-the-dataset-2">Build the dataset</a></li><li class="depth-1"><a href="#model-training-2" data-for="model-training-2">Model Training</a></li><li class="depth-1"><a href="#model-evaluation-1" data-for="model-evaluation-1">Model Evaluation</a></li><li class="depth-1"><a href="#model-inference-2" data-for="model-inference-2">Model Inference</a></li><li class="depth-1"><a href="#summary" data-for="summary">Summary</a></li><li class="depth-1"><a href="#evaluation-metric" data-for="evaluation-metric">Evaluation Metric</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

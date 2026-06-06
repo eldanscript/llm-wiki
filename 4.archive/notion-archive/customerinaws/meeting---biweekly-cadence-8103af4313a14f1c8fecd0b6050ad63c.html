@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Meeting - BiWeekly Cadence 8103af4313a14f1c8fecd0b6050ad63c | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Meeting - BiWeekly Cadence 8103af4313a14f1c8fecd0b6050ad63c | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Meeting - BiWeekly Cadence 8103af4313a14f1c8fecd0b6050ad63c | LLM Wiki"/><meta name="twitter:description" content="🚟 Meeting - BiWeekly Cadence @August 26, 2025 AI Dubbing Text Input → LLM Translation → Voice Generation Input RAG 텍스트 기반의 음성 모델 검색 n8n prototyping 진행 Vector DB : QDrant (AWS Marketplace) Text : Aurora PostgreSQL (pgvector) LLM : Claude 4.0 /Nova Pro / Light LLM Region Migration US-West2 로 진행 중 La..."/><meta property="og:description" content="🚟 Meeting - BiWeekly Cadence @August 26, 2025 AI Dubbing Text Input → LLM Translation → Voice Generation Input RAG 텍스트 기반의 음성 모델 검색 n8n prototyping 진행 Vector DB : QDrant (AWS Marketplace) Text : Aurora PostgreSQL (pgvector) LLM : Claude 4.0 /Nova Pro / Light LLM Region Migration US-West2 로 진행 중 La..."/><meta property="og:image:alt" content="🚟 Meeting - BiWeekly Cadence @August 26, 2025 AI Dubbing Text Input → LLM Translation → Voice Generation Input RAG 텍스트 기반의 음성 모델 검색 n8n prototyping 진행 Vector DB : QDrant (AWS Marketplace) Text : Aurora PostgreSQL (pgvector) LLM : Claude 4.0 /Nova Pro / Light LLM Region Migration US-West2 로 진행 중 La..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/meeting---biweekly-cadence-8103af4313a14f1c8fecd0b6050ad63c"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/customerinaws/meeting---biweekly-cadence-8103af4313a14f1c8fecd0b6050ad63c"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🚟 Meeting - BiWeekly Cadence @August 26, 2025 AI Dubbing Text Input → LLM Translation → Voice Generation Input RAG 텍스트 기반의 음성 모델 검색 n8n prototyping 진행 Vector DB : QDrant (AWS Marketplace) Text : Aurora PostgreSQL (pgvector) LLM : Claude 4.0 /Nova Pro / Light LLM Region Migration US-West2 로 진행 중 La..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/customerinaws/meeting---biweekly-cadence-8103af4313a14f1c8fecd0b6050ad63c" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1314" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1314" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/customerinaws/">CustomerInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Meeting - BiWeekly Cadence 8103af4313a14f1c8fecd0b6050ad63c</a></div></nav><h1 class="article-title">Meeting - BiWeekly Cadence 8103af4313a14f1c8fecd0b6050ad63c</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:14.958Z">2026년 6월 06일</time><span>22 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p><img src="../../../4.archive/notion-archive/attachments/woodcuts_16.jpg" alt/></p>
+<p>🚟</p>
+<h1 id="meeting---biweekly-cadence">Meeting - BiWeekly Cadence<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#meeting---biweekly-cadence" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="august-26-2025">@August 26, 2025<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#august-26-2025" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="ai-dubbing">AI Dubbing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ai-dubbing" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Text Input → LLM Translation → Voice Generation Input</li>
+</ul>
+<h2 id="rag">RAG<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#rag" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>텍스트 기반의 음성 모델 검색</p>
+</li>
+<li>
+<p>n8n prototyping 진행</p>
+</li>
+<li>
+<p>Vector DB : QDrant (AWS Marketplace)</p>
+</li>
+<li>
+<p>Text : Aurora PostgreSQL (pgvector)</p>
+</li>
+<li>
+<p>LLM : Claude 4.0 /Nova Pro / Light LLM</p>
+</li>
+</ul>
+<h2 id="region-migration">Region Migration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#region-migration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>US-West2 로 진행 중</p>
+</li>
+<li>
+<p>Latency 감소 압박 : SonaSpeech 1.5</p>
+</li>
+</ul>
+<h2 id="user별-token-관리">User별 Token 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user별-token-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Bedrock : 사용자 별 과금 구조 → 통합 관리</li>
+</ul>
+<h1 id="july-17-2025">@July 17, 2025<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#july-17-2025" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="성능-개선--sync-job">성능 개선 → Sync Job<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#성능-개선--sync-job" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>S3 access time 개선</p>
+<p>g6e 로 변경하여 I/O 성능 개선 버전 적용</p>
+<p>7월 말 Streaming TTS open : us-west-2 이전</p>
+<h2 id="auto-scaling-추가">Auto Scaling 추가<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#auto-scaling-추가" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Seoul region에서는 GPU 확보가 어려워 별도 ALB가 어려</p>
+</li>
+<li>
+<p>GPU node Prewarming 준비</p>
+</li>
+<li>
+<p>ALB Scaling option : 자료 전달</p>
+</li>
+<li>
+<p>Serving : spot instance case search → 추가 traffic에 대해 spot 으로 대응</p>
+</li>
+</ul>
+<h2 id="databricks">DataBricks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#databricks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Marketplace 버전 구매 사용</li>
+</ul>
+<h2 id="on-prem-data-migration">On-prem Data Migration<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#on-prem-data-migration" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>지속적으로 Cloud로 migration 진행 중</p>
+</li>
+<li>
+<p>API Base로 Download : <a href="https://docs.nextcloud.com/server/latest/admin_manual/configuration_files/external_storage/amazons3.html" class="external external-link">NextCloud<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<h2 id="msk">MSK<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#msk" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Synadia (<a href="https://www.synadia.com/" class="external external-link">https://www.synadia.com/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)로 변경</p>
+</li>
+<li>
+<p>us region에 구축하여 GPU farm 이전 시 함께 사용</p>
+</li>
+</ul>
+<h2 id="vectordb">VectorDB<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vectordb" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>SRE team 신규 멤버 : Open Source 적용 검토</p>
+</li>
+<li>
+<p>Text 기반 voice search → 우선 순위 뒤로</p>
+</li>
+</ul>
+<h2 id="model-framework">Model Framework<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#model-framework" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Torch / TensorRT</p>
+</li>
+<li>
+<p>FP16 사용하면 음질 저하로 인해 저가형 instance 사용이 어려움</p>
+</li>
+</ul>
+<h2 id="plan">Plan<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#plan" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Cost optimizing 보다는 서비스 안정화 및 조기 출시가 우선</li>
+</ul>
+<ol>
+<li>
+<p>GPU Spot 인스턴스 활용</p>
+<ul>
+<li>
+<p>오레곤 리전의 GPU 공급 안정성 및 Spot 인스턴스 혼합 활용</p>
+</li>
+<li>
+<p>EKS 기반 Pod에 ML 워크로드 구성</p>
+</li>
+<li>
+<p>Karpenter를 통한 GPU Spot 노드 자동 생성</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Redis 기반 GPU 스케일링 최적화</p>
+<ul>
+<li>
+<p>SQS 큐에서 Redis 큐로 변경</p>
+</li>
+<li>
+<p>KEDA를 활용한 선제적 GPU Pod 트리거</p>
+</li>
+<li>
+<p>GPU 자원 Idle 시간 40% 이상 감소, Spot 인스턴스 회전율 향상</p>
+</li>
+<li>
+<p>전체 ML 파이프라인 비용 최대 70% 절감</p>
+</li>
+</ul>
+</li>
+<li>
+<p>역방향 데이터 복제 기반 구조</p>
+<ul>
+<li>
+<p>AI 추론 결과의 미국-한국 간 실시간 전송</p>
+</li>
+<li>
+<p>레퍼런스 데이터의 역방향 사전 복제</p>
+</li>
+<li>
+<p>JuiceFS를 활용한 S3 기반 병렬 데이터 접근성 향상</p>
+</li>
+<li>
+<p>지연 시간 최소화 및 데이터 중복 방지</p>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="january-16-2025">@January 16, 2025<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#january-16-2025" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="gpu-수급">GPU 수급<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gpu-수급" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>GPU Farm 이전 구성</p>
+<ul>
+<li>
+<p>Multi-region 지양하고 us-west-2로 이전하는 것을 고려</p>
+</li>
+<li>
+<p>us-west-2로 2월 목표로 이전하는 것이 목표</p>
+</li>
+<li>
+<p>g6.4xlarge target</p>
+</li>
+<li>
+<p>초반에는 기존 방식대로 SP 운용</p>
+</li>
+<li>
+<p>ASIA 지역은 tokyo가 g6 여유가 있음 (1월 기준 90여대 여분)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>6월 Game service가 정식 open</p>
+<ul>
+<li>us-west-2</li>
+</ul>
+</li>
+</ul>
+<h2 id="eks-version-up">EKS Version up<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#eks-version-up" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>2월 서비스 오픈이어서 당장 version up은 어려움</li>
+</ul>
+<h2 id="game-service">Game service<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#game-service" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Smilegate</p>
+</li>
+<li>
+<p>10만 user</p>
+</li>
+</ul>
+<h2 id="내부-조직">내부 조직<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#내부-조직" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>사업 개발실 - B2B</p>
+</li>
+<li>
+<p>서비스실 - B2C, Summit Demo 지원 대응 예상, 동영상 제작이나 음성 생성 등도 진행</p>
+</li>
+</ul>
+<h1 id="december-4-2024">@December 4, 2024<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#december-4-2024" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="status">Status<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#status" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>ElastiCache for Valkey 검토중</p>
+<ul>
+<li>Embedding 용으로 고려</li>
+</ul>
+</li>
+<li>
+<p>g6e 사용 중 → Cross-region 고려</p>
+</li>
+<li>
+<p>Serving platform 자체 제작 버전 배포 준비 : 12월 중</p>
+<ul>
+<li>Torch serve, Triton을 교체 : scheduling 등에 유연하게 대응</li>
+</ul>
+</li>
+<li>
+<p>File I/O 성능 개선</p>
+<ul>
+<li>단위 file size가 작아서 S3 multi-thread나 multi-part upload가 쉽지 않음</li>
+</ul>
+</li>
+<li>
+<p>Voice search를 위한 embedding vector 사용</p>
+<ul>
+<li>Voice library로 사용하고 있으며 voice search → pgvector로 생각 중</li>
+</ul>
+</li>
+<li>
+<p>Langchain 컨셉을 model 단위로 확장하여 재 개발</p>
+<ul>
+<li>
+<p>TaskForge</p>
+</li>
+<li>
+<p>Model을 세분화 하여 serving 요구에 따라 조합하여 사용할 수 있도록 구성</p>
+</li>
+<li>
+<p>MSA + container 기반으로 자체 제작 : CD 포함</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Game사 대응을 위해 Spike 성 Traffic 대응이 필요 (25년 6월)</p>
+<ul>
+<li>
+<p>API Gateway 일부 사용, Load Balancing 아키는 확인 필요</p>
+</li>
+<li>
+<p>메시징 : Kafka → NATS 검토 중</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="business">Business<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#business" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>2024년 5개 제품 출시</p>
+<ul>
+<li>
+<p>Cloud service : Play (light한 creator를 위한 - 1인 개발자, 소규모 studio), TTS API (public 용)</p>
+</li>
+<li>
+<p>On-device : Air (plug-in, Dialog match - 공간 배경을 matching), Clear, Shift</p>
+</li>
+</ul>
+</li>
+<li>
+<p>연구 개발실과 서비스 개발실로 구조</p>
+<ul>
+<li>
+<p>서비스 개발실장 + CTO : 허훈</p>
+</li>
+<li>
+<p>연구 개발실장 : 성두용님</p>
+</li>
+</ul>
+</li>
+<li>
+<p>25년은 Gross에 목표</p>
+<ul>
+<li>비용 효율화 보다는 서비스 대응을 우선</li>
+</ul>
+</li>
+</ul>
+<h1 id="september-19-2024">@September 19, 2024<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#september-19-2024" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="discussion">Discussion<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#discussion" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>S3로 Serving data upload / download 수치가 떨어짐 - Ubuntu 22.04</p>
+</li>
+<li>
+<p>File 크기가 커지는 경우에도 전송 gap 은 일정하게 유지 되고 있음</p>
+<ul>
+<li>
+<p>inference 700msec</p>
+</li>
+<li>
+<p>torchserve 제공 base image id</p>
+</li>
+</ul>
+</li>
+<li>
+<p>FSx for Lustre</p>
+<ul>
+<li>
+<p>Pre-signed URL을 가져와서</p>
+</li>
+<li>
+<p>FSx for Lustre 적합 성</p>
+</li>
+<li>
+<p>결과 물 Upload</p>
+</li>
+<li>
+<p>학습 자동화</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Maintenance 점검 시간</p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/ko_kr/fsx/latest/LustreGuide/maintenance-windows.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/fsx/latest/LustreGuide/maintenance-windows.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+</li>
+<li>
+<p>Training 환경 구성</p>
+<ul>
+<li>
+<p>Oregon region cluster 이용 : Fine-tuning 환경 K8s로 구성 확인</p>
+<ul>
+<li>
+<p>g5 instance type / g6e single instance type 사용 + EFS (g5 40 hour → g6e 20 hour)</p>
+<ul>
+<li>shift model의 경우 voice 추가 시 마다 fine-tuning 재 진행</li>
+</ul>
+</li>
+<li>
+<p>kubeflow 환경에서 S3 → EFS</p>
+</li>
+<li>
+<p>FSx for Lustre → S3 mount</p>
+</li>
+</ul>
+</li>
+<li>
+<p>FSx for Lustre tuning 지원 필요</p>
+<ul>
+<li>
+<p>10월 초</p>
+</li>
+<li>
+<p>2가지 type : augmentation 등, 향후 확장할 경우 전체 학습 데이터가 커질 수 있음</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>API serving 확대 준비 중</p>
+<ul>
+<li>
+<p>Seoul region의 instance에 대한</p>
+</li>
+<li>
+<p>ODCR은 TTS API에 대해서만 구성하여 사용</p>
+</li>
+<li>
+<p>Service 확대 시점의 경우 seoul region cover가 어려울 경우 oregon : async 수준, 1초 정도 수준 필요 (단일 request 기준, request 확장 시 대응이 어려움, instance target이 부족)</p>
+</li>
+<li>
+<p>Model당 1 RPS 이며 3 RPS 수준까지 향상을 원하고 사업팀에서는 10 RPS를 요구</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="meeting-minutes">Meeting Minutes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#meeting-minutes" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Docker Image별 S3 파일 복사 속도 차이 (읽기 속도 차이)</p>
+<ul>
+<li>
+<p>S3 파일 파일 복사 속도 측정 (6.6MB 파일, 10번 시도한 통계값)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>Ubuntu 18.04 (torchserve)</td><td>Ubuntu 22.04 (tritonserver)</td><td>차이</td></tr><tr><td>Avg</td><td>0.515s</td><td>0.624s</td><td>0.073s</td></tr><tr><td>P99</td><td>0.549s</td><td>0.656s</td><td>0.107s</td></tr></tbody></table></div>
+</li>
+<li>
+<p>Ubuntu 24.04, amazon linux 2023, debian 에서는 더 느려짐</p>
+</li>
+<li>
+<p>Docker Image Base OS 별로 S3 속도 차이가 발생하는 것에 대해 알려진 사실이 있는지 궁금합니다.</p>
+</li>
+<li>
+<p>@Lee Jongwoo 님 추가 확인 후 업데이트 (Ubuntu 22.04 버전 선호)</p>
+</li>
+</ul>
+</li>
+<li>
+<p>FSx for Lustre</p>
+<ul>
+<li>
+<p>위와 같이 Docker Image 변경에 따라 S3 Latency 저하가 이어져, FSx for Lustre에서 S3를 import하여 사용하는 방식으로 대체 검토 진행했음</p>
+</li>
+<li>
+<p>인지하고 있는 FSx for Lustre의 동작 원리</p>
+<ul>
+<li>
+<p>FSx 상에서 S3에 있는 파일은 최초 가져올때 S3 ⇒ FSx로의 복사 시간 필요</p>
+</li>
+<li>
+<p>동일 파일에 두번째 이상 접근할때부터는 FSx에 이미 그 해당 파일이 있기에 빠른 속도로 읽기 가능</p>
+</li>
+</ul>
+</li>
+<li>
+<p>FSx for Lustre 1200GB 볼륨 셋팅으로 테스트 진행</p>
+</li>
+<li>
+<p>테스트 1 - 파일 복사</p>
+<ul>
+<li>
+<p>대상파일: 6.6MB 크기의 json 파일</p>
+</li>
+<li>
+<p>파일개수: 1개 복사</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>S3</td><td>FSx 1회차</td><td>FSx 2회차</td></tr><tr><td>Avg</td><td>0.684s</td><td>0.325초 ~ 1초대 (편차가 큼)</td><td>0.029초</td></tr></tbody></table></div>
+</li>
+<li>
+<p>테스트 2 - 메모리 로드</p>
+<ul>
+<li>
+<p>대상파일: 6.6MB 크기의 json 파일</p>
+</li>
+<li>
+<p>파일개수: 1,000개</p>
+</li>
+<li>
+<p>동일 파일 1,000개의 content를 메모리상에 로드한 시간 측정 (소수점 4번째 자리 반올림)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td>S3</td><td>FSx 1회차</td><td>FSx 2회차</td></tr><tr><td>Avg</td><td>0.269s</td><td>1.485s</td><td>0.005s</td></tr><tr><td>P99</td><td>0.550s</td><td>1.933s</td><td>0.006s</td></tr></tbody></table></div>
+</li>
+</ul>
+</li>
+<li>
+<p>테스트 결과 해석</p>
+<ul>
+<li>
+<p>FSx에서 S3에 있는 파일을 최초 1회 접근할때는 S3에서 파일을 직접 읽을때보다 시간이 더 오래 걸림</p>
+</li>
+<li>
+<p>항상 새로운 파일을 읽어야하는 우리의 사용법에는 맞지 않음</p>
+</li>
+<li>
+<p>파일 복사보다 단순 메모리 로드가 더 오래 걸리는 이유는 아직 의문이긴하지만 🤔 어떤 이유에서든 우리의 필요성에는 맞지 않는다고 판단되어 더 깊게 보지 않음</p>
+</li>
+</ul>
+</li>
+<li>
+<p>첫번째 데이터를 읽어올때 속도를 줄일 수 있는 방법이 궁금합니다.문</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Action Item</p>
+<ul>
+<li>
+<p>테스트 코드 공유 @Tony/오근현</p>
+<ul>
+<li>
+<p>docker image별 s3 → 로컬 파일 복사 테스트 코드 (sh)</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">#!/bin/bash</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 반복 횟수 설정</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">num_tests</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">10</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 시간 배열 초기화</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">real_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">user_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sys_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">whole_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">()</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 명령어 반복 실행</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> (( i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">&lt;=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">num_tests; i</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">++</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> ))</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">do</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Running test #</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$i</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    result</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$( (time aws s3 cp s3://dev-apne2-app-screenplay-assets/ref_audio_embed_s3.json test.json) </span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">>&amp;</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> )</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # real, user, sys 시간 추출</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    real_time</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$result</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> real</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> awk</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '{print $2}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    user_time</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$result</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> user</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> awk</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '{print $2}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    sys_time</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$result</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> grep</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> sys</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> awk</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '{print $2}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 시간을 초 단위로 변환 (분:초 형식)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    real_seconds</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> $real_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">|</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> awk</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -F</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'m'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '{split($2,a,&quot;s&quot;); print ($1 * 60) + a[1]}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    user_seconds</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> $user_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">|</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> awk</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -F</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'m'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '{split($2,a,&quot;s&quot;); print ($1 * 60) + a[1]}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    sys_seconds</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> $sys_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">|</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> awk</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -F</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'m'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '{split($2,a,&quot;s&quot;); print ($1 * 60) + a[1]}'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # whole time 계산</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    whole_seconds</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$real_seconds</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> + </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$user_seconds</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> + </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$sys_seconds</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> bc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 시간 배열에 추가</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    real_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">($real_seconds)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    user_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">($user_seconds)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    sys_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">($sys_seconds)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">    whole_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">($whole_seconds)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">done</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 총합 및 평균 계산 함수</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_average</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    local</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="important">$@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    local</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> total</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">0</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> t </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">in</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">; </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">do</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">        total</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$total</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> + </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$t</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> bc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    done</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;scale=3; </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$total</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> / ${</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">#</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> bc</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 퍼센타일 계산 함수</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    local</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> percentile</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">$1</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    shift</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    local</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="important">$@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    local</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> length</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">${</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">#</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">times[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]}</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    local</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal"> index</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;scale=0; (</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$length</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> - 1) * </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$percentile</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> / 100&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> bc</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$index</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 정렬 함수</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sort_times</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">() {</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="important">$@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> tr</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ' '</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '\n'</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> sort</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> -n</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> |</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> tr</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '\n'</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> ' '</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">}</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 평균 시간 계산</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">average_real</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_average</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">real_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">average_user</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_average</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">user_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">average_sys</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_average</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sys_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">average_whole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_average</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">whole_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 정렬된 시간 배열 생성</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_real_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">($(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sort_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">real_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">))</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_user_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">($(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sort_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">user_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">))</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_sys_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">($(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sort_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sys_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">))</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_whole_times</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">($(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">sort_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">whole_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">))</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 퍼센타일 계산</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p50_real</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 50</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_real_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p90_real</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 90</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_real_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p99_real</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 99</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_real_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p50_user</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 50</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_user_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p90_user</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 90</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_user_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p99_user</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 99</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_user_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p50_sys</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 50</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_sys_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p90_sys</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 90</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_sys_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p99_sys</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 99</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_sys_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p50_whole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 50</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_whole_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p90_whole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 90</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_whole_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">p99_whole</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">$(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">calculate_percentile</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 99</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;${</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">sorted_whole_times</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">[</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">@</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="punctuation">]}&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># 결과 출력</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Real times:&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Average real time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$average_real</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P50 real time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p50_real</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P90 real time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p90_real</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P99 real time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p99_real</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;User times:&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Average user time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$average_user</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P50 user time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p50_user</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P90 user time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p90_user</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P99 user time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p99_user</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Sys times:&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Average sys time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$average_sys</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P50 sys time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p50_sys</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P90 sys time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p90_sys</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P99 sys time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p99_sys</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Whole times:&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Average whole time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$average_whole</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P50 whole time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p50_whole</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P90 whole time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p90_whole</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">echo</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;P99 whole time: </span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="normal">$p99_whole</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> seconds&quot;</span></span></code></pre></figure>
+</li>
+<li>
+<p>s3 vs fsx (python)</p>
+<ul>
+<li>
+<p>s3 파일 읽기 테스트 코드</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> boto3</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> time</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> numpy </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> np</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> tqdm </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> tqdm</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> read_file_from_s3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(s3_client, bucket_name, file_key):</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        start_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> time.perf_counter()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        response </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> s3_client.get_object(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">Bucket</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">bucket_name, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">Key</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">file_key)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        content </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> response[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'Body'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">].read()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        end_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> time.perf_counter()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> end_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> start_time</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="property"> Exception</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> e:</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">        print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;파일 읽기 오류 (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">file_key</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">): </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">e</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> None</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> calculate_statistics</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(times):</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    times </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> np.array(times)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;평균&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.mean(times),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;P95&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.percentile(times, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">95</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;P99&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.percentile(times, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">99</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;최소&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.min(times),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;최대&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.max(times)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    }</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">():</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # S3 설정</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    bucket_name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'dev-apne2-app-screenplay-assets'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    file_prefix </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'tony_test/tony_test'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    file_extension </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '.json'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 파일 확장자</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    num_files </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1000</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # S3 클라이언트 생성</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    s3 </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> boto3.client(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'s3'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 파일 읽기 및 시간 측정</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    read_times </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> []</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    total_start_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> time.perf_counter()</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function"> tqdm(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">range</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, num_files </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">), </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">desc</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;파일 읽는 중&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">):</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        file_key </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">file_prefix</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">_</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">i</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">file_extension</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        read_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function"> read_file_from_s3(s3, bucket_name, file_key)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> read_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">is</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> not</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> None</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            read_times.append(read_time)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    total_end_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> time.perf_counter()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    total_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> total_end_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> total_start_time</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 통계 계산</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    stats </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function"> calculate_statistics(read_times)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 결과 출력</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">총 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{len</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(read_times)</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">개 파일 처리 완료&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;전체 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">total_time</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.2f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;파일당 평균 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'평균'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;P95 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'P95'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;P99 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'P99'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;최소 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'최소'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;최대 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'최대'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="normal"> __name__</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;__main__&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">    main()</span></span></code></pre></figure>
+</li>
+<li>
+<p>fsx 파일 읽기 테스트 코드</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> os</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> time</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> numpy </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> np</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> tqdm </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> tqdm</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> read_local_file</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(file_path):</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    try</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        start_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> time.perf_counter()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        with</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function"> open</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(file_path, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'rb'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">as</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="normal"> file</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">            content </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="normal"> file</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">.read()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        end_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> time.perf_counter()</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> end_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> start_time</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    except</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="property"> Exception</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> as</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> e:</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">        print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;파일 읽기 오류 (</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">file_path</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">): </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">e</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> None</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> calculate_statistics</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(times):</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    times </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> np.array(times)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> {</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;평균&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.mean(times),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;P95&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.percentile(times, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">95</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;P99&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.percentile(times, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">99</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;최소&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.min(times),</span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">        &quot;최대&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">: np.max(times)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">    }</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function"> main</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">():</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 로컬 파일 설정</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    folder_path </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '/etc/params/dev-apne2-app-screenplay-assets'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 파일이 저장된 폴더 경로</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    file_prefix </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 'tony_test_1/tony_test'</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    file_extension </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> '.json'</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">  # 파일 확장자</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    num_files </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1000</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 파일 읽기 및 시간 측정</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    read_times </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> []</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    total_start_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> time.perf_counter()</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">    for</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> i </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">in</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function"> tqdm(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">range</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">, num_files </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">+</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">), </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;" data-token-type="important">desc</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;파일 읽는 중&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">):</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        file_name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword"> f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">file_prefix</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">_</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">i</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">file_extension</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        file_path </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> os.path.join(folder_path, file_name)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        read_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function"> read_local_file(file_path)</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">        if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> read_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">is</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> not</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> None</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">            read_times.append(read_time)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    total_end_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation"> time.perf_counter()</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    total_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> total_end_time </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> total_start_time</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 통계 계산</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    stats </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function"> calculate_statistics(read_times)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment">    # 결과 출력</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="string">\n</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">총 </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{len</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(read_times)</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">개 파일 처리 완료&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;전체 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">total_time</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.2f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;파일당 평균 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'평균'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;P95 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'P95'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;P99 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'P99'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;최소 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'최소'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="function">    print</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">f</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">&quot;최대 소요 시간: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">{</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">stats[</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">'최대'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">]</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">:.6f</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">}</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">초&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="keyword">if</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="normal"> __name__</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator"> ==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;__main__&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="function">    main()</span></span></code></pre></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>FSx for Lustre 혹은 다른 방안으로라도 파일 로드 시간 단축할 수 있는 가이드 제공 @Lee Jongwoo</p>
+</li>
+<li>
+<p>FSx for Lustre 점검 관련(<a href="https://docs.aws.amazon.com/ko_kr/fsx/latest/LustreGuide/maintenance-windows.html" class="external external-link">https://docs.aws.amazon.com/ko_kr/fsx/latest/LustreGuide/maintenance-windows.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) 추가 질문</p>
+</li>
+<li>
+<p>g6e 인스턴스 한국 리전 런칭 타임라인 확인 (@Yoon Ji Jung)</p>
+</li>
+<li>
+<p>학습 시 FSx for Lustre PoC 지원 문의</p>
+<ul>
+<li>
+<p>Oregon 리전 사용 중 (g5 인스턴스로 진행 하다 g6e로 변경하여 사용 중, 학습시간 절반 감소)</p>
+</li>
+<li>
+<p>fine tuning 자동화 (데이터 사이즈 : 1.2TB 내에서 커버 가능한 수준으로 우선 시작)</p>
+</li>
+<li>
+<p>EC2 (g6e) - EFS (or FSx for Lustre) - S3</p>
+</li>
+<li>
+<p>10월 시작 예상</p>
+</li>
+<li>
+<p>지원 요청 사항</p>
+<ul>
+<li>
+<p>(속도 최적화를 위한) FSx for Lustre 연결 가이드 (@Lee Jongwoo)</p>
+</li>
+<li>
+<p>크레딧 지원 (@Yoon Ji Jung)</p>
+<ul>
+<li>AWS calculator estimation 공유</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="june-20-2024">@June 20, 2024<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#june-20-2024" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="karpenter">Karpenter<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#karpenter" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>잘못 된 AMI drifting case가 어떤 내용 이었는지?</p>
+</li>
+<li>
+<p>Update된 Karpenter version에서도 drifting case 확인 필요 → 0.34.6</p>
+</li>
+<li>
+<p>System Manager Patch Manager 영향인지도 확인 필요</p>
+</li>
+<li>
+<p>Capacity Reservation 으로 대응이 되었음</p>
+</li>
+</ul>
+<h1 id="may-22-2024">@May 22, 2024<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#may-22-2024" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Flash attention, triton, 외부 컴퓨팅 방법 ; TTS</p>
+<p><a href="https://aws.amazon.com/ko/about-aws/whats-new/2024/07/aws-neuron-flash-kernel-performance-sequence-lengths/" class="external external-link">https://aws.amazon.com/ko/about-aws/whats-new/2024/07/aws-neuron-flash-kernel-performance-sequence-lengths/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Infinitband 지원되는 inferentia -> model 을 세부화 시키고 graph로 표현 -> parallel 하게 처리 (공통 처리 가능 부분), TTS, CVS, AVS 등</p>
+<p>입력 analysis만 다르지만 synthesis 구성</p>
+<p>GPU instance를 MIG로 분할</p>
+<p>Vector DB 구성 검토</p>
+<p>Voice Market -> embedding 관리</p>
+<p>ISMS 7월 심사 - 롯데 정보 통신</p>
+<h1 id="march-20-2024">@March 20, 2024<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#march-20-2024" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ul>
+<li>
+<p>Inf2 seoul region launch</p>
+</li>
+<li>
+<p>g5 instance : 7 ~ 8 개</p>
+</li>
+<li>
+<p>S3 DTO cost</p>
+</li>
+<li>
+<p>CloudFront vs S3 pub out cost comparison</p>
+</li>
+<li>
+<p>S2S VPN 사용 중</p>
+</li>
+<li>
+<p>TGX 비용 - connection 당 발생 여부</p>
+</li>
+</ul>
+<p><a href="../../../meeting---biweekly-cadence/img_3129.jpeg" class="internal internal-link" data-slug="meeting---biweekly-cadence/img_3129.jpeg"><img src="../../../4.archive/notion-archive/attachments/img_3129.jpeg" alt/></a></p>
+<h1 id="february-7-2024">@February 7, 2024<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#february-7-2024" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../meeting---biweekly-cadence/gpu-instance-capacity-reservation-ac270ecf49bf4c7cb653b394afbc9eba" class="internal internal-link alias" data-slug="meeting---biweekly-cadence/gpu-instance-capacity-reservation-ac270ecf49bf4c7cb653b394afbc9eba">📺GPU Instance Capacity Reservation</a></p>
+<p><a href="../../../meeting---biweekly-cadence/bucket-access-management-a1626ff596af42edacb7fce7d8791259" class="internal internal-link alias" data-slug="meeting---biweekly-cadence/bucket-access-management-a1626ff596af42edacb7fce7d8791259">📱Bucket Access Management</a></p>
+<p><a href="../../../meeting---biweekly-cadence/fsx-for-lustre-410c5ec3d34041a998cba499440af276" class="internal internal-link alias" data-slug="meeting---biweekly-cadence/fsx-for-lustre-410c5ec3d34041a998cba499440af276">🥈FSx for Lustre</a></p>
+<h1 id="20231013">@2023.10.13<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#20231013" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="cloud-infra">Cloud Infra<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cloud-infra" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Savings Plan</p>
+</li>
+<li>
+<p>S3 cost : PPA 적용 여부 확인 필요 with Megazone</p>
+</li>
+<li>
+<p>HYBE 통합 관리 - DevOps</p>
+</li>
+</ul>
+<h2 id="data-ops">Data Ops<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-ops" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>MetaData Warehouse 구축이</li>
+</ul>
+<h1 id="2023912">@2023.9.12<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2023912" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="customer-agenda">Customer Agenda<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#customer-agenda" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>학습용 음성 데이터셋 Pseudo label 추출 파이프라인 구축을 위한 PoC 프로젝트</strong></p>
+<ul>
+<li>
+<p>프로젝트 설명</p>
+<ul>
+<li>
+<p>오디오 데이터 전처리 및 Neural network 구조를 활용한 Pseudo label 추출 파이프라인 PoC</p>
+</li>
+<li>
+<p>파이프라인용 데이터 스토리지 구성 및 연동(S3 ↔ instance storage)</p>
+</li>
+<li>
+<p>Kafka를 활용하여 대량 데이터를 안정적으로 배치 처리</p>
+</li>
+<li>
+<p>다수의 AWS GPU 인스턴스를 활용한 psuedo label 추출</p>
+</li>
+</ul>
+</li>
+<li>
+<p>프로젝트 목표</p>
+<ul>
+<li>
+<p>기술 측면</p>
+<ul>
+<li>
+<p>AWS GPU 인스턴스 처리 성능 검증 (오디오 정제 모델 구동) : g5 vs g4dn</p>
+</li>
+<li>
+<p>다수의 AWS GPU 인스턴스의 병렬 처리 검증</p>
+</li>
+<li>
+<p>대량 데이터 처리 시 카프카의 활용 검증</p>
+</li>
+</ul>
+</li>
+<li>
+<p>기능 측면</p>
+<ul>
+<li>압축 기준 4TB 오디오데이터의 전처리 및 정제를 안정적으로 수행</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>프로젝트 진행</p>
+<ul>
+<li>
+<p>스토리지 (S3)</p>
+<ul>
+<li>압축된 오디오 데이터 4TB의 전처리 후 70TB까지 확장 검증</li>
+</ul>
+</li>
+<li>
+<p>파이프라인 처리</p>
+<ul>
+<li>
+<p>Pseudo label 추출 파이프라인</p>
+<ul>
+<li>g4dn.2xlarge spot instance x 32개 동시 처리 수행</li>
+</ul>
+</li>
+<li>
+<p>전처리 파이프라인</p>
+<ul>
+<li>t3.2xlarge spot instance x 30개 동시 처리 수행</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Kafka</p>
+<ul>
+<li>PoC로 EKS에 카프카 구성하여 라이트하게 검증</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>앞으로의 계획</p>
+<ul>
+<li>PoC를 기반으로 지속적인 데이터 수집에 따른 전처리 및 Pseudo label 추출 진행할 예정입니다.</li>
+</ul>
+</li>
+</ul>
+<h2 id="추가-comment">추가 comment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#추가-comment" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>Data Governance</p>
+</li>
+<li>
+<p>On-prem data와 Cloud data를 함께 governance 하기를 희망</p>
+</li>
+</ul>
+<h1 id="on-prem-data-sync">On-prem Data Sync<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#on-prem-data-sync" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="s3-file-gateway">S3 File Gateway<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#s3-file-gateway" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Customer Case - Image Reconstruction</li>
+</ul>
+<p>[</p>
+<p>Cloud-based medical imaging reconstruction using deep neural networks | Amazon Web Services</p>
+<p>Medical imaging techniques like computed tomography (CT), magnetic resonance imaging (MRI), medical x-ray imaging, ultrasound imaging, and others are commonly used by doctors for various reasons. Some examples include detecting changes in the appearance of organs, tissues, and vessels, and detecting abnormalities such as tumors and various other type of pathologies. Before doctors can use […]</p>
+<p><img src="../../../4.archive/notion-archive/attachments/touch-icon-ipad-144-smile-14.png" alt/><a href="https://aws.amazon.com/ko/blogs/machine-learning/cloud-based-medical-imaging-reconstruction-using-deep-neural-networks/" class="external external-link">https://aws.amazon.com/ko/blogs/machine-learning/cloud-based-medical-imaging-reconstruction-using-deep-neural-networks/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/attachments/cloud-based-medical-imaging-1258x630.png" alt/>](<a href="https://aws.amazon.com/ko/blogs/machine-learning/cloud-based-medical-imaging-reconstruction-using-deep-neural-networks/" class="external external-link">https://aws.amazon.com/ko/blogs/machine-learning/cloud-based-medical-imaging-reconstruction-using-deep-neural-networks/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h1 id="data-governance">Data Governance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-governance" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="lake-formation">Lake Formation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lake-formation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[</p>
+<p>Apply fine-grained data access controls with AWS Lake Formation in Amazon SageMaker Data Wrangler | Amazon Web Services</p>
+<p>We are happy to announce that SageMaker Data Wrangler now supports using Lake Formation with Amazon EMR to provide this fine-grained data access restriction.</p>
+<p><img src="../../../4.archive/notion-archive/attachments/touch-icon-ipad-144-smile-14.png" alt/><a href="https://aws.amazon.com/blogs/machine-learning/apply-fine-grained-data-access-controls-with-aws-lake-formation-in-amazon-sagemaker-data-wrangler/" class="external external-link">https://aws.amazon.com/blogs/machine-learning/apply-fine-grained-data-access-controls-with-aws-lake-formation-in-amazon-sagemaker-data-wrangler/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/attachments/featured-images-ml-14840-1120x630.jpg" alt/>](<a href="https://aws.amazon.com/blogs/machine-learning/apply-fine-grained-data-access-controls-with-aws-lake-formation-in-amazon-sagemaker-data-wrangler/" class="external external-link">https://aws.amazon.com/blogs/machine-learning/apply-fine-grained-data-access-controls-with-aws-lake-formation-in-amazon-sagemaker-data-wrangler/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="eda-and-data-transformation-pipeline">EDA and Data Transformation pipeline<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#eda-and-data-transformation-pipeline" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="feature-importance-analysis">Feature Importance Analysis<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#feature-importance-analysis" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="data-preparation-with-sagemaker-processing-jobs">Data Preparation with SageMaker Processing Jobs<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-preparation-with-sagemaker-processing-jobs" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="end-to-end-sagemaker-pipeline">End-to-End SageMaker Pipeline<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#end-to-end-sagemaker-pipeline" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="end-to-end-sagemaker-pipeline-for-new-data-analysis">End-to-End SageMaker Pipeline for New Data Analysis<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#end-to-end-sagemaker-pipeline-for-new-data-analysis" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h1 id="reference">Reference<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#reference" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="data-wrangler">Data Wrangler<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-wrangler" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[</p>
+<p>Amazon SageMaker Data Wrangler와 Amazon SageMaker Autopilot을 활용하여 데이터 준비부터 모델 배포까지 더 쉽고 간편하게 하기</p>
+<p>모델 학습에 필요한 데이터를 준비하고, EDA, Feature engineering 등을 하는 작업은 많은 시간과 경험이 필요합니다. Amazon SageMaker Data Wrangler를 활용하면 이러한 반복적인 과정을 더 빠르고 쉽게 진행할 수 있습니다. 데이터를 아무리 잘 준비해도 최적의 기계 학습(ML) 모델을 만드는 것은 많은 지식과 노력이 필요한 일입니다. Amazon SageMaker Autopilot을 활용하면 데이터에 가장 적합한 알고리즘을 찾고, 하이퍼파라미터까지 최적화한 최고 성능의 모델을 생성하고 배포까지 할 수 있습니다. 두 가지 서비스를 연계하여 ML practitioner들이 더 효율적으로 일할 수 있는 방식에 관해 데모와 함께 알아보겠습니다.</p>
+<p><img src="../../../4.archive/notion-archive/attachments/favicon_144x144-1.png" alt/><a href="https://youtu.be/KppEdfB7NvQ?si=iFPwiIXvVvoghjzK" class="external external-link">https://youtu.be/KppEdfB7NvQ?si=iFPwiIXvVvoghjzK<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/attachments/maxresdefault-2.jpeg" alt/>](<a href="https://youtu.be/KppEdfB7NvQ?si=iFPwiIXvVvoghjzK" class="external external-link">https://youtu.be/KppEdfB7NvQ?si=iFPwiIXvVvoghjzK<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h1 id="supertone-as-is">Supertone AS-IS<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#supertone-as-is" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="data-현황">Data 현황<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#data-현황" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>File</li>
+</ul>
+<p>상위 Meta Data</p>
+<ul>
+<li>
+<p>utterance 단위로 구분 하여 label</p>
+<ul>
+<li>
+<p>timestamp + uetterance text</p>
+</li>
+<li>
+<p>full audio data에 대해</p>
+</li>
+<li>
+<p>전처리 과정을 통해</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="training-dataset에-대한-관리">Training DataSet에 대한 관리<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#training-dataset에-대한-관리" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>DataSet Store 구축과 Metadata 생성</p>
+<ul>
+<li>
+<p>자체 수집 + 구매 데이터</p>
+</li>
+<li>
+<p>Schemaless Database</p>
+</li>
+<li>
+<p>S3와 NAS에 저장되어 : 대부분 NAS</p>
+</li>
+<li>
+<p>Format도 다양 : CSV, JSON, MIDI → 일관된 형태로 작업</p>
+</li>
+<li>
+<p>On-prem에서는 MongoDB를 사용</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Goverance 적용</p>
+</li>
+<li>
+<p>Catalog나 Governance가 용이한 부분</p>
+</li>
+</ul>
+<h1 id="labeling--annotation">Labeling &amp; Annotation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#labeling--annotation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="customer-case">Customer Case<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#customer-case" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[</p>
+<p>Automating Unstructured Data Processing with Amazon SageMaker | Amazon Web Services</p>
+<p>The super.AI platform helps customers to transform processes involving unstructured data such as images, videos, text, documents, and audio and automate them using a combination of AI, software, and humans. Their customers requested a more efficient, highly accurate labeling mechanism, so they eleased a new feature where the pipeline pre-processes data points using an ML model running on Amazon SageMaker.</p>
+<p><img src="../../../4.archive/notion-archive/attachments/touch-icon-ipad-144-smile-14.png" alt/><a href="https://aws.amazon.com/blogs/startups/automating-unstructured-data-processing-with-amazon-sagemaker/" class="external external-link">https://aws.amazon.com/blogs/startups/automating-unstructured-data-processing-with-amazon-sagemaker/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/attachments/shutterstock_1511801816.png" alt/>](<a href="https://aws.amazon.com/blogs/startups/automating-unstructured-data-processing-with-amazon-sagemaker/" class="external external-link">https://aws.amazon.com/blogs/startups/automating-unstructured-data-processing-with-amazon-sagemaker/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1093" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#meeting---biweekly-cadence" data-for="meeting---biweekly-cadence">Meeting - BiWeekly Cadence</a></li><li class="depth-0"><a href="#august-26-2025" data-for="august-26-2025">@August 26, 2025</a></li><li class="depth-1"><a href="#ai-dubbing" data-for="ai-dubbing">AI Dubbing</a></li><li class="depth-1"><a href="#rag" data-for="rag">RAG</a></li><li class="depth-1"><a href="#region-migration" data-for="region-migration">Region Migration</a></li><li class="depth-1"><a href="#user별-token-관리" data-for="user별-token-관리">User별 Token 관리</a></li><li class="depth-0"><a href="#july-17-2025" data-for="july-17-2025">@July 17, 2025</a></li><li class="depth-1"><a href="#성능-개선--sync-job" data-for="성능-개선--sync-job">성능 개선 → Sync Job</a></li><li class="depth-1"><a href="#auto-scaling-추가" data-for="auto-scaling-추가">Auto Scaling 추가</a></li><li class="depth-1"><a href="#databricks" data-for="databricks">DataBricks</a></li><li class="depth-1"><a href="#on-prem-data-migration" data-for="on-prem-data-migration">On-prem Data Migration</a></li><li class="depth-1"><a href="#msk" data-for="msk">MSK</a></li><li class="depth-1"><a href="#vectordb" data-for="vectordb">VectorDB</a></li><li class="depth-1"><a href="#model-framework" data-for="model-framework">Model Framework</a></li><li class="depth-1"><a href="#plan" data-for="plan">Plan</a></li><li class="depth-0"><a href="#january-16-2025" data-for="january-16-2025">@January 16, 2025</a></li><li class="depth-1"><a href="#gpu-수급" data-for="gpu-수급">GPU 수급</a></li><li class="depth-1"><a href="#eks-version-up" data-for="eks-version-up">EKS Version up</a></li><li class="depth-1"><a href="#game-service" data-for="game-service">Game service</a></li><li class="depth-1"><a href="#내부-조직" data-for="내부-조직">내부 조직</a></li><li class="depth-0"><a href="#december-4-2024" data-for="december-4-2024">@December 4, 2024</a></li><li class="depth-1"><a href="#status" data-for="status">Status</a></li><li class="depth-2"><a href="#business" data-for="business">Business</a></li><li class="depth-0"><a href="#september-19-2024" data-for="september-19-2024">@September 19, 2024</a></li><li class="depth-1"><a href="#discussion" data-for="discussion">Discussion</a></li><li class="depth-1"><a href="#meeting-minutes" data-for="meeting-minutes">Meeting Minutes</a></li><li class="depth-0"><a href="#june-20-2024" data-for="june-20-2024">@June 20, 2024</a></li><li class="depth-1"><a href="#karpenter" data-for="karpenter">Karpenter</a></li><li class="depth-0"><a href="#may-22-2024" data-for="may-22-2024">@May 22, 2024</a></li><li class="depth-0"><a href="#march-20-2024" data-for="march-20-2024">@March 20, 2024</a></li><li class="depth-0"><a href="#february-7-2024" data-for="february-7-2024">@February 7, 2024</a></li><li class="depth-0"><a href="#20231013" data-for="20231013">@2023.10.13</a></li><li class="depth-1"><a href="#cloud-infra" data-for="cloud-infra">Cloud Infra</a></li><li class="depth-1"><a href="#data-ops" data-for="data-ops">Data Ops</a></li><li class="depth-0"><a href="#2023912" data-for="2023912">@2023.9.12</a></li><li class="depth-1"><a href="#customer-agenda" data-for="customer-agenda">Customer Agenda</a></li><li class="depth-1"><a href="#추가-comment" data-for="추가-comment">추가 comment</a></li><li class="depth-0"><a href="#on-prem-data-sync" data-for="on-prem-data-sync">On-prem Data Sync</a></li><li class="depth-1"><a href="#s3-file-gateway" data-for="s3-file-gateway">S3 File Gateway</a></li><li class="depth-0"><a href="#data-governance" data-for="data-governance">Data Governance</a></li><li class="depth-1"><a href="#lake-formation" data-for="lake-formation">Lake Formation</a></li><li class="depth-1"><a href="#eda-and-data-transformation-pipeline" data-for="eda-and-data-transformation-pipeline">EDA and Data Transformation pipeline</a></li><li class="depth-1"><a href="#feature-importance-analysis" data-for="feature-importance-analysis">Feature Importance Analysis</a></li><li class="depth-1"><a href="#data-preparation-with-sagemaker-processing-jobs" data-for="data-preparation-with-sagemaker-processing-jobs">Data Preparation with SageMaker Processing Jobs</a></li><li class="depth-1"><a href="#end-to-end-sagemaker-pipeline" data-for="end-to-end-sagemaker-pipeline">End-to-End SageMaker Pipeline</a></li><li class="depth-1"><a href="#end-to-end-sagemaker-pipeline-for-new-data-analysis" data-for="end-to-end-sagemaker-pipeline-for-new-data-analysis">End-to-End SageMaker Pipeline for New Data Analysis</a></li><li class="depth-0"><a href="#reference" data-for="reference">Reference</a></li><li class="depth-1"><a href="#data-wrangler" data-for="data-wrangler">Data Wrangler</a></li><li class="depth-0"><a href="#supertone-as-is" data-for="supertone-as-is">Supertone AS-IS</a></li><li class="depth-1"><a href="#data-현황" data-for="data-현황">Data 현황</a></li><li class="depth-1"><a href="#training-dataset에-대한-관리" data-for="training-dataset에-대한-관리">Training DataSet에 대한 관리</a></li><li class="depth-0"><a href="#labeling--annotation" data-for="labeling--annotation">Labeling &amp; Annotation</a></li><li class="depth-1"><a href="#customer-case" data-for="customer-case">Customer Case</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>

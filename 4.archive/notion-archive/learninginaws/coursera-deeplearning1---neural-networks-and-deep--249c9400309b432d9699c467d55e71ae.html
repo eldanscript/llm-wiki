@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr"><head><title>Coursera DeepLearning1 - Neural Networks and Deep  249c9400309b432d9699c467d55e71ae | LLM Wiki</title><meta charset="utf-8"/><link rel="preload" href="../../../index-47d9ba67.css" as="style"/><link rel="preload" href="../../../prescript-2bfc6315.js" as="script"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Raingent LLM Wiki"/><meta property="og:title" content="Coursera DeepLearning1 - Neural Networks and Deep  249c9400309b432d9699c467d55e71ae | LLM Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Coursera DeepLearning1 - Neural Networks and Deep  249c9400309b432d9699c467d55e71ae | LLM Wiki"/><meta name="twitter:description" content="🚅 Coursera DeepLearning1 - Neural Networks and Deep Learning StatusFinishedAuthorAndrew NgLinkwww.coursera.org/learn/neural-networks-deep-learning/home/welcomeTypeOnline SessionBlogwikidocs.net/35425Codehttps://github.com/Kulbear/deep-learning-coursera/ Introduction to Deep Learning What is a Neura..."/><meta property="og:description" content="🚅 Coursera DeepLearning1 - Neural Networks and Deep Learning StatusFinishedAuthorAndrew NgLinkwww.coursera.org/learn/neural-networks-deep-learning/home/welcomeTypeOnline SessionBlogwikidocs.net/35425Codehttps://github.com/Kulbear/deep-learning-coursera/ Introduction to Deep Learning What is a Neura..."/><meta property="og:image:alt" content="🚅 Coursera DeepLearning1 - Neural Networks and Deep Learning StatusFinishedAuthorAndrew NgLinkwww.coursera.org/learn/neural-networks-deep-learning/home/welcomeTypeOnline SessionBlogwikidocs.net/35425Codehttps://github.com/Kulbear/deep-learning-coursera/ Introduction to Deep Learning What is a Neura..."/><meta property="og:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:url" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta name="twitter:image" content="https://eldanscript.github.io/llm-wiki/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="eldanscript.github.io/llm-wiki"/><meta property="og:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/learninginaws/coursera-deeplearning1---neural-networks-and-deep--249c9400309b432d9699c467d55e71ae"/><meta property="twitter:url" content="https://eldanscript.github.io/llm-wiki/4.archive/notion-archive/learninginaws/coursera-deeplearning1---neural-networks-and-deep--249c9400309b432d9699c467d55e71ae"/><link rel="icon" href="../../../static/icon.png"/><meta name="description" content="🚅 Coursera DeepLearning1 - Neural Networks and Deep Learning StatusFinishedAuthorAndrew NgLinkwww.coursera.org/learn/neural-networks-deep-learning/home/welcomeTypeOnline SessionBlogwikidocs.net/35425Codehttps://github.com/Kulbear/deep-learning-coursera/ Introduction to Deep Learning What is a Neura..."/><meta name="generator" content="Quartz"/><link href="../../../index-47d9ba67.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-735924e0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-589c1cea.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-bbc3f7c0.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-2911f5d1.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-e427079e.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-53b25b2b.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-c93c6a44.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-8a06014f.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-77d6a441.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-6ee21cee.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-1ea6ad18.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-34bdfded.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-788c9ca3.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-642859cd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-4abc06bd.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-274a3dfe.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-94cb6c84.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-58d5ff56.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../component-7262b5a7.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-a5c806d2.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="../../../static/resource-style-6bd36952.css" rel="stylesheet" type="text/css" data-persist="true"/><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../../../prescript-2bfc6315.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../../../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="4.archive/notion-archive/learninginaws/coursera-deeplearning1---neural-networks-and-deep--249c9400309b432d9699c467d55e71ae" data-basepath="/llm-wiki"><div id="quartz-root" class="page" data-frame="default"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../../..">Raingent LLM Wiki</a></h2><div class="mobile-only"><div class="spacer"></div></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 0.5rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button" aria-label="검색" aria-expanded="false"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>검색</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="검색어를 입력하세요" placeholder="검색어를 입력하세요"/><div class="search-layout" data-preview="true" data-field-priority="[&quot;title&quot;,&quot;content&quot;,&quot;tags&quot;]"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode" aria-label="다크 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="다크 모드"><title>다크 모드</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="라이트 모드"><title>라이트 모드</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode" aria-label="리더 모드"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="리더 모드"><title>리더 모드</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer nav-files-container" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a2, b2) => {\n    if (!a2.isFolder &amp;&amp; !b2.isFolder || a2.isFolder &amp;&amp; b2.isFolder) {\n      return (a2.displayName || \&quot;\&quot;).localeCompare(b2.displayName || \&quot;\&quot;, void 0, {\n        numeric: true,\n        sensitivity: \&quot;base\&quot;\n      });\n    }\n    if (!a2.isFolder &amp;&amp; b2.isFolder) {\n      return 1;\n    }\n    return -1;\n  }&quot;,&quot;filterFn&quot;:&quot;(node) => node.slugSegment !== \&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;(node) => {\n    return node;\n  }&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1778" aria-label="Explorer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1778" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#" class="nav-file-title tree-item-self"></a></li></template><template id="template-folder"><li><div class="folder-container nav-folder-title tree-item-self"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon nav-folder-collapse-indicator collapse-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content tree-item-children"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/">4.Archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/">notion-archive</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../../4.archive/notion-archive/learninginaws/">LearningInAWS</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Coursera DeepLearning1 - Neural Networks and Deep  249c9400309b432d9699c467d55e71ae</a></div></nav><h1 class="article-title">Coursera DeepLearning1 - Neural Networks and Deep  249c9400309b432d9699c467d55e71ae</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T10:12:15.932Z">2026년 6월 06일</time><span>16 min read</span></p></div></div><article class="popover-hint"><div class="markdown-preview-view markdown-rendered"><p>🚅</p>
+<h1 id="coursera-deeplearning1---neural-networks-and-deep-learning">Coursera DeepLearning1 - Neural Networks and Deep Learning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#coursera-deeplearning1---neural-networks-and-deep-learning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/arrow-circle-down_gray-6.svg" alt/>Status</td><td>Finished</td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/list_gray-6.svg" alt/>Author</td><td>Andrew Ng</td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/link_gray-29.svg" alt/>Link</td><td><a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome" class="external external-link">https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/arrow-circle-down_gray-6.svg" alt/>Type</td><td>Online Session</td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/link_gray-29.svg" alt/>Blog</td><td><a href="https://wikidocs.net/35425" class="external external-link">https://wikidocs.net/35425<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr><tr><td><img src="../../../4.archive/notion-archive/learninginaws/attachments/link_gray-29.svg" alt/>Code</td><td><a href="https://github.com/Kulbear/deep-learning-coursera/" class="external external-link">https://github.com/Kulbear/deep-learning-coursera/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></td></tr></tbody></table></div>
+<p><a href="#eeae3075-05f1-4b2d-93d8-97bd1c89961a" class="internal internal-link alias">Introduction to Deep Learning</a></p>
+<p><a href="#a1dc56d4-d5b6-4348-999d-4760c6098a8d" class="internal internal-link alias">What is a Neural Network (신경망)?</a></p>
+<p><a href="#fc4755dd-d674-467c-986d-4241d5a3ccb7" class="internal internal-link alias">Single Neural Network</a></p>
+<p><a href="#a1e2bbff-0eb3-4c53-813b-83da1b0757d1" class="internal internal-link alias">Multiple Neural Network</a></p>
+<p><a href="#e06eb045-d3b2-45fd-b981-578852ecb3a9" class="internal internal-link alias">Supervised Learning with Neural Networks</a></p>
+<p><a href="#fb958d52-af17-4a45-8b27-7adc6f5f8dc4" class="internal internal-link alias">Supervised Learning type</a></p>
+<p><a href="#676be151-ef1a-4ba5-852b-5b9143851c47" class="internal internal-link alias">Structured vs Unstructured Data</a></p>
+<p><a href="#12bb74be-d4ec-4f9a-802f-6ca508896c45" class="internal internal-link alias">Why is Deep Learning taking off?</a></p>
+<p><a href="#51214cd3-0f2f-4b38-b62c-9764f35643ac" class="internal internal-link alias">Neural Network Basics</a></p>
+<p><a href="#3043bd45-3332-4be9-a816-2d3cf88139ec" class="internal internal-link alias">Logistics Regression as a Neural Network</a></p>
+<p><a href="#ebf5a9be-c750-423e-ae2f-75dc917da349" class="internal internal-link alias">Binary Regression</a></p>
+<p><a href="#8bc24da2-e24c-4aff-bcd0-27d7b18f7a59" class="internal internal-link alias">Logistics Regression</a></p>
+<p><a href="#7bc97beb-5430-43cf-a08b-58f209b9d843" class="internal internal-link alias">Logistics Regression Cost Function</a></p>
+<p><a href="#bf130ea0-153a-412b-b5a3-db0e54416468" class="internal internal-link alias">Gradient Descent</a></p>
+<p><a href="#3a7586fb-98d6-4aff-9c2e-d9b77deeab0e" class="internal internal-link alias">Derivatives</a></p>
+<p><a href="#2fc4769c-a543-45d0-8c88-7ebdf638bc76" class="internal internal-link alias">Computation Graph</a></p>
+<p><a href="#ebd2cbed-f6fb-4605-be87-84d8b5e2063d" class="internal internal-link alias">Computing Derivatives</a></p>
+<p><a href="#a7a2deb6-fd94-4a99-aeed-54c9f0ad1443" class="internal internal-link alias">Logistics Regression Gradient Descent</a></p>
+<p><a href="#7a33b532-b614-4760-a0d1-a1f80807511f" class="internal internal-link alias">Gradient descent on m example</a></p>
+<p><a href="#1831f618-3f3f-4206-82e9-498b08b8d91c" class="internal internal-link alias">Python and Vectorization</a></p>
+<p><a href="#bead7d92-1837-47e7-a94b-cb320c8597b9" class="internal internal-link alias">Vectorization</a></p>
+<p><a href="#dd718a0e-92e1-4f4c-9ad3-3a00dee0ccd1" class="internal internal-link alias">Vectorizing Logistic Regression</a></p>
+<p><a href="#77d225fe-65a2-44f1-9d3f-df98839d7126" class="internal internal-link alias">Vectorizing Logistic Regression’s Gradient Computation</a></p>
+<p><a href="#dca8c944-b223-4003-b049-8be748f3eecb" class="internal internal-link alias">Broadcasting in Python</a></p>
+<p><a href="#743d852d-43ab-44d1-a8f1-184c163d6a12" class="internal internal-link alias">A note on python numpy vectors</a></p>
+<p><a href="#0009fb52-feb8-429f-979f-9c3dd2a5e7be" class="internal internal-link alias">Shallow Neural Network</a></p>
+<p><a href="#70c73ac0-cf15-4fb1-ac30-7666279e06cb" class="internal internal-link alias">Neural Network Overview</a></p>
+<p><a href="#44e4c52e-9bc6-42a0-b5b1-1a66c92b7da5" class="internal internal-link alias">Neural Network</a></p>
+<p><a href="#37fcd3b9-2fee-4f5f-b336-de388492575c" class="internal internal-link alias">Layer</a></p>
+<p><a href="#cd4a0726-ea66-4ada-a99c-ada03f0460cd" class="internal internal-link alias">Neural Network Representation</a></p>
+<p><a href="#036936ad-50ea-4e00-8be8-c782e303e326" class="internal internal-link alias">Input Layer</a></p>
+<p><a href="#95518519-a06d-4fb6-81ae-b0f082b62fe3" class="internal internal-link alias">Single Hidden Layer</a></p>
+<p><a href="#a297b8d4-357e-4ff4-93bc-f32f7f4670ab" class="internal internal-link alias">Final Layer (Output Layer)</a></p>
+<p><a href="#79c8df07-f0af-453f-bd01-787e368cbe73" class="internal internal-link alias">Computing a Neural Network’s Output</a></p>
+<p><a href="#dba3604d-54cb-4f4c-a656-d74664277195" class="internal internal-link alias">Logistics regression</a></p>
+<p><a href="#143c43cf-52c4-4dc8-8532-18028b222466" class="internal internal-link alias">Vectorizing across multiple examples</a></p>
+<p><a href="#2965a7e5-eb79-414e-8906-9e598ecdc0dd" class="internal internal-link alias">Activation Functions</a></p>
+<p><a href="#9f61e836-ed3b-4794-b31c-0dd9d80b32dd" class="internal internal-link alias">Sigmoid function</a></p>
+<p><a href="#40a9084a-31ef-4b8c-a657-fc27c1ed730b" class="internal internal-link alias">Tangent function or Hyperbolic tangent function</a></p>
+<p><a href="#58b5b65a-74ba-406c-bf91-66daf02a36ed" class="internal internal-link alias">ReLU function</a></p>
+<p><a href="#c8f7c0b7-f4f0-4dd1-ad33-578667ca8c84" class="internal internal-link alias">Leaky ReLU function</a></p>
+<p><a href="#c5bcf8d8-17f3-44e5-81f9-1ae027ab05ed" class="internal internal-link alias">Non-Linear Activation Functions</a></p>
+<p><a href="#086a0d8a-59f3-40ce-bddd-142b4c166d2d" class="internal internal-link alias">Derivatives of Activation Functions</a></p>
+<p><a href="#a343d3ad-0d33-4496-b234-f01376f658eb" class="internal internal-link alias">Gradient Descent for Neural Networks</a></p>
+<p><a href="#e6746a93-1fc4-4167-9db2-9d180700b9ad" class="internal internal-link alias">Backpropagation Intuition</a></p>
+<p><a href="#454b9819-1545-40d2-b106-83a07ec1349c" class="internal internal-link alias">Random Initialization</a></p>
+<p><a href="#0a26a5a2-fbe2-47f3-b01e-6261c643cf81" class="internal internal-link alias">Deep Neural Network</a></p>
+<p><a href="#6eeed184-aca9-455f-a00f-92d346fe2b15" class="internal internal-link alias">Deep L-Layer Neural Network</a></p>
+<p><a href="#367ed45f-6d8b-4844-bc67-109479255f79" class="internal internal-link alias">Forward Propagation in a Deep Network</a></p>
+<p><a href="#b6aa351f-74ec-4999-899e-96331eafd221" class="internal internal-link alias">Getting your Matrix Dimension Right</a></p>
+<p><a href="#056f4580-dae8-4759-aa4c-8fe58c8e6950" class="internal internal-link alias">Why Deep Representations</a></p>
+<p><a href="#37980767-2e4a-4e34-a45a-f10f77bbd0e7" class="internal internal-link alias">Building Blocks of Deep Neural Networks</a></p>
+<p><a href="#1d318e5f-ee26-4187-8fc3-638eb31a6b5b" class="internal internal-link alias">Forward and Backward Propagation</a></p>
+<p><a href="#17535061-77ca-4baa-ae8d-50b3858aae67" class="internal internal-link alias">Parameters vs Hyperparameters</a></p>
+<p><a href="#04fa1ce8-86a8-4cda-ab17-d67c51c7c655" class="internal internal-link alias">What does this have to do with the brain?</a></p>
+<p><a href="#048429c8-4957-417e-81b0-a2d0cff64b07" class="internal internal-link alias">FAQ</a></p>
+<p><a href="#9156bd36-74db-4b3c-a4b0-e17250872821" class="internal internal-link alias">Interview</a></p>
+<p><a href="#b8139a83-480d-41fa-80c2-a0cc15f088a4" class="internal internal-link alias">Code</a></p>
+<p><a href="#db500e9a-9f5e-4e9f-8575-0d2b16ed98b0" class="internal internal-link alias">Accurracy Comparison</a></p>
+<p><a href="#aaa3ac9f-4024-4899-9946-3be932f7cc91" class="internal internal-link alias">Additional Resource</a></p>
+<p><a href="#0d93027b-1e5b-41b3-85f3-246e7d7158fa" class="internal internal-link alias">Neural Networks Basic</a></p>
+<p><a href="#2148253a-2c57-4a25-ba64-c8183eac31e8" class="internal internal-link alias">Shallow Neural Networks</a></p>
+<p><a href="#6679ede6-ec3f-4ee5-af73-634597f92b75" class="internal internal-link alias">Neural Networks and Deep Learning</a></p>
+<h1 id="introduction-to-deep-learning">Introduction to Deep Learning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#introduction-to-deep-learning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="what-is-a-neural-network-신경망">What is a Neural Network (신경망)?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-is-a-neural-network-신경망" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-edab24fb38c842e08c7073efecbda539" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-edab24fb38c842e08c7073efecbda539">🎮Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl-1stweek-what-is-a-nn_.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl-1stweek-what-is-a-nn_.pptx">NN and DL-1stWeek-What-is-a-NN_.pptx</a></p>
+<p>💡</p>
+<p>신경세포가 동작하는 방식에서 영감을 얻어 개발된 <strong><span class="text-highlight">learning algorithm</span></strong></p>
+<ul>
+<li><em><strong>NN은 학습 알고리즘으로 신경 세포(neuron)의 동작 방식을 모방하고 있다</strong></em></li>
+</ul>
+<h3 id="single-neural-network">Single Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#single-neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Input → Neuron → Output</p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-132.png" alt/></a></p>
+</li>
+<li>
+<p>Neruron</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-1.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-1.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-1-12.png" alt/></a></p>
+<ul>
+<li>Housing Price Prediction</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-2.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-2.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-2-9.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-3.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-3.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-3-9.png" alt/></a></p>
+<ul>
+<li>
+<p>Activation Function</p>
+<ul>
+<li>
+<p>입력 신호의 총합을 출력신호로 변환하는 함수.</p>
+</li>
+<li>
+<p>입력 신호의 총합이 활성화를 일으키는지 정하는 역할을 한다.</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-4.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-4.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-4-8.png" alt/></a></p>
+</li>
+<li>
+<p><a href="https://deepinsight.tistory.com/113" class="external external-link">Activation Function Type<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-5.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-5.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-5-7.png" alt/></a></p>
+<h3 id="multiple-neural-network">Multiple Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multiple-neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p><span class="text-highlight">**Taking**</span> many of the single neurons and <span class="text-highlight">**stacking**</span> them together</p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-6.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-6.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-6-6.png" alt/></a></p>
+</li>
+<li>
+<p>Housing Price Prediction</p>
+<ul>
+<li>
+<p>4 Input features</p>
+</li>
+<li>
+<p>Hidden Units (Circlue) takes its inputs all four input feature (네가지 feature를 모두 사용)</p>
+</li>
+<li>
+<p>neural networks are remarkably good at <span class="text-highlight">**figuring out functions**</span> that accurately <span class="text-highlight">map from x to y</span></p>
+</li>
+</ul>
+</li>
+<li>
+<p><em><strong>NN은 input과 output의 mapping 함수를 정확하게 알아내기에 유용하다.</strong></em></p>
+</li>
+<li>
+<p><em><strong>Supervised learning (지도학습)에서 유용하고, 강력하다.</strong></em></p>
+</li>
+<li>
+<p>Neuron computes a linear function ( z = Wx + b ) followed by an activation function</p>
+</li>
+</ul>
+<h2 id="supervised-learning-with-neural-networks">Supervised Learning with Neural Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#supervised-learning-with-neural-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-99289ff3338d4ad5a4edafa348ac7b7e" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-99289ff3338d4ad5a4edafa348ac7b7e">🔮Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl-1stweek-slwithnn.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl-1stweek-slwithnn.pptx">NN and DL-1stWeek-SLwithNN.pptx</a></p>
+<p>💡</p>
+<h3 id="supervised-learning-type">Supervised Learning type<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#supervised-learning-type" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Supervised Learning problem은 Regression(회귀), Classification(분류) category로 나눌 수 있다.</p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-7.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-7.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-7-7.png" alt/></a></p>
+</li>
+<li>
+<p>Type</p>
+<ul>
+<li>
+<p>CNN : Convolution Neural Network</p>
+</li>
+<li>
+<p>RNN : Recurrent Neural Network</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-8.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-8.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-8-7.png" alt/></a></p>
+<h3 id="structured-vs-unstructured-data">Structured vs Unstructured Data<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#structured-vs-unstructured-data" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Structured Data</p>
+<ul>
+<li>
+<p>Refers to things that has a <strong>defined meaning</strong> such as price, age</p>
+</li>
+<li>
+<p>Categorized as quantitized data (정량적 데이터로 분류)</p>
+</li>
+<li>
+<p>Exists in predefined format</p>
+</li>
+<li>
+<p>Clearly defined and searchable types of data</p>
+</li>
+<li>
+<p>Stored in data warehouse</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-9.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-9.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-9-6.png" alt/></a></p>
+<ul>
+<li>
+<p>Unstructured Data</p>
+<ul>
+<li>
+<p>Refers to thing like pixel, raw audio, text</p>
+</li>
+<li>
+<p>Categorized as qualitative data (질적 데이터로 분류)</p>
+</li>
+<li>
+<p>Difficult to deconstruct because it has no predefined data model</p>
+</li>
+<li>
+<p>Usually stored in its native format</p>
+</li>
+<li>
+<p>Stored in data lakes</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-10.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-10.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-10-6.png" alt/></a></p>
+</li>
+</ul>
+<h2 id="why-is-deep-learning-taking-off">Why is Deep Learning taking off?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-is-deep-learning-taking-off" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-6010889d13ea41c6a2b353ce582e3429" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-6010889d13ea41c6a2b353ce582e3429">⛳Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl-1stweek-whydltakingoff.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl-1stweek-whydltakingoff.pptx">NN and DL-1stWeek-WhyDLTakingOff.pptx</a></p>
+<p>💡</p>
+<p>Scale drives deep learning progress</p>
+<ul>
+<li>
+<p>2 consideration for high level of performance</p>
+<ul>
+<li>
+<p>Being able to a big enough neural network</p>
+</li>
+<li>
+<p>Huge amount of data</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-11.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-11.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-11-6.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-12.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-12.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-12-5.png" alt/></a></p>
+<hr/>
+<h1 id="neural-network-basics">Neural Network Basics<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-network-basics" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="logistics-regression-as-a-neural-network">Logistics Regression as a Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#logistics-regression-as-a-neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="binary-regression">Binary Regression<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#binary-regression" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/copy-of-audio-description-99dfa77056f24e33bf93f626816d606e" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/copy-of-audio-description-99dfa77056f24e33bf93f626816d606e">🏑Copy of Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_binaryclassification.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_binaryclassification.pptx">NN and DL - 2ndWeek - BinaryClassification.pptx</a></p>
+<p>💡</p>
+<p>Logistic regression(로지스틱 회귀) is an alogrithm for binary classification</p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-13.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-13.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-13-5.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-14.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-14.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-14-4.png" alt/></a></p>
+<ul>
+<li>
+<p>(x,y)</p>
+<ul>
+<li>x : x-dimensional feature vector / y : the label</li>
+</ul>
+</li>
+<li>
+<p>m : training sets (lower case)</p>
+<ul>
+<li>(x1, y1), … (xm, ym)</li>
+</ul>
+</li>
+<li>
+<p>M (M train)</p>
+</li>
+<li>
+<p>X : stacking training set in columns</p>
+<ul>
+<li>
+<p>X has M columns : M is the number of training set</p>
+</li>
+<li>
+<p>nx by m dimenisonal matrix</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Y : stacking labels in columns</p>
+<ul>
+<li>1 by m dimenisonal matrix</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-15.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-15.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-15-4.png" alt/></a></p>
+<h3 id="logistics-regression">Logistics Regression<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#logistics-regression" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>[</p>
+<p>회귀 모델에서 ‘회귀’란 무엇인가?</p>
+<p>페이스북에서 ‘regression model에서 regression 이라는 용어는 잘못되었다’ 는 글( <a href="https://www.facebook.com/dgtgrade/posts/1153483458043852" class="external external-link">https://www.facebook.com/dgtgrade/posts/1153483458043852<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>) 를 봤습니다. 우선 ‘회귀(regression)’ 라는 단어가 일상에서 잘 안쓰이는 단어이고 직관적이지 못하다는 점은 저도 공감합니다. 수학이나 과학 용어 중에는 이렇게 비직관적이고 어려운 용어들이 많이 있죠. 따라서 이런 용어들을 좀 더 쉬운 단어로 바꿔야 한다고 생각합니다.</p>
+<p><img src="https://t1.daumcdn.net/brunch/static/icon/favicon/favicon64_150520.ico" alt/><a href="https://brunch.co.kr/@gimmesilver/17" class="external external-link">https://brunch.co.kr/@gimmesilver/17<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/r1280x0.jpeg" alt/>](<a href="https://brunch.co.kr/@gimmesilver/17" class="external external-link">https://brunch.co.kr/@gimmesilver/17<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<p>[</p>
+<p>로지스틱 회귀</p>
+<p><img src="https://ratsgo.github.io/public/favicon.ico" alt/><a href="https://ratsgo.github.io/machine%20learning/2017/04/02/logistic/" class="external external-link">https://ratsgo.github.io/machine%20learning/2017/04/02/logistic/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>](<a href="https://ratsgo.github.io/machine%20learning/2017/04/02/logistic/" class="external external-link">https://ratsgo.github.io/machine%20learning/2017/04/02/logistic/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-4927f7628ee0421785c8a9a55104bfa7" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-4927f7628ee0421785c8a9a55104bfa7">🚓Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-2ndweek_-_logistics_regression.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-2ndweek_-_logistics_regression.pptx">NN and DL -2ndWeek - Logistics Regression.pptx</a></p>
+<ul>
+<li>
+<p>Y hat : estimation of Y</p>
+<ul>
+<li>
+<p>X : dimensional vector</p>
+</li>
+<li>
+<p>w : parameters of logistics regression</p>
+</li>
+<li>
+<p>b : real number</p>
+</li>
+<li>
+<p>w transpose * X + b</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Learning parameters w and b → Y hat becomes a good estimate of the chane of Y being equal to 1</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-16.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-16.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-16-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Not good algorithm for binary classification</p>
+<ul>
+<li>
+<p>Y hat is difficult to be between 0 and 1</p>
+</li>
+<li>
+<p>w transpose * X + b > 1 or &lt; 0</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Sigmoid function</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-17.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-17.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-17-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Notation</p>
+<ul>
+<li>
+<p>Programming neural networks : keep w and b separate</p>
+<ul>
+<li>b corresponds to an inter-spectrum (spectrum : 복합적인 신호를 가진 것을 1~2가지 신호에 따라 분해해서 표시하는 기술)</li>
+</ul>
+</li>
+<li>
+<p>Alternative notation : define an extra feature (X0 = 1)</p>
+<ul>
+<li>
+<p>Y hat : sigma of (theta transpose * X)</p>
+</li>
+<li>
+<p>theta 0 : b, theta 1 to nx : w</p>
+</li>
+<li>
+<p>easier to just keep B and W as seprate</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-18.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-18.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-18-3.png" alt/></a></p>
+<h3 id="logistics-regression-cost-function">Logistics Regression Cost Function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#logistics-regression-cost-function" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-e0418c34c27840f98942910bcb85e59e" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-e0418c34c27840f98942910bcb85e59e">🧻Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/logistic_regression_cost_function.pdf" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/logistic_regression_cost_function.pdf">Logistic_Regression_Cost_Function.pdf</a></p>
+<p>💡</p>
+<p>To <span class="text-highlight">**train the parameters w and b**</span> of the logistic regression model, need to <span class="text-highlight">**define a cost function**</span></p>
+<ul>
+<li>y hat</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-19.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-19.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-19-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Loss (error) function</p>
+<ul>
+<li>
+<p>the square error or one half a square error → in logistics regression don’t usually do this</p>
+</li>
+<li>
+<p>The optimization problem becomes <a href="https://skyil.tistory.com/33" class="external external-link">non-convex<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> → <strong>end up with multiple local optima</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-20.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-20.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-20-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-21.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-21.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-21-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Loss function in logistics regression</p>
+<ul>
+<li>
+<p>Plays a similar role as squared error</p>
+</li>
+<li>
+<p>Convex optimization problem</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-22.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-22.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-22-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Sigmoid function &lt; 1</p>
+</li>
+<li>
+<p>If y = 1 : y hat should be as big as possible</p>
+</li>
+<li>
+<p>If y = 0 : (1 - y hat) should be large → y hat should be as small as possible</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Cost function (J)</p>
+<ul>
+<li>
+<p><strong>The cost of parameters : measures on entire training set</strong></p>
+</li>
+<li>
+<p>Find parameters w and b that minimize the overall costs function</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-23.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-23.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-23-3.png" alt/></a></p>
+</li>
+</ul>
+<h3 id="gradient-descent">Gradient Descent<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gradient-descent" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-c3a56b870f924b2789fceefd29e43dc2" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-c3a56b870f924b2789fceefd29e43dc2">🎢Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_gradientdescent.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_gradientdescent.pptx">NN and DL - 2ndWeek - GradientDescent.pptx</a></p>
+<ul>
+<li>
+<p>Cost function J(w,b)</p>
+<ul>
+<li>
+<p>J is a <strong>convex</strong> function</p>
+</li>
+<li>
+<p>Where initialize, <strong>get to the same point</strong> or roughly same point</p>
+</li>
+<li>
+<p>Usually initialize value to 0</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-24.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-24.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-24-3.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-25.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-25.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-25-3.png" alt/></a></p>
+<ul>
+<li>
+<p>alpha (learning rate) : controls how big a step on each iteration or gradient descent</p>
+</li>
+<li>
+<p>derivate dj(w)/dw : update or change to the parameters → dw as variable name in code</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-26.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-26.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-26-3.png" alt/></a></p>
+<h3 id="derivatives">Derivatives<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#derivatives" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-aa2f119e06a849f39b8f12128dccb909" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-aa2f119e06a849f39b8f12128dccb909">🌔Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_derivatives.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_derivatives.pptx">NN and DL - 2ndWeek - Derivatives.pptx</a></p>
+<h3 id="computation-graph">Computation Graph<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#computation-graph" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-4c19b95cf2f94359ad745f5a75bd3e20" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-4c19b95cf2f94359ad745f5a75bd3e20">⏰Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_computation_graph.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_computation_graph.pptx">NN and DL - 2ndWeek - Computation Graph.pptx</a></p>
+<ul>
+<li>organized in terms of a forward pass or a forward propagation step</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-27.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-27.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-27-3.png" alt/></a></p>
+<h3 id="computing-derivatives">Computing Derivatives<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#computing-derivatives" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>organized in terms of a backward pass or a backward propagation step</p>
+</li>
+<li>
+<p>dvar : final output variable that really care about or optimize</p>
+</li>
+<li>
+<p>chain rule for calculus : 합성 함수의 도함수 공식 사용</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-28.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-28.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-28-3.png" alt/></a></p>
+<h3 id="logistics-regression-gradient-descent">Logistics Regression Gradient Descent<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#logistics-regression-gradient-descent" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-76b2d0300a344ad6a11afa302ebaadaf" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-76b2d0300a344ad6a11afa302ebaadaf">🎽Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_logisticsregressiongradientdescent.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_logisticsregressiongradientdescent.pptx">NN and DL - 2ndWeek - LogisticsRegressionGradientDescent.pptx</a></p>
+<ul>
+<li>
+<p>Logistic regression</p>
+<ul>
+<li>
+<p>a : output of logistic regression</p>
+</li>
+<li>
+<p>y : ground truth label</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-29.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-29.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-29-3.png" alt/></a></p>
+<h3 id="gradient-descent-on-m-example">Gradient descent on m example<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gradient-descent-on-m-example" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>dJ/dw1 = dw1 - y : <span class="text-highlight">**공식 유도 과정 재 정리 필요**</span></p>
+</li>
+<li>
+<p>Logistic regression derivatives</p>
+<ul>
+<li>
+<p>dL/dz = a - y, dw1 = x1<em>dz, dw2 = x2</em>dz, db = dz</p>
+</li>
+<li>
+<p>dw1 = w1 - (alpha*dw1), alpha is a learning rate</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-30.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-30.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-30-3.png" alt/></a></p>
+<h2 id="python-and-vectorization">Python and Vectorization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#python-and-vectorization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="vectorization">Vectorization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vectorization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-e165db324bba48348549bc3b5390a6bd" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-e165db324bba48348549bc3b5390a6bd">🌠Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_vectorization.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_vectorization.pptx">NN and DL - 2ndWeek - vectorization.pptx</a></p>
+<p>💡</p>
+<p>The art of getting rid of explicit for loops in code → Whenever possible, <span class="text-highlight">**avoid explicit for-loops**</span></p>
+<ul>
+<li>
+<p>Non-vectorized</p>
+<ul>
+<li>For 1M data set → calculation time 481ms</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-31.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-31.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-31-3.png" alt/></a></p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-32.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-32.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-32-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Vectorized</p>
+<ul>
+<li>
+<p>compute W transpose * X directly</p>
+</li>
+<li>
+<p>In Python use numpy dot function : <a href="https://codetorial.net/numpy/functions/numpy_dot.html" class="external external-link">https://codetorial.net/numpy/functions/numpy_dot.html<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</li>
+<li>
+<p>For 1M data set → calculation time 1.5ms</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-33.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-33.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-33-3.png" alt/></a></p>
+</li>
+<li>
+<p>Numpy dot product</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-34.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-34.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-34-3.png" alt/></a></p>
+<ul>
+<li>Vectors and matrix valued functions</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-35.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-35.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-35-3.png" alt/></a></p>
+<h3 id="vectorizing-logistic-regression">Vectorizing Logistic Regression<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vectorizing-logistic-regression" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-8b372854f47e47d885006feea42c6b89" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-8b372854f47e47d885006feea42c6b89">🏏Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_vectorizinglogisticregression.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_vectorizinglogisticregression.pptx">NN and DL - 2ndWeek - VectorizingLogisticRegression.pptx</a></p>
+<ul>
+<li>
+<p>Vectorize the implementation of logistic regression</p>
+<ul>
+<li>Implement a single elevation of grading descent with respect to an entire training set without using even a single explicit for loop</li>
+</ul>
+</li>
+<li>
+<p>X (training input)</p>
+<ul>
+<li>stack together in different columns → nx by m matrix</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-36.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-36.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-36-3.png" alt/></a></p>
+<ul>
+<li>
+<p>Compute Z all in one step → w transpose * X + b vector</p>
+<ul>
+<li>Z = np.dot(wt, X) + b</li>
+</ul>
+</li>
+<li>
+<p>Compute A</p>
+<ul>
+<li>Input Z to sigmoid function</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-37.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-37.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-37-3.png" alt/></a></p>
+<h3 id="vectorizing-logistic-regressions-gradient-computation">Vectorizing Logistic Regression’s Gradient Computation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vectorizing-logistic-regressions-gradient-computation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Compute dZ</p>
+<ul>
+<li>dZ = A - Y</li>
+</ul>
+</li>
+<li>
+<p>Compute dw, db</p>
+<ul>
+<li>
+<p>dw = (1/m) * (np.dot(X, dz.T))</p>
+</li>
+<li>
+<p>db = (1/m) * np.sum(dZ)</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-38.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-38.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-38-2.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-39.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-39.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-39-2.png" alt/></a></p>
+<ul>
+<li>Implementing</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-40.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-40.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-40-1.png" alt/></a></p>
+<ul>
+<li>Implementing without loop</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-41.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-41.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-41-1.png" alt/></a></p>
+<h3 id="broadcasting-in-python">Broadcasting in Python<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#broadcasting-in-python" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-00c856ed98964768b6c6e743a1feb9e4" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-00c856ed98964768b6c6e743a1feb9e4">🕋Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_broadcastingpython.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_broadcastingpython.pptx">NN and DL - 2ndWeek - BroadcastingPython.pptx</a></p>
+<ul>
+<li>
+<p>A.sum( axis = 0 ) → sum vertically</p>
+<ul>
+<li>axis = 1 → sum horizontally</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-42.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-42.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-42-1.png" alt/></a></p>
+<ul>
+<li>
+<p><a href="https://sacko.tistory.com/16" class="external external-link">Broadcasting<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<ul>
+<li>
+<p>Numpy에서 차원의 크기가 다른 array 간의 산술 연산을 가능하게 처리하는 것</p>
+</li>
+<li>
+<p>technique to run code faster</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-43.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-43.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-43-1.png" alt/></a></p>
+<h3 id="a-note-on-python-numpy-vectors">A note on python numpy vectors<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a-note-on-python-numpy-vectors" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-93fa43f7647c49dd83a7a3ca83e3d0e6" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-93fa43f7647c49dd83a7a3ca83e3d0e6">🚙Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_numpyvectors.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_2ndweek_-_numpyvectors.pptx">NN and DL - 2ndWeek - NumpyVectors.pptx</a></p>
+<ul>
+<li>
+<p>Rank 1 array</p>
+<ul>
+<li>
+<p>np.random.randn(5) or thing(5,)</p>
+</li>
+<li>
+<p>neither a row nor a column vector</p>
+</li>
+<li>
+<p>do not use rank 1 arrys when implementing logistic regression</p>
+</li>
+</ul>
+</li>
+<li>
+<p>column vaector</p>
+<ul>
+<li>a.shape = (5,1)</li>
+</ul>
+</li>
+<li>
+<p>row vector</p>
+<ul>
+<li>a.shape = (1,5)</li>
+</ul>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-44.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-44.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-44-1.png" alt/></a></p>
+<ul>
+<li>
+<ul>
+<li>
+<p>(elemental-wise multiplication) vs <a href="http://np.dot" class="external external-link">np.dot<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> (matrix multiplication)</p>
+<ul>
+<li><a href="https://dodonam.tistory.com/m/134?category=905987" class="external external-link">elemental-wise multiplication<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> : 행렬의 원소끼리만 곱한 것</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">a</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> np.random.randn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">4,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># a.shape = (4, 3)</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">b</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> np.random.randn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">3,</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value"> 2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;" data-token-type="comment"># b.shape = (3, 2)</span></span>
+<span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">c</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> a</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">*</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">b</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">The</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> computation</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> cannot</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> happen</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> because</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> the</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> sizes</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> don't match. It's</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> going</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> to</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> be</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;Error&quot;!</span></span></code></pre></figure>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">If</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> you</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> try</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> &quot;c = np.dot(a,b)&quot;,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> get</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> c.shape</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (4, </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;" data-token-type="value">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></figure>
+<p>💡</p>
+<p>Minimizing the loss corresponds with maximizing logp(y|x)</p>
+<hr/>
+<h1 id="shallow-neural-network">Shallow Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#shallow-neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="neural-network-overview">Neural Network Overview<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-network-overview" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-3cb5fb5512c04858931ae27ddef38950" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-3cb5fb5512c04858931ae27ddef38950">🎽Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_whatisnn.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_whatisnn.pptx">NN and DL - 3rdWeek - WhatIsNN.pptx</a></p>
+<h3 id="neural-network">Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>x : feature → w, b : parameters → compute z → compute a → loss function</p>
+</li>
+<li>
+<p>Form a neural network by stacking together a lot of little sigmoid units</p>
+</li>
+</ul>
+<h3 id="layer">Layer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#layer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item" data-task-char="1">
+<p><input type="checkbox" checked class="checkbox-toggle"/> layer : a-z like calculation</p>
+</li>
+<li class="task-list-item" data-task-char="2">
+<p><input type="checkbox" checked class="checkbox-toggle"/> layer : a like calculation</p>
+</li>
+<li>
+<p>Neural network is taken logistic regression and repeating</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-45.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-45.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-45-1.png" alt/></a></p>
+<h2 id="neural-network-representation">Neural Network Representation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-network-representation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-4e3bcf7e681a40b7b434ac29abf6fc2c" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-4e3bcf7e681a40b7b434ac29abf6fc2c">🕗Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_nnrepresentation.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_nnrepresentation.pptx">NN and DL - 3rdWeek - NNRepresentation.pptx</a></p>
+<h3 id="input-layer">Input Layer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#input-layer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Contains the inputs to the neural network</p>
+</li>
+<li>
+<p>a[0] (activation) = X (input features)</p>
+</li>
+<li>
+<p>dont’ count as layer → layer 0</p>
+</li>
+</ul>
+<h3 id="single-hidden-layer">Single Hidden Layer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#single-hidden-layer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Things in this layer are not seen in the training set</p>
+</li>
+<li>
+<p>a[1] : four dimensional vector, four units, four nodes, four hidden units</p>
+</li>
+<li>
+<p>layer 1</p>
+</li>
+<li>
+<p>associated with parameters w and b</p>
+</li>
+<li>
+<p>w : 4x3 matrix ( 4 units and 3 input features)</p>
+</li>
+<li>
+<p>b : 4x1 vector</p>
+</li>
+</ul>
+<h3 id="final-layer-output-layer">Final Layer (Output Layer)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#final-layer-output-layer" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Responsible for generating the predicted value</p>
+</li>
+<li>
+<p>a[2] = y hat</p>
+</li>
+<li>
+<p>layer 2</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-46.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-46.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-46-1.png" alt/></a></p>
+<h2 id="computing-a-neural-networks-output">Computing a Neural Network’s Output<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#computing-a-neural-networks-output" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-c4969883629e40d4a14254e8f026c966" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-c4969883629e40d4a14254e8f026c966">👔Audio Description</a></p>
+<h3 id="logistics-regression-1">Logistics regression<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#logistics-regression-1" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Represents two steps of computation rows : z and a</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-47.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-47.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-47-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-48.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-48.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-48-1.png" alt/></a></p>
+<ul>
+<li>Node computation</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-49.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-49.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-49-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-50.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-50.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-50-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-51.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-51.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-51-1.png" alt/></a></p>
+<h2 id="vectorizing-across-multiple-examples">Vectorizing across multiple examples<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vectorizing-across-multiple-examples" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-4044603102894293845b02b4c01eba89" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-4044603102894293845b02b4c01eba89">🎇Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_vectorizingacrossmultipleexamples.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_vectorizingacrossmultipleexamples.pptx">NN and DL - 3rdWeek - VectorizingAcrossMultipleExamples.pptx</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-52.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-52.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-52-1.png" alt/></a></p>
+<ul>
+<li>
+<p>m : input feature count</p>
+</li>
+<li>
+<p>n or nx : nodes, units count</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-53.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-53.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-53-1.png" alt/></a></p>
+<ul>
+<li>
+<p>horizontal index : different training example</p>
+</li>
+<li>
+<p>vertical index : different nodes</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-54.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-54.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-54-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-55.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-55.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-55-1.png" alt/></a></p>
+<h2 id="activation-functions">Activation Functions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#activation-functions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-c4501893210342d78b6216e41655fd8d" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-c4501893210342d78b6216e41655fd8d">📗Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_activationfunctions.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_activationfunctions.pptx">NN and DL - 3rdWeek - ActivationFunctions.pptx</a></p>
+<h3 id="sigmoid-function">Sigmoid function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sigmoid-function" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Goes within 0 and 1</p>
+</li>
+<li>
+<p>Use sigmoid when use binary classification</p>
+</li>
+<li>
+<p>If z is very small or very large → gradient or derivative is very small</p>
+</li>
+</ul>
+<h3 id="tangent-function-or-hyperbolic-tangent-function">Tangent function or Hyperbolic tangent function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tangent-function-or-hyperbolic-tangent-function" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>tanh(z) : shifted version of the sigmoid function</p>
+</li>
+<li>
+<p>Goes between -1 and 1</p>
+</li>
+<li>
+<p>Center the data : mean 0 → makes learning a little bit easier</p>
+</li>
+<li>
+<p>Strictly superior than sigmoid → 1 exception is for the output layer (y is either 0 or 1)</p>
+</li>
+<li>
+<p>If z is very small or very large → gradient or derivative is very small</p>
+</li>
+</ul>
+<h3 id="relu-function">ReLU function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#relu-function" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>
+<p>Rectified Linear Unit</p>
+</li>
+<li>
+<p>z > 0 → derivative 1</p>
+</li>
+<li>
+<p>z &lt; 0 → derivative 0 : disadvantage → leaky ReLU</p>
+</li>
+<li>
+<p>If not sure what to use for hidden layer → use the ReLU activation function</p>
+</li>
+<li>
+<p>Learn much faster than tanh</p>
+</li>
+<li>
+<p>Most commonly</p>
+</li>
+</ul>
+<h3 id="leaky-relu-function">Leaky ReLU function<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#leaky-relu-function" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-56.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-56.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-56-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-57.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-57.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-57-1.png" alt/></a></p>
+<p>💡</p>
+<p>by testing these different choices for your application, you’d be better at future-proofing your neural network architecture against the idiosyncracies of your problem, as well as evolutions of the algorithms (문제의 특이성과 알고리즘의 진화에 대비하여 신경망 아키텍처를 미래에 대비하는 데 더 효과적)</p>
+<h2 id="non-linear-activation-functions">Non-Linear Activation Functions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#non-linear-activation-functions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-1fe74829cfab4904aefa75c96d2eaea4" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-1fe74829cfab4904aefa75c96d2eaea4">🔮Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_nonlinearactivationfunctions.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_nonlinearactivationfunctions.pptx">NN and DL - 3rdWeek - NonLinearActivationFunctions.pptx</a></p>
+<ul>
+<li>Linear Activation Functions : just outputing of the input</li>
+</ul>
+<h2 id="derivatives-of-activation-functions">Derivatives of Activation Functions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#derivatives-of-activation-functions" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-5eb35972a706441bba77bb25747b8191" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-5eb35972a706441bba77bb25747b8191">📓Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_derivatives.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_derivatives.pptx">NN and DL - 3rdWeek - Derivatives.pptx</a></p>
+<ul>
+<li>Sigmoid</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-58.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-58.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-58-1.png" alt/></a></p>
+<ul>
+<li>Tanh</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-59.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-59.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-59-1.png" alt/></a></p>
+<ul>
+<li>ReLU and Leaky ReLU</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-60.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-60.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-60-1.png" alt/></a></p>
+<h2 id="gradient-descent-for-neural-networks">Gradient Descent for Neural Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gradient-descent-for-neural-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-de9c2f35ef3f47888a1165e53ebcaad6" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-de9c2f35ef3f47888a1165e53ebcaad6">🥉Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_gradientdescent.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_gradientdescent.pptx">NN and DL - 3rdWeek - GradientDescent.pptx</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-61.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-61.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-61-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-62.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-62.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-62-1.png" alt/></a></p>
+<h2 id="backpropagation-intuition">Backpropagation Intuition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#backpropagation-intuition" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>💡</p>
+<p>오차역전파법 : 복잡한 미분 계산을 ‘수열의 점화식’으로 대체</p>
+<ul>
+<li>Unit error = roundL/roundZ, 유닛의 가중 입력 Zjl가 제곱오차에 미치는 변화율을 표현</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-eed8c3bb3e874a1ea503ba87564d34ba" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-eed8c3bb3e874a1ea503ba87564d34ba">💍Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_backpropagation.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_backpropagation.pptx">NN and DL - 3rdWeek - BackPropagation.pptx</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-63.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-63.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-63-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-64.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-64.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-64-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-65.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-65.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-65-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-66.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-66.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-66-1.png" alt/></a></p>
+<p>💡</p>
+<p>dz[1] : element-wise product</p>
+<h2 id="random-initialization">Random Initialization<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#random-initialization" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-47dedccbbd9d47cc92a0208370876a19" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-47dedccbbd9d47cc92a0208370876a19">🕰️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_randominitialization.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_3rdweek_-_randominitialization.pptx">NN and DL - 3rdWeek - RandomInitialization.pptx</a></p>
+<ul>
+<li>All zero won’t work → All hidden units are symmetric</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-67.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-67.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-67-1.png" alt/></a></p>
+<ul>
+<li>w1 = np.random.randn → Symmetry breaking problem</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-68.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-68.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-68-1.png" alt/></a></p>
+<hr/>
+<h1 id="deep-neural-network">Deep Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deep-neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="deep-l-layer-neural-network">Deep L-Layer Neural Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#deep-l-layer-neural-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-5673a0d4f4ba4d7ca05eec14ac6453da" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-5673a0d4f4ba4d7ca05eec14ac6453da">🎍Audio Description</a></p>
+<ul>
+<li>
+<p>To compute the function using a shallow network circuit</p>
+<ul>
+<li>
+<p>need a large network</p>
+</li>
+<li>
+<p>where we measure size by the number of logic gates in the network</p>
+</li>
+</ul>
+</li>
+<li>
+<p>To compute it using a deep network circuit</p>
+<ul>
+<li>need only an exponentially smaller network</li>
+</ul>
+</li>
+</ul>
+<h2 id="forward-propagation-in-a-deep-network">Forward Propagation in a Deep Network<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#forward-propagation-in-a-deep-network" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-d43b8b77c201476186cf3ed900dae9b0" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-d43b8b77c201476186cf3ed900dae9b0">🧩Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-69.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-69.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-69-1.png" alt/></a></p>
+<h2 id="getting-your-matrix-dimension-right">Getting your Matrix Dimension Right<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#getting-your-matrix-dimension-right" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-7a21615a1d154e5b84e98b5b2adb7da1" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-7a21615a1d154e5b84e98b5b2adb7da1">📇Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_getmartixdim.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_getmartixdim.pptx">NN and DL - 4week - GetMartixDim.pptx</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-70.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-70.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-70-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-71.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-71.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-71-1.png" alt/></a></p>
+<h2 id="why-deep-representations">Why Deep Representations<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#why-deep-representations" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-3f4d8a5613c2439682c11833bd3e6d6e" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-3f4d8a5613c2439682c11833bd3e6d6e">🏷️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_deeprepresentation.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_deeprepresentation.pptx">NN and DL - 4week - DeepRepresentation.pptx</a></p>
+<ul>
+<li>
+<p>Complex hierarchical representation or Compositional representation</p>
+<ul>
+<li>
+<p>Relatively simple functions of the input : where the edge is</p>
+</li>
+<li>
+<p>Get deep in the network : Do surprisingly complex things</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Finding simple things like edge → Building them up → Composing them together to detect more complex things (eyes, nose) → Composing those together to find even more complex things</p>
+</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-72.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-72.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-72-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-73.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-73.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-73-1.png" alt/></a></p>
+<h2 id="building-blocks-of-deep-neural-networks">Building Blocks of Deep Neural Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#building-blocks-of-deep-neural-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-633bbc3d95cd4007a7b7e3d6aed4ccc0" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-633bbc3d95cd4007a7b7e3d6aed4ccc0">💍Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_building_blocks.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_building_blocks.pptx">NN and DL - 4week - Building Blocks.pptx</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-74.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-74.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-74-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-75.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-75.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-75-1.png" alt/></a></p>
+<h2 id="forward-and-backward-propagation">Forward and Backward Propagation<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#forward-and-backward-propagation" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-cdd08414ba2649b699517c0a0b38f7aa" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-cdd08414ba2649b699517c0a0b38f7aa">🎖️Audio Description</a></p>
+<ul>
+<li>Cache : <span class="text-highlight">**records values from the forward propagation**</span> units and <span class="text-highlight">**sends it to the backward propagation**</span> units because it is <span class="text-highlight">**needed to compute the chain rule derivatives**</span></li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-76.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-76.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-76-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-77.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-77.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-77-1.png" alt/></a></p>
+<h2 id="parameters-vs-hyperparameters">Parameters vs Hyperparameters<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#parameters-vs-hyperparameters" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-020d29163bc848c98d8a678afbf3b924" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-020d29163bc848c98d8a678afbf3b924">🛶Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_hyperparameter.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_hyperparameter.pptx">NN and DL - 4week - Hyperparameter.pptx</a></p>
+<ul>
+<li>
+<p>Hyperparameter</p>
+<ul>
+<li>
+<p><span class="text-highlight">**Parameters that control**</span> the ultimate parameter <span class="text-highlight">**W and B**</span></p>
+</li>
+<li>
+<p>learning rate : determeine how parameters evolve, the number of iterations on gradient descent</p>
+</li>
+<li>
+<p>L : the number of hidden layers</p>
+</li>
+<li>
+<p>n[l] : size of the hidden Layer</p>
+</li>
+<li>
+<p>Number of iterations</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>[</p>
+<p>Neural Network Hyperparameters</p>
+<p>Most machine learning algorithms involve “hyperparameters” which are variables set before actually optimizing the model’s parameters. Setting the values of hyperparameters can be seen as model selection, i.e. choosing which model to use from the hypothesized set of possible models. Hyperparameters are often set by hand, selected by some search algorithm, or optimized by some “hyper-learner”.</p>
+<p><img src="http://colinraffel.com/wiki/lib/tpl/dokuwiki/images/favicon.ico" alt/><a href="http://colinraffel.com/wiki/neural_network_hyperparameters" class="external external-link">http://colinraffel.com/wiki/neural_network_hyperparameters<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>](<a href="http://colinraffel.com/wiki/neural_network_hyperparameters" class="external external-link">http://colinraffel.com/wiki/neural_network_hyperparameters<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-78.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-78.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-78-1.png" alt/></a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-79.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-79.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-79-1.png" alt/></a></p>
+<h2 id="what-does-this-have-to-do-with-the-brain">What does this have to do with the brain?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-does-this-have-to-do-with-the-brain" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/audio-description-716040fac2294defb7599af214b6cd6d" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/audio-description-716040fac2294defb7599af214b6cd6d">🌬️Audio Description</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_dowithbrain.pptx" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/nn_and_dl_-_4week_-_dowithbrain.pptx">NN and DL - 4week - DowithBrain.pptx</a></p>
+<ul>
+<li>Cannot avoid the for-loop iteration over the computations among layers</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-80.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-80.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-80-1.png" alt/></a></p>
+<ul>
+<li>Formula correction</li>
+</ul>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/untitled-81.png" class="internal internal-link" data-slug="coursera-deeplearning1---neural-networks-and-deep-/untitled-81.png"><img src="../../../4.archive/notion-archive/learninginaws/attachments/untitled-81-1.png" alt/></a></p>
+<h1 id="faq">FAQ<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#faq" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/introduction-to-deep-learning-d03f3c04718b4dfdbc6c10fc5acbe0a3" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/introduction-to-deep-learning-d03f3c04718b4dfdbc6c10fc5acbe0a3">🎲Introduction to Deep Learning</a></p>
+<h1 id="interview">Interview<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#interview" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/geoffrey-hinton-1c83fa488a9544a1ad49b7a62ba4c29a" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/geoffrey-hinton-1c83fa488a9544a1ad49b7a62ba4c29a">🌌Geoffrey Hinton</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/pieter-abbel-5f39e70a615d43fe9a3d9955fb647d05" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/pieter-abbel-5f39e70a615d43fe9a3d9955fb647d05">🧵Pieter Abbel</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/ian-goodfellow-85a98924850744cf8117e9892e7d2cfc" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/ian-goodfellow-85a98924850744cf8117e9892e7d2cfc">🕠Ian Goodfellow</a></p>
+<h1 id="code">Code<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#code" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="bash" data-theme="github-light github-dark"><code data-language="bash" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">A</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> np.random.randn</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">4,3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">)</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string">,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> B</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> np.sum</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;" data-token-type="function">A,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> axis</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> 1,</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> keepdims</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> True</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;" data-token-type="punctuation">) -</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;" data-token-type="operator">></span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;" data-token-type="string"> B.shape?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (4,1)</span></span></code></pre></figure>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/logistic_regression_with_a_neural_network_mindset-19f00abd06c5440ab151a607b19211ba" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/logistic_regression_with_a_neural_network_mindset-19f00abd06c5440ab151a607b19211ba">🏑Logistic_Regression_with_a_Neural_Network_mindset</a></p>
+<p><a href="../../../coursera-deeplearning1---neural-networks-and-deep-/building-deep-neural-network-711503cc5c5d40cc8fc0f6cf5612c360" class="internal internal-link alias" data-slug="coursera-deeplearning1---neural-networks-and-deep-/building-deep-neural-network-711503cc5c5d40cc8fc0f6cf5612c360">🎨Building Deep Neural Network</a></p>
+<h2 id="accurracy-comparison">Accurracy Comparison<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#accurracy-comparison" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p>2-layer neural network has better performance (72%) than the logistic regression implementation (70%)</p>
+</li>
+<li>
+<p>4-layer neural network has better performance (80%) than your 2-layer neural network (72%)</p>
+</li>
+</ul>
+<h1 id="additional-resource">Additional Resource<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#additional-resource" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="neural-networks-basic">Neural Networks Basic<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-networks-basic" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[</p>
+<p>Implementing a Neural Network from Scratch in Python - An Introduction</p>
+<p>Get the code: To follow along, all the code is also available as an iPython notebook on Github. In this post we will implement a simple 3-layer neural network from scratch. We won’t derive all the math that’s required, but I will try to give an intuitive explanation of what we are doing.</p>
+<p><img src="http://www.wildml.com/favicon.ico" alt/><a href="http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/" class="external external-link">http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/nn-from-scratch-dataset.png" alt/>](<a href="http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/" class="external external-link">http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<p>[</p>
+<p>Why normalize images by subtracting dataset’s image mean, instead of the current image mean in deep learning?</p>
+<p>Thanks for contributing an answer to Cross Validated! Please be sure to answer the question. Provide details and share your research! Asking for help, clarification, or responding to other answers. Making statements based on opinion; back them up with references or personal experience. Use MathJax to format equations. MathJax reference.</p>
+<p><img src="https://cdn.sstatic.net/Sites/stats/Img/favicon.ico?v=8f7a5a991257" alt/><a href="https://stats.stackexchange.com/questions/211436/why-normalize-images-by-subtracting-datasets-image-mean-instead-of-the-current" class="external external-link">https://stats.stackexchange.com/questions/211436/why-normalize-images-by-subtracting-datasets-image-mean-instead-of-the-current<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/apple-touch-icon@2.png" alt/>](<a href="https://stats.stackexchange.com/questions/211436/why-normalize-images-by-subtracting-datasets-image-mean-instead-of-the-current" class="external external-link">https://stats.stackexchange.com/questions/211436/why-normalize-images-by-subtracting-datasets-image-mean-instead-of-the-current<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="shallow-neural-networks">Shallow Neural Networks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#shallow-neural-networks" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[</p>
+<p>Demystifying Deep Convolutional Neural Networks</p>
+<p>Adam Harley (adam.harley ryerson.ca) Version 1.1 Abstract. This document explores the mathematics of deep convolutional neural networks. We begin at the level of an individual neuron, and from there examine parameter tuning, fully-connected networks, error minimization, back-propagation, convolutional networks, and finally deep networks. The report concludes with experiments on geometric invariance, and data augmentation.</p>
+<p><a href="https://www.cs.ryerson.ca/~aharley/neural-networks/" class="external external-link">https://www.cs.ryerson.ca/~aharley/neural-networks/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>](<a href="https://www.cs.ryerson.ca/~aharley/neural-networks/" class="external external-link">https://www.cs.ryerson.ca/~aharley/neural-networks/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<p>[</p>
+<p>CS231n Convolutional Neural Networks for Visual Recognition</p>
+<p>Table of Contents: In this section we’ll walk through a complete implementation of a toy Neural Network in 2 dimensions. We’ll first implement a simple linear classifier and then extend the code to a 2-layer Neural Network. As we’ll see, this extension is surprisingly simple and very few changes are necessary.</p>
+<p><a href="https://cs231n.github.io/neural-networks-case-study/" class="external external-link">https://cs231n.github.io/neural-networks-case-study/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>](<a href="https://cs231n.github.io/neural-networks-case-study/" class="external external-link">https://cs231n.github.io/neural-networks-case-study/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<h2 id="neural-networks-and-deep-learning">Neural Networks and Deep Learning<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neural-networks-and-deep-learning" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[</p>
+<p>Autoreload of modules in IPython</p>
+<p>Is there a way to have IPython automatically reload all changed code? Either before each line is executed in the shell or failing that when it is specifically requested to. I’m doing a lot of explo…</p>
+<p><img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico?v=ec617d715196" alt/><a href="https://stackoverflow.com/questions/1907993/autoreload-of-modules-in-ipython" class="external external-link">https://stackoverflow.com/questions/1907993/autoreload-of-modules-in-ipython<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><img src="../../../4.archive/notion-archive/learninginaws/attachments/apple-touch-icon@2-1.png" alt/>](<a href="https://stackoverflow.com/questions/1907993/autoreload-of-modules-in-ipython" class="external external-link">https://stackoverflow.com/questions/1907993/autoreload-of-modules-in-ipython<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>)</p>
+<p>💡</p>
+<p>Supervisde learning에서는 <strong><span class="text-highlight">dataset이 주어지고</span></strong> input과 output 관계에 대해 알고 있는 것 처럼 <span class="text-highlight">**output이 어떻게 되어야 하는지 안다**</span>.</p></div></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-1427" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#coursera-deeplearning1---neural-networks-and-deep-learning" data-for="coursera-deeplearning1---neural-networks-and-deep-learning">Coursera DeepLearning1 - Neural Networks and Deep Learning</a></li><li class="depth-0"><a href="#introduction-to-deep-learning" data-for="introduction-to-deep-learning">Introduction to Deep Learning</a></li><li class="depth-1"><a href="#what-is-a-neural-network-신경망" data-for="what-is-a-neural-network-신경망">What is a Neural Network (신경망)?</a></li><li class="depth-2"><a href="#single-neural-network" data-for="single-neural-network">Single Neural Network</a></li><li class="depth-2"><a href="#multiple-neural-network" data-for="multiple-neural-network">Multiple Neural Network</a></li><li class="depth-1"><a href="#supervised-learning-with-neural-networks" data-for="supervised-learning-with-neural-networks">Supervised Learning with Neural Networks</a></li><li class="depth-2"><a href="#supervised-learning-type" data-for="supervised-learning-type">Supervised Learning type</a></li><li class="depth-2"><a href="#structured-vs-unstructured-data" data-for="structured-vs-unstructured-data">Structured vs Unstructured Data</a></li><li class="depth-1"><a href="#why-is-deep-learning-taking-off" data-for="why-is-deep-learning-taking-off">Why is Deep Learning taking off?</a></li><li class="depth-0"><a href="#neural-network-basics" data-for="neural-network-basics">Neural Network Basics</a></li><li class="depth-1"><a href="#logistics-regression-as-a-neural-network" data-for="logistics-regression-as-a-neural-network">Logistics Regression as a Neural Network</a></li><li class="depth-2"><a href="#binary-regression" data-for="binary-regression">Binary Regression</a></li><li class="depth-2"><a href="#logistics-regression" data-for="logistics-regression">Logistics Regression</a></li><li class="depth-2"><a href="#logistics-regression-cost-function" data-for="logistics-regression-cost-function">Logistics Regression Cost Function</a></li><li class="depth-2"><a href="#gradient-descent" data-for="gradient-descent">Gradient Descent</a></li><li class="depth-2"><a href="#derivatives" data-for="derivatives">Derivatives</a></li><li class="depth-2"><a href="#computation-graph" data-for="computation-graph">Computation Graph</a></li><li class="depth-2"><a href="#computing-derivatives" data-for="computing-derivatives">Computing Derivatives</a></li><li class="depth-2"><a href="#logistics-regression-gradient-descent" data-for="logistics-regression-gradient-descent">Logistics Regression Gradient Descent</a></li><li class="depth-2"><a href="#gradient-descent-on-m-example" data-for="gradient-descent-on-m-example">Gradient descent on m example</a></li><li class="depth-1"><a href="#python-and-vectorization" data-for="python-and-vectorization">Python and Vectorization</a></li><li class="depth-2"><a href="#vectorization" data-for="vectorization">Vectorization</a></li><li class="depth-2"><a href="#vectorizing-logistic-regression" data-for="vectorizing-logistic-regression">Vectorizing Logistic Regression</a></li><li class="depth-2"><a href="#vectorizing-logistic-regressions-gradient-computation" data-for="vectorizing-logistic-regressions-gradient-computation">Vectorizing Logistic Regression’s Gradient Computation</a></li><li class="depth-2"><a href="#broadcasting-in-python" data-for="broadcasting-in-python">Broadcasting in Python</a></li><li class="depth-2"><a href="#a-note-on-python-numpy-vectors" data-for="a-note-on-python-numpy-vectors">A note on python numpy vectors</a></li><li class="depth-0"><a href="#shallow-neural-network" data-for="shallow-neural-network">Shallow Neural Network</a></li><li class="depth-1"><a href="#neural-network-overview" data-for="neural-network-overview">Neural Network Overview</a></li><li class="depth-2"><a href="#neural-network" data-for="neural-network">Neural Network</a></li><li class="depth-2"><a href="#layer" data-for="layer">Layer</a></li><li class="depth-1"><a href="#neural-network-representation" data-for="neural-network-representation">Neural Network Representation</a></li><li class="depth-2"><a href="#input-layer" data-for="input-layer">Input Layer</a></li><li class="depth-2"><a href="#single-hidden-layer" data-for="single-hidden-layer">Single Hidden Layer</a></li><li class="depth-2"><a href="#final-layer-output-layer" data-for="final-layer-output-layer">Final Layer (Output Layer)</a></li><li class="depth-1"><a href="#computing-a-neural-networks-output" data-for="computing-a-neural-networks-output">Computing a Neural Network’s Output</a></li><li class="depth-2"><a href="#logistics-regression-1" data-for="logistics-regression-1">Logistics regression</a></li><li class="depth-1"><a href="#vectorizing-across-multiple-examples" data-for="vectorizing-across-multiple-examples">Vectorizing across multiple examples</a></li><li class="depth-1"><a href="#activation-functions" data-for="activation-functions">Activation Functions</a></li><li class="depth-2"><a href="#sigmoid-function" data-for="sigmoid-function">Sigmoid function</a></li><li class="depth-2"><a href="#tangent-function-or-hyperbolic-tangent-function" data-for="tangent-function-or-hyperbolic-tangent-function">Tangent function or Hyperbolic tangent function</a></li><li class="depth-2"><a href="#relu-function" data-for="relu-function">ReLU function</a></li><li class="depth-2"><a href="#leaky-relu-function" data-for="leaky-relu-function">Leaky ReLU function</a></li><li class="depth-1"><a href="#non-linear-activation-functions" data-for="non-linear-activation-functions">Non-Linear Activation Functions</a></li><li class="depth-1"><a href="#derivatives-of-activation-functions" data-for="derivatives-of-activation-functions">Derivatives of Activation Functions</a></li><li class="depth-1"><a href="#gradient-descent-for-neural-networks" data-for="gradient-descent-for-neural-networks">Gradient Descent for Neural Networks</a></li><li class="depth-1"><a href="#backpropagation-intuition" data-for="backpropagation-intuition">Backpropagation Intuition</a></li><li class="depth-1"><a href="#random-initialization" data-for="random-initialization">Random Initialization</a></li><li class="depth-0"><a href="#deep-neural-network" data-for="deep-neural-network">Deep Neural Network</a></li><li class="depth-1"><a href="#deep-l-layer-neural-network" data-for="deep-l-layer-neural-network">Deep L-Layer Neural Network</a></li><li class="depth-1"><a href="#forward-propagation-in-a-deep-network" data-for="forward-propagation-in-a-deep-network">Forward Propagation in a Deep Network</a></li><li class="depth-1"><a href="#getting-your-matrix-dimension-right" data-for="getting-your-matrix-dimension-right">Getting your Matrix Dimension Right</a></li><li class="depth-1"><a href="#why-deep-representations" data-for="why-deep-representations">Why Deep Representations</a></li><li class="depth-1"><a href="#building-blocks-of-deep-neural-networks" data-for="building-blocks-of-deep-neural-networks">Building Blocks of Deep Neural Networks</a></li><li class="depth-1"><a href="#forward-and-backward-propagation" data-for="forward-and-backward-propagation">Forward and Backward Propagation</a></li><li class="depth-1"><a href="#parameters-vs-hyperparameters" data-for="parameters-vs-hyperparameters">Parameters vs Hyperparameters</a></li><li class="depth-1"><a href="#what-does-this-have-to-do-with-the-brain" data-for="what-does-this-have-to-do-with-the-brain">What does this have to do with the brain?</a></li><li class="depth-0"><a href="#faq" data-for="faq">FAQ</a></li><li class="depth-0"><a href="#interview" data-for="interview">Interview</a></li><li class="depth-0"><a href="#code" data-for="code">Code</a></li><li class="depth-1"><a href="#accurracy-comparison" data-for="accurracy-comparison">Accurracy Comparison</a></li><li class="depth-0"><a href="#additional-resource" data-for="additional-resource">Additional Resource</a></li><li class="depth-1"><a href="#neural-networks-basic" data-for="neural-networks-basic">Neural Networks Basic</a></li><li class="depth-1"><a href="#shallow-neural-networks" data-for="shallow-neural-networks">Shallow Neural Networks</a></li><li class="depth-1"><a href="#neural-networks-and-deep-learning" data-for="neural-networks-and-deep-learning">Neural Networks and Deep Learning</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../../../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../../../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../../../postscript-febe683a.js" type="module" data-persist="true"></script></html>
