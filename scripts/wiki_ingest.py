@@ -265,13 +265,15 @@ def main():
     wiki_index = read_text(WIKI_DIR / "index.md")
     existing_pages = read_existing_wiki_pages()
 
+    MAX_FILES_PER_CALL = 5
     for folder, folder_files in groups.items():
-        print(f"\n--- Ingesting: {folder} ({len(folder_files)}개 파일) ---")
-        result = call_claude_ingest(folder, folder_files, wiki_schema, wiki_index, existing_pages)
-        apply_changes(result, today)
-        # 캐시 갱신 (다음 그룹에 반영)
-        existing_pages = read_existing_wiki_pages()
-        wiki_index = read_text(WIKI_DIR / "index.md")
+        batches = [folder_files[i:i+MAX_FILES_PER_CALL] for i in range(0, len(folder_files), MAX_FILES_PER_CALL)]
+        for idx, batch in enumerate(batches, 1):
+            print(f"\n--- Ingesting: {folder} ({len(batch)}개 파일, batch {idx}/{len(batches)}) ---")
+            result = call_claude_ingest(folder, batch, wiki_schema, wiki_index, existing_pages)
+            apply_changes(result, today)
+            existing_pages = read_existing_wiki_pages()
+            wiki_index = read_text(WIKI_DIR / "index.md")
 
     print("\n완료.")
 
