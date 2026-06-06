@@ -29,6 +29,7 @@ jobs:
             https://x-access-token:${VAULT_TOKEN}@github.com/eldanscript/obsidian-vault.git \
             /tmp/vault
           rsync -av --delete \
+            --exclude="/index.md" \
             --exclude="*.pdf" \
             --exclude="Templates/" \
             --exclude="91. Templates/" \
@@ -62,3 +63,4 @@ jobs:
           publish_dir: ./public
           publish_branch: gh-pages
           commit_message: "deploy: wiki updated ${{ github.sha }}"
+          exclude_assets: 'CNAME'
