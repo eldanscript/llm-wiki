@@ -81,7 +81,7 @@
     <lastmod>2026-06-06T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/entities/tools/claude-code</loc>
-    <lastmod>2026-06-08T00:00:00.000Z</lastmod>
+    <lastmod>2026-06-20T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/entities/tools/finance-agent</loc>
     <lastmod>2026-06-08T00:00:00.000Z</lastmod>
@@ -162,374 +162,371 @@
     <lastmod>2026-05-31T14:26:15.000Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/concepts/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/entities/companies/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/entities/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/entities/people/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/entities/tools/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/projects/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tools/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/topics/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/wiki</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/agentic-ai</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/llm</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/multi-agent</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/automation</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/interpretability</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/mechanistic-interpretability</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/ai-safety</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/anthropic</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/concepts</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/pkm</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/knowledge-management</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/deep-learning</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/efficiency</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/orchestrator</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/subagent</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/parallel</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/claude-code</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/transformer</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/attention-mechanism</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/obsidian</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/implementation</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/knowledge-system</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/zettelkasten</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/positional-information</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/concept</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/machine-learning</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/architecture</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/hardware</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/ai-chip</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/tcp</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/tensor-operation</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/nlp</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/tokenization</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/company</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/aws</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/ai</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/bedrock</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/trainium</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/inferentia</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/sagemaker</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/agentcore</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/furiosaai</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/npu</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/semiconductor</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/korea</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/companies</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/devops</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/version-control</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/entities</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/google</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/gemini</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/nvidia</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/gpu</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/ai-hardware</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/ai-factory</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/competitive-intel</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/people</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/tools</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/subscription</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/saas</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
-    <loc>https://eldanscript.github.io/llm-wiki/tags/claude</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
-  </url><url>
-    <loc>https://eldanscript.github.io/llm-wiki/tags/coding</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <loc>https://eldanscript.github.io/llm-wiki/tags/ai-development</loc>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/finance-agent</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/python</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/api</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/mcp</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/integration</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/tool</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/entity</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/fine-tuning</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/projects</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/raingent</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/fastapi</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/react</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/kis</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/ai-agents</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/ubuntu</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/cli</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/hooks</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/gsd</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/project-management</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/milestone</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/phase</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/knowledge-base</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/qmd</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/semantic-search</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/markdown</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/rtk</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/token-optimization</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/tmux</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/terminal</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/multiplexer</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/tailscale</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/vpn</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/remote-access</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/wireguard</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/tech-report-agent</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/genai</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/research</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/gstack</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/plugin</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/strategy</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/ai-strategy</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/summit</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/serverless</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/2026</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/workflow</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/topic</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/gtc2026</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/physical-ai</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/aws-trainium</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/energy-efficiency</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/data-analysis</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url><url>
     <loc>https://eldanscript.github.io/llm-wiki/tags/</loc>
-    <lastmod>2026-06-18T05:19:10.582Z</lastmod>
+    <lastmod>2026-06-20T06:54:29.947Z</lastmod>
   </url></urlset>
