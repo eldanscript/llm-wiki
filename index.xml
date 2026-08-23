@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>claude</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/claude</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/claude</guid>
+    <title>cache</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/cache</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/cache</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>cloudflare</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/cloudflare</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/cloudflare</guid>
+    <title>memcached</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/memcached</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/memcached</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>mcp</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/mcp</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/mcp</guid>
+    <title>redis</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/redis</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/redis</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>workers</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/workers</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/workers</guid>
+    <title>선행학습모델</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/%EC%84%A0%ED%96%89%ED%95%99%EC%8A%B5%EB%AA%A8%EB%8D%B8</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/%EC%84%A0%ED%96%89%ED%95%99%EC%8A%B5%EB%AA%A8%EB%8D%B8</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>cdn</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/cdn</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/cdn</guid>
+    <title>single-tenant</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/single-tenant</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/single-tenant</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>edge-computing</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/edge-computing</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/edge-computing</guid>
+    <title>telecom</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/telecom</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/telecom</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>sandboxing</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/sandboxing</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/sandboxing</guid>
+    <title>nephio</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/nephio</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/nephio</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>furiosaai</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/furiosaai</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/furiosaai</guid>
+    <title>tensorflow</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/tensorflow</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/tensorflow</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>npu</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/npu</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/npu</guid>
+    <title>tts</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/tts</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/tts</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item><item>
-    <title>semiconductor</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/semiconductor</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/semiconductor</guid>
+    <title>음성</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/%EC%9D%8C%EC%84%B1</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/%EC%9D%8C%EC%84%B1</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 23 Aug 2026 13:50:35 GMT</pubDate>
+    <pubDate>Sun, 23 Aug 2026 14:30:31 GMT</pubDate>
   </item>
     </channel>
   </rss>
