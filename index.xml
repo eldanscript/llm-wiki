@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>triage</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/triage</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/triage</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <title>Raingent</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
+    <description><![CDATA[ Raingent Mac mini 한 대에서 24시간 구동되는 개인 AI 에이전트 생태계. Gmail·Notion·Slack 데이터를 자동 처리하고, Finance Agent·Tech Report·Mail Agent 등 다양한 파이프라인 스킬로 일상 업무를 자동화한다. ]]></description>
+    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>github-issues</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/github-issues</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/github-issues</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <title>Raingent-Architecture-Aug2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-architecture-aug2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-architecture-aug2026</guid>
+    <description><![CDATA[ Raingent 시스템 아키텍처 (2026-08) 2026년 8월 23~24일 한 세션에서 설계·구현한 Mac mini 기반 개인 비서 시스템의 실제 동작 구조. 문서 버전 1.2 (2026-08-25 기준). ]]></description>
+    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>tdd</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/tdd</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/tdd</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <title>Raingent-MailTodo-Aug2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
+    <description><![CDATA[ Raingent Mail Todo — 2026년 8월 Raingent gmail-triage 스킬이 Gmail·Notion·Slack 활동을 분석해 추출한 할 일 목록. 2026-08-24 기준 최신. ]]></description>
+    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>batchnorm</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/batchnorm</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/batchnorm</guid>
+    <title>tmux</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/tmux</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/tmux</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 18:22:24 GMT</pubDate>
   </item><item>
-    <title>weight-initialization</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/weight-initialization</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/weight-initialization</guid>
+    <title>terminal</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/terminal</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/terminal</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 18:22:24 GMT</pubDate>
   </item><item>
-    <title>gradient-flow</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/gradient-flow</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/gradient-flow</guid>
+    <title>multiplexer</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/multiplexer</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/multiplexer</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 18:22:24 GMT</pubDate>
   </item><item>
-    <title>kaiming-init</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/kaiming-init</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/kaiming-init</guid>
+    <title>tailscale</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/tailscale</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/tailscale</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 18:22:24 GMT</pubDate>
   </item><item>
-    <title>makemore</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/makemore</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/makemore</guid>
+    <title>vpn</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/vpn</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/vpn</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 18:22:24 GMT</pubDate>
   </item><item>
-    <title>pytorch</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/pytorch</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/pytorch</guid>
+    <title>remote-access</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/remote-access</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/remote-access</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 18:22:24 GMT</pubDate>
   </item><item>
-    <title>karpathy</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/karpathy</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/karpathy</guid>
+    <title>wireguard</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/wireguard</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/wireguard</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 17:52:54 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 18:22:24 GMT</pubDate>
   </item>
     </channel>
   </rss>
