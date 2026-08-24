@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. OpenClaw·ACP·6종 cron 파이프라인으로 구성된 자율 운영 시스템. ]]></description>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
-  </item><item>
     <title>Raingent-Architecture-Aug2026</title>
     <link>https://eldanscript.github.io/llm-wiki/topics/raingent-architecture-aug2026</link>
     <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-architecture-aug2026</guid>
     <description><![CDATA[ Raingent 시스템 아키텍처 (2026-08) 2026년 8월 23~24일 한 세션에서 설계·구현한 Mac mini 기반 개인 비서 시스템의 실제 동작 구조. 문서 버전 1.2 (2026-08-25 기준). ]]></description>
     <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Raingent-MailTodo-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
-    <description><![CDATA[ Raingent Mail Todo — 2026년 8월 Raingent gmail-triage 스킬이 추출한 메일 할 일 목록. 2026-08-24~25 기준 누적 항목. ]]></description>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>one-useful-thing</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/one-useful-thing</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/one-useful-thing</guid>
+    <title>hallucination</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/hallucination</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/hallucination</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 22:48:18 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
   </item><item>
-    <title>ethan-mollick</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ethan-mollick</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ethan-mollick</guid>
+    <title>deepseek-r1</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/deepseek-r1</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/deepseek-r1</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 22:48:18 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
   </item><item>
-    <title>o3</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/o3</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/o3</guid>
+    <title>llm-eval</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/llm-eval</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-eval</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 22:48:18 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
   </item><item>
-    <title>generalist-ai</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/generalist-ai</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/generalist-ai</guid>
+    <title>langsmith</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/langsmith</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/langsmith</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 22:48:18 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
   </item><item>
-    <title>openclaw</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/openclaw</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/openclaw</guid>
+    <title>braintrust</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/braintrust</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/braintrust</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 22:48:18 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
   </item><item>
-    <title>content-creation</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/content-creation</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/content-creation</guid>
+    <title>arize</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/arize</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/arize</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 22:48:18 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
   </item><item>
-    <title>100e12</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/100e12</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/100e12</guid>
+    <title>evals-tooling</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/evals-tooling</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/evals-tooling</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 22:48:18 GMT</pubDate>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+  </item><item>
+    <title>finetuning</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/finetuning</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/finetuning</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+  </item><item>
+    <title>llm-os</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/llm-os</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-os</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
   </item>
     </channel>
   </rss>
