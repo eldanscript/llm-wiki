@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>cost-comparison</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/cost-comparison</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/cost-comparison</guid>
+    <title>Concepts</title>
+    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>llm-security</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/llm-security</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-security</guid>
+    <title>Channels</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>sleeper-agent</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/sleeper-agent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/sleeper-agent</guid>
+    <title>Entities</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>backdoor-detection</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/backdoor-detection</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/backdoor-detection</guid>
+    <title>Companies</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>sparse-autoencoder</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/sparse-autoencoder</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/sparse-autoencoder</guid>
+    <title>People</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>diff-sae</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/diff-sae</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/diff-sae</guid>
+    <title>Sources</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>classification</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/classification</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/classification</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>model-cascade</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/model-cascade</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/model-cascade</guid>
+    <title>Projects</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>posttraining</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/posttraining</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/posttraining</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item><item>
-    <title>sft</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/sft</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/sft</guid>
+    <title>Topics</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:05:17 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 12:20:53 GMT</pubDate>
   </item>
     </channel>
   </rss>
