@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>game-ai</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/game-ai</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/game-ai</guid>
+    <title>Concepts</title>
+    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>world-model</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/world-model</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/world-model</guid>
+    <title>Channels</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>microsoft-research</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/microsoft-research</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/microsoft-research</guid>
+    <title>Entities</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>web-scraping</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/web-scraping</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/web-scraping</guid>
+    <title>Companies</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>browser-automation</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/browser-automation</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/browser-automation</guid>
+    <title>People</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>byok</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/byok</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/byok</guid>
+    <title>Sources</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>schema-validation</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/schema-validation</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/schema-validation</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>zod</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/zod</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/zod</guid>
+    <title>Projects</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>bundle-size</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/bundle-size</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/bundle-size</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item><item>
-    <title>json-schema</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/json-schema</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/json-schema</guid>
+    <title>Topics</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 25 Aug 2026 12:44:14 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 15:17:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
