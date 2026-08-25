@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent-Architecture-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-architecture-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-architecture-aug2026</guid>
-    <description><![CDATA[ Raingent 시스템 아키텍처 (2026-08) 2026년 8월 23~24일 한 세션에서 설계·구현한 Mac mini 기반 개인 비서 시스템의 실제 동작 구조. 문서 버전 1.2 (2026-08-25 기준). ]]></description>
-    <pubDate>Tue, 25 Aug 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>hallucination</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/hallucination</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/hallucination</guid>
+    <title>excalidraw</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/excalidraw</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/excalidraw</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item><item>
-    <title>deepseek-r1</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/deepseek-r1</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/deepseek-r1</guid>
+    <title>remotion</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/remotion</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/remotion</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item><item>
-    <title>llm-eval</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/llm-eval</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-eval</guid>
+    <title>motion-graphics</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/motion-graphics</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/motion-graphics</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item><item>
-    <title>langsmith</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/langsmith</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/langsmith</guid>
+    <title>ai-video</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/ai-video</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-video</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item><item>
-    <title>braintrust</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/braintrust</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/braintrust</guid>
+    <title>voice-ai</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/voice-ai</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/voice-ai</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item><item>
-    <title>arize</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/arize</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/arize</guid>
+    <title>grokbot</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/grokbot</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/grokbot</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item><item>
-    <title>evals-tooling</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/evals-tooling</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/evals-tooling</guid>
+    <title>multiplayer-agents</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/multiplayer-agents</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/multiplayer-agents</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item><item>
-    <title>finetuning</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/finetuning</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/finetuning</guid>
+    <title>open-model</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/open-model</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/open-model</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item><item>
-    <title>llm-os</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/llm-os</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-os</guid>
+    <title>harness</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/harness</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/harness</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 24 Aug 2026 23:19:18 GMT</pubDate>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
+  </item><item>
+    <title>context-rot</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/context-rot</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/context-rot</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 25 Aug 2026 01:20:39 GMT</pubDate>
   </item>
     </channel>
   </rss>
