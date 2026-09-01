@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>agent-orchestrator</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/agent-orchestrator</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/agent-orchestrator</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <title>Raingent</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
+    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>git-worktree</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/git-worktree</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/git-worktree</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <title>Raingent-DailyBrief-Sep2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
+    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09 (싱가포르 5~6일차) 싱가포르 여행 중 Raingent 자동 브리핑 시스템이 생성한 2026-09-01~02자 업무·개인 통합 일일 보고. graphloop/gcpcoach/triplog 세 프로젝트 병행 진행일. ]]></description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>rl-training</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/rl-training</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/rl-training</guid>
+    <title>model-cascade</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/model-cascade</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/model-cascade</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
   </item><item>
-    <title>reward-hacking</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/reward-hacking</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/reward-hacking</guid>
+    <title>posttraining</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/posttraining</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/posttraining</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
   </item><item>
-    <title>workspace</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/workspace</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/workspace</guid>
+    <title>sft</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/sft</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/sft</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
   </item><item>
-    <title>slide-generation</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/slide-generation</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/slide-generation</guid>
+    <title>hallucination</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/hallucination</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/hallucination</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
   </item><item>
-    <title>ox-alpha</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ox-alpha</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ox-alpha</guid>
+    <title>deepseek-r1</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/deepseek-r1</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/deepseek-r1</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
   </item><item>
-    <title>stealth-model</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/stealth-model</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/stealth-model</guid>
+    <title>llm-eval</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/llm-eval</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-eval</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
   </item><item>
-    <title>deep-swe</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/deep-swe</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/deep-swe</guid>
+    <title>langsmith</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/langsmith</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/langsmith</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
   </item><item>
-    <title>collaborative-ai</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/collaborative-ai</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/collaborative-ai</guid>
+    <title>braintrust</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/braintrust</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/braintrust</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 12:17:42 GMT</pubDate>
+    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
   </item>
     </channel>
   </rss>
