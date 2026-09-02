@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. ]]></description>
-    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09 (싱가포르 5~6일차) 싱가포르 여행 중 Raingent 자동 브리핑 시스템이 생성한 2026-09-01~02자 업무·개인 통합 일일 보고. graphloop/gcpcoach/triplog 세 프로젝트 병행 진행일. ]]></description>
-    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>model-cascade</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/model-cascade</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/model-cascade</guid>
+    <title>cost-reduction</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/cost-reduction</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/cost-reduction</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
   </item><item>
-    <title>posttraining</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/posttraining</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/posttraining</guid>
+    <title>chatgpt</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/chatgpt</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/chatgpt</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
   </item><item>
-    <title>sft</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/sft</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/sft</guid>
+    <title>agent-plugins</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agent-plugins</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agent-plugins</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
   </item><item>
-    <title>hallucination</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/hallucination</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/hallucination</guid>
+    <title>annotations</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/annotations</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/annotations</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
   </item><item>
-    <title>deepseek-r1</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/deepseek-r1</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/deepseek-r1</guid>
+    <title>sites</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/sites</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/sites</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
   </item><item>
-    <title>llm-eval</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/llm-eval</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-eval</guid>
+    <title>gpt-5.6</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/gpt-5.6</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/gpt-5.6</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
   </item><item>
-    <title>langsmith</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/langsmith</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/langsmith</guid>
+    <title>agentic-workflow</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agentic-workflow</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agentic-workflow</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
   </item><item>
-    <title>braintrust</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/braintrust</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/braintrust</guid>
+    <title>chatgpt-work</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/chatgpt-work</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/chatgpt-work</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 01 Sep 2026 22:55:09 GMT</pubDate>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
+  </item><item>
+    <title>productivity</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/productivity</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/productivity</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
+  </item><item>
+    <title>sdd</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/sdd</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/sdd</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 02 Sep 2026 09:18:07 GMT</pubDate>
   </item>
     </channel>
   </rss>
