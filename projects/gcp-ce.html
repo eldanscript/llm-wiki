@@ -6,6 +6,7 @@
 <li><strong>목적</strong>: GCP CE 직무 지원을 위한 기술·세일즈 역량 준비</li>
 <li><strong>주요 영역</strong>: GCP 제품 A-to-Z 학습, AWS 경쟁사 분석, 엔터프라이즈 에이전트 고객 사례 연구</li>
 <li><strong>상태</strong>: 진행 중 (2026-09-06 기준)</li>
+<li><strong>최근 업데이트</strong>: AWS AI 에이전트 사례 5건 심층 분석 추가 (AgentCore Runtime/Identity/Memory 포함)</li>
 </ul>
 <h2 id="준비-자료-구성">준비 자료 구성<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#준비-자료-구성" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <h3 id="gcp-제품-학습">GCP 제품 학습<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gcp-제품-학습" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
@@ -17,11 +18,11 @@
 <ul>
 <li><a href="../topics/gcp-ce-aws-ai-agent-reference" class="internal internal-link" data-slug="topics/gcp-ce-aws-ai-agent-reference">GCP-CE-AWS-AI-Agent-Reference</a> — AWS AI 에이전트 사례 5건 GCP 대응 분석
 <ul>
-<li>Amazon Bedrock Tool Use (KCC Multi Agent)</li>
-<li>LangGraph + Bedrock 멀티 에이전트</li>
-<li>AgentCore Runtime ↔ Vertex AI Agent Engine</li>
-<li>AgentCore Identity ↔ GCP IAM + WIF</li>
-<li>AgentCore Memory ↔ Agent Engine Memory Bank</li>
+<li>Amazon Bedrock Tool Use (KCC Multi Agent — 프롬프트 캐싱 90%+ 절감)</li>
+<li>LangGraph + Bedrock 멀티 에이전트 (오픈소스 오케스트레이션)</li>
+<li>AgentCore Runtime ↔ Vertex AI Agent Engine (Firecracker microVM 세션 격리)</li>
+<li>AgentCore Identity ↔ GCP IAM + WIF (에이전트×사용자 조합 단위 자격증명)</li>
+<li>AgentCore Memory ↔ Agent Engine Memory Bank (시맨틱/에피소딕/절차적 3유형)</li>
 </ul>
 </li>
 </ul>
@@ -29,8 +30,8 @@
 <ul>
 <li><a href="../topics/gcp-ce-gemini-enterprise-agent-case-studies" class="internal internal-link" data-slug="topics/gcp-ce-gemini-enterprise-agent-case-studies">GCP-CE-Gemini-Enterprise-Agent-Case-Studies</a> — Gemini/Enterprise Agent 실제 고객 사례 6건
 <ul>
-<li>Schroders (금융 리서치 멀티 에이전트)</li>
-<li>TTEC·loveholidays·YouTube (컨택센터 자동화, £3.8M 절감)</li>
+<li>Schroders (금융 리서치 멀티 에이전트 — 수일→수분)</li>
+<li>TTEC·loveholidays·YouTube (컨택센터 자동화 40%, £3.8M 절감)</li>
 <li>Comcast (ADK+Agent Runtime 재구축)</li>
 <li>Payhawk (Memory Bank 50% 시간 단축)</li>
 <li>Color Health (헬스케어 로지스틱스 에이전트)</li>
@@ -69,7 +70,12 @@
 
 
 
-<div class="table-container"><table><thead><tr><th>AWS</th><th>GCP</th><th>비교 핵심</th></tr></thead><tbody><tr><td>Bedrock Converse API toolSpec</td><td>Gemini function calling + Cloud Functions/Cloud Run</td><td>동일 도구화 패턴</td></tr><tr><td>AgentCore Runtime (Firecracker microVM)</td><td>Vertex AI Agent Engine</td><td>세션 격리·콜드스타트·장기 실행 스펙</td></tr><tr><td>AgentCore Memory</td><td>Agent Engine Memory Bank</td><td>Payhawk 50% 단축 사례로 설명</td></tr><tr><td>Prompt Caching (90%+ 절감)</td><td>Gemini 컨텍스트 캐싱</td><td>비용 절감 비교</td></tr></tbody></table></div>
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>AWS</th><th>GCP</th><th>비교 핵심</th></tr></thead><tbody><tr><td>Bedrock Converse API toolSpec</td><td>Gemini function calling + Cloud Functions/Cloud Run</td><td>동일 도구화 패턴</td></tr><tr><td>AgentCore Runtime (Firecracker microVM, 200ms 콜드스타트)</td><td>Vertex AI Agent Engine</td><td>세션 격리·콜드스타트·장기 실행 스펙 맞비교 필요</td></tr><tr><td>AgentCore Memory (3유형)</td><td>Agent Engine Memory Bank</td><td>Payhawk 50% 단축 사례로 설명</td></tr><tr><td>Prompt Caching (90%+ 절감)</td><td>Gemini 컨텍스트 캐싱</td><td>비용 절감 비교</td></tr><tr><td>LangGraph + Bedrock</td><td>LangGraph + Vertex AI</td><td>오픈소스 레이어 동일, 관리형 계층 차별화</td></tr></tbody></table></div>
 <h2 id="관련-노트">관련 노트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#관련-노트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li><a href="../topics/gcp-ce-aws-ai-agent-reference" class="internal internal-link" data-slug="topics/gcp-ce-aws-ai-agent-reference">GCP-CE-AWS-AI-Agent-Reference</a></li>
@@ -79,6 +85,7 @@
 <li><a href="../entities/companies/google" class="internal internal-link" data-slug="entities/companies/google">Google</a></li>
 <li><a href="../entities/companies/aws" class="internal internal-link" data-slug="entities/companies/aws">AWS</a></li>
 <li><a href="../concepts/agentic-ai" class="internal internal-link" data-slug="concepts/agentic-ai">Agentic-AI</a></li>
+<li><a href="../concepts/multi-agent-system" class="internal internal-link" data-slug="concepts/multi-agent-system">Multi-Agent-System</a></li>
 </ul>
 <h2 id="출처">출처<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#출처" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
@@ -94,4 +101,4 @@
                 C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
                 S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
                 s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
-                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-65" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#gcp-customer-engineer-gcp-ce-준비-프로젝트" data-for="gcp-customer-engineer-gcp-ce-준비-프로젝트">GCP Customer Engineer (GCP CE) 준비 프로젝트</a></li><li class="depth-1"><a href="#핵심-내용" data-for="핵심-내용">핵심 내용</a></li><li class="depth-1"><a href="#준비-자료-구성" data-for="준비-자료-구성">준비 자료 구성</a></li><li class="depth-2"><a href="#gcp-제품-학습" data-for="gcp-제품-학습">GCP 제품 학습</a></li><li class="depth-2"><a href="#경쟁사-분석-aws" data-for="경쟁사-분석-aws">경쟁사 분석 (AWS)</a></li><li class="depth-2"><a href="#gcp-고객-사례" data-for="gcp-고객-사례">GCP 고객 사례</a></li><li class="depth-1"><a href="#핵심-비교-포인트" data-for="핵심-비교-포인트">핵심 비교 포인트</a></li><li class="depth-1"><a href="#관련-노트" data-for="관련-노트">관련 노트</a></li><li class="depth-1"><a href="#출처" data-for="출처">출처</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>백링크</h3><ul id="list-0" class="overflow"><li><a href="../" class="internal">index</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-febe683a.js" type="module" data-persist="true"></script></html>
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-65" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#gcp-customer-engineer-gcp-ce-준비-프로젝트" data-for="gcp-customer-engineer-gcp-ce-준비-프로젝트">GCP Customer Engineer (GCP CE) 준비 프로젝트</a></li><li class="depth-1"><a href="#핵심-내용" data-for="핵심-내용">핵심 내용</a></li><li class="depth-1"><a href="#준비-자료-구성" data-for="준비-자료-구성">준비 자료 구성</a></li><li class="depth-2"><a href="#gcp-제품-학습" data-for="gcp-제품-학습">GCP 제품 학습</a></li><li class="depth-2"><a href="#경쟁사-분석-aws" data-for="경쟁사-분석-aws">경쟁사 분석 (AWS)</a></li><li class="depth-2"><a href="#gcp-고객-사례" data-for="gcp-고객-사례">GCP 고객 사례</a></li><li class="depth-1"><a href="#핵심-비교-포인트" data-for="핵심-비교-포인트">핵심 비교 포인트</a></li><li class="depth-1"><a href="#관련-노트" data-for="관련-노트">관련 노트</a></li><li class="depth-1"><a href="#출처" data-for="출처">출처</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>백링크</h3><ul id="list-0" class="overflow"><li><a href="../topics/gcp-ce-aws-ai-agent-reference" class="internal">GCP-CE-AWS-AI-Agent-Reference</a></li><li><a href="../" class="internal">index</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-febe683a.js" type="module" data-persist="true"></script></html>
