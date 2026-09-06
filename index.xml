@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>personalization</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/personalization</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/personalization</guid>
+    <title>Concepts</title>
+    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>ci-cd</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ci-cd</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ci-cd</guid>
+    <title>Channels</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>agent-runtime</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/agent-runtime</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/agent-runtime</guid>
+    <title>Entities</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>divergence</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/divergence</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/divergence</guid>
+    <title>Companies</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>cloth-simulation</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/cloth-simulation</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/cloth-simulation</guid>
+    <title>People</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>agent-context-engineering</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/agent-context-engineering</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/agent-context-engineering</guid>
+    <title>Sources</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>multi-repo</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/multi-repo</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/multi-repo</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>monorepo</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/monorepo</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/monorepo</guid>
+    <title>Projects</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>polygraph</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/polygraph</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/polygraph</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item><item>
-    <title>nx</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/nx</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/nx</guid>
+    <title>Topics</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 12:39:11 GMT</pubDate>
+    <pubDate>Sun, 06 Sep 2026 12:47:16 GMT</pubDate>
   </item>
     </channel>
   </rss>
