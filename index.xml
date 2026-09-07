@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>GCP-CE</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/gcp-ce</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/gcp-ce</guid>
-    <description><![CDATA[ GCP-CE (Google Cloud Customer Engineer 준비) Google Cloud Platform Customer Engineer 직무 전환을 위한 체계적 준비 프로젝트. ]]></description>
-    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. 금융·메일·기술 리포트·지식 관리 파이프라인을 자동화하며 OpenClaw+ACP 스택으로 운영된다. ]]></description>
-    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09 (싱가포르 5~7일차 / 귀국 / 귀국 후) 싱가포르 여행 중 및 귀국 당일 Raingent 자동 브리핑 시스템이 생성한 2026-09-01~03자 업무·개인 통합 일일 보고 및 2026-09-07 귀국 후 브리핑. ]]></description>
-    <pubDate>Mon, 07 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Concepts</title>
-    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
+    <title>agentic-coding</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agentic-coding</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agentic-coding</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 22:53:38 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
   </item><item>
-    <title>Channels</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
+    <title>open-source</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/open-source</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/open-source</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 22:53:38 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
   </item><item>
-    <title>Entities</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
+    <title>podcast</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/podcast</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/podcast</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 22:53:38 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
   </item><item>
-    <title>Companies</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
+    <title>ai-research</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/ai-research</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-research</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 22:53:38 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
   </item><item>
-    <title>People</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
+    <title>geopolitics</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/geopolitics</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/geopolitics</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 22:53:38 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
   </item><item>
-    <title>Sources</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
+    <title>developer-tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/developer-tools</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/developer-tools</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 22:53:38 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
   </item><item>
-    <title>Tools</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
+    <title>code-report</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/code-report</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/code-report</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 06 Sep 2026 22:53:38 GMT</pubDate>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
+  </item><item>
+    <title>ibm</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/ibm</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/ibm</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
+  </item><item>
+    <title>ai-education</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/ai-education</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-education</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
+  </item><item>
+    <title>product-management</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/product-management</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/product-management</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 07 Sep 2026 00:13:06 GMT</pubDate>
   </item>
     </channel>
   </rss>
