@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Concepts</title>
-    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
+    <title>culture</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/culture</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/culture</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>Channels</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
+    <title>mapped-types</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/mapped-types</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/mapped-types</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>Entities</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
+    <title>discriminated-union</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/discriminated-union</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/discriminated-union</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>Companies</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
+    <title>utility-types</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/utility-types</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/utility-types</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>People</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
+    <title>autocomplete</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/autocomplete</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/autocomplete</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>Sources</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
+    <title>total-typescript</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/total-typescript</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/total-typescript</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>Tools</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
+    <title>compiler-options</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/compiler-options</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/compiler-options</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>Projects</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/</guid>
+    <title>nodejs</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/nodejs</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/nodejs</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>Tools</title>
-    <link>https://eldanscript.github.io/llm-wiki/tools/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tools/</guid>
+    <title>type-stripping</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/type-stripping</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/type-stripping</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item><item>
-    <title>Topics</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/</guid>
+    <title>compiler-performance</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/compiler-performance</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/compiler-performance</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 10 Sep 2026 11:15:22 GMT</pubDate>
+    <pubDate>Thu, 10 Sep 2026 11:23:26 GMT</pubDate>
   </item>
     </channel>
   </rss>
