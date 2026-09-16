@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Concepts</title>
-    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <title>GCP-CE</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/gcp-ce</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/gcp-ce</guid>
+    <description><![CDATA[ GCP-CE (GCP Customer Engineer 직무 준비) Google Cloud Customer Engineer 직무 진입을 위한 준비 프로젝트. JAPAC AI Tech GTM 팀 합류 후 온보딩 단계 진행 중. ]]></description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Channels</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <title>Raingent</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
+    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. 아침 업무·개인 브리핑 자동화, 기술 리포트 수집, 금융 모니터링, 여행 시네마/지도 기록, 위키 관리 파이프라인 운영. ]]></description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Entities</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <title>Raingent-DailyBrief-Sep2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
+    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09 (싱가포르 5~7일차 / 귀국 / 귀국 후) 싱가포르 여행 중 및 귀국 당일 Raingent 자동 브리핑 시스템이 생성한 2026-09-0103자 업무·개인 통합 일일 보고 및 2026-09-0717 귀국 후 브리핑. ]]></description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>Companies</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <title>Raingent-MailTodo-Aug2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
+    <description><![CDATA[ Raingent Assistant — 메일 액션 아이템 누적 목록 Raingent 아침 브리핑 시스템이 추출한 미처리 메일 액션 아이템 통합 목록. 매일 브리핑 결과를 append하여 누적 관리. ]]></description>
+    <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>People</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
+    <title>langgraph</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/langgraph</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/langgraph</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 22:58:46 GMT</pubDate>
   </item><item>
-    <title>Sources</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
+    <title>background-agents</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/background-agents</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/background-agents</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 22:58:46 GMT</pubDate>
   </item><item>
-    <title>Tools</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
+    <title>adaptive-software</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/adaptive-software</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/adaptive-software</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 22:58:46 GMT</pubDate>
   </item><item>
-    <title>Projects</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/</guid>
+    <title>differ</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/differ</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/differ</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 22:58:46 GMT</pubDate>
   </item><item>
-    <title>Tools</title>
-    <link>https://eldanscript.github.io/llm-wiki/tools/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tools/</guid>
+    <title>software-distribution</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/software-distribution</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/software-distribution</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 22:58:46 GMT</pubDate>
   </item><item>
-    <title>Topics</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/</guid>
+    <title>personalization</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/personalization</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/personalization</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 16 Sep 2026 11:48:18 GMT</pubDate>
+    <pubDate>Wed, 16 Sep 2026 22:58:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
