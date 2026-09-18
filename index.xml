@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>GCP-CE</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/gcp-ce</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/gcp-ce</guid>
-    <description><![CDATA[ GCP-CE (GCP Customer Engineer 직무 준비) GCP Customer Engineer 직무 준비 프로젝트. Google Cloud JAPAC AI Tech GTM 팀 합류 후 온보딩 및 발표 자료 준비 진행 중. ]]></description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. Finance Agent·Tech Report·Naver Blog·rainny-photolab·rainny-triplog 등 다수 서브 에이전트로 구성. ]]></description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09 (싱가포르 5~7일차 / 귀국 / 귀국 후) 싱가포르 여행 중 및 귀국 당일 Raingent 자동 브리핑 시스템이 생성한 2026-09-0103자 업무·개인 통합 일일 보고 및 2026-09-0718 귀국 후 브리핑. ]]></description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-MailTodo-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
-    <description><![CDATA[ Raingent 메일 액션 아이템 — 2026-08~09 Raingent Assistant가 Gmail에서 추출한 누적 액션 아이템 목록. 매일 브리핑을 통해 갱신. ]]></description>
-    <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Concepts</title>
-    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
+    <title>vpn</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/vpn</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/vpn</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 17 Sep 2026 22:55:22 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
   </item><item>
-    <title>Channels</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
+    <title>remote-access</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/remote-access</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/remote-access</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 17 Sep 2026 22:55:22 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
   </item><item>
-    <title>Entities</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
+    <title>wireguard</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/wireguard</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/wireguard</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 17 Sep 2026 22:55:22 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
   </item><item>
-    <title>Companies</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
+    <title>tech-report-agent</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/tech-report-agent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/tech-report-agent</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 17 Sep 2026 22:55:22 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
   </item><item>
-    <title>People</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
+    <title>genai</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/genai</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/genai</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 17 Sep 2026 22:55:22 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
   </item><item>
-    <title>Sources</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
+    <title>research</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/research</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/research</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 17 Sep 2026 22:55:22 GMT</pubDate>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
+  </item><item>
+    <title>gstack</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/gstack</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/gstack</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
+  </item><item>
+    <title>plugin</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/plugin</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/plugin</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
+  </item><item>
+    <title>strategy</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/strategy</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/strategy</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
+  </item><item>
+    <title>codex</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/codex</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/codex</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 18 Sep 2026 09:13:59 GMT</pubDate>
   </item>
     </channel>
   </rss>
