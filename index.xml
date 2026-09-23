@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>claude-opus-5</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/claude-opus-5</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/claude-opus-5</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <title>Raingent-DailyBrief-Sep2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
+    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09 (싱가포르 5~7일차 / 귀국 / 귀국 후) 싱가포르 여행 중 및 귀국 당일 Raingent 자동 브리핑 시스템이 생성한 2026-09-0103자 업무·개인 통합 일일 보고 및 2026-09-0724 귀국 후 브리핑. ]]></description>
+    <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>flux3</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/flux3</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/flux3</guid>
+    <title>dpo</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/dpo</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/dpo</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item><item>
-    <title>mlops</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/mlops</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/mlops</guid>
+    <title>lora</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/lora</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/lora</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item><item>
-    <title>ai-security</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ai-security</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-security</guid>
+    <title>hardware</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/hardware</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/hardware</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item><item>
-    <title>mistral</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/mistral</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/mistral</guid>
+    <title>ai-chip</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/ai-chip</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-chip</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item><item>
-    <title>ai-science</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ai-science</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-science</guid>
+    <title>tcp</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/tcp</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/tcp</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item><item>
-    <title>core-scientist</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/core-scientist</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/core-scientist</guid>
+    <title>tensor-operation</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/tensor-operation</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/tensor-operation</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item><item>
-    <title>deepseek</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/deepseek</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/deepseek</guid>
+    <title>token</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/token</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/token</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item><item>
-    <title>mixture-of-experts</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/mixture-of-experts</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/mixture-of-experts</guid>
+    <title>tokenization</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/tokenization</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/tokenization</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item><item>
-    <title>ai-coding-agent</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ai-coding-agent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-coding-agent</guid>
+    <title>bpe</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/bpe</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/bpe</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 23 Sep 2026 12:13:16 GMT</pubDate>
+    <pubDate>Wed, 23 Sep 2026 22:48:19 GMT</pubDate>
   </item>
     </channel>
   </rss>
