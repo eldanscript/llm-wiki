@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>langsmith</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/langsmith</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/langsmith</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <title>Raingent</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
+    <description><![CDATA[ Raingent 프로젝트 Mac mini 기반 24시간 상시 가동 개인 AI 에이전트 생태계. 메일·Slack·Notion·캘린더를 자동 처리하고 일일 브리핑을 생성하는 멀티 에이전트 시스템. ]]></description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>braintrust</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/braintrust</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/braintrust</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <title>Raingent-DailyBrief-Sep2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
+    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09 (싱가포르 5~7일차 / 귀국 / 귀국 후) 싱가포르 여행 중 및 귀국 당일 Raingent 자동 브리핑 시스템이 생성한 2026-09-0103자 업무·개인 통합 일일 보고 및 2026-09-0729 귀국 후 브리핑. ]]></description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>arize</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/arize</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/arize</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <title>Raingent-MailTodo-Aug2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
+    <description><![CDATA[ Raingent 메일 액션 아이템 누적 목록 Raingent Assistant가 수신 메일·Notion 편집·Slack에서 추출한 액션 아이템 누적 기록. ]]></description>
+    <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>evals-tooling</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/evals-tooling</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/evals-tooling</guid>
+    <title>Concepts</title>
+    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 22:56:25 GMT</pubDate>
   </item><item>
-    <title>finetuning</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/finetuning</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/finetuning</guid>
+    <title>Channels</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 22:56:25 GMT</pubDate>
   </item><item>
-    <title>llm-os</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/llm-os</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-os</guid>
+    <title>Entities</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 22:56:25 GMT</pubDate>
   </item><item>
-    <title>reasoning-models</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/reasoning-models</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/reasoning-models</guid>
+    <title>Companies</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 22:56:25 GMT</pubDate>
   </item><item>
-    <title>place-cells</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/place-cells</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/place-cells</guid>
+    <title>People</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 22:56:25 GMT</pubDate>
   </item><item>
-    <title>emergent-behavior</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/emergent-behavior</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/emergent-behavior</guid>
+    <title>Sources</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 22:56:25 GMT</pubDate>
   </item><item>
-    <title>ai-sdk</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ai-sdk</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-sdk</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Mon, 28 Sep 2026 11:21:16 GMT</pubDate>
+    <pubDate>Mon, 28 Sep 2026 22:56:25 GMT</pubDate>
   </item>
     </channel>
   </rss>
