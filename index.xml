@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. 구요한이 설계·운영하는 자동화 시스템으로, Finance Agent·Tech Report 수집·Naver Blog 발행·개인 브리핑 등 다양한 에이전트 모듈을 포함한다. ]]></description>
-    <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09 (싱가포르 5~7일차 / 귀국 / 귀국 후) 싱가포르 여행 중 및 귀국 당일 Raingent 자동 브리핑 시스템이 생성한 2026-09-0103자 업무·개인 통합 일일 보고 및 2026-09-0730 귀국 후 브리핑. ]]></description>
-    <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-MailTodo-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
-    <description><![CDATA[ Raingent 메일 액션 아이템 목록 Raingent Assistant가 메일·슬랙·Notion에서 추출한 누적 액션 아이템. 처리 완료 시 취소선 표시. ]]></description>
-    <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>norse</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/norse</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/norse</guid>
+    <title>autoresearch</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/autoresearch</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/autoresearch</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 29 Sep 2026 22:53:40 GMT</pubDate>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
   </item><item>
-    <title>pipecat</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/pipecat</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/pipecat</guid>
+    <title>agent</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agent</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 29 Sep 2026 22:53:40 GMT</pubDate>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
   </item><item>
-    <title>voice-agent</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/voice-agent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/voice-agent</guid>
+    <title>go</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/go</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/go</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 29 Sep 2026 22:53:40 GMT</pubDate>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
   </item><item>
-    <title>turn-taking</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/turn-taking</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/turn-taking</guid>
+    <title>harness</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/harness</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/harness</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 29 Sep 2026 22:53:40 GMT</pubDate>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
   </item><item>
-    <title>vad</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/vad</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/vad</guid>
+    <title>local-llm</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/local-llm</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/local-llm</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 29 Sep 2026 22:53:40 GMT</pubDate>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
   </item><item>
-    <title>smart-turn</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/smart-turn</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/smart-turn</guid>
+    <title>text-classification</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/text-classification</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/text-classification</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 29 Sep 2026 22:53:40 GMT</pubDate>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
   </item><item>
-    <title>audio-engineering</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/audio-engineering</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/audio-engineering</guid>
+    <title>jev</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/jev</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/jev</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 29 Sep 2026 22:53:40 GMT</pubDate>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
+  </item><item>
+    <title>typesafe-ai</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/typesafe-ai</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/typesafe-ai</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
+  </item><item>
+    <title>nlp</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/nlp</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/nlp</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
+  </item><item>
+    <title>google</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/google</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/google</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 30 Sep 2026 09:29:56 GMT</pubDate>
   </item>
     </channel>
   </rss>
