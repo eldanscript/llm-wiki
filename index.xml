@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. 구요한이 설계·운영하는 Agentic AI 플랫폼으로, 금융 모니터링·기술 리포트·네이버 블로그 자동화·이메일 어시스턴트 등 복수의 서브 에이전트로 구성된다. ]]></description>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09~10 (싱가포르 출장 포함) 싱가포르 여행 중 및 귀국 후 Raingent 자동 브리핑 시스템이 생성한 2026-09-01~10-01 업무·개인 통합 일일 보고. ]]></description>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-MailTodo-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
-    <description><![CDATA[ Raingent Assistant 메일 액션 아이템 Raingent 이메일 어시스턴트가 추출·관리하는 누적 액션 아이템 목록. 매일 브리핑 시 갱신되며 완료·경과·진행 중 상태를 추적한다. ]]></description>
-    <pubDate>Thu, 01 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>plugin-evals</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/plugin-evals</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/plugin-evals</guid>
+    <title>agentcore</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agentcore</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agentcore</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 23:23:19 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
   </item><item>
-    <title>agentic-ai</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/agentic-ai</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/agentic-ai</guid>
+    <title>비교분석</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/%EB%B9%84%EA%B5%90%EB%B6%84%EC%84%9D</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/%EB%B9%84%EA%B5%90%EB%B6%84%EC%84%9D</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 23:23:19 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
   </item><item>
-    <title>llm</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/llm</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/llm</guid>
+    <title>enterprise-agent</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/enterprise-agent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/enterprise-agent</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 23:23:19 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
   </item><item>
-    <title>interpretability</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/interpretability</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/interpretability</guid>
+    <title>case-study</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/case-study</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/case-study</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 23:23:19 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
   </item><item>
-    <title>mechanistic-interpretability</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/mechanistic-interpretability</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/mechanistic-interpretability</guid>
+    <title>vertex-ai</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/vertex-ai</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/vertex-ai</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 23:23:19 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
   </item><item>
-    <title>ai-safety</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ai-safety</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-safety</guid>
+    <title>adk</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/adk</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/adk</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 23:23:19 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
   </item><item>
-    <title>anthropic</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/anthropic</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/anthropic</guid>
+    <title>agent-engine</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agent-engine</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agent-engine</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Wed, 30 Sep 2026 23:23:19 GMT</pubDate>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
+  </item><item>
+    <title>airflow</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/airflow</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/airflow</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
+  </item><item>
+    <title>etl</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/etl</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/etl</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
+  </item><item>
+    <title>cdap</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/cdap</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/cdap</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Thu, 01 Oct 2026 09:08:22 GMT</pubDate>
   </item>
     </channel>
   </rss>
