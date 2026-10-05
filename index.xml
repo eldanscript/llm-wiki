@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Mac mini 기반 24시간 개인 AI 에이전트 생태계. 메일·캘린더·슬랙·노션을 통합 수집·분석하여 일일 업무·개인 브리핑을 자동 생성한다. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 — 2026-09~10 (싱가포르 출장 포함) 싱가포르 여행 중 및 귀국 후 Raingent 자동 브리핑 시스템이 생성한 2026-09-01~10-05 업무·개인 통합 일일 보고. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-MailTodo-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
-    <description><![CDATA[ Raingent 메일 액션 아이템 — 2026-08~10 Raingent Assistant가 수집·합성한 메일 기반 액션 아이템 누적 목록. 최신 상태가 위에 표시됨. ]]></description>
-    <pubDate>Mon, 05 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>jcode</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/jcode</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/jcode</guid>
+    <title>scaling-laws</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/scaling-laws</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/scaling-laws</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 04 Oct 2026 22:56:04 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
   </item><item>
-    <title>rust</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/rust</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/rust</guid>
+    <title>agi-economics</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agi-economics</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agi-economics</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 04 Oct 2026 22:56:04 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
   </item><item>
-    <title>swarm-mode</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/swarm-mode</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/swarm-mode</guid>
+    <title>frontier-models</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/frontier-models</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/frontier-models</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 04 Oct 2026 22:56:04 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
   </item><item>
-    <title>coding-harness</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/coding-harness</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/coding-harness</guid>
+    <title>development-process</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/development-process</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/development-process</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 04 Oct 2026 22:56:04 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
   </item><item>
-    <title>agent-team</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/agent-team</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/agent-team</guid>
+    <title>prd</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/prd</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/prd</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 04 Oct 2026 22:56:04 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
   </item><item>
-    <title>enterprise-sales</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/enterprise-sales</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/enterprise-sales</guid>
+    <title>kanban</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/kanban</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/kanban</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 04 Oct 2026 22:56:04 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
   </item><item>
-    <title>b2b-sales</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/b2b-sales</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/b2b-sales</guid>
+    <title>qa</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/qa</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/qa</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 04 Oct 2026 22:56:04 GMT</pubDate>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
+  </item><item>
+    <title>workflow</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/workflow</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/workflow</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
+  </item><item>
+    <title>matt-pocock</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/matt-pocock</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/matt-pocock</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
+  </item><item>
+    <title>ai-engineer-worlds-fair</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/ai-engineer-worlds-fair</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-engineer-worlds-fair</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Mon, 05 Oct 2026 09:22:34 GMT</pubDate>
   </item>
     </channel>
   </rss>
