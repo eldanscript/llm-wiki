@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent 한 줄 정의 Mac mini 기반 24시간 개인 AI 에이전트 생태계 — 이메일·Slack·Notion·캘린더·재무를 자동 처리하고 매일 아침 브리핑을 생성한다. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 합성 (2026년 9~10월) 한 줄 정의 Raingent 에이전트가 매일 생성하는 일일 브리핑의 합성 요약 — 주요 이슈·마감·파이프라인 상태·날씨를 추적한다. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-MailTodo-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
-    <description><![CDATA[ Raingent 메일 액션 아이템 (2026년 8~10월) 한 줄 정의 Raingent Assistant가 이메일·Notion·Slack에서 추출한 미처리 액션 아이템 누적 목록. ]]></description>
-    <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Concepts</title>
-    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
+    <title>execuhire</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/execuhire</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/execuhire</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 22:55:34 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
   </item><item>
-    <title>Channels</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
+    <title>nvidia-dynamo</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/nvidia-dynamo</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/nvidia-dynamo</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 22:55:34 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
   </item><item>
-    <title>Entities</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
+    <title>kaggle</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/kaggle</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/kaggle</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 22:55:34 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
   </item><item>
-    <title>Companies</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
+    <title>automl</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/automl</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/automl</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 22:55:34 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
   </item><item>
-    <title>People</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
+    <title>proactive-agent</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/proactive-agent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/proactive-agent</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 22:55:34 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
   </item><item>
-    <title>Sources</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
+    <title>uber</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/uber</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/uber</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 22:55:34 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
   </item><item>
-    <title>Tools</title>
-    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
-    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
+    <title>discovery</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/discovery</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/discovery</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 06 Oct 2026 22:55:34 GMT</pubDate>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
+  </item><item>
+    <title>customer-research</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/customer-research</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/customer-research</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
+  </item><item>
+    <title>qoder</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/qoder</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/qoder</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
+  </item><item>
+    <title>qwen3-max</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/qwen3-max</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/qwen3-max</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Wed, 07 Oct 2026 09:22:49 GMT</pubDate>
   </item>
     </channel>
   </rss>
