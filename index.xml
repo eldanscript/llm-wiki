@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>paper</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/paper</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/paper</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <title>Raingent</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
+    <description><![CDATA[ Raingent Mac mini 기반 24시간 상시 가동 개인 AI 에이전트 생태계. 메일·캘린더·슬랙·재무·지식관리 등 일상 업무를 자동화하는 멀티 에이전트 시스템. ]]></description>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>figma</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/figma</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/figma</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <title>Raingent-DailyBrief-Sep2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
+    <description><![CDATA[ Raingent 일일 브리핑 (2026년 9~10월) Raingent AI 에이전트가 매일 생성하는 일일 브리핑 합성 페이지. ]]></description>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>landing-page</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/landing-page</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/landing-page</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <title>Raingent-MailTodo-Aug2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
+    <description><![CDATA[ Raingent 메일 액션 아이템 (2026년 8~10월) Raingent Assistant가 수집·합성한 메일 기반 액션 아이템 누적 목록. ]]></description>
+    <pubDate>Mon, 12 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>computer-use-agent</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/computer-use-agent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/computer-use-agent</guid>
+    <title>Concepts</title>
+    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <pubDate>Sun, 11 Oct 2026 22:52:46 GMT</pubDate>
   </item><item>
-    <title>self-distillation</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/self-distillation</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/self-distillation</guid>
+    <title>Channels</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <pubDate>Sun, 11 Oct 2026 22:52:46 GMT</pubDate>
   </item><item>
-    <title>perplexity</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/perplexity</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/perplexity</guid>
+    <title>Entities</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <pubDate>Sun, 11 Oct 2026 22:52:46 GMT</pubDate>
   </item><item>
-    <title>hybrid-compute</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/hybrid-compute</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/hybrid-compute</guid>
+    <title>Companies</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <pubDate>Sun, 11 Oct 2026 22:52:46 GMT</pubDate>
   </item><item>
-    <title>on-device-ai</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/on-device-ai</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/on-device-ai</guid>
+    <title>People</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <pubDate>Sun, 11 Oct 2026 22:52:46 GMT</pubDate>
   </item><item>
-    <title>pii-detection</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/pii-detection</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/pii-detection</guid>
+    <title>Sources</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <pubDate>Sun, 11 Oct 2026 22:52:46 GMT</pubDate>
   </item><item>
-    <title>lily</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/lily</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/lily</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Sun, 11 Oct 2026 12:51:24 GMT</pubDate>
+    <pubDate>Sun, 11 Oct 2026 22:52:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
