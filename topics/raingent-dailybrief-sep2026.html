@@ -23,7 +23,15 @@
 <li><strong>캘린더</strong>: 업무 일정 없음. 20:10 교정(JongWoo Lee) 1건</li>
 <li>**Slack <a href=".././tags/tech-report**" class="tag-link internal internal-link alias" data-slug="tags/tech-report**">tech-report**</a>: 지난 24시간 새 메시지 없음</li>
 <li><strong>메일 미처리 2건</strong>: 복구 이메일 확인, Praktika 로그인</li>
-<li><strong>파이프라인</strong>: 정상</li>
+<li><strong>저녁 코드 작업</strong>:
+<ul>
+<li><code>notion-debate</code> 에이전트 신규 구축 — Notion 토론 스레드 파싱 후 Claude CLI로 반론·변론 자동 생성. 하루 쓰기 한도 40회·야간(00~08시) 정지·dry-run 모드 포함</li>
+<li>쓰기 한도 20회 → 40회 상향 (사용자 요청)</li>
+<li>프롬프트 최적화 — 대상 스레드 전문(최대 30K) 전달, 기타 스레드 400자 요약만 전달</li>
+</ul>
+</li>
+<li><strong>노트 작업</strong>: 「Tokenomics Discussion - Gemini vs Claude」 Notion 페이지 편집(20:02) — 장문 컨텍스트·캐싱 경제학 토론 규칙 수록</li>
+<li><strong>파이프라인</strong>: Resources 37건·Periodic Notes 1건·Wiki 19건 수집, 실패 없음</li>
 </ul>
 <h2 id="2026-10-13-화">2026-10-13 (화)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-10-13-화" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
@@ -93,7 +101,7 @@
 <ul>
 <li><code>agent-usage</code>: Claude Code·Codex·OpenClaw 사용량 수집기 신규 구축 → BigQuery 업로드</li>
 <li><code>agent-usage</code>: 스키마 도구 중립화(gemini_cli, ndjson, otel 입력 추가), 가격표·평가 점수 테이블·비교 뷰 추가</li>
-<li><code>agent-usage</code>: cron 이름·설명 버그 다수 수정 (중복 파이프라인 이름 보정, dry-run 업로드 차단)</li>
+<li><code>agent-usage</code>: cron 이름·설명 버그 다수 수정</li>
 <li><code>agent-usage</code>: 공용 서비스 계정(automation@rainny-automation) 키로 인증 전환 → 첫 BigQuery 업로드 완료</li>
 <li><code>work-brief</code>: Notion 할 일 조회 빈 결과 시 vault 사본 fallback 제거 (8월 미체크 줄 부활 버그 수정)</li>
 <li><code>gcp-automation</code>: rainny-automation 키 정책 예외 및 서비스 계정 운영 기록 추가</li>
@@ -128,61 +136,8 @@
 <li><strong>에어비앤비</strong>: 로그인 마감(10-04) 경과</li>
 <li><strong>재무 예약</strong>: OpenClaw 이전 준비 중</li>
 <li><strong>Opal→Gemini</strong>: 이전 대기 지속</li>
-<li><strong>보안 경고</strong>: Higgsfield AI·Vercel 미처리 지속</li>
-<li><strong>파이프라인</strong>: 정상</li>
 </ul>
-<h2 id="2026-10-02-금">2026-10-02 (금)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-10-02-금" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li><strong>에어비앤비</strong>: 비활성화 방지 로그인 마감 <strong>10-04</strong> 신규 알림</li>
-<li><strong>Opal→Gemini</strong>: 스킬 이전 계획 수립 필요</li>
-<li><strong>보안 경고 2건</strong>: 미처리 지속</li>
-<li><strong>파이프라인</strong>: 131건 정상</li>
-<li><strong>Supabase GRANT</strong>: 마감 10/30</li>
-</ul>
-<h2 id="2026-10-01-목-국군의날-공휴일">2026-10-01 (목, 국군의날 공휴일)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-10-01-목-국군의날-공휴일" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li><strong>공휴일</strong>: 국군의날</li>
-<li><strong>싱가포르</strong>: Swissôtel The Stamford 체류</li>
-<li><strong>Opal→Gemini</strong>: 스킬 전환 수동 이전 필요 신규</li>
-<li><strong>Chatterbox</strong>: 마감(2026-09-27) 경과</li>
-<li><strong>Notion</strong>: HTTP 500 오류 발생</li>
-<li><strong>파이프라인</strong>: 정상</li>
-</ul>
-<h2 id="2026-09-30-수">2026-09-30 (수)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2026-09-30-수" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li><strong>싱가포르</strong>: Swissôtel The Stamford 3일차</li>
-<li><strong>날씨</strong>: 이슬비, 우산 필수</li>
-<li><strong>Chatterbox</strong>: 예약 마감(2026-09-27) 경과 확인</li>
-<li><strong>캘린더</strong>: 미전달 이슈</li>
-<li><strong>파이프라인</strong>: 정상</li>
-</ul>
-<h2 id="이전-브리핑-요약">이전 브리핑 요약<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#이전-브리핑-요약" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="table-container"><table><thead><tr><th>날짜</th><th>주요 이슈</th></tr></thead><tbody><tr><td>2026-09-29</td><td>싱가포르 체류·Higgsfield AI·Vercel 보안 경고·St. Regis 체크인</td></tr><tr><td>2026-09-28</td><td>싱가포르 출장·SGAC 환불·Alphabet Onboarding 21일+ 초과</td></tr><tr><td>2026-09-26</td><td>추석 연휴 종료·에어비앤비 2차 처리 완료·제조업 발표 D-4</td></tr><tr><td>2026-09-24</td><td>싱가포르 출장 준비·GCP-CE 학습 진행</td></tr></tbody></table></div>
+<hr/>
 <h2 id="관련-노트">관련 노트<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#관련-노트" class="internal internal-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li><a href="../projects/raingent" class="internal internal-link" data-slug="projects/raingent">Raingent</a></li>
@@ -198,4 +153,4 @@
                 C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
                 S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
                 s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
-                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-572" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#raingent-일일-브리핑-2026년-910월" data-for="raingent-일일-브리핑-2026년-910월">Raingent 일일 브리핑 (2026년 9~10월)</a></li><li class="depth-1"><a href="#2026-10-14-수" data-for="2026-10-14-수">2026-10-14 (수)</a></li><li class="depth-1"><a href="#2026-10-13-화" data-for="2026-10-13-화">2026-10-13 (화)</a></li><li class="depth-1"><a href="#2026-10-12-월" data-for="2026-10-12-월">2026-10-12 (월)</a></li><li class="depth-1"><a href="#2026-10-08-목-한글날-전날" data-for="2026-10-08-목-한글날-전날">2026-10-08 (목, 한글날 전날)</a></li><li class="depth-1"><a href="#2026-10-07-수" data-for="2026-10-07-수">2026-10-07 (수)</a></li><li class="depth-1"><a href="#2026-10-06-화" data-for="2026-10-06-화">2026-10-06 (화)</a></li><li class="depth-1"><a href="#2026-10-05-월-개천절-대체공휴일" data-for="2026-10-05-월-개천절-대체공휴일">2026-10-05 (월, 개천절 대체공휴일)</a></li><li class="depth-1"><a href="#2026-10-02-금" data-for="2026-10-02-금">2026-10-02 (금)</a></li><li class="depth-1"><a href="#2026-10-01-목-국군의날-공휴일" data-for="2026-10-01-목-국군의날-공휴일">2026-10-01 (목, 국군의날 공휴일)</a></li><li class="depth-1"><a href="#2026-09-30-수" data-for="2026-09-30-수">2026-09-30 (수)</a></li><li class="depth-1"><a href="#이전-브리핑-요약" data-for="이전-브리핑-요약">이전 브리핑 요약</a></li><li class="depth-1"><a href="#관련-노트" data-for="관련-노트">관련 노트</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>백링크</h3><ul id="list-0" class="overflow"><li><a href="../projects/gcp-ce" class="internal">GCP-CE</a></li><li><a href="../projects/raingent" class="internal">Raingent</a></li><li><a href="../topics/raingent-mailtodo-aug2026" class="internal">Raingent-MailTodo-Aug2026</a></li><li><a href="../" class="internal">index</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-febe683a.js" type="module" data-persist="true"></script></html>
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc"><button type="button" class="toc-header" aria-controls="toc-572" aria-expanded="true"><h3>목차</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-0" class="toc-content overflow"><li class="depth-0"><a href="#raingent-일일-브리핑-2026년-910월" data-for="raingent-일일-브리핑-2026년-910월">Raingent 일일 브리핑 (2026년 9~10월)</a></li><li class="depth-1"><a href="#2026-10-14-수" data-for="2026-10-14-수">2026-10-14 (수)</a></li><li class="depth-1"><a href="#2026-10-13-화" data-for="2026-10-13-화">2026-10-13 (화)</a></li><li class="depth-1"><a href="#2026-10-12-월" data-for="2026-10-12-월">2026-10-12 (월)</a></li><li class="depth-1"><a href="#2026-10-08-목-한글날-전날" data-for="2026-10-08-목-한글날-전날">2026-10-08 (목, 한글날 전날)</a></li><li class="depth-1"><a href="#2026-10-07-수" data-for="2026-10-07-수">2026-10-07 (수)</a></li><li class="depth-1"><a href="#2026-10-06-화" data-for="2026-10-06-화">2026-10-06 (화)</a></li><li class="depth-1"><a href="#2026-10-05-월-개천절-대체공휴일" data-for="2026-10-05-월-개천절-대체공휴일">2026-10-05 (월, 개천절 대체공휴일)</a></li><li class="depth-1"><a href="#관련-노트" data-for="관련-노트">관련 노트</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>백링크</h3><ul id="list-0" class="overflow"><li><a href="../projects/gcp-ce" class="internal">GCP-CE</a></li><li><a href="../projects/raingent" class="internal">Raingent</a></li><li><a href="../topics/raingent-mailtodo-aug2026" class="internal">Raingent-MailTodo-Aug2026</a></li><li><a href="../" class="internal">index</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v5.0.0</a> © 2026</p><ul><li><a href="https://github.com/eldanscript/obsidian-vault">GitHub</a></li><li><a href="https://quartz.jzhao.xyz">Powered by Quartz</a></li></ul></footer></div></div></body><script src="../static/resource-after-e13fffa1.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-8b336f9a.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-baba652b.js" type="application/javascript" data-persist="true"></script><script src="../static/resource-after-5eb75950.js" type="module" data-persist="true"></script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript-febe683a.js" type="module" data-persist="true"></script></html>
