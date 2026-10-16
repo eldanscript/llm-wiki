@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Ubuntu PC + Mac mini 기반 24시간 개인 AI 에이전트 생태계. ]]></description>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 (2026년 9~10월) Raingent AI 에이전트가 매일 생성하는 일일 브리핑 합성 페이지. 2026-10-16 (금) 날씨: 서울 1122°C 구름 조금, 체감 1024°C — 일교차 크니 겹쳐 입기. ]]></description>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-MailTodo-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
-    <description><![CDATA[ Raingent 메일 액션 아이템 Raingent Assistant가 메일에서 추출한 누적 액션 아이템 목록. ]]></description>
-    <pubDate>Fri, 16 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>excalidraw</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/excalidraw</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/excalidraw</guid>
+    <title>distributed-training</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/distributed-training</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/distributed-training</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 15 Oct 2026 22:56:10 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
   </item><item>
-    <title>remotion</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/remotion</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/remotion</guid>
+    <title>gpt-5-5</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/gpt-5-5</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/gpt-5-5</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 15 Oct 2026 22:56:10 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
   </item><item>
-    <title>motion-graphics</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/motion-graphics</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/motion-graphics</guid>
+    <title>knowledge-work</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/knowledge-work</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/knowledge-work</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 15 Oct 2026 22:56:10 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
   </item><item>
-    <title>ai-video</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ai-video</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-video</guid>
+    <title>gpt</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/gpt</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/gpt</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 15 Oct 2026 22:56:10 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
   </item><item>
-    <title>voice-ai</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/voice-ai</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/voice-ai</guid>
+    <title>safety</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/safety</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/safety</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 15 Oct 2026 22:56:10 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
   </item><item>
-    <title>grokbot</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/grokbot</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/grokbot</guid>
+    <title>misalignment</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/misalignment</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/misalignment</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 15 Oct 2026 22:56:10 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
   </item><item>
-    <title>multiplayer-agents</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/multiplayer-agents</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/multiplayer-agents</guid>
+    <title>cyber-safety</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/cyber-safety</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/cyber-safety</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 15 Oct 2026 22:56:10 GMT</pubDate>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
+  </item><item>
+    <title>devday</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/devday</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/devday</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
+  </item><item>
+    <title>gtc2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/gtc2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/gtc2026</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
+  </item><item>
+    <title>ai-factory</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/ai-factory</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-factory</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Fri, 16 Oct 2026 09:21:55 GMT</pubDate>
   </item>
     </channel>
   </rss>
