@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>Raingent</title>
-    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
-    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
-    <description><![CDATA[ Raingent Ubuntu PC + Mac mini 기반 24시간 개인 AI 에이전트 생태계. 한 줄 정의 구요한이 자택 서버에서 운영하는 멀티 에이전트 자동화 플랫폼으로, 메일·슬랙·노션·캘린더 데이터를 수집·처리·브리핑하는 생활 밀착형 AI 인프라. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-DailyBrief-Sep2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
-    <description><![CDATA[ Raingent 일일 브리핑 (2026년 9~10월) Raingent AI 에이전트가 매일 생성하는 일일 브리핑 합성 페이지. 2026-10-21 (화) 날씨: 515°C 이슬비, 체감 213°C — 아침 겉옷 필수. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Raingent-MailTodo-Aug2026</title>
-    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
-    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
-    <description><![CDATA[ Raingent 메일 액션 아이템 (2026년 8~10월) Raingent Assistant가 메일에서 추출한 미처리 액션 아이템 누적 목록. ]]></description>
-    <pubDate>Wed, 21 Oct 2026 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>benchmarks</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/benchmarks</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/benchmarks</guid>
+    <title>Concepts</title>
+    <link>https://eldanscript.github.io/llm-wiki/concepts/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/concepts/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:49:04 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
   </item><item>
-    <title>google-antigravity</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/google-antigravity</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/google-antigravity</guid>
+    <title>Channels</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/channels/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/channels/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:49:04 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
   </item><item>
-    <title>agent-teams</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/agent-teams</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/agent-teams</guid>
+    <title>Entities</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:49:04 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
   </item><item>
-    <title>gemini-cli</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/gemini-cli</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/gemini-cli</guid>
+    <title>Companies</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/companies/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/companies/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:49:04 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
   </item><item>
-    <title>product-update</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/product-update</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/product-update</guid>
+    <title>People</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/people/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/people/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:49:04 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
   </item><item>
-    <title>2026-07</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/2026-07</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/2026-07</guid>
+    <title>Sources</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/sources/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/sources/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:49:04 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
   </item><item>
-    <title>antigravity</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/antigravity</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/antigravity</guid>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/entities/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/entities/tools/</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Tue, 20 Oct 2026 22:49:04 GMT</pubDate>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
+  </item><item>
+    <title>Projects</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
+  </item><item>
+    <title>Tools</title>
+    <link>https://eldanscript.github.io/llm-wiki/tools/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tools/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
+  </item><item>
+    <title>Topics</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/</guid>
+    <description><![CDATA[  ]]></description>
+    <pubDate>Tue, 20 Oct 2026 23:20:45 GMT</pubDate>
   </item>
     </channel>
   </rss>
