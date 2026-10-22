@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>cross-species</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/cross-species</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/cross-species</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <title>Raingent</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
+    <description><![CDATA[ Raingent Ubuntu PC + Mac mini 기반 24시간 개인 AI 에이전트 생태계. ]]></description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>ai-tech</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/ai-tech</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/ai-tech</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <title>Raingent-DailyBrief-Sep2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
+    <description><![CDATA[ Raingent 일일 브리핑 (2026년 9~10월) Raingent AI 에이전트가 매일 생성하는 일일 브리핑 합성 페이지. 2026-10-23 (금) 날씨: 519°C 흐림, 체감 219°C — 일교차 크니 아침엔 겹쳐 입고 낮엔 벗을 수 있게 준비. ]]></description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>data-augmentation</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/data-augmentation</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/data-augmentation</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <title>Raingent-MailTodo-Aug2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
+    <description><![CDATA[ Raingent 메일 액션 아이템 (2026년 8~10월) Raingent Assistant가 메일에서 추출한 미처리 액션 아이템 누적 목록. ]]></description>
+    <pubDate>Fri, 23 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>adversarial-robustness</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/adversarial-robustness</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/adversarial-robustness</guid>
+    <title>marktech-post</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/marktech-post</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/marktech-post</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 23:04:19 GMT</pubDate>
   </item><item>
-    <title>pytorch</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/pytorch</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/pytorch</guid>
+    <title>reward-hacking</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/reward-hacking</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/reward-hacking</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 23:04:19 GMT</pubDate>
   </item><item>
-    <title>multimodal</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/multimodal</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/multimodal</guid>
+    <title>workspace</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/workspace</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/workspace</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 23:04:19 GMT</pubDate>
   </item><item>
-    <title>backlog-management</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/backlog-management</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/backlog-management</guid>
+    <title>slide-generation</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/slide-generation</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/slide-generation</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 23:04:19 GMT</pubDate>
   </item><item>
-    <title>state-machine</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/state-machine</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/state-machine</guid>
+    <title>deep-swe</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/deep-swe</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/deep-swe</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 23:04:19 GMT</pubDate>
   </item><item>
-    <title>triage</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/triage</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/triage</guid>
+    <title>collaborative-ai</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/collaborative-ai</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/collaborative-ai</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 23:04:19 GMT</pubDate>
   </item><item>
-    <title>github-issues</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/github-issues</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/github-issues</guid>
+    <title>design</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/design</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/design</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Thu, 22 Oct 2026 12:15:04 GMT</pubDate>
+    <pubDate>Thu, 22 Oct 2026 23:04:19 GMT</pubDate>
   </item>
     </channel>
   </rss>
