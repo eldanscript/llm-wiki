@@ -6,65 +6,65 @@
       <description>Last 10 notes on Raingent LLM Wiki</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>clickfix</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/clickfix</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/clickfix</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <title>Raingent</title>
+    <link>https://eldanscript.github.io/llm-wiki/projects/raingent</link>
+    <guid>https://eldanscript.github.io/llm-wiki/projects/raingent</guid>
+    <description><![CDATA[ Raingent Ubuntu PC + Mac mini 기반 24시간 개인 AI 에이전트 생태계. 한 줄 정의 구요한의 일상·업무·학습을 자동화하는 상시 가동 AI 에이전트 시스템. 핵심 내용 인프라: Mac mini(주 서버) + Ubuntu PC(보조). ]]></description>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>smtp-backdoor</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/smtp-backdoor</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/smtp-backdoor</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <title>Raingent-DailyBrief-Sep2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-dailybrief-sep2026</guid>
+    <description><![CDATA[ Raingent 일일 브리핑 (2026년 9~10월) Raingent AI 에이전트가 매일 생성하는 일일 브리핑 합성 페이지. ]]></description>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>netscaler</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/netscaler</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/netscaler</guid>
-    <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <title>Raingent-MailTodo-Aug2026</title>
+    <link>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</link>
+    <guid>https://eldanscript.github.io/llm-wiki/topics/raingent-mailtodo-aug2026</guid>
+    <description><![CDATA[ Raingent 메일 액션 아이템 (누적) Raingent Assistant가 메일을 파싱해 추출한 액션 아이템 누적 목록. ]]></description>
+    <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
   </item><item>
-    <title>code-quality</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/code-quality</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/code-quality</guid>
+    <title>agent-native</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/agent-native</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/agent-native</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <pubDate>Sun, 25 Oct 2026 22:57:10 GMT</pubDate>
   </item><item>
-    <title>decision-quality</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/decision-quality</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/decision-quality</guid>
+    <title>builder-io</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/builder-io</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/builder-io</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <pubDate>Sun, 25 Oct 2026 22:57:10 GMT</pubDate>
   </item><item>
-    <title>continuous-quality</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/continuous-quality</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/continuous-quality</guid>
+    <title>go</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/go</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/go</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <pubDate>Sun, 25 Oct 2026 22:57:10 GMT</pubDate>
   </item><item>
-    <title>judgement</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/judgement</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/judgement</guid>
+    <title>harness</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/harness</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/harness</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <pubDate>Sun, 25 Oct 2026 22:57:10 GMT</pubDate>
   </item><item>
-    <title>spec-driven-development</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/spec-driven-development</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/spec-driven-development</guid>
+    <title>local-llm</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/local-llm</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/local-llm</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <pubDate>Sun, 25 Oct 2026 22:57:10 GMT</pubDate>
   </item><item>
-    <title>llm-serving</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/llm-serving</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/llm-serving</guid>
+    <title>text-classification</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/text-classification</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/text-classification</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <pubDate>Sun, 25 Oct 2026 22:57:10 GMT</pubDate>
   </item><item>
-    <title>parallelism</title>
-    <link>https://eldanscript.github.io/llm-wiki/tags/parallelism</link>
-    <guid>https://eldanscript.github.io/llm-wiki/tags/parallelism</guid>
+    <title>jev</title>
+    <link>https://eldanscript.github.io/llm-wiki/tags/jev</link>
+    <guid>https://eldanscript.github.io/llm-wiki/tags/jev</guid>
     <description><![CDATA[  ]]></description>
-    <pubDate>Fri, 23 Oct 2026 23:18:22 GMT</pubDate>
+    <pubDate>Sun, 25 Oct 2026 22:57:10 GMT</pubDate>
   </item>
     </channel>
   </rss>
